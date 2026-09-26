@@ -1,0 +1,19 @@
+{
+  "seed": 20260927,
+  "epochs": 1,
+  "micro_batch": 4,
+  "gradient_accumulation": 2,
+  "learning_rate": 0.0001,
+  "warmup_fraction": 0.05,
+  "weight_decay": 0.01,
+  "lora_r": 8,
+  "lora_alpha": 16,
+  "lora_dropout": 0.05,
+  "weights": {"massive.intent": 0.5, "business.intent": 1.0, "business.route": 2.0, "business.tool": 1.5},
+  "max_tokens": 2048,
+  "checkpoints": [0.25, 0.5, 0.75, 1.0],
+  "selection": "geometric mean of public intent accuracy, business intent accuracy, route macro F1 and joint tool success; each at least base minus .03; human misses no more than base; base eligible",
+  "stage": "first expanded curriculum; later 8k/20k require additional effective scenes, not template duplication",
+  "jev_model": "jev-1.13.0",
+  "jev_max_requests": 200
+}

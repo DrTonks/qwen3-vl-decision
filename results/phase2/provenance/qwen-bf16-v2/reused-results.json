@@ -1,0 +1,7 @@
+{
+  "reason": "Candidate vocabulary correction only affects MASSIVE; unchanged business and CrossWOZ results reused",
+  "files_sha256": {
+    "business-test.jsonl": "adf133547d8d019c12b9f46759b35a68b4277be09f56a9d077cdba6a1107e612",
+    "crosswoz-test.jsonl": "7c20b7ea46944e68e593c6878d295f8c3a69001303e031268cf8885ace35c9bb"
+  }
+}

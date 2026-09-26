@@ -1,0 +1,17 @@
+{
+  "provider": "qwen",
+  "precision": "bf16",
+  "adapter": null,
+  "run": "qwen-bf16-v2",
+  "datasets": [
+    "massive",
+    "business",
+    "crosswoz"
+  ],
+  "split": "test",
+  "limit": 0,
+  "workers": 3,
+  "max_requests": 3300,
+  "protocol": "compact-v2; route first; tool conditional; human derived",
+  "data_manifest_sha256": "05f9a80b44a152ff97583424a22baa75b09896a1f712053f09df405d39875599"
+}

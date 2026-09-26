@@ -1,0 +1,37 @@
+{
+  "config": {
+    "seed": 20260926,
+    "steps": 120,
+    "gradient_accumulation": 8,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.01,
+    "warmup_steps": 12,
+    "lora_r": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.05,
+    "validation_interval": 40,
+    "prompt": "original-v1-business-route",
+    "objective": "route-only candidate cross entropy",
+    "selection": "deployment-reloaded dev macro F1, fewer human misses, lower NLL; base eligible",
+    "test_role": "previously seen synthetic regression, not fresh acceptance",
+    "precision": "nf4"
+  },
+  "sizes": {
+    "train": 48,
+    "dev": 16,
+    "calibration": 56,
+    "test": 72
+  },
+  "source_sha256": {
+    "src/qwenlab/route_v3.py": "d26dae71f5d649a38459b5b5d4fc0dbf888670bf6368c5920490a4a63e5b7396",
+    "src/qwenlab/modeling.py": "fbcac24e76e3afee2804e09669a52786cf2d603bbcb9c95ccd423d2673d2264e",
+    "src/qwenlab/train.py": "305cd551724d550e296511d0ccae884a9f0232b58d441c7a5ba7909d63b76504",
+    "src/qwenlab/calibrate_v2.py": "2ab20e186986708942e9529636c30b6369dc85c354b72106f928fa20332a71ad",
+    "configs/decision_spec.json": "52e758e44a85da86ba3013668e3cde7a04d27648a3274ecb5f93e374012695d4",
+    "configs/route-v3.json": "939931d1b9f0bed16f04312b69588e6a577ad01aad0598484f3824704a07535c",
+    "data/business_zh.jsonl": "565280522960a6b707d1d5f993c136597f9f9846fc3be63addfb60b1f5b0b418",
+    "data/processed/v2/manifest.json": "05f9a80b44a152ff97583424a22baa75b09896a1f712053f09df405d39875599"
+  },
+  "baseline": "same original prompt and NF4 inference; no adapter",
+  "selection": "dev only; macro F1, fewer human misses, lower NLL; base eligible"
+}

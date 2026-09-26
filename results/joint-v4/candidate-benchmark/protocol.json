@@ -1,0 +1,11 @@
+{
+  "variant": "step-1582",
+  "precision": "nf4 backbone, original lm_head dtype preserved",
+  "batch_size": 1,
+  "data": "complete business and MASSIVE development sets only",
+  "latency": "12 seeded business dev requests, three serial task forwards, 3 repetitions, alternating order; tokenization and CPU result transfer included; model/head loading and warmup excluded",
+  "acceptance": "all candidate argmax equal, max probability difference <= 0.01; P50 and P95 each improve >= 5% to recommend further validation",
+  "default_implementation_changed": false,
+  "source_sha256": "edc658a3f5fa281e7215522dbc0da5c3687580f65873537af3811f4baddcd4c1",
+  "selection_sha256": "6ec1a3fe08de40afc413b1c1b86bf5e15307459696109ca5233a8f16c7595d7a"
+}

@@ -1,0 +1,119 @@
+# 面向贷款及风控平台的客服决策模型
+
+基于Qwen3-VL-2B-Instruct候选首token方案的贷款平台智能客服的决策模型。比较本地 **Qwen3-VL-2B-Instruct 的候选首 token 分类**与 **Jev API**，用于课设“多数据源融合的贷款及风控平台”的智能客服（以中文为主）的意图识别、只读工具选择、追问、转人工和转回复模型。当前只验证文本，不执行审批、资金操作或真实工具调用。实验仍在进行中。
+
+## 实验目的
+
+其实最初考虑的是直接使用Jev来做决策（蹭热度+完成课设任务）；但是考虑到我们的平台主要面向中文用户，而中文业务意图识别是Jev的短板，而且Jev原生不支持多模态，用户可能发截图问“这个按钮怎么是灰的”、“我怎么贷不了”这样的问题；当然给Jev外挂一个OCR或者用微调的lava+图像编码器也算是一种方案，但是我希望能够探索一下开源的多模态小模型（这里使用Qwen3-VL）候选首token的方案，在这里记录一下大致做法。
+
+**为什么需要做决策**：收到“为什么申请不了”时，客服不能立即编造原因。它可能需要追问页面位置、查询真实申请、解释已知规则，或者把争议交给人工。生成回答之前的这一步，就是本项目研究的**决策**。
+
+全部交给通用大模型生成工具 JSON，可能带来多余输出、延迟和难以校准的自信；外部决策 API 则涉及网络、持续调用成本和服务依赖。所以，一个能本地部署、能接收平台截图的小模型，能否以足够低的延迟可靠决策，并在没有把握时交给其他渠道。
+
+不过“读取第一个 token 的概率就能替代专用决策模型”只是待检验假设。候选概率只是将模型对有限候选的偏好归一化，**不是答案真实正确的概率，也不自动具备业务规则、权限控制或可解释性**。
+
+## 当前证据与阅读入口
+
+完整复盘请从 [阅读导航](docs/00-阅读导航.md) 开始，按业务定义、工程与训练过程、历次结果、最新效果与速度的顺序阅读。
+
+**最新：第四轮训练、校准和完整测试已完成。** 同协议 NF4 对照中，MASSIVE 中文意图由 **55.14% → 83.42%**（Jev 全请求口径 **78.01%**），旧业务路由由 **55.56% → 93.06%**（Jev **97.22%**）。新合成业务路由为 **98.89%**，但该集存在标签歧义且与训练共享生成课程，不能据此宣布超过 Jev 的真实业务能力。
+
+尚未实现各项能力都接近 Jev：新业务意图 **92.22% vs 97.78%**，CrossWOZ 迁移 **60% vs 87%**，后者还低于基础模型的 **64%**。同一批 32 条业务请求，本地微调模型 P50/P95 为 **382/414 ms**，Jev 为 **573/900 ms**；本地排除加载、API 包含网络，属于调用方案对照。完整表格、候选输出层加速检查、校准和局限见 [效果与速度验证](docs/09-效果与速度验证.md)。
+
+第一轮测试，72 条合成业务测试中，Jev 路由准确率 97.2%，Qwen 原始首 token 为 63.9%；公开中文意图子集 117 条上分别为 86.3% 和 70.1%。
+
+第二轮扩展为 MASSIVE 官方中文测试集 2,974 条、CrossWOZ 200 个单领域用户轮次和业务回归 72 条，比较 BF16、NF4、QLoRA 和校准。第二轮 MASSIVE 固定 60 个候选，第一轮为 59 个。通过QLoRA 将 NF4 的公共意图准确率从 **55.01% 提升至 65.47%**，Jev 为 **78.06%**；但业务路由仅 **44.44%**，Jev 为 **97.22%**。
+
+第三轮路由专项训练：恢复原始提示，从基础模型重新训练，只学四类路由，按开发路由宏 F1 选中第 40 步。同提示、同 NF4 精度的旧回归结果为 **55.56% → 47.22%**，没有获得收益；训练损失接近零而开发集始终为 7/16，提示场景覆盖不足与过拟合。当前不推荐采用该适配器，下一步优先复核政策、补充状态边界样本和新的独立验收集。全部结果保留，不用校准掩盖类别错误。
+
+## 阶段性成果（9.26）
+| 指标 | 原始 Qwen | 微调后 | Jev | 对比说明 |
+|---|---:|---:|---:|---|
+| **公共中文意图准确率**，2,974 条 | 55.14% | **83.42%** | 78.01% | 提升 **28.28 个百分点**，本次基准上超过 Jev **5.41 个百分点** |
+| **旧业务路由准确率**，72 条 | 55.56% | **93.06%** | 97.22% | 提升 **37.50 个百分点**，与 Jev 相差 **4.17 个百分点** |
+| **请求 P50 延迟**，相同 32 条 | 367 ms | **382 ms** | 573 ms | 相比 Jev，耗时降低约 **33%** |
+| **请求 P95 延迟** | 395 ms | **414 ms** | 900 ms | 相比 Jev，较慢请求的耗时降低约 **54%** |
+
+- [完整开发过程](docs/03-工程化与微调校准过程.md)：数据隔离、提示、训练、显存、失败尝试、复现。
+- [第二轮结果与分析](docs/04-第二轮结果与决策.md)：实测结果及限制。
+- [第三轮路由专项训练](docs/05-路由专项训练.md)：区分提示退化与训练收益，只训练四类路由，按路由指标选检查点。
+- [第四轮扩大数据与联合训练](docs/06-扩大数据与联合训练.md)：完整公共训练集、2,048 条业务状态对照、联合指标与复现命令。
+- [第四轮结果](docs/07-第四轮运行结果.md)、[效果与速度总表](docs/09-效果与速度验证.md)：当前正式结果；附逐条复核、延迟与校准口径。
+- [训练后的验证与下一步](docs/08-训练后的验证与下一步.md)：分层诊断、候选输出层加速实验、扩数据与延长训练的判断顺序。
+- [指标汇总](results/phase2/summary.md)、[完整 JSON](results/phase2/metrics.json)、[CSV](results/phase2/metrics.csv)。
+- [第一轮报告](docs/archive/02-测试结果与选型建议.md)、[业务契约](docs/01-决策范围与验收设计.md)。
+- [数据说明](data/README.md)、[第三方来源](NOTICE.md)。
+
+## 指标含义
+
+|指标|计算与例子|作用与限制|
+|---|---|---|
+|意图准确率|预测意图与标注相同的比例。如“查我的信用分”应为 credit。|衡量听懂诉求，不等于下一步处理正确。|
+|业务路由准确率|预测的 tool / clarify / llm / human 与政策标签相同的条数 / 业务样本数。|衡量交给谁处理。查询个人记录时，未登录应先 clarify，登录后可能为 tool。|
+|工具准确率|所选工具（含 none）与标签相同的比例。|大量无需工具的样本会抬高分数；需结合真正需要工具的子集。|
+|全字段正确率|同一条样本的意图、路由、工具、人工标记全部正确。|比单项严格；第二轮人工标记由路由推导，不是独立模型能力。|
+|宏 F1|各个有真实样本的类别分别算 F1，再平均；F1 综合精确率与召回率。|减少大类掩盖小类问题，不把无测试样本的类别计入宏平均。|
+|必须人工漏判|真实为 human，却预测其他路由的数量 / 真实 human 数量。|关注风险漏转；还需看误转，不能靠全部转人工取巧。|
+|NLL|正确标签概率的负对数取均值。|越小越好，“自信地答错”受到较大惩罚。|
+|Brier 分数|各类别概率与真实 one-hot 标签的平方差之和，再平均。|越小越好；采用多类求和口径。|
+|ECE|置信度分为 10 个等宽区间，平均置信度与实际准确率之差按样本数加权。|越小表示越匹配；受分箱及样本数影响，不能单独指导部署。|
+|覆盖率 / 接受错误数|例如仅接受置信度 ≥0.9：接受数 / 总数，以及其中错多少。|估算自动处理与兜底权衡；0.9 不意味着实际错误率必然小于 10%。|
+|P50 / P95 延迟|50% / 95% 样本耗时不超过该值。|P95 反映较慢请求。本地不含加载，API 含网络，不是纯算力比较。|
+|allocated / reserved 显存|PyTorch 实际分配 / 缓存池保留的峰值。|不含全部驱动和桌面占用。|
+|分组 bootstrap 区间|按场景组或对话组重采样，估计两方案准确率差的区间。|避免把近义句当完全独立样本，不保证未来效果。|
+
+API 失败另外记录；成功样本准确率和把失败也算错的 `accuracy_all_requests` 分开保存。候选分类强制产生合法类别，不能把合法输出率当语义正确率。
+
+## 目录
+
+```text
+configs/          固定模型来源、业务契约、训练配置
+src/qwenlab/      Python 包：下载、数据、推理、训练、校准、发布
+tests/            数据隔离、指标和校准测试
+scripts/          PowerShell 环境与安装入口
+data/             数据说明、业务样本、复核表、来源清单
+docs/             公开实验过程；archive/ 第一轮结论
+results/          可公开指标、预测及来源记录
+以下为未上传的本地目录索引：
+.local/           密钥、个人笔记、训练产物、日志
+.planning/        本地进度
+.venv/ .cache/    环境和缓存
+models/           下载权重
+data/raw/         原始下载
+data/processed/   可重建数据
+results/runs/     运行工作区
+dist/             检查后的发布包
+```
+
+## 安装和复现
+
+```powershell
+python -m qwenlab download-model
+python -m qwenlab download-public
+python -m qwenlab download-crosswoz
+python -m qwenlab prepare
+python -m unittest discover -s tests -p "*.py" -v
+```
+
+安装的 `-Direct` 仅为当前进程禁用代理；需要代理时省略。下载脚本目前直连官方来源。`prepare` 不覆盖已冻结数据；新实验使用新项目副本或先归档旧版本。依赖见 `requirements-lock.txt`，本轮没有升级第一轮的 PyTorch / Transformers。
+
+```powershell
+# GPU 实验依次运行，避免争抢显存；run 隔离产物。
+python -m qwenlab evaluate --run qwen-bf16-v2 --precision bf16
+python -m qwenlab evaluate --run qwen-nf4-v2 --precision nf4
+python -m qwenlab train --run qlora-v2
+python -m qwenlab evaluate --run qwen-qlora-v2 --precision nf4 --adapter .local/checkpoints/qlora-v2/best
+
+# 独立 calibration 集拟合温度，test 只应用温度。
+python -m qwenlab evaluate --run qwen-nf4-cal-v2 --precision nf4 --datasets massive business --split calibration
+python -m qwenlab evaluate --run qwen-qlora-cal-v2 --precision nf4 --adapter .local/checkpoints/qlora-v2/best --datasets massive business --split calibration
+python -m qwenlab calibrate --run qwen-nf4-v2 --calibration-run qwen-nf4-cal-v2
+python -m qwenlab calibrate --run qwen-qlora-v2 --calibration-run qwen-qlora-cal-v2
+```
+
+```powershell
+python -m qwenlab evaluate --provider jev --run jev-v2 --max-requests 3300
+python -m qwenlab report --runs jev-v2 qwen-bf16-v2 qwen-nf4-v2 qwen-qlora-v2 qwen-nf4-v2-calibrated qwen-qlora-v2-calibrated
+python -m qwenlab.record_provenance
+python -m qwenlab audit --export
+```

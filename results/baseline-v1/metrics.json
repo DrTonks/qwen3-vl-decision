@@ -1,0 +1,2899 @@
+{
+  "runs": {
+    "jev-business-dev": {
+      "rows": 64,
+      "successful": 64,
+      "errors": 0,
+      "tasks": {
+        "intent": {
+          "n": 64,
+          "correct": 58,
+          "accuracy": 0.90625,
+          "accuracy_wilson_95_descriptive": [
+            0.8101690141672233,
+            0.9563223421687121
+          ],
+          "macro_f1_gold_supported_classes": 0.9078822412155745,
+          "supported_classes": [
+            "application_detail",
+            "applications",
+            "credit",
+            "handoff",
+            "products",
+            "repayment",
+            "security",
+            "status_code",
+            "ui_issue"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "products -> products": 12,
+            "credit -> credit": 4,
+            "application_detail -> application_detail": 4,
+            "status_code -> status_code": 4,
+            "ui_issue -> ui_issue": 7,
+            "ui_issue -> application_detail": 1,
+            "repayment -> repayment": 4,
+            "security -> security": 8,
+            "handoff -> handoff": 8,
+            "application_detail -> handoff": 4,
+            "applications -> applications": 7,
+            "applications -> status_code": 1
+          },
+          "brier_multiclass_sum": 0.124603125,
+          "nll": 0.2449672853174323,
+          "ece_10_equal_width": 0.06390624999999997,
+          "selective": {
+            "0.5": {
+              "coverage": 0.984375,
+              "accepted": 63,
+              "errors": 5
+            },
+            "0.7": {
+              "coverage": 0.953125,
+              "accepted": 61,
+              "errors": 3
+            },
+            "0.9": {
+              "coverage": 0.828125,
+              "accepted": 53,
+              "errors": 0
+            },
+            "0.95": {
+              "coverage": 0.71875,
+              "accepted": 46,
+              "errors": 0
+            }
+          }
+        },
+        "needs_human": {
+          "n": 64,
+          "correct": 64,
+          "accuracy": 1.0,
+          "accuracy_wilson_95_descriptive": [
+            0.9433739770288436,
+            1.0
+          ],
+          "macro_f1_gold_supported_classes": 1.0,
+          "supported_classes": [
+            "no",
+            "yes"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "no -> no": 44,
+            "yes -> yes": 20
+          },
+          "brier_multiclass_sum": 0.0076125,
+          "nll": 0.020030738646493337,
+          "ece_10_equal_width": 0.01750000000000001,
+          "selective": {
+            "0.5": {
+              "coverage": 1.0,
+              "accepted": 64,
+              "errors": 0
+            },
+            "0.7": {
+              "coverage": 0.984375,
+              "accepted": 63,
+              "errors": 0
+            },
+            "0.9": {
+              "coverage": 0.953125,
+              "accepted": 61,
+              "errors": 0
+            },
+            "0.95": {
+              "coverage": 0.921875,
+              "accepted": 59,
+              "errors": 0
+            }
+          }
+        },
+        "route": {
+          "n": 64,
+          "correct": 57,
+          "accuracy": 0.890625,
+          "accuracy_wilson_95_descriptive": [
+            0.7910113670806147,
+            0.9459995524731695
+          ],
+          "macro_f1_gold_supported_classes": 0.8817085817993259,
+          "supported_classes": [
+            "clarify",
+            "human",
+            "llm",
+            "tool"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "tool -> tool": 16,
+            "clarify -> clarify": 9,
+            "clarify -> tool": 2,
+            "clarify -> llm": 1,
+            "llm -> llm": 12,
+            "human -> human": 20,
+            "llm -> tool": 4
+          },
+          "brier_multiclass_sum": 0.14151875,
+          "nll": 0.22063734890681191,
+          "ece_10_equal_width": 0.06046874999999993,
+          "selective": {
+            "0.5": {
+              "coverage": 0.984375,
+              "accepted": 63,
+              "errors": 7
+            },
+            "0.7": {
+              "coverage": 0.828125,
+              "accepted": 53,
+              "errors": 3
+            },
+            "0.9": {
+              "coverage": 0.6875,
+              "accepted": 44,
+              "errors": 0
+            },
+            "0.95": {
+              "coverage": 0.640625,
+              "accepted": 41,
+              "errors": 0
+            }
+          }
+        },
+        "tool": {
+          "n": 64,
+          "correct": 57,
+          "accuracy": 0.890625,
+          "accuracy_wilson_95_descriptive": [
+            0.7910113670806147,
+            0.9459995524731695
+          ],
+          "macro_f1_gold_supported_classes": 0.8822978629654109,
+          "supported_classes": [
+            "none",
+            "queryApplicationDetail",
+            "queryLoanProducts",
+            "queryMyApplications"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "queryLoanProducts -> queryLoanProducts": 8,
+            "none -> none": 41,
+            "queryApplicationDetail -> queryApplicationDetail": 4,
+            "none -> queryMyApplications": 4,
+            "queryMyApplications -> queryMyApplications": 4,
+            "none -> explainApplicationStatus": 2,
+            "none -> queryLoanProducts": 1
+          },
+          "brier_multiclass_sum": 0.168603125,
+          "nll": 0.3365131957411373,
+          "ece_10_equal_width": 0.07484374999999992,
+          "selective": {
+            "0.5": {
+              "coverage": 0.984375,
+              "accepted": 63,
+              "errors": 6
+            },
+            "0.7": {
+              "coverage": 0.890625,
+              "accepted": 57,
+              "errors": 4
+            },
+            "0.9": {
+              "coverage": 0.75,
+              "accepted": 48,
+              "errors": 1
+            },
+            "0.95": {
+              "coverage": 0.546875,
+              "accepted": 35,
+              "errors": 0
+            }
+          }
+        }
+      },
+      "latency_p50_s": 0.48933099998976104,
+      "latency_p95_s": 0.5703483699922799,
+      "all_fields_correct": 52,
+      "usage_input_tokens": 105137,
+      "usage_output_tokens": 16616,
+      "human_required": 20,
+      "human_route_missed": 0,
+      "human_flag_missed": 0,
+      "route_tool_inconsistent": 1,
+      "route_human_inconsistent": 0
+    },
+    "jev-business-test": {
+      "rows": 72,
+      "successful": 72,
+      "errors": 0,
+      "tasks": {
+        "intent": {
+          "n": 72,
+          "correct": 67,
+          "accuracy": 0.9305555555555556,
+          "accuracy_wilson_95_descriptive": [
+            0.847518240672898,
+            0.9699750611561773
+          ],
+          "macro_f1_gold_supported_classes": 0.908870758870759,
+          "supported_classes": [
+            "application_detail",
+            "applications",
+            "general",
+            "handoff",
+            "products",
+            "repayment",
+            "security",
+            "status_code",
+            "ui_issue"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "products -> products": 12,
+            "applications -> applications": 4,
+            "application_detail -> application_detail": 5,
+            "status_code -> status_code": 8,
+            "ui_issue -> ui_issue": 20,
+            "repayment -> repayment": 7,
+            "security -> security": 4,
+            "handoff -> handoff": 3,
+            "handoff -> payment_dispute": 1,
+            "general -> general": 4,
+            "repayment -> handoff": 1,
+            "application_detail -> security": 3
+          },
+          "brier_multiclass_sum": 0.1358205160471154,
+          "nll": 0.2359946503246922,
+          "ece_10_equal_width": 0.07235409652076322,
+          "selective": {
+            "0.5": {
+              "coverage": 0.9722222222222222,
+              "accepted": 70,
+              "errors": 5
+            },
+            "0.7": {
+              "coverage": 0.8611111111111112,
+              "accepted": 62,
+              "errors": 3
+            },
+            "0.9": {
+              "coverage": 0.7222222222222222,
+              "accepted": 52,
+              "errors": 2
+            },
+            "0.95": {
+              "coverage": 0.6527777777777778,
+              "accepted": 47,
+              "errors": 0
+            }
+          }
+        },
+        "needs_human": {
+          "n": 72,
+          "correct": 71,
+          "accuracy": 0.9861111111111112,
+          "accuracy_wilson_95_descriptive": [
+            0.9254321971571302,
+            0.9975441113595678
+          ],
+          "macro_f1_gold_supported_classes": 0.9824175824175825,
+          "supported_classes": [
+            "no",
+            "yes"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "no -> no": 52,
+            "yes -> yes": 19,
+            "yes -> no": 1
+          },
+          "brier_multiclass_sum": 0.028250000000000004,
+          "nll": 0.048298406936680346,
+          "ece_10_equal_width": 0.028055555555555542,
+          "selective": {
+            "0.5": {
+              "coverage": 1.0,
+              "accepted": 72,
+              "errors": 1
+            },
+            "0.7": {
+              "coverage": 0.9722222222222222,
+              "accepted": 70,
+              "errors": 1
+            },
+            "0.9": {
+              "coverage": 0.9166666666666666,
+              "accepted": 66,
+              "errors": 0
+            },
+            "0.95": {
+              "coverage": 0.9027777777777778,
+              "accepted": 65,
+              "errors": 0
+            }
+          }
+        },
+        "route": {
+          "n": 72,
+          "correct": 70,
+          "accuracy": 0.9722222222222222,
+          "accuracy_wilson_95_descriptive": [
+            0.9042564183109327,
+            0.9923491385338594
+          ],
+          "macro_f1_gold_supported_classes": 0.9708154164675904,
+          "supported_classes": [
+            "clarify",
+            "human",
+            "llm",
+            "tool"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "tool -> tool": 20,
+            "clarify -> clarify": 11,
+            "clarify -> tool": 1,
+            "llm -> llm": 20,
+            "human -> human": 19,
+            "human -> tool": 1
+          },
+          "brier_multiclass_sum": 0.06284063729324672,
+          "nll": 0.1292180652977546,
+          "ece_10_equal_width": 0.0605639730639731,
+          "selective": {
+            "0.5": {
+              "coverage": 1.0,
+              "accepted": 72,
+              "errors": 2
+            },
+            "0.7": {
+              "coverage": 0.9166666666666666,
+              "accepted": 66,
+              "errors": 1
+            },
+            "0.9": {
+              "coverage": 0.7361111111111112,
+              "accepted": 53,
+              "errors": 0
+            },
+            "0.95": {
+              "coverage": 0.625,
+              "accepted": 45,
+              "errors": 0
+            }
+          }
+        },
+        "tool": {
+          "n": 72,
+          "correct": 61,
+          "accuracy": 0.8472222222222222,
+          "accuracy_wilson_95_descriptive": [
+            0.7467749821453958,
+            0.9124938096522456
+          ],
+          "macro_f1_gold_supported_classes": 0.803763440860215,
+          "supported_classes": [
+            "explainApplicationStatus",
+            "none",
+            "queryLoanProducts",
+            "queryMyApplications"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "queryLoanProducts -> queryLoanProducts": 8,
+            "none -> none": 41,
+            "queryMyApplications -> queryMyApplications": 4,
+            "none -> queryMyApplications": 7,
+            "explainApplicationStatus -> explainApplicationStatus": 8,
+            "none -> explainApplicationStatus": 4
+          },
+          "brier_multiclass_sum": 0.18135678190434082,
+          "nll": 0.2976988966234145,
+          "ece_10_equal_width": 0.08002525252525251,
+          "selective": {
+            "0.5": {
+              "coverage": 1.0,
+              "accepted": 72,
+              "errors": 11
+            },
+            "0.7": {
+              "coverage": 0.9305555555555556,
+              "accepted": 67,
+              "errors": 6
+            },
+            "0.9": {
+              "coverage": 0.6527777777777778,
+              "accepted": 47,
+              "errors": 1
+            },
+            "0.95": {
+              "coverage": 0.5277777777777778,
+              "accepted": 38,
+              "errors": 1
+            }
+          }
+        }
+      },
+      "latency_p50_s": 0.4973463000060292,
+      "latency_p95_s": 1.0092920549941484,
+      "all_fields_correct": 56,
+      "usage_input_tokens": 118377,
+      "usage_output_tokens": 18744,
+      "human_required": 20,
+      "human_route_missed": 1,
+      "human_flag_missed": 1,
+      "route_tool_inconsistent": 9,
+      "route_human_inconsistent": 0
+    },
+    "jev-gated-business-test": {
+      "rows": 72,
+      "successful": 72,
+      "errors": 0,
+      "tasks": {
+        "intent": {
+          "n": 72,
+          "correct": 67,
+          "accuracy": 0.9305555555555556,
+          "accuracy_wilson_95_descriptive": [
+            0.847518240672898,
+            0.9699750611561773
+          ],
+          "macro_f1_gold_supported_classes": 0.908870758870759,
+          "supported_classes": [
+            "application_detail",
+            "applications",
+            "general",
+            "handoff",
+            "products",
+            "repayment",
+            "security",
+            "status_code",
+            "ui_issue"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "products -> products": 12,
+            "applications -> applications": 4,
+            "application_detail -> application_detail": 5,
+            "status_code -> status_code": 8,
+            "ui_issue -> ui_issue": 20,
+            "repayment -> repayment": 7,
+            "security -> security": 4,
+            "handoff -> handoff": 3,
+            "handoff -> payment_dispute": 1,
+            "general -> general": 4,
+            "repayment -> handoff": 1,
+            "application_detail -> security": 3
+          },
+          "brier_multiclass_sum": 0.1358205160471154,
+          "nll": 0.2359946503246922,
+          "ece_10_equal_width": 0.07235409652076322,
+          "selective": {
+            "0.5": {
+              "coverage": 0.9722222222222222,
+              "accepted": 70,
+              "errors": 5
+            },
+            "0.7": {
+              "coverage": 0.8611111111111112,
+              "accepted": 62,
+              "errors": 3
+            },
+            "0.9": {
+              "coverage": 0.7222222222222222,
+              "accepted": 52,
+              "errors": 2
+            },
+            "0.95": {
+              "coverage": 0.6527777777777778,
+              "accepted": 47,
+              "errors": 0
+            }
+          }
+        },
+        "needs_human": {
+          "n": 72,
+          "correct": 71,
+          "accuracy": 0.9861111111111112,
+          "accuracy_wilson_95_descriptive": [
+            0.9254321971571302,
+            0.9975441113595678
+          ],
+          "macro_f1_gold_supported_classes": 0.9824175824175825,
+          "supported_classes": [
+            "no",
+            "yes"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "no -> no": 52,
+            "yes -> yes": 19,
+            "yes -> no": 1
+          },
+          "brier_multiclass_sum": 0.028250000000000004,
+          "nll": 0.048298406936680346,
+          "ece_10_equal_width": 0.028055555555555542,
+          "selective": {
+            "0.5": {
+              "coverage": 1.0,
+              "accepted": 72,
+              "errors": 1
+            },
+            "0.7": {
+              "coverage": 0.9722222222222222,
+              "accepted": 70,
+              "errors": 1
+            },
+            "0.9": {
+              "coverage": 0.9166666666666666,
+              "accepted": 66,
+              "errors": 0
+            },
+            "0.95": {
+              "coverage": 0.9027777777777778,
+              "accepted": 65,
+              "errors": 0
+            }
+          }
+        },
+        "route": {
+          "n": 72,
+          "correct": 70,
+          "accuracy": 0.9722222222222222,
+          "accuracy_wilson_95_descriptive": [
+            0.9042564183109327,
+            0.9923491385338594
+          ],
+          "macro_f1_gold_supported_classes": 0.9708154164675904,
+          "supported_classes": [
+            "clarify",
+            "human",
+            "llm",
+            "tool"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "tool -> tool": 20,
+            "clarify -> clarify": 11,
+            "clarify -> tool": 1,
+            "llm -> llm": 20,
+            "human -> human": 19,
+            "human -> tool": 1
+          },
+          "brier_multiclass_sum": 0.06284063729324672,
+          "nll": 0.1292180652977546,
+          "ece_10_equal_width": 0.0605639730639731,
+          "selective": {
+            "0.5": {
+              "coverage": 1.0,
+              "accepted": 72,
+              "errors": 2
+            },
+            "0.7": {
+              "coverage": 0.9166666666666666,
+              "accepted": 66,
+              "errors": 1
+            },
+            "0.9": {
+              "coverage": 0.7361111111111112,
+              "accepted": 53,
+              "errors": 0
+            },
+            "0.95": {
+              "coverage": 0.625,
+              "accepted": 45,
+              "errors": 0
+            }
+          }
+        },
+        "tool": {
+          "n": 72,
+          "correct": 70,
+          "accuracy": 0.9722222222222222,
+          "accuracy_wilson_95_descriptive": [
+            0.9042564183109327,
+            0.9923491385338594
+          ],
+          "macro_f1_gold_supported_classes": 0.9450980392156862,
+          "supported_classes": [
+            "explainApplicationStatus",
+            "none",
+            "queryLoanProducts",
+            "queryMyApplications"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "queryLoanProducts -> queryLoanProducts": 8,
+            "none -> none": 50,
+            "queryMyApplications -> queryMyApplications": 4,
+            "none -> queryMyApplications": 2,
+            "explainApplicationStatus -> explainApplicationStatus": 8
+          }
+        }
+      },
+      "latency_p50_s": 0.4973463000060292,
+      "latency_p95_s": 1.0092920549941484,
+      "all_fields_correct": 65,
+      "usage_input_tokens": 118377,
+      "usage_output_tokens": 18744,
+      "human_required": 20,
+      "human_route_missed": 1,
+      "human_flag_missed": 1,
+      "route_tool_inconsistent": 0,
+      "route_human_inconsistent": 0
+    },
+    "jev-massive-test": {
+      "rows": 117,
+      "successful": 117,
+      "errors": 0,
+      "tasks": {
+        "intent": {
+          "n": 117,
+          "correct": 101,
+          "accuracy": 0.8632478632478633,
+          "accuracy_wilson_95_descriptive": [
+            0.7893603878029154,
+            0.9140397657865771
+          ],
+          "macro_f1_gold_supported_classes": 0.8486682808716707,
+          "supported_classes": [
+            "alarm_query",
+            "alarm_remove",
+            "alarm_set",
+            "audio_volume_down",
+            "audio_volume_mute",
+            "audio_volume_other",
+            "audio_volume_up",
+            "calendar_query",
+            "calendar_remove",
+            "calendar_set",
+            "cooking_recipe",
+            "datetime_convert",
+            "datetime_query",
+            "email_addcontact",
+            "email_query",
+            "email_querycontact",
+            "email_sendemail",
+            "general_greet",
+            "general_joke",
+            "general_quirky",
+            "iot_cleaning",
+            "iot_coffee",
+            "iot_hue_lightchange",
+            "iot_hue_lightdim",
+            "iot_hue_lightoff",
+            "iot_hue_lighton",
+            "iot_hue_lightup",
+            "iot_wemo_off",
+            "iot_wemo_on",
+            "lists_createoradd",
+            "lists_query",
+            "lists_remove",
+            "music_dislikeness",
+            "music_likeness",
+            "music_query",
+            "music_settings",
+            "news_query",
+            "play_audiobook",
+            "play_game",
+            "play_music",
+            "play_podcasts",
+            "play_radio",
+            "qa_currency",
+            "qa_definition",
+            "qa_factoid",
+            "qa_maths",
+            "qa_stock",
+            "recommendation_events",
+            "recommendation_locations",
+            "recommendation_movies",
+            "social_post",
+            "social_query",
+            "takeaway_order",
+            "takeaway_query",
+            "transport_query",
+            "transport_taxi",
+            "transport_ticket",
+            "transport_traffic",
+            "weather_query"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "alarm_query -> alarm_query": 2,
+            "alarm_remove -> alarm_remove": 2,
+            "alarm_set -> alarm_set": 2,
+            "audio_volume_down -> audio_volume_down": 2,
+            "audio_volume_mute -> audio_volume_mute": 2,
+            "audio_volume_other -> audio_volume_other": 2,
+            "audio_volume_up -> audio_volume_up": 2,
+            "calendar_query -> calendar_query": 2,
+            "calendar_remove -> calendar_remove": 2,
+            "calendar_set -> alarm_set": 1,
+            "calendar_set -> calendar_set": 1,
+            "cooking_recipe -> cooking_recipe": 2,
+            "datetime_convert -> datetime_convert": 2,
+            "datetime_query -> alarm_set": 1,
+            "datetime_query -> datetime_query": 1,
+            "email_addcontact -> email_addcontact": 1,
+            "email_addcontact -> email_querycontact": 1,
+            "email_query -> email_query": 2,
+            "email_querycontact -> email_querycontact": 2,
+            "email_sendemail -> email_sendemail": 2,
+            "general_greet -> general_quirky": 1,
+            "general_joke -> general_joke": 2,
+            "general_quirky -> qa_factoid": 1,
+            "general_quirky -> general_quirky": 1,
+            "iot_cleaning -> iot_cleaning": 2,
+            "iot_coffee -> iot_coffee": 2,
+            "iot_hue_lightchange -> iot_hue_lightchange": 2,
+            "iot_hue_lightdim -> iot_hue_lightdim": 2,
+            "iot_hue_lightoff -> iot_hue_lightoff": 2,
+            "iot_hue_lighton -> iot_hue_lighton": 1,
+            "iot_hue_lighton -> general_quirky": 1,
+            "iot_hue_lightup -> qa_factoid": 1,
+            "iot_hue_lightup -> iot_hue_lightup": 1,
+            "iot_wemo_off -> iot_wemo_off": 2,
+            "iot_wemo_on -> iot_wemo_on": 2,
+            "lists_createoradd -> lists_createoradd": 2,
+            "lists_query -> lists_query": 2,
+            "lists_remove -> qa_definition": 1,
+            "lists_remove -> lists_remove": 1,
+            "music_dislikeness -> music_dislikeness": 2,
+            "music_likeness -> music_likeness": 1,
+            "music_likeness -> music_query": 1,
+            "music_query -> music_query": 2,
+            "music_settings -> lists_createoradd": 1,
+            "music_settings -> play_music": 1,
+            "news_query -> news_query": 2,
+            "play_audiobook -> play_music": 1,
+            "play_audiobook -> play_audiobook": 1,
+            "play_game -> play_game": 2,
+            "play_music -> play_music": 2,
+            "play_podcasts -> play_podcasts": 2,
+            "play_radio -> play_radio": 2,
+            "qa_currency -> qa_currency": 2,
+            "qa_definition -> qa_definition": 2,
+            "qa_factoid -> qa_factoid": 2,
+            "qa_maths -> qa_maths": 2,
+            "qa_stock -> qa_stock": 2,
+            "recommendation_events -> recommendation_events": 1,
+            "recommendation_events -> recommendation_locations": 1,
+            "recommendation_locations -> recommendation_locations": 2,
+            "recommendation_movies -> qa_factoid": 1,
+            "recommendation_movies -> recommendation_movies": 1,
+            "social_post -> social_post": 1,
+            "social_post -> general_quirky": 1,
+            "social_query -> social_query": 1,
+            "social_query -> social_post": 1,
+            "takeaway_order -> takeaway_order": 2,
+            "takeaway_query -> takeaway_query": 2,
+            "transport_query -> transport_query": 2,
+            "transport_taxi -> transport_taxi": 2,
+            "transport_ticket -> transport_ticket": 2,
+            "transport_traffic -> transport_traffic": 2,
+            "weather_query -> weather_query": 2
+          },
+          "brier_multiclass_sum": 0.20793442008795543,
+          "nll": 1.2270158572640966,
+          "ece_10_equal_width": 0.06584218250884916,
+          "selective": {
+            "0.5": {
+              "coverage": 0.9658119658119658,
+              "accepted": 113,
+              "errors": 14
+            },
+            "0.7": {
+              "coverage": 0.8803418803418803,
+              "accepted": 103,
+              "errors": 8
+            },
+            "0.9": {
+              "coverage": 0.7606837606837606,
+              "accepted": 89,
+              "errors": 3
+            },
+            "0.95": {
+              "coverage": 0.7094017094017094,
+              "accepted": 83,
+              "errors": 1
+            }
+          }
+        }
+      },
+      "latency_p50_s": 0.4803705000085756,
+      "latency_p95_s": 0.5757173999911174,
+      "all_fields_correct": 101,
+      "usage_input_tokens": 171172,
+      "usage_output_tokens": 66010
+    },
+    "qwen-calibrated-business-test": {
+      "rows": 72,
+      "successful": 72,
+      "errors": 0,
+      "tasks": {
+        "intent": {
+          "n": 72,
+          "correct": 44,
+          "accuracy": 0.6111111111111112,
+          "accuracy_wilson_95_descriptive": [
+            0.4956214320752605,
+            0.7153445812999848
+          ],
+          "macro_f1_gold_supported_classes": 0.6145137748586024,
+          "supported_classes": [
+            "application_detail",
+            "applications",
+            "general",
+            "handoff",
+            "products",
+            "repayment",
+            "security",
+            "status_code",
+            "ui_issue"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "products -> products": 9,
+            "products -> ui_issue": 3,
+            "applications -> applications": 4,
+            "application_detail -> application_detail": 5,
+            "status_code -> status_code": 8,
+            "ui_issue -> application_detail": 1,
+            "ui_issue -> ui_issue": 7,
+            "ui_issue -> handoff": 12,
+            "repayment -> repayment": 4,
+            "security -> handoff": 1,
+            "security -> security": 3,
+            "handoff -> handoff": 4,
+            "general -> applications": 2,
+            "general -> handoff": 2,
+            "repayment -> handoff": 4,
+            "application_detail -> handoff": 2,
+            "application_detail -> security": 1
+          },
+          "brier_multiclass_sum": 0.48391967474131525,
+          "nll": 1.2694574080430925,
+          "ece_10_equal_width": 0.13437946883091162,
+          "selective": {
+            "0.5": {
+              "coverage": 0.6111111111111112,
+              "accepted": 44,
+              "errors": 5
+            },
+            "0.7": {
+              "coverage": 0.4027777777777778,
+              "accepted": 29,
+              "errors": 0
+            },
+            "0.9": {
+              "coverage": 0.06944444444444445,
+              "accepted": 5,
+              "errors": 0
+            },
+            "0.95": {
+              "coverage": 0.0,
+              "accepted": 0,
+              "errors": 0
+            }
+          }
+        },
+        "needs_human": {
+          "n": 72,
+          "correct": 50,
+          "accuracy": 0.6944444444444444,
+          "accuracy_wilson_95_descriptive": [
+            0.5804553438658896,
+            0.7887351795407894
+          ],
+          "macro_f1_gold_supported_classes": 0.6785714285714286,
+          "supported_classes": [
+            "no",
+            "yes"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "no -> no": 33,
+            "no -> yes": 19,
+            "yes -> yes": 17,
+            "yes -> no": 3
+          },
+          "brier_multiclass_sum": 0.4225184100545785,
+          "nll": 0.6357221232909309,
+          "ece_10_equal_width": 0.13013462454122568,
+          "selective": {
+            "0.5": {
+              "coverage": 1.0,
+              "accepted": 72,
+              "errors": 22
+            },
+            "0.7": {
+              "coverage": 0.75,
+              "accepted": 54,
+              "errors": 14
+            },
+            "0.9": {
+              "coverage": 0.4444444444444444,
+              "accepted": 32,
+              "errors": 6
+            },
+            "0.95": {
+              "coverage": 0.3611111111111111,
+              "accepted": 26,
+              "errors": 2
+            }
+          }
+        },
+        "route": {
+          "n": 72,
+          "correct": 46,
+          "accuracy": 0.6388888888888888,
+          "accuracy_wilson_95_descriptive": [
+            0.5235226614759323,
+            0.740184855243124
+          ],
+          "macro_f1_gold_supported_classes": 0.5667977855477856,
+          "supported_classes": [
+            "clarify",
+            "human",
+            "llm",
+            "tool"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "tool -> tool": 19,
+            "clarify -> clarify": 3,
+            "clarify -> tool": 6,
+            "tool -> human": 1,
+            "llm -> human": 13,
+            "llm -> tool": 2,
+            "human -> human": 19,
+            "llm -> llm": 5,
+            "clarify -> human": 2,
+            "clarify -> llm": 1,
+            "human -> tool": 1
+          },
+          "brier_multiclass_sum": 0.5880632462487668,
+          "nll": 1.3349383494621745,
+          "ece_10_equal_width": 0.1684935851715858,
+          "selective": {
+            "0.5": {
+              "coverage": 0.875,
+              "accepted": 63,
+              "errors": 19
+            },
+            "0.7": {
+              "coverage": 0.5416666666666666,
+              "accepted": 39,
+              "errors": 12
+            },
+            "0.9": {
+              "coverage": 0.3055555555555556,
+              "accepted": 22,
+              "errors": 4
+            },
+            "0.95": {
+              "coverage": 0.2361111111111111,
+              "accepted": 17,
+              "errors": 2
+            }
+          }
+        },
+        "tool": {
+          "n": 72,
+          "correct": 23,
+          "accuracy": 0.3194444444444444,
+          "accuracy_wilson_95_descriptive": [
+            0.22325457048556474,
+            0.43392565777966174
+          ],
+          "macro_f1_gold_supported_classes": 0.4483040935672515,
+          "supported_classes": [
+            "explainApplicationStatus",
+            "none",
+            "queryLoanProducts",
+            "queryMyApplications"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "queryLoanProducts -> queryMyApplications": 2,
+            "queryLoanProducts -> queryLoanProducts": 6,
+            "none -> none": 5,
+            "none -> queryMyApplications": 35,
+            "queryMyApplications -> queryMyApplications": 4,
+            "none -> queryApplicationDetail": 2,
+            "explainApplicationStatus -> explainApplicationStatus": 8,
+            "none -> explainApplicationStatus": 9,
+            "none -> queryLoanProducts": 1
+          },
+          "brier_multiclass_sum": 0.7119418168890126,
+          "nll": 1.5091552693402532,
+          "ece_10_equal_width": 0.18615855645587287,
+          "selective": {
+            "0.5": {
+              "coverage": 0.20833333333333334,
+              "accepted": 15,
+              "errors": 3
+            },
+            "0.7": {
+              "coverage": 0.1111111111111111,
+              "accepted": 8,
+              "errors": 0
+            },
+            "0.9": {
+              "coverage": 0.0,
+              "accepted": 0,
+              "errors": 0
+            },
+            "0.95": {
+              "coverage": 0.0,
+              "accepted": 0,
+              "errors": 0
+            }
+          }
+        }
+      },
+      "latency_p50_s": 0.3900452500238316,
+      "latency_p95_s": 0.43064895999850705,
+      "all_fields_correct": 14,
+      "usage_input_tokens": 0,
+      "usage_output_tokens": 0,
+      "human_required": 20,
+      "human_route_missed": 1,
+      "human_flag_missed": 3,
+      "route_tool_inconsistent": 41,
+      "route_human_inconsistent": 13
+    },
+    "qwen-first-business-calibration": {
+      "rows": 56,
+      "successful": 56,
+      "errors": 0,
+      "tasks": {
+        "intent": {
+          "n": 56,
+          "correct": 37,
+          "accuracy": 0.6607142857142857,
+          "accuracy_wilson_95_descriptive": [
+            0.5299920896078809,
+            0.7708020068066535
+          ],
+          "macro_f1_gold_supported_classes": 0.6042929292929293,
+          "supported_classes": [
+            "application_detail",
+            "applications",
+            "credit",
+            "general",
+            "payment_dispute",
+            "repayment",
+            "status_code",
+            "ui_issue"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "credit -> credit": 12,
+            "applications -> applications": 3,
+            "applications -> handoff": 5,
+            "application_detail -> application_detail": 8,
+            "status_code -> status_code": 4,
+            "ui_issue -> handoff": 4,
+            "repayment -> handoff": 4,
+            "payment_dispute -> payment_dispute": 8,
+            "general -> products": 2,
+            "general -> application_detail": 2,
+            "general -> general": 2,
+            "general -> handoff": 2
+          },
+          "brier_multiclass_sum": 0.6456641596766959,
+          "nll": 3.8478350931975625,
+          "ece_10_equal_width": 0.3206143332467937,
+          "selective": {
+            "0.5": {
+              "coverage": 1.0,
+              "accepted": 56,
+              "errors": 19
+            },
+            "0.7": {
+              "coverage": 0.9821428571428571,
+              "accepted": 55,
+              "errors": 18
+            },
+            "0.9": {
+              "coverage": 0.9285714285714286,
+              "accepted": 52,
+              "errors": 15
+            },
+            "0.95": {
+              "coverage": 0.9107142857142857,
+              "accepted": 51,
+              "errors": 15
+            }
+          }
+        },
+        "needs_human": {
+          "n": 56,
+          "correct": 46,
+          "accuracy": 0.8214285714285714,
+          "accuracy_wilson_95_descriptive": [
+            0.7015856902425105,
+            0.9000025025865582
+          ],
+          "macro_f1_gold_supported_classes": 0.8055555555555556,
+          "supported_classes": [
+            "no",
+            "yes"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "no -> no": 31,
+            "no -> yes": 9,
+            "yes -> yes": 15,
+            "yes -> no": 1
+          },
+          "brier_multiclass_sum": 0.23938297854321305,
+          "nll": 0.46735896078120126,
+          "ece_10_equal_width": 0.11482471314235496,
+          "selective": {
+            "0.5": {
+              "coverage": 1.0,
+              "accepted": 56,
+              "errors": 10
+            },
+            "0.7": {
+              "coverage": 0.8571428571428571,
+              "accepted": 48,
+              "errors": 5
+            },
+            "0.9": {
+              "coverage": 0.7678571428571429,
+              "accepted": 43,
+              "errors": 3
+            },
+            "0.95": {
+              "coverage": 0.7142857142857143,
+              "accepted": 40,
+              "errors": 3
+            }
+          }
+        },
+        "route": {
+          "n": 56,
+          "correct": 46,
+          "accuracy": 0.8214285714285714,
+          "accuracy_wilson_95_descriptive": [
+            0.7015856902425105,
+            0.9000025025865582
+          ],
+          "macro_f1_gold_supported_classes": 0.807994807994808,
+          "supported_classes": [
+            "clarify",
+            "human",
+            "llm",
+            "tool"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "tool -> tool": 15,
+            "tool -> llm": 1,
+            "clarify -> clarify": 5,
+            "clarify -> tool": 1,
+            "llm -> human": 3,
+            "llm -> tool": 3,
+            "clarify -> human": 2,
+            "human -> human": 16,
+            "llm -> llm": 10
+          },
+          "brier_multiclass_sum": 0.30878605539998566,
+          "nll": 0.9562120938402527,
+          "ece_10_equal_width": 0.11427495247629287,
+          "selective": {
+            "0.5": {
+              "coverage": 1.0,
+              "accepted": 56,
+              "errors": 10
+            },
+            "0.7": {
+              "coverage": 0.9464285714285714,
+              "accepted": 53,
+              "errors": 8
+            },
+            "0.9": {
+              "coverage": 0.6964285714285714,
+              "accepted": 39,
+              "errors": 5
+            },
+            "0.95": {
+              "coverage": 0.5535714285714286,
+              "accepted": 31,
+              "errors": 4
+            }
+          }
+        },
+        "tool": {
+          "n": 56,
+          "correct": 24,
+          "accuracy": 0.42857142857142855,
+          "accuracy_wilson_95_descriptive": [
+            0.3076876241309292,
+            0.5586261107959444
+          ],
+          "macro_f1_gold_supported_classes": 0.6234962406015038,
+          "supported_classes": [
+            "explainApplicationStatus",
+            "none",
+            "queryApplicationDetail",
+            "queryMyCreditScore"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "queryMyCreditScore -> queryMyCreditScore": 7,
+            "queryMyCreditScore -> queryMyApplications": 1,
+            "none -> queryMyApplications": 18,
+            "none -> explainApplicationStatus": 8,
+            "explainApplicationStatus -> explainApplicationStatus": 4,
+            "none -> none": 10,
+            "queryApplicationDetail -> queryApplicationDetail": 3,
+            "queryApplicationDetail -> queryMyApplications": 1,
+            "none -> queryMyCreditScore": 4
+          },
+          "brier_multiclass_sum": 0.951228835978763,
+          "nll": 3.20121957250932,
+          "ece_10_equal_width": 0.44369849728607264,
+          "selective": {
+            "0.5": {
+              "coverage": 0.9464285714285714,
+              "accepted": 53,
+              "errors": 29
+            },
+            "0.7": {
+              "coverage": 0.8214285714285714,
+              "accepted": 46,
+              "errors": 23
+            },
+            "0.9": {
+              "coverage": 0.6071428571428571,
+              "accepted": 34,
+              "errors": 17
+            },
+            "0.95": {
+              "coverage": 0.5535714285714286,
+              "accepted": 31,
+              "errors": 14
+            }
+          }
+        }
+      },
+      "latency_p50_s": 0.39121634999173693,
+      "latency_p95_s": 0.4413181250129128,
+      "all_fields_correct": 11,
+      "usage_input_tokens": 0,
+      "usage_output_tokens": 0,
+      "human_required": 16,
+      "human_route_missed": 0,
+      "human_flag_missed": 1,
+      "route_tool_inconsistent": 27,
+      "route_human_inconsistent": 7
+    },
+    "qwen-first-business-dev": {
+      "rows": 64,
+      "successful": 64,
+      "errors": 0,
+      "tasks": {
+        "intent": {
+          "n": 64,
+          "correct": 45,
+          "accuracy": 0.703125,
+          "accuracy_wilson_95_descriptive": [
+            0.5822956740587202,
+            0.8009500041092477
+          ],
+          "macro_f1_gold_supported_classes": 0.6762974062974063,
+          "supported_classes": [
+            "application_detail",
+            "applications",
+            "credit",
+            "handoff",
+            "products",
+            "repayment",
+            "security",
+            "status_code",
+            "ui_issue"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "products -> products": 11,
+            "credit -> credit": 3,
+            "credit -> handoff": 1,
+            "application_detail -> application_detail": 2,
+            "application_detail -> applications": 2,
+            "status_code -> status_code": 3,
+            "status_code -> application_detail": 1,
+            "ui_issue -> ui_issue": 6,
+            "ui_issue -> handoff": 2,
+            "repayment -> applications": 2,
+            "repayment -> handoff": 1,
+            "repayment -> repayment": 1,
+            "security -> handoff": 3,
+            "security -> security": 5,
+            "handoff -> handoff": 6,
+            "application_detail -> handoff": 4,
+            "applications -> applications": 8,
+            "handoff -> credit": 1,
+            "handoff -> products": 1,
+            "products -> status_code": 1
+          },
+          "brier_multiclass_sum": 0.5662797665610545,
+          "nll": 3.008523663247285,
+          "ece_10_equal_width": 0.2846988665087102,
+          "selective": {
+            "0.5": {
+              "coverage": 0.984375,
+              "accepted": 63,
+              "errors": 18
+            },
+            "0.7": {
+              "coverage": 0.96875,
+              "accepted": 62,
+              "errors": 18
+            },
+            "0.9": {
+              "coverage": 0.9375,
+              "accepted": 60,
+              "errors": 17
+            },
+            "0.95": {
+              "coverage": 0.890625,
+              "accepted": 57,
+              "errors": 14
+            }
+          }
+        },
+        "needs_human": {
+          "n": 64,
+          "correct": 59,
+          "accuracy": 0.921875,
+          "accuracy_wilson_95_descriptive": [
+            0.8298024712135222,
+            0.9661693219045645
+          ],
+          "macro_f1_gold_supported_classes": 0.9124487004103967,
+          "supported_classes": [
+            "no",
+            "yes"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "no -> no": 40,
+            "no -> yes": 4,
+            "yes -> yes": 19,
+            "yes -> no": 1
+          },
+          "brier_multiclass_sum": 0.15277919141962087,
+          "nll": 0.3532264418423458,
+          "ece_10_equal_width": 0.0574329371313723,
+          "selective": {
+            "0.5": {
+              "coverage": 1.0,
+              "accepted": 64,
+              "errors": 5
+            },
+            "0.7": {
+              "coverage": 0.96875,
+              "accepted": 62,
+              "errors": 5
+            },
+            "0.9": {
+              "coverage": 0.796875,
+              "accepted": 51,
+              "errors": 3
+            },
+            "0.95": {
+              "coverage": 0.734375,
+              "accepted": 47,
+              "errors": 3
+            }
+          }
+        },
+        "route": {
+          "n": 64,
+          "correct": 40,
+          "accuracy": 0.625,
+          "accuracy_wilson_95_descriptive": [
+            0.5025015331382642,
+            0.7333419611189468
+          ],
+          "macro_f1_gold_supported_classes": 0.5569442185721256,
+          "supported_classes": [
+            "clarify",
+            "human",
+            "llm",
+            "tool"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "tool -> tool": 14,
+            "clarify -> clarify": 3,
+            "clarify -> human": 1,
+            "tool -> human": 1,
+            "clarify -> llm": 4,
+            "clarify -> tool": 4,
+            "llm -> tool": 10,
+            "llm -> human": 2,
+            "llm -> llm": 4,
+            "human -> human": 19,
+            "human -> llm": 1,
+            "tool -> llm": 1
+          },
+          "brier_multiclass_sum": 0.6743171316825155,
+          "nll": 2.46384419274585,
+          "ece_10_equal_width": 0.3196987120237302,
+          "selective": {
+            "0.5": {
+              "coverage": 0.984375,
+              "accepted": 63,
+              "errors": 24
+            },
+            "0.7": {
+              "coverage": 0.90625,
+              "accepted": 58,
+              "errors": 19
+            },
+            "0.9": {
+              "coverage": 0.765625,
+              "accepted": 49,
+              "errors": 12
+            },
+            "0.95": {
+              "coverage": 0.734375,
+              "accepted": 47,
+              "errors": 11
+            }
+          }
+        },
+        "tool": {
+          "n": 64,
+          "correct": 18,
+          "accuracy": 0.28125,
+          "accuracy_wilson_95_descriptive": [
+            0.18593226105484584,
+            0.40134162399503504
+          ],
+          "macro_f1_gold_supported_classes": 0.4201961271102284,
+          "supported_classes": [
+            "none",
+            "queryApplicationDetail",
+            "queryLoanProducts",
+            "queryMyApplications"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "queryLoanProducts -> queryLoanProducts": 8,
+            "none -> queryMyCreditScore": 4,
+            "none -> queryMyApplications": 22,
+            "queryApplicationDetail -> queryApplicationDetail": 1,
+            "queryApplicationDetail -> explainApplicationStatus": 1,
+            "queryApplicationDetail -> queryMyApplications": 2,
+            "none -> explainApplicationStatus": 14,
+            "none -> none": 5,
+            "none -> queryLoanProducts": 3,
+            "queryMyApplications -> queryMyApplications": 4
+          },
+          "brier_multiclass_sum": 1.309323447538223,
+          "nll": 4.416077577188829,
+          "ece_10_equal_width": 0.6026236309327689,
+          "selective": {
+            "0.5": {
+              "coverage": 0.921875,
+              "accepted": 59,
+              "errors": 42
+            },
+            "0.7": {
+              "coverage": 0.796875,
+              "accepted": 51,
+              "errors": 38
+            },
+            "0.9": {
+              "coverage": 0.640625,
+              "accepted": 41,
+              "errors": 31
+            },
+            "0.95": {
+              "coverage": 0.5625,
+              "accepted": 36,
+              "errors": 26
+            }
+          }
+        }
+      },
+      "latency_p50_s": 0.38664445000176784,
+      "latency_p95_s": 0.4331764750008005,
+      "all_fields_correct": 15,
+      "usage_input_tokens": 0,
+      "usage_output_tokens": 0,
+      "human_required": 20,
+      "human_route_missed": 1,
+      "human_flag_missed": 1,
+      "route_tool_inconsistent": 31,
+      "route_human_inconsistent": 4
+    },
+    "qwen-first-business-test-perm17": {
+      "rows": 72,
+      "successful": 72,
+      "errors": 0,
+      "tasks": {
+        "intent": {
+          "n": 72,
+          "correct": 46,
+          "accuracy": 0.6388888888888888,
+          "accuracy_wilson_95_descriptive": [
+            0.5235226614759323,
+            0.740184855243124
+          ],
+          "macro_f1_gold_supported_classes": 0.6219330136170104,
+          "supported_classes": [
+            "application_detail",
+            "applications",
+            "general",
+            "handoff",
+            "products",
+            "repayment",
+            "security",
+            "status_code",
+            "ui_issue"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "products -> products": 11,
+            "products -> applications": 1,
+            "applications -> applications": 4,
+            "application_detail -> application_detail": 3,
+            "application_detail -> handoff": 3,
+            "application_detail -> applications": 1,
+            "status_code -> status_code": 8,
+            "ui_issue -> handoff": 11,
+            "ui_issue -> ui_issue": 9,
+            "repayment -> repayment": 4,
+            "security -> handoff": 1,
+            "security -> security": 3,
+            "handoff -> handoff": 4,
+            "general -> handoff": 4,
+            "repayment -> handoff": 4,
+            "application_detail -> security": 1
+          },
+          "brier_multiclass_sum": 0.6727245767030685,
+          "nll": 3.6008422959837603,
+          "ece_10_equal_width": 0.3240349101793261,
+          "selective": {
+            "0.5": {
+              "coverage": 1.0,
+              "accepted": 72,
+              "errors": 26
+            },
+            "0.7": {
+              "coverage": 0.9583333333333334,
+              "accepted": 69,
+              "errors": 24
+            },
+            "0.9": {
+              "coverage": 0.8611111111111112,
+              "accepted": 62,
+              "errors": 20
+            },
+            "0.95": {
+              "coverage": 0.8333333333333334,
+              "accepted": 60,
+              "errors": 18
+            }
+          }
+        },
+        "needs_human": {
+          "n": 72,
+          "correct": 50,
+          "accuracy": 0.6944444444444444,
+          "accuracy_wilson_95_descriptive": [
+            0.5804553438658896,
+            0.7887351795407894
+          ],
+          "macro_f1_gold_supported_classes": 0.6785714285714286,
+          "supported_classes": [
+            "no",
+            "yes"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "no -> no": 33,
+            "no -> yes": 19,
+            "yes -> yes": 17,
+            "yes -> no": 3
+          },
+          "brier_multiclass_sum": 0.4953956262575224,
+          "nll": 1.071764801177788,
+          "ece_10_equal_width": 0.22972608617027382,
+          "selective": {
+            "0.5": {
+              "coverage": 1.0,
+              "accepted": 72,
+              "errors": 22
+            },
+            "0.7": {
+              "coverage": 0.875,
+              "accepted": 63,
+              "errors": 18
+            },
+            "0.9": {
+              "coverage": 0.7083333333333334,
+              "accepted": 51,
+              "errors": 12
+            },
+            "0.95": {
+              "coverage": 0.6388888888888888,
+              "accepted": 46,
+              "errors": 10
+            }
+          }
+        },
+        "route": {
+          "n": 72,
+          "correct": 46,
+          "accuracy": 0.6388888888888888,
+          "accuracy_wilson_95_descriptive": [
+            0.5235226614759323,
+            0.740184855243124
+          ],
+          "macro_f1_gold_supported_classes": 0.5713383838383839,
+          "supported_classes": [
+            "clarify",
+            "human",
+            "llm",
+            "tool"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "tool -> tool": 19,
+            "clarify -> clarify": 5,
+            "clarify -> tool": 4,
+            "tool -> human": 1,
+            "llm -> human": 13,
+            "llm -> tool": 2,
+            "human -> human": 19,
+            "llm -> llm": 3,
+            "clarify -> human": 2,
+            "clarify -> llm": 1,
+            "llm -> clarify": 2,
+            "human -> clarify": 1
+          },
+          "brier_multiclass_sum": 0.623174151778278,
+          "nll": 2.8680449778528367,
+          "ece_10_equal_width": 0.2798512715382055,
+          "selective": {
+            "0.5": {
+              "coverage": 0.9861111111111112,
+              "accepted": 71,
+              "errors": 25
+            },
+            "0.7": {
+              "coverage": 0.875,
+              "accepted": 63,
+              "errors": 19
+            },
+            "0.9": {
+              "coverage": 0.7777777777777778,
+              "accepted": 56,
+              "errors": 15
+            },
+            "0.95": {
+              "coverage": 0.6666666666666666,
+              "accepted": 48,
+              "errors": 11
+            }
+          }
+        },
+        "tool": {
+          "n": 72,
+          "correct": 22,
+          "accuracy": 0.3055555555555556,
+          "accuracy_wilson_95_descriptive": [
+            0.21126482045921047,
+            0.4195446561341104
+          ],
+          "macro_f1_gold_supported_classes": 0.45481367030864883,
+          "supported_classes": [
+            "explainApplicationStatus",
+            "none",
+            "queryLoanProducts",
+            "queryMyApplications"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "queryLoanProducts -> queryMyApplications": 3,
+            "queryLoanProducts -> queryLoanProducts": 5,
+            "none -> none": 8,
+            "none -> queryMyApplications": 28,
+            "queryMyApplications -> queryMyApplications": 4,
+            "none -> queryApplicationDetail": 12,
+            "explainApplicationStatus -> queryApplicationDetail": 1,
+            "explainApplicationStatus -> explainApplicationStatus": 5,
+            "explainApplicationStatus -> queryMyApplications": 2,
+            "none -> explainApplicationStatus": 4
+          },
+          "brier_multiclass_sum": 1.1450567780243501,
+          "nll": 3.306629457084377,
+          "ece_10_equal_width": 0.5409453133804258,
+          "selective": {
+            "0.5": {
+              "coverage": 0.9166666666666666,
+              "accepted": 66,
+              "errors": 46
+            },
+            "0.7": {
+              "coverage": 0.7222222222222222,
+              "accepted": 52,
+              "errors": 35
+            },
+            "0.9": {
+              "coverage": 0.4444444444444444,
+              "accepted": 32,
+              "errors": 20
+            },
+            "0.95": {
+              "coverage": 0.3472222222222222,
+              "accepted": 25,
+              "errors": 13
+            }
+          }
+        }
+      },
+      "latency_p50_s": 0.3972957000223687,
+      "latency_p95_s": 0.4456310850029695,
+      "all_fields_correct": 15,
+      "usage_input_tokens": 0,
+      "usage_output_tokens": 0,
+      "human_required": 20,
+      "human_route_missed": 1,
+      "human_flag_missed": 3,
+      "route_tool_inconsistent": 39,
+      "route_human_inconsistent": 13
+    },
+    "qwen-first-business-test": {
+      "rows": 72,
+      "successful": 72,
+      "errors": 0,
+      "tasks": {
+        "intent": {
+          "n": 72,
+          "correct": 44,
+          "accuracy": 0.6111111111111112,
+          "accuracy_wilson_95_descriptive": [
+            0.4956214320752605,
+            0.7153445812999848
+          ],
+          "macro_f1_gold_supported_classes": 0.6145137748586024,
+          "supported_classes": [
+            "application_detail",
+            "applications",
+            "general",
+            "handoff",
+            "products",
+            "repayment",
+            "security",
+            "status_code",
+            "ui_issue"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "products -> products": 9,
+            "products -> ui_issue": 3,
+            "applications -> applications": 4,
+            "application_detail -> application_detail": 5,
+            "status_code -> status_code": 8,
+            "ui_issue -> application_detail": 1,
+            "ui_issue -> ui_issue": 7,
+            "ui_issue -> handoff": 12,
+            "repayment -> repayment": 4,
+            "security -> handoff": 1,
+            "security -> security": 3,
+            "handoff -> handoff": 4,
+            "general -> applications": 2,
+            "general -> handoff": 2,
+            "repayment -> handoff": 4,
+            "application_detail -> handoff": 2,
+            "application_detail -> security": 1
+          },
+          "brier_multiclass_sum": 0.7441402821335816,
+          "nll": 3.280400169167436,
+          "ece_10_equal_width": 0.3714863583444172,
+          "selective": {
+            "0.5": {
+              "coverage": 0.9861111111111112,
+              "accepted": 71,
+              "errors": 28
+            },
+            "0.7": {
+              "coverage": 0.9583333333333334,
+              "accepted": 69,
+              "errors": 26
+            },
+            "0.9": {
+              "coverage": 0.9027777777777778,
+              "accepted": 65,
+              "errors": 22
+            },
+            "0.95": {
+              "coverage": 0.875,
+              "accepted": 63,
+              "errors": 20
+            }
+          }
+        },
+        "needs_human": {
+          "n": 72,
+          "correct": 50,
+          "accuracy": 0.6944444444444444,
+          "accuracy_wilson_95_descriptive": [
+            0.5804553438658896,
+            0.7887351795407894
+          ],
+          "macro_f1_gold_supported_classes": 0.6785714285714286,
+          "supported_classes": [
+            "no",
+            "yes"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "no -> no": 33,
+            "no -> yes": 19,
+            "yes -> yes": 17,
+            "yes -> no": 3
+          },
+          "brier_multiclass_sum": 0.4953956262575224,
+          "nll": 1.071764801177788,
+          "ece_10_equal_width": 0.22972608617027382,
+          "selective": {
+            "0.5": {
+              "coverage": 1.0,
+              "accepted": 72,
+              "errors": 22
+            },
+            "0.7": {
+              "coverage": 0.875,
+              "accepted": 63,
+              "errors": 18
+            },
+            "0.9": {
+              "coverage": 0.7083333333333334,
+              "accepted": 51,
+              "errors": 12
+            },
+            "0.95": {
+              "coverage": 0.6388888888888888,
+              "accepted": 46,
+              "errors": 10
+            }
+          }
+        },
+        "route": {
+          "n": 72,
+          "correct": 46,
+          "accuracy": 0.6388888888888888,
+          "accuracy_wilson_95_descriptive": [
+            0.5235226614759323,
+            0.740184855243124
+          ],
+          "macro_f1_gold_supported_classes": 0.5667977855477856,
+          "supported_classes": [
+            "clarify",
+            "human",
+            "llm",
+            "tool"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "tool -> tool": 19,
+            "clarify -> clarify": 3,
+            "clarify -> tool": 6,
+            "tool -> human": 1,
+            "llm -> human": 13,
+            "llm -> tool": 2,
+            "human -> human": 19,
+            "llm -> llm": 5,
+            "clarify -> human": 2,
+            "clarify -> llm": 1,
+            "human -> tool": 1
+          },
+          "brier_multiclass_sum": 0.6382936748236867,
+          "nll": 2.8214651391777257,
+          "ece_10_equal_width": 0.2681674566755464,
+          "selective": {
+            "0.5": {
+              "coverage": 0.9583333333333334,
+              "accepted": 69,
+              "errors": 24
+            },
+            "0.7": {
+              "coverage": 0.875,
+              "accepted": 63,
+              "errors": 20
+            },
+            "0.9": {
+              "coverage": 0.7083333333333334,
+              "accepted": 51,
+              "errors": 16
+            },
+            "0.95": {
+              "coverage": 0.6111111111111112,
+              "accepted": 44,
+              "errors": 14
+            }
+          }
+        },
+        "tool": {
+          "n": 72,
+          "correct": 23,
+          "accuracy": 0.3194444444444444,
+          "accuracy_wilson_95_descriptive": [
+            0.22325457048556474,
+            0.43392565777966174
+          ],
+          "macro_f1_gold_supported_classes": 0.4483040935672515,
+          "supported_classes": [
+            "explainApplicationStatus",
+            "none",
+            "queryLoanProducts",
+            "queryMyApplications"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "queryLoanProducts -> queryMyApplications": 2,
+            "queryLoanProducts -> queryLoanProducts": 6,
+            "none -> none": 5,
+            "none -> queryMyApplications": 35,
+            "queryMyApplications -> queryMyApplications": 4,
+            "none -> queryApplicationDetail": 2,
+            "explainApplicationStatus -> explainApplicationStatus": 8,
+            "none -> explainApplicationStatus": 9,
+            "none -> queryLoanProducts": 1
+          },
+          "brier_multiclass_sum": 1.0970145519757553,
+          "nll": 2.970556096072898,
+          "ece_10_equal_width": 0.5188207095460419,
+          "selective": {
+            "0.5": {
+              "coverage": 0.9722222222222222,
+              "accepted": 70,
+              "errors": 48
+            },
+            "0.7": {
+              "coverage": 0.7361111111111112,
+              "accepted": 53,
+              "errors": 34
+            },
+            "0.9": {
+              "coverage": 0.4583333333333333,
+              "accepted": 33,
+              "errors": 15
+            },
+            "0.95": {
+              "coverage": 0.3888888888888889,
+              "accepted": 28,
+              "errors": 10
+            }
+          }
+        }
+      },
+      "latency_p50_s": 0.3900452500238316,
+      "latency_p95_s": 0.43064895999850705,
+      "all_fields_correct": 14,
+      "usage_input_tokens": 0,
+      "usage_output_tokens": 0,
+      "human_required": 20,
+      "human_route_missed": 1,
+      "human_flag_missed": 3,
+      "route_tool_inconsistent": 41,
+      "route_human_inconsistent": 13
+    },
+    "qwen-first-massive-test": {
+      "rows": 117,
+      "successful": 117,
+      "errors": 0,
+      "tasks": {
+        "intent": {
+          "n": 117,
+          "correct": 82,
+          "accuracy": 0.7008547008547008,
+          "accuracy_wilson_95_descriptive": [
+            0.6125801461386321,
+            0.7763587623167342
+          ],
+          "macro_f1_gold_supported_classes": 0.6657788539144471,
+          "supported_classes": [
+            "alarm_query",
+            "alarm_remove",
+            "alarm_set",
+            "audio_volume_down",
+            "audio_volume_mute",
+            "audio_volume_other",
+            "audio_volume_up",
+            "calendar_query",
+            "calendar_remove",
+            "calendar_set",
+            "cooking_recipe",
+            "datetime_convert",
+            "datetime_query",
+            "email_addcontact",
+            "email_query",
+            "email_querycontact",
+            "email_sendemail",
+            "general_greet",
+            "general_joke",
+            "general_quirky",
+            "iot_cleaning",
+            "iot_coffee",
+            "iot_hue_lightchange",
+            "iot_hue_lightdim",
+            "iot_hue_lightoff",
+            "iot_hue_lighton",
+            "iot_hue_lightup",
+            "iot_wemo_off",
+            "iot_wemo_on",
+            "lists_createoradd",
+            "lists_query",
+            "lists_remove",
+            "music_dislikeness",
+            "music_likeness",
+            "music_query",
+            "music_settings",
+            "news_query",
+            "play_audiobook",
+            "play_game",
+            "play_music",
+            "play_podcasts",
+            "play_radio",
+            "qa_currency",
+            "qa_definition",
+            "qa_factoid",
+            "qa_maths",
+            "qa_stock",
+            "recommendation_events",
+            "recommendation_locations",
+            "recommendation_movies",
+            "social_post",
+            "social_query",
+            "takeaway_order",
+            "takeaway_query",
+            "transport_query",
+            "transport_taxi",
+            "transport_ticket",
+            "transport_traffic",
+            "weather_query"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "alarm_query -> alarm_query": 2,
+            "alarm_remove -> alarm_remove": 2,
+            "alarm_set -> alarm_query": 1,
+            "alarm_set -> alarm_set": 1,
+            "audio_volume_down -> audio_volume_down": 2,
+            "audio_volume_mute -> audio_volume_mute": 2,
+            "audio_volume_other -> audio_volume_down": 2,
+            "audio_volume_up -> alarm_query": 1,
+            "audio_volume_up -> audio_volume_up": 1,
+            "calendar_query -> calendar_query": 1,
+            "calendar_query -> lists_createoradd": 1,
+            "calendar_remove -> calendar_remove": 2,
+            "calendar_set -> alarm_set": 1,
+            "calendar_set -> calendar_set": 1,
+            "cooking_recipe -> cooking_recipe": 2,
+            "datetime_convert -> datetime_convert": 2,
+            "datetime_query -> alarm_query": 1,
+            "datetime_query -> datetime_query": 1,
+            "email_addcontact -> email_addcontact": 2,
+            "email_query -> email_query": 2,
+            "email_querycontact -> email_addcontact": 2,
+            "email_sendemail -> email_sendemail": 1,
+            "email_sendemail -> social_post": 1,
+            "general_greet -> general_greet": 1,
+            "general_joke -> general_joke": 2,
+            "general_quirky -> alarm_query": 1,
+            "general_quirky -> general_quirky": 1,
+            "iot_cleaning -> iot_cleaning": 2,
+            "iot_coffee -> iot_coffee": 2,
+            "iot_hue_lightchange -> iot_hue_lightchange": 2,
+            "iot_hue_lightdim -> iot_hue_lightdim": 2,
+            "iot_hue_lightoff -> iot_hue_lightoff": 2,
+            "iot_hue_lighton -> iot_hue_lighton": 1,
+            "iot_hue_lighton -> general_greet": 1,
+            "iot_hue_lightup -> iot_hue_lightchange": 2,
+            "iot_wemo_off -> iot_wemo_off": 2,
+            "iot_wemo_on -> iot_wemo_on": 1,
+            "iot_wemo_on -> iot_wemo_off": 1,
+            "lists_createoradd -> lists_createoradd": 2,
+            "lists_query -> lists_createoradd": 2,
+            "lists_remove -> alarm_query": 1,
+            "lists_remove -> lists_remove": 1,
+            "music_dislikeness -> music_dislikeness": 2,
+            "music_likeness -> music_likeness": 1,
+            "music_likeness -> play_music": 1,
+            "music_query -> music_query": 1,
+            "music_query -> play_music": 1,
+            "music_settings -> play_music": 1,
+            "music_settings -> music_dislikeness": 1,
+            "news_query -> news_query": 2,
+            "play_audiobook -> music_dislikeness": 1,
+            "play_audiobook -> play_audiobook": 1,
+            "play_game -> play_game": 2,
+            "play_music -> play_music": 1,
+            "play_music -> music_likeness": 1,
+            "play_podcasts -> play_podcasts": 2,
+            "play_radio -> play_radio": 2,
+            "qa_currency -> qa_currency": 2,
+            "qa_definition -> audio_volume_down": 1,
+            "qa_definition -> qa_definition": 1,
+            "qa_factoid -> weather_query": 1,
+            "qa_factoid -> general_quirky": 1,
+            "qa_maths -> qa_maths": 2,
+            "qa_stock -> cooking_recipe": 1,
+            "qa_stock -> qa_stock": 1,
+            "recommendation_events -> recommendation_events": 1,
+            "recommendation_events -> recommendation_locations": 1,
+            "recommendation_locations -> recommendation_locations": 2,
+            "recommendation_movies -> alarm_query": 1,
+            "recommendation_movies -> recommendation_movies": 1,
+            "social_post -> social_post": 2,
+            "social_query -> social_post": 2,
+            "takeaway_order -> takeaway_order": 2,
+            "takeaway_query -> takeaway_order": 2,
+            "transport_query -> transport_query": 2,
+            "transport_taxi -> transport_taxi": 2,
+            "transport_ticket -> transport_ticket": 2,
+            "transport_traffic -> transport_traffic": 1,
+            "transport_traffic -> transport_query": 1,
+            "weather_query -> weather_query": 2
+          },
+          "brier_multiclass_sum": 0.540567838165054,
+          "nll": 4.8034719229948255,
+          "ece_10_equal_width": 0.268051324973689,
+          "selective": {
+            "0.5": {
+              "coverage": 0.9914529914529915,
+              "accepted": 116,
+              "errors": 34
+            },
+            "0.7": {
+              "coverage": 0.9658119658119658,
+              "accepted": 113,
+              "errors": 31
+            },
+            "0.9": {
+              "coverage": 0.905982905982906,
+              "accepted": 106,
+              "errors": 25
+            },
+            "0.95": {
+              "coverage": 0.8888888888888888,
+              "accepted": 104,
+              "errors": 24
+            }
+          }
+        }
+      },
+      "latency_p50_s": 0.16192450001835823,
+      "latency_p95_s": 0.16598036001087166,
+      "all_fields_correct": 82,
+      "usage_input_tokens": 0,
+      "usage_output_tokens": 0
+    },
+    "qwen-gated-business-test": {
+      "rows": 72,
+      "successful": 72,
+      "errors": 0,
+      "tasks": {
+        "intent": {
+          "n": 72,
+          "correct": 44,
+          "accuracy": 0.6111111111111112,
+          "accuracy_wilson_95_descriptive": [
+            0.4956214320752605,
+            0.7153445812999848
+          ],
+          "macro_f1_gold_supported_classes": 0.6145137748586024,
+          "supported_classes": [
+            "application_detail",
+            "applications",
+            "general",
+            "handoff",
+            "products",
+            "repayment",
+            "security",
+            "status_code",
+            "ui_issue"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "products -> products": 9,
+            "products -> ui_issue": 3,
+            "applications -> applications": 4,
+            "application_detail -> application_detail": 5,
+            "status_code -> status_code": 8,
+            "ui_issue -> application_detail": 1,
+            "ui_issue -> ui_issue": 7,
+            "ui_issue -> handoff": 12,
+            "repayment -> repayment": 4,
+            "security -> handoff": 1,
+            "security -> security": 3,
+            "handoff -> handoff": 4,
+            "general -> applications": 2,
+            "general -> handoff": 2,
+            "repayment -> handoff": 4,
+            "application_detail -> handoff": 2,
+            "application_detail -> security": 1
+          },
+          "brier_multiclass_sum": 0.7441402821335816,
+          "nll": 3.280400169167436,
+          "ece_10_equal_width": 0.3714863583444172,
+          "selective": {
+            "0.5": {
+              "coverage": 0.9861111111111112,
+              "accepted": 71,
+              "errors": 28
+            },
+            "0.7": {
+              "coverage": 0.9583333333333334,
+              "accepted": 69,
+              "errors": 26
+            },
+            "0.9": {
+              "coverage": 0.9027777777777778,
+              "accepted": 65,
+              "errors": 22
+            },
+            "0.95": {
+              "coverage": 0.875,
+              "accepted": 63,
+              "errors": 20
+            }
+          }
+        },
+        "needs_human": {
+          "n": 72,
+          "correct": 50,
+          "accuracy": 0.6944444444444444,
+          "accuracy_wilson_95_descriptive": [
+            0.5804553438658896,
+            0.7887351795407894
+          ],
+          "macro_f1_gold_supported_classes": 0.6785714285714286,
+          "supported_classes": [
+            "no",
+            "yes"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "no -> no": 33,
+            "no -> yes": 19,
+            "yes -> yes": 17,
+            "yes -> no": 3
+          },
+          "brier_multiclass_sum": 0.4953956262575224,
+          "nll": 1.071764801177788,
+          "ece_10_equal_width": 0.22972608617027382,
+          "selective": {
+            "0.5": {
+              "coverage": 1.0,
+              "accepted": 72,
+              "errors": 22
+            },
+            "0.7": {
+              "coverage": 0.875,
+              "accepted": 63,
+              "errors": 18
+            },
+            "0.9": {
+              "coverage": 0.7083333333333334,
+              "accepted": 51,
+              "errors": 12
+            },
+            "0.95": {
+              "coverage": 0.6388888888888888,
+              "accepted": 46,
+              "errors": 10
+            }
+          }
+        },
+        "route": {
+          "n": 72,
+          "correct": 46,
+          "accuracy": 0.6388888888888888,
+          "accuracy_wilson_95_descriptive": [
+            0.5235226614759323,
+            0.740184855243124
+          ],
+          "macro_f1_gold_supported_classes": 0.5667977855477856,
+          "supported_classes": [
+            "clarify",
+            "human",
+            "llm",
+            "tool"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "tool -> tool": 19,
+            "clarify -> clarify": 3,
+            "clarify -> tool": 6,
+            "tool -> human": 1,
+            "llm -> human": 13,
+            "llm -> tool": 2,
+            "human -> human": 19,
+            "llm -> llm": 5,
+            "clarify -> human": 2,
+            "clarify -> llm": 1,
+            "human -> tool": 1
+          },
+          "brier_multiclass_sum": 0.6382936748236867,
+          "nll": 2.8214651391777257,
+          "ece_10_equal_width": 0.2681674566755464,
+          "selective": {
+            "0.5": {
+              "coverage": 0.9583333333333334,
+              "accepted": 69,
+              "errors": 24
+            },
+            "0.7": {
+              "coverage": 0.875,
+              "accepted": 63,
+              "errors": 20
+            },
+            "0.9": {
+              "coverage": 0.7083333333333334,
+              "accepted": 51,
+              "errors": 16
+            },
+            "0.95": {
+              "coverage": 0.6111111111111112,
+              "accepted": 44,
+              "errors": 14
+            }
+          }
+        },
+        "tool": {
+          "n": 72,
+          "correct": 61,
+          "accuracy": 0.8472222222222222,
+          "accuracy_wilson_95_descriptive": [
+            0.7467749821453958,
+            0.9124938096522456
+          ],
+          "macro_f1_gold_supported_classes": 0.7920702301539172,
+          "supported_classes": [
+            "explainApplicationStatus",
+            "none",
+            "queryLoanProducts",
+            "queryMyApplications"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "queryLoanProducts -> queryMyApplications": 2,
+            "queryLoanProducts -> queryLoanProducts": 6,
+            "none -> none": 44,
+            "none -> queryMyApplications": 7,
+            "queryMyApplications -> queryMyApplications": 4,
+            "none -> queryApplicationDetail": 1,
+            "explainApplicationStatus -> explainApplicationStatus": 7,
+            "explainApplicationStatus -> none": 1
+          }
+        }
+      },
+      "latency_p50_s": 0.3900452500238316,
+      "latency_p95_s": 0.43064895999850705,
+      "all_fields_correct": 26,
+      "usage_input_tokens": 0,
+      "usage_output_tokens": 0,
+      "human_required": 20,
+      "human_route_missed": 1,
+      "human_flag_missed": 3,
+      "route_tool_inconsistent": 1,
+      "route_human_inconsistent": 13
+    },
+    "qwen-generate-business-dev": {
+      "rows": 64,
+      "successful": 64,
+      "errors": 0,
+      "tasks": {
+        "intent": {
+          "n": 64,
+          "correct": 45,
+          "accuracy": 0.703125,
+          "accuracy_wilson_95_descriptive": [
+            0.5822956740587202,
+            0.8009500041092477
+          ],
+          "macro_f1_gold_supported_classes": 0.6762974062974063,
+          "supported_classes": [
+            "application_detail",
+            "applications",
+            "credit",
+            "handoff",
+            "products",
+            "repayment",
+            "security",
+            "status_code",
+            "ui_issue"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "products -> products": 11,
+            "credit -> credit": 3,
+            "credit -> handoff": 1,
+            "application_detail -> application_detail": 2,
+            "application_detail -> applications": 2,
+            "status_code -> status_code": 3,
+            "status_code -> application_detail": 1,
+            "ui_issue -> ui_issue": 6,
+            "ui_issue -> handoff": 2,
+            "repayment -> applications": 2,
+            "repayment -> handoff": 1,
+            "repayment -> repayment": 1,
+            "security -> handoff": 3,
+            "security -> security": 5,
+            "handoff -> handoff": 6,
+            "application_detail -> handoff": 4,
+            "applications -> applications": 8,
+            "handoff -> credit": 1,
+            "handoff -> products": 1,
+            "products -> status_code": 1
+          }
+        },
+        "needs_human": {
+          "n": 64,
+          "correct": 49,
+          "accuracy": 0.765625,
+          "accuracy_wilson_95_descriptive": [
+            0.6486650974929234,
+            0.8525023278036498
+          ],
+          "macro_f1_gold_supported_classes": 0.8055555555555556,
+          "supported_classes": [
+            "no",
+            "yes"
+          ],
+          "invalid": 11,
+          "confusion": {
+            "no -> no": 36,
+            "no -> __invalid__": 5,
+            "no -> yes": 3,
+            "yes -> __invalid__": 6,
+            "yes -> yes": 13,
+            "yes -> no": 1
+          }
+        },
+        "route": {
+          "n": 64,
+          "correct": 40,
+          "accuracy": 0.625,
+          "accuracy_wilson_95_descriptive": [
+            0.5025015331382642,
+            0.7333419611189468
+          ],
+          "macro_f1_gold_supported_classes": 0.5569442185721256,
+          "supported_classes": [
+            "clarify",
+            "human",
+            "llm",
+            "tool"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "tool -> tool": 14,
+            "clarify -> clarify": 3,
+            "clarify -> human": 1,
+            "tool -> human": 1,
+            "clarify -> llm": 4,
+            "clarify -> tool": 4,
+            "llm -> tool": 10,
+            "llm -> human": 2,
+            "llm -> llm": 4,
+            "human -> human": 19,
+            "human -> llm": 1,
+            "tool -> llm": 1
+          }
+        },
+        "tool": {
+          "n": 64,
+          "correct": 18,
+          "accuracy": 0.28125,
+          "accuracy_wilson_95_descriptive": [
+            0.18593226105484584,
+            0.40134162399503504
+          ],
+          "macro_f1_gold_supported_classes": 0.4201961271102284,
+          "supported_classes": [
+            "none",
+            "queryApplicationDetail",
+            "queryLoanProducts",
+            "queryMyApplications"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "queryLoanProducts -> queryLoanProducts": 8,
+            "none -> queryMyCreditScore": 4,
+            "none -> queryMyApplications": 22,
+            "queryApplicationDetail -> queryApplicationDetail": 1,
+            "queryApplicationDetail -> explainApplicationStatus": 1,
+            "queryApplicationDetail -> queryMyApplications": 2,
+            "none -> explainApplicationStatus": 14,
+            "none -> none": 5,
+            "none -> queryLoanProducts": 3,
+            "queryMyApplications -> queryMyApplications": 4
+          }
+        }
+      },
+      "latency_p50_s": 0.5462929499772144,
+      "latency_p95_s": 0.7181235749740154,
+      "all_fields_correct": 15,
+      "usage_input_tokens": 0,
+      "usage_output_tokens": 0,
+      "human_required": 20,
+      "human_route_missed": 1,
+      "human_flag_missed": 7,
+      "route_tool_inconsistent": 31,
+      "route_human_inconsistent": 11
+    },
+    "qwen-generate-business-test": {
+      "rows": 72,
+      "successful": 72,
+      "errors": 0,
+      "tasks": {
+        "intent": {
+          "n": 72,
+          "correct": 44,
+          "accuracy": 0.6111111111111112,
+          "accuracy_wilson_95_descriptive": [
+            0.4956214320752605,
+            0.7153445812999848
+          ],
+          "macro_f1_gold_supported_classes": 0.6145137748586024,
+          "supported_classes": [
+            "application_detail",
+            "applications",
+            "general",
+            "handoff",
+            "products",
+            "repayment",
+            "security",
+            "status_code",
+            "ui_issue"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "products -> products": 9,
+            "products -> ui_issue": 3,
+            "applications -> applications": 4,
+            "application_detail -> application_detail": 5,
+            "status_code -> status_code": 8,
+            "ui_issue -> application_detail": 1,
+            "ui_issue -> ui_issue": 7,
+            "ui_issue -> handoff": 12,
+            "repayment -> repayment": 4,
+            "security -> handoff": 1,
+            "security -> security": 3,
+            "handoff -> handoff": 4,
+            "general -> applications": 2,
+            "general -> handoff": 2,
+            "repayment -> handoff": 4,
+            "application_detail -> handoff": 2,
+            "application_detail -> security": 1
+          }
+        },
+        "needs_human": {
+          "n": 72,
+          "correct": 38,
+          "accuracy": 0.5277777777777778,
+          "accuracy_wilson_95_descriptive": [
+            0.41400469533452566,
+            0.6387368080092856
+          ],
+          "macro_f1_gold_supported_classes": 0.6018444266238974,
+          "supported_classes": [
+            "no",
+            "yes"
+          ],
+          "invalid": 29,
+          "confusion": {
+            "no -> no": 31,
+            "no -> __invalid__": 19,
+            "yes -> __invalid__": 10,
+            "yes -> yes": 7,
+            "no -> yes": 2,
+            "yes -> no": 3
+          }
+        },
+        "route": {
+          "n": 72,
+          "correct": 46,
+          "accuracy": 0.6388888888888888,
+          "accuracy_wilson_95_descriptive": [
+            0.5235226614759323,
+            0.740184855243124
+          ],
+          "macro_f1_gold_supported_classes": 0.5667977855477856,
+          "supported_classes": [
+            "clarify",
+            "human",
+            "llm",
+            "tool"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "tool -> tool": 19,
+            "clarify -> clarify": 3,
+            "clarify -> tool": 6,
+            "tool -> human": 1,
+            "llm -> human": 13,
+            "llm -> tool": 2,
+            "human -> human": 19,
+            "llm -> llm": 5,
+            "clarify -> human": 2,
+            "clarify -> llm": 1,
+            "human -> tool": 1
+          }
+        },
+        "tool": {
+          "n": 72,
+          "correct": 23,
+          "accuracy": 0.3194444444444444,
+          "accuracy_wilson_95_descriptive": [
+            0.22325457048556474,
+            0.43392565777966174
+          ],
+          "macro_f1_gold_supported_classes": 0.4483040935672515,
+          "supported_classes": [
+            "explainApplicationStatus",
+            "none",
+            "queryLoanProducts",
+            "queryMyApplications"
+          ],
+          "invalid": 0,
+          "confusion": {
+            "queryLoanProducts -> queryMyApplications": 2,
+            "queryLoanProducts -> queryLoanProducts": 6,
+            "none -> none": 5,
+            "none -> queryMyApplications": 35,
+            "queryMyApplications -> queryMyApplications": 4,
+            "none -> queryApplicationDetail": 2,
+            "explainApplicationStatus -> explainApplicationStatus": 8,
+            "none -> explainApplicationStatus": 9,
+            "none -> queryLoanProducts": 1
+          }
+        }
+      },
+      "latency_p50_s": 0.5464622999861604,
+      "latency_p95_s": 0.7862175199988997,
+      "all_fields_correct": 14,
+      "usage_input_tokens": 0,
+      "usage_output_tokens": 0,
+      "human_required": 20,
+      "human_route_missed": 1,
+      "human_flag_missed": 13,
+      "route_tool_inconsistent": 41,
+      "route_human_inconsistent": 26
+    },
+    "qwen-generate-massive-test": {
+      "rows": 117,
+      "successful": 117,
+      "errors": 0,
+      "tasks": {
+        "intent": {
+          "n": 117,
+          "correct": 81,
+          "accuracy": 0.6923076923076923,
+          "accuracy_wilson_95_descriptive": [
+            0.6036757367977998,
+            0.768712579808402
+          ],
+          "macro_f1_gold_supported_classes": 0.6573042776432606,
+          "supported_classes": [
+            "alarm_query",
+            "alarm_remove",
+            "alarm_set",
+            "audio_volume_down",
+            "audio_volume_mute",
+            "audio_volume_other",
+            "audio_volume_up",
+            "calendar_query",
+            "calendar_remove",
+            "calendar_set",
+            "cooking_recipe",
+            "datetime_convert",
+            "datetime_query",
+            "email_addcontact",
+            "email_query",
+            "email_querycontact",
+            "email_sendemail",
+            "general_greet",
+            "general_joke",
+            "general_quirky",
+            "iot_cleaning",
+            "iot_coffee",
+            "iot_hue_lightchange",
+            "iot_hue_lightdim",
+            "iot_hue_lightoff",
+            "iot_hue_lighton",
+            "iot_hue_lightup",
+            "iot_wemo_off",
+            "iot_wemo_on",
+            "lists_createoradd",
+            "lists_query",
+            "lists_remove",
+            "music_dislikeness",
+            "music_likeness",
+            "music_query",
+            "music_settings",
+            "news_query",
+            "play_audiobook",
+            "play_game",
+            "play_music",
+            "play_podcasts",
+            "play_radio",
+            "qa_currency",
+            "qa_definition",
+            "qa_factoid",
+            "qa_maths",
+            "qa_stock",
+            "recommendation_events",
+            "recommendation_locations",
+            "recommendation_movies",
+            "social_post",
+            "social_query",
+            "takeaway_order",
+            "takeaway_query",
+            "transport_query",
+            "transport_taxi",
+            "transport_ticket",
+            "transport_traffic",
+            "weather_query"
+          ],
+          "invalid": 2,
+          "confusion": {
+            "alarm_query -> alarm_query": 2,
+            "alarm_remove -> alarm_remove": 2,
+            "alarm_set -> alarm_query": 1,
+            "alarm_set -> alarm_set": 1,
+            "audio_volume_down -> audio_volume_down": 2,
+            "audio_volume_mute -> audio_volume_mute": 2,
+            "audio_volume_other -> audio_volume_down": 2,
+            "audio_volume_up -> alarm_query": 1,
+            "audio_volume_up -> audio_volume_up": 1,
+            "calendar_query -> calendar_query": 1,
+            "calendar_query -> lists_createoradd": 1,
+            "calendar_remove -> calendar_remove": 2,
+            "calendar_set -> alarm_set": 1,
+            "calendar_set -> calendar_set": 1,
+            "cooking_recipe -> cooking_recipe": 2,
+            "datetime_convert -> datetime_convert": 2,
+            "datetime_query -> alarm_query": 1,
+            "datetime_query -> datetime_query": 1,
+            "email_addcontact -> email_addcontact": 2,
+            "email_query -> email_query": 2,
+            "email_querycontact -> email_addcontact": 2,
+            "email_sendemail -> email_sendemail": 1,
+            "email_sendemail -> social_post": 1,
+            "general_greet -> general_greet": 1,
+            "general_joke -> general_joke": 2,
+            "general_quirky -> alarm_query": 1,
+            "general_quirky -> general_quirky": 1,
+            "iot_cleaning -> iot_cleaning": 2,
+            "iot_coffee -> iot_coffee": 2,
+            "iot_hue_lightchange -> iot_hue_lightchange": 2,
+            "iot_hue_lightdim -> iot_hue_lightdim": 2,
+            "iot_hue_lightoff -> iot_hue_lightoff": 2,
+            "iot_hue_lighton -> iot_hue_lighton": 1,
+            "iot_hue_lighton -> general_greet": 1,
+            "iot_hue_lightup -> iot_hue_lightchange": 2,
+            "iot_wemo_off -> iot_wemo_off": 2,
+            "iot_wemo_on -> iot_wemo_on": 1,
+            "iot_wemo_on -> iot_wemo_off": 1,
+            "lists_createoradd -> lists_createoradd": 2,
+            "lists_query -> lists_createoradd": 2,
+            "lists_remove -> alarm_query": 1,
+            "lists_remove -> lists_remove": 1,
+            "music_dislikeness -> music_dislikeness": 2,
+            "music_likeness -> __invalid__": 1,
+            "music_likeness -> play_music": 1,
+            "music_query -> music_query": 1,
+            "music_query -> play_music": 1,
+            "music_settings -> play_music": 1,
+            "music_settings -> music_dislikeness": 1,
+            "news_query -> news_query": 2,
+            "play_audiobook -> music_dislikeness": 1,
+            "play_audiobook -> play_audiobook": 1,
+            "play_game -> play_game": 2,
+            "play_music -> play_music": 1,
+            "play_music -> __invalid__": 1,
+            "play_podcasts -> play_podcasts": 2,
+            "play_radio -> play_radio": 2,
+            "qa_currency -> qa_currency": 2,
+            "qa_definition -> audio_volume_down": 1,
+            "qa_definition -> qa_definition": 1,
+            "qa_factoid -> weather_query": 1,
+            "qa_factoid -> general_quirky": 1,
+            "qa_maths -> qa_maths": 2,
+            "qa_stock -> cooking_recipe": 1,
+            "qa_stock -> qa_stock": 1,
+            "recommendation_events -> recommendation_events": 1,
+            "recommendation_events -> recommendation_locations": 1,
+            "recommendation_locations -> recommendation_locations": 2,
+            "recommendation_movies -> alarm_query": 1,
+            "recommendation_movies -> recommendation_movies": 1,
+            "social_post -> social_post": 2,
+            "social_query -> social_post": 2,
+            "takeaway_order -> takeaway_order": 2,
+            "takeaway_query -> takeaway_order": 2,
+            "transport_query -> transport_query": 2,
+            "transport_taxi -> transport_taxi": 2,
+            "transport_ticket -> transport_ticket": 2,
+            "transport_traffic -> transport_traffic": 1,
+            "transport_traffic -> transport_query": 1,
+            "weather_query -> weather_query": 2
+          }
+        }
+      },
+      "latency_p50_s": 0.19792740000411868,
+      "latency_p95_s": 0.2081103799981065,
+      "all_fields_correct": 81,
+      "usage_input_tokens": 0,
+      "usage_output_tokens": 0
+    }
+  },
+  "paired_comparisons": {
+    "business": {
+      "intent": {
+        "n": 72,
+        "groups": 18,
+        "accuracy_difference": -0.3194444444444444,
+        "group_bootstrap_95": [
+          -0.5,
+          -0.1527777777777778
+        ]
+      },
+      "route": {
+        "n": 72,
+        "groups": 18,
+        "accuracy_difference": -0.3333333333333333,
+        "group_bootstrap_95": [
+          -0.5416666666666666,
+          -0.1388888888888889
+        ]
+      }
+    },
+    "massive": {
+      "intent": {
+        "n": 117,
+        "groups": 117,
+        "accuracy_difference": -0.1623931623931624,
+        "group_bootstrap_95": [
+          -0.23931623931623933,
+          -0.08547008547008547
+        ]
+      }
+    }
+  }
+}

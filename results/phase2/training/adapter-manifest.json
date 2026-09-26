@@ -1,0 +1,14 @@
+{
+  "adapter_config.json": {
+    "sha256": "f7490b3e1dd8ff6c6762d4194578d6a23b98504107efebbbfdffc7c9f7076f78",
+    "bytes": 895
+  },
+  "adapter_model.safetensors": {
+    "sha256": "c2a4fcdbc40235330d1e946bfb7de5aaf3234e725475a64c0a61bc197d06cb99",
+    "bytes": 6438952
+  },
+  "README.md": {
+    "sha256": "7d2e1e121836cf5b284560e7348a8eb2bfc606737dd03327152c4bb93df40f5d",
+    "bytes": 5256
+  }
+}

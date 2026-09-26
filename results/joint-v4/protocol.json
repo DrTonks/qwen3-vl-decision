@@ -1,0 +1,185 @@
+{
+  "config": {
+    "seed": 20260927,
+    "epochs": 1,
+    "micro_batch": 4,
+    "gradient_accumulation": 2,
+    "learning_rate": 0.0001,
+    "warmup_fraction": 0.05,
+    "weight_decay": 0.01,
+    "lora_r": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.05,
+    "weights": {
+      "massive.intent": 0.5,
+      "business.intent": 1.0,
+      "business.route": 2.0,
+      "business.tool": 1.5
+    },
+    "max_tokens": 2048,
+    "checkpoints": [
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "selection": "geometric mean of public intent accuracy, business intent accuracy, route macro F1 and joint tool success; each at least base minus .03; human misses no more than base; base eligible",
+    "stage": "first expanded curriculum; later 8k/20k require additional effective scenes, not template duplication",
+    "jev_model": "jev-1.13.0",
+    "jev_max_requests": 200
+  },
+  "data": {
+    "version": "joint-v4",
+    "business_label_status": "synthetic_unreviewed",
+    "business_split_unit": "whole wording family, all counterfactual states and augmentations together",
+    "limitation": "Shared author and policy generator; no unseen-policy or real-world generalization claim",
+    "business": {
+      "train": {
+        "rows": 2048,
+        "wording_groups": 128,
+        "semantic_families": 20,
+        "route_counts": {
+          "tool": 336,
+          "clarify": 592,
+          "llm": 544,
+          "human": 576
+        },
+        "intent_counts": {
+          "products": 240,
+          "credit": 288,
+          "applications": 288,
+          "application_detail": 352,
+          "status_code": 240,
+          "ui_issue": 432,
+          "repayment": 64,
+          "payment_dispute": 32,
+          "security": 32,
+          "handoff": 32,
+          "general": 48
+        }
+      },
+      "dev": {
+        "rows": 90,
+        "wording_groups": 26,
+        "semantic_families": 20,
+        "route_counts": {
+          "tool": 14,
+          "clarify": 25,
+          "llm": 24,
+          "human": 27
+        },
+        "intent_counts": {
+          "products": 10,
+          "credit": 12,
+          "applications": 12,
+          "application_detail": 15,
+          "status_code": 10,
+          "ui_issue": 18,
+          "repayment": 4,
+          "payment_dispute": 2,
+          "security": 2,
+          "handoff": 2,
+          "general": 3
+        }
+      },
+      "calibration": {
+        "rows": 90,
+        "wording_groups": 26,
+        "semantic_families": 20,
+        "route_counts": {
+          "tool": 14,
+          "clarify": 25,
+          "llm": 24,
+          "human": 27
+        },
+        "intent_counts": {
+          "products": 10,
+          "credit": 12,
+          "applications": 12,
+          "application_detail": 15,
+          "status_code": 10,
+          "ui_issue": 18,
+          "repayment": 4,
+          "payment_dispute": 2,
+          "security": 2,
+          "handoff": 2,
+          "general": 3
+        }
+      },
+      "test": {
+        "rows": 180,
+        "wording_groups": 52,
+        "semantic_families": 20,
+        "route_counts": {
+          "tool": 28,
+          "clarify": 50,
+          "llm": 48,
+          "human": 54
+        },
+        "intent_counts": {
+          "products": 20,
+          "credit": 24,
+          "applications": 24,
+          "application_detail": 30,
+          "status_code": 20,
+          "ui_issue": 36,
+          "repayment": 8,
+          "payment_dispute": 4,
+          "security": 4,
+          "handoff": 4,
+          "general": 6
+        }
+      }
+    },
+    "massive_train_before": 11514,
+    "massive_train_after": 10725,
+    "public_dev_cal_test": "Reuse frozen v2 splits; official test is regression, not new acceptance",
+    "source_hashes": {
+      "src/qwenlab/joint_data.py": "306007bbfc4c493c28d7cfa22c5266933df181fe52ad11f4865b3e34b92da367",
+      "configs/decision_spec.json": "52e758e44a85da86ba3013668e3cde7a04d27648a3274ecb5f93e374012695d4",
+      "data/raw/massive-1.1-zh-CN.jsonl": "992bf0bef3d678f08c27e514739bc851163e8f40f530bfb4d5970a2c24408ace"
+    },
+    "files": {
+      "business-calibration.jsonl": {
+        "rows": 90,
+        "sha256": "70548d58094784591ac6eea541cd3bc3553c381c9bbf5b9e85943ba1e0d4a11a"
+      },
+      "business-dev.jsonl": {
+        "rows": 90,
+        "sha256": "fa5b46918e449e38ac3d88a1216a762ee17461a4edbbd25ba80b8b45dcd001fd"
+      },
+      "business-test.jsonl": {
+        "rows": 180,
+        "sha256": "ed42f720dd24901f1603c8cba96096296e7b48339f2ff9649c6c6e4ba20d7260"
+      },
+      "business-train.jsonl": {
+        "rows": 2048,
+        "sha256": "105fa6d1151c47a16c32663e073b03c854450212ceddd2b01c731f515deb89c7"
+      },
+      "massive-calibration.jsonl": {
+        "rows": 313,
+        "sha256": "59404c8f4337ee100347a18f0f0b43e29690b4b2f884607ac5c379e9ec8a6cd6"
+      },
+      "massive-dev.jsonl": {
+        "rows": 273,
+        "sha256": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2"
+      },
+      "massive-test.jsonl": {
+        "rows": 2974,
+        "sha256": "f6835bfc538e57675b47d0affc73a4535e314562e36082f4ed564bb96a60afbb"
+      },
+      "massive-train.jsonl": {
+        "rows": 10725,
+        "sha256": "3385d841339741936619be2426427541abbbb2a68840b4f4e53c9549f78a3cfb"
+      }
+    }
+  },
+  "source_sha256": {
+    "src/qwenlab/joint_v4.py": "26378ca85470108c880bb4eae98f93a6969d5938c96b238596727c2e8d46e0db",
+    "src/qwenlab/joint_data.py": "306007bbfc4c493c28d7cfa22c5266933df181fe52ad11f4865b3e34b92da367",
+    "configs/joint-v4.json": "fb35743ee4d8fd4df1a2a672c0943d69cde424c34acf20913aa2bc9dae02aef7",
+    "configs/decision_spec.json": "52e758e44a85da86ba3013668e3cde7a04d27648a3274ecb5f93e374012695d4"
+  },
+  "test_role": "authored wording-family holdout, shared policy generator, unreviewed; not real-world acceptance",
+  "latency": "three serial task prompts per customer; needs_human derived and non-tool route forces tool none"
+}

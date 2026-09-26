@@ -1,0 +1,13 @@
+{
+  "reason": "Original GPU evaluator and completion worker absent; no traceback recorded. Underlying cause unconfirmed.",
+  "training_restarted": false,
+  "selection_changed": false,
+  "frozen_source_integrity": true,
+  "selected": "step-1582",
+  "status": "complete",
+  "new_artifacts": [
+    "step-1582/massive-test.jsonl",
+    "step-1582/latency.json"
+  ],
+  "source_sha256": "dca0df040f8bb54e996f7b2929ea1b8f062b208710db38c4da761f55143115c4"
+}

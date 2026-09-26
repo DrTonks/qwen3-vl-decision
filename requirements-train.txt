@@ -1,0 +1,2 @@
+peft==0.17.1
+bitsandbytes==0.48.1

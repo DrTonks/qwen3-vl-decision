@@ -1,0 +1,192 @@
+[
+  {
+    "id": "biz-product_terms-0",
+    "expected": "tool",
+    "predicted": "llm"
+  },
+  {
+    "id": "biz-applications_list-0",
+    "expected": "tool",
+    "predicted": "llm"
+  },
+  {
+    "id": "biz-applications_list-3",
+    "expected": "tool",
+    "predicted": "llm"
+  },
+  {
+    "id": "biz-application_missing-0",
+    "expected": "clarify",
+    "predicted": "tool"
+  },
+  {
+    "id": "biz-application_missing-2",
+    "expected": "clarify",
+    "predicted": "tool"
+  },
+  {
+    "id": "biz-application_missing-3",
+    "expected": "clarify",
+    "predicted": "llm"
+  },
+  {
+    "id": "biz-status_reject-0",
+    "expected": "tool",
+    "predicted": "llm"
+  },
+  {
+    "id": "biz-status_reject-1",
+    "expected": "tool",
+    "predicted": "llm"
+  },
+  {
+    "id": "biz-status_reject-2",
+    "expected": "tool",
+    "predicted": "llm"
+  },
+  {
+    "id": "biz-status_reject-3",
+    "expected": "tool",
+    "predicted": "llm"
+  },
+  {
+    "id": "biz-status_approved-0",
+    "expected": "tool",
+    "predicted": "llm"
+  },
+  {
+    "id": "biz-status_approved-1",
+    "expected": "tool",
+    "predicted": "llm"
+  },
+  {
+    "id": "biz-status_approved-2",
+    "expected": "tool",
+    "predicted": "llm"
+  },
+  {
+    "id": "biz-status_approved-3",
+    "expected": "tool",
+    "predicted": "llm"
+  },
+  {
+    "id": "biz-ui_unlisted-0",
+    "expected": "llm",
+    "predicted": "human"
+  },
+  {
+    "id": "biz-ui_unlisted-1",
+    "expected": "llm",
+    "predicted": "tool"
+  },
+  {
+    "id": "biz-ui_unlisted-2",
+    "expected": "llm",
+    "predicted": "clarify"
+  },
+  {
+    "id": "biz-ui_unlisted-3",
+    "expected": "llm",
+    "predicted": "human"
+  },
+  {
+    "id": "biz-ui_pending-0",
+    "expected": "llm",
+    "predicted": "human"
+  },
+  {
+    "id": "biz-ui_pending-1",
+    "expected": "llm",
+    "predicted": "human"
+  },
+  {
+    "id": "biz-ui_pending-2",
+    "expected": "llm",
+    "predicted": "human"
+  },
+  {
+    "id": "biz-ui_pending-3",
+    "expected": "llm",
+    "predicted": "human"
+  },
+  {
+    "id": "biz-ui_disagree-0",
+    "expected": "human",
+    "predicted": "clarify"
+  },
+  {
+    "id": "biz-ui_disagree-1",
+    "expected": "human",
+    "predicted": "clarify"
+  },
+  {
+    "id": "biz-security_identity-0",
+    "expected": "human",
+    "predicted": "clarify"
+  },
+  {
+    "id": "biz-general_unclear-0",
+    "expected": "clarify",
+    "predicted": "tool"
+  },
+  {
+    "id": "biz-general_unclear-2",
+    "expected": "clarify",
+    "predicted": "llm"
+  },
+  {
+    "id": "biz-general_unclear-3",
+    "expected": "clarify",
+    "predicted": "llm"
+  },
+  {
+    "id": "biz-ui_amount-0",
+    "expected": "llm",
+    "predicted": "human"
+  },
+  {
+    "id": "biz-ui_amount-2",
+    "expected": "llm",
+    "predicted": "human"
+  },
+  {
+    "id": "biz-ui_amount-3",
+    "expected": "llm",
+    "predicted": "human"
+  },
+  {
+    "id": "biz-ui_empty-0",
+    "expected": "llm",
+    "predicted": "clarify"
+  },
+  {
+    "id": "biz-ui_empty-1",
+    "expected": "llm",
+    "predicted": "human"
+  },
+  {
+    "id": "biz-ui_empty-2",
+    "expected": "llm",
+    "predicted": "clarify"
+  },
+  {
+    "id": "biz-ui_empty-3",
+    "expected": "llm",
+    "predicted": "clarify"
+  },
+  {
+    "id": "biz-application_other-0",
+    "expected": "human",
+    "predicted": "tool"
+  },
+  {
+    "id": "biz-application_other-1",
+    "expected": "human",
+    "predicted": "tool"
+  },
+  {
+    "id": "biz-application_other-3",
+    "expected": "human",
+    "predicted": "clarify"
+  }
+]

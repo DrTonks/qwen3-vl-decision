@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "started_utc": "2026-09-26T14:27:59.275637+00:00",
+  "scope": "local one-shot completion worker",
+  "training_progress": {
+    "step": 2109,
+    "unweighted_loss": 0.09351633075857535,
+    "lr": 4.99001996007984e-08,
+    "gradient_norm": 2.059326171875,
+    "elapsed_s": 9792.90305210001
+  },
+  "finished_utc": "2026-09-26T14:29:46.822552+00:00"
+}

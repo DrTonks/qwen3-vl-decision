@@ -1,0 +1,57 @@
+{
+  "result_counts": {
+    "jev-v2/massive": {
+      "rows": 2974,
+      "errors": 2
+    },
+    "jev-v2/business": {
+      "rows": 72,
+      "errors": 0
+    },
+    "jev-v2/crosswoz": {
+      "rows": 200,
+      "errors": 0
+    },
+    "qwen-bf16-v2/massive": {
+      "rows": 2974,
+      "errors": 0
+    },
+    "qwen-bf16-v2/business": {
+      "rows": 72,
+      "errors": 0
+    },
+    "qwen-bf16-v2/crosswoz": {
+      "rows": 200,
+      "errors": 0
+    },
+    "qwen-nf4-v2/massive": {
+      "rows": 2974,
+      "errors": 0
+    },
+    "qwen-nf4-v2/business": {
+      "rows": 72,
+      "errors": 0
+    },
+    "qwen-nf4-v2/crosswoz": {
+      "rows": 200,
+      "errors": 0
+    },
+    "qwen-qlora-v2/massive": {
+      "rows": 2974,
+      "errors": 0
+    },
+    "qwen-qlora-v2/business": {
+      "rows": 72,
+      "errors": 0
+    },
+    "qwen-qlora-v2/crosswoz": {
+      "rows": 200,
+      "errors": 0
+    }
+  },
+  "calibration_preserves_all_choices": true,
+  "core_runtime_sources_unchanged_since_protocol_snapshot": true,
+  "public_markdown_links_resolve": true,
+  "secret_and_path_audit": "passed by qwenlab audit",
+  "tests": "11 data/metric/calibration tests passed; CPU learning assertions passed"
+}

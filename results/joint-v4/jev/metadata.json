@@ -1,0 +1,11 @@
+{
+  "model": "jev-1.13.0",
+  "requested_model": "jev-latest",
+  "source_sha256": "ed42f720dd24901f1603c8cba96096296e7b48339f2ff9649c6c6e4ba20d7260",
+  "purpose": "vendor evaluation only, not training",
+  "max_requests": 200,
+  "retries": 0,
+  "completed_requests": 180,
+  "errors": 0,
+  "status": "complete"
+}

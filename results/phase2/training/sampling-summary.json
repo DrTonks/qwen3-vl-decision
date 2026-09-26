@@ -1,0 +1,11 @@
+{
+  "provenance": "Reconstructed from recorded seed and the unchanged training sampler; not an online trace",
+  "unique_rows": {
+    "massive": 423,
+    "business": 48
+  },
+  "unique_questions": {
+    "massive": 423,
+    "business": 137
+  }
+}

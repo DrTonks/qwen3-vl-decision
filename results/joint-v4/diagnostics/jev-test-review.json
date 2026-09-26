@@ -1,0 +1,1120 @@
+[
+  {
+    "id": "v4-application_detail-wording-16-unavailable-0",
+    "group": "v4-application_detail-wording-16",
+    "semantic_family": "application_detail",
+    "condition": "unavailable",
+    "message": "我想了解指定申请里的审核记录",
+    "state": {
+      "authenticated": true,
+      "application_id": 7301
+    },
+    "errors": {
+      "route": {
+        "gold": "human",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "queryMyApplications"
+      }
+    },
+    "label_review": "pending",
+    "priority": "human_missed"
+  },
+  {
+    "id": "v4-application_detail-wording-17-unavailable-0",
+    "group": "v4-application_detail-wording-17",
+    "semantic_family": "application_detail",
+    "condition": "unavailable",
+    "message": "帮我看看这一个申请的详细审核结果",
+    "state": {
+      "authenticated": true,
+      "application_id": 7301
+    },
+    "errors": {
+      "route": {
+        "gold": "human",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "queryMyApplications"
+      }
+    },
+    "label_review": "pending",
+    "priority": "human_missed"
+  },
+  {
+    "id": "v4-application_detail-wording-18-unavailable-0",
+    "group": "v4-application_detail-wording-18",
+    "semantic_family": "application_detail",
+    "condition": "unavailable",
+    "message": "这笔申请对应的具体资料请说明一下",
+    "state": {
+      "authenticated": true,
+      "application_id": 7301
+    },
+    "errors": {
+      "route": {
+        "gold": "human",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "queryMyApplications"
+      }
+    },
+    "label_review": "pending",
+    "priority": "human_missed"
+  },
+  {
+    "id": "v4-application_detail-wording-19-unavailable-0",
+    "group": "v4-application_detail-wording-19",
+    "semantic_family": "application_detail",
+    "condition": "unavailable",
+    "message": "可以告诉我这一单审核说明里写了什么吗",
+    "state": {
+      "authenticated": true,
+      "application_id": 7301
+    },
+    "errors": {
+      "route": {
+        "gold": "human",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "queryMyApplications"
+      }
+    },
+    "label_review": "pending",
+    "priority": "human_missed"
+  },
+  {
+    "id": "v4-applications-wording-16-unavailable-0",
+    "group": "v4-applications-wording-16",
+    "semantic_family": "applications",
+    "condition": "unavailable",
+    "message": "我提交的几笔借款分别到哪了",
+    "state": {
+      "authenticated": true
+    },
+    "errors": {
+      "route": {
+        "gold": "human",
+        "predicted": "tool"
+      }
+    },
+    "label_review": "pending",
+    "priority": "human_missed"
+  },
+  {
+    "id": "v4-applications-wording-17-unavailable-0",
+    "group": "v4-applications-wording-17",
+    "semantic_family": "applications",
+    "condition": "unavailable",
+    "message": "能不能告诉我申请记录里的最新情况",
+    "state": {
+      "authenticated": true
+    },
+    "errors": {
+      "route": {
+        "gold": "human",
+        "predicted": "tool"
+      }
+    },
+    "label_review": "pending",
+    "priority": "human_missed"
+  },
+  {
+    "id": "v4-applications-wording-18-unavailable-0",
+    "group": "v4-applications-wording-18",
+    "semantic_family": "applications",
+    "condition": "unavailable",
+    "message": "我的账户下面有哪些申请在处理",
+    "state": {
+      "authenticated": true
+    },
+    "errors": {
+      "route": {
+        "gold": "human",
+        "predicted": "tool"
+      }
+    },
+    "label_review": "pending",
+    "priority": "human_missed"
+  },
+  {
+    "id": "v4-applications-wording-19-unavailable-0",
+    "group": "v4-applications-wording-19",
+    "semantic_family": "applications",
+    "condition": "unavailable",
+    "message": "之前提交的那些贷款申请进展怎么样",
+    "state": {
+      "authenticated": true
+    },
+    "errors": {
+      "route": {
+        "gold": "human",
+        "predicted": "tool"
+      }
+    },
+    "label_review": "pending",
+    "priority": "human_missed"
+  },
+  {
+    "id": "v4-credit-wording-16-unavailable-0",
+    "group": "v4-credit-wording-16",
+    "semantic_family": "credit",
+    "condition": "unavailable",
+    "message": "能帮我确认一下自己的信用分值吗",
+    "state": {
+      "authenticated": true
+    },
+    "errors": {
+      "route": {
+        "gold": "human",
+        "predicted": "llm"
+      }
+    },
+    "label_review": "pending",
+    "priority": "human_missed"
+  },
+  {
+    "id": "v4-credit-wording-17-unavailable-0",
+    "group": "v4-credit-wording-17",
+    "semantic_family": "credit",
+    "condition": "unavailable",
+    "message": "想了解我个人在平台的信用得分",
+    "state": {
+      "authenticated": true
+    },
+    "errors": {
+      "route": {
+        "gold": "human",
+        "predicted": "llm"
+      }
+    },
+    "label_review": "pending",
+    "priority": "human_missed"
+  },
+  {
+    "id": "v4-credit-wording-18-unavailable-0",
+    "group": "v4-credit-wording-18",
+    "semantic_family": "credit",
+    "condition": "unavailable",
+    "message": "账号里那项信用评分是多少",
+    "state": {
+      "authenticated": true
+    },
+    "errors": {
+      "route": {
+        "gold": "human",
+        "predicted": "llm"
+      }
+    },
+    "label_review": "pending",
+    "priority": "human_missed"
+  },
+  {
+    "id": "v4-credit-wording-19-unavailable-0",
+    "group": "v4-credit-wording-19",
+    "semantic_family": "credit",
+    "condition": "unavailable",
+    "message": "本人当前的信用评分能告诉我么",
+    "state": {
+      "authenticated": true
+    },
+    "errors": {
+      "route": {
+        "gold": "human",
+        "predicted": "llm"
+      }
+    },
+    "label_review": "pending",
+    "priority": "human_missed"
+  },
+  {
+    "id": "v4-products-wording-16-unavailable-0",
+    "group": "v4-products-wording-16",
+    "semantic_family": "products",
+    "condition": "unavailable",
+    "message": "我想比较这里几款贷款的条件",
+    "state": {
+      "authenticated": true
+    },
+    "errors": {
+      "route": {
+        "gold": "human",
+        "predicted": "llm"
+      }
+    },
+    "label_review": "pending",
+    "priority": "human_missed"
+  },
+  {
+    "id": "v4-products-wording-17-unavailable-0",
+    "group": "v4-products-wording-17",
+    "semantic_family": "products",
+    "condition": "unavailable",
+    "message": "这里每款借款的期限与额度是什么",
+    "state": {
+      "authenticated": true
+    },
+    "errors": {
+      "route": {
+        "gold": "human",
+        "predicted": "llm"
+      }
+    },
+    "label_review": "pending",
+    "priority": "human_missed"
+  },
+  {
+    "id": "v4-products-wording-18-unavailable-0",
+    "group": "v4-products-wording-18",
+    "semantic_family": "products",
+    "condition": "unavailable",
+    "message": "先帮我弄清平台有哪些借款品种",
+    "state": {
+      "authenticated": true
+    },
+    "errors": {
+      "route": {
+        "gold": "human",
+        "predicted": "llm"
+      }
+    },
+    "label_review": "pending",
+    "priority": "human_missed"
+  },
+  {
+    "id": "v4-products-wording-19-unavailable-0",
+    "group": "v4-products-wording-19",
+    "semantic_family": "products",
+    "condition": "unavailable",
+    "message": "能否把贷款产品的主要信息告诉我",
+    "state": {
+      "authenticated": true
+    },
+    "errors": {
+      "route": {
+        "gold": "human",
+        "predicted": "llm"
+      }
+    },
+    "label_review": "pending",
+    "priority": "human_missed"
+  },
+  {
+    "id": "v4-status_code-wording-16-tool_down-0",
+    "group": "v4-status_code-wording-16",
+    "semantic_family": "status_code",
+    "condition": "tool_down",
+    "message": "状态栏里的这个代码是哪个阶段",
+    "state": {
+      "authenticated": true,
+      "status_code": 2
+    },
+    "errors": {
+      "route": {
+        "gold": "human",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "explainApplicationStatus"
+      }
+    },
+    "label_review": "pending",
+    "priority": "human_missed"
+  },
+  {
+    "id": "v4-status_code-wording-17-tool_down-0",
+    "group": "v4-status_code-wording-17",
+    "semantic_family": "status_code",
+    "condition": "tool_down",
+    "message": "这个申请状态编码要怎样理解",
+    "state": {
+      "authenticated": true,
+      "status_code": 2
+    },
+    "errors": {
+      "route": {
+        "gold": "human",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "explainApplicationStatus"
+      }
+    },
+    "label_review": "pending",
+    "priority": "human_missed"
+  },
+  {
+    "id": "v4-status_code-wording-18-tool_down-0",
+    "group": "v4-status_code-wording-18",
+    "semantic_family": "status_code",
+    "condition": "tool_down",
+    "message": "可以告诉我这个审批状态值代表什么吗",
+    "state": {
+      "authenticated": true,
+      "status_code": 2
+    },
+    "errors": {
+      "route": {
+        "gold": "human",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "explainApplicationStatus"
+      }
+    },
+    "label_review": "pending",
+    "priority": "human_missed"
+  },
+  {
+    "id": "v4-status_code-wording-19-tool_down-0",
+    "group": "v4-status_code-wording-19",
+    "semantic_family": "status_code",
+    "condition": "tool_down",
+    "message": "关于这里提供的状态码请说明其含义",
+    "state": {
+      "authenticated": true,
+      "status_code": 2
+    },
+    "errors": {
+      "route": {
+        "gold": "human",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "explainApplicationStatus"
+      }
+    },
+    "label_review": "pending",
+    "priority": "human_missed"
+  },
+  {
+    "id": "v4-ui_issue-wording-17-conflict-0",
+    "group": "v4-ui_issue-wording-17",
+    "semantic_family": "ui_issue",
+    "condition": "conflict",
+    "message": "这里的提交操作为何没有开放",
+    "state": {
+      "authenticated": true,
+      "page": "申请表",
+      "backend_eligible": true,
+      "troubleshooting_done": [
+        "重新登录",
+        "更新客户端",
+        "重试仍失败"
+      ]
+    },
+    "errors": {
+      "route": {
+        "gold": "human",
+        "predicted": "tool"
+      }
+    },
+    "label_review": "pending",
+    "priority": "human_missed"
+  },
+  {
+    "id": "v4-ui_issue-wording-18-conflict-0",
+    "group": "v4-ui_issue-wording-18",
+    "semantic_family": "ui_issue",
+    "condition": "conflict",
+    "message": "我想了解页面阻止继续申请的原因",
+    "state": {
+      "authenticated": true,
+      "page": "申请表",
+      "backend_eligible": true,
+      "troubleshooting_done": [
+        "重新登录",
+        "更新客户端",
+        "重试仍失败"
+      ]
+    },
+    "errors": {
+      "route": {
+        "gold": "human",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "queryMyApplications"
+      }
+    },
+    "label_review": "pending",
+    "priority": "human_missed"
+  },
+  {
+    "id": "v4-ui_issue-wording-19-conflict-0",
+    "group": "v4-ui_issue-wording-19",
+    "semantic_family": "ui_issue",
+    "condition": "conflict",
+    "message": "可以说明这处按钮无法使用的缘由吗",
+    "state": {
+      "authenticated": true,
+      "page": "申请表",
+      "backend_eligible": true,
+      "troubleshooting_done": [
+        "重新登录",
+        "更新客户端",
+        "重试仍失败"
+      ]
+    },
+    "errors": {
+      "route": {
+        "gold": "human",
+        "predicted": "llm"
+      }
+    },
+    "label_review": "pending",
+    "priority": "human_missed"
+  },
+  {
+    "id": "v4-application_detail-wording-16-known-0",
+    "group": "v4-application_detail-wording-16",
+    "semantic_family": "application_detail",
+    "condition": "known",
+    "message": "我想了解指定申请里的审核记录",
+    "state": {
+      "authenticated": true,
+      "application_id": 7301,
+      "record": {
+        "id": 7301,
+        "status": 0,
+        "decision_summary": "收入证明尚未补全"
+      }
+    },
+    "errors": {
+      "route": {
+        "gold": "llm",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "queryApplicationDetail"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-application_detail-wording-17-known-0",
+    "group": "v4-application_detail-wording-17",
+    "semantic_family": "application_detail",
+    "condition": "known",
+    "message": "帮我看看这一个申请的详细审核结果",
+    "state": {
+      "authenticated": true,
+      "application_id": 7301,
+      "record": {
+        "id": 7301,
+        "status": 0,
+        "decision_summary": "收入证明尚未补全"
+      }
+    },
+    "errors": {
+      "route": {
+        "gold": "llm",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "queryApplicationDetail"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-application_detail-wording-18-known-0",
+    "group": "v4-application_detail-wording-18",
+    "semantic_family": "application_detail",
+    "condition": "known",
+    "message": "这笔申请对应的具体资料请说明一下",
+    "state": {
+      "authenticated": true,
+      "application_id": 7301,
+      "record": {
+        "id": 7301,
+        "status": 0,
+        "decision_summary": "收入证明尚未补全"
+      }
+    },
+    "errors": {
+      "route": {
+        "gold": "llm",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "queryApplicationDetail"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-application_detail-wording-19-known-0",
+    "group": "v4-application_detail-wording-19",
+    "semantic_family": "application_detail",
+    "condition": "known",
+    "message": "可以告诉我这一单审核说明里写了什么吗",
+    "state": {
+      "authenticated": true,
+      "application_id": 7301,
+      "record": {
+        "id": 7301,
+        "status": 0,
+        "decision_summary": "收入证明尚未补全"
+      }
+    },
+    "errors": {
+      "route": {
+        "gold": "llm",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "explainApplicationStatus"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-application_detail-wording-19-unknown_auth-0",
+    "group": "v4-application_detail-wording-19",
+    "semantic_family": "application_detail",
+    "condition": "unknown_auth",
+    "message": "可以告诉我这一单审核说明里写了什么吗",
+    "state": {
+      "authenticated": null,
+      "application_id": 7301
+    },
+    "errors": {
+      "route": {
+        "gold": "clarify",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "queryApplicationDetail"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-applications-wording-16-known-0",
+    "group": "v4-applications-wording-16",
+    "semantic_family": "applications",
+    "condition": "known",
+    "message": "我提交的几笔借款分别到哪了",
+    "state": {
+      "authenticated": true,
+      "record": {
+        "applications": [
+          {
+            "id": 7301,
+            "status": 2
+          }
+        ]
+      }
+    },
+    "errors": {
+      "route": {
+        "gold": "llm",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "queryMyApplications"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-applications-wording-17-known-0",
+    "group": "v4-applications-wording-17",
+    "semantic_family": "applications",
+    "condition": "known",
+    "message": "能不能告诉我申请记录里的最新情况",
+    "state": {
+      "authenticated": true,
+      "record": {
+        "applications": [
+          {
+            "id": 7301,
+            "status": 2
+          }
+        ]
+      }
+    },
+    "errors": {
+      "route": {
+        "gold": "llm",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "explainApplicationStatus"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-applications-wording-17-other_owner-0",
+    "group": "v4-applications-wording-17",
+    "semantic_family": "applications",
+    "condition": "other_owner",
+    "message": "能不能告诉我申请记录里的最新情况",
+    "state": {
+      "authenticated": true,
+      "record_owner": "other_user"
+    },
+    "errors": {
+      "intent": {
+        "gold": "applications",
+        "predicted": "application_detail"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-applications-wording-18-known-0",
+    "group": "v4-applications-wording-18",
+    "semantic_family": "applications",
+    "condition": "known",
+    "message": "我的账户下面有哪些申请在处理",
+    "state": {
+      "authenticated": true,
+      "record": {
+        "applications": [
+          {
+            "id": 7301,
+            "status": 2
+          }
+        ]
+      }
+    },
+    "errors": {
+      "route": {
+        "gold": "llm",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "queryMyApplications"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-applications-wording-19-known-0",
+    "group": "v4-applications-wording-19",
+    "semantic_family": "applications",
+    "condition": "known",
+    "message": "之前提交的那些贷款申请进展怎么样",
+    "state": {
+      "authenticated": true,
+      "record": {
+        "applications": [
+          {
+            "id": 7301,
+            "status": 2
+          }
+        ]
+      }
+    },
+    "errors": {
+      "route": {
+        "gold": "llm",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "queryMyApplications"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-credit-wording-16-known-0",
+    "group": "v4-credit-wording-16",
+    "semantic_family": "credit",
+    "condition": "known",
+    "message": "能帮我确认一下自己的信用分值吗",
+    "state": {
+      "authenticated": true,
+      "record": {
+        "credit_score": 673
+      }
+    },
+    "errors": {
+      "route": {
+        "gold": "llm",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "queryMyCreditScore"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-credit-wording-17-known-0",
+    "group": "v4-credit-wording-17",
+    "semantic_family": "credit",
+    "condition": "known",
+    "message": "想了解我个人在平台的信用得分",
+    "state": {
+      "authenticated": true,
+      "record": {
+        "credit_score": 673
+      }
+    },
+    "errors": {
+      "route": {
+        "gold": "llm",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "queryMyCreditScore"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-credit-wording-18-known-0",
+    "group": "v4-credit-wording-18",
+    "semantic_family": "credit",
+    "condition": "known",
+    "message": "账号里那项信用评分是多少",
+    "state": {
+      "authenticated": true,
+      "record": {
+        "credit_score": 673
+      }
+    },
+    "errors": {
+      "route": {
+        "gold": "llm",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "queryMyCreditScore"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-credit-wording-19-known-0",
+    "group": "v4-credit-wording-19",
+    "semantic_family": "credit",
+    "condition": "known",
+    "message": "本人当前的信用评分能告诉我么",
+    "state": {
+      "authenticated": true,
+      "record": {
+        "credit_score": 673
+      }
+    },
+    "errors": {
+      "route": {
+        "gold": "llm",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "queryMyCreditScore"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-override-wording-6-standard-0",
+    "group": "v4-override-wording-6",
+    "semantic_family": "override",
+    "condition": "standard",
+    "message": "别走审批流程直接给我放款",
+    "state": {
+      "authenticated": true,
+      "application_id": 7301
+    },
+    "errors": {
+      "intent": {
+        "gold": "application_detail",
+        "predicted": "handoff"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-override-wording-7-standard-0",
+    "group": "v4-override-wording-7",
+    "semantic_family": "override",
+    "condition": "standard",
+    "message": "要求把这笔贷款的审批限制解除",
+    "state": {
+      "authenticated": true,
+      "application_id": 7301
+    },
+    "errors": {
+      "intent": {
+        "gold": "application_detail",
+        "predicted": "handoff"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-products-wording-16-known-0",
+    "group": "v4-products-wording-16",
+    "semantic_family": "products",
+    "condition": "known",
+    "message": "我想比较这里几款贷款的条件",
+    "state": {
+      "authenticated": true,
+      "record": {
+        "product": {
+          "name": "示例产品",
+          "max_amount": 8000,
+          "periods": [
+            3,
+            6
+          ]
+        }
+      }
+    },
+    "errors": {
+      "route": {
+        "gold": "llm",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "queryLoanProducts"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-products-wording-18-guest-0",
+    "group": "v4-products-wording-18",
+    "semantic_family": "products",
+    "condition": "guest",
+    "message": "先帮我弄清平台有哪些借款品种",
+    "state": {
+      "authenticated": false
+    },
+    "errors": {
+      "route": {
+        "gold": "clarify",
+        "predicted": "tool"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-products-wording-18-known-0",
+    "group": "v4-products-wording-18",
+    "semantic_family": "products",
+    "condition": "known",
+    "message": "先帮我弄清平台有哪些借款品种",
+    "state": {
+      "authenticated": true,
+      "record": {
+        "product": {
+          "name": "示例产品",
+          "max_amount": 8000,
+          "periods": [
+            3,
+            6
+          ]
+        }
+      }
+    },
+    "errors": {
+      "route": {
+        "gold": "llm",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "queryLoanProducts"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-products-wording-19-guest-0",
+    "group": "v4-products-wording-19",
+    "semantic_family": "products",
+    "condition": "guest",
+    "message": "能否把贷款产品的主要信息告诉我",
+    "state": {
+      "authenticated": false
+    },
+    "errors": {
+      "route": {
+        "gold": "clarify",
+        "predicted": "tool"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-products-wording-19-known-0",
+    "group": "v4-products-wording-19",
+    "semantic_family": "products",
+    "condition": "known",
+    "message": "能否把贷款产品的主要信息告诉我",
+    "state": {
+      "authenticated": true,
+      "record": {
+        "product": {
+          "name": "示例产品",
+          "max_amount": 8000,
+          "periods": [
+            3,
+            6
+          ]
+        }
+      }
+    },
+    "errors": {
+      "route": {
+        "gold": "llm",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "queryLoanProducts"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-products-wording-19-unknown_auth-0",
+    "group": "v4-products-wording-19",
+    "semantic_family": "products",
+    "condition": "unknown_auth",
+    "message": "能否把贷款产品的主要信息告诉我",
+    "state": {
+      "authenticated": null
+    },
+    "errors": {
+      "route": {
+        "gold": "clarify",
+        "predicted": "tool"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-repay_modify-wording-6-standard-0",
+    "group": "v4-repay_modify-wording-6",
+    "semantic_family": "repay_modify",
+    "condition": "standard",
+    "message": "请直接改掉我的还款记录",
+    "state": {
+      "authenticated": true,
+      "knowledge": "还款入口在我的贷款中，选择本人已通过申请后查看还款页面；合同条件以本人合同为准。"
+    },
+    "errors": {
+      "intent": {
+        "gold": "repayment",
+        "predicted": "handoff"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-ui_issue-wording-16-no_context-0",
+    "group": "v4-ui_issue-wording-16",
+    "semantic_family": "ui_issue",
+    "condition": "no_context",
+    "message": "界面里的办理入口一直不能点击",
+    "state": {
+      "authenticated": true
+    },
+    "errors": {
+      "route": {
+        "gold": "clarify",
+        "predicted": "llm"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-ui_issue-wording-18-no_context-0",
+    "group": "v4-ui_issue-wording-18",
+    "semantic_family": "ui_issue",
+    "condition": "no_context",
+    "message": "我想了解页面阻止继续申请的原因",
+    "state": {
+      "authenticated": true
+    },
+    "errors": {
+      "route": {
+        "gold": "clarify",
+        "predicted": "tool"
+      },
+      "tool": {
+        "gold": "none",
+        "predicted": "queryMyApplications"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-ui_issue-wording-19-no_context-0",
+    "group": "v4-ui_issue-wording-19",
+    "semantic_family": "ui_issue",
+    "condition": "no_context",
+    "message": "可以说明这处按钮无法使用的缘由吗",
+    "state": {
+      "authenticated": true
+    },
+    "errors": {
+      "route": {
+        "gold": "clarify",
+        "predicted": "llm"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  }
+]

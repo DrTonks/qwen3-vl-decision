@@ -1,0 +1,14 @@
+{
+  "massive": {
+    "url": "https://amazon-massive-nlu-dataset.s3.amazonaws.com/amazon-massive-dataset-1.1.tar.gz",
+    "member": "zh-CN.jsonl",
+    "member_sha256": "992bf0bef3d678f08c27e514739bc851163e8f40f530bfb4d5970a2c24408ace",
+    "license": "CC-BY-4.0"
+  },
+  "crosswoz": {
+    "url": "https://api.github.com/repos/thu-coai/CrossWOZ/git/blobs/5408e20adcc61347533b5ab1fa9ca4e65f269743",
+    "git_blob_sha": "5408e20adcc61347533b5ab1fa9ca4e65f269743",
+    "sha256": "e57703894995211bba8638f130dc7df81e8992b71f3c05c10022ad23d6ca5310",
+    "license": "Apache-2.0"
+  }
+}

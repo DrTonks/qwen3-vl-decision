@@ -1,0 +1,52 @@
+{
+  "seed": 20260926,
+  "massive_source_sha256": "992bf0bef3d678f08c27e514739bc851163e8f40f530bfb4d5970a2c24408ace",
+  "dedup_dropped": {
+    "dev_test_overlap": 51,
+    "dev_duplicate": 10,
+    "train_overlap": 505,
+    "train_duplicate": 284
+  },
+  "test_role": "Official test retained; business test already seen in phase 1 is regression only",
+  "training": "MASSIVE official train + unreviewed synthetic business dev; no Jev responses",
+  "files": {
+    "business-calibration.jsonl": {
+      "sha256": "52a370d58aa5609d655276ee316ef466b9e4989f7dee0a97495baa9faaa04862",
+      "rows": 56
+    },
+    "business-dev.jsonl": {
+      "sha256": "dd71581d8aacf297e8dc1ca60270fdd2cdb7c4a930293c16fd89573de61face7",
+      "rows": 64
+    },
+    "business-test.jsonl": {
+      "sha256": "6e0e9eaa663c1cdb6cae9abee349eae85279b3fe905693cab7d8ab9d60fd3f8d",
+      "rows": 72
+    },
+    "crosswoz-test.jsonl": {
+      "sha256": "431918d072a75a39e4572e3b373dd286ed0259f085ac7f2e95bbf76fba1c359e",
+      "rows": 200
+    },
+    "massive-calibration.jsonl": {
+      "sha256": "59404c8f4337ee100347a18f0f0b43e29690b4b2f884607ac5c379e9ec8a6cd6",
+      "rows": 313
+    },
+    "massive-dev.jsonl": {
+      "sha256": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+      "rows": 273
+    },
+    "massive-test.jsonl": {
+      "sha256": "f6835bfc538e57675b47d0affc73a4535e314562e36082f4ed564bb96a60afbb",
+      "rows": 2974
+    },
+    "massive-train.jsonl": {
+      "sha256": "fa446cee7ce04196b170173f322f9cf410f29f42e7df4132e43baccd6b2647cb",
+      "rows": 1715
+    }
+  },
+  "crosswoz_source_sha256": "e57703894995211bba8638f130dc7df81e8992b71f3c05c10022ad23d6ca5310",
+  "spec_sha256": {
+    "crosswoz-spec.json": "4a3d62f8c23e773906107e03ad9677e4bbcf1e22777431c908b4bf7c5c2ec8fa",
+    "massive-spec.json": "a7e21efd3bfa7f46cb5954d7cb5b20acae07227e065f5c337eb716b1ced856b7",
+    "business-spec.json": "52e758e44a85da86ba3013668e3cde7a04d27648a3274ecb5f93e374012695d4"
+  }
+}

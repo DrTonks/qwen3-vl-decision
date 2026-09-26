@@ -1,0 +1,552 @@
+{
+  "selected": "step-1582",
+  "source_sha256": {
+    "results/joint-v4/metrics.json": "b3e1580b771d6a0bafa7703991cbf82a2394b58c4c4681abf1a86cc5bb815883",
+    "results/joint-v4/selection.json": "6ec1a3fe08de40afc413b1c1b86bf5e15307459696109ca5233a8f16c7595d7a",
+    "results/joint-v4/training-summary.json": "a6ef951075f11c799ba5bb05cc9a2c559477b5753f4ddd5ae3b2b7c7359673da",
+    "results/joint-v4/candidate-benchmark/metrics.json": "85ef3f798533e0b3888013e2e6e8cb8a78fc67c78fd02f66771ce56d120227ab",
+    "results/joint-v4/candidate-benchmark/protocol.json": "b07b61c3994560d5519c515a98818757b1491b44493b187d1267dc5c1a5695b1",
+    "results/joint-v4/candidate-benchmark/agreement.jsonl": "f82d80537db9c02c111b52365ee9a4b769418dc9f209f86f9151a4bd61cd4809",
+    "src/qwenlab/integrated_report.py": "e1c7a6f8d83019f26fc31ee4df46aafbb1181fdddbd94b0228067dbbf79c3280",
+    "results/joint-v4/base/business-test.jsonl": "657a16a61809ccbe01499c7503cc50eafd07b1a639442297d9e0ffc640e48393",
+    "results/joint-v4/base/massive-test.jsonl": "26cadf1fcf7bde5328d78595f75087e5324e37508892ded1ae2c14ef1728ce3c",
+    "results/joint-v4/base/legacy-business-test.jsonl": "6a1bbcecabbb68cff38fa2f849daf99274bc5e056897dd93d3b9a8a7886f3bd6",
+    "results/joint-v4/base/crosswoz-test.jsonl": "f5096cdf45e3f17fe366426e39c550f80e99a980c6a465f59c7a83e004d83376",
+    "results/joint-v4/step-1582/business-test.jsonl": "0b55e604c5a04a011f9e21422c0b38cd3cc737f517525d9456dd23173605e82c",
+    "results/joint-v4/step-1582/massive-test.jsonl": "b9d3215b87a8b955a0ec395fff97d199b3507c2c1171ae096b669d81444ac6fc",
+    "results/joint-v4/step-1582/legacy-business-test.jsonl": "00b373487de514f4da623cf6238e4c7ce65a2850a3cd5b6e68a803c6b32b816c",
+    "results/joint-v4/step-1582/crosswoz-test.jsonl": "27a068bee48b62da672108beea602acc2bdb319dca9fc60cfbc6b0b841765395",
+    "results/joint-v4/jev/business-test.jsonl": "338fe4177ecba121a425ca8877908495e1f64a22134672783a33e93df1f5bc0b",
+    "results/joint-v4/jev/massive-test.jsonl": "86efc1607d7d27203e047b50fa3b68ee1dfa258d4a7d2728c1947dc721b09ddd",
+    "results/joint-v4/jev/legacy-business-test.jsonl": "60cf2d6dec2eed1ab7eed1f60f8c6ef6f826e322b92924b3485bfacbc8e1c951",
+    "results/joint-v4/jev/crosswoz-test.jsonl": "15718173ad78aaa25d0a298336bbad0ac40e91dd58f9ec07270e97e101b1a3ef",
+    "results/joint-v4/base/latency.json": "52ea2e9286541b99c41aca12560c919e79e280836d625555a21f4272d042b5e3",
+    "results/joint-v4/step-1582/latency.json": "50dc762b48e29f04b8a3ca4c4d82fc0aabb6be323b6580bbe63847b383527ba2",
+    "results/joint-v4/candidate-benchmark/latency.jsonl": "1b6edbafa506b4b46cf696ed1aaa42073036252d11204b687a07b8ffbde5602b",
+    "results/joint-v4/recovery.json": "5c9229c68312ca5a952794360870bf4804d6a7af715ad68ecd45d4dc65dfe417",
+    "results/joint-v4/adapter-overhead/metrics.json": "044344e641cf1754524c7549c6021d36d14ef4a2c39f7db9de9d5fc8f9f66a3f",
+    "results/joint-v4/adapter-overhead/timings.jsonl": "53edbdae789940580ae867fb670003b6827c149862fa01935f6e2daf0e8e20e1",
+    "results/joint-v4/adapter-overhead/protocol.json": "8c5cf3f56dd609c2a024772efff671bc27171b6315ddaeb227d446403c38fb3d"
+  },
+  "effects": [
+    {
+      "dataset": "business",
+      "task": "intent",
+      "accuracy_all_requests": {
+        "base": 0.7555555555555555,
+        "step-1582": 0.9222222222222223,
+        "jev": 0.9777777777777777
+      },
+      "gain_vs_base_pp": 16.666666666666675,
+      "gap_vs_jev_pp": -5.5555555555555465
+    },
+    {
+      "dataset": "business",
+      "task": "route",
+      "accuracy_all_requests": {
+        "base": 0.2777777777777778,
+        "step-1582": 0.9888888888888889,
+        "jev": 0.75
+      },
+      "gain_vs_base_pp": 71.11111111111111,
+      "gap_vs_jev_pp": 23.888888888888893
+    },
+    {
+      "dataset": "business",
+      "task": "tool",
+      "accuracy_all_requests": {
+        "base": 0.2722222222222222,
+        "step-1582": 0.9944444444444445,
+        "jev": 0.8555555555555555
+      },
+      "gain_vs_base_pp": 72.22222222222223,
+      "gap_vs_jev_pp": 13.888888888888895
+    },
+    {
+      "dataset": "massive",
+      "task": "intent",
+      "accuracy_all_requests": {
+        "base": 0.5514458641560188,
+        "step-1582": 0.8342299932750504,
+        "jev": 0.7800941492938803
+      },
+      "gain_vs_base_pp": 28.27841291190316,
+      "gap_vs_jev_pp": 5.413584398117011
+    },
+    {
+      "dataset": "legacy-business",
+      "task": "intent",
+      "accuracy_all_requests": {
+        "base": 0.5416666666666666,
+        "step-1582": 0.8472222222222222,
+        "jev": 0.9305555555555556
+      },
+      "gain_vs_base_pp": 30.555555555555557,
+      "gap_vs_jev_pp": -8.333333333333337
+    },
+    {
+      "dataset": "legacy-business",
+      "task": "route",
+      "accuracy_all_requests": {
+        "base": 0.5555555555555556,
+        "step-1582": 0.9305555555555556,
+        "jev": 0.9722222222222222
+      },
+      "gain_vs_base_pp": 37.5,
+      "gap_vs_jev_pp": -4.1666666666666625
+    },
+    {
+      "dataset": "legacy-business",
+      "task": "tool",
+      "accuracy_all_requests": {
+        "base": 0.6666666666666666,
+        "step-1582": 0.9583333333333334,
+        "jev": 0.9722222222222222
+      },
+      "gain_vs_base_pp": 29.166666666666675,
+      "gap_vs_jev_pp": -1.388888888888884
+    },
+    {
+      "dataset": "crosswoz",
+      "task": "intent",
+      "accuracy_all_requests": {
+        "base": 0.64,
+        "step-1582": 0.6,
+        "jev": 0.87
+      },
+      "gain_vs_base_pp": -4.0000000000000036,
+      "gap_vs_jev_pp": -27.0
+    }
+  ],
+  "business": {
+    "base": {
+      "n": 180,
+      "human_required": 54,
+      "human_missed": 38,
+      "human_false_positive": 5,
+      "tool_required": 28,
+      "joint_tool_correct": 22,
+      "all_fields_correct": 31,
+      "tool_route_without_tool": 0,
+      "errors": 0
+    },
+    "step-1582": {
+      "n": 180,
+      "human_required": 54,
+      "human_missed": 0,
+      "human_false_positive": 2,
+      "tool_required": 28,
+      "joint_tool_correct": 27,
+      "all_fields_correct": 164,
+      "tool_route_without_tool": 0,
+      "errors": 0
+    },
+    "jev": {
+      "n": 180,
+      "human_required": 54,
+      "human_missed": 23,
+      "human_false_positive": 0,
+      "tool_required": 28,
+      "joint_tool_correct": 28,
+      "all_fields_correct": 131,
+      "tool_route_without_tool": 8,
+      "errors": 0
+    }
+  },
+  "latency": {
+    "base": {
+      "scope": "sequential customer requests, three serial intent/route/tool forwards; no model loading",
+      "n": 32,
+      "p50_s": 0.3669775999878766,
+      "p95_s": 0.39509615999413655,
+      "values_s": [
+        0.3663215999840759,
+        0.3671543999807909,
+        0.3658219999924768,
+        0.3936845999851357,
+        0.3597510000108741,
+        0.36566470001707785,
+        0.36773520000861026,
+        0.3655889999936335,
+        0.4024380999908317,
+        0.3668007999949623,
+        0.3711055000021588,
+        0.36590969999087974,
+        0.3671780999866314,
+        0.39682140000513755,
+        0.36216229997808114,
+        0.36573600000701845,
+        0.36432529997546226,
+        0.3704429999925196,
+        0.3912064000032842,
+        0.3664746999857016,
+        0.3673728999856394,
+        0.36850839998805895,
+        0.36326039998675697,
+        0.37206910000531934,
+        0.3624487999768462,
+        0.3683368999918457,
+        0.36468080000486225,
+        0.3656145999848377,
+        0.36372180000762455,
+        0.3684773999848403,
+        0.3727726000070106,
+        0.3766409999807365
+      ]
+    },
+    "step-1582": {
+      "scope": "sequential customer requests, three serial intent/route/tool forwards; no model loading",
+      "n": 32,
+      "p50_s": 0.38195129999076016,
+      "p95_s": 0.4144779650072451,
+      "values_s": [
+        0.3759483000030741,
+        0.37909380000201054,
+        0.38913789999787696,
+        0.4394547000119928,
+        0.3972582000133116,
+        0.38167750000138767,
+        0.3845054999983404,
+        0.3849721000005957,
+        0.4164974000013899,
+        0.3821412999823224,
+        0.3829832999908831,
+        0.37678399999276735,
+        0.3764337000029627,
+        0.41282570001203567,
+        0.3727952000044752,
+        0.3785976000071969,
+        0.38176129999919794,
+        0.38709030000609346,
+        0.4078031000099145,
+        0.3741732000198681,
+        0.379776200017659,
+        0.37804579999647103,
+        0.37893639999674633,
+        0.3841889000032097,
+        0.37784000000101514,
+        0.38470279998728074,
+        0.3800938999920618,
+        0.3860036999976728,
+        0.3839031999814324,
+        0.38469989999430254,
+        0.36905550002120435,
+        0.3804299000184983
+      ]
+    },
+    "jev": {
+      "requested": 32,
+      "successful": 32,
+      "errors": 0,
+      "p50_s": 0.5726747999869986,
+      "p95_s": 0.8997332049941177
+    }
+  },
+  "speed_experiment": {
+    "n_task_predictions": 543,
+    "choice_mismatches": 0,
+    "max_probability_delta": 0.0,
+    "max_logit_delta": 0.0,
+    "latency": {
+      "full": {
+        "p50_s": 0.37997419998282567,
+        "p95_s": 0.39415362499130424
+      },
+      "candidate": {
+        "p50_s": 0.37504435000300873,
+        "p95_s": 0.38519664999330416
+      }
+    },
+    "relative_latency_reduction": {
+      "p50_s": 0.01297417029903547,
+      "p95_s": 0.022724578514780047
+    },
+    "agreement_gate_pass": true,
+    "speed_gate_pass": false,
+    "peak_allocated_gib": 2.1490068435668945,
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "torch": "2.8.0+cu128",
+    "default_implementation_changed": false,
+    "limits": [
+      "one device session, text dev data only",
+      "timing samples correlated; exploratory",
+      "original full lm_head retained in memory; no deployment memory saving measured",
+      "finite-precision kernels may differ despite algebraic equivalence",
+      "not a Mugi benchmark, no backbone compute removed"
+    ]
+  },
+  "calibration": [
+    {
+      "dataset": "business",
+      "task": "intent",
+      "temperature": 1.115111648982969,
+      "before": {
+        "nll": 0.45966628907182394,
+        "brier_multiclass_sum": 0.14005370355749774,
+        "ece_10_equal_width": 0.06314393667626039
+      },
+      "after": {
+        "nll": 0.4172606091668223,
+        "brier_multiclass_sum": 0.13832393455356293,
+        "ece_10_equal_width": 0.06683414646341965
+      },
+      "selective_0.9": {
+        "coverage": 0.9388888888888889,
+        "accepted": 169,
+        "errors": 8
+      }
+    },
+    {
+      "dataset": "business",
+      "task": "route",
+      "temperature": 0.9846101277395863,
+      "before": {
+        "nll": 0.11405420710849119,
+        "brier_multiclass_sum": 0.01734875380202944,
+        "ece_10_equal_width": 0.01195177724529164
+      },
+      "after": {
+        "nll": 0.11553554732549282,
+        "brier_multiclass_sum": 0.017301164464164354,
+        "ece_10_equal_width": 0.01196396390163833
+      },
+      "selective_0.9": {
+        "coverage": 0.9777777777777777,
+        "accepted": 176,
+        "errors": 1
+      }
+    },
+    {
+      "dataset": "massive",
+      "task": "intent",
+      "temperature": 1.2804965501292298,
+      "before": {
+        "nll": 0.7128522901107042,
+        "brier_multiclass_sum": 0.2556785998194349,
+        "ece_10_equal_width": 0.06971462524175825
+      },
+      "after": {
+        "nll": 0.666044170284669,
+        "brier_multiclass_sum": 0.2480296683009114,
+        "ece_10_equal_width": 0.020083437401393952
+      },
+      "selective_0.9": {
+        "coverage": 0.6308002689979825,
+        "accepted": 1876,
+        "errors": 88
+      }
+    }
+  ],
+  "comparisons_common_success_only": {
+    "business": {
+      "intent": {
+        "trained_minus_base": {
+          "n": 180,
+          "groups": 52,
+          "accuracy_difference": 0.16666666666666666,
+          "group_bootstrap_95": [
+            0.06912752983912818,
+            0.2993226104000922
+          ]
+        },
+        "trained_minus_jev": {
+          "n": 180,
+          "groups": 52,
+          "accuracy_difference": -0.05555555555555555,
+          "group_bootstrap_95": [
+            -0.1629299472598028,
+            0.018873933421463734
+          ]
+        }
+      },
+      "route": {
+        "trained_minus_base": {
+          "n": 180,
+          "groups": 52,
+          "accuracy_difference": 0.7111111111111111,
+          "group_bootstrap_95": [
+            0.6241585507392643,
+            0.7814102281494544
+          ]
+        },
+        "trained_minus_jev": {
+          "n": 180,
+          "groups": 52,
+          "accuracy_difference": 0.2388888888888889,
+          "group_bootstrap_95": [
+            0.18471092601665848,
+            0.29441694867456286
+          ]
+        }
+      }
+    },
+    "massive": {
+      "intent": {
+        "trained_minus_base": {
+          "n": 2974,
+          "groups": 2921,
+          "accuracy_difference": 0.2827841291190316,
+          "group_bootstrap_95": [
+            0.26516897439923276,
+            0.30067510914948536
+          ]
+        },
+        "trained_minus_jev": {
+          "n": 2972,
+          "groups": 2919,
+          "accuracy_difference": 0.05349932705248991,
+          "group_bootstrap_95": [
+            0.04058870670756272,
+            0.0666890108647264
+          ]
+        }
+      }
+    },
+    "legacy-business": {
+      "intent": {
+        "trained_minus_base": {
+          "n": 72,
+          "groups": 18,
+          "accuracy_difference": 0.3055555555555556,
+          "group_bootstrap_95": [
+            0.1388888888888889,
+            0.4722222222222222
+          ]
+        },
+        "trained_minus_jev": {
+          "n": 72,
+          "groups": 18,
+          "accuracy_difference": -0.08333333333333333,
+          "group_bootstrap_95": [
+            -0.19444444444444445,
+            0.013888888888888888
+          ]
+        }
+      },
+      "route": {
+        "trained_minus_base": {
+          "n": 72,
+          "groups": 18,
+          "accuracy_difference": 0.375,
+          "group_bootstrap_95": [
+            0.16666666666666666,
+            0.5972222222222222
+          ]
+        },
+        "trained_minus_jev": {
+          "n": 72,
+          "groups": 18,
+          "accuracy_difference": -0.041666666666666664,
+          "group_bootstrap_95": [
+            -0.125,
+            0.027777777777777776
+          ]
+        }
+      }
+    },
+    "crosswoz": {
+      "intent": {
+        "trained_minus_base": {
+          "n": 200,
+          "groups": 168,
+          "accuracy_difference": -0.04,
+          "group_bootstrap_95": [
+            -0.09327254396487915,
+            0.01020408163265306
+          ]
+        },
+        "trained_minus_jev": {
+          "n": 200,
+          "groups": 168,
+          "accuracy_difference": -0.27,
+          "group_bootstrap_95": [
+            -0.35858585858585856,
+            -0.18536585365853658
+          ]
+        }
+      }
+    }
+  },
+  "selected_intent_error_groups": {
+    "v4-applications-wording-16": 2,
+    "v4-ui_issue-wording-18": 9,
+    "v4-repay_personal-wording-6": 1,
+    "v4-override-wording-6": 1,
+    "v4-concept-wording-7": 1
+  },
+  "jev_route_error_conditions": {
+    "known": 15,
+    "unavailable": 16,
+    "guest": 2,
+    "unknown_auth": 2,
+    "tool_down": 4,
+    "no_context": 3,
+    "conflict": 3
+  },
+  "jev_to_local_latency_ratio": {
+    "p50_s": 1.4993398373060969,
+    "p95_s": 2.1707624553174747
+  },
+  "paired_speed": {
+    "request_groups": 12,
+    "mean_saved_s": 0.0072648249988560565,
+    "group_bootstrap_95_s": [
+      0.00506969673620511,
+      0.009729015970575948
+    ],
+    "scope": "one device session; exploratory paired timing, not production latency guarantee"
+  },
+  "recovery": {
+    "reason": "Original GPU evaluator and completion worker absent; no traceback recorded. Underlying cause unconfirmed.",
+    "training_restarted": false,
+    "selection_changed": false,
+    "frozen_source_integrity": true,
+    "selected": "step-1582",
+    "status": "complete",
+    "new_artifacts": [
+      "step-1582/massive-test.jsonl",
+      "step-1582/latency.json"
+    ],
+    "source_sha256": "dca0df040f8bb54e996f7b2929ea1b8f062b208710db38c4da761f55143115c4"
+  },
+  "adapter_overhead": {
+    "latency": {
+      "disabled": {
+        "p50_s": 0.3529865000018617,
+        "p95_s": 0.3846935750116245
+      },
+      "enabled": {
+        "p50_s": 0.36960245000955183,
+        "p95_s": 0.40238422500988236
+      }
+    },
+    "relative_overhead": {
+      "p50_s": 0.04707248013055021,
+      "p95_s": 0.045986341200846104
+    },
+    "request_groups": 32,
+    "repetitions": 3,
+    "requests_per_mode": 96,
+    "paired_mean_overhead_s": 0.016382707289267273,
+    "paired_group_bootstrap_95_s": [
+      0.014889179424502194,
+      0.017895561818416655
+    ],
+    "choice_differences_vs_frozen_reference": {
+      "disabled": 0,
+      "enabled": 0
+    },
+    "compared_task_predictions_per_mode": 288,
+    "adapter_parameter_dtypes": [
+      "torch.float32"
+    ],
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "status": "complete",
+    "limits": [
+      "one device session, 32 ordered business inputs",
+      "disabled LoRA wrapper is not a separately loaded base model",
+      "does not isolate every kernel or prove zero hardware effects",
+      "not an adapter merge experiment"
+    ]
+  }
+}

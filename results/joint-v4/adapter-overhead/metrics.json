@@ -1,0 +1,40 @@
+{
+  "latency": {
+    "disabled": {
+      "p50_s": 0.3529865000018617,
+      "p95_s": 0.3846935750116245
+    },
+    "enabled": {
+      "p50_s": 0.36960245000955183,
+      "p95_s": 0.40238422500988236
+    }
+  },
+  "relative_overhead": {
+    "p50_s": 0.04707248013055021,
+    "p95_s": 0.045986341200846104
+  },
+  "request_groups": 32,
+  "repetitions": 3,
+  "requests_per_mode": 96,
+  "paired_mean_overhead_s": 0.016382707289267273,
+  "paired_group_bootstrap_95_s": [
+    0.014889179424502194,
+    0.017895561818416655
+  ],
+  "choice_differences_vs_frozen_reference": {
+    "disabled": 0,
+    "enabled": 0
+  },
+  "compared_task_predictions_per_mode": 288,
+  "adapter_parameter_dtypes": [
+    "torch.float32"
+  ],
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "status": "complete",
+  "limits": [
+    "one device session, 32 ordered business inputs",
+    "disabled LoRA wrapper is not a separately loaded base model",
+    "does not isolate every kernel or prove zero hardware effects",
+    "not an adapter merge experiment"
+  ]
+}

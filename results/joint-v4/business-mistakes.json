@@ -1,0 +1,252 @@
+[
+  {
+    "id": "v4-applications-wording-16-live-0",
+    "group": "v4-applications-wording-16",
+    "message": "我提交的几笔借款分别到哪了",
+    "state": {
+      "authenticated": true
+    },
+    "errors": {
+      "route": {
+        "gold": "tool",
+        "predicted": "human"
+      },
+      "tool": {
+        "gold": "queryMyApplications",
+        "predicted": "none"
+      }
+    }
+  },
+  {
+    "id": "v4-applications-wording-16-unavailable-0",
+    "group": "v4-applications-wording-16",
+    "message": "我提交的几笔借款分别到哪了",
+    "state": {
+      "authenticated": true
+    },
+    "errors": {
+      "intent": {
+        "gold": "applications",
+        "predicted": "general"
+      }
+    }
+  },
+  {
+    "id": "v4-applications-wording-16-other_owner-0",
+    "group": "v4-applications-wording-16",
+    "message": "我提交的几笔借款分别到哪了",
+    "state": {
+      "authenticated": true,
+      "record_owner": "other_user"
+    },
+    "errors": {
+      "intent": {
+        "gold": "applications",
+        "predicted": "general"
+      }
+    }
+  },
+  {
+    "id": "v4-ui_issue-wording-16-no_context-0",
+    "group": "v4-ui_issue-wording-16",
+    "message": "界面里的办理入口一直不能点击",
+    "state": {
+      "authenticated": true
+    },
+    "errors": {
+      "route": {
+        "gold": "clarify",
+        "predicted": "human"
+      }
+    }
+  },
+  {
+    "id": "v4-ui_issue-wording-18-no_context-0",
+    "group": "v4-ui_issue-wording-18",
+    "message": "我想了解页面阻止继续申请的原因",
+    "state": {
+      "authenticated": true
+    },
+    "errors": {
+      "intent": {
+        "gold": "ui_issue",
+        "predicted": "application_detail"
+      }
+    }
+  },
+  {
+    "id": "v4-ui_issue-wording-18-guest-0",
+    "group": "v4-ui_issue-wording-18",
+    "message": "我想了解页面阻止继续申请的原因",
+    "state": {
+      "authenticated": false,
+      "page": "贷款申请"
+    },
+    "errors": {
+      "intent": {
+        "gold": "ui_issue",
+        "predicted": "application_detail"
+      }
+    }
+  },
+  {
+    "id": "v4-ui_issue-wording-18-conflict-0",
+    "group": "v4-ui_issue-wording-18",
+    "message": "我想了解页面阻止继续申请的原因",
+    "state": {
+      "authenticated": true,
+      "page": "申请表",
+      "backend_eligible": true,
+      "troubleshooting_done": [
+        "重新登录",
+        "更新客户端",
+        "重试仍失败"
+      ]
+    },
+    "errors": {
+      "intent": {
+        "gold": "ui_issue",
+        "predicted": "application_detail"
+      }
+    }
+  },
+  {
+    "id": "v4-ui_issue-wording-18-unlisted-0",
+    "group": "v4-ui_issue-wording-18",
+    "message": "我想了解页面阻止继续申请的原因",
+    "state": {
+      "authenticated": true,
+      "page": "申请表",
+      "disabled_reason": "产品未上架"
+    },
+    "errors": {
+      "intent": {
+        "gold": "ui_issue",
+        "predicted": "application_detail"
+      }
+    }
+  },
+  {
+    "id": "v4-ui_issue-wording-18-identity-0",
+    "group": "v4-ui_issue-wording-18",
+    "message": "我想了解页面阻止继续申请的原因",
+    "state": {
+      "authenticated": true,
+      "page": "申请表",
+      "disabled_reason": "尚未完成实名认证"
+    },
+    "errors": {
+      "intent": {
+        "gold": "ui_issue",
+        "predicted": "application_detail"
+      }
+    }
+  },
+  {
+    "id": "v4-ui_issue-wording-18-pending-0",
+    "group": "v4-ui_issue-wording-18",
+    "message": "我想了解页面阻止继续申请的原因",
+    "state": {
+      "authenticated": true,
+      "page": "申请表",
+      "disabled_reason": "存在同产品处理中申请"
+    },
+    "errors": {
+      "intent": {
+        "gold": "ui_issue",
+        "predicted": "application_detail"
+      }
+    }
+  },
+  {
+    "id": "v4-ui_issue-wording-18-amount-0",
+    "group": "v4-ui_issue-wording-18",
+    "message": "我想了解页面阻止继续申请的原因",
+    "state": {
+      "authenticated": true,
+      "page": "申请表",
+      "disabled_reason": "申请金额超过产品最高额度"
+    },
+    "errors": {
+      "intent": {
+        "gold": "ui_issue",
+        "predicted": "application_detail"
+      }
+    }
+  },
+  {
+    "id": "v4-ui_issue-wording-18-purpose-0",
+    "group": "v4-ui_issue-wording-18",
+    "message": "我想了解页面阻止继续申请的原因",
+    "state": {
+      "authenticated": true,
+      "page": "申请表",
+      "disabled_reason": "未填写贷款用途"
+    },
+    "errors": {
+      "intent": {
+        "gold": "ui_issue",
+        "predicted": "application_detail"
+      }
+    }
+  },
+  {
+    "id": "v4-ui_issue-wording-18-incomplete-0",
+    "group": "v4-ui_issue-wording-18",
+    "message": "我想了解页面阻止继续申请的原因",
+    "state": {
+      "authenticated": true,
+      "page": "申请表",
+      "disabled_reason": "未填写必填收入信息"
+    },
+    "errors": {
+      "intent": {
+        "gold": "ui_issue",
+        "predicted": "application_detail"
+      }
+    }
+  },
+  {
+    "id": "v4-repay_personal-wording-6-standard-0",
+    "group": "v4-repay_personal-wording-6",
+    "message": "想弄清自己剩余欠款的准确金额",
+    "state": {
+      "authenticated": true
+    },
+    "errors": {
+      "intent": {
+        "gold": "repayment",
+        "predicted": "credit"
+      }
+    }
+  },
+  {
+    "id": "v4-override-wording-6-standard-0",
+    "group": "v4-override-wording-6",
+    "message": "别走审批流程直接给我放款",
+    "state": {
+      "authenticated": true,
+      "application_id": 7301
+    },
+    "errors": {
+      "intent": {
+        "gold": "application_detail",
+        "predicted": "handoff"
+      }
+    }
+  },
+  {
+    "id": "v4-concept-wording-7-standard-0",
+    "group": "v4-concept-wording-7",
+    "message": "贷款期限与还款期数有何关系",
+    "state": {
+      "authenticated": true
+    },
+    "errors": {
+      "intent": {
+        "gold": "general",
+        "predicted": "repayment"
+      }
+    }
+  }
+]

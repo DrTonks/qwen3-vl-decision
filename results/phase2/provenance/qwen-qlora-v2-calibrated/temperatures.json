@@ -1,0 +1,45 @@
+{
+  "massive": {
+    "source_sha256": "9f627f42802dbbb1cfadbd4c305727bb29f3dd3568d32a2f4ae501083b2abdba",
+    "tasks": {
+      "intent": {
+        "temperature": 1.0997965340150373,
+        "n": 313,
+        "nll": 1.310793558393101,
+        "status": "fitted",
+        "at_search_boundary": false
+      }
+    }
+  },
+  "business": {
+    "source_sha256": "e5b7eeb7dcf96a1dcc9a7a6dbd961e2bd407ea1084c67936fa2ad1b790c9f0cc",
+    "tasks": {
+      "intent": {
+        "temperature": 1.2804965501292298,
+        "n": 56,
+        "nll": 1.0538210522388656,
+        "status": "fitted",
+        "at_search_boundary": false
+      },
+      "route": {
+        "temperature": 1.10742761686318,
+        "n": 56,
+        "nll": 0.6609471858500982,
+        "status": "fitted",
+        "at_search_boundary": false
+      },
+      "tool": {
+        "temperature": 0.05000000000000001,
+        "n": 15,
+        "nll": 0.0004479383536363281,
+        "status": "fitted",
+        "at_search_boundary": true
+      },
+      "needs_human": {
+        "temperature": 1.0,
+        "n": 0,
+        "status": "insufficient, unchanged"
+      }
+    }
+  }
+}

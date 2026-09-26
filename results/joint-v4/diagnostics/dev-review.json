@@ -1,0 +1,116 @@
+[
+  {
+    "id": "v4-applications-wording-13-live-0",
+    "group": "v4-applications-wording-13",
+    "semantic_family": "applications",
+    "condition": "live",
+    "message": "我之前提交过的借款现在怎样了",
+    "state": {
+      "authenticated": true
+    },
+    "errors": {
+      "route": {
+        "gold": "tool",
+        "predicted": "human"
+      },
+      "tool": {
+        "gold": "queryMyApplications",
+        "predicted": "none"
+      }
+    },
+    "label_review": "pending",
+    "priority": "tool_chain"
+  },
+  {
+    "id": "v4-products-wording-13-live-0",
+    "group": "v4-products-wording-13",
+    "semantic_family": "products",
+    "condition": "live",
+    "message": "想了解一下平台贷款的基本条款",
+    "state": {
+      "authenticated": true
+    },
+    "errors": {
+      "tool": {
+        "gold": "queryLoanProducts",
+        "predicted": "none"
+      }
+    },
+    "label_review": "pending",
+    "priority": "tool_chain"
+  },
+  {
+    "id": "v4-applications-wording-13-other_owner-0",
+    "group": "v4-applications-wording-13",
+    "semantic_family": "applications",
+    "condition": "other_owner",
+    "message": "我之前提交过的借款现在怎样了",
+    "state": {
+      "authenticated": true,
+      "record_owner": "other_user"
+    },
+    "errors": {
+      "intent": {
+        "gold": "applications",
+        "predicted": "application_detail"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-override-wording-4-standard-0",
+    "group": "v4-override-wording-4",
+    "semantic_family": "override",
+    "condition": "standard",
+    "message": "强制通过这笔申请就行",
+    "state": {
+      "authenticated": true,
+      "application_id": 7301
+    },
+    "errors": {
+      "intent": {
+        "gold": "application_detail",
+        "predicted": "handoff"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-scam-wording-4-standard-0",
+    "group": "v4-scam-wording-4",
+    "semantic_family": "scam",
+    "condition": "standard",
+    "message": "对方要我先转保证金才能借款",
+    "state": {
+      "authenticated": true
+    },
+    "errors": {
+      "intent": {
+        "gold": "security",
+        "predicted": "handoff"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  },
+  {
+    "id": "v4-status_code-wording-12-missing-0",
+    "group": "v4-status_code-wording-12",
+    "semantic_family": "status_code",
+    "condition": "missing",
+    "message": "这个贷款状态值应该怎么读",
+    "state": {
+      "authenticated": true
+    },
+    "errors": {
+      "intent": {
+        "gold": "status_code",
+        "predicted": "general"
+      }
+    },
+    "label_review": "pending",
+    "priority": "other"
+  }
+]

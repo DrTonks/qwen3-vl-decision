@@ -1,0 +1,12 @@
+{
+  "rows": 192,
+  "groups": 48,
+  "splits": {
+    "dev": 64,
+    "test": 72,
+    "calibration": 56
+  },
+  "sha256": "565280522960a6b707d1d5f993c136597f9f9846fc3be63addfb60b1f5b0b418",
+  "human_reviewed": false,
+  "seed": 20260926
+}

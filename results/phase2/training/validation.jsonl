@@ -1,0 +1,4 @@
+{"step": 0, "validation": {"massive": {"n": 273, "nll": 4.246464372031074, "accuracy": 0.5860805860805861}, "business": {"n": 48, "nll": 2.2946092980077233, "accuracy": 0.4583333333333333}}, "objective": 3.2705368350193984}
+{"step": 40, "validation": {"massive": {"n": 273, "nll": 1.572926700861456, "accuracy": 0.6007326007326007}, "business": {"n": 48, "nll": 1.1418062730614718, "accuracy": 0.625}}, "objective": 1.357366486961464}
+{"step": 80, "validation": {"massive": {"n": 273, "nll": 1.307904731017459, "accuracy": 0.6996336996336996}, "business": {"n": 48, "nll": 1.0238065053708851, "accuracy": 0.6458333333333334}}, "objective": 1.165855618194172}
+{"step": 120, "validation": {"massive": {"n": 273, "nll": 1.253305376403293, "accuracy": 0.717948717948718}, "business": {"n": 48, "nll": 1.0588433719434154, "accuracy": 0.6666666666666666}}, "objective": 1.1560743741733543}

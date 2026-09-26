@@ -1,0 +1,135 @@
+{
+  "order_sensitivity": {
+    "intent": {
+      "n": 72,
+      "changed": 10,
+      "mean_total_variation": 0.14242102936468184,
+      "changed_ids": [
+        "biz-product_login-0",
+        "biz-product_login-2",
+        "biz-product_login-3",
+        "biz-application_missing-1",
+        "biz-application_missing-2",
+        "biz-ui_unlisted-0",
+        "biz-ui_disagree-3",
+        "biz-general_unclear-0",
+        "biz-general_unclear-3",
+        "biz-ui_amount-2"
+      ]
+    },
+    "route": {
+      "n": 72,
+      "changed": 6,
+      "mean_total_variation": 0.08099795371696333,
+      "changed_ids": [
+        "biz-product_login-1",
+        "biz-application_missing-1",
+        "biz-repay_early-2",
+        "biz-ui_empty-0",
+        "biz-ui_empty-2",
+        "biz-application_other-3"
+      ]
+    },
+    "tool": {
+      "n": 72,
+      "changed": 20,
+      "mean_total_variation": 0.278063402511307,
+      "changed_ids": [
+        "biz-product_login-2",
+        "biz-application_missing-0",
+        "biz-status_reject-0",
+        "biz-status_approved-1",
+        "biz-status_approved-3",
+        "biz-ui_pending-1",
+        "biz-ui_disagree-3",
+        "biz-repay_early-1",
+        "biz-security_identity-1",
+        "biz-product_typo-0",
+        "biz-ui_amount-0",
+        "biz-ui_amount-1",
+        "biz-ui_amount-2",
+        "biz-ui_empty-3",
+        "biz-repay_change-0",
+        "biz-repay_change-1",
+        "biz-repay_change-2",
+        "biz-repay_change-3",
+        "biz-application_other-1",
+        "biz-application_other-2"
+      ]
+    },
+    "needs_human": {
+      "n": 72,
+      "changed": 0,
+      "mean_total_variation": 0.0,
+      "changed_ids": []
+    }
+  },
+  "generation_agreement": {
+    "business": {
+      "intent": {
+        "n": 72,
+        "same": 72
+      },
+      "route": {
+        "n": 72,
+        "same": 72
+      },
+      "tool": {
+        "n": 72,
+        "same": 72
+      },
+      "needs_human": {
+        "n": 72,
+        "same": 43
+      }
+    },
+    "massive": {
+      "intent": {
+        "n": 117,
+        "same": 115
+      }
+    }
+  },
+  "tool_required": {
+    "jev": {
+      "n": 20,
+      "correct_tool": 20,
+      "correct_route_and_tool": 20
+    },
+    "qwen-first": {
+      "n": 20,
+      "correct_tool": 18,
+      "correct_route_and_tool": 17
+    }
+  },
+  "human_errors": {
+    "jev": [
+      {
+        "id": "biz-ui_disagree-1",
+        "message": "反复重登更新都没用，还是无法申请",
+        "route": "tool",
+        "flag": "no"
+      }
+    ],
+    "qwen-first": [
+      {
+        "id": "biz-application_other-3",
+        "message": "我不是借款人，查询1003的个人详情",
+        "route": "tool",
+        "flag": "yes"
+      }
+    ]
+  },
+  "cost": {
+    "successful_calls": 257,
+    "usage": {
+      "input_tokens": 400858,
+      "output_tokens": 102418
+    },
+    "actual_response_models": {
+      "jev-1.13.0": 257
+    },
+    "estimate_usd_at_0_042_per_million_input": 0.016836036,
+    "note": "Estimate using published list price; actual charge subject to provider console, not balance confirmation."
+  }
+}

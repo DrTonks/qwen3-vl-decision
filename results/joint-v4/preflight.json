@@ -1,0 +1,11 @@
+{
+  "batch_single_max_logit_delta": 1.0,
+  "candidate_choice_agreement": 16,
+  "n": 16,
+  "backward_micro_batch": 4,
+  "evaluation_batch_size": 1,
+  "elapsed_s": 8.069835500005865,
+  "probability_max_delta": 0.10894283652305603,
+  "peak_allocated_gib": 4.645510196685791,
+  "status": "passed"
+}

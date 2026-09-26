@@ -1,0 +1,27 @@
+{
+  "temperatures": {
+    "intent": {
+      "temperature": 5.119209333113239,
+      "calibration_nll_before": 3.8478350952559643,
+      "calibration_nll_after": 1.2148679923385999
+    },
+    "route": {
+      "temperature": 2.6885445830457217,
+      "calibration_nll_before": 0.9562120911012032,
+      "calibration_nll_after": 0.6527674478528016
+    },
+    "tool": {
+      "temperature": 5.119209333113239,
+      "calibration_nll_before": 3.2012195786094857,
+      "calibration_nll_after": 1.4473169335927096
+    },
+    "needs_human": {
+      "temperature": 2.2887366863649046,
+      "calibration_nll_before": 0.46735896105274916,
+      "calibration_nll_after": 0.3554281673572205
+    }
+  },
+  "calibration_sha256": "6406b58067e27525df5da93229b43c67a857c91fe8df204546c2c581dc38af40",
+  "test_sha256": "405cf690e15779a95ccf5905c66fb1875e30cb068a2ac0b1c9736bf6585ecb8d",
+  "fit": "grid minimum NLL, calibration only; no model weight changes"
+}

@@ -1,0 +1,33 @@
+{
+  "n_task_predictions": 543,
+  "choice_mismatches": 0,
+  "max_probability_delta": 0.0,
+  "max_logit_delta": 0.0,
+  "latency": {
+    "full": {
+      "p50_s": 0.37997419998282567,
+      "p95_s": 0.39415362499130424
+    },
+    "candidate": {
+      "p50_s": 0.37504435000300873,
+      "p95_s": 0.38519664999330416
+    }
+  },
+  "relative_latency_reduction": {
+    "p50_s": 0.01297417029903547,
+    "p95_s": 0.022724578514780047
+  },
+  "agreement_gate_pass": true,
+  "speed_gate_pass": false,
+  "peak_allocated_gib": 2.1490068435668945,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch": "2.8.0+cu128",
+  "default_implementation_changed": false,
+  "limits": [
+    "one device session, text dev data only",
+    "timing samples correlated; exploratory",
+    "original full lm_head retained in memory; no deployment memory saving measured",
+    "finite-precision kernels may differ despite algebraic equivalence",
+    "not a Mugi benchmark, no backbone compute removed"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "discarded_61_candidate_run": {
+    "requests_recorded": 3246,
+    "successful": 3246,
+    "failed": 0,
+    "failures": {},
+    "input_tokens_reported": 4581333,
+    "output_tokens_reported": 1770104
+  },
+  "corrected_massive": {
+    "requests_recorded": 2974,
+    "successful": 2972,
+    "failed": 2,
+    "failures": {
+      "520:HTTPError": 2
+    },
+    "input_tokens_reported": 4263265,
+    "output_tokens_reported": 1705562
+  },
+  "note": "This phase only. Available invalid-vocabulary archives are included; reused files are not counted twice when those archives are available. Failed-call billing is unknown; token totals are not a bill."
+}

@@ -1,0 +1,235 @@
+{
+  "selected": "step-40",
+  "development": {
+    "base": {
+      "n": 16,
+      "correct": 7,
+      "accuracy": 0.4375,
+      "accuracy_wilson_95_descriptive": [
+        0.2309836333518552,
+        0.6682180439322347
+      ],
+      "macro_f1_gold_supported_classes": 0.33760683760683763,
+      "supported_classes": [
+        "clarify",
+        "human",
+        "llm",
+        "tool"
+      ],
+      "invalid": 0,
+      "confusion": {
+        "clarify -> tool": 3,
+        "clarify -> llm": 1,
+        "llm -> tool": 3,
+        "llm -> human": 1,
+        "human -> human": 4,
+        "tool -> tool": 3,
+        "tool -> llm": 1
+      },
+      "brier_multiclass_sum": 0.9162809615018292,
+      "nll": 2.8152285987541563,
+      "ece_10_equal_width": 0.41569010283253494,
+      "selective": {
+        "0.5": {
+          "coverage": 0.9375,
+          "accepted": 15,
+          "errors": 8
+        },
+        "0.7": {
+          "coverage": 0.75,
+          "accepted": 12,
+          "errors": 5
+        },
+        "0.9": {
+          "coverage": 0.5625,
+          "accepted": 9,
+          "errors": 2
+        },
+        "0.95": {
+          "coverage": 0.5,
+          "accepted": 8,
+          "errors": 1
+        }
+      },
+      "human_required": 4,
+      "human_missed": 0,
+      "human_false_positive": 1,
+      "tool_required": 4,
+      "tool_route_correct": 3,
+      "latency_p50_s": 0.10693360000732355,
+      "latency_p95_s": 0.10980672500591027
+    },
+    "step-40": {
+      "n": 16,
+      "correct": 7,
+      "accuracy": 0.4375,
+      "accuracy_wilson_95_descriptive": [
+        0.2309836333518552,
+        0.6682180439322347
+      ],
+      "macro_f1_gold_supported_classes": 0.4375,
+      "supported_classes": [
+        "clarify",
+        "human",
+        "llm",
+        "tool"
+      ],
+      "invalid": 0,
+      "confusion": {
+        "clarify -> llm": 3,
+        "clarify -> tool": 1,
+        "llm -> clarify": 4,
+        "human -> human": 4,
+        "tool -> tool": 3,
+        "tool -> llm": 1
+      },
+      "brier_multiclass_sum": 0.9568623368183767,
+      "nll": 2.460439929020157,
+      "ece_10_equal_width": 0.4208651253731312,
+      "selective": {
+        "0.5": {
+          "coverage": 0.9375,
+          "accepted": 15,
+          "errors": 8
+        },
+        "0.7": {
+          "coverage": 0.75,
+          "accepted": 12,
+          "errors": 6
+        },
+        "0.9": {
+          "coverage": 0.625,
+          "accepted": 10,
+          "errors": 4
+        },
+        "0.95": {
+          "coverage": 0.5625,
+          "accepted": 9,
+          "errors": 3
+        }
+      },
+      "human_required": 4,
+      "human_missed": 0,
+      "human_false_positive": 0,
+      "tool_required": 4,
+      "tool_route_correct": 3,
+      "latency_p50_s": 0.1129979500110494,
+      "latency_p95_s": 0.1160450749885058
+    },
+    "step-80": {
+      "n": 16,
+      "correct": 7,
+      "accuracy": 0.4375,
+      "accuracy_wilson_95_descriptive": [
+        0.2309836333518552,
+        0.6682180439322347
+      ],
+      "macro_f1_gold_supported_classes": 0.38636363636363635,
+      "supported_classes": [
+        "clarify",
+        "human",
+        "llm",
+        "tool"
+      ],
+      "invalid": 0,
+      "confusion": {
+        "clarify -> tool": 4,
+        "llm -> clarify": 4,
+        "human -> human": 4,
+        "tool -> tool": 3,
+        "tool -> llm": 1
+      },
+      "brier_multiclass_sum": 1.0224883363682926,
+      "nll": 5.806376110508865,
+      "ece_10_equal_width": 0.4458157694475973,
+      "selective": {
+        "0.5": {
+          "coverage": 1.0,
+          "accepted": 16,
+          "errors": 9
+        },
+        "0.7": {
+          "coverage": 0.8125,
+          "accepted": 13,
+          "errors": 7
+        },
+        "0.9": {
+          "coverage": 0.6875,
+          "accepted": 11,
+          "errors": 5
+        },
+        "0.95": {
+          "coverage": 0.625,
+          "accepted": 10,
+          "errors": 4
+        }
+      },
+      "human_required": 4,
+      "human_missed": 0,
+      "human_false_positive": 0,
+      "tool_required": 4,
+      "tool_route_correct": 3,
+      "latency_p50_s": 0.11276935000205413,
+      "latency_p95_s": 0.11627202500676503
+    },
+    "step-120": {
+      "n": 16,
+      "correct": 7,
+      "accuracy": 0.4375,
+      "accuracy_wilson_95_descriptive": [
+        0.2309836333518552,
+        0.6682180439322347
+      ],
+      "macro_f1_gold_supported_classes": 0.4027777777777778,
+      "supported_classes": [
+        "clarify",
+        "human",
+        "llm",
+        "tool"
+      ],
+      "invalid": 0,
+      "confusion": {
+        "clarify -> llm": 1,
+        "clarify -> clarify": 1,
+        "clarify -> tool": 2,
+        "llm -> clarify": 4,
+        "human -> human": 4,
+        "tool -> tool": 2,
+        "tool -> human": 1,
+        "tool -> llm": 1
+      },
+      "brier_multiclass_sum": 1.0680749244133105,
+      "nll": 6.629076624614053,
+      "ece_10_equal_width": 0.5316800558327003,
+      "selective": {
+        "0.5": {
+          "coverage": 1.0,
+          "accepted": 16,
+          "errors": 9
+        },
+        "0.7": {
+          "coverage": 0.9375,
+          "accepted": 15,
+          "errors": 8
+        },
+        "0.9": {
+          "coverage": 0.9375,
+          "accepted": 15,
+          "errors": 8
+        },
+        "0.95": {
+          "coverage": 0.875,
+          "accepted": 14,
+          "errors": 7
+        }
+      },
+      "human_required": 4,
+      "human_missed": 0,
+      "human_false_positive": 1,
+      "tool_required": 4,
+      "tool_route_correct": 2,
+      "latency_p50_s": 0.11104634999355767,
+      "latency_p95_s": 0.11381330001313472
+    }
+  }
+}

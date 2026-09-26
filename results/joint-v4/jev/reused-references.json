@@ -1,0 +1,23 @@
+{
+  "massive": {
+    "source": "results/runs/jev-v2/massive-test.jsonl",
+    "sha256": "86efc1607d7d27203e047b50fa3b68ee1dfa258d4a7d2728c1947dc721b09ddd",
+    "model": "jev-1.13.0",
+    "reused": true,
+    "note": "same original input, policy, questions, candidates; no extra API call"
+  },
+  "legacy-business": {
+    "source": "results/runs/jev-v2/business-test.jsonl",
+    "sha256": "60cf2d6dec2eed1ab7eed1f60f8c6ef6f826e322b92924b3485bfacbc8e1c951",
+    "model": "jev-1.13.0",
+    "reused": true,
+    "note": "same original input, policy, questions, candidates; no extra API call"
+  },
+  "crosswoz": {
+    "source": "results/runs/jev-v2/crosswoz-test.jsonl",
+    "sha256": "15718173ad78aaa25d0a298336bbad0ac40e91dd58f9ec07270e97e101b1a3ef",
+    "model": "jev-1.13.0",
+    "reused": true,
+    "note": "same original input, policy, questions, candidates; no extra API call"
+  }
+}
