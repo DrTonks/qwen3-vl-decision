@@ -8,6 +8,7 @@ version = "0.2.0"
 description = "Reproducible Chinese customer-support decision experiments"
 requires-python = ">=3.12,<3.13"
 readme = "README.md"
+license = {file = "LICENSE"}
 dependencies = []
 
 [project.scripts]

@@ -7,7 +7,7 @@ import zipfile
 from qwenlab.common import ROOT
 
 def publication_files(root=ROOT):
-    names=['README.md','pyproject.toml','.gitignore','requirements.txt','requirements-lock.txt','requirements-train.txt','NOTICE.md']
+    names=['README.md','pyproject.toml','.gitignore','requirements.txt','requirements-lock.txt','requirements-train.txt','LICENSE','NOTICE.md']
     files=[root/name for name in names if (root/name).is_file()]
     for directory in ('src','tests','scripts','configs','docs','results/baseline-v1','results/phase2','results/route-v3','results/joint-v4'):
         for path in (root/directory).rglob('*'):

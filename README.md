@@ -119,3 +119,9 @@ python -m qwenlab report --runs jev-v2 qwen-bf16-v2 qwen-nf4-v2 qwen-qlora-v2 qw
 python -m qwenlab.record_provenance
 python -m qwenlab audit --export
 ```
+
+## 许可证
+
+本项目原创代码和文档采用 [Apache License 2.0](LICENSE)。另行发布的 LoRA 适配器以其发布包或模型卡中的许可声明为准；标注为 Apache-2.0 的适配器使用同一许可证。
+
+基础模型、第三方数据、API 输出和依赖仍遵循各自许可证或服务条款，详见 [许可与第三方来源](NOTICE.md)。本仓库的许可证不替代这些第三方条款，也不表示对第三方材料拥有重新授权的权利。
