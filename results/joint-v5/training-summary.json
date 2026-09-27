@@ -35,7 +35,7 @@
     "stage": "exploratory expanded curriculum, 2-epoch maximum; independent human acceptance pending",
     "jev_calls": 0
   },
-  "optimizer_steps": 2550,
+  "optimizer_steps": 2590,
   "total_steps": 7110,
   "steps_per_epoch": 3555,
   "examples_per_epoch": {
@@ -47,13 +47,13 @@
   },
   "trainable_parameters": 1605632,
   "sampled": {
-    "massive.intent": 7659,
-    "business.route": 3540,
-    "business.intent": 3494,
-    "business.tool": 3542,
-    "crosswoz.intent": 2164
+    "massive.intent": 7753,
+    "business.route": 3600,
+    "business.intent": 3564,
+    "business.tool": 3598,
+    "crosswoz.intent": 2204
   },
-  "elapsed_s": 12628.324385,
+  "elapsed_s": 12833.770300600001,
   "max_input_tokens": 898,
   "independent_human_acceptance": "pending",
   "uses_jev_outputs": false,
