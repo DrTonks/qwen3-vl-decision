@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "n": 1629,
+  "fallback_reason": null,
+  "choice_mismatches": 0,
+  "max_probability_delta": 0.0,
+  "latency": {
+    "full": {
+      "p50_s": 0.6004326500005845,
+      "p95_s": 0.6575928000002023
+    },
+    "candidate": {
+      "p50_s": 0.5936397500008752,
+      "p95_s": 0.6514570999988791
+    }
+  },
+  "scope": "One loaded selected model; text only; warmup/load excluded; tokenizer and result CPU transfer included"
+}

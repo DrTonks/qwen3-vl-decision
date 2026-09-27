@@ -1,0 +1,67 @@
+{
+  "n": 200,
+  "tasks": {
+    "intent": {
+      "n": 200,
+      "correct": 128,
+      "accuracy": 0.64,
+      "accuracy_wilson_95_descriptive": [
+        0.5714139956562682,
+        0.7033091226866021
+      ],
+      "macro_f1_gold_supported_classes": 0.5891874877041118,
+      "supported_classes": [
+        "attraction",
+        "hotel",
+        "metro",
+        "restaurant",
+        "taxi"
+      ],
+      "invalid": 0,
+      "confusion": {
+        "taxi -> taxi": 28,
+        "taxi -> restaurant": 9,
+        "taxi -> hotel": 2,
+        "taxi -> attraction": 1,
+        "metro -> attraction": 13,
+        "metro -> restaurant": 16,
+        "metro -> hotel": 9,
+        "metro -> metro": 2,
+        "attraction -> attraction": 26,
+        "attraction -> hotel": 5,
+        "attraction -> restaurant": 9,
+        "hotel -> restaurant": 3,
+        "hotel -> hotel": 34,
+        "hotel -> attraction": 3,
+        "restaurant -> restaurant": 38,
+        "restaurant -> attraction": 1,
+        "restaurant -> hotel": 1
+      },
+      "brier_multiclass_sum": 0.6652456999460732,
+      "nll": 4.530092166136723,
+      "ece_10_equal_width": 0.3311135801266916,
+      "selective": {
+        "0.5": {
+          "coverage": 1.0,
+          "accepted": 200,
+          "errors": 72
+        },
+        "0.7": {
+          "coverage": 0.96,
+          "accepted": 192,
+          "errors": 66
+        },
+        "0.9": {
+          "coverage": 0.895,
+          "accepted": 179,
+          "errors": 58
+        },
+        "0.95": {
+          "coverage": 0.885,
+          "accepted": 177,
+          "errors": 57
+        }
+      }
+    }
+  }
+}

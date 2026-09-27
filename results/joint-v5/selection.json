@@ -1,0 +1,2660 @@
+{
+  "selected": "step-7110",
+  "reference": "v4-reference",
+  "selection": {
+    "base": {
+      "components": [
+        0.5970695970695971,
+        0.7661691542288557,
+        0.3012293262293262,
+        0.7672413793103449
+      ],
+      "guardrails_pass": false,
+      "objective": 0.570222988854671
+    },
+    "v4-reference": {
+      "components": [
+        0.8388278388278388,
+        0.7388059701492538,
+        0.6653908373771142,
+        0.27586206896551724
+      ],
+      "guardrails_pass": true,
+      "objective": 0.5807550690959876
+    },
+    "step-1778": {
+      "components": [
+        0.8205128205128205,
+        0.9477611940298507,
+        0.9245784450758945,
+        0.8448275862068966
+      ],
+      "guardrails_pass": true,
+      "objective": 0.882823806951613
+    },
+    "step-3555": {
+      "components": [
+        0.8388278388278388,
+        0.9527363184079602,
+        0.9742317709215227,
+        0.9224137931034483
+      ],
+      "guardrails_pass": true,
+      "objective": 0.9205733713075342
+    },
+    "step-5333": {
+      "components": [
+        0.8534798534798534,
+        0.9502487562189055,
+        0.9709494204746454,
+        0.8793103448275862
+      ],
+      "guardrails_pass": true,
+      "objective": 0.9122047792968265
+    },
+    "step-7110": {
+      "components": [
+        0.8534798534798534,
+        0.9552238805970149,
+        0.9689429855509151,
+        0.9137931034482759
+      ],
+      "guardrails_pass": true,
+      "objective": 0.921745733589416
+    }
+  },
+  "development": {
+    "base": {
+      "business": {
+        "n": 402,
+        "tasks": {
+          "intent": {
+            "n": 402,
+            "correct": 308,
+            "accuracy": 0.7661691542288557,
+            "accuracy_wilson_95_descriptive": [
+              0.7223922149699755,
+              0.8049071057502266
+            ],
+            "macro_f1_gold_supported_classes": 0.5139562071730609,
+            "supported_classes": [
+              "application_detail",
+              "applications",
+              "credit",
+              "general",
+              "handoff",
+              "payment_dispute",
+              "products",
+              "repayment",
+              "security",
+              "status_code",
+              "ui_issue"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "products -> products": 65,
+              "products -> applications": 1,
+              "credit -> credit": 62,
+              "credit -> application_detail": 10,
+              "applications -> applications": 72,
+              "application_detail -> application_detail": 80,
+              "status_code -> application_detail": 34,
+              "status_code -> status_code": 2,
+              "ui_issue -> ui_issue": 24,
+              "ui_issue -> application_detail": 22,
+              "ui_issue -> applications": 16,
+              "payment_dispute -> application_detail": 2,
+              "security -> security": 2,
+              "handoff -> handoff": 1,
+              "handoff -> application_detail": 1,
+              "repayment -> application_detail": 3,
+              "repayment -> handoff": 1,
+              "general -> application_detail": 4
+            },
+            "brier_multiclass_sum": 0.38895648265280924,
+            "nll": 1.8299142725746687,
+            "ece_10_equal_width": 0.16206230037014097,
+            "selective": {
+              "0.5": {
+                "coverage": 0.9800995024875622,
+                "accepted": 394,
+                "errors": 89
+              },
+              "0.7": {
+                "coverage": 0.9129353233830846,
+                "accepted": 367,
+                "errors": 69
+              },
+              "0.9": {
+                "coverage": 0.7711442786069652,
+                "accepted": 310,
+                "errors": 31
+              },
+              "0.95": {
+                "coverage": 0.7139303482587065,
+                "accepted": 287,
+                "errors": 15
+              }
+            }
+          },
+          "route": {
+            "n": 402,
+            "correct": 157,
+            "accuracy": 0.39054726368159204,
+            "accuracy_wilson_95_descriptive": [
+              0.34410579609658787,
+              0.43906083837360943
+            ],
+            "macro_f1_gold_supported_classes": 0.3012293262293262,
+            "supported_classes": [
+              "clarify",
+              "human",
+              "llm",
+              "tool"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "tool -> tool": 114,
+              "clarify -> tool": 67,
+              "clarify -> clarify": 25,
+              "llm -> tool": 38,
+              "human -> tool": 94,
+              "human -> clarify": 1,
+              "tool -> llm": 1,
+              "llm -> llm": 5,
+              "human -> llm": 2,
+              "clarify -> human": 8,
+              "human -> human": 13,
+              "llm -> human": 33,
+              "tool -> human": 1
+            },
+            "brier_multiclass_sum": 0.9654118633486696,
+            "nll": 2.2251309413243945,
+            "ece_10_equal_width": 0.3985607890659744,
+            "selective": {
+              "0.5": {
+                "coverage": 0.9253731343283582,
+                "accepted": 372,
+                "errors": 225
+              },
+              "0.7": {
+                "coverage": 0.6965174129353234,
+                "accepted": 280,
+                "errors": 166
+              },
+              "0.9": {
+                "coverage": 0.3407960199004975,
+                "accepted": 137,
+                "errors": 77
+              },
+              "0.95": {
+                "coverage": 0.18407960199004975,
+                "accepted": 74,
+                "errors": 35
+              }
+            }
+          },
+          "tool": {
+            "n": 402,
+            "correct": 176,
+            "accuracy": 0.43781094527363185,
+            "accuracy_wilson_95_descriptive": [
+              0.3901276906186723,
+              0.4866715335121217
+            ],
+            "macro_f1_gold_supported_classes": 0.4191659179566156,
+            "supported_classes": [
+              "explainApplicationStatus",
+              "none",
+              "queryApplicationDetail",
+              "queryLoanProducts",
+              "queryMyApplications",
+              "queryMyCreditScore"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "queryLoanProducts -> queryLoanProducts": 24,
+              "none -> queryLoanProducts": 38,
+              "none -> none": 87,
+              "queryMyCreditScore -> queryMyCreditScore": 18,
+              "queryMyCreditScore -> queryMyApplications": 4,
+              "none -> queryMyCreditScore": 35,
+              "none -> queryMyApplications": 58,
+              "queryMyCreditScore -> explainApplicationStatus": 2,
+              "none -> explainApplicationStatus": 47,
+              "queryMyApplications -> queryMyApplications": 23,
+              "queryMyApplications -> none": 1,
+              "queryApplicationDetail -> explainApplicationStatus": 17,
+              "none -> queryApplicationDetail": 21,
+              "queryApplicationDetail -> queryApplicationDetail": 8,
+              "explainApplicationStatus -> explainApplicationStatus": 16,
+              "explainApplicationStatus -> queryMyApplications": 2,
+              "queryApplicationDetail -> none": 1
+            }
+          }
+        },
+        "human_required": 110,
+        "human_missed": 97,
+        "human_false_positive": 42,
+        "tool_required": 116,
+        "joint_tool_correct": 89,
+        "all_fields_correct": 101
+      },
+      "massive": {
+        "n": 273,
+        "tasks": {
+          "intent": {
+            "n": 273,
+            "correct": 163,
+            "accuracy": 0.5970695970695971,
+            "accuracy_wilson_95_descriptive": [
+              0.537928192208898,
+              0.6535170241169722
+            ],
+            "macro_f1_gold_supported_classes": 0.5691209200680786,
+            "supported_classes": [
+              "alarm_query",
+              "alarm_remove",
+              "alarm_set",
+              "audio_volume_down",
+              "audio_volume_mute",
+              "audio_volume_up",
+              "calendar_query",
+              "calendar_remove",
+              "calendar_set",
+              "cooking_query",
+              "cooking_recipe",
+              "datetime_convert",
+              "datetime_query",
+              "email_addcontact",
+              "email_query",
+              "email_querycontact",
+              "email_sendemail",
+              "general_greet",
+              "general_joke",
+              "general_quirky",
+              "iot_cleaning",
+              "iot_coffee",
+              "iot_hue_lightchange",
+              "iot_hue_lightdim",
+              "iot_hue_lightoff",
+              "iot_hue_lighton",
+              "iot_hue_lightup",
+              "iot_wemo_off",
+              "iot_wemo_on",
+              "lists_createoradd",
+              "lists_query",
+              "lists_remove",
+              "music_dislikeness",
+              "music_likeness",
+              "music_query",
+              "music_settings",
+              "news_query",
+              "play_audiobook",
+              "play_game",
+              "play_music",
+              "play_podcasts",
+              "play_radio",
+              "qa_currency",
+              "qa_definition",
+              "qa_factoid",
+              "qa_maths",
+              "qa_stock",
+              "recommendation_events",
+              "recommendation_locations",
+              "recommendation_movies",
+              "social_post",
+              "social_query",
+              "takeaway_order",
+              "takeaway_query",
+              "transport_query",
+              "transport_taxi",
+              "transport_ticket",
+              "transport_traffic",
+              "weather_query"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "alarm_query -> alarm_query": 5,
+              "alarm_remove -> alarm_remove": 4,
+              "alarm_remove -> iot_hue_lighton": 1,
+              "alarm_set -> alarm_set": 3,
+              "alarm_set -> alarm_query": 1,
+              "alarm_set -> transport_taxi": 1,
+              "audio_volume_down -> audio_volume_down": 3,
+              "audio_volume_down -> iot_hue_lighton": 1,
+              "audio_volume_mute -> audio_volume_mute": 4,
+              "audio_volume_mute -> iot_hue_lighton": 1,
+              "audio_volume_up -> audio_volume_up": 4,
+              "audio_volume_up -> iot_wemo_on": 1,
+              "calendar_query -> calendar_query": 3,
+              "calendar_query -> datetime_query": 1,
+              "calendar_query -> alarm_query": 1,
+              "calendar_remove -> calendar_remove": 5,
+              "calendar_set -> calendar_query": 1,
+              "calendar_set -> music_dislikeness": 1,
+              "calendar_set -> alarm_query": 1,
+              "calendar_set -> social_post": 1,
+              "calendar_set -> iot_hue_lighton": 1,
+              "cooking_query -> cooking_query": 1,
+              "cooking_recipe -> cooking_query": 4,
+              "cooking_recipe -> cooking_recipe": 1,
+              "datetime_convert -> datetime_convert": 5,
+              "datetime_query -> datetime_query": 5,
+              "email_addcontact -> email_addcontact": 3,
+              "email_query -> email_query": 5,
+              "email_querycontact -> calendar_query": 3,
+              "email_querycontact -> email_addcontact": 1,
+              "email_querycontact -> email_query": 1,
+              "email_sendemail -> email_addcontact": 1,
+              "email_sendemail -> email_sendemail": 3,
+              "email_sendemail -> email_query": 1,
+              "general_greet -> general_greet": 1,
+              "general_joke -> general_joke": 4,
+              "general_joke -> general_quirky": 1,
+              "general_quirky -> calendar_query": 2,
+              "general_quirky -> qa_factoid": 1,
+              "general_quirky -> iot_hue_lighton": 1,
+              "general_quirky -> music_likeness": 1,
+              "iot_cleaning -> iot_cleaning": 5,
+              "iot_coffee -> iot_coffee": 5,
+              "iot_hue_lightchange -> calendar_query": 1,
+              "iot_hue_lightchange -> iot_hue_lightchange": 3,
+              "iot_hue_lightchange -> iot_hue_lightoff": 1,
+              "iot_hue_lightdim -> iot_hue_lightdim": 2,
+              "iot_hue_lightdim -> iot_hue_lightchange": 1,
+              "iot_hue_lightdim -> calendar_query": 1,
+              "iot_hue_lightdim -> iot_hue_lighton": 1,
+              "iot_hue_lightoff -> iot_hue_lightoff": 5,
+              "iot_hue_lighton -> music_dislikeness": 1,
+              "iot_hue_lighton -> iot_hue_lighton": 2,
+              "iot_hue_lightup -> iot_hue_lighton": 3,
+              "iot_hue_lightup -> iot_hue_lightchange": 2,
+              "iot_wemo_off -> alarm_query": 1,
+              "iot_wemo_off -> iot_wemo_off": 2,
+              "iot_wemo_on -> iot_wemo_on": 1,
+              "iot_wemo_on -> iot_wemo_off": 2,
+              "lists_createoradd -> lists_createoradd": 4,
+              "lists_createoradd -> takeaway_order": 1,
+              "lists_query -> lists_query": 1,
+              "lists_query -> calendar_query": 2,
+              "lists_query -> lists_createoradd": 2,
+              "lists_remove -> lists_remove": 3,
+              "lists_remove -> music_dislikeness": 1,
+              "lists_remove -> calendar_remove": 1,
+              "music_dislikeness -> music_dislikeness": 1,
+              "music_likeness -> music_likeness": 5,
+              "music_query -> music_query": 4,
+              "music_query -> music_likeness": 1,
+              "music_settings -> music_dislikeness": 1,
+              "music_settings -> play_music": 1,
+              "music_settings -> iot_hue_lightoff": 1,
+              "music_settings -> alarm_query": 1,
+              "news_query -> social_post": 1,
+              "news_query -> news_query": 3,
+              "news_query -> music_dislikeness": 1,
+              "play_audiobook -> play_audiobook": 3,
+              "play_audiobook -> iot_hue_lighton": 1,
+              "play_audiobook -> music_dislikeness": 1,
+              "play_game -> play_game": 2,
+              "play_game -> iot_hue_lighton": 2,
+              "play_game -> general_greet": 1,
+              "play_music -> music_likeness": 2,
+              "play_music -> play_music": 1,
+              "play_music -> music_dislikeness": 2,
+              "play_podcasts -> play_podcasts": 3,
+              "play_podcasts -> iot_hue_lighton": 2,
+              "play_radio -> play_radio": 4,
+              "play_radio -> music_likeness": 1,
+              "qa_currency -> qa_currency": 5,
+              "qa_definition -> music_dislikeness": 1,
+              "qa_definition -> qa_definition": 2,
+              "qa_definition -> iot_hue_lighton": 1,
+              "qa_definition -> calendar_query": 1,
+              "qa_factoid -> weather_query": 1,
+              "qa_factoid -> general_joke": 1,
+              "qa_factoid -> calendar_query": 2,
+              "qa_factoid -> news_query": 1,
+              "qa_maths -> qa_maths": 4,
+              "qa_maths -> alarm_query": 1,
+              "qa_stock -> qa_stock": 5,
+              "recommendation_events -> calendar_query": 1,
+              "recommendation_events -> weather_query": 1,
+              "recommendation_events -> recommendation_locations": 3,
+              "recommendation_locations -> iot_hue_lightchange": 1,
+              "recommendation_locations -> takeaway_query": 1,
+              "recommendation_locations -> recommendation_locations": 2,
+              "recommendation_locations -> calendar_query": 1,
+              "recommendation_movies -> calendar_query": 1,
+              "recommendation_movies -> recommendation_movies": 4,
+              "social_post -> social_post": 4,
+              "social_post -> music_dislikeness": 1,
+              "social_query -> social_post": 3,
+              "social_query -> calendar_query": 1,
+              "social_query -> recommendation_locations": 1,
+              "takeaway_order -> takeaway_order": 4,
+              "takeaway_order -> alarm_query": 1,
+              "takeaway_query -> takeaway_order": 5,
+              "transport_query -> calendar_query": 1,
+              "transport_query -> transport_query": 3,
+              "transport_query -> transport_ticket": 1,
+              "transport_taxi -> transport_taxi": 5,
+              "transport_ticket -> transport_query": 3,
+              "transport_ticket -> transport_ticket": 2,
+              "transport_traffic -> transport_query": 4,
+              "transport_traffic -> transport_traffic": 1,
+              "weather_query -> calendar_query": 1,
+              "weather_query -> weather_query": 4
+            },
+            "brier_multiclass_sum": 0.6916574696107817,
+            "nll": 4.643293591692506,
+            "ece_10_equal_width": 0.3275000119563351,
+            "selective": {
+              "0.5": {
+                "coverage": 0.9816849816849816,
+                "accepted": 268,
+                "errors": 105
+              },
+              "0.7": {
+                "coverage": 0.8827838827838828,
+                "accepted": 241,
+                "errors": 81
+              },
+              "0.9": {
+                "coverage": 0.7838827838827839,
+                "accepted": 214,
+                "errors": 58
+              },
+              "0.95": {
+                "coverage": 0.7435897435897436,
+                "accepted": 203,
+                "errors": 53
+              }
+            }
+          }
+        }
+      },
+      "crosswoz": {
+        "n": 150,
+        "tasks": {
+          "intent": {
+            "n": 150,
+            "correct": 103,
+            "accuracy": 0.6866666666666666,
+            "accuracy_wilson_95_descriptive": [
+              0.6085587615654109,
+              0.7554520131535207
+            ],
+            "macro_f1_gold_supported_classes": 0.6413586413586414,
+            "supported_classes": [
+              "attraction",
+              "hotel",
+              "metro",
+              "restaurant",
+              "taxi"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "restaurant -> restaurant": 29,
+              "attraction -> hotel": 2,
+              "hotel -> hotel": 25,
+              "attraction -> attraction": 25,
+              "attraction -> restaurant": 3,
+              "restaurant -> hotel": 1,
+              "metro -> attraction": 10,
+              "hotel -> restaurant": 4,
+              "taxi -> taxi": 21,
+              "taxi -> restaurant": 7,
+              "hotel -> attraction": 1,
+              "metro -> restaurant": 11,
+              "metro -> hotel": 5,
+              "taxi -> hotel": 2,
+              "metro -> metro": 3,
+              "metro -> taxi": 1
+            },
+            "brier_multiclass_sum": 0.5786657312469614,
+            "nll": 4.1563915849649025,
+            "ece_10_equal_width": 0.2977086408349457,
+            "selective": {
+              "0.5": {
+                "coverage": 0.9866666666666667,
+                "accepted": 148,
+                "errors": 45
+              },
+              "0.7": {
+                "coverage": 0.96,
+                "accepted": 144,
+                "errors": 41
+              },
+              "0.9": {
+                "coverage": 0.92,
+                "accepted": 138,
+                "errors": 41
+              },
+              "0.95": {
+                "coverage": 0.8933333333333333,
+                "accepted": 134,
+                "errors": 40
+              }
+            }
+          }
+        }
+      }
+    },
+    "v4-reference": {
+      "business": {
+        "n": 402,
+        "tasks": {
+          "intent": {
+            "n": 402,
+            "correct": 297,
+            "accuracy": 0.7388059701492538,
+            "accuracy_wilson_95_descriptive": [
+              0.6937467275281577,
+              0.7793442518095939
+            ],
+            "macro_f1_gold_supported_classes": 0.7650936955851187,
+            "supported_classes": [
+              "application_detail",
+              "applications",
+              "credit",
+              "general",
+              "handoff",
+              "payment_dispute",
+              "products",
+              "repayment",
+              "security",
+              "status_code",
+              "ui_issue"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "products -> products": 53,
+              "products -> repayment": 13,
+              "credit -> credit": 72,
+              "applications -> applications": 48,
+              "applications -> repayment": 24,
+              "application_detail -> application_detail": 54,
+              "application_detail -> repayment": 26,
+              "status_code -> status_code": 17,
+              "status_code -> repayment": 11,
+              "status_code -> application_detail": 8,
+              "ui_issue -> ui_issue": 42,
+              "ui_issue -> repayment": 20,
+              "payment_dispute -> payment_dispute": 2,
+              "security -> security": 2,
+              "handoff -> handoff": 2,
+              "repayment -> repayment": 3,
+              "repayment -> handoff": 1,
+              "general -> general": 2,
+              "general -> application_detail": 2
+            },
+            "brier_multiclass_sum": 0.5014796060014781,
+            "nll": 2.1750722844665105,
+            "ece_10_equal_width": 0.2511980780022308,
+            "selective": {
+              "0.5": {
+                "coverage": 0.9975124378109452,
+                "accepted": 401,
+                "errors": 105
+              },
+              "0.7": {
+                "coverage": 0.9850746268656716,
+                "accepted": 396,
+                "errors": 101
+              },
+              "0.9": {
+                "coverage": 0.9502487562189055,
+                "accepted": 382,
+                "errors": 96
+              },
+              "0.95": {
+                "coverage": 0.9328358208955224,
+                "accepted": 375,
+                "errors": 92
+              }
+            }
+          },
+          "route": {
+            "n": 402,
+            "correct": 271,
+            "accuracy": 0.6741293532338308,
+            "accuracy_wilson_95_descriptive": [
+              0.6268505523887813,
+              0.7181116200449957
+            ],
+            "macro_f1_gold_supported_classes": 0.6653908373771142,
+            "supported_classes": [
+              "clarify",
+              "human",
+              "llm",
+              "tool"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "tool -> tool": 47,
+              "clarify -> clarify": 58,
+              "llm -> llm": 75,
+              "tool -> llm": 33,
+              "human -> human": 91,
+              "human -> llm": 7,
+              "tool -> human": 27,
+              "tool -> clarify": 9,
+              "human -> clarify": 10,
+              "human -> tool": 2,
+              "clarify -> llm": 15,
+              "clarify -> human": 22,
+              "clarify -> tool": 5,
+              "llm -> human": 1
+            },
+            "brier_multiclass_sum": 0.5690160090200522,
+            "nll": 2.11776941609992,
+            "ece_10_equal_width": 0.2674664188696488,
+            "selective": {
+              "0.5": {
+                "coverage": 0.9850746268656716,
+                "accepted": 396,
+                "errors": 128
+              },
+              "0.7": {
+                "coverage": 0.9154228855721394,
+                "accepted": 368,
+                "errors": 110
+              },
+              "0.9": {
+                "coverage": 0.8233830845771144,
+                "accepted": 331,
+                "errors": 84
+              },
+              "0.95": {
+                "coverage": 0.7835820895522388,
+                "accepted": 315,
+                "errors": 73
+              }
+            }
+          },
+          "tool": {
+            "n": 402,
+            "correct": 313,
+            "accuracy": 0.7786069651741293,
+            "accuracy_wilson_95_descriptive": [
+              0.7354895502482961,
+              0.8164499256457474
+            ],
+            "macro_f1_gold_supported_classes": 0.4687135838762646,
+            "supported_classes": [
+              "explainApplicationStatus",
+              "none",
+              "queryApplicationDetail",
+              "queryLoanProducts",
+              "queryMyApplications",
+              "queryMyCreditScore"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "queryLoanProducts -> queryLoanProducts": 5,
+              "queryLoanProducts -> none": 19,
+              "none -> none": 281,
+              "queryMyCreditScore -> queryMyCreditScore": 12,
+              "queryMyCreditScore -> none": 12,
+              "queryMyApplications -> none": 24,
+              "queryApplicationDetail -> queryApplicationDetail": 5,
+              "queryApplicationDetail -> none": 21,
+              "explainApplicationStatus -> explainApplicationStatus": 10,
+              "explainApplicationStatus -> none": 8,
+              "none -> explainApplicationStatus": 4,
+              "none -> queryApplicationDetail": 1
+            }
+          }
+        },
+        "human_required": 110,
+        "human_missed": 19,
+        "human_false_positive": 50,
+        "tool_required": 116,
+        "joint_tool_correct": 32,
+        "all_fields_correct": 200
+      },
+      "massive": {
+        "n": 273,
+        "tasks": {
+          "intent": {
+            "n": 273,
+            "correct": 229,
+            "accuracy": 0.8388278388278388,
+            "accuracy_wilson_95_descriptive": [
+              0.7905582846061081,
+              0.8776938855879668
+            ],
+            "macro_f1_gold_supported_classes": 0.8037439020489868,
+            "supported_classes": [
+              "alarm_query",
+              "alarm_remove",
+              "alarm_set",
+              "audio_volume_down",
+              "audio_volume_mute",
+              "audio_volume_up",
+              "calendar_query",
+              "calendar_remove",
+              "calendar_set",
+              "cooking_query",
+              "cooking_recipe",
+              "datetime_convert",
+              "datetime_query",
+              "email_addcontact",
+              "email_query",
+              "email_querycontact",
+              "email_sendemail",
+              "general_greet",
+              "general_joke",
+              "general_quirky",
+              "iot_cleaning",
+              "iot_coffee",
+              "iot_hue_lightchange",
+              "iot_hue_lightdim",
+              "iot_hue_lightoff",
+              "iot_hue_lighton",
+              "iot_hue_lightup",
+              "iot_wemo_off",
+              "iot_wemo_on",
+              "lists_createoradd",
+              "lists_query",
+              "lists_remove",
+              "music_dislikeness",
+              "music_likeness",
+              "music_query",
+              "music_settings",
+              "news_query",
+              "play_audiobook",
+              "play_game",
+              "play_music",
+              "play_podcasts",
+              "play_radio",
+              "qa_currency",
+              "qa_definition",
+              "qa_factoid",
+              "qa_maths",
+              "qa_stock",
+              "recommendation_events",
+              "recommendation_locations",
+              "recommendation_movies",
+              "social_post",
+              "social_query",
+              "takeaway_order",
+              "takeaway_query",
+              "transport_query",
+              "transport_taxi",
+              "transport_ticket",
+              "transport_traffic",
+              "weather_query"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "alarm_query -> alarm_set": 1,
+              "alarm_query -> alarm_query": 4,
+              "alarm_remove -> alarm_remove": 4,
+              "alarm_remove -> email_querycontact": 1,
+              "alarm_set -> alarm_set": 5,
+              "audio_volume_down -> audio_volume_down": 3,
+              "audio_volume_down -> audio_volume_up": 1,
+              "audio_volume_mute -> audio_volume_mute": 5,
+              "audio_volume_up -> audio_volume_up": 5,
+              "calendar_query -> calendar_query": 5,
+              "calendar_remove -> calendar_remove": 5,
+              "calendar_set -> calendar_set": 4,
+              "calendar_set -> social_post": 1,
+              "cooking_query -> cooking_recipe": 1,
+              "cooking_recipe -> cooking_recipe": 5,
+              "datetime_convert -> datetime_convert": 5,
+              "datetime_query -> datetime_query": 5,
+              "email_addcontact -> email_addcontact": 3,
+              "email_query -> email_query": 5,
+              "email_querycontact -> email_querycontact": 2,
+              "email_querycontact -> qa_factoid": 1,
+              "email_querycontact -> email_query": 1,
+              "email_querycontact -> lists_remove": 1,
+              "email_sendemail -> email_addcontact": 1,
+              "email_sendemail -> email_sendemail": 4,
+              "general_greet -> general_quirky": 1,
+              "general_joke -> general_joke": 4,
+              "general_joke -> music_likeness": 1,
+              "general_quirky -> news_query": 1,
+              "general_quirky -> qa_factoid": 1,
+              "general_quirky -> general_quirky": 2,
+              "general_quirky -> lists_createoradd": 1,
+              "iot_cleaning -> iot_cleaning": 5,
+              "iot_coffee -> iot_coffee": 5,
+              "iot_hue_lightchange -> play_music": 1,
+              "iot_hue_lightchange -> iot_hue_lightchange": 4,
+              "iot_hue_lightdim -> iot_hue_lightdim": 4,
+              "iot_hue_lightdim -> iot_hue_lighton": 1,
+              "iot_hue_lightoff -> iot_hue_lightoff": 5,
+              "iot_hue_lighton -> iot_hue_lightdim": 1,
+              "iot_hue_lighton -> iot_hue_lighton": 2,
+              "iot_hue_lightup -> iot_hue_lighton": 3,
+              "iot_hue_lightup -> iot_hue_lightup": 2,
+              "iot_wemo_off -> iot_wemo_on": 1,
+              "iot_wemo_off -> iot_wemo_off": 2,
+              "iot_wemo_on -> iot_wemo_on": 3,
+              "lists_createoradd -> lists_createoradd": 4,
+              "lists_createoradd -> calendar_set": 1,
+              "lists_query -> lists_query": 3,
+              "lists_query -> lists_createoradd": 1,
+              "lists_query -> general_quirky": 1,
+              "lists_remove -> lists_remove": 5,
+              "music_dislikeness -> music_dislikeness": 1,
+              "music_likeness -> music_likeness": 5,
+              "music_query -> music_query": 5,
+              "music_settings -> play_music": 2,
+              "music_settings -> music_dislikeness": 1,
+              "music_settings -> music_settings": 1,
+              "news_query -> news_query": 5,
+              "play_audiobook -> play_audiobook": 4,
+              "play_audiobook -> play_music": 1,
+              "play_game -> play_game": 5,
+              "play_music -> play_music": 5,
+              "play_podcasts -> play_podcasts": 4,
+              "play_podcasts -> play_audiobook": 1,
+              "play_radio -> music_query": 1,
+              "play_radio -> play_radio": 4,
+              "qa_currency -> qa_currency": 5,
+              "qa_definition -> general_quirky": 1,
+              "qa_definition -> qa_definition": 4,
+              "qa_factoid -> weather_query": 1,
+              "qa_factoid -> qa_factoid": 3,
+              "qa_factoid -> news_query": 1,
+              "qa_maths -> qa_maths": 4,
+              "qa_maths -> news_query": 1,
+              "qa_stock -> qa_stock": 5,
+              "recommendation_events -> news_query": 1,
+              "recommendation_events -> recommendation_events": 3,
+              "recommendation_events -> recommendation_locations": 1,
+              "recommendation_locations -> recommendation_locations": 5,
+              "recommendation_movies -> recommendation_events": 1,
+              "recommendation_movies -> recommendation_movies": 4,
+              "social_post -> social_post": 5,
+              "social_query -> social_query": 2,
+              "social_query -> general_quirky": 1,
+              "social_query -> social_post": 1,
+              "social_query -> lists_query": 1,
+              "takeaway_order -> takeaway_order": 5,
+              "takeaway_query -> takeaway_query": 2,
+              "takeaway_query -> takeaway_order": 3,
+              "transport_query -> transport_query": 4,
+              "transport_query -> transport_ticket": 1,
+              "transport_taxi -> transport_taxi": 5,
+              "transport_ticket -> transport_ticket": 5,
+              "transport_traffic -> transport_traffic": 5,
+              "weather_query -> weather_query": 5
+            },
+            "brier_multiclass_sum": 0.2478321877603907,
+            "nll": 0.618472363697701,
+            "ece_10_equal_width": 0.07734731306907046,
+            "selective": {
+              "0.5": {
+                "coverage": 0.9597069597069597,
+                "accepted": 262,
+                "errors": 37
+              },
+              "0.7": {
+                "coverage": 0.8791208791208791,
+                "accepted": 240,
+                "errors": 27
+              },
+              "0.9": {
+                "coverage": 0.7472527472527473,
+                "accepted": 204,
+                "errors": 10
+              },
+              "0.95": {
+                "coverage": 0.6923076923076923,
+                "accepted": 189,
+                "errors": 8
+              }
+            }
+          }
+        }
+      },
+      "crosswoz": {
+        "n": 150,
+        "tasks": {
+          "intent": {
+            "n": 150,
+            "correct": 91,
+            "accuracy": 0.6066666666666667,
+            "accuracy_wilson_95_descriptive": [
+              0.5267647239233271,
+              0.6812414330589196
+            ],
+            "macro_f1_gold_supported_classes": 0.5791861244221292,
+            "supported_classes": [
+              "attraction",
+              "hotel",
+              "metro",
+              "restaurant",
+              "taxi"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "restaurant -> restaurant": 26,
+              "attraction -> hotel": 4,
+              "hotel -> hotel": 22,
+              "attraction -> attraction": 21,
+              "attraction -> restaurant": 5,
+              "hotel -> attraction": 4,
+              "hotel -> restaurant": 3,
+              "restaurant -> hotel": 4,
+              "metro -> attraction": 11,
+              "taxi -> taxi": 17,
+              "taxi -> restaurant": 8,
+              "hotel -> taxi": 1,
+              "metro -> restaurant": 9,
+              "metro -> hotel": 4,
+              "taxi -> attraction": 2,
+              "taxi -> hotel": 3,
+              "metro -> metro": 5,
+              "metro -> taxi": 1
+            },
+            "brier_multiclass_sum": 0.6396044242970914,
+            "nll": 1.6809509790310495,
+            "ece_10_equal_width": 0.3072464022096318,
+            "selective": {
+              "0.5": {
+                "coverage": 0.9933333333333333,
+                "accepted": 149,
+                "errors": 58
+              },
+              "0.7": {
+                "coverage": 0.8933333333333333,
+                "accepted": 134,
+                "errors": 47
+              },
+              "0.9": {
+                "coverage": 0.7066666666666667,
+                "accepted": 106,
+                "errors": 33
+              },
+              "0.95": {
+                "coverage": 0.6733333333333333,
+                "accepted": 101,
+                "errors": 33
+              }
+            }
+          }
+        }
+      }
+    },
+    "step-1778": {
+      "business": {
+        "n": 402,
+        "tasks": {
+          "intent": {
+            "n": 402,
+            "correct": 381,
+            "accuracy": 0.9477611940298507,
+            "accuracy_wilson_95_descriptive": [
+              0.9214634845041578,
+              0.9655821017541262
+            ],
+            "macro_f1_gold_supported_classes": 0.8888888888888888,
+            "supported_classes": [
+              "application_detail",
+              "applications",
+              "credit",
+              "general",
+              "handoff",
+              "payment_dispute",
+              "products",
+              "repayment",
+              "security",
+              "status_code",
+              "ui_issue"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "products -> products": 66,
+              "credit -> credit": 72,
+              "applications -> applications": 72,
+              "application_detail -> application_detail": 80,
+              "status_code -> status_code": 18,
+              "status_code -> repayment": 1,
+              "status_code -> application_detail": 17,
+              "ui_issue -> ui_issue": 62,
+              "payment_dispute -> payment_dispute": 2,
+              "security -> security": 2,
+              "handoff -> handoff": 1,
+              "handoff -> application_detail": 1,
+              "repayment -> repayment": 4,
+              "general -> general": 2,
+              "general -> application_detail": 2
+            },
+            "brier_multiclass_sum": 0.1029498509008093,
+            "nll": 0.5197371149589917,
+            "ece_10_equal_width": 0.051177279701435235,
+            "selective": {
+              "0.5": {
+                "coverage": 1.0,
+                "accepted": 402,
+                "errors": 21
+              },
+              "0.7": {
+                "coverage": 1.0,
+                "accepted": 402,
+                "errors": 21
+              },
+              "0.9": {
+                "coverage": 0.9850746268656716,
+                "accepted": 396,
+                "errors": 20
+              },
+              "0.95": {
+                "coverage": 0.9751243781094527,
+                "accepted": 392,
+                "errors": 17
+              }
+            }
+          },
+          "route": {
+            "n": 402,
+            "correct": 369,
+            "accuracy": 0.917910447761194,
+            "accuracy_wilson_95_descriptive": [
+              0.8869564224878804,
+              0.9409527913531847
+            ],
+            "macro_f1_gold_supported_classes": 0.9245784450758945,
+            "supported_classes": [
+              "clarify",
+              "human",
+              "llm",
+              "tool"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "tool -> tool": 98,
+              "clarify -> clarify": 85,
+              "llm -> llm": 76,
+              "human -> human": 110,
+              "tool -> human": 16,
+              "clarify -> human": 15,
+              "tool -> llm": 2
+            },
+            "brier_multiclass_sum": 0.14343762584756523,
+            "nll": 0.41243829319901315,
+            "ece_10_equal_width": 0.06818795681593556,
+            "selective": {
+              "0.5": {
+                "coverage": 0.9950248756218906,
+                "accepted": 400,
+                "errors": 32
+              },
+              "0.7": {
+                "coverage": 0.9776119402985075,
+                "accepted": 393,
+                "errors": 30
+              },
+              "0.9": {
+                "coverage": 0.9328358208955224,
+                "accepted": 375,
+                "errors": 21
+              },
+              "0.95": {
+                "coverage": 0.9129353233830846,
+                "accepted": 367,
+                "errors": 17
+              }
+            }
+          },
+          "tool": {
+            "n": 402,
+            "correct": 384,
+            "accuracy": 0.9552238805970149,
+            "accuracy_wilson_95_descriptive": [
+              0.9303374246540506,
+              0.9714922547085383
+            ],
+            "macro_f1_gold_supported_classes": 0.9095977939198279,
+            "supported_classes": [
+              "explainApplicationStatus",
+              "none",
+              "queryApplicationDetail",
+              "queryLoanProducts",
+              "queryMyApplications",
+              "queryMyCreditScore"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "queryLoanProducts -> queryLoanProducts": 24,
+              "none -> none": 286,
+              "queryMyCreditScore -> queryMyCreditScore": 24,
+              "queryMyApplications -> none": 6,
+              "queryMyApplications -> queryMyApplications": 18,
+              "queryApplicationDetail -> queryApplicationDetail": 22,
+              "queryApplicationDetail -> none": 4,
+              "explainApplicationStatus -> explainApplicationStatus": 10,
+              "explainApplicationStatus -> none": 8
+            }
+          }
+        },
+        "human_required": 110,
+        "human_missed": 0,
+        "human_false_positive": 31,
+        "tool_required": 116,
+        "joint_tool_correct": 98,
+        "all_fields_correct": 357
+      },
+      "massive": {
+        "n": 273,
+        "tasks": {
+          "intent": {
+            "n": 273,
+            "correct": 224,
+            "accuracy": 0.8205128205128205,
+            "accuracy_wilson_95_descriptive": [
+              0.7706405680147486,
+              0.8614898632499168
+            ],
+            "macro_f1_gold_supported_classes": 0.78932188338968,
+            "supported_classes": [
+              "alarm_query",
+              "alarm_remove",
+              "alarm_set",
+              "audio_volume_down",
+              "audio_volume_mute",
+              "audio_volume_up",
+              "calendar_query",
+              "calendar_remove",
+              "calendar_set",
+              "cooking_query",
+              "cooking_recipe",
+              "datetime_convert",
+              "datetime_query",
+              "email_addcontact",
+              "email_query",
+              "email_querycontact",
+              "email_sendemail",
+              "general_greet",
+              "general_joke",
+              "general_quirky",
+              "iot_cleaning",
+              "iot_coffee",
+              "iot_hue_lightchange",
+              "iot_hue_lightdim",
+              "iot_hue_lightoff",
+              "iot_hue_lighton",
+              "iot_hue_lightup",
+              "iot_wemo_off",
+              "iot_wemo_on",
+              "lists_createoradd",
+              "lists_query",
+              "lists_remove",
+              "music_dislikeness",
+              "music_likeness",
+              "music_query",
+              "music_settings",
+              "news_query",
+              "play_audiobook",
+              "play_game",
+              "play_music",
+              "play_podcasts",
+              "play_radio",
+              "qa_currency",
+              "qa_definition",
+              "qa_factoid",
+              "qa_maths",
+              "qa_stock",
+              "recommendation_events",
+              "recommendation_locations",
+              "recommendation_movies",
+              "social_post",
+              "social_query",
+              "takeaway_order",
+              "takeaway_query",
+              "transport_query",
+              "transport_taxi",
+              "transport_ticket",
+              "transport_traffic",
+              "weather_query"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "alarm_query -> alarm_set": 1,
+              "alarm_query -> alarm_query": 4,
+              "alarm_remove -> alarm_remove": 4,
+              "alarm_remove -> play_music": 1,
+              "alarm_set -> alarm_set": 5,
+              "audio_volume_down -> audio_volume_down": 4,
+              "audio_volume_mute -> audio_volume_mute": 5,
+              "audio_volume_up -> audio_volume_up": 5,
+              "calendar_query -> calendar_query": 4,
+              "calendar_query -> datetime_query": 1,
+              "calendar_remove -> calendar_remove": 5,
+              "calendar_set -> calendar_query": 1,
+              "calendar_set -> calendar_set": 3,
+              "calendar_set -> social_post": 1,
+              "cooking_query -> cooking_recipe": 1,
+              "cooking_recipe -> play_music": 1,
+              "cooking_recipe -> cooking_recipe": 4,
+              "datetime_convert -> datetime_convert": 5,
+              "datetime_query -> datetime_query": 5,
+              "email_addcontact -> email_addcontact": 3,
+              "email_query -> email_query": 5,
+              "email_querycontact -> email_querycontact": 1,
+              "email_querycontact -> email_addcontact": 1,
+              "email_querycontact -> qa_factoid": 1,
+              "email_querycontact -> email_query": 1,
+              "email_querycontact -> calendar_remove": 1,
+              "email_sendemail -> email_addcontact": 1,
+              "email_sendemail -> email_sendemail": 4,
+              "general_greet -> general_joke": 1,
+              "general_joke -> general_joke": 4,
+              "general_joke -> general_quirky": 1,
+              "general_quirky -> qa_factoid": 2,
+              "general_quirky -> general_quirky": 2,
+              "general_quirky -> takeaway_order": 1,
+              "iot_cleaning -> iot_cleaning": 5,
+              "iot_coffee -> iot_coffee": 5,
+              "iot_hue_lightchange -> play_music": 1,
+              "iot_hue_lightchange -> iot_hue_lightchange": 4,
+              "iot_hue_lightdim -> iot_hue_lightdim": 4,
+              "iot_hue_lightdim -> iot_hue_lightchange": 1,
+              "iot_hue_lightoff -> iot_hue_lightoff": 5,
+              "iot_hue_lighton -> iot_hue_lightdim": 1,
+              "iot_hue_lighton -> iot_hue_lighton": 2,
+              "iot_hue_lightup -> iot_hue_lighton": 3,
+              "iot_hue_lightup -> iot_hue_lightup": 2,
+              "iot_wemo_off -> iot_cleaning": 1,
+              "iot_wemo_off -> iot_wemo_off": 2,
+              "iot_wemo_on -> iot_wemo_on": 3,
+              "lists_createoradd -> lists_createoradd": 4,
+              "lists_createoradd -> alarm_set": 1,
+              "lists_query -> lists_query": 3,
+              "lists_query -> lists_createoradd": 1,
+              "lists_query -> datetime_convert": 1,
+              "lists_remove -> lists_remove": 5,
+              "music_dislikeness -> music_dislikeness": 1,
+              "music_likeness -> music_likeness": 5,
+              "music_query -> music_query": 4,
+              "music_query -> play_music": 1,
+              "music_settings -> play_music": 4,
+              "news_query -> social_post": 1,
+              "news_query -> news_query": 4,
+              "play_audiobook -> play_audiobook": 4,
+              "play_audiobook -> play_music": 1,
+              "play_game -> play_game": 5,
+              "play_music -> play_music": 5,
+              "play_podcasts -> play_podcasts": 4,
+              "play_podcasts -> play_audiobook": 1,
+              "play_radio -> music_query": 1,
+              "play_radio -> play_radio": 3,
+              "play_radio -> play_music": 1,
+              "qa_currency -> qa_currency": 5,
+              "qa_definition -> general_quirky": 1,
+              "qa_definition -> qa_definition": 4,
+              "qa_factoid -> qa_factoid": 5,
+              "qa_maths -> qa_maths": 4,
+              "qa_maths -> play_music": 1,
+              "qa_stock -> qa_stock": 5,
+              "recommendation_events -> transport_traffic": 1,
+              "recommendation_events -> recommendation_events": 3,
+              "recommendation_events -> recommendation_locations": 1,
+              "recommendation_locations -> recommendation_locations": 5,
+              "recommendation_movies -> recommendation_movies": 5,
+              "social_post -> social_post": 5,
+              "social_query -> social_query": 2,
+              "social_query -> general_quirky": 1,
+              "social_query -> social_post": 1,
+              "social_query -> recommendation_locations": 1,
+              "takeaway_order -> takeaway_order": 5,
+              "takeaway_query -> takeaway_query": 2,
+              "takeaway_query -> takeaway_order": 3,
+              "transport_query -> transport_query": 4,
+              "transport_query -> transport_ticket": 1,
+              "transport_taxi -> transport_taxi": 5,
+              "transport_ticket -> transport_ticket": 4,
+              "transport_ticket -> transport_query": 1,
+              "transport_traffic -> transport_traffic": 5,
+              "weather_query -> weather_query": 5
+            },
+            "brier_multiclass_sum": 0.2695988304895537,
+            "nll": 0.7470000471754026,
+            "ece_10_equal_width": 0.07331104833210339,
+            "selective": {
+              "0.5": {
+                "coverage": 0.9267399267399268,
+                "accepted": 253,
+                "errors": 35
+              },
+              "0.7": {
+                "coverage": 0.8498168498168498,
+                "accepted": 232,
+                "errors": 25
+              },
+              "0.9": {
+                "coverage": 0.73992673992674,
+                "accepted": 202,
+                "errors": 13
+              },
+              "0.95": {
+                "coverage": 0.684981684981685,
+                "accepted": 187,
+                "errors": 10
+              }
+            }
+          }
+        }
+      },
+      "crosswoz": {
+        "n": 150,
+        "tasks": {
+          "intent": {
+            "n": 150,
+            "correct": 147,
+            "accuracy": 0.98,
+            "accuracy_wilson_95_descriptive": [
+              0.9428523341357583,
+              0.9931753722843516
+            ],
+            "macro_f1_gold_supported_classes": 0.9801020594131584,
+            "supported_classes": [
+              "attraction",
+              "hotel",
+              "metro",
+              "restaurant",
+              "taxi"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "restaurant -> restaurant": 30,
+              "attraction -> attraction": 29,
+              "hotel -> hotel": 29,
+              "metro -> metro": 29,
+              "taxi -> taxi": 30,
+              "hotel -> taxi": 1,
+              "attraction -> hotel": 1,
+              "metro -> taxi": 1
+            },
+            "brier_multiclass_sum": 0.023525171513710457,
+            "nll": 0.0714384134226647,
+            "ece_10_equal_width": 0.011608465425794972,
+            "selective": {
+              "0.5": {
+                "coverage": 1.0,
+                "accepted": 150,
+                "errors": 3
+              },
+              "0.7": {
+                "coverage": 0.9866666666666667,
+                "accepted": 148,
+                "errors": 1
+              },
+              "0.9": {
+                "coverage": 0.9866666666666667,
+                "accepted": 148,
+                "errors": 1
+              },
+              "0.95": {
+                "coverage": 0.9733333333333334,
+                "accepted": 146,
+                "errors": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "step-3555": {
+      "business": {
+        "n": 402,
+        "tasks": {
+          "intent": {
+            "n": 402,
+            "correct": 383,
+            "accuracy": 0.9527363184079602,
+            "accuracy_wilson_95_descriptive": [
+              0.9273651162743985,
+              0.9695365320534222
+            ],
+            "macro_f1_gold_supported_classes": 0.9470603884011705,
+            "supported_classes": [
+              "application_detail",
+              "applications",
+              "credit",
+              "general",
+              "handoff",
+              "payment_dispute",
+              "products",
+              "repayment",
+              "security",
+              "status_code",
+              "ui_issue"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "products -> products": 66,
+              "credit -> credit": 72,
+              "applications -> applications": 72,
+              "application_detail -> application_detail": 80,
+              "status_code -> status_code": 18,
+              "status_code -> application_detail": 18,
+              "ui_issue -> ui_issue": 62,
+              "payment_dispute -> payment_dispute": 2,
+              "security -> security": 2,
+              "handoff -> handoff": 2,
+              "repayment -> repayment": 4,
+              "general -> general": 3,
+              "general -> application_detail": 1
+            },
+            "brier_multiclass_sum": 0.09250557574155248,
+            "nll": 0.6077517552148045,
+            "ece_10_equal_width": 0.04751515747211877,
+            "selective": {
+              "0.5": {
+                "coverage": 0.9975124378109452,
+                "accepted": 401,
+                "errors": 19
+              },
+              "0.7": {
+                "coverage": 0.9950248756218906,
+                "accepted": 400,
+                "errors": 18
+              },
+              "0.9": {
+                "coverage": 0.9950248756218906,
+                "accepted": 400,
+                "errors": 18
+              },
+              "0.95": {
+                "coverage": 0.9950248756218906,
+                "accepted": 400,
+                "errors": 18
+              }
+            }
+          },
+          "route": {
+            "n": 402,
+            "correct": 391,
+            "accuracy": 0.972636815920398,
+            "accuracy_wilson_95_descriptive": [
+              0.9516723009897463,
+              0.9846535956162201
+            ],
+            "macro_f1_gold_supported_classes": 0.9742317709215227,
+            "supported_classes": [
+              "clarify",
+              "human",
+              "llm",
+              "tool"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "tool -> tool": 110,
+              "clarify -> clarify": 95,
+              "llm -> llm": 76,
+              "human -> human": 110,
+              "tool -> human": 4,
+              "tool -> llm": 1,
+              "clarify -> human": 4,
+              "tool -> clarify": 1,
+              "clarify -> tool": 1
+            },
+            "brier_multiclass_sum": 0.04772791044480556,
+            "nll": 0.17404487901567933,
+            "ece_10_equal_width": 0.023542625075508437,
+            "selective": {
+              "0.5": {
+                "coverage": 1.0,
+                "accepted": 402,
+                "errors": 11
+              },
+              "0.7": {
+                "coverage": 0.9975124378109452,
+                "accepted": 401,
+                "errors": 10
+              },
+              "0.9": {
+                "coverage": 0.9850746268656716,
+                "accepted": 396,
+                "errors": 8
+              },
+              "0.95": {
+                "coverage": 0.9825870646766169,
+                "accepted": 395,
+                "errors": 7
+              }
+            }
+          },
+          "tool": {
+            "n": 402,
+            "correct": 393,
+            "accuracy": 0.9776119402985075,
+            "accuracy_wilson_95_descriptive": [
+              0.9580040759303614,
+              0.9881778827451417
+            ],
+            "macro_f1_gold_supported_classes": 0.9507567049808429,
+            "supported_classes": [
+              "explainApplicationStatus",
+              "none",
+              "queryApplicationDetail",
+              "queryLoanProducts",
+              "queryMyApplications",
+              "queryMyCreditScore"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "queryLoanProducts -> queryLoanProducts": 24,
+              "none -> none": 286,
+              "queryMyCreditScore -> queryMyCreditScore": 24,
+              "queryMyApplications -> queryMyApplications": 23,
+              "queryMyApplications -> none": 1,
+              "queryApplicationDetail -> queryApplicationDetail": 24,
+              "queryApplicationDetail -> none": 2,
+              "explainApplicationStatus -> explainApplicationStatus": 12,
+              "explainApplicationStatus -> none": 5,
+              "explainApplicationStatus -> queryMyApplications": 1
+            }
+          }
+        },
+        "human_required": 110,
+        "human_missed": 0,
+        "human_false_positive": 8,
+        "tool_required": 116,
+        "joint_tool_correct": 107,
+        "all_fields_correct": 377
+      },
+      "massive": {
+        "n": 273,
+        "tasks": {
+          "intent": {
+            "n": 273,
+            "correct": 229,
+            "accuracy": 0.8388278388278388,
+            "accuracy_wilson_95_descriptive": [
+              0.7905582846061081,
+              0.8776938855879668
+            ],
+            "macro_f1_gold_supported_classes": 0.807504924454077,
+            "supported_classes": [
+              "alarm_query",
+              "alarm_remove",
+              "alarm_set",
+              "audio_volume_down",
+              "audio_volume_mute",
+              "audio_volume_up",
+              "calendar_query",
+              "calendar_remove",
+              "calendar_set",
+              "cooking_query",
+              "cooking_recipe",
+              "datetime_convert",
+              "datetime_query",
+              "email_addcontact",
+              "email_query",
+              "email_querycontact",
+              "email_sendemail",
+              "general_greet",
+              "general_joke",
+              "general_quirky",
+              "iot_cleaning",
+              "iot_coffee",
+              "iot_hue_lightchange",
+              "iot_hue_lightdim",
+              "iot_hue_lightoff",
+              "iot_hue_lighton",
+              "iot_hue_lightup",
+              "iot_wemo_off",
+              "iot_wemo_on",
+              "lists_createoradd",
+              "lists_query",
+              "lists_remove",
+              "music_dislikeness",
+              "music_likeness",
+              "music_query",
+              "music_settings",
+              "news_query",
+              "play_audiobook",
+              "play_game",
+              "play_music",
+              "play_podcasts",
+              "play_radio",
+              "qa_currency",
+              "qa_definition",
+              "qa_factoid",
+              "qa_maths",
+              "qa_stock",
+              "recommendation_events",
+              "recommendation_locations",
+              "recommendation_movies",
+              "social_post",
+              "social_query",
+              "takeaway_order",
+              "takeaway_query",
+              "transport_query",
+              "transport_taxi",
+              "transport_ticket",
+              "transport_traffic",
+              "weather_query"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "alarm_query -> alarm_set": 1,
+              "alarm_query -> alarm_query": 4,
+              "alarm_remove -> alarm_remove": 4,
+              "alarm_remove -> transport_taxi": 1,
+              "alarm_set -> alarm_set": 5,
+              "audio_volume_down -> audio_volume_down": 4,
+              "audio_volume_mute -> audio_volume_mute": 5,
+              "audio_volume_up -> audio_volume_up": 5,
+              "calendar_query -> calendar_query": 4,
+              "calendar_query -> datetime_query": 1,
+              "calendar_remove -> calendar_remove": 5,
+              "calendar_set -> calendar_set": 4,
+              "calendar_set -> social_post": 1,
+              "cooking_query -> cooking_recipe": 1,
+              "cooking_recipe -> play_audiobook": 1,
+              "cooking_recipe -> cooking_recipe": 4,
+              "datetime_convert -> datetime_convert": 5,
+              "datetime_query -> datetime_query": 5,
+              "email_addcontact -> email_addcontact": 3,
+              "email_query -> email_query": 5,
+              "email_querycontact -> email_querycontact": 2,
+              "email_querycontact -> qa_factoid": 1,
+              "email_querycontact -> email_query": 1,
+              "email_querycontact -> lists_remove": 1,
+              "email_sendemail -> email_addcontact": 1,
+              "email_sendemail -> email_sendemail": 4,
+              "general_greet -> general_joke": 1,
+              "general_joke -> general_joke": 4,
+              "general_joke -> general_quirky": 1,
+              "general_quirky -> qa_factoid": 2,
+              "general_quirky -> general_quirky": 2,
+              "general_quirky -> lists_createoradd": 1,
+              "iot_cleaning -> iot_cleaning": 5,
+              "iot_coffee -> iot_coffee": 5,
+              "iot_hue_lightchange -> audio_volume_up": 1,
+              "iot_hue_lightchange -> iot_hue_lightchange": 4,
+              "iot_hue_lightdim -> iot_hue_lightdim": 3,
+              "iot_hue_lightdim -> iot_hue_lighton": 1,
+              "iot_hue_lightdim -> iot_hue_lightchange": 1,
+              "iot_hue_lightoff -> iot_hue_lightoff": 4,
+              "iot_hue_lightoff -> iot_wemo_off": 1,
+              "iot_hue_lighton -> iot_hue_lightdim": 1,
+              "iot_hue_lighton -> iot_hue_lighton": 2,
+              "iot_hue_lightup -> iot_hue_lighton": 3,
+              "iot_hue_lightup -> iot_hue_lightup": 2,
+              "iot_wemo_off -> iot_wemo_on": 1,
+              "iot_wemo_off -> iot_wemo_off": 2,
+              "iot_wemo_on -> iot_wemo_on": 3,
+              "lists_createoradd -> lists_createoradd": 4,
+              "lists_createoradd -> calendar_set": 1,
+              "lists_query -> lists_query": 3,
+              "lists_query -> lists_createoradd": 1,
+              "lists_query -> datetime_convert": 1,
+              "lists_remove -> lists_remove": 5,
+              "music_dislikeness -> music_dislikeness": 1,
+              "music_likeness -> music_likeness": 5,
+              "music_query -> music_query": 5,
+              "music_settings -> play_music": 2,
+              "music_settings -> music_settings": 1,
+              "music_settings -> lists_remove": 1,
+              "news_query -> social_post": 1,
+              "news_query -> news_query": 4,
+              "play_audiobook -> play_audiobook": 4,
+              "play_audiobook -> play_music": 1,
+              "play_game -> play_game": 5,
+              "play_music -> play_music": 5,
+              "play_podcasts -> play_podcasts": 4,
+              "play_podcasts -> play_audiobook": 1,
+              "play_radio -> music_query": 1,
+              "play_radio -> play_radio": 4,
+              "qa_currency -> qa_currency": 5,
+              "qa_definition -> general_quirky": 1,
+              "qa_definition -> qa_definition": 4,
+              "qa_factoid -> weather_query": 1,
+              "qa_factoid -> qa_factoid": 3,
+              "qa_factoid -> news_query": 1,
+              "qa_maths -> qa_maths": 4,
+              "qa_maths -> play_radio": 1,
+              "qa_stock -> qa_stock": 5,
+              "recommendation_events -> news_query": 1,
+              "recommendation_events -> recommendation_events": 4,
+              "recommendation_locations -> recommendation_locations": 5,
+              "recommendation_movies -> recommendation_events": 1,
+              "recommendation_movies -> recommendation_movies": 4,
+              "social_post -> social_post": 5,
+              "social_query -> social_query": 2,
+              "social_query -> general_quirky": 1,
+              "social_query -> social_post": 1,
+              "social_query -> lists_query": 1,
+              "takeaway_order -> takeaway_order": 5,
+              "takeaway_query -> takeaway_query": 5,
+              "transport_query -> transport_query": 4,
+              "transport_query -> transport_ticket": 1,
+              "transport_taxi -> transport_taxi": 5,
+              "transport_ticket -> transport_ticket": 5,
+              "transport_traffic -> transport_traffic": 5,
+              "weather_query -> weather_query": 5
+            },
+            "brier_multiclass_sum": 0.2408548264236272,
+            "nll": 0.6418791246193953,
+            "ece_10_equal_width": 0.08444172330348097,
+            "selective": {
+              "0.5": {
+                "coverage": 0.9304029304029304,
+                "accepted": 254,
+                "errors": 29
+              },
+              "0.7": {
+                "coverage": 0.8717948717948718,
+                "accepted": 238,
+                "errors": 23
+              },
+              "0.9": {
+                "coverage": 0.7509157509157509,
+                "accepted": 205,
+                "errors": 12
+              },
+              "0.95": {
+                "coverage": 0.7216117216117216,
+                "accepted": 197,
+                "errors": 9
+              }
+            }
+          }
+        }
+      },
+      "crosswoz": {
+        "n": 150,
+        "tasks": {
+          "intent": {
+            "n": 150,
+            "correct": 147,
+            "accuracy": 0.98,
+            "accuracy_wilson_95_descriptive": [
+              0.9428523341357583,
+              0.9931753722843516
+            ],
+            "macro_f1_gold_supported_classes": 0.9799833163395716,
+            "supported_classes": [
+              "attraction",
+              "hotel",
+              "metro",
+              "restaurant",
+              "taxi"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "restaurant -> restaurant": 30,
+              "attraction -> attraction": 30,
+              "hotel -> hotel": 28,
+              "hotel -> restaurant": 1,
+              "metro -> metro": 29,
+              "taxi -> taxi": 30,
+              "hotel -> taxi": 1,
+              "metro -> taxi": 1
+            },
+            "brier_multiclass_sum": 0.03210852155929398,
+            "nll": 0.09578458921223038,
+            "ece_10_equal_width": 0.01702167735455167,
+            "selective": {
+              "0.5": {
+                "coverage": 1.0,
+                "accepted": 150,
+                "errors": 3
+              },
+              "0.7": {
+                "coverage": 1.0,
+                "accepted": 150,
+                "errors": 3
+              },
+              "0.9": {
+                "coverage": 0.9866666666666667,
+                "accepted": 148,
+                "errors": 1
+              },
+              "0.95": {
+                "coverage": 0.9866666666666667,
+                "accepted": 148,
+                "errors": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "step-5333": {
+      "business": {
+        "n": 402,
+        "tasks": {
+          "intent": {
+            "n": 402,
+            "correct": 382,
+            "accuracy": 0.9502487562189055,
+            "accuracy_wilson_95_descriptive": [
+              0.9244074642062649,
+              0.9675661530867875
+            ],
+            "macro_f1_gold_supported_classes": 0.9289555552446117,
+            "supported_classes": [
+              "application_detail",
+              "applications",
+              "credit",
+              "general",
+              "handoff",
+              "payment_dispute",
+              "products",
+              "repayment",
+              "security",
+              "status_code",
+              "ui_issue"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "products -> products": 66,
+              "credit -> credit": 72,
+              "applications -> applications": 72,
+              "application_detail -> application_detail": 80,
+              "status_code -> status_code": 18,
+              "status_code -> application_detail": 16,
+              "status_code -> applications": 2,
+              "ui_issue -> ui_issue": 62,
+              "payment_dispute -> payment_dispute": 2,
+              "security -> security": 2,
+              "handoff -> handoff": 2,
+              "repayment -> repayment": 4,
+              "general -> general": 2,
+              "general -> application_detail": 2
+            },
+            "brier_multiclass_sum": 0.09003943285740196,
+            "nll": 0.7242099483685844,
+            "ece_10_equal_width": 0.045171667832906014,
+            "selective": {
+              "0.5": {
+                "coverage": 1.0,
+                "accepted": 402,
+                "errors": 20
+              },
+              "0.7": {
+                "coverage": 0.9950248756218906,
+                "accepted": 400,
+                "errors": 18
+              },
+              "0.9": {
+                "coverage": 0.9850746268656716,
+                "accepted": 396,
+                "errors": 14
+              },
+              "0.95": {
+                "coverage": 0.9825870646766169,
+                "accepted": 395,
+                "errors": 13
+              }
+            }
+          },
+          "route": {
+            "n": 402,
+            "correct": 390,
+            "accuracy": 0.9701492537313433,
+            "accuracy_wilson_95_descriptive": [
+              0.9485545229704655,
+              0.9828433426007328
+            ],
+            "macro_f1_gold_supported_classes": 0.9709494204746454,
+            "supported_classes": [
+              "clarify",
+              "human",
+              "llm",
+              "tool"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "tool -> tool": 109,
+              "clarify -> clarify": 95,
+              "llm -> llm": 76,
+              "human -> human": 110,
+              "tool -> human": 3,
+              "tool -> llm": 3,
+              "clarify -> human": 4,
+              "tool -> clarify": 1,
+              "clarify -> tool": 1
+            },
+            "brier_multiclass_sum": 0.05875435097750484,
+            "nll": 0.26212523354124795,
+            "ece_10_equal_width": 0.02825244594624484,
+            "selective": {
+              "0.5": {
+                "coverage": 1.0,
+                "accepted": 402,
+                "errors": 12
+              },
+              "0.7": {
+                "coverage": 0.9925373134328358,
+                "accepted": 399,
+                "errors": 11
+              },
+              "0.9": {
+                "coverage": 0.9900497512437811,
+                "accepted": 398,
+                "errors": 11
+              },
+              "0.95": {
+                "coverage": 0.9825870646766169,
+                "accepted": 395,
+                "errors": 9
+              }
+            }
+          },
+          "tool": {
+            "n": 402,
+            "correct": 388,
+            "accuracy": 0.9651741293532339,
+            "accuracy_wilson_95_descriptive": [
+              0.9423980590224357,
+              0.9791437444792261
+            ],
+            "macro_f1_gold_supported_classes": 0.9199074074074073,
+            "supported_classes": [
+              "explainApplicationStatus",
+              "none",
+              "queryApplicationDetail",
+              "queryLoanProducts",
+              "queryMyApplications",
+              "queryMyCreditScore"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "queryLoanProducts -> queryLoanProducts": 24,
+              "none -> none": 286,
+              "queryMyCreditScore -> queryMyCreditScore": 24,
+              "queryMyApplications -> queryMyApplications": 23,
+              "queryMyApplications -> none": 1,
+              "queryApplicationDetail -> queryApplicationDetail": 22,
+              "queryApplicationDetail -> none": 4,
+              "explainApplicationStatus -> explainApplicationStatus": 9,
+              "explainApplicationStatus -> none": 8,
+              "explainApplicationStatus -> queryMyApplications": 1
+            }
+          }
+        },
+        "human_required": 110,
+        "human_missed": 0,
+        "human_false_positive": 7,
+        "tool_required": 116,
+        "joint_tool_correct": 102,
+        "all_fields_correct": 373
+      },
+      "massive": {
+        "n": 273,
+        "tasks": {
+          "intent": {
+            "n": 273,
+            "correct": 233,
+            "accuracy": 0.8534798534798534,
+            "accuracy_wilson_95_descriptive": [
+              0.8066302085824938,
+              0.8905193527551086
+            ],
+            "macro_f1_gold_supported_classes": 0.8243733667462481,
+            "supported_classes": [
+              "alarm_query",
+              "alarm_remove",
+              "alarm_set",
+              "audio_volume_down",
+              "audio_volume_mute",
+              "audio_volume_up",
+              "calendar_query",
+              "calendar_remove",
+              "calendar_set",
+              "cooking_query",
+              "cooking_recipe",
+              "datetime_convert",
+              "datetime_query",
+              "email_addcontact",
+              "email_query",
+              "email_querycontact",
+              "email_sendemail",
+              "general_greet",
+              "general_joke",
+              "general_quirky",
+              "iot_cleaning",
+              "iot_coffee",
+              "iot_hue_lightchange",
+              "iot_hue_lightdim",
+              "iot_hue_lightoff",
+              "iot_hue_lighton",
+              "iot_hue_lightup",
+              "iot_wemo_off",
+              "iot_wemo_on",
+              "lists_createoradd",
+              "lists_query",
+              "lists_remove",
+              "music_dislikeness",
+              "music_likeness",
+              "music_query",
+              "music_settings",
+              "news_query",
+              "play_audiobook",
+              "play_game",
+              "play_music",
+              "play_podcasts",
+              "play_radio",
+              "qa_currency",
+              "qa_definition",
+              "qa_factoid",
+              "qa_maths",
+              "qa_stock",
+              "recommendation_events",
+              "recommendation_locations",
+              "recommendation_movies",
+              "social_post",
+              "social_query",
+              "takeaway_order",
+              "takeaway_query",
+              "transport_query",
+              "transport_taxi",
+              "transport_ticket",
+              "transport_traffic",
+              "weather_query"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "alarm_query -> alarm_set": 1,
+              "alarm_query -> alarm_query": 4,
+              "alarm_remove -> alarm_remove": 4,
+              "alarm_remove -> email_query": 1,
+              "alarm_set -> alarm_set": 5,
+              "audio_volume_down -> audio_volume_down": 4,
+              "audio_volume_mute -> audio_volume_mute": 5,
+              "audio_volume_up -> audio_volume_up": 5,
+              "calendar_query -> calendar_query": 5,
+              "calendar_remove -> calendar_remove": 5,
+              "calendar_set -> calendar_set": 4,
+              "calendar_set -> social_post": 1,
+              "cooking_query -> cooking_recipe": 1,
+              "cooking_recipe -> cooking_recipe": 5,
+              "datetime_convert -> datetime_convert": 5,
+              "datetime_query -> datetime_query": 5,
+              "email_addcontact -> email_addcontact": 3,
+              "email_query -> email_query": 5,
+              "email_querycontact -> email_querycontact": 2,
+              "email_querycontact -> qa_factoid": 1,
+              "email_querycontact -> email_query": 1,
+              "email_querycontact -> lists_remove": 1,
+              "email_sendemail -> email_addcontact": 1,
+              "email_sendemail -> email_sendemail": 4,
+              "general_greet -> general_quirky": 1,
+              "general_joke -> general_joke": 4,
+              "general_joke -> general_quirky": 1,
+              "general_quirky -> news_query": 1,
+              "general_quirky -> qa_factoid": 1,
+              "general_quirky -> general_quirky": 2,
+              "general_quirky -> lists_createoradd": 1,
+              "iot_cleaning -> iot_cleaning": 5,
+              "iot_coffee -> iot_coffee": 5,
+              "iot_hue_lightchange -> general_quirky": 1,
+              "iot_hue_lightchange -> iot_hue_lightchange": 4,
+              "iot_hue_lightdim -> iot_hue_lightdim": 3,
+              "iot_hue_lightdim -> iot_hue_lightup": 1,
+              "iot_hue_lightdim -> iot_hue_lightchange": 1,
+              "iot_hue_lightoff -> iot_hue_lightoff": 4,
+              "iot_hue_lightoff -> iot_wemo_off": 1,
+              "iot_hue_lighton -> iot_hue_lightdim": 1,
+              "iot_hue_lighton -> iot_hue_lighton": 2,
+              "iot_hue_lightup -> iot_hue_lighton": 3,
+              "iot_hue_lightup -> iot_hue_lightup": 2,
+              "iot_wemo_off -> iot_wemo_on": 1,
+              "iot_wemo_off -> iot_wemo_off": 2,
+              "iot_wemo_on -> iot_wemo_on": 3,
+              "lists_createoradd -> lists_createoradd": 4,
+              "lists_createoradd -> calendar_set": 1,
+              "lists_query -> lists_query": 3,
+              "lists_query -> lists_createoradd": 1,
+              "lists_query -> datetime_convert": 1,
+              "lists_remove -> lists_remove": 5,
+              "music_dislikeness -> music_dislikeness": 1,
+              "music_likeness -> music_likeness": 5,
+              "music_query -> music_query": 5,
+              "music_settings -> play_music": 2,
+              "music_settings -> music_settings": 2,
+              "news_query -> news_query": 5,
+              "play_audiobook -> play_audiobook": 4,
+              "play_audiobook -> play_music": 1,
+              "play_game -> play_game": 5,
+              "play_music -> play_music": 5,
+              "play_podcasts -> play_podcasts": 4,
+              "play_podcasts -> play_audiobook": 1,
+              "play_radio -> music_query": 1,
+              "play_radio -> play_radio": 4,
+              "qa_currency -> qa_currency": 5,
+              "qa_definition -> general_quirky": 1,
+              "qa_definition -> qa_definition": 4,
+              "qa_factoid -> weather_query": 1,
+              "qa_factoid -> qa_factoid": 3,
+              "qa_factoid -> news_query": 1,
+              "qa_maths -> qa_maths": 4,
+              "qa_maths -> news_query": 1,
+              "qa_stock -> qa_stock": 5,
+              "recommendation_events -> recommendation_events": 5,
+              "recommendation_locations -> recommendation_locations": 5,
+              "recommendation_movies -> recommendation_events": 1,
+              "recommendation_movies -> recommendation_movies": 4,
+              "social_post -> social_post": 5,
+              "social_query -> social_query": 2,
+              "social_query -> general_quirky": 1,
+              "social_query -> social_post": 1,
+              "social_query -> lists_query": 1,
+              "takeaway_order -> takeaway_order": 4,
+              "takeaway_order -> takeaway_query": 1,
+              "takeaway_query -> takeaway_query": 5,
+              "transport_query -> transport_query": 5,
+              "transport_taxi -> transport_taxi": 5,
+              "transport_ticket -> transport_ticket": 4,
+              "transport_ticket -> transport_query": 1,
+              "transport_traffic -> transport_traffic": 5,
+              "weather_query -> weather_query": 5
+            },
+            "brier_multiclass_sum": 0.21255586675208113,
+            "nll": 0.5525885464529187,
+            "ece_10_equal_width": 0.07010362915475701,
+            "selective": {
+              "0.5": {
+                "coverage": 0.9523809523809523,
+                "accepted": 260,
+                "errors": 29
+              },
+              "0.7": {
+                "coverage": 0.9084249084249084,
+                "accepted": 248,
+                "errors": 23
+              },
+              "0.9": {
+                "coverage": 0.8058608058608059,
+                "accepted": 220,
+                "errors": 12
+              },
+              "0.95": {
+                "coverage": 0.7289377289377289,
+                "accepted": 199,
+                "errors": 8
+              }
+            }
+          }
+        }
+      },
+      "crosswoz": {
+        "n": 150,
+        "tasks": {
+          "intent": {
+            "n": 150,
+            "correct": 148,
+            "accuracy": 0.9866666666666667,
+            "accuracy_wilson_95_descriptive": [
+              0.9526921436197238,
+              0.9963359476117768
+            ],
+            "macro_f1_gold_supported_classes": 0.986768726079825,
+            "supported_classes": [
+              "attraction",
+              "hotel",
+              "metro",
+              "restaurant",
+              "taxi"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "restaurant -> restaurant": 30,
+              "attraction -> attraction": 30,
+              "hotel -> hotel": 29,
+              "metro -> metro": 29,
+              "taxi -> taxi": 30,
+              "hotel -> taxi": 1,
+              "metro -> taxi": 1
+            },
+            "brier_multiclass_sum": 0.025784484304848528,
+            "nll": 0.09231581562015581,
+            "ece_10_equal_width": 0.012690953473894484,
+            "selective": {
+              "0.5": {
+                "coverage": 1.0,
+                "accepted": 150,
+                "errors": 2
+              },
+              "0.7": {
+                "coverage": 1.0,
+                "accepted": 150,
+                "errors": 2
+              },
+              "0.9": {
+                "coverage": 1.0,
+                "accepted": 150,
+                "errors": 2
+              },
+              "0.95": {
+                "coverage": 1.0,
+                "accepted": 150,
+                "errors": 2
+              }
+            }
+          }
+        }
+      }
+    },
+    "step-7110": {
+      "business": {
+        "n": 402,
+        "tasks": {
+          "intent": {
+            "n": 402,
+            "correct": 384,
+            "accuracy": 0.9552238805970149,
+            "accuracy_wilson_95_descriptive": [
+              0.9303374246540506,
+              0.9714922547085383
+            ],
+            "macro_f1_gold_supported_classes": 0.960187176874599,
+            "supported_classes": [
+              "application_detail",
+              "applications",
+              "credit",
+              "general",
+              "handoff",
+              "payment_dispute",
+              "products",
+              "repayment",
+              "security",
+              "status_code",
+              "ui_issue"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "products -> products": 66,
+              "credit -> credit": 72,
+              "applications -> applications": 72,
+              "application_detail -> application_detail": 80,
+              "status_code -> status_code": 18,
+              "status_code -> application_detail": 16,
+              "status_code -> applications": 2,
+              "ui_issue -> ui_issue": 62,
+              "payment_dispute -> payment_dispute": 2,
+              "security -> security": 2,
+              "handoff -> handoff": 2,
+              "repayment -> repayment": 4,
+              "general -> general": 4
+            },
+            "brier_multiclass_sum": 0.0885294836613066,
+            "nll": 0.6990900751958641,
+            "ece_10_equal_width": 0.04438786391289158,
+            "selective": {
+              "0.5": {
+                "coverage": 1.0,
+                "accepted": 402,
+                "errors": 18
+              },
+              "0.7": {
+                "coverage": 1.0,
+                "accepted": 402,
+                "errors": 18
+              },
+              "0.9": {
+                "coverage": 0.9975124378109452,
+                "accepted": 401,
+                "errors": 18
+              },
+              "0.95": {
+                "coverage": 0.9950248756218906,
+                "accepted": 400,
+                "errors": 17
+              }
+            }
+          },
+          "route": {
+            "n": 402,
+            "correct": 389,
+            "accuracy": 0.9676616915422885,
+            "accuracy_wilson_95_descriptive": [
+              0.9454640397355725,
+              0.9810057948008575
+            ],
+            "macro_f1_gold_supported_classes": 0.9689429855509151,
+            "supported_classes": [
+              "clarify",
+              "human",
+              "llm",
+              "tool"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "tool -> tool": 108,
+              "clarify -> clarify": 95,
+              "llm -> llm": 76,
+              "human -> human": 110,
+              "tool -> human": 3,
+              "tool -> llm": 2,
+              "clarify -> human": 4,
+              "tool -> clarify": 3,
+              "clarify -> tool": 1
+            },
+            "brier_multiclass_sum": 0.06333708903903007,
+            "nll": 0.2711473046534925,
+            "ece_10_equal_width": 0.032345504317873836,
+            "selective": {
+              "0.5": {
+                "coverage": 0.9975124378109452,
+                "accepted": 401,
+                "errors": 13
+              },
+              "0.7": {
+                "coverage": 0.9975124378109452,
+                "accepted": 401,
+                "errors": 13
+              },
+              "0.9": {
+                "coverage": 0.9900497512437811,
+                "accepted": 398,
+                "errors": 12
+              },
+              "0.95": {
+                "coverage": 0.9825870646766169,
+                "accepted": 395,
+                "errors": 10
+              }
+            }
+          },
+          "tool": {
+            "n": 402,
+            "correct": 392,
+            "accuracy": 0.9751243781094527,
+            "accuracy_wilson_95_descriptive": [
+              0.9548207602603369,
+              0.9864331673803979
+            ],
+            "macro_f1_gold_supported_classes": 0.9435772482376139,
+            "supported_classes": [
+              "explainApplicationStatus",
+              "none",
+              "queryApplicationDetail",
+              "queryLoanProducts",
+              "queryMyApplications",
+              "queryMyCreditScore"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "queryLoanProducts -> queryLoanProducts": 24,
+              "none -> none": 286,
+              "queryMyCreditScore -> queryMyCreditScore": 24,
+              "queryMyApplications -> queryMyApplications": 23,
+              "queryMyApplications -> none": 1,
+              "queryApplicationDetail -> queryApplicationDetail": 24,
+              "queryApplicationDetail -> none": 2,
+              "explainApplicationStatus -> explainApplicationStatus": 11,
+              "explainApplicationStatus -> none": 6,
+              "explainApplicationStatus -> queryMyApplications": 1
+            }
+          }
+        },
+        "human_required": 110,
+        "human_missed": 0,
+        "human_false_positive": 7,
+        "tool_required": 116,
+        "joint_tool_correct": 106,
+        "all_fields_correct": 377
+      },
+      "massive": {
+        "n": 273,
+        "tasks": {
+          "intent": {
+            "n": 273,
+            "correct": 233,
+            "accuracy": 0.8534798534798534,
+            "accuracy_wilson_95_descriptive": [
+              0.8066302085824938,
+              0.8905193527551086
+            ],
+            "macro_f1_gold_supported_classes": 0.8207664275460885,
+            "supported_classes": [
+              "alarm_query",
+              "alarm_remove",
+              "alarm_set",
+              "audio_volume_down",
+              "audio_volume_mute",
+              "audio_volume_up",
+              "calendar_query",
+              "calendar_remove",
+              "calendar_set",
+              "cooking_query",
+              "cooking_recipe",
+              "datetime_convert",
+              "datetime_query",
+              "email_addcontact",
+              "email_query",
+              "email_querycontact",
+              "email_sendemail",
+              "general_greet",
+              "general_joke",
+              "general_quirky",
+              "iot_cleaning",
+              "iot_coffee",
+              "iot_hue_lightchange",
+              "iot_hue_lightdim",
+              "iot_hue_lightoff",
+              "iot_hue_lighton",
+              "iot_hue_lightup",
+              "iot_wemo_off",
+              "iot_wemo_on",
+              "lists_createoradd",
+              "lists_query",
+              "lists_remove",
+              "music_dislikeness",
+              "music_likeness",
+              "music_query",
+              "music_settings",
+              "news_query",
+              "play_audiobook",
+              "play_game",
+              "play_music",
+              "play_podcasts",
+              "play_radio",
+              "qa_currency",
+              "qa_definition",
+              "qa_factoid",
+              "qa_maths",
+              "qa_stock",
+              "recommendation_events",
+              "recommendation_locations",
+              "recommendation_movies",
+              "social_post",
+              "social_query",
+              "takeaway_order",
+              "takeaway_query",
+              "transport_query",
+              "transport_taxi",
+              "transport_ticket",
+              "transport_traffic",
+              "weather_query"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "alarm_query -> alarm_set": 1,
+              "alarm_query -> alarm_query": 4,
+              "alarm_remove -> alarm_remove": 4,
+              "alarm_remove -> transport_taxi": 1,
+              "alarm_set -> alarm_set": 5,
+              "audio_volume_down -> audio_volume_down": 4,
+              "audio_volume_mute -> audio_volume_mute": 5,
+              "audio_volume_up -> audio_volume_up": 5,
+              "calendar_query -> calendar_query": 5,
+              "calendar_remove -> calendar_remove": 5,
+              "calendar_set -> calendar_set": 4,
+              "calendar_set -> social_post": 1,
+              "cooking_query -> cooking_recipe": 1,
+              "cooking_recipe -> cooking_recipe": 5,
+              "datetime_convert -> datetime_convert": 5,
+              "datetime_query -> datetime_query": 5,
+              "email_addcontact -> email_addcontact": 3,
+              "email_query -> email_query": 5,
+              "email_querycontact -> email_querycontact": 2,
+              "email_querycontact -> qa_factoid": 1,
+              "email_querycontact -> email_query": 1,
+              "email_querycontact -> lists_remove": 1,
+              "email_sendemail -> email_addcontact": 1,
+              "email_sendemail -> email_sendemail": 4,
+              "general_greet -> general_joke": 1,
+              "general_joke -> general_joke": 4,
+              "general_joke -> general_quirky": 1,
+              "general_quirky -> news_query": 1,
+              "general_quirky -> qa_factoid": 1,
+              "general_quirky -> general_quirky": 2,
+              "general_quirky -> lists_createoradd": 1,
+              "iot_cleaning -> iot_cleaning": 5,
+              "iot_coffee -> iot_coffee": 5,
+              "iot_hue_lightchange -> play_music": 1,
+              "iot_hue_lightchange -> iot_hue_lightchange": 4,
+              "iot_hue_lightdim -> iot_hue_lightdim": 3,
+              "iot_hue_lightdim -> iot_hue_lightup": 1,
+              "iot_hue_lightdim -> iot_hue_lightchange": 1,
+              "iot_hue_lightoff -> iot_hue_lightoff": 4,
+              "iot_hue_lightoff -> iot_wemo_off": 1,
+              "iot_hue_lighton -> iot_hue_lightdim": 1,
+              "iot_hue_lighton -> iot_hue_lighton": 2,
+              "iot_hue_lightup -> iot_hue_lightup": 3,
+              "iot_hue_lightup -> iot_hue_lighton": 2,
+              "iot_wemo_off -> iot_wemo_on": 1,
+              "iot_wemo_off -> iot_wemo_off": 2,
+              "iot_wemo_on -> iot_wemo_on": 3,
+              "lists_createoradd -> lists_createoradd": 4,
+              "lists_createoradd -> calendar_set": 1,
+              "lists_query -> lists_query": 2,
+              "lists_query -> general_quirky": 1,
+              "lists_query -> lists_createoradd": 1,
+              "lists_query -> datetime_convert": 1,
+              "lists_remove -> lists_remove": 5,
+              "music_dislikeness -> music_dislikeness": 1,
+              "music_likeness -> music_likeness": 5,
+              "music_query -> music_query": 5,
+              "music_settings -> play_music": 2,
+              "music_settings -> music_settings": 1,
+              "music_settings -> audio_volume_mute": 1,
+              "news_query -> news_query": 5,
+              "play_audiobook -> play_audiobook": 4,
+              "play_audiobook -> play_music": 1,
+              "play_game -> play_game": 5,
+              "play_music -> play_music": 5,
+              "play_podcasts -> play_podcasts": 4,
+              "play_podcasts -> play_audiobook": 1,
+              "play_radio -> music_query": 1,
+              "play_radio -> play_radio": 4,
+              "qa_currency -> qa_currency": 5,
+              "qa_definition -> general_quirky": 1,
+              "qa_definition -> qa_definition": 4,
+              "qa_factoid -> weather_query": 1,
+              "qa_factoid -> qa_factoid": 3,
+              "qa_factoid -> news_query": 1,
+              "qa_maths -> qa_maths": 4,
+              "qa_maths -> news_query": 1,
+              "qa_stock -> qa_stock": 5,
+              "recommendation_events -> recommendation_events": 5,
+              "recommendation_locations -> recommendation_locations": 5,
+              "recommendation_movies -> recommendation_events": 1,
+              "recommendation_movies -> recommendation_movies": 4,
+              "social_post -> social_post": 5,
+              "social_query -> social_query": 2,
+              "social_query -> general_quirky": 1,
+              "social_query -> social_post": 1,
+              "social_query -> lists_query": 1,
+              "takeaway_order -> takeaway_order": 4,
+              "takeaway_order -> takeaway_query": 1,
+              "takeaway_query -> takeaway_query": 5,
+              "transport_query -> transport_query": 5,
+              "transport_taxi -> transport_taxi": 5,
+              "transport_ticket -> transport_ticket": 5,
+              "transport_traffic -> transport_traffic": 5,
+              "weather_query -> weather_query": 5
+            },
+            "brier_multiclass_sum": 0.22504055620091484,
+            "nll": 0.5907741807122552,
+            "ece_10_equal_width": 0.07929043907839689,
+            "selective": {
+              "0.5": {
+                "coverage": 0.9597069597069597,
+                "accepted": 262,
+                "errors": 30
+              },
+              "0.7": {
+                "coverage": 0.9304029304029304,
+                "accepted": 254,
+                "errors": 26
+              },
+              "0.9": {
+                "coverage": 0.8424908424908425,
+                "accepted": 230,
+                "errors": 14
+              },
+              "0.95": {
+                "coverage": 0.7619047619047619,
+                "accepted": 208,
+                "errors": 10
+              }
+            }
+          }
+        }
+      },
+      "crosswoz": {
+        "n": 150,
+        "tasks": {
+          "intent": {
+            "n": 150,
+            "correct": 148,
+            "accuracy": 0.9866666666666667,
+            "accuracy_wilson_95_descriptive": [
+              0.9526921436197238,
+              0.9963359476117768
+            ],
+            "macro_f1_gold_supported_classes": 0.986768726079825,
+            "supported_classes": [
+              "attraction",
+              "hotel",
+              "metro",
+              "restaurant",
+              "taxi"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "restaurant -> restaurant": 30,
+              "attraction -> attraction": 30,
+              "hotel -> hotel": 29,
+              "metro -> metro": 29,
+              "taxi -> taxi": 30,
+              "hotel -> taxi": 1,
+              "metro -> taxi": 1
+            },
+            "brier_multiclass_sum": 0.026496507117961695,
+            "nll": 0.09966956429001424,
+            "ece_10_equal_width": 0.013872687757935815,
+            "selective": {
+              "0.5": {
+                "coverage": 1.0,
+                "accepted": 150,
+                "errors": 2
+              },
+              "0.7": {
+                "coverage": 1.0,
+                "accepted": 150,
+                "errors": 2
+              },
+              "0.9": {
+                "coverage": 0.9933333333333333,
+                "accepted": 149,
+                "errors": 2
+              },
+              "0.95": {
+                "coverage": 0.9933333333333333,
+                "accepted": 149,
+                "errors": 2
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

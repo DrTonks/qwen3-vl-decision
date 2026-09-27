@@ -1,5 +1,5 @@
 {
-  "status": "running",
+  "status": "complete",
   "config": {
     "seed": 20260927,
     "epochs": 2,
@@ -35,7 +35,7 @@
     "stage": "exploratory expanded curriculum, 2-epoch maximum; independent human acceptance pending",
     "jev_calls": 0
   },
-  "optimizer_steps": 2590,
+  "optimizer_steps": 7110,
   "total_steps": 7110,
   "steps_per_epoch": 3555,
   "examples_per_epoch": {
@@ -47,16 +47,16 @@
   },
   "trainable_parameters": 1605632,
   "sampled": {
-    "massive.intent": 7753,
-    "business.route": 3600,
-    "business.intent": 3564,
-    "business.tool": 3598,
-    "crosswoz.intent": 2204
+    "massive.intent": 21450,
+    "business.route": 9808,
+    "business.intent": 9808,
+    "business.tool": 9808,
+    "crosswoz.intent": 6000
   },
-  "elapsed_s": 12833.770300600001,
+  "elapsed_s": 34760.242133399996,
   "max_input_tokens": 898,
   "independent_human_acceptance": "pending",
   "uses_jev_outputs": false,
-  "peak_allocated_gib": 4.172472953796387,
-  "peak_reserved_gib": 4.318359375
+  "peak_allocated_gib": 4.1855669021606445,
+  "peak_reserved_gib": 4.40234375
 }

@@ -1,0 +1,23 @@
+{
+  "choice_differences_vs_frozen": {
+    "base-full": 0,
+    "trained-full": 0,
+    "trained-candidate": 0
+  },
+  "projection": "candidate",
+  "fallback": null,
+  "latency": {
+    "base-full": {
+      "p50_s": 0.5601022499977262,
+      "p95_s": 0.6078218249986094
+    },
+    "trained-full": {
+      "p50_s": 0.5764490000001388,
+      "p95_s": 0.6274407250002696
+    },
+    "trained-candidate": {
+      "p50_s": 0.5659261500004504,
+      "p95_s": 0.6164489249968028
+    }
+  }
+}

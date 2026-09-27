@@ -1,0 +1,153 @@
+{
+  "n": 402,
+  "tasks": {
+    "intent": {
+      "n": 402,
+      "correct": 401,
+      "accuracy": 0.9975124378109452,
+      "accuracy_wilson_95_descriptive": [
+        0.9860454465063201,
+        0.999560760447329
+      ],
+      "macro_f1_gold_supported_classes": 0.9857676570005336,
+      "supported_classes": [
+        "application_detail",
+        "applications",
+        "credit",
+        "general",
+        "handoff",
+        "payment_dispute",
+        "products",
+        "repayment",
+        "security",
+        "status_code",
+        "ui_issue"
+      ],
+      "invalid": 0,
+      "confusion": {
+        "products -> products": 66,
+        "credit -> credit": 72,
+        "applications -> applications": 72,
+        "application_detail -> application_detail": 80,
+        "status_code -> status_code": 36,
+        "ui_issue -> ui_issue": 62,
+        "payment_dispute -> payment_dispute": 2,
+        "security -> security": 2,
+        "handoff -> handoff": 2,
+        "repayment -> repayment": 4,
+        "general -> general": 3,
+        "general -> status_code": 1
+      },
+      "brier_multiclass_sum": 0.005019168225116517,
+      "nll": 0.020541100926922618,
+      "ece_10_equal_width": 0.002734516322673045,
+      "selective": {
+        "0.5": {
+          "coverage": 1.0,
+          "accepted": 402,
+          "errors": 1
+        },
+        "0.7": {
+          "coverage": 1.0,
+          "accepted": 402,
+          "errors": 1
+        },
+        "0.9": {
+          "coverage": 0.9975124378109452,
+          "accepted": 401,
+          "errors": 1
+        },
+        "0.95": {
+          "coverage": 0.9975124378109452,
+          "accepted": 401,
+          "errors": 1
+        }
+      }
+    },
+    "route": {
+      "n": 402,
+      "correct": 390,
+      "accuracy": 0.9701492537313433,
+      "accuracy_wilson_95_descriptive": [
+        0.9485545229704655,
+        0.9828433426007328
+      ],
+      "macro_f1_gold_supported_classes": 0.9724950000747726,
+      "supported_classes": [
+        "clarify",
+        "human",
+        "llm",
+        "tool"
+      ],
+      "invalid": 0,
+      "confusion": {
+        "tool -> tool": 111,
+        "clarify -> clarify": 93,
+        "llm -> llm": 76,
+        "human -> human": 110,
+        "tool -> human": 5,
+        "clarify -> human": 7
+      },
+      "brier_multiclass_sum": 0.0563049441135488,
+      "nll": 0.3102355105804197,
+      "ece_10_equal_width": 0.027962693615478915,
+      "selective": {
+        "0.5": {
+          "coverage": 1.0,
+          "accepted": 402,
+          "errors": 12
+        },
+        "0.7": {
+          "coverage": 1.0,
+          "accepted": 402,
+          "errors": 12
+        },
+        "0.9": {
+          "coverage": 0.9925373134328358,
+          "accepted": 399,
+          "errors": 10
+        },
+        "0.95": {
+          "coverage": 0.9900497512437811,
+          "accepted": 398,
+          "errors": 10
+        }
+      }
+    },
+    "tool": {
+      "n": 402,
+      "correct": 397,
+      "accuracy": 0.9875621890547264,
+      "accuracy_wilson_95_descriptive": [
+        0.971218077219964,
+        0.9946760055946121
+      ],
+      "macro_f1_gold_supported_classes": 0.9801982601997672,
+      "supported_classes": [
+        "explainApplicationStatus",
+        "none",
+        "queryApplicationDetail",
+        "queryLoanProducts",
+        "queryMyApplications",
+        "queryMyCreditScore"
+      ],
+      "invalid": 0,
+      "confusion": {
+        "queryLoanProducts -> queryLoanProducts": 22,
+        "none -> none": 286,
+        "queryLoanProducts -> none": 2,
+        "queryMyCreditScore -> queryMyCreditScore": 24,
+        "queryMyApplications -> none": 3,
+        "queryMyApplications -> queryMyApplications": 21,
+        "queryApplicationDetail -> queryApplicationDetail": 26,
+        "explainApplicationStatus -> explainApplicationStatus": 18
+      }
+    }
+  },
+  "human_required": 110,
+  "human_missed": 0,
+  "human_false_positive": 12,
+  "tool_required": 116,
+  "joint_tool_correct": 111,
+  "all_fields_correct": 389
+}

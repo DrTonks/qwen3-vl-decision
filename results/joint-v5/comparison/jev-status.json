@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "total": 402,
+  "completed": 402,
+  "errors": 2,
+  "started_utc": "2026-09-27T13:25:41.151191+00:00",
+  "retries": 0,
+  "requested_model": "jev-latest",
+  "expected_model": "jev-1.13.0",
+  "elapsed_s": 242.57896041870117
+}

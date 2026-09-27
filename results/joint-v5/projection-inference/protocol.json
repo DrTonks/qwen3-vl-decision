@@ -1,0 +1,11 @@
+{
+  "variant": "step-7110",
+  "source_sha256": {
+    "src/qwenlab/candidate_inference.py": "ba00fe89818d4549b2b124ecb549e1c0dff8c5513434427d8495b32656bed547",
+    "src/qwenlab/projection_validate.py": "41d3f4d30ea30f44e519417349a5390a89e4e3bd6b2089f9927e2c4bdfc45b1d"
+  },
+  "scope": "All v5 business/MASSIVE/CrossWOZ dev tasks; same model, alternating 12 business requests x3 latency",
+  "gate": "No argmax differences, max probability difference <= 1e-4; no minimum speed gain required",
+  "startup_verification": "Excluded from timing; included in correctness checks",
+  "training_changed": false
+}

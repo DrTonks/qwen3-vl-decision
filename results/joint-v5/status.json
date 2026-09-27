@@ -1,4 +1,5 @@
 {
-  "status": "running",
-  "stage": "training"
+  "status": "complete",
+  "selected": "step-7110",
+  "human_acceptance": "pending"
 }

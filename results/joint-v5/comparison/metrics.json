@@ -1,0 +1,119 @@
+{
+  "business": {
+    "base": {
+      "n": 402,
+      "accuracy_all_requests": {
+        "intent": 0.7611940298507462,
+        "route": 0.36318407960199006,
+        "tool": 0.39800995024875624
+      },
+      "errors": 0,
+      "joint_tool_correct": 82,
+      "tool_required": 116,
+      "human_missed_or_failed": 98,
+      "human_required": 110
+    },
+    "v4-reference": {
+      "n": 402,
+      "accuracy_all_requests": {
+        "intent": 0.753731343283582,
+        "route": 0.6865671641791045,
+        "tool": 0.7935323383084577
+      },
+      "errors": 0,
+      "joint_tool_correct": 41,
+      "tool_required": 116,
+      "human_missed_or_failed": 21,
+      "human_required": 110
+    },
+    "step-7110": {
+      "n": 402,
+      "accuracy_all_requests": {
+        "intent": 0.9975124378109452,
+        "route": 0.9701492537313433,
+        "tool": 0.9875621890547264
+      },
+      "errors": 0,
+      "joint_tool_correct": 111,
+      "tool_required": 116,
+      "human_missed_or_failed": 0,
+      "human_required": 110
+    },
+    "jev": {
+      "n": 402,
+      "accuracy_all_requests": {
+        "intent": 0.9925373134328358,
+        "route": 0.8706467661691543,
+        "tool": 0.9228855721393034
+      },
+      "errors": 2,
+      "joint_tool_correct": 114,
+      "tool_required": 116,
+      "human_missed_or_failed": 31,
+      "human_required": 110
+    }
+  },
+  "latency": {
+    "base-full": {
+      "p50_s": 0.5601022499977262,
+      "p95_s": 0.6078218249986094
+    },
+    "trained-full": {
+      "p50_s": 0.5764490000001388,
+      "p95_s": 0.6274407250002696
+    },
+    "trained-candidate": {
+      "p50_s": 0.5659261500004504,
+      "p95_s": 0.6164489249968028
+    },
+    "jev": {
+      "p50_s": 0.48901459999979124,
+      "p95_s": 0.596856069997375
+    }
+  },
+  "public": {
+    "massive": {
+      "base": 0.5514458641560188,
+      "selected": 0.8540685944855414,
+      "jev": 0.7800941492938803,
+      "n": 2974,
+      "jev_errors": 2,
+      "jev_source_sha256": "86efc1607d7d27203e047b50fa3b68ee1dfa258d4a7d2728c1947dc721b09ddd"
+    },
+    "crosswoz": {
+      "base": 0.64,
+      "selected": 0.985,
+      "jev": 0.87,
+      "n": 200,
+      "jev_errors": 0,
+      "jev_source_sha256": "15718173ad78aaa25d0a298336bbad0ac40e91dd58f9ec07270e97e101b1a3ef"
+    }
+  },
+  "paired_group_ci_selected_minus_jev": {
+    "intent": {
+      "n": 400,
+      "groups": 21,
+      "accuracy_difference": 0.0,
+      "group_bootstrap_95": [
+        -0.007635055783910745,
+        0.007444631680308134
+      ]
+    },
+    "route": {
+      "n": 400,
+      "groups": 21,
+      "accuracy_difference": 0.095,
+      "group_bootstrap_95": [
+        0.05084745762711865,
+        0.13035230925393335
+      ]
+    }
+  },
+  "matched_jev_latency_successful": 32,
+  "source_hashes": {
+    "results/joint-v5/comparison/protocol.json": "9a90c7be8d20a4e6bad9ada9ffae6ac803a84c9f3e4a9e7098c6a2e22291a95c",
+    "results/joint-v5/comparison/jev-business-test.jsonl": "91afa9b7687b68f37b4650ecf6c7ab6e9d8e4636aedd63ec31c63ef294867ed0",
+    "results/joint-v5/comparison/local-latency.jsonl": "a75659c6c961109fb4493cbde71fe3577da177961f899b14dd8374d4e1015514",
+    "results/joint-v5/comparison/local-metrics.json": "acb9894b3f837b95ed02a29fca6375e8ed8dc50b3ad222aa3cb93009719b90be"
+  }
+}
