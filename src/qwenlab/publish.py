@@ -9,13 +9,15 @@ from qwenlab.common import ROOT
 def publication_files(root=ROOT):
     names=['README.md','pyproject.toml','.gitignore','requirements.txt','requirements-lock.txt','requirements-train.txt','LICENSE','NOTICE.md']
     files=[root/name for name in names if (root/name).is_file()]
-    for directory in ('src','tests','scripts','configs','docs','results/baseline-v1','results/phase2','results/route-v3','results/joint-v4'):
+    for directory in ('src','tests','scripts','configs','docs','results/baseline-v1','results/phase2','results/route-v3','results/joint-v4','results/joint-v5'):
         for path in (root/directory).rglob('*'):
             if not path.is_file() or '__pycache__' in path.parts or path.suffix in ('.pyc','.log'): continue
             if path.name=='verification.json' or path.name.endswith('console.txt'): continue
             files.append(path)
     for pattern in ('*.json','*.jsonl','*.csv','*.md'):
         files.extend((root/'data').glob(pattern))
+    template = root/'data/review/support-actions-v1-template.csv'
+    if template.is_file(): files.append(template)
     return sorted(set(files))
 
 def audit(files):

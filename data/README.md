@@ -23,3 +23,9 @@ CrossWOZ 原始 `dialog_act` 元组为 intent/domain/slot/value。只保留当�
 - [CrossWOZ](https://github.com/thu-coai/CrossWOZ)，原仓库 Apache 2.0；Zhu 等，*CrossWOZ: A Large-Scale Chinese Cross-Domain Task-Oriented Dialogue Dataset*，TACL 2020。
 
 下一阶段应按真实业务抽样覆盖省略、多轮改口、方言、多个诉求、界面与后台冲突、越权请求、截图和未知产品。先定标注政策，不能按模型错例反复修改最终验收集。
+
+## 第五轮扩展
+
+`curriculum_v5.py` 新增客服状态与多轮组合，4,904 条训练 / 146 个表达组，开发、校准、测试各 402 条 / 21 组，均未经人工复核。核心训练表达和安全回放只使用 v4 train；新留出问法共享政策生成器，因此不算独立真实验收。MASSIVE 保留 v4 的 10,725 条完整去重训练样本。
+
+CrossWOZ 新取官方 train 3,000 轮，每对话最多 3 轮；val 按对话划分后开发/校准各取 150 轮。固定来源见 `crosswoz-training-source.json`，用 `python -m qwenlab.download_v5` 下载校验；不将已分析的 test 加入训练。公开详细清单在 `results/joint-v5/data-manifest.json`，方案见 [第五轮文档](../docs/10-第五轮训练与动作决策.md)。独立 500 条人工验收当前仅建立采集模板，尚未收集完成。

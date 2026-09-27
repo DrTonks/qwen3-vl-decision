@@ -38,3 +38,5 @@ __pycache__/
 .mypy_cache/
 .ruff_cache/
 data/raw/
+data/review/*
+!data/review/support-actions-v1-template.csv

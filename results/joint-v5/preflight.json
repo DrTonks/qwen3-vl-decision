@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "train_rows_tokenized": 18629,
+  "longest_input_tokens": 898,
+  "micro_batch": 2,
+  "optimizer_steps": 2,
+  "elapsed_s": 3.9022408000000723,
+  "peak_allocated_gib": 4.267740726470947,
+  "peak_reserved_gib": 4.591796875,
+  "note": "Disposable adapter; no held-out labels or weights used in preflight"
+}

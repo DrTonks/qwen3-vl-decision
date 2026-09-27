@@ -1,0 +1,16 @@
+{
+  "revision": "df82c9fdff91b9b130f2d6b89110d3870ba6260e",
+  "repository": "https://github.com/thu-coai/CrossWOZ",
+  "files": {
+    "crosswoz-train.json.zip": {
+      "url": "https://raw.githubusercontent.com/thu-coai/CrossWOZ/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz/train.json.zip",
+      "sha256": "b81f6a0845011bb4593d21dd58e2d76af4dd5d52e300ecc68cb8dee17ccc3cf8",
+      "bytes": 13624132
+    },
+    "crosswoz-val.json.zip": {
+      "url": "https://raw.githubusercontent.com/thu-coai/CrossWOZ/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz/val.json.zip",
+      "sha256": "b2b717990f6f0a1c98daaf5dc465e61d42f7de69c0d31e88e674275b1f34c94c",
+      "bytes": 1368203
+    }
+  }
+}

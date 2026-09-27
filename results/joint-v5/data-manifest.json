@@ -1,0 +1,251 @@
+{
+  "version": "joint-v5",
+  "business_label_status": "synthetic_unreviewed",
+  "limits": "Shared policy/scenario generator; template and counterfactual rows are correlated. Not independent human acceptance.",
+  "business": {
+    "train": {
+      "rows": 4904,
+      "groups": 146,
+      "conditions": {
+        "live": 288,
+        "guest": 360,
+        "unknown_auth": 288,
+        "complete": 288,
+        "partial": 288,
+        "stale": 288,
+        "unavailable": 288,
+        "timeout_once": 288,
+        "timeout_twice": 288,
+        "denied": 288,
+        "empty_success": 144,
+        "not_found": 144,
+        "other_owner": 216,
+        "missing_id": 72,
+        "code_0": 72,
+        "code_1": 72,
+        "code_2": 72,
+        "missing_code": 72,
+        "unknown_code": 72,
+        "tool_down": 72,
+        "no_page": 72,
+        "no_reason": 72,
+        "failed_troubleshooting": 72,
+        "known_reason_4": 72,
+        "known_reason_5": 72,
+        "known_reason_6": 72,
+        "known_reason_7": 72,
+        "known_reason_8": 72,
+        "known_reason_9": 72,
+        "standard": 224,
+        "boundary": 72
+      },
+      "route_counts": {
+        "tool": 1376,
+        "clarify": 1184,
+        "llm": 944,
+        "human": 1400
+      }
+    },
+    "dev": {
+      "rows": 402,
+      "groups": 21,
+      "conditions": {
+        "live": 24,
+        "guest": 30,
+        "unknown_auth": 24,
+        "complete": 24,
+        "partial": 24,
+        "stale": 24,
+        "unavailable": 24,
+        "timeout_once": 24,
+        "timeout_twice": 24,
+        "denied": 24,
+        "empty_success": 12,
+        "not_found": 12,
+        "other_owner": 18,
+        "missing_id": 6,
+        "code_0": 6,
+        "code_1": 6,
+        "code_2": 6,
+        "missing_code": 6,
+        "unknown_code": 6,
+        "tool_down": 6,
+        "no_page": 6,
+        "no_reason": 6,
+        "failed_troubleshooting": 6,
+        "known_reason_4": 6,
+        "known_reason_5": 6,
+        "known_reason_6": 6,
+        "known_reason_7": 6,
+        "known_reason_8": 6,
+        "known_reason_9": 6,
+        "boundary": 18
+      },
+      "route_counts": {
+        "tool": 116,
+        "clarify": 100,
+        "llm": 76,
+        "human": 110
+      }
+    },
+    "calibration": {
+      "rows": 402,
+      "groups": 21,
+      "conditions": {
+        "live": 24,
+        "guest": 30,
+        "unknown_auth": 24,
+        "complete": 24,
+        "partial": 24,
+        "stale": 24,
+        "unavailable": 24,
+        "timeout_once": 24,
+        "timeout_twice": 24,
+        "denied": 24,
+        "empty_success": 12,
+        "not_found": 12,
+        "other_owner": 18,
+        "missing_id": 6,
+        "code_0": 6,
+        "code_1": 6,
+        "code_2": 6,
+        "missing_code": 6,
+        "unknown_code": 6,
+        "tool_down": 6,
+        "no_page": 6,
+        "no_reason": 6,
+        "failed_troubleshooting": 6,
+        "known_reason_4": 6,
+        "known_reason_5": 6,
+        "known_reason_6": 6,
+        "known_reason_7": 6,
+        "known_reason_8": 6,
+        "known_reason_9": 6,
+        "boundary": 18
+      },
+      "route_counts": {
+        "tool": 116,
+        "clarify": 100,
+        "llm": 76,
+        "human": 110
+      }
+    },
+    "test": {
+      "rows": 402,
+      "groups": 21,
+      "conditions": {
+        "live": 24,
+        "guest": 30,
+        "unknown_auth": 24,
+        "complete": 24,
+        "partial": 24,
+        "stale": 24,
+        "unavailable": 24,
+        "timeout_once": 24,
+        "timeout_twice": 24,
+        "denied": 24,
+        "empty_success": 12,
+        "not_found": 12,
+        "other_owner": 18,
+        "missing_id": 6,
+        "code_0": 6,
+        "code_1": 6,
+        "code_2": 6,
+        "missing_code": 6,
+        "unknown_code": 6,
+        "tool_down": 6,
+        "no_page": 6,
+        "no_reason": 6,
+        "failed_troubleshooting": 6,
+        "known_reason_4": 6,
+        "known_reason_5": 6,
+        "known_reason_6": 6,
+        "known_reason_7": 6,
+        "known_reason_8": 6,
+        "known_reason_9": 6,
+        "boundary": 18
+      },
+      "route_counts": {
+        "tool": 116,
+        "clarify": 100,
+        "llm": 76,
+        "human": 110
+      }
+    }
+  },
+  "crosswoz": {
+    "train_source": "official train only; max 3 turns/dialogue, max 600/label",
+    "dev_calibration": "official validation split by dialogue",
+    "test": "frozen v2 200-row regression, already inspected",
+    "source": {
+      "revision": "df82c9fdff91b9b130f2d6b89110d3870ba6260e",
+      "repository": "https://github.com/thu-coai/CrossWOZ",
+      "files": {
+        "crosswoz-train.json.zip": {
+          "url": "https://raw.githubusercontent.com/thu-coai/CrossWOZ/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz/train.json.zip",
+          "sha256": "b81f6a0845011bb4593d21dd58e2d76af4dd5d52e300ecc68cb8dee17ccc3cf8",
+          "bytes": 13624132
+        },
+        "crosswoz-val.json.zip": {
+          "url": "https://raw.githubusercontent.com/thu-coai/CrossWOZ/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz/val.json.zip",
+          "sha256": "b2b717990f6f0a1c98daaf5dc465e61d42f7de69c0d31e88e674275b1f34c94c",
+          "bytes": 1368203
+        }
+      }
+    }
+  },
+  "files": {
+    "business-calibration.jsonl": {
+      "rows": 402,
+      "sha256": "f9f8fc66ec1c6d3c5cd1b06d51801d272b25ad243986626211a178a336a4b927"
+    },
+    "business-dev.jsonl": {
+      "rows": 402,
+      "sha256": "246ba99eab0d0ccc638d08d978d87598230dc41c9a145e963c6e968a03625e10"
+    },
+    "business-test.jsonl": {
+      "rows": 402,
+      "sha256": "1b0e3fd2f0de07d94e44f783e7d026c267b9071bd592eb05f5e1efa82dd33c9d"
+    },
+    "business-train.jsonl": {
+      "rows": 4904,
+      "sha256": "58dd7a7e6670f5b9f5a0456f4d7ab0e9a4ac5d96ca14fcdc3c30069138fdd8b1"
+    },
+    "crosswoz-calibration.jsonl": {
+      "rows": 150,
+      "sha256": "3e707473c3f689a4e831fe309acfe6d5dd31f595d6470f07c052500b50e43ce4"
+    },
+    "crosswoz-dev.jsonl": {
+      "rows": 150,
+      "sha256": "6f7e2f48f3e9e27357e156abc203c53a99229fd8a289841c5702f7c18d069a0a"
+    },
+    "crosswoz-test.jsonl": {
+      "rows": 200,
+      "sha256": "431918d072a75a39e4572e3b373dd286ed0259f085ac7f2e95bbf76fba1c359e"
+    },
+    "crosswoz-train.jsonl": {
+      "rows": 3000,
+      "sha256": "3dcf83b76c26ee26a1489d50f22b2fca7b25f79fb182af1cc0e52c52e9ab3b9c"
+    },
+    "massive-calibration.jsonl": {
+      "rows": 313,
+      "sha256": "59404c8f4337ee100347a18f0f0b43e29690b4b2f884607ac5c379e9ec8a6cd6"
+    },
+    "massive-dev.jsonl": {
+      "rows": 273,
+      "sha256": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2"
+    },
+    "massive-test.jsonl": {
+      "rows": 2974,
+      "sha256": "f6835bfc538e57675b47d0affc73a4535e314562e36082f4ed564bb96a60afbb"
+    },
+    "massive-train.jsonl": {
+      "rows": 10725,
+      "sha256": "3385d841339741936619be2426427541abbbb2a68840b4f4e53c9549f78a3cfb"
+    }
+  },
+  "source_hashes": {
+    "src/qwenlab/curriculum_v5.py": "0ad9a25820540f3dfc2fb8e4848322ad386f28356006c1740afaa1f228c7f958",
+    "configs/decision-v5.json": "ba4ca13ed1da614864a37c533fd9c23b6dd1a34b2afc1141fc1129020a8faa4d"
+  }
+}

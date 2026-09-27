@@ -1,0 +1,4 @@
+{
+  "status": "waiting",
+  "dependency": "v5 pipeline completion; no GPU contention"
+}

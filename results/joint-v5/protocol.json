@@ -1,0 +1,51 @@
+{
+  "config": {
+    "seed": 20260927,
+    "epochs": 2,
+    "micro_batch": 2,
+    "gradient_accumulation": 4,
+    "learning_rate": 7e-05,
+    "warmup_fraction": 0.05,
+    "weight_decay": 0.01,
+    "lora_r": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.05,
+    "max_tokens": 2048,
+    "checkpoint_every": 100,
+    "eval_fractions": [
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "weights": {
+      "massive.intent": 0.5,
+      "crosswoz.intent": 0.35,
+      "business.intent": 1.0,
+      "business.route": 2.0,
+      "business.tool": 1.5
+    },
+    "business_tasks": [
+      "intent",
+      "route",
+      "tool"
+    ],
+    "selection": "geometric mean of MASSIVE intent, business intent, route macro F1, joint tool success; no component >.03 below v4 reference on v5 dev; no extra human miss; CrossWOZ accuracy >= v4 reference minus .03; base and v4 reference eligible",
+    "stage": "exploratory expanded curriculum, 2-epoch maximum; independent human acceptance pending",
+    "jev_calls": 0
+  },
+  "manifest_sha256": "38628f223f9824264196cc11dfc12ec72891b3d6029bc12b7b39a2a8a7efcb92",
+  "source_sha256": {
+    "src/qwenlab/joint_v5.py": "f960a36749079cda5739cfeadb6207530ecbf31b5c10790d6d81be718b4c4129",
+    "src/qwenlab/curriculum_v5.py": "0ad9a25820540f3dfc2fb8e4848322ad386f28356006c1740afaa1f228c7f958",
+    "src/qwenlab/joint_v4.py": "26378ca85470108c880bb4eae98f93a6969d5938c96b238596727c2e8d46e0db",
+    "src/qwenlab/modeling.py": "fbcac24e76e3afee2804e09669a52786cf2d603bbcb9c95ccd423d2673d2264e",
+    "configs/joint-v5.json": "ac58fa035c0accbcebe7f654e87fb7e3d7849d8eb9755a60342399af2a1d6626",
+    "configs/decision-v5.json": "ba4ca13ed1da614864a37c533fd9c23b6dd1a34b2afc1141fc1129020a8faa4d"
+  },
+  "reference_adapter": ".local/checkpoints/joint-v4/step-1582",
+  "reference_adapter_sha256": "e2a10a2ac6a26e84a584848ad33cb443e6e9eba1d052922bcf324a651a98703c",
+  "label_status": "synthetic_unreviewed; independent human acceptance pending",
+  "evaluation_batch": 1,
+  "training_reads_jev": false
+}

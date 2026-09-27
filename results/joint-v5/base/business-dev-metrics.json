@@ -1,0 +1,175 @@
+{
+  "n": 402,
+  "tasks": {
+    "intent": {
+      "n": 402,
+      "correct": 308,
+      "accuracy": 0.7661691542288557,
+      "accuracy_wilson_95_descriptive": [
+        0.7223922149699755,
+        0.8049071057502266
+      ],
+      "macro_f1_gold_supported_classes": 0.5139562071730609,
+      "supported_classes": [
+        "application_detail",
+        "applications",
+        "credit",
+        "general",
+        "handoff",
+        "payment_dispute",
+        "products",
+        "repayment",
+        "security",
+        "status_code",
+        "ui_issue"
+      ],
+      "invalid": 0,
+      "confusion": {
+        "products -> products": 65,
+        "products -> applications": 1,
+        "credit -> credit": 62,
+        "credit -> application_detail": 10,
+        "applications -> applications": 72,
+        "application_detail -> application_detail": 80,
+        "status_code -> application_detail": 34,
+        "status_code -> status_code": 2,
+        "ui_issue -> ui_issue": 24,
+        "ui_issue -> application_detail": 22,
+        "ui_issue -> applications": 16,
+        "payment_dispute -> application_detail": 2,
+        "security -> security": 2,
+        "handoff -> handoff": 1,
+        "handoff -> application_detail": 1,
+        "repayment -> application_detail": 3,
+        "repayment -> handoff": 1,
+        "general -> application_detail": 4
+      },
+      "brier_multiclass_sum": 0.38895648265280924,
+      "nll": 1.8299142725746687,
+      "ece_10_equal_width": 0.16206230037014097,
+      "selective": {
+        "0.5": {
+          "coverage": 0.9800995024875622,
+          "accepted": 394,
+          "errors": 89
+        },
+        "0.7": {
+          "coverage": 0.9129353233830846,
+          "accepted": 367,
+          "errors": 69
+        },
+        "0.9": {
+          "coverage": 0.7711442786069652,
+          "accepted": 310,
+          "errors": 31
+        },
+        "0.95": {
+          "coverage": 0.7139303482587065,
+          "accepted": 287,
+          "errors": 15
+        }
+      }
+    },
+    "route": {
+      "n": 402,
+      "correct": 157,
+      "accuracy": 0.39054726368159204,
+      "accuracy_wilson_95_descriptive": [
+        0.34410579609658787,
+        0.43906083837360943
+      ],
+      "macro_f1_gold_supported_classes": 0.3012293262293262,
+      "supported_classes": [
+        "clarify",
+        "human",
+        "llm",
+        "tool"
+      ],
+      "invalid": 0,
+      "confusion": {
+        "tool -> tool": 114,
+        "clarify -> tool": 67,
+        "clarify -> clarify": 25,
+        "llm -> tool": 38,
+        "human -> tool": 94,
+        "human -> clarify": 1,
+        "tool -> llm": 1,
+        "llm -> llm": 5,
+        "human -> llm": 2,
+        "clarify -> human": 8,
+        "human -> human": 13,
+        "llm -> human": 33,
+        "tool -> human": 1
+      },
+      "brier_multiclass_sum": 0.9654118633486696,
+      "nll": 2.2251309413243945,
+      "ece_10_equal_width": 0.3985607890659744,
+      "selective": {
+        "0.5": {
+          "coverage": 0.9253731343283582,
+          "accepted": 372,
+          "errors": 225
+        },
+        "0.7": {
+          "coverage": 0.6965174129353234,
+          "accepted": 280,
+          "errors": 166
+        },
+        "0.9": {
+          "coverage": 0.3407960199004975,
+          "accepted": 137,
+          "errors": 77
+        },
+        "0.95": {
+          "coverage": 0.18407960199004975,
+          "accepted": 74,
+          "errors": 35
+        }
+      }
+    },
+    "tool": {
+      "n": 402,
+      "correct": 176,
+      "accuracy": 0.43781094527363185,
+      "accuracy_wilson_95_descriptive": [
+        0.3901276906186723,
+        0.4866715335121217
+      ],
+      "macro_f1_gold_supported_classes": 0.4191659179566156,
+      "supported_classes": [
+        "explainApplicationStatus",
+        "none",
+        "queryApplicationDetail",
+        "queryLoanProducts",
+        "queryMyApplications",
+        "queryMyCreditScore"
+      ],
+      "invalid": 0,
+      "confusion": {
+        "queryLoanProducts -> queryLoanProducts": 24,
+        "none -> queryLoanProducts": 38,
+        "none -> none": 87,
+        "queryMyCreditScore -> queryMyCreditScore": 18,
+        "queryMyCreditScore -> queryMyApplications": 4,
+        "none -> queryMyCreditScore": 35,
+        "none -> queryMyApplications": 58,
+        "queryMyCreditScore -> explainApplicationStatus": 2,
+        "none -> explainApplicationStatus": 47,
+        "queryMyApplications -> queryMyApplications": 23,
+        "queryMyApplications -> none": 1,
+        "queryApplicationDetail -> explainApplicationStatus": 17,
+        "none -> queryApplicationDetail": 21,
+        "queryApplicationDetail -> queryApplicationDetail": 8,
+        "explainApplicationStatus -> explainApplicationStatus": 16,
+        "explainApplicationStatus -> queryMyApplications": 2,
+        "queryApplicationDetail -> none": 1
+      }
+    }
+  },
+  "human_required": 110,
+  "human_missed": 97,
+  "human_false_positive": 42,
+  "tool_required": 116,
+  "joint_tool_correct": 89,
+  "all_fields_correct": 101
+}

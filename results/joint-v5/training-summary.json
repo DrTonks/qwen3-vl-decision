@@ -1,0 +1,62 @@
+{
+  "status": "running",
+  "config": {
+    "seed": 20260927,
+    "epochs": 2,
+    "micro_batch": 2,
+    "gradient_accumulation": 4,
+    "learning_rate": 7e-05,
+    "warmup_fraction": 0.05,
+    "weight_decay": 0.01,
+    "lora_r": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.05,
+    "max_tokens": 2048,
+    "checkpoint_every": 100,
+    "eval_fractions": [
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "weights": {
+      "massive.intent": 0.5,
+      "crosswoz.intent": 0.35,
+      "business.intent": 1.0,
+      "business.route": 2.0,
+      "business.tool": 1.5
+    },
+    "business_tasks": [
+      "intent",
+      "route",
+      "tool"
+    ],
+    "selection": "geometric mean of MASSIVE intent, business intent, route macro F1, joint tool success; no component >.03 below v4 reference on v5 dev; no extra human miss; CrossWOZ accuracy >= v4 reference minus .03; base and v4 reference eligible",
+    "stage": "exploratory expanded curriculum, 2-epoch maximum; independent human acceptance pending",
+    "jev_calls": 0
+  },
+  "optimizer_steps": 210,
+  "total_steps": 7110,
+  "steps_per_epoch": 3555,
+  "examples_per_epoch": {
+    "massive.intent": 10725,
+    "crosswoz.intent": 3000,
+    "business.intent": 4904,
+    "business.route": 4904,
+    "business.tool": 4904
+  },
+  "trainable_parameters": 1605632,
+  "sampled": {
+    "massive.intent": 620,
+    "business.route": 284,
+    "business.intent": 300,
+    "business.tool": 292,
+    "crosswoz.intent": 184
+  },
+  "elapsed_s": 1033.2271007,
+  "max_input_tokens": 898,
+  "independent_human_acceptance": "pending",
+  "uses_jev_outputs": false,
+  "peak_allocated_gib": 4.171667098999023,
+  "peak_reserved_gib": 4.318359375
+}

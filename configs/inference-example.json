@@ -1,0 +1,6 @@
+{
+  "message": "请查一下我这笔申请的详细审核情况。",
+  "history": [],
+  "state": {"authenticated": true, "application_id": 7301},
+  "available_tools": ["queryLoanProducts", "queryMyCreditScore", "queryMyApplications", "queryApplicationDetail", "explainApplicationStatus"]
+}
