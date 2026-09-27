@@ -1,0 +1,1182 @@
+{
+  "created_utc": "2026-09-27T14:10:11.981552+00:00",
+  "selected": "step-7110",
+  "levels_requested_added_tokens": [
+    0,
+    256,
+    640,
+    1024
+  ],
+  "base_questions": 12,
+  "repeats": 3,
+  "api_max_requests": 144,
+  "api_retries": 0,
+  "api_expected_model": "jev-1.13.0",
+  "schedule": [
+    {
+      "case_id": "v5-ui_issue-heldout-4-known_reason_4-1/plus-640",
+      "repeat": 0,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-application_detail-heldout-4-timeout_once-0/plus-640",
+      "repeat": 0,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-ui_issue-heldout-4-known_reason_4-1/plus-256",
+      "repeat": 0,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-status_code-heldout-5-tool_down-0/plus-640",
+      "repeat": 0,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-application_detail-heldout-5-other_owner-2/plus-0",
+      "repeat": 0,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-ui_issue-heldout-5-known_reason_9-2/plus-256",
+      "repeat": 0,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-application_detail-heldout-4-timeout_once-0/plus-0",
+      "repeat": 0,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-credit-heldout-4-timeout_once-2/plus-1024",
+      "repeat": 0,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-status_code-heldout-4-unknown_code-0/plus-1024",
+      "repeat": 0,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-products-heldout-4-guest-0/plus-0",
+      "repeat": 0,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-products-heldout-4-guest-0/plus-256",
+      "repeat": 0,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-application_detail-heldout-5-other_owner-2/plus-640",
+      "repeat": 0,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-applications-heldout-4-timeout_twice-0/plus-1024",
+      "repeat": 0,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-application_detail-heldout-5-other_owner-2/plus-256",
+      "repeat": 0,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-ui_issue-heldout-5-known_reason_9-2/plus-640",
+      "repeat": 0,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-credit-heldout-4-timeout_once-2/plus-0",
+      "repeat": 0,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-products-heldout-4-guest-0/plus-1024",
+      "repeat": 0,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-credit-heldout-4-timeout_once-2/plus-256",
+      "repeat": 0,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-application_detail-heldout-4-timeout_once-0/plus-1024",
+      "repeat": 0,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-ui_issue-heldout-5-known_reason_9-2/plus-0",
+      "repeat": 0,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-credit-heldout-5-complete-2/plus-256",
+      "repeat": 0,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-products-heldout-5-unknown_auth-1/plus-256",
+      "repeat": 0,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-applications-heldout-5-partial-1/plus-256",
+      "repeat": 0,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-status_code-heldout-4-unknown_code-0/plus-256",
+      "repeat": 0,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-ui_issue-heldout-4-known_reason_4-1/plus-1024",
+      "repeat": 0,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-status_code-heldout-5-tool_down-0/plus-256",
+      "repeat": 0,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-applications-heldout-5-partial-1/plus-640",
+      "repeat": 0,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-applications-heldout-5-partial-1/plus-1024",
+      "repeat": 0,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-credit-heldout-5-complete-2/plus-1024",
+      "repeat": 0,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-products-heldout-5-unknown_auth-1/plus-640",
+      "repeat": 0,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-credit-heldout-4-timeout_once-2/plus-640",
+      "repeat": 0,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-application_detail-heldout-5-other_owner-2/plus-1024",
+      "repeat": 0,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-applications-heldout-5-partial-1/plus-0",
+      "repeat": 0,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-products-heldout-5-unknown_auth-1/plus-1024",
+      "repeat": 0,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-applications-heldout-4-timeout_twice-0/plus-0",
+      "repeat": 0,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-applications-heldout-4-timeout_twice-0/plus-640",
+      "repeat": 0,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-status_code-heldout-5-tool_down-0/plus-0",
+      "repeat": 0,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-applications-heldout-4-timeout_twice-0/plus-256",
+      "repeat": 0,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-products-heldout-4-guest-0/plus-640",
+      "repeat": 0,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-status_code-heldout-4-unknown_code-0/plus-640",
+      "repeat": 0,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-credit-heldout-5-complete-2/plus-640",
+      "repeat": 0,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-status_code-heldout-4-unknown_code-0/plus-0",
+      "repeat": 0,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-ui_issue-heldout-5-known_reason_9-2/plus-1024",
+      "repeat": 0,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-products-heldout-5-unknown_auth-1/plus-0",
+      "repeat": 0,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-ui_issue-heldout-4-known_reason_4-1/plus-0",
+      "repeat": 0,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-credit-heldout-5-complete-2/plus-0",
+      "repeat": 0,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-status_code-heldout-5-tool_down-0/plus-1024",
+      "repeat": 0,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-application_detail-heldout-4-timeout_once-0/plus-256",
+      "repeat": 0,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-credit-heldout-4-timeout_once-2/plus-1024",
+      "repeat": 1,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-ui_issue-heldout-4-known_reason_4-1/plus-256",
+      "repeat": 1,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-ui_issue-heldout-5-known_reason_9-2/plus-640",
+      "repeat": 1,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-applications-heldout-4-timeout_twice-0/plus-256",
+      "repeat": 1,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-applications-heldout-4-timeout_twice-0/plus-0",
+      "repeat": 1,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-ui_issue-heldout-5-known_reason_9-2/plus-256",
+      "repeat": 1,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-credit-heldout-4-timeout_once-2/plus-0",
+      "repeat": 1,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-applications-heldout-5-partial-1/plus-256",
+      "repeat": 1,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-application_detail-heldout-5-other_owner-2/plus-0",
+      "repeat": 1,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-products-heldout-4-guest-0/plus-0",
+      "repeat": 1,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-ui_issue-heldout-5-known_reason_9-2/plus-0",
+      "repeat": 1,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-applications-heldout-5-partial-1/plus-640",
+      "repeat": 1,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-application_detail-heldout-4-timeout_once-0/plus-256",
+      "repeat": 1,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-credit-heldout-5-complete-2/plus-0",
+      "repeat": 1,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-ui_issue-heldout-4-known_reason_4-1/plus-0",
+      "repeat": 1,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-status_code-heldout-5-tool_down-0/plus-1024",
+      "repeat": 1,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-ui_issue-heldout-4-known_reason_4-1/plus-640",
+      "repeat": 1,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-applications-heldout-4-timeout_twice-0/plus-1024",
+      "repeat": 1,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-application_detail-heldout-4-timeout_once-0/plus-1024",
+      "repeat": 1,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-application_detail-heldout-5-other_owner-2/plus-1024",
+      "repeat": 1,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-status_code-heldout-4-unknown_code-0/plus-256",
+      "repeat": 1,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-products-heldout-5-unknown_auth-1/plus-640",
+      "repeat": 1,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-credit-heldout-5-complete-2/plus-256",
+      "repeat": 1,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-status_code-heldout-4-unknown_code-0/plus-1024",
+      "repeat": 1,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-applications-heldout-5-partial-1/plus-1024",
+      "repeat": 1,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-products-heldout-5-unknown_auth-1/plus-1024",
+      "repeat": 1,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-application_detail-heldout-4-timeout_once-0/plus-0",
+      "repeat": 1,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-products-heldout-5-unknown_auth-1/plus-256",
+      "repeat": 1,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-applications-heldout-4-timeout_twice-0/plus-640",
+      "repeat": 1,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-ui_issue-heldout-5-known_reason_9-2/plus-1024",
+      "repeat": 1,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-products-heldout-5-unknown_auth-1/plus-0",
+      "repeat": 1,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-status_code-heldout-4-unknown_code-0/plus-640",
+      "repeat": 1,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-status_code-heldout-5-tool_down-0/plus-0",
+      "repeat": 1,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-products-heldout-4-guest-0/plus-1024",
+      "repeat": 1,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-status_code-heldout-5-tool_down-0/plus-640",
+      "repeat": 1,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-applications-heldout-5-partial-1/plus-0",
+      "repeat": 1,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-products-heldout-4-guest-0/plus-640",
+      "repeat": 1,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-status_code-heldout-4-unknown_code-0/plus-0",
+      "repeat": 1,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-credit-heldout-5-complete-2/plus-1024",
+      "repeat": 1,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-credit-heldout-4-timeout_once-2/plus-256",
+      "repeat": 1,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-application_detail-heldout-5-other_owner-2/plus-640",
+      "repeat": 1,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-products-heldout-4-guest-0/plus-256",
+      "repeat": 1,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-credit-heldout-4-timeout_once-2/plus-640",
+      "repeat": 1,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-application_detail-heldout-4-timeout_once-0/plus-640",
+      "repeat": 1,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-application_detail-heldout-5-other_owner-2/plus-256",
+      "repeat": 1,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-ui_issue-heldout-4-known_reason_4-1/plus-1024",
+      "repeat": 1,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-status_code-heldout-5-tool_down-0/plus-256",
+      "repeat": 1,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-credit-heldout-5-complete-2/plus-640",
+      "repeat": 1,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-application_detail-heldout-5-other_owner-2/plus-256",
+      "repeat": 2,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-application_detail-heldout-5-other_owner-2/plus-1024",
+      "repeat": 2,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-status_code-heldout-5-tool_down-0/plus-0",
+      "repeat": 2,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-products-heldout-5-unknown_auth-1/plus-640",
+      "repeat": 2,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-credit-heldout-4-timeout_once-2/plus-256",
+      "repeat": 2,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-applications-heldout-5-partial-1/plus-640",
+      "repeat": 2,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-ui_issue-heldout-5-known_reason_9-2/plus-1024",
+      "repeat": 2,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-status_code-heldout-5-tool_down-0/plus-256",
+      "repeat": 2,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-credit-heldout-4-timeout_once-2/plus-640",
+      "repeat": 2,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-ui_issue-heldout-5-known_reason_9-2/plus-256",
+      "repeat": 2,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-applications-heldout-4-timeout_twice-0/plus-640",
+      "repeat": 2,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-applications-heldout-4-timeout_twice-0/plus-0",
+      "repeat": 2,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-products-heldout-5-unknown_auth-1/plus-0",
+      "repeat": 2,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-applications-heldout-5-partial-1/plus-0",
+      "repeat": 2,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-products-heldout-4-guest-0/plus-0",
+      "repeat": 2,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-ui_issue-heldout-4-known_reason_4-1/plus-0",
+      "repeat": 2,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-products-heldout-4-guest-0/plus-640",
+      "repeat": 2,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-credit-heldout-5-complete-2/plus-1024",
+      "repeat": 2,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-ui_issue-heldout-4-known_reason_4-1/plus-256",
+      "repeat": 2,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-ui_issue-heldout-5-known_reason_9-2/plus-0",
+      "repeat": 2,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-products-heldout-4-guest-0/plus-256",
+      "repeat": 2,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-status_code-heldout-4-unknown_code-0/plus-640",
+      "repeat": 2,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-status_code-heldout-4-unknown_code-0/plus-256",
+      "repeat": 2,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-status_code-heldout-5-tool_down-0/plus-640",
+      "repeat": 2,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-application_detail-heldout-4-timeout_once-0/plus-1024",
+      "repeat": 2,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-application_detail-heldout-5-other_owner-2/plus-640",
+      "repeat": 2,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-credit-heldout-5-complete-2/plus-640",
+      "repeat": 2,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-ui_issue-heldout-4-known_reason_4-1/plus-640",
+      "repeat": 2,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-status_code-heldout-4-unknown_code-0/plus-1024",
+      "repeat": 2,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-credit-heldout-4-timeout_once-2/plus-1024",
+      "repeat": 2,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-applications-heldout-5-partial-1/plus-256",
+      "repeat": 2,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-products-heldout-5-unknown_auth-1/plus-256",
+      "repeat": 2,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-status_code-heldout-4-unknown_code-0/plus-0",
+      "repeat": 2,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-application_detail-heldout-5-other_owner-2/plus-0",
+      "repeat": 2,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-applications-heldout-4-timeout_twice-0/plus-1024",
+      "repeat": 2,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-products-heldout-4-guest-0/plus-1024",
+      "repeat": 2,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-ui_issue-heldout-4-known_reason_4-1/plus-1024",
+      "repeat": 2,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-application_detail-heldout-4-timeout_once-0/plus-256",
+      "repeat": 2,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-status_code-heldout-5-tool_down-0/plus-1024",
+      "repeat": 2,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-applications-heldout-5-partial-1/plus-1024",
+      "repeat": 2,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-application_detail-heldout-4-timeout_once-0/plus-0",
+      "repeat": 2,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-application_detail-heldout-4-timeout_once-0/plus-640",
+      "repeat": 2,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-credit-heldout-5-complete-2/plus-256",
+      "repeat": 2,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-ui_issue-heldout-5-known_reason_9-2/plus-640",
+      "repeat": 2,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-applications-heldout-4-timeout_twice-0/plus-256",
+      "repeat": 2,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-credit-heldout-4-timeout_once-2/plus-0",
+      "repeat": 2,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    },
+    {
+      "case_id": "v5-credit-heldout-5-complete-2/plus-0",
+      "repeat": 2,
+      "providers": [
+        "qwen",
+        "jev"
+      ]
+    },
+    {
+      "case_id": "v5-products-heldout-5-unknown_auth-1/plus-1024",
+      "repeat": 2,
+      "providers": [
+        "jev",
+        "qwen"
+      ]
+    }
+  ],
+  "source_sha256": "b416706092a4e76b1eb3b0d188212c09012264fe2cf38012972cc86d13985eb7",
+  "cases_sha256": "9ade3d9e96141b36845013b7e544f9f33d91a379254294f128100de16f8bf45f",
+  "spec_sha256": "ba4ca13ed1da614864a37c533fd9c23b6dd1a34b2afc1141fc1129020a8faa4d",
+  "data_sha256": "1b0e3fd2f0de07d94e44f783e7d026c267b9071bd592eb05f5e1efa82dd33c9d",
+  "method": "same question/state/policy/choices; prepend completed neutral reading history; randomized length order; counterbalanced provider order; batch1; Qwen three serial candidate forwards, Jev one HTTP request",
+  "limits": [
+    "12 synthetic unreviewed base questions; not a representative accuracy benchmark",
+    "added history is controlled distractor content, not mathematically pure length",
+    "local input token count and provider usage are different tokenizers/serializations",
+    "remote cache/load/hardware unknown; exact repeated payloads may be cached",
+    "Qwen load/warmup excluded; Jev network included; no throughput measurement"
+  ],
+  "no_training_use": true
+}

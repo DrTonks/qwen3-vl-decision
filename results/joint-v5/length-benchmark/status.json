@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "completed": 288,
+  "total": 288,
+  "api_requests": 144,
+  "api_errors": 0,
+  "started_utc": "2026-09-27T14:10:40.412567+00:00",
+  "elapsed_s": 255.99054598808289,
+  "last": {
+    "provider": "qwen",
+    "level": 1024,
+    "repeat": 2
+  },
+  "projection": "candidate",
+  "fallback": null
+}

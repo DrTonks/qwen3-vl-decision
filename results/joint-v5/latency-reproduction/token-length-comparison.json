@@ -1,0 +1,38 @@
+{
+  "old32": {
+    "intent": {
+      "mean": 574.9375,
+      "min": 564,
+      "max": 607
+    },
+    "route": {
+      "mean": 477.9375,
+      "min": 467,
+      "max": 510
+    },
+    "tool": {
+      "mean": 497.9375,
+      "min": 487,
+      "max": 530
+    },
+    "mean_tokens_across_three_forwards": 1550.8125
+  },
+  "new32": {
+    "intent": {
+      "mean": 800.09375,
+      "min": 758,
+      "max": 874
+    },
+    "route": {
+      "mean": 703.09375,
+      "min": 661,
+      "max": 777
+    },
+    "tool": {
+      "mean": 723.09375,
+      "min": 681,
+      "max": 797
+    },
+    "mean_tokens_across_three_forwards": 2226.28125
+  }
+}

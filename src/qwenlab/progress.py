@@ -94,6 +94,12 @@ def snapshot():
                 value['remaining_minutes_estimate'] = max(0, value['total'] - value['completed']) * elapsed / value['completed'] / 60
             comparison[name] = value
     result['comparison'] = comparison
+    length_path = folder / 'length-benchmark/status.json'
+    if length_path.exists():
+        length = load_json(length_path)
+        if length.get('status') == 'running' and length.get('completed', 0) >= 24:
+            length['remaining_minutes_estimate'] = (length['total'] - length['completed']) * length.get('elapsed_s', 0) / length['completed'] / 60
+        result['length_benchmark'] = length
     result['eta_scope'] = 'Training ETA or current evaluation stage only; excludes subsequent stages and loading. Watch estimates evaluation speed from new completed rows. Projection worker currently writes agreement results at end, so no invented live percentage.'
     return result
 
@@ -102,7 +108,7 @@ def display(result):
     print(f"[{result['checked_at']}] 流程：{result.get('status')} / {result.get('stage', '-')}")
     train = result.get('training')
     if train and result.get('training_status') == 'complete':
-        print(f"训练已完成：{train['step']}/{train['total']}步，用时 {result['training_elapsed_minutes']:.1f} 分钟；当前在处理后续流程。")
+        print(f"训练已完成：{train['step']}/{train['total']}步，用时 {result['training_elapsed_minutes']:.1f} 分钟；各项评测状态见下方。")
     elif train:
         print(f"训练 {train['step']}/{train['total']} 步（{train['progress_percent']:.2f}%），已完成 {result['epoch_fraction']:.3f} 轮")
         print(f"最近 {train['observed_steps']} 步平均 {train['seconds_per_step']:.2f} 秒/步；训练预计剩余 {train['remaining_training_s']/3600:.2f} 小时")
@@ -123,6 +129,10 @@ def display(result):
     for name, status in result.get('comparison', {}).items():
         print(f"新增同输入对照 {name}: {status['status']}，{status.get('completed', 0)}/{status.get('total', '?')}")
         if 'remaining_minutes_estimate' in status: print(f"  此部分粗估剩余 {status['remaining_minutes_estimate']:.1f} 分钟；不含加载。")
+    length = result.get('length_benchmark')
+    if length:
+        print(f"输入长度对照：{length['status']}，{length.get('completed', 0)}/{length.get('total', '?')}，API失败 {length.get('api_errors', 0)}")
+        if 'remaining_minutes_estimate' in length: print(f"  粗估剩余 {length['remaining_minutes_estimate']:.1f} 分钟；包含已发生等待，网络波动会影响估计。")
     print('预测写完不等于整个流程结束；速度受输入长度、温度和其他GPU任务影响。\n', flush=True)
 
 
@@ -143,6 +153,7 @@ def main():
             if args.json: print(json.dumps(result, ensure_ascii=False, indent=2), flush=True)
             else: display(result)
             comparison_active = any(v.get('status') in ('starting', 'loading', 'running') for v in result.get('comparison', {}).values())
+            comparison_active = comparison_active or result.get('length_benchmark', {}).get('status') in ('loading', 'running')
             all_done = result.get('status') == 'complete' and result['projection_validation']['status'] in ('complete', 'failed', 'not_scheduled') and not comparison_active
             if not args.watch or all_done or result.get('status') in ('failed', 'not_started'): break
             time.sleep(15)

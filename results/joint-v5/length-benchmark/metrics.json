@@ -1,0 +1,144 @@
+{
+  "tables": {
+    "qwen": {
+      "0": {
+        "n": 36,
+        "successful": 36,
+        "errors": 0,
+        "p50_s": 0.5858150999956706,
+        "p95_s": 0.6912910249957349,
+        "accuracy_all_requests": {
+          "intent": 1.0,
+          "route": 1.0,
+          "tool": 1.0
+        },
+        "human_missed_or_failed": 0
+      },
+      "256": {
+        "n": 36,
+        "successful": 36,
+        "errors": 0,
+        "p50_s": 0.8512037499967846,
+        "p95_s": 0.9163705500031938,
+        "accuracy_all_requests": {
+          "intent": 1.0,
+          "route": 1.0,
+          "tool": 1.0
+        },
+        "human_missed_or_failed": 0
+      },
+      "640": {
+        "n": 36,
+        "successful": 36,
+        "errors": 0,
+        "p50_s": 1.331212900000537,
+        "p95_s": 1.4200921750034468,
+        "accuracy_all_requests": {
+          "intent": 1.0,
+          "route": 1.0,
+          "tool": 1.0
+        },
+        "human_missed_or_failed": 0
+      },
+      "1024": {
+        "n": 36,
+        "successful": 36,
+        "errors": 0,
+        "p50_s": 1.9590248500026064,
+        "p95_s": 2.0816605999989406,
+        "accuracy_all_requests": {
+          "intent": 0.9166666666666666,
+          "route": 1.0,
+          "tool": 1.0
+        },
+        "human_missed_or_failed": 0
+      }
+    },
+    "jev": {
+      "0": {
+        "n": 36,
+        "successful": 36,
+        "errors": 0,
+        "p50_s": 0.4853482000035001,
+        "p95_s": 0.5686858750013926,
+        "accuracy_all_requests": {
+          "intent": 1.0,
+          "route": 0.8333333333333334,
+          "tool": 0.8333333333333334
+        },
+        "human_missed_or_failed": 3
+      },
+      "256": {
+        "n": 36,
+        "successful": 36,
+        "errors": 0,
+        "p50_s": 0.4795552499963378,
+        "p95_s": 0.6243435749947821,
+        "accuracy_all_requests": {
+          "intent": 1.0,
+          "route": 0.75,
+          "tool": 0.8333333333333334
+        },
+        "human_missed_or_failed": 3
+      },
+      "640": {
+        "n": 36,
+        "successful": 36,
+        "errors": 0,
+        "p50_s": 0.5000565999980608,
+        "p95_s": 0.6385257250003633,
+        "accuracy_all_requests": {
+          "intent": 1.0,
+          "route": 0.8055555555555556,
+          "tool": 0.8611111111111112
+        },
+        "human_missed_or_failed": 3
+      },
+      "1024": {
+        "n": 36,
+        "successful": 36,
+        "errors": 0,
+        "p50_s": 0.48873100000128034,
+        "p95_s": 0.611944175003373,
+        "accuracy_all_requests": {
+          "intent": 1.0,
+          "route": 0.75,
+          "tool": 0.8611111111111112
+        },
+        "human_missed_or_failed": 3
+      }
+    }
+  },
+  "token_usage": {
+    "0": {
+      "qwen_mean_tokens_per_forward": 741.9166666666666,
+      "jev_mean_usage_input_tokens": 1872.3333333333333
+    },
+    "256": {
+      "qwen_mean_tokens_per_forward": 1000.9166666666666,
+      "jev_mean_usage_input_tokens": 2254.9166666666665
+    },
+    "640": {
+      "qwen_mean_tokens_per_forward": 1388.25,
+      "jev_mean_usage_input_tokens": 2814.9166666666665
+    },
+    "1024": {
+      "qwen_mean_tokens_per_forward": 1775.5833333333333,
+      "jev_mean_usage_input_tokens": 3374.9166666666665
+    }
+  },
+  "paired_growth": {
+    "groups": 12,
+    "definition": "per base question median(long)-median(short), then Qwen growth minus Jev growth; successful requests only",
+    "mean_growth_s": {
+      "qwen": 1.371585325000827,
+      "jev": 0.016801866668780956
+    },
+    "mean_difference_s": 1.3547834583320462,
+    "bootstrap_95_s": [
+      1.311316786664732,
+      1.399650915412273
+    ]
+  },
+  "requests_sha256": "5ef068d16fe65ebd1b0ecb0d4466ec743682788b7a5c847471cc896ffbe0c4c3"
+}

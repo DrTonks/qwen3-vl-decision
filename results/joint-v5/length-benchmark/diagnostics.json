@@ -1,0 +1,524 @@
+{
+  "repeat_p50_s": {
+    "qwen": {
+      "0": {
+        "0": 0.5813065000002098,
+        "256": 0.8477266000008967,
+        "640": 1.315284550000797,
+        "1024": 1.956028000000515
+      },
+      "1": {
+        "0": 0.6151772000011988,
+        "256": 0.8714363500002946,
+        "640": 1.3324815499981923,
+        "1024": 2.015531099998043
+      },
+      "2": {
+        "0": 0.5817053999962809,
+        "256": 0.8512037499967846,
+        "640": 1.3365293500028201,
+        "1024": 1.9337267499977315
+      }
+    },
+    "jev": {
+      "0": {
+        "0": 0.482754799999384,
+        "256": 0.4771906999994826,
+        "640": 0.5238699000001361,
+        "1024": 0.48360519999914686
+      },
+      "1": {
+        "0": 0.48524320000069565,
+        "256": 0.4795552499963378,
+        "640": 0.5040060500032268,
+        "1024": 0.4841200499977276
+      },
+      "2": {
+        "0": 0.4894186500023352,
+        "256": 0.4769799999994575,
+        "640": 0.48383340000145836,
+        "1024": 0.5036615499993786
+      }
+    }
+  },
+  "mistakes": [
+    {
+      "provider": "jev",
+      "case_id": "v5-ui_issue-heldout-4-known_reason_4-1/plus-256",
+      "message": "对，就是我刚问的那个问题，请接着处理。",
+      "wrong_by_repeat": [
+        {
+          "repeat": 0,
+          "wrong": {
+            "route": {
+              "gold": "llm",
+              "predicted": "clarify"
+            }
+          }
+        },
+        {
+          "repeat": 1,
+          "wrong": {
+            "route": {
+              "gold": "llm",
+              "predicted": "clarify"
+            }
+          }
+        },
+        {
+          "repeat": 2,
+          "wrong": {
+            "route": {
+              "gold": "llm",
+              "predicted": "clarify"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "provider": "jev",
+      "case_id": "v5-status_code-heldout-5-tool_down-0/plus-640",
+      "message": "这个办理状态编码到底代表哪种状态",
+      "wrong_by_repeat": [
+        {
+          "repeat": 0,
+          "wrong": {
+            "route": {
+              "gold": "human",
+              "predicted": "tool"
+            },
+            "tool": {
+              "gold": "none",
+              "predicted": "explainApplicationStatus"
+            }
+          }
+        },
+        {
+          "repeat": 1,
+          "wrong": {
+            "route": {
+              "gold": "human",
+              "predicted": "tool"
+            },
+            "tool": {
+              "gold": "none",
+              "predicted": "explainApplicationStatus"
+            }
+          }
+        },
+        {
+          "repeat": 2,
+          "wrong": {
+            "route": {
+              "gold": "human",
+              "predicted": "clarify"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "provider": "jev",
+      "case_id": "v5-credit-heldout-5-complete-2/plus-256",
+      "message": "前面那个不用了，现在个人信用这一栏目前显示的得分想核实",
+      "wrong_by_repeat": [
+        {
+          "repeat": 0,
+          "wrong": {
+            "route": {
+              "gold": "llm",
+              "predicted": "tool"
+            },
+            "tool": {
+              "gold": "none",
+              "predicted": "queryMyCreditScore"
+            }
+          }
+        },
+        {
+          "repeat": 1,
+          "wrong": {
+            "route": {
+              "gold": "llm",
+              "predicted": "tool"
+            },
+            "tool": {
+              "gold": "none",
+              "predicted": "queryMyCreditScore"
+            }
+          }
+        },
+        {
+          "repeat": 2,
+          "wrong": {
+            "route": {
+              "gold": "llm",
+              "predicted": "tool"
+            },
+            "tool": {
+              "gold": "none",
+              "predicted": "queryMyCreditScore"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "provider": "jev",
+      "case_id": "v5-ui_issue-heldout-4-known_reason_4-1/plus-1024",
+      "message": "对，就是我刚问的那个问题，请接着处理。",
+      "wrong_by_repeat": [
+        {
+          "repeat": 0,
+          "wrong": {
+            "route": {
+              "gold": "llm",
+              "predicted": "clarify"
+            }
+          }
+        },
+        {
+          "repeat": 1,
+          "wrong": {
+            "route": {
+              "gold": "llm",
+              "predicted": "clarify"
+            }
+          }
+        },
+        {
+          "repeat": 2,
+          "wrong": {
+            "route": {
+              "gold": "llm",
+              "predicted": "clarify"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "provider": "jev",
+      "case_id": "v5-status_code-heldout-5-tool_down-0/plus-256",
+      "message": "这个办理状态编码到底代表哪种状态",
+      "wrong_by_repeat": [
+        {
+          "repeat": 0,
+          "wrong": {
+            "route": {
+              "gold": "human",
+              "predicted": "tool"
+            },
+            "tool": {
+              "gold": "none",
+              "predicted": "explainApplicationStatus"
+            }
+          }
+        },
+        {
+          "repeat": 1,
+          "wrong": {
+            "route": {
+              "gold": "human",
+              "predicted": "tool"
+            },
+            "tool": {
+              "gold": "none",
+              "predicted": "explainApplicationStatus"
+            }
+          }
+        },
+        {
+          "repeat": 2,
+          "wrong": {
+            "route": {
+              "gold": "human",
+              "predicted": "tool"
+            },
+            "tool": {
+              "gold": "none",
+              "predicted": "explainApplicationStatus"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "provider": "jev",
+      "case_id": "v5-credit-heldout-5-complete-2/plus-1024",
+      "message": "前面那个不用了，现在个人信用这一栏目前显示的得分想核实",
+      "wrong_by_repeat": [
+        {
+          "repeat": 0,
+          "wrong": {
+            "route": {
+              "gold": "llm",
+              "predicted": "tool"
+            },
+            "tool": {
+              "gold": "none",
+              "predicted": "queryMyCreditScore"
+            }
+          }
+        },
+        {
+          "repeat": 1,
+          "wrong": {
+            "route": {
+              "gold": "llm",
+              "predicted": "tool"
+            },
+            "tool": {
+              "gold": "none",
+              "predicted": "queryMyCreditScore"
+            }
+          }
+        },
+        {
+          "repeat": 2,
+          "wrong": {
+            "route": {
+              "gold": "llm",
+              "predicted": "tool"
+            },
+            "tool": {
+              "gold": "none",
+              "predicted": "queryMyCreditScore"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "provider": "qwen",
+      "case_id": "v5-application_detail-heldout-5-other_owner-2/plus-1024",
+      "message": "前面那个不用了，现在指定单子的审批明细麻烦给我看看",
+      "wrong_by_repeat": [
+        {
+          "repeat": 0,
+          "wrong": {
+            "intent": {
+              "gold": "application_detail",
+              "predicted": "repayment"
+            }
+          }
+        },
+        {
+          "repeat": 1,
+          "wrong": {
+            "intent": {
+              "gold": "application_detail",
+              "predicted": "repayment"
+            }
+          }
+        },
+        {
+          "repeat": 2,
+          "wrong": {
+            "intent": {
+              "gold": "application_detail",
+              "predicted": "repayment"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "provider": "jev",
+      "case_id": "v5-status_code-heldout-5-tool_down-0/plus-0",
+      "message": "这个办理状态编码到底代表哪种状态",
+      "wrong_by_repeat": [
+        {
+          "repeat": 0,
+          "wrong": {
+            "route": {
+              "gold": "human",
+              "predicted": "tool"
+            },
+            "tool": {
+              "gold": "none",
+              "predicted": "explainApplicationStatus"
+            }
+          }
+        },
+        {
+          "repeat": 1,
+          "wrong": {
+            "route": {
+              "gold": "human",
+              "predicted": "tool"
+            },
+            "tool": {
+              "gold": "none",
+              "predicted": "explainApplicationStatus"
+            }
+          }
+        },
+        {
+          "repeat": 2,
+          "wrong": {
+            "route": {
+              "gold": "human",
+              "predicted": "tool"
+            },
+            "tool": {
+              "gold": "none",
+              "predicted": "explainApplicationStatus"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "provider": "jev",
+      "case_id": "v5-credit-heldout-5-complete-2/plus-640",
+      "message": "前面那个不用了，现在个人信用这一栏目前显示的得分想核实",
+      "wrong_by_repeat": [
+        {
+          "repeat": 0,
+          "wrong": {
+            "route": {
+              "gold": "llm",
+              "predicted": "tool"
+            },
+            "tool": {
+              "gold": "none",
+              "predicted": "queryMyCreditScore"
+            }
+          }
+        },
+        {
+          "repeat": 1,
+          "wrong": {
+            "route": {
+              "gold": "llm",
+              "predicted": "tool"
+            },
+            "tool": {
+              "gold": "none",
+              "predicted": "queryMyCreditScore"
+            }
+          }
+        },
+        {
+          "repeat": 2,
+          "wrong": {
+            "route": {
+              "gold": "llm",
+              "predicted": "tool"
+            },
+            "tool": {
+              "gold": "none",
+              "predicted": "queryMyCreditScore"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "provider": "jev",
+      "case_id": "v5-credit-heldout-5-complete-2/plus-0",
+      "message": "前面那个不用了，现在个人信用这一栏目前显示的得分想核实",
+      "wrong_by_repeat": [
+        {
+          "repeat": 0,
+          "wrong": {
+            "route": {
+              "gold": "llm",
+              "predicted": "tool"
+            },
+            "tool": {
+              "gold": "none",
+              "predicted": "queryMyCreditScore"
+            }
+          }
+        },
+        {
+          "repeat": 1,
+          "wrong": {
+            "route": {
+              "gold": "llm",
+              "predicted": "tool"
+            },
+            "tool": {
+              "gold": "none",
+              "predicted": "queryMyCreditScore"
+            }
+          }
+        },
+        {
+          "repeat": 2,
+          "wrong": {
+            "route": {
+              "gold": "llm",
+              "predicted": "tool"
+            },
+            "tool": {
+              "gold": "none",
+              "predicted": "queryMyCreditScore"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "provider": "jev",
+      "case_id": "v5-status_code-heldout-5-tool_down-0/plus-1024",
+      "message": "这个办理状态编码到底代表哪种状态",
+      "wrong_by_repeat": [
+        {
+          "repeat": 0,
+          "wrong": {
+            "route": {
+              "gold": "human",
+              "predicted": "clarify"
+            }
+          }
+        },
+        {
+          "repeat": 1,
+          "wrong": {
+            "route": {
+              "gold": "human",
+              "predicted": "tool"
+            },
+            "tool": {
+              "gold": "none",
+              "predicted": "explainApplicationStatus"
+            }
+          }
+        },
+        {
+          "repeat": 2,
+          "wrong": {
+            "route": {
+              "gold": "human",
+              "predicted": "tool"
+            },
+            "tool": {
+              "gold": "none",
+              "predicted": "explainApplicationStatus"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "provider": "jev",
+      "case_id": "v5-ui_issue-heldout-4-known_reason_4-1/plus-640",
+      "message": "对，就是我刚问的那个问题，请接着处理。",
+      "wrong_by_repeat": [
+        {
+          "repeat": 2,
+          "wrong": {
+            "route": {
+              "gold": "llm",
+              "predicted": "clarify"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

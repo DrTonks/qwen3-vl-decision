@@ -1,0 +1,162 @@
+{
+  "v4-products-wording-16-live-0": {
+    "intent": 570,
+    "route": 473,
+    "tool": 493
+  },
+  "v4-products-wording-16-guest-0": {
+    "intent": 570,
+    "route": 473,
+    "tool": 493
+  },
+  "v4-products-wording-16-unknown_auth-0": {
+    "intent": 570,
+    "route": 473,
+    "tool": 493
+  },
+  "v4-products-wording-16-known-0": {
+    "intent": 606,
+    "route": 509,
+    "tool": 529
+  },
+  "v4-products-wording-16-unavailable-0": {
+    "intent": 565,
+    "route": 468,
+    "tool": 488
+  },
+  "v4-products-wording-17-live-0": {
+    "intent": 571,
+    "route": 474,
+    "tool": 494
+  },
+  "v4-products-wording-17-guest-0": {
+    "intent": 571,
+    "route": 474,
+    "tool": 494
+  },
+  "v4-products-wording-17-unknown_auth-0": {
+    "intent": 571,
+    "route": 474,
+    "tool": 494
+  },
+  "v4-products-wording-17-known-0": {
+    "intent": 607,
+    "route": 510,
+    "tool": 530
+  },
+  "v4-products-wording-17-unavailable-0": {
+    "intent": 566,
+    "route": 469,
+    "tool": 489
+  },
+  "v4-products-wording-18-live-0": {
+    "intent": 570,
+    "route": 473,
+    "tool": 493
+  },
+  "v4-products-wording-18-guest-0": {
+    "intent": 570,
+    "route": 473,
+    "tool": 493
+  },
+  "v4-products-wording-18-unknown_auth-0": {
+    "intent": 570,
+    "route": 473,
+    "tool": 493
+  },
+  "v4-products-wording-18-known-0": {
+    "intent": 606,
+    "route": 509,
+    "tool": 529
+  },
+  "v4-products-wording-18-unavailable-0": {
+    "intent": 565,
+    "route": 468,
+    "tool": 488
+  },
+  "v4-products-wording-19-live-0": {
+    "intent": 569,
+    "route": 472,
+    "tool": 492
+  },
+  "v4-products-wording-19-guest-0": {
+    "intent": 569,
+    "route": 472,
+    "tool": 492
+  },
+  "v4-products-wording-19-unknown_auth-0": {
+    "intent": 569,
+    "route": 472,
+    "tool": 492
+  },
+  "v4-products-wording-19-known-0": {
+    "intent": 605,
+    "route": 508,
+    "tool": 528
+  },
+  "v4-products-wording-19-unavailable-0": {
+    "intent": 564,
+    "route": 467,
+    "tool": 487
+  },
+  "v4-credit-wording-16-live-0": {
+    "intent": 571,
+    "route": 474,
+    "tool": 494
+  },
+  "v4-credit-wording-16-guest-0": {
+    "intent": 571,
+    "route": 474,
+    "tool": 494
+  },
+  "v4-credit-wording-16-unknown_auth-0": {
+    "intent": 571,
+    "route": 474,
+    "tool": 494
+  },
+  "v4-credit-wording-16-known-0": {
+    "intent": 583,
+    "route": 486,
+    "tool": 506
+  },
+  "v4-credit-wording-16-unavailable-0": {
+    "intent": 565,
+    "route": 468,
+    "tool": 488
+  },
+  "v4-credit-wording-16-other_owner-0": {
+    "intent": 579,
+    "route": 482,
+    "tool": 502
+  },
+  "v4-credit-wording-17-live-0": {
+    "intent": 570,
+    "route": 473,
+    "tool": 493
+  },
+  "v4-credit-wording-17-guest-0": {
+    "intent": 570,
+    "route": 473,
+    "tool": 493
+  },
+  "v4-credit-wording-17-unknown_auth-0": {
+    "intent": 570,
+    "route": 473,
+    "tool": 493
+  },
+  "v4-credit-wording-17-known-0": {
+    "intent": 582,
+    "route": 485,
+    "tool": 505
+  },
+  "v4-credit-wording-17-unavailable-0": {
+    "intent": 564,
+    "route": 467,
+    "tool": 487
+  },
+  "v4-credit-wording-17-other_owner-0": {
+    "intent": 578,
+    "route": 481,
+    "tool": 501
+  }
+}
