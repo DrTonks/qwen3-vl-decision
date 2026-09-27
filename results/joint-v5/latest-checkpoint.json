@@ -1,5 +1,5 @@
 {
-  "step": 200,
-  "path": ".local/checkpoints/joint-v5/step-200",
+  "step": 2500,
+  "path": ".local/checkpoints/joint-v5/step-2500",
   "protocol_sha256": "d6cfad1cc51d12a3173928684e5bdd608be545017baec6732fb7ba055dea8233"
 }
