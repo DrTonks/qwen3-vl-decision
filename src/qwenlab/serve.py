@@ -36,7 +36,7 @@ def validate_input(value):
         raise ValueError('Invalid server-owned state')
     if 'application_id' in state and (type(state['application_id']) is not int or not 0 < state['application_id'] <= 2147483647):
         raise ValueError('Invalid application_id')
-    if 'pending' in state and state['pending'] != 'applicationId':
+    if 'pending' in state and state['pending'] not in ('applicationId', 'statusCode'):
         raise ValueError('Invalid pending field')
     if 'status_code' in state and (type(state['status_code']) is not int or not 0 <= state['status_code'] <= 2147483647):
         raise ValueError('Invalid status_code')
@@ -70,7 +70,7 @@ class QwenEngine:
         row = dict(value, id='support-inference', dataset='business',
                    labels={'intent': 'general', 'route': 'clarify', 'tool': 'none'})
         # Encode all tasks before any forward. Never silently truncate an overlong request.
-        examples = [self.encode(self.tok, row, task) for task in TASKS]
+        examples = [self.encode(self.tok, row, task, spec=SPEC) for task in TASKS]
         torch.cuda.synchronize()
         start = time.perf_counter()
         result = {}

@@ -1,0 +1,41 @@
+{
+  "version": "support-runtime-v1",
+  "created_date": "2026-09-28",
+  "status": "ai_preannotated_pending_human_review",
+  "origin": "AI authored before model evaluation; no model outputs used for labelling",
+  "scope": "Decision component evaluation with trusted synthetic context, not real HTTP/database workflow acceptance",
+  "count": 139,
+  "groups": 38,
+  "actions": {
+    "tool": 69,
+    "clarify": 22,
+    "answer": 15,
+    "human": 16,
+    "refuse": 12,
+    "close": 5
+  },
+  "fixtures": {
+    "self_application_ids": [
+      76001,
+      76003
+    ],
+    "other_application_ids": [
+      76002
+    ],
+    "database_access": false
+  },
+  "deferred_count": 9,
+  "split": "evaluation_draft_not_for_training",
+  "files_sha256": {
+    "cases.jsonl": "f6c67a9af3cbea4c2ec49e1a58fd8294e4edfb8ad8417317a48c760d4530c1d4",
+    "review.csv": "860443c53e23d83254f2f27073a8b5cf7a1214d5c8bd93d46e4ecb156ec4a609",
+    "deferred-cases.jsonl": "aa5cc19d1d2cead4b28e8c949aa5adc8bbcf89cf8a6d08cfdf055ba45140bc0b"
+  },
+  "limitations": [
+    "Not human gold labels",
+    "Same group examples are dependent; group-level reporting required",
+    "No actual loan tool execution",
+    "Current backend may fail reasonable expressions; do not relabel to fit implementation",
+    "Reply correctness, retrieval quality and actual handoff success are outside this classifier score"
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "project": "uestc_Integrated_Design",
+  "snapshot_date": "2026-09-27",
+  "sources": [
+    {
+      "id": "agent",
+      "project_relative_path": "后端/api/agent.js",
+      "sha256": "370a8edf8f80077b662bfd71b1528fedeed2b351a128bce7bd6f7d4269433aa7",
+      "note": "实际Node客服入口、五类只读查询、关键词分流、LLM回退、登录要求"
+    },
+    {
+      "id": "server",
+      "project_relative_path": "后端/server.js",
+      "sha256": "68e45eae49e107db89c44866cdc3cd0fee137e5d05f2f4f7de8318631786a795",
+      "note": "Node实际注册agent路由"
+    },
+    {
+      "id": "support",
+      "project_relative_path": "Uni-ui/pages/profile/support.vue",
+      "sha256": "2a8a81aecea7cea4f11882f60cd761998a31e180bd501f9c4953d2477d0bc0f5",
+      "note": "App只发送sessionId与message；现有文本入口，无截图字段"
+    },
+    {
+      "id": "java",
+      "project_relative_path": "后端/agent/tools/CustomerSupportTools.java",
+      "sha256": "13e6ed64b7e8c141cc3aad803f08ccf31048abe1b1650a47e93f2966cadee58e",
+      "note": "Java参考工具；不据此认定当前Node已具备Java能力"
+    },
+    {
+      "id": "prompt",
+      "project_relative_path": "后端/agent/support/AgentPromptTemplates.java",
+      "sha256": "11de02dd949df968ca7c2c339eb4bd630e5078670ffe719d56b35cbd0f057246",
+      "note": "参考只读边界；并非当前Node完整执行策略"
+    },
+    {
+      "id": "loan",
+      "project_relative_path": "后端/api/loan.js",
+      "sha256": "6ad4c22479f195210bf9967baccdb8c666e1bc9a03dc89014d223fb279bf5a91",
+      "note": "个人申请、还款与管理端审批等业务接口，不等于客服工具"
+    },
+    {
+      "id": "products",
+      "project_relative_path": "后端/db/seedLoanProduct.js",
+      "sha256": "a046170509bcf612c8da7589031e94ee3588540a51c9bddd3908724b0e02d690",
+      "note": "种子产品名及字段；演示产品与真实种子不一致"
+    },
+    {
+      "id": "apply",
+      "project_relative_path": "Uni-ui/pages/apply/index.vue",
+      "sha256": "6bf0eaed87491ffe42baf64f70f49a8c7634d642123f2bd25b06e74804316069",
+      "note": "申请页、认证门槛、合同阅读/勾选、签署、提交中状态"
+    },
+    {
+      "id": "detail",
+      "project_relative_path": "Uni-ui/pages/myorder/detail.vue",
+      "sha256": "03f3b847fa15ee9116ff8645fc0a4876425aced47c246a63afcecb7ab5edf22b",
+      "note": "补充材料与还款展示流程"
+    },
+    {
+      "id": "materials",
+      "project_relative_path": "后端/api/applicationMaterials.js",
+      "sha256": "e90fc64a64ba8bbfd28e14aed652014ff4c0812576016179c1d2674d5f431b56",
+      "note": "材料归属校验、上传状态、下载与管理审核"
+    },
+    {
+      "id": "files",
+      "project_relative_path": "后端/services/applicationMaterialService.js",
+      "sha256": "9ecd1f2837a019883c77235dc8175007042d2fa2aa19c2b5c1d2cc240ec959ec",
+      "note": "默认大小、后缀与MIME检查"
+    },
+    {
+      "id": "contract",
+      "project_relative_path": "后端/api/contract.js",
+      "sha256": "67ceb148fb49f6e3303bc0cb22a05a32efd70a275af4c130de9fd984c1fd7dde",
+      "note": "合同生成签署与查询；并非客服授权操作"
+    },
+    {
+      "id": "auth",
+      "project_relative_path": "后端/middleware/authOnly.js",
+      "sha256": "809288044a9826ad314f854794a932481c4a4447691f3e8f8addab7877582e7d",
+      "note": "登录和角色由服务端检查"
+    },
+    {
+      "id": "profile",
+      "project_relative_path": "后端/api/user.js",
+      "sha256": "f3ac6b738d39321f711af21e271bb07108cd5f1fc0f0bdde1765a10dd1810a7a",
+      "note": "身份与资料、分数字段；业务接口和客服输出字段不同"
+    },
+    {
+      "id": "consent",
+      "project_relative_path": "Uni-ui/pages/profile/data-collection.vue",
+      "sha256": "dc1b3c8eef6680a5119a8b0c2f2221b443aa2d75eb033f9b75d5f50cdb68184a",
+      "note": "位置/行为默认关闭，可跳过采集进入首页"
+    },
+    {
+      "id": "fingerprint",
+      "project_relative_path": "后端/api/fingerprint.js",
+      "sha256": "8b4244af04dd50cd89e642922fe23e363bcfb064045ad5ce17c25e5cfc9acb53",
+      "note": "授权查询/撤回及设备采集业务接口"
+    },
+    {
+      "id": "risk",
+      "project_relative_path": "后端/api/deviceRisk.js",
+      "sha256": "14a82c5254d5e96def17f30bcdcdc213eddc09c741cae55af65799f54f7741d6",
+      "note": "设备风险工作台仅管理员可访问"
+    }
+  ]
+}

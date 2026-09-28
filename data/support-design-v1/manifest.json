@@ -1,0 +1,40 @@
+{
+  "status": "draft_pending_human_review",
+  "count": 400,
+  "scenario_groups": 90,
+  "sections": {
+    "common": 240,
+    "state_boundary": 120,
+    "short_context": 40
+  },
+  "suggested_actions": {
+    "tool": 72,
+    "retrieve": 69,
+    "answer": 78,
+    "clarify": 70,
+    "human": 53,
+    "refuse": 31,
+    "redirect": 12,
+    "close": 15
+  },
+  "gateway_cases": 12,
+  "generator_sha256": "7e2c0564d7473117f3f1fda2ba204e687102a5da1ceb25da606ce98d3390684f",
+  "dataset_sha256": "52e23a9f4d36edff9bdf2ee012829ea0a851bbd248a6d24fa805274971b7b50c",
+  "limits": [
+    "AI authored; not human gold",
+    "eight actions unapproved, not existing runtime",
+    "400 variants across 90 scenario groups, not 400 independent scenarios",
+    "no model scores, no training use, no final split",
+    "state fixtures and knowledge fragments simulated, not existing request schema or production facts"
+  ],
+  "generated_files_sha256": {
+    "blind-review.md": "e8c24b20517e9c7cce8bd77d7fda7c056bea6a7afca800698a74961592e517d7",
+    "common-review.md": "b551f78f18707f4e1f971133b518f6bee22b771ea09d2fd66014e1300df48607",
+    "draft-cases.jsonl": "52e23a9f4d36edff9bdf2ee012829ea0a851bbd248a6d24fa805274971b7b50c",
+    "inputs-only.jsonl": "8f9b64cf5c7f1b74364a1d7df4d49231c4c38d3047bbe193de7a1c9ebbc5496f",
+    "review-template.jsonl": "c504890402600c867c06cd019361f3fd24555c9387636b1782d099bf7e0dda99",
+    "short_context-review.md": "6ef60587d8513625e93b6ae761a26f51e3d0a661ce2d0c7586b86ece0d83c516",
+    "source-map.json": "cb5f0326c520145ac3d6d0117c4fa896b9f99a9c8e69bae9e8a249d0a26c3396",
+    "state_boundary-review.md": "8f8a2edb9acc5ebde5527ac5e77a63c9e68aed55f5cc44d7e3a2835677cc1de1"
+  }
+}

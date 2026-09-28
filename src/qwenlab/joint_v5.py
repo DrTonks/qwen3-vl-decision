@@ -46,9 +46,12 @@ def exclusive_lock(name):
             handle.seek(0); msvcrt.locking(handle.fileno(), msvcrt.LK_UNLCK, 1)
 
 
-def encode(tokenizer, row, task, seed=None):
+def encode(tokenizer, row, task, seed=None, *, spec=None):
     if row.get('images'): raise NotImplementedError('v5 is text only')
-    spec = load_json(ROOT / 'configs/decision-v5.json') if row['dataset'] == 'business' else specification(row['dataset'])
+    # Long-running inference supplies the same snapshot used for its policy hash.
+    # Existing experiment callers retain their original file-based specification.
+    if spec is None:
+        spec = load_json(ROOT / 'configs/decision-v5.json') if row['dataset'] == 'business' else specification(row['dataset'])
     question = spec['questions'][task]; keys = list(question['criteria'])
     if seed is not None: random.Random(seed).shuffle(keys)
     symbols = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'

@@ -1,0 +1,9 @@
+{"id": "D01", "source_ids": ["C07", "C13", "C14", "B21"], "future_action": "retrieve", "message": "提前还款有什么规定？", "requires": ["审核后的版本化知识库", "检索工具与证据回传", "无结果回退策略"], "current_handling": "answer/general_help只能解释能力边界，不代表已检索或确认条款。"}
+{"id": "D02", "source_ids": ["C37", "C38"], "future_action": "redirect", "message": "帮我写一份旅游攻略", "requires": ["范围引导动作协议与评测标签"], "current_handling": "answer/llm简短引回平台业务，不完成无关任务。"}
+{"id": "D03", "source_ids": ["C21", "B06", "B08", "B28"], "future_action": "answer", "message": "为什么确认按钮是灰色的？", "requires": ["可信页面状态或已接收图像", "UI事实来源与有效性校验"], "current_handling": "没有页面、提示、图像内容时clarify。"}
+{"id": "D04", "source_ids": ["C18", "C19", "B01", "M05"], "future_action": "answer", "message": "这个查询结果说明什么？", "requires": ["工具事实及新鲜度输入协议", "基于证据的回复模块"], "current_handling": "当前模型没有完整结构化工具事实，不能把模拟facts直接当作已接通。"}
+{"id": "D05", "source_ids": ["B16", "B17"], "future_action": "tool", "message": "帮我查一下合同签好了没", "requires": ["只读合同或材料工具", "归属校验", "工具目录版本更新"], "current_handling": "引导实际页面或说明缺少能力，不拿贷款状态替代合同或材料状态。"}
+{"id": "D06", "source_ids": ["C29", "C31"], "future_action": "human", "message": "给我转人工", "requires": ["真实人工渠道或工单系统", "受理状态持久化与回传"], "current_handling": "当前能识别人工作用，但必须明确尚未完成真实转接。"}
+{"id": "D07", "source_ids": ["C28", "B12"], "future_action": "gateway", "message": "查我的信用分", "requires": ["登录过期、访客、管理员角色的HTTP鉴权测试"], "current_handling": "登录由服务端鉴权，不能混入已鉴权模型准确率。"}
+{"id": "D08", "source_ids": ["B22-2"], "future_action": "answer", "message": "为什么76001没有通过？", "requires": ["对用户公开的审核原因字段", "授权范围及解释口径"], "current_handling": "现有详情不含审批摘要；不得编造拒绝原因。"}
+{"id": "D09", "source_ids": ["B10", "M06"], "future_action": "human", "message": "查询还是超时，怎么办？", "requires": ["工具失败次数与重试状态", "可用性状态输入与升级策略"], "current_handling": "当前retry_count并非模型输入字段，保留为未来流程评测。"}
