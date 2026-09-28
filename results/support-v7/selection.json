@@ -1,0 +1,15 @@
+{
+  "selected": "v5-reference",
+  "choices": {
+    "v5-reference": {
+      "eligible": true,
+      "score": 0.7620979912036343
+    },
+    "step-200": {
+      "eligible": false,
+      "score": 0.952707708957709
+    }
+  },
+  "basis": "frozen development gate; no calibration/challenge selection",
+  "deployment_changed": false
+}

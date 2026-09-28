@@ -1,0 +1,10 @@
+{
+  "continue_training": false,
+  "guardrails_pass": false,
+  "route_gain": true,
+  "reasons": [
+    "legacy: increased human misses"
+  ],
+  "route_accuracy_delta": 0.15833333333333333,
+  "route_macro_f1_delta": 0.19060971775407465
+}

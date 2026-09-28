@@ -1,0 +1,14 @@
+{
+  "continue_training": false,
+  "guardrails_pass": false,
+  "route_gain": true,
+  "reasons": [
+    "legacy.intent.macro_f1_gold_supported_classes: regression exceeds 0.03",
+    "legacy.route.accuracy: regression exceeds 0.03",
+    "legacy.route.macro_f1_gold_supported_classes: regression exceeds 0.03",
+    "legacy.tool.macro_f1_gold_supported_classes: regression exceeds 0.03",
+    "legacy: increased human misses"
+  ],
+  "route_accuracy_delta": 0.19166666666666665,
+  "route_macro_f1_delta": 0.2379020087963657
+}

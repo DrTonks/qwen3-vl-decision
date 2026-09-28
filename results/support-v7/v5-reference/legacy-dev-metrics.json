@@ -1,0 +1,158 @@
+{
+  "n": 402,
+  "tasks": {
+    "intent": {
+      "n": 402,
+      "correct": 384,
+      "accuracy": 0.9552238805970149,
+      "accuracy_wilson_95_descriptive": [
+        0.9303374246540506,
+        0.9714922547085383
+      ],
+      "macro_f1_gold_supported_classes": 0.960187176874599,
+      "supported_classes": [
+        "application_detail",
+        "applications",
+        "credit",
+        "general",
+        "handoff",
+        "payment_dispute",
+        "products",
+        "repayment",
+        "security",
+        "status_code",
+        "ui_issue"
+      ],
+      "invalid": 0,
+      "confusion": {
+        "products -> products": 66,
+        "credit -> credit": 72,
+        "applications -> applications": 72,
+        "application_detail -> application_detail": 80,
+        "status_code -> status_code": 18,
+        "status_code -> application_detail": 16,
+        "status_code -> applications": 2,
+        "ui_issue -> ui_issue": 62,
+        "payment_dispute -> payment_dispute": 2,
+        "security -> security": 2,
+        "handoff -> handoff": 2,
+        "repayment -> repayment": 4,
+        "general -> general": 4
+      },
+      "brier_multiclass_sum": 0.08796704420510522,
+      "nll": 0.7158102785247669,
+      "ece_10_equal_width": 0.043977288701225185,
+      "selective": {
+        "0.5": {
+          "coverage": 1.0,
+          "accepted": 402,
+          "errors": 18
+        },
+        "0.7": {
+          "coverage": 1.0,
+          "accepted": 402,
+          "errors": 18
+        },
+        "0.9": {
+          "coverage": 0.9950248756218906,
+          "accepted": 400,
+          "errors": 17
+        },
+        "0.95": {
+          "coverage": 0.9925373134328358,
+          "accepted": 399,
+          "errors": 16
+        }
+      }
+    },
+    "route": {
+      "n": 402,
+      "correct": 389,
+      "accuracy": 0.9676616915422885,
+      "accuracy_wilson_95_descriptive": [
+        0.9454640397355725,
+        0.9810057948008575
+      ],
+      "macro_f1_gold_supported_classes": 0.9689429855509151,
+      "supported_classes": [
+        "clarify",
+        "human",
+        "llm",
+        "tool"
+      ],
+      "invalid": 0,
+      "confusion": {
+        "tool -> tool": 108,
+        "clarify -> clarify": 95,
+        "llm -> llm": 76,
+        "human -> human": 110,
+        "tool -> human": 3,
+        "tool -> llm": 2,
+        "clarify -> human": 4,
+        "tool -> clarify": 3,
+        "clarify -> tool": 1
+      },
+      "brier_multiclass_sum": 0.06245260534742433,
+      "nll": 0.2729899087034833,
+      "ece_10_equal_width": 0.03163736814686588,
+      "selective": {
+        "0.5": {
+          "coverage": 1.0,
+          "accepted": 402,
+          "errors": 13
+        },
+        "0.7": {
+          "coverage": 0.9975124378109452,
+          "accepted": 401,
+          "errors": 13
+        },
+        "0.9": {
+          "coverage": 0.9925373134328358,
+          "accepted": 399,
+          "errors": 12
+        },
+        "0.95": {
+          "coverage": 0.9825870646766169,
+          "accepted": 395,
+          "errors": 9
+        }
+      }
+    },
+    "tool": {
+      "n": 402,
+      "correct": 392,
+      "accuracy": 0.9751243781094527,
+      "accuracy_wilson_95_descriptive": [
+        0.9548207602603369,
+        0.9864331673803979
+      ],
+      "macro_f1_gold_supported_classes": 0.9466936605543831,
+      "supported_classes": [
+        "explainApplicationStatus",
+        "none",
+        "queryApplicationDetail",
+        "queryLoanProducts",
+        "queryMyApplications",
+        "queryMyCreditScore"
+      ],
+      "invalid": 0,
+      "confusion": {
+        "queryLoanProducts -> queryLoanProducts": 24,
+        "none -> none": 286,
+        "queryMyCreditScore -> queryMyCreditScore": 24,
+        "queryMyApplications -> queryMyApplications": 23,
+        "queryMyApplications -> none": 1,
+        "queryApplicationDetail -> queryApplicationDetail": 24,
+        "queryApplicationDetail -> none": 2,
+        "explainApplicationStatus -> explainApplicationStatus": 11,
+        "explainApplicationStatus -> none": 7
+      }
+    }
+  },
+  "human_required": 110,
+  "human_missed": 0,
+  "human_false_positive": 7,
+  "tool_required": 116,
+  "joint_tool_correct": 106,
+  "all_fields_correct": 377
+}

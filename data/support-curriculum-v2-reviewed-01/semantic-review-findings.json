@@ -1,0 +1,44 @@
+{
+  "groups": [
+    {
+      "reason": "contextual_reference_intent_ambiguous",
+      "description": "EV01带业务历史的泛指表达未明确切换话题，统一general标签可能忽略申请或状态码上下文；保守隔离18条，不断言每条均错。",
+      "ids": [
+        "EV01-01-pending_application",
+        "EV01-01-pending_status",
+        "EV01-01-selected_application",
+        "EV01-02-pending_application",
+        "EV01-02-pending_status",
+        "EV01-02-selected_application",
+        "EV01-03-pending_application",
+        "EV01-03-pending_status",
+        "EV01-03-selected_application",
+        "EV01-04-pending_application",
+        "EV01-04-pending_status",
+        "EV01-04-selected_application",
+        "EV01-05-pending_application",
+        "EV01-05-pending_status",
+        "EV01-05-selected_application",
+        "EV01-06-pending_application",
+        "EV01-06-pending_status",
+        "EV01-06-selected_application"
+      ]
+    },
+    {
+      "reason": "known_status_explanation_requests_missing_code",
+      "description": "前文已给待审批，用户请求解释那个状态，clarify/status_code与已有事实说明的边界冲突。",
+      "ids": [
+        "EV02-04-selected_application"
+      ]
+    },
+    {
+      "reason": "known_amount_without_explicit_refresh",
+      "description": "前文已给9000元，当前未明确要求刷新，tool与已有事实回答存在歧义。",
+      "ids": [
+        "ER01-03-selected_application",
+        "ER01-04-selected_application"
+      ]
+    }
+  ],
+  "quarantined_count": 21
+}

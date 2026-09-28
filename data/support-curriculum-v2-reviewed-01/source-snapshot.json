@@ -1,0 +1,54 @@
+{
+  "tools": {
+    "path": "后端/services/customerSupport/tools.js",
+    "sha256": "a2d756c8a883b8f62a9d281ebc89072a493fb54fce46cb8c3c361f6db01989fc"
+  },
+  "policy": {
+    "path": "后端/services/customerSupport/policies/decision-v5.json",
+    "sha256": "749a240c0e0af360e44bebc66ce929dd48a61dc5be880ee1bd4af5877d75e3fe"
+  },
+  "adapter": {
+    "path": "后端/services/customerSupport/modelDecision.js",
+    "sha256": "84db5cd589c57b397f86d7747a5ebe006d2acfe05ef5978213f309af9fe9a3f3"
+  },
+  "parameters": {
+    "path": "后端/services/customerSupport/parameters.js",
+    "sha256": "cdbd75fd8da71fa3d28282abd339655ed809dbe3f6bb3258f3bcf9d2d56ca085"
+  },
+  "guards": {
+    "path": "后端/services/customerSupport/decisions.js",
+    "sha256": "b2797164af0de209e1dc582da6f127eb99ca8673186c0371d083b08871680956"
+  },
+  "contract": {
+    "path": "后端/services/customerSupport/contract.js",
+    "sha256": "1394d283d115354c2bab22b067c1a61635c32659e3b0e86d62bd7b248b39e243"
+  },
+  "orchestrator": {
+    "path": "后端/services/customerSupport/orchestrator.js",
+    "sha256": "fb55c8dd33fcec0e064e615c4a9c75dfbd65e9b062259e02d30cc690759c3877"
+  },
+  "seed": {
+    "path": "后端/db/seedLoanProduct.js",
+    "sha256": "6bfed1ac34f2d26a2ecb38db4374cee1694067753e340c15628597cabd58a674"
+  },
+  "apply": {
+    "path": "Uni-ui/pages/apply/index.vue",
+    "sha256": "a3d9cde7297f9e6fb6af9227fb68942a75111639678284043d3ee5eb2fbdde7e"
+  },
+  "orders": {
+    "path": "Uni-ui/pages/myorder/index.vue",
+    "sha256": "17f3e19b2a42cc6ad0e74134ece8e28a8be7001b407f49997bd63b2d0315fc68"
+  },
+  "detail": {
+    "path": "Uni-ui/pages/myorder/detail.vue",
+    "sha256": "e4351849218662093bdb9dab8b7799f046f9b596a2aa5a8cb7b78505fcbb6a14"
+  },
+  "materials": {
+    "path": "Uni-ui/pages/myorder/supplement-material.vue",
+    "sha256": "c810f39f90ad3e2eb3881b6ed7f7decbbada91406974b6fdb8de6caa3a86d698"
+  },
+  "credit": {
+    "path": "Uni-ui/pages/profile/credit.vue",
+    "sha256": "bacc6a3950ab9ace7291c86ff30f068e118fe9e3a47aff56ccb5da04d3dba039"
+  }
+}

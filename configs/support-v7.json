@@ -1,0 +1,45 @@
+{
+  "seed": 20260928,
+  "epochs": 2,
+  "pilot_steps": 200,
+  "micro_batch": 2,
+  "gradient_accumulation": 4,
+  "learning_rate": 1.5e-05,
+  "warmup_fraction": 0.02,
+  "weight_decay": 0.01,
+  "checkpoint_every": 100,
+  "replay_rows": {
+    "massive": 1200,
+    "crosswoz": 300
+  },
+  "weights": {
+    "business.intent": 1.0,
+    "business.route": 2.0,
+    "business.tool": 1.5,
+    "massive.intent": 0.5,
+    "crosswoz.intent": 0.35
+  },
+  "business_tasks": [
+    "intent",
+    "route",
+    "tool"
+  ],
+  "group_weighting": "inverse business group size, mean one; all rows traversed once per epoch",
+  "initial_adapter": ".local/checkpoints/joint-v5/step-7110",
+  "reviewed_source": "data/support-curriculum-v2-reviewed-01",
+  "gate": {
+    "max_regression": 0.03,
+    "min_route_f1_gain": 0.01,
+    "min_route_correct_gain": 1,
+    "max_extra_human_misses": 0
+  },
+  "jev_calls": 0,
+  "training_authorization": {
+    "confirmed": true,
+    "date": "2026-09-28",
+    "user_message": "继续",
+    "scope": "diagnose v6 regression; start a separately frozen pilot with train-only state replay and constraints; extend only if original development gate passes; no deployment"
+  },
+  "legacy_replay_rows": 2000,
+  "anchor_strength": 0.5
+}

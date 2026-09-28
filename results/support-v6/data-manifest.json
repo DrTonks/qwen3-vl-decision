@@ -1,0 +1,46 @@
+{
+  "source_hashes": {
+    "data/support-curriculum-v2-reviewed-01/manifest.json": "64a00e976015764260ab8bd6ed46d18b281691738bc5cb897de46040d01a07f4",
+    "data/processed/v5/massive-dev.jsonl": "9b8cf94aafa750b1fac8f71fdf802063833cbdd91a20416c295cc87549bca38f",
+    "data/processed/v5/massive-calibration.jsonl": "36103d35aaf202e4d735f2f06f81dae1498f5790d08b1c84be421b5a9e52460b",
+    "data/processed/v5/massive-test.jsonl": "44b06681e1cd5db405ee517082a2af1f2c2a3d617f633f83830901b9906dfd26",
+    "data/processed/v5/massive-train.jsonl": "83080e90598a9ec879ae5f7e33e623e080dfcdd94d80da9f23f7fdcb4bb384eb",
+    "data/processed/v5/crosswoz-dev.jsonl": "cd165819f4584b6a786b1e734c5ce841c72aa39ee9723c8cd9ddbba62bea5672",
+    "data/processed/v5/crosswoz-calibration.jsonl": "7b92958b0b8e9bbec513e737cfc719a7dc739ea5ad857920d9a0c3997b5eaeff",
+    "data/processed/v5/crosswoz-test.jsonl": "9f0278b376a94af0fabae557cf06fc86429e951d9e791f397add7c39742bb500",
+    "data/processed/v5/crosswoz-train.jsonl": "432be698bb1138c56b17d905aa2ef6c0fbc3b60e08f349356904298290017101",
+    "data/processed/v5/business-dev.jsonl": "bcef8468adcc766bbe689006c5ad04a0753bedfbb985c3c045dcc5ea7cc608a1"
+  },
+  "files": {
+    "business-train.jsonl": {
+      "rows": 3901,
+      "sha256": "f1fd796060b2cae7b0194177bc0f83c05501017079974fc3f5cb7cbe60383785"
+    },
+    "business-dev.jsonl": {
+      "rows": 120,
+      "sha256": "634867f7f2abeea3eacb2693079a91493e247aa762a36ff49573546fcae7d771"
+    },
+    "massive-train.jsonl": {
+      "rows": 1200,
+      "sha256": "0562ca4de7fd0d860fe1acc2e42ead4b73c71ca72c0d4a7351796b5a3ae1cd48"
+    },
+    "massive-dev.jsonl": {
+      "rows": 273,
+      "sha256": "9b8cf94aafa750b1fac8f71fdf802063833cbdd91a20416c295cc87549bca38f"
+    },
+    "crosswoz-train.jsonl": {
+      "rows": 300,
+      "sha256": "ed0b7ba2a65fc17ba0cef6e3945219424967d4882daf56a29c5e4c43ca51383f"
+    },
+    "crosswoz-dev.jsonl": {
+      "rows": 150,
+      "sha256": "cd165819f4584b6a786b1e734c5ce841c72aa39ee9723c8cd9ddbba62bea5672"
+    },
+    "legacy-dev.jsonl": {
+      "rows": 402,
+      "sha256": "bcef8468adcc766bbe689006c5ad04a0753bedfbb985c3c045dcc5ea7cc608a1"
+    }
+  },
+  "reviewed_source": "data/support-curriculum-v2-reviewed-01",
+  "calibration_and_challenge_not_used_for_selection": true
+}

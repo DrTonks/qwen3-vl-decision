@@ -1,0 +1,30 @@
+{
+  "pilot_steps": 200,
+  "total_steps": 4802,
+  "steps_per_epoch": 2401,
+  "evaluation_steps": [
+    200,
+    2401,
+    4802
+  ],
+  "examples_per_epoch": {
+    "business.intent": 5901,
+    "business.route": 5901,
+    "business.tool": 5901,
+    "massive.intent": 1200,
+    "crosswoz.intent": 300
+  },
+  "optimizer_steps": 200,
+  "training_elapsed_s": 1119.0182184999867,
+  "sampled": {
+    "business.route": 551,
+    "business.tool": 462,
+    "business.intent": 478,
+    "massive.intent": 92,
+    "crosswoz.intent": 16
+  },
+  "status": "stopped_at_gate",
+  "trainable_parameters": 1605632,
+  "max_input_tokens": 897,
+  "peak_allocated_gib": 4.178247928619385
+}

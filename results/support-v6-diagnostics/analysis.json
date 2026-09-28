@@ -1,0 +1,2433 @@
+{
+  "development_diagnostics_not_training_data": true,
+  "route_regressions": 24,
+  "route_improvements": 8,
+  "human_misses": 17,
+  "human_miss_groups": 9,
+  "human_miss_conditions": {
+    "unavailable": 13,
+    "other_owner": 2,
+    "tool_down": 1,
+    "failed_troubleshooting": 1
+  },
+  "regressions": [
+    {
+      "id": "v5-products-heldout-0-unavailable-0",
+      "group": "v5-products-heldout-0",
+      "condition": "unavailable",
+      "message": "把你们可办理的借款种类与具体条款列一下",
+      "history": [],
+      "state": {
+        "authenticated": true
+      },
+      "available_tools": [
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "llm"
+    },
+    {
+      "id": "v5-products-heldout-0-unavailable-1",
+      "group": "v5-products-heldout-0",
+      "condition": "unavailable",
+      "message": "对，就是我刚问的那个问题，请接着处理。",
+      "history": [
+        {
+          "role": "user",
+          "content": "把你们可办理的借款种类与具体条款列一下"
+        },
+        {
+          "role": "assistant",
+          "content": "你是要继续刚才这项咨询吗？"
+        }
+      ],
+      "state": {
+        "authenticated": true
+      },
+      "available_tools": [
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "llm"
+    },
+    {
+      "id": "v5-products-heldout-0-unavailable-2",
+      "group": "v5-products-heldout-0",
+      "condition": "unavailable",
+      "message": "前面那个不用了，现在把你们可办理的借款种类与具体条款列一下",
+      "history": [
+        {
+          "role": "user",
+          "content": "先帮我了解正常还款的流程。"
+        },
+        {
+          "role": "assistant",
+          "content": "可以介绍还款入口。"
+        }
+      ],
+      "state": {
+        "authenticated": true
+      },
+      "available_tools": [
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "llm"
+    },
+    {
+      "id": "v5-products-heldout-1-unavailable-0",
+      "group": "v5-products-heldout-1",
+      "condition": "unavailable",
+      "message": "有哪几种在售方案，各自允许的期限呢",
+      "history": [],
+      "state": {
+        "authenticated": true
+      },
+      "available_tools": [
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "tool"
+    },
+    {
+      "id": "v5-credit-heldout-0-unavailable-1",
+      "group": "v5-credit-heldout-0",
+      "condition": "unavailable",
+      "message": "对，就是我刚问的那个问题，请接着处理。",
+      "history": [
+        {
+          "role": "user",
+          "content": "个人资料里的信用分能替我查一眼么"
+        },
+        {
+          "role": "assistant",
+          "content": "你是要继续刚才这项咨询吗？"
+        }
+      ],
+      "state": {
+        "authenticated": true
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "llm"
+    },
+    {
+      "id": "v5-credit-heldout-0-unavailable-2",
+      "group": "v5-credit-heldout-0",
+      "condition": "unavailable",
+      "message": "前面那个不用了，现在个人资料里的信用分能替我查一眼么",
+      "history": [
+        {
+          "role": "user",
+          "content": "先帮我了解正常还款的流程。"
+        },
+        {
+          "role": "assistant",
+          "content": "可以介绍还款入口。"
+        }
+      ],
+      "state": {
+        "authenticated": true
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "llm"
+    },
+    {
+      "id": "v5-credit-heldout-0-other_owner-0",
+      "group": "v5-credit-heldout-0",
+      "condition": "other_owner",
+      "message": "个人资料里的信用分能替我查一眼么",
+      "history": [],
+      "state": {
+        "authenticated": true,
+        "record_owner": "other_user"
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "tool"
+    },
+    {
+      "id": "v5-credit-heldout-1-other_owner-0",
+      "group": "v5-credit-heldout-1",
+      "condition": "other_owner",
+      "message": "帮忙调一下此账户目前的信用评分",
+      "history": [],
+      "state": {
+        "authenticated": true,
+        "record_owner": "other_user"
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "tool"
+    },
+    {
+      "id": "v5-applications-heldout-1-unavailable-0",
+      "group": "v5-applications-heldout-1",
+      "condition": "unavailable",
+      "message": "我提交的借款单都办到什么环节了",
+      "history": [],
+      "state": {
+        "authenticated": true
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "tool"
+    },
+    {
+      "id": "v5-applications-heldout-1-unavailable-1",
+      "group": "v5-applications-heldout-1",
+      "condition": "unavailable",
+      "message": "对，就是我刚问的那个问题，请接着处理。",
+      "history": [
+        {
+          "role": "user",
+          "content": "我提交的借款单都办到什么环节了"
+        },
+        {
+          "role": "assistant",
+          "content": "你是要继续刚才这项咨询吗？"
+        }
+      ],
+      "state": {
+        "authenticated": true
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "clarify"
+    },
+    {
+      "id": "v5-applications-heldout-1-unavailable-2",
+      "group": "v5-applications-heldout-1",
+      "condition": "unavailable",
+      "message": "前面那个不用了，现在我提交的借款单都办到什么环节了",
+      "history": [
+        {
+          "role": "user",
+          "content": "先帮我了解正常还款的流程。"
+        },
+        {
+          "role": "assistant",
+          "content": "可以介绍还款入口。"
+        }
+      ],
+      "state": {
+        "authenticated": true
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "clarify"
+    },
+    {
+      "id": "v5-application_detail-heldout-0-live-1",
+      "group": "v5-application_detail-heldout-0",
+      "condition": "live",
+      "message": "对，就是我刚问的那个问题，请接着处理。",
+      "history": [
+        {
+          "role": "user",
+          "content": "我指定的这单具体审核记录可以调出来么"
+        },
+        {
+          "role": "assistant",
+          "content": "你是要继续刚才这项咨询吗？"
+        }
+      ],
+      "state": {
+        "authenticated": true,
+        "application_id": 7301
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "tool",
+      "reference": "tool",
+      "step_200": "llm"
+    },
+    {
+      "id": "v5-application_detail-heldout-0-unavailable-1",
+      "group": "v5-application_detail-heldout-0",
+      "condition": "unavailable",
+      "message": "对，就是我刚问的那个问题，请接着处理。",
+      "history": [
+        {
+          "role": "user",
+          "content": "我指定的这单具体审核记录可以调出来么"
+        },
+        {
+          "role": "assistant",
+          "content": "你是要继续刚才这项咨询吗？"
+        }
+      ],
+      "state": {
+        "authenticated": true,
+        "application_id": 7301
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "clarify"
+    },
+    {
+      "id": "v5-application_detail-heldout-0-unavailable-2",
+      "group": "v5-application_detail-heldout-0",
+      "condition": "unavailable",
+      "message": "前面那个不用了，现在我指定的这单具体审核记录可以调出来么",
+      "history": [
+        {
+          "role": "user",
+          "content": "先帮我了解正常还款的流程。"
+        },
+        {
+          "role": "assistant",
+          "content": "可以介绍还款入口。"
+        }
+      ],
+      "state": {
+        "authenticated": true,
+        "application_id": 7301
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "clarify"
+    },
+    {
+      "id": "v5-application_detail-heldout-1-stale-1",
+      "group": "v5-application_detail-heldout-1",
+      "condition": "stale",
+      "message": "对，就是我刚问的那个问题，请接着处理。",
+      "history": [
+        {
+          "role": "user",
+          "content": "麻烦说明选中这单的详细审批信息"
+        },
+        {
+          "role": "assistant",
+          "content": "你是要继续刚才这项咨询吗？"
+        }
+      ],
+      "state": {
+        "authenticated": true,
+        "application_id": 7301,
+        "record": {
+          "id": 7301,
+          "status": 0,
+          "decision_summary": "收入证明尚未补全",
+          "amount": 6000,
+          "periods": 6,
+          "annual_rate": 0.06
+        },
+        "record_freshness": "expired"
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "tool",
+      "reference": "tool",
+      "step_200": "llm"
+    },
+    {
+      "id": "v5-application_detail-heldout-1-unavailable-1",
+      "group": "v5-application_detail-heldout-1",
+      "condition": "unavailable",
+      "message": "对，就是我刚问的那个问题，请接着处理。",
+      "history": [
+        {
+          "role": "user",
+          "content": "麻烦说明选中这单的详细审批信息"
+        },
+        {
+          "role": "assistant",
+          "content": "你是要继续刚才这项咨询吗？"
+        }
+      ],
+      "state": {
+        "authenticated": true,
+        "application_id": 7301
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "clarify"
+    },
+    {
+      "id": "v5-application_detail-heldout-1-unavailable-2",
+      "group": "v5-application_detail-heldout-1",
+      "condition": "unavailable",
+      "message": "前面那个不用了，现在麻烦说明选中这单的详细审批信息",
+      "history": [
+        {
+          "role": "user",
+          "content": "先帮我了解正常还款的流程。"
+        },
+        {
+          "role": "assistant",
+          "content": "可以介绍还款入口。"
+        }
+      ],
+      "state": {
+        "authenticated": true,
+        "application_id": 7301
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "clarify"
+    },
+    {
+      "id": "v5-status_code-heldout-0-code_0-0",
+      "group": "v5-status_code-heldout-0",
+      "condition": "code_0",
+      "message": "审批状态用数字标着，具体指的是什么",
+      "history": [],
+      "state": {
+        "authenticated": true,
+        "status_code": 0
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "tool",
+      "reference": "tool",
+      "step_200": "llm"
+    },
+    {
+      "id": "v5-status_code-heldout-0-code_1-0",
+      "group": "v5-status_code-heldout-0",
+      "condition": "code_1",
+      "message": "审批状态用数字标着，具体指的是什么",
+      "history": [],
+      "state": {
+        "authenticated": true,
+        "status_code": 1
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "tool",
+      "reference": "tool",
+      "step_200": "llm"
+    },
+    {
+      "id": "v5-status_code-heldout-0-code_1-2",
+      "group": "v5-status_code-heldout-0",
+      "condition": "code_1",
+      "message": "前面那个不用了，现在审批状态用数字标着，具体指的是什么",
+      "history": [
+        {
+          "role": "user",
+          "content": "先帮我了解正常还款的流程。"
+        },
+        {
+          "role": "assistant",
+          "content": "可以介绍还款入口。"
+        }
+      ],
+      "state": {
+        "authenticated": true,
+        "status_code": 1
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "tool",
+      "reference": "tool",
+      "step_200": "clarify"
+    },
+    {
+      "id": "v5-status_code-heldout-0-missing_code-0",
+      "group": "v5-status_code-heldout-0",
+      "condition": "missing_code",
+      "message": "审批状态用数字标着，具体指的是什么",
+      "history": [],
+      "state": {
+        "authenticated": true
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "clarify",
+      "reference": "clarify",
+      "step_200": "llm"
+    },
+    {
+      "id": "v5-status_code-heldout-0-missing_code-1",
+      "group": "v5-status_code-heldout-0",
+      "condition": "missing_code",
+      "message": "对，就是我刚问的那个问题，请接着处理。",
+      "history": [
+        {
+          "role": "user",
+          "content": "审批状态用数字标着，具体指的是什么"
+        },
+        {
+          "role": "assistant",
+          "content": "你是要继续刚才这项咨询吗？"
+        }
+      ],
+      "state": {
+        "authenticated": true
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "clarify",
+      "reference": "clarify",
+      "step_200": "llm"
+    },
+    {
+      "id": "v5-status_code-heldout-0-tool_down-0",
+      "group": "v5-status_code-heldout-0",
+      "condition": "tool_down",
+      "message": "审批状态用数字标着，具体指的是什么",
+      "history": [],
+      "state": {
+        "authenticated": true,
+        "status_code": 2
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "llm"
+    },
+    {
+      "id": "v5-ui_issue-heldout-0-failed_troubleshooting-0",
+      "group": "v5-ui_issue-heldout-0",
+      "condition": "failed_troubleshooting",
+      "message": "提交键处在禁用状态，下一步走不了",
+      "history": [],
+      "state": {
+        "authenticated": true,
+        "page": "申请表",
+        "backend_eligible": true,
+        "troubleshooting_done": [
+          "重新登录",
+          "更新客户端",
+          "重试仍失败"
+        ]
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "clarify"
+    }
+  ],
+  "improvements": [
+    {
+      "id": "v5-applications-heldout-1-live-2",
+      "group": "v5-applications-heldout-1",
+      "condition": "live",
+      "message": "前面那个不用了，现在我提交的借款单都办到什么环节了",
+      "history": [
+        {
+          "role": "user",
+          "content": "先帮我了解正常还款的流程。"
+        },
+        {
+          "role": "assistant",
+          "content": "可以介绍还款入口。"
+        }
+      ],
+      "state": {
+        "authenticated": true
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "tool",
+      "reference": "human",
+      "step_200": "tool"
+    },
+    {
+      "id": "v5-application_detail-heldout-0-partial-2",
+      "group": "v5-application_detail-heldout-0",
+      "condition": "partial",
+      "message": "前面那个不用了，现在我指定的这单具体审核记录可以调出来么",
+      "history": [
+        {
+          "role": "user",
+          "content": "先帮我了解正常还款的流程。"
+        },
+        {
+          "role": "assistant",
+          "content": "可以介绍还款入口。"
+        }
+      ],
+      "state": {
+        "authenticated": true,
+        "application_id": 7301,
+        "record": {
+          "id": 7301
+        }
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "tool",
+      "reference": "llm",
+      "step_200": "tool"
+    },
+    {
+      "id": "v5-application_detail-heldout-0-missing_id-0",
+      "group": "v5-application_detail-heldout-0",
+      "condition": "missing_id",
+      "message": "我指定的这单具体审核记录可以调出来么",
+      "history": [],
+      "state": {
+        "authenticated": true
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "clarify",
+      "reference": "human",
+      "step_200": "clarify"
+    },
+    {
+      "id": "v5-application_detail-heldout-0-missing_id-1",
+      "group": "v5-application_detail-heldout-0",
+      "condition": "missing_id",
+      "message": "对，就是我刚问的那个问题，请接着处理。",
+      "history": [
+        {
+          "role": "user",
+          "content": "我指定的这单具体审核记录可以调出来么"
+        },
+        {
+          "role": "assistant",
+          "content": "你是要继续刚才这项咨询吗？"
+        }
+      ],
+      "state": {
+        "authenticated": true
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "clarify",
+      "reference": "human",
+      "step_200": "clarify"
+    },
+    {
+      "id": "v5-status_code-heldout-1-code_1-0",
+      "group": "v5-status_code-heldout-1",
+      "condition": "code_1",
+      "message": "申请里这个代码对应哪个办理阶段",
+      "history": [],
+      "state": {
+        "authenticated": true,
+        "status_code": 1
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "tool",
+      "reference": "clarify",
+      "step_200": "tool"
+    },
+    {
+      "id": "v5-status_code-heldout-1-code_1-2",
+      "group": "v5-status_code-heldout-1",
+      "condition": "code_1",
+      "message": "前面那个不用了，现在申请里这个代码对应哪个办理阶段",
+      "history": [
+        {
+          "role": "user",
+          "content": "先帮我了解正常还款的流程。"
+        },
+        {
+          "role": "assistant",
+          "content": "可以介绍还款入口。"
+        }
+      ],
+      "state": {
+        "authenticated": true,
+        "status_code": 1
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "tool",
+      "reference": "clarify",
+      "step_200": "tool"
+    },
+    {
+      "id": "v5-ui_issue-heldout-1-no_page-1",
+      "group": "v5-ui_issue-heldout-1",
+      "condition": "no_page",
+      "message": "对，就是我刚问的那个问题，请接着处理。",
+      "history": [
+        {
+          "role": "user",
+          "content": "借款页面按不了继续办理，怎么处理"
+        },
+        {
+          "role": "assistant",
+          "content": "你是要继续刚才这项咨询吗？"
+        }
+      ],
+      "state": {
+        "authenticated": true
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "clarify",
+      "reference": "human",
+      "step_200": "clarify"
+    },
+    {
+      "id": "v5-ui_issue-heldout-1-no_page-2",
+      "group": "v5-ui_issue-heldout-1",
+      "condition": "no_page",
+      "message": "前面那个不用了，现在借款页面按不了继续办理，怎么处理",
+      "history": [
+        {
+          "role": "user",
+          "content": "先帮我了解正常还款的流程。"
+        },
+        {
+          "role": "assistant",
+          "content": "可以介绍还款入口。"
+        }
+      ],
+      "state": {
+        "authenticated": true
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "clarify",
+      "reference": "human",
+      "step_200": "clarify"
+    }
+  ],
+  "human_miss_records": [
+    {
+      "id": "v5-products-heldout-0-unavailable-0",
+      "group": "v5-products-heldout-0",
+      "condition": "unavailable",
+      "message": "把你们可办理的借款种类与具体条款列一下",
+      "history": [],
+      "state": {
+        "authenticated": true
+      },
+      "available_tools": [
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "llm"
+    },
+    {
+      "id": "v5-products-heldout-0-unavailable-1",
+      "group": "v5-products-heldout-0",
+      "condition": "unavailable",
+      "message": "对，就是我刚问的那个问题，请接着处理。",
+      "history": [
+        {
+          "role": "user",
+          "content": "把你们可办理的借款种类与具体条款列一下"
+        },
+        {
+          "role": "assistant",
+          "content": "你是要继续刚才这项咨询吗？"
+        }
+      ],
+      "state": {
+        "authenticated": true
+      },
+      "available_tools": [
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "llm"
+    },
+    {
+      "id": "v5-products-heldout-0-unavailable-2",
+      "group": "v5-products-heldout-0",
+      "condition": "unavailable",
+      "message": "前面那个不用了，现在把你们可办理的借款种类与具体条款列一下",
+      "history": [
+        {
+          "role": "user",
+          "content": "先帮我了解正常还款的流程。"
+        },
+        {
+          "role": "assistant",
+          "content": "可以介绍还款入口。"
+        }
+      ],
+      "state": {
+        "authenticated": true
+      },
+      "available_tools": [
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "llm"
+    },
+    {
+      "id": "v5-products-heldout-1-unavailable-0",
+      "group": "v5-products-heldout-1",
+      "condition": "unavailable",
+      "message": "有哪几种在售方案，各自允许的期限呢",
+      "history": [],
+      "state": {
+        "authenticated": true
+      },
+      "available_tools": [
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "tool"
+    },
+    {
+      "id": "v5-credit-heldout-0-unavailable-1",
+      "group": "v5-credit-heldout-0",
+      "condition": "unavailable",
+      "message": "对，就是我刚问的那个问题，请接着处理。",
+      "history": [
+        {
+          "role": "user",
+          "content": "个人资料里的信用分能替我查一眼么"
+        },
+        {
+          "role": "assistant",
+          "content": "你是要继续刚才这项咨询吗？"
+        }
+      ],
+      "state": {
+        "authenticated": true
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "llm"
+    },
+    {
+      "id": "v5-credit-heldout-0-unavailable-2",
+      "group": "v5-credit-heldout-0",
+      "condition": "unavailable",
+      "message": "前面那个不用了，现在个人资料里的信用分能替我查一眼么",
+      "history": [
+        {
+          "role": "user",
+          "content": "先帮我了解正常还款的流程。"
+        },
+        {
+          "role": "assistant",
+          "content": "可以介绍还款入口。"
+        }
+      ],
+      "state": {
+        "authenticated": true
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "llm"
+    },
+    {
+      "id": "v5-credit-heldout-0-other_owner-0",
+      "group": "v5-credit-heldout-0",
+      "condition": "other_owner",
+      "message": "个人资料里的信用分能替我查一眼么",
+      "history": [],
+      "state": {
+        "authenticated": true,
+        "record_owner": "other_user"
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "tool"
+    },
+    {
+      "id": "v5-credit-heldout-1-other_owner-0",
+      "group": "v5-credit-heldout-1",
+      "condition": "other_owner",
+      "message": "帮忙调一下此账户目前的信用评分",
+      "history": [],
+      "state": {
+        "authenticated": true,
+        "record_owner": "other_user"
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "tool"
+    },
+    {
+      "id": "v5-applications-heldout-1-unavailable-0",
+      "group": "v5-applications-heldout-1",
+      "condition": "unavailable",
+      "message": "我提交的借款单都办到什么环节了",
+      "history": [],
+      "state": {
+        "authenticated": true
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "tool"
+    },
+    {
+      "id": "v5-applications-heldout-1-unavailable-1",
+      "group": "v5-applications-heldout-1",
+      "condition": "unavailable",
+      "message": "对，就是我刚问的那个问题，请接着处理。",
+      "history": [
+        {
+          "role": "user",
+          "content": "我提交的借款单都办到什么环节了"
+        },
+        {
+          "role": "assistant",
+          "content": "你是要继续刚才这项咨询吗？"
+        }
+      ],
+      "state": {
+        "authenticated": true
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "clarify"
+    },
+    {
+      "id": "v5-applications-heldout-1-unavailable-2",
+      "group": "v5-applications-heldout-1",
+      "condition": "unavailable",
+      "message": "前面那个不用了，现在我提交的借款单都办到什么环节了",
+      "history": [
+        {
+          "role": "user",
+          "content": "先帮我了解正常还款的流程。"
+        },
+        {
+          "role": "assistant",
+          "content": "可以介绍还款入口。"
+        }
+      ],
+      "state": {
+        "authenticated": true
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "clarify"
+    },
+    {
+      "id": "v5-application_detail-heldout-0-unavailable-1",
+      "group": "v5-application_detail-heldout-0",
+      "condition": "unavailable",
+      "message": "对，就是我刚问的那个问题，请接着处理。",
+      "history": [
+        {
+          "role": "user",
+          "content": "我指定的这单具体审核记录可以调出来么"
+        },
+        {
+          "role": "assistant",
+          "content": "你是要继续刚才这项咨询吗？"
+        }
+      ],
+      "state": {
+        "authenticated": true,
+        "application_id": 7301
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "clarify"
+    },
+    {
+      "id": "v5-application_detail-heldout-0-unavailable-2",
+      "group": "v5-application_detail-heldout-0",
+      "condition": "unavailable",
+      "message": "前面那个不用了，现在我指定的这单具体审核记录可以调出来么",
+      "history": [
+        {
+          "role": "user",
+          "content": "先帮我了解正常还款的流程。"
+        },
+        {
+          "role": "assistant",
+          "content": "可以介绍还款入口。"
+        }
+      ],
+      "state": {
+        "authenticated": true,
+        "application_id": 7301
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "clarify"
+    },
+    {
+      "id": "v5-application_detail-heldout-1-unavailable-1",
+      "group": "v5-application_detail-heldout-1",
+      "condition": "unavailable",
+      "message": "对，就是我刚问的那个问题，请接着处理。",
+      "history": [
+        {
+          "role": "user",
+          "content": "麻烦说明选中这单的详细审批信息"
+        },
+        {
+          "role": "assistant",
+          "content": "你是要继续刚才这项咨询吗？"
+        }
+      ],
+      "state": {
+        "authenticated": true,
+        "application_id": 7301
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "clarify"
+    },
+    {
+      "id": "v5-application_detail-heldout-1-unavailable-2",
+      "group": "v5-application_detail-heldout-1",
+      "condition": "unavailable",
+      "message": "前面那个不用了，现在麻烦说明选中这单的详细审批信息",
+      "history": [
+        {
+          "role": "user",
+          "content": "先帮我了解正常还款的流程。"
+        },
+        {
+          "role": "assistant",
+          "content": "可以介绍还款入口。"
+        }
+      ],
+      "state": {
+        "authenticated": true,
+        "application_id": 7301
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "clarify"
+    },
+    {
+      "id": "v5-status_code-heldout-0-tool_down-0",
+      "group": "v5-status_code-heldout-0",
+      "condition": "tool_down",
+      "message": "审批状态用数字标着，具体指的是什么",
+      "history": [],
+      "state": {
+        "authenticated": true,
+        "status_code": 2
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "llm"
+    },
+    {
+      "id": "v5-ui_issue-heldout-0-failed_troubleshooting-0",
+      "group": "v5-ui_issue-heldout-0",
+      "condition": "failed_troubleshooting",
+      "message": "提交键处在禁用状态，下一步走不了",
+      "history": [],
+      "state": {
+        "authenticated": true,
+        "page": "申请表",
+        "backend_eligible": true,
+        "troubleshooting_done": [
+          "重新登录",
+          "更新客户端",
+          "重试仍失败"
+        ]
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyCreditScore",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "explainApplicationStatus"
+      ],
+      "gold": "human",
+      "reference": "human",
+      "step_200": "clarify"
+    }
+  ],
+  "metrics": {
+    "business": {
+      "v5-reference": {
+        "n": 120,
+        "tasks": {
+          "intent": {
+            "n": 120,
+            "correct": 95,
+            "accuracy": 0.7916666666666666,
+            "accuracy_wilson_95_descriptive": [
+              0.7105215895553653,
+              0.8547165856620093
+            ],
+            "macro_f1_gold_supported_classes": 0.8429664289958407,
+            "supported_classes": [
+              "application_detail",
+              "applications",
+              "credit",
+              "general",
+              "payment_dispute",
+              "products",
+              "repayment",
+              "status_code"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "products -> products": 20,
+              "general -> products": 5,
+              "general -> general": 11,
+              "application_detail -> application_detail": 10,
+              "general -> status_code": 5,
+              "general -> ui_issue": 2,
+              "general -> application_detail": 2,
+              "general -> security": 1,
+              "credit -> credit": 10,
+              "general -> credit": 4,
+              "repayment -> repayment": 14,
+              "repayment -> ui_issue": 2,
+              "payment_dispute -> payment_dispute": 10,
+              "applications -> applications": 10,
+              "status_code -> status_code": 10,
+              "repayment -> general": 4
+            },
+            "brier_multiclass_sum": 0.34038924526074077,
+            "nll": 1.0470113543574222,
+            "ece_10_equal_width": 0.17603345351363703,
+            "selective": {
+              "0.5": {
+                "coverage": 0.9833333333333333,
+                "accepted": 118,
+                "errors": 23
+              },
+              "0.7": {
+                "coverage": 0.95,
+                "accepted": 114,
+                "errors": 19
+              },
+              "0.9": {
+                "coverage": 0.925,
+                "accepted": 111,
+                "errors": 16
+              },
+              "0.95": {
+                "coverage": 0.9,
+                "accepted": 108,
+                "errors": 15
+              }
+            }
+          },
+          "route": {
+            "n": 120,
+            "correct": 97,
+            "accuracy": 0.8083333333333333,
+            "accuracy_wilson_95_descriptive": [
+              0.7287868300416364,
+              0.8687506694738739
+            ],
+            "macro_f1_gold_supported_classes": 0.7620979912036343,
+            "supported_classes": [
+              "clarify",
+              "human",
+              "llm",
+              "tool"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "tool -> tool": 50,
+              "llm -> llm": 27,
+              "llm -> tool": 3,
+              "llm -> clarify": 6,
+              "llm -> human": 4,
+              "clarify -> clarify": 10,
+              "human -> human": 10,
+              "tool -> clarify": 8,
+              "tool -> human": 2
+            },
+            "brier_multiclass_sum": 0.3296672423771913,
+            "nll": 1.3196347565272435,
+            "ece_10_equal_width": 0.1623960512037489,
+            "selective": {
+              "0.5": {
+                "coverage": 0.9916666666666667,
+                "accepted": 119,
+                "errors": 22
+              },
+              "0.7": {
+                "coverage": 0.95,
+                "accepted": 114,
+                "errors": 18
+              },
+              "0.9": {
+                "coverage": 0.9,
+                "accepted": 108,
+                "errors": 15
+              },
+              "0.95": {
+                "coverage": 0.875,
+                "accepted": 105,
+                "errors": 13
+              }
+            }
+          },
+          "tool": {
+            "n": 120,
+            "correct": 103,
+            "accuracy": 0.8583333333333333,
+            "accuracy_wilson_95_descriptive": [
+              0.7848035127258367,
+              0.9096319596840804
+            ],
+            "macro_f1_gold_supported_classes": 0.8404298459042985,
+            "supported_classes": [
+              "explainApplicationStatus",
+              "none",
+              "queryApplicationDetail",
+              "queryLoanProducts",
+              "queryMyApplications",
+              "queryMyCreditScore"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "queryLoanProducts -> queryLoanProducts": 12,
+              "none -> none": 60,
+              "queryApplicationDetail -> queryApplicationDetail": 6,
+              "queryApplicationDetail -> none": 4,
+              "queryMyCreditScore -> queryMyCreditScore": 10,
+              "queryLoanProducts -> none": 8,
+              "queryMyApplications -> queryMyApplications": 5,
+              "queryMyApplications -> none": 5,
+              "explainApplicationStatus -> explainApplicationStatus": 10
+            }
+          }
+        },
+        "human_required": 10,
+        "human_missed": 0,
+        "human_false_positive": 6,
+        "tool_required": 60,
+        "joint_tool_correct": 43,
+        "all_fields_correct": 70
+      },
+      "step-200": {
+        "n": 120,
+        "tasks": {
+          "intent": {
+            "n": 120,
+            "correct": 115,
+            "accuracy": 0.9583333333333334,
+            "accuracy_wilson_95_descriptive": [
+              0.9061578707045692,
+              0.9820735474941622
+            ],
+            "macro_f1_gold_supported_classes": 0.9796189632255206,
+            "supported_classes": [
+              "application_detail",
+              "applications",
+              "credit",
+              "general",
+              "payment_dispute",
+              "products",
+              "repayment",
+              "status_code"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "products -> products": 20,
+              "general -> general": 28,
+              "application_detail -> application_detail": 10,
+              "general -> handoff": 2,
+              "credit -> credit": 10,
+              "repayment -> repayment": 17,
+              "repayment -> general": 3,
+              "payment_dispute -> payment_dispute": 10,
+              "applications -> applications": 10,
+              "status_code -> status_code": 10
+            },
+            "brier_multiclass_sum": 0.07490427356553436,
+            "nll": 0.14747419553349103,
+            "ece_10_equal_width": 0.0476281645736181,
+            "selective": {
+              "0.5": {
+                "coverage": 0.9416666666666667,
+                "accepted": 113,
+                "errors": 2
+              },
+              "0.7": {
+                "coverage": 0.9083333333333333,
+                "accepted": 109,
+                "errors": 2
+              },
+              "0.9": {
+                "coverage": 0.8833333333333333,
+                "accepted": 106,
+                "errors": 2
+              },
+              "0.95": {
+                "coverage": 0.8833333333333333,
+                "accepted": 106,
+                "errors": 2
+              }
+            }
+          },
+          "route": {
+            "n": 120,
+            "correct": 120,
+            "accuracy": 1.0,
+            "accuracy_wilson_95_descriptive": [
+              0.9689797289440706,
+              1.0
+            ],
+            "macro_f1_gold_supported_classes": 1.0,
+            "supported_classes": [
+              "clarify",
+              "human",
+              "llm",
+              "tool"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "tool -> tool": 60,
+              "llm -> llm": 40,
+              "clarify -> clarify": 10,
+              "human -> human": 10
+            },
+            "brier_multiclass_sum": 0.0004113253710828827,
+            "nll": 0.0028989155526751528,
+            "ece_10_equal_width": 0.002779463996698107,
+            "selective": {
+              "0.5": {
+                "coverage": 1.0,
+                "accepted": 120,
+                "errors": 0
+              },
+              "0.7": {
+                "coverage": 1.0,
+                "accepted": 120,
+                "errors": 0
+              },
+              "0.9": {
+                "coverage": 0.9916666666666667,
+                "accepted": 119,
+                "errors": 0
+              },
+              "0.95": {
+                "coverage": 0.9833333333333333,
+                "accepted": 118,
+                "errors": 0
+              }
+            }
+          },
+          "tool": {
+            "n": 120,
+            "correct": 120,
+            "accuracy": 1.0,
+            "accuracy_wilson_95_descriptive": [
+              0.9689797289440706,
+              1.0
+            ],
+            "macro_f1_gold_supported_classes": 1.0,
+            "supported_classes": [
+              "explainApplicationStatus",
+              "none",
+              "queryApplicationDetail",
+              "queryLoanProducts",
+              "queryMyApplications",
+              "queryMyCreditScore"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "queryLoanProducts -> queryLoanProducts": 20,
+              "none -> none": 60,
+              "queryApplicationDetail -> queryApplicationDetail": 10,
+              "queryMyCreditScore -> queryMyCreditScore": 10,
+              "queryMyApplications -> queryMyApplications": 10,
+              "explainApplicationStatus -> explainApplicationStatus": 10
+            }
+          }
+        },
+        "human_required": 10,
+        "human_missed": 0,
+        "human_false_positive": 0,
+        "tool_required": 60,
+        "joint_tool_correct": 60,
+        "all_fields_correct": 115
+      }
+    },
+    "legacy": {
+      "v5-reference": {
+        "n": 402,
+        "tasks": {
+          "intent": {
+            "n": 402,
+            "correct": 384,
+            "accuracy": 0.9552238805970149,
+            "accuracy_wilson_95_descriptive": [
+              0.9303374246540506,
+              0.9714922547085383
+            ],
+            "macro_f1_gold_supported_classes": 0.960187176874599,
+            "supported_classes": [
+              "application_detail",
+              "applications",
+              "credit",
+              "general",
+              "handoff",
+              "payment_dispute",
+              "products",
+              "repayment",
+              "security",
+              "status_code",
+              "ui_issue"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "products -> products": 66,
+              "credit -> credit": 72,
+              "applications -> applications": 72,
+              "application_detail -> application_detail": 80,
+              "status_code -> status_code": 18,
+              "status_code -> application_detail": 16,
+              "status_code -> applications": 2,
+              "ui_issue -> ui_issue": 62,
+              "payment_dispute -> payment_dispute": 2,
+              "security -> security": 2,
+              "handoff -> handoff": 2,
+              "repayment -> repayment": 4,
+              "general -> general": 4
+            },
+            "brier_multiclass_sum": 0.08796704420510522,
+            "nll": 0.7158102785247669,
+            "ece_10_equal_width": 0.043977288701225185,
+            "selective": {
+              "0.5": {
+                "coverage": 1.0,
+                "accepted": 402,
+                "errors": 18
+              },
+              "0.7": {
+                "coverage": 1.0,
+                "accepted": 402,
+                "errors": 18
+              },
+              "0.9": {
+                "coverage": 0.9950248756218906,
+                "accepted": 400,
+                "errors": 17
+              },
+              "0.95": {
+                "coverage": 0.9925373134328358,
+                "accepted": 399,
+                "errors": 16
+              }
+            }
+          },
+          "route": {
+            "n": 402,
+            "correct": 389,
+            "accuracy": 0.9676616915422885,
+            "accuracy_wilson_95_descriptive": [
+              0.9454640397355725,
+              0.9810057948008575
+            ],
+            "macro_f1_gold_supported_classes": 0.9689429855509151,
+            "supported_classes": [
+              "clarify",
+              "human",
+              "llm",
+              "tool"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "tool -> tool": 108,
+              "clarify -> clarify": 95,
+              "llm -> llm": 76,
+              "human -> human": 110,
+              "tool -> human": 3,
+              "tool -> llm": 2,
+              "clarify -> human": 4,
+              "tool -> clarify": 3,
+              "clarify -> tool": 1
+            },
+            "brier_multiclass_sum": 0.06245260534742433,
+            "nll": 0.2729899087034833,
+            "ece_10_equal_width": 0.03163736814686588,
+            "selective": {
+              "0.5": {
+                "coverage": 1.0,
+                "accepted": 402,
+                "errors": 13
+              },
+              "0.7": {
+                "coverage": 0.9975124378109452,
+                "accepted": 401,
+                "errors": 13
+              },
+              "0.9": {
+                "coverage": 0.9925373134328358,
+                "accepted": 399,
+                "errors": 12
+              },
+              "0.95": {
+                "coverage": 0.9825870646766169,
+                "accepted": 395,
+                "errors": 9
+              }
+            }
+          },
+          "tool": {
+            "n": 402,
+            "correct": 392,
+            "accuracy": 0.9751243781094527,
+            "accuracy_wilson_95_descriptive": [
+              0.9548207602603369,
+              0.9864331673803979
+            ],
+            "macro_f1_gold_supported_classes": 0.9466936605543831,
+            "supported_classes": [
+              "explainApplicationStatus",
+              "none",
+              "queryApplicationDetail",
+              "queryLoanProducts",
+              "queryMyApplications",
+              "queryMyCreditScore"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "queryLoanProducts -> queryLoanProducts": 24,
+              "none -> none": 286,
+              "queryMyCreditScore -> queryMyCreditScore": 24,
+              "queryMyApplications -> queryMyApplications": 23,
+              "queryMyApplications -> none": 1,
+              "queryApplicationDetail -> queryApplicationDetail": 24,
+              "queryApplicationDetail -> none": 2,
+              "explainApplicationStatus -> explainApplicationStatus": 11,
+              "explainApplicationStatus -> none": 7
+            }
+          }
+        },
+        "human_required": 110,
+        "human_missed": 0,
+        "human_false_positive": 7,
+        "tool_required": 116,
+        "joint_tool_correct": 106,
+        "all_fields_correct": 377
+      },
+      "step-200": {
+        "n": 402,
+        "tasks": {
+          "intent": {
+            "n": 402,
+            "correct": 382,
+            "accuracy": 0.9502487562189055,
+            "accuracy_wilson_95_descriptive": [
+              0.9244074642062649,
+              0.9675661530867875
+            ],
+            "macro_f1_gold_supported_classes": 0.9261720801635775,
+            "supported_classes": [
+              "application_detail",
+              "applications",
+              "credit",
+              "general",
+              "handoff",
+              "payment_dispute",
+              "products",
+              "repayment",
+              "security",
+              "status_code",
+              "ui_issue"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "products -> products": 66,
+              "credit -> credit": 72,
+              "applications -> applications": 72,
+              "application_detail -> application_detail": 80,
+              "status_code -> status_code": 16,
+              "status_code -> general": 4,
+              "status_code -> application_detail": 14,
+              "status_code -> applications": 2,
+              "ui_issue -> ui_issue": 62,
+              "payment_dispute -> payment_dispute": 2,
+              "security -> security": 2,
+              "handoff -> handoff": 2,
+              "repayment -> repayment": 4,
+              "general -> general": 4
+            },
+            "brier_multiclass_sum": 0.08422181301740789,
+            "nll": 0.3828918470831644,
+            "ece_10_equal_width": 0.03029775782644345,
+            "selective": {
+              "0.5": {
+                "coverage": 1.0,
+                "accepted": 402,
+                "errors": 20
+              },
+              "0.7": {
+                "coverage": 0.9701492537313433,
+                "accepted": 390,
+                "errors": 11
+              },
+              "0.9": {
+                "coverage": 0.9427860696517413,
+                "accepted": 379,
+                "errors": 7
+              },
+              "0.95": {
+                "coverage": 0.9328358208955224,
+                "accepted": 375,
+                "errors": 7
+              }
+            }
+          },
+          "route": {
+            "n": 402,
+            "correct": 373,
+            "accuracy": 0.927860696517413,
+            "accuracy_wilson_95_descriptive": [
+              0.8983156571817977,
+              0.9493056807983405
+            ],
+            "macro_f1_gold_supported_classes": 0.9272183146066143,
+            "supported_classes": [
+              "clarify",
+              "human",
+              "llm",
+              "tool"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "tool -> tool": 107,
+              "clarify -> clarify": 97,
+              "llm -> llm": 76,
+              "human -> llm": 6,
+              "human -> human": 93,
+              "human -> tool": 4,
+              "human -> clarify": 7,
+              "tool -> llm": 5,
+              "tool -> clarify": 2,
+              "clarify -> llm": 2,
+              "tool -> human": 2,
+              "clarify -> tool": 1
+            },
+            "brier_multiclass_sum": 0.12094613247086829,
+            "nll": 0.32071524294163395,
+            "ece_10_equal_width": 0.05870633771330624,
+            "selective": {
+              "0.5": {
+                "coverage": 0.9975124378109452,
+                "accepted": 401,
+                "errors": 28
+              },
+              "0.7": {
+                "coverage": 0.9850746268656716,
+                "accepted": 396,
+                "errors": 25
+              },
+              "0.9": {
+                "coverage": 0.9601990049751243,
+                "accepted": 386,
+                "errors": 17
+              },
+              "0.95": {
+                "coverage": 0.945273631840796,
+                "accepted": 380,
+                "errors": 15
+              }
+            }
+          },
+          "tool": {
+            "n": 402,
+            "correct": 383,
+            "accuracy": 0.9527363184079602,
+            "accuracy_wilson_95_descriptive": [
+              0.9273651162743985,
+              0.9695365320534222
+            ],
+            "macro_f1_gold_supported_classes": 0.8810637246351533,
+            "supported_classes": [
+              "explainApplicationStatus",
+              "none",
+              "queryApplicationDetail",
+              "queryLoanProducts",
+              "queryMyApplications",
+              "queryMyCreditScore"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "queryLoanProducts -> queryLoanProducts": 24,
+              "none -> none": 284,
+              "queryMyCreditScore -> queryMyCreditScore": 24,
+              "none -> queryMyCreditScore": 2,
+              "queryMyApplications -> queryMyApplications": 23,
+              "queryMyApplications -> none": 1,
+              "queryApplicationDetail -> queryApplicationDetail": 22,
+              "queryApplicationDetail -> none": 4,
+              "explainApplicationStatus -> none": 10,
+              "explainApplicationStatus -> explainApplicationStatus": 6,
+              "explainApplicationStatus -> queryMyApplications": 2
+            }
+          }
+        },
+        "human_required": 110,
+        "human_missed": 17,
+        "human_false_positive": 2,
+        "tool_required": 116,
+        "joint_tool_correct": 99,
+        "all_fields_correct": 355
+      }
+    },
+    "massive": {
+      "v5-reference": {
+        "n": 273,
+        "tasks": {
+          "intent": {
+            "n": 273,
+            "correct": 233,
+            "accuracy": 0.8534798534798534,
+            "accuracy_wilson_95_descriptive": [
+              0.8066302085824938,
+              0.8905193527551086
+            ],
+            "macro_f1_gold_supported_classes": 0.8207664275460885,
+            "supported_classes": [
+              "alarm_query",
+              "alarm_remove",
+              "alarm_set",
+              "audio_volume_down",
+              "audio_volume_mute",
+              "audio_volume_up",
+              "calendar_query",
+              "calendar_remove",
+              "calendar_set",
+              "cooking_query",
+              "cooking_recipe",
+              "datetime_convert",
+              "datetime_query",
+              "email_addcontact",
+              "email_query",
+              "email_querycontact",
+              "email_sendemail",
+              "general_greet",
+              "general_joke",
+              "general_quirky",
+              "iot_cleaning",
+              "iot_coffee",
+              "iot_hue_lightchange",
+              "iot_hue_lightdim",
+              "iot_hue_lightoff",
+              "iot_hue_lighton",
+              "iot_hue_lightup",
+              "iot_wemo_off",
+              "iot_wemo_on",
+              "lists_createoradd",
+              "lists_query",
+              "lists_remove",
+              "music_dislikeness",
+              "music_likeness",
+              "music_query",
+              "music_settings",
+              "news_query",
+              "play_audiobook",
+              "play_game",
+              "play_music",
+              "play_podcasts",
+              "play_radio",
+              "qa_currency",
+              "qa_definition",
+              "qa_factoid",
+              "qa_maths",
+              "qa_stock",
+              "recommendation_events",
+              "recommendation_locations",
+              "recommendation_movies",
+              "social_post",
+              "social_query",
+              "takeaway_order",
+              "takeaway_query",
+              "transport_query",
+              "transport_taxi",
+              "transport_ticket",
+              "transport_traffic",
+              "weather_query"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "alarm_query -> alarm_set": 1,
+              "alarm_query -> alarm_query": 4,
+              "alarm_remove -> alarm_remove": 4,
+              "alarm_remove -> transport_taxi": 1,
+              "alarm_set -> alarm_set": 5,
+              "audio_volume_down -> audio_volume_down": 4,
+              "audio_volume_mute -> audio_volume_mute": 5,
+              "audio_volume_up -> audio_volume_up": 5,
+              "calendar_query -> calendar_query": 5,
+              "calendar_remove -> calendar_remove": 5,
+              "calendar_set -> calendar_set": 4,
+              "calendar_set -> social_post": 1,
+              "cooking_query -> cooking_recipe": 1,
+              "cooking_recipe -> cooking_recipe": 5,
+              "datetime_convert -> datetime_convert": 5,
+              "datetime_query -> datetime_query": 5,
+              "email_addcontact -> email_addcontact": 3,
+              "email_query -> email_query": 5,
+              "email_querycontact -> email_querycontact": 2,
+              "email_querycontact -> qa_factoid": 1,
+              "email_querycontact -> email_query": 1,
+              "email_querycontact -> lists_remove": 1,
+              "email_sendemail -> email_addcontact": 1,
+              "email_sendemail -> email_sendemail": 4,
+              "general_greet -> general_joke": 1,
+              "general_joke -> general_joke": 4,
+              "general_joke -> general_quirky": 1,
+              "general_quirky -> news_query": 1,
+              "general_quirky -> qa_factoid": 1,
+              "general_quirky -> general_quirky": 2,
+              "general_quirky -> lists_createoradd": 1,
+              "iot_cleaning -> iot_cleaning": 5,
+              "iot_coffee -> iot_coffee": 5,
+              "iot_hue_lightchange -> play_music": 1,
+              "iot_hue_lightchange -> iot_hue_lightchange": 4,
+              "iot_hue_lightdim -> iot_hue_lightdim": 3,
+              "iot_hue_lightdim -> iot_hue_lightup": 1,
+              "iot_hue_lightdim -> iot_hue_lightchange": 1,
+              "iot_hue_lightoff -> iot_hue_lightoff": 4,
+              "iot_hue_lightoff -> iot_wemo_off": 1,
+              "iot_hue_lighton -> iot_hue_lightdim": 1,
+              "iot_hue_lighton -> iot_hue_lighton": 2,
+              "iot_hue_lightup -> iot_hue_lightup": 3,
+              "iot_hue_lightup -> iot_hue_lighton": 2,
+              "iot_wemo_off -> iot_wemo_on": 1,
+              "iot_wemo_off -> iot_wemo_off": 2,
+              "iot_wemo_on -> iot_wemo_on": 3,
+              "lists_createoradd -> lists_createoradd": 4,
+              "lists_createoradd -> calendar_set": 1,
+              "lists_query -> lists_query": 2,
+              "lists_query -> general_quirky": 1,
+              "lists_query -> lists_createoradd": 1,
+              "lists_query -> datetime_convert": 1,
+              "lists_remove -> lists_remove": 5,
+              "music_dislikeness -> music_dislikeness": 1,
+              "music_likeness -> music_likeness": 5,
+              "music_query -> music_query": 5,
+              "music_settings -> play_music": 2,
+              "music_settings -> music_settings": 1,
+              "music_settings -> audio_volume_mute": 1,
+              "news_query -> news_query": 5,
+              "play_audiobook -> play_audiobook": 4,
+              "play_audiobook -> play_music": 1,
+              "play_game -> play_game": 5,
+              "play_music -> play_music": 5,
+              "play_podcasts -> play_podcasts": 4,
+              "play_podcasts -> play_audiobook": 1,
+              "play_radio -> music_query": 1,
+              "play_radio -> play_radio": 4,
+              "qa_currency -> qa_currency": 5,
+              "qa_definition -> general_quirky": 1,
+              "qa_definition -> qa_definition": 4,
+              "qa_factoid -> weather_query": 1,
+              "qa_factoid -> qa_factoid": 3,
+              "qa_factoid -> news_query": 1,
+              "qa_maths -> qa_maths": 4,
+              "qa_maths -> news_query": 1,
+              "qa_stock -> qa_stock": 5,
+              "recommendation_events -> recommendation_events": 5,
+              "recommendation_locations -> recommendation_locations": 5,
+              "recommendation_movies -> recommendation_events": 1,
+              "recommendation_movies -> recommendation_movies": 4,
+              "social_post -> social_post": 5,
+              "social_query -> social_query": 2,
+              "social_query -> general_quirky": 1,
+              "social_query -> social_post": 1,
+              "social_query -> lists_query": 1,
+              "takeaway_order -> takeaway_order": 4,
+              "takeaway_order -> takeaway_query": 1,
+              "takeaway_query -> takeaway_query": 5,
+              "transport_query -> transport_query": 5,
+              "transport_taxi -> transport_taxi": 5,
+              "transport_ticket -> transport_ticket": 5,
+              "transport_traffic -> transport_traffic": 5,
+              "weather_query -> weather_query": 5
+            },
+            "brier_multiclass_sum": 0.22445778241036965,
+            "nll": 0.5921573742387458,
+            "ece_10_equal_width": 0.08249660645164053,
+            "selective": {
+              "0.5": {
+                "coverage": 0.9597069597069597,
+                "accepted": 262,
+                "errors": 29
+              },
+              "0.7": {
+                "coverage": 0.9267399267399268,
+                "accepted": 253,
+                "errors": 25
+              },
+              "0.9": {
+                "coverage": 0.8351648351648352,
+                "accepted": 228,
+                "errors": 13
+              },
+              "0.95": {
+                "coverage": 0.7619047619047619,
+                "accepted": 208,
+                "errors": 10
+              }
+            }
+          }
+        }
+      },
+      "step-200": {
+        "n": 273,
+        "tasks": {
+          "intent": {
+            "n": 273,
+            "correct": 234,
+            "accuracy": 0.8571428571428571,
+            "accuracy_wilson_95_descriptive": [
+              0.810669156334561,
+              0.8937047527889234
+            ],
+            "macro_f1_gold_supported_classes": 0.8284450953942479,
+            "supported_classes": [
+              "alarm_query",
+              "alarm_remove",
+              "alarm_set",
+              "audio_volume_down",
+              "audio_volume_mute",
+              "audio_volume_up",
+              "calendar_query",
+              "calendar_remove",
+              "calendar_set",
+              "cooking_query",
+              "cooking_recipe",
+              "datetime_convert",
+              "datetime_query",
+              "email_addcontact",
+              "email_query",
+              "email_querycontact",
+              "email_sendemail",
+              "general_greet",
+              "general_joke",
+              "general_quirky",
+              "iot_cleaning",
+              "iot_coffee",
+              "iot_hue_lightchange",
+              "iot_hue_lightdim",
+              "iot_hue_lightoff",
+              "iot_hue_lighton",
+              "iot_hue_lightup",
+              "iot_wemo_off",
+              "iot_wemo_on",
+              "lists_createoradd",
+              "lists_query",
+              "lists_remove",
+              "music_dislikeness",
+              "music_likeness",
+              "music_query",
+              "music_settings",
+              "news_query",
+              "play_audiobook",
+              "play_game",
+              "play_music",
+              "play_podcasts",
+              "play_radio",
+              "qa_currency",
+              "qa_definition",
+              "qa_factoid",
+              "qa_maths",
+              "qa_stock",
+              "recommendation_events",
+              "recommendation_locations",
+              "recommendation_movies",
+              "social_post",
+              "social_query",
+              "takeaway_order",
+              "takeaway_query",
+              "transport_query",
+              "transport_taxi",
+              "transport_ticket",
+              "transport_traffic",
+              "weather_query"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "alarm_query -> alarm_set": 1,
+              "alarm_query -> alarm_query": 4,
+              "alarm_remove -> alarm_remove": 4,
+              "alarm_remove -> general_quirky": 1,
+              "alarm_set -> alarm_set": 5,
+              "audio_volume_down -> audio_volume_down": 4,
+              "audio_volume_mute -> audio_volume_mute": 5,
+              "audio_volume_up -> audio_volume_up": 5,
+              "calendar_query -> calendar_query": 5,
+              "calendar_remove -> calendar_remove": 5,
+              "calendar_set -> calendar_set": 4,
+              "calendar_set -> social_post": 1,
+              "cooking_query -> cooking_recipe": 1,
+              "cooking_recipe -> cooking_recipe": 5,
+              "datetime_convert -> datetime_convert": 5,
+              "datetime_query -> datetime_query": 5,
+              "email_addcontact -> email_addcontact": 3,
+              "email_query -> email_query": 5,
+              "email_querycontact -> email_querycontact": 2,
+              "email_querycontact -> qa_factoid": 1,
+              "email_querycontact -> email_query": 1,
+              "email_querycontact -> lists_remove": 1,
+              "email_sendemail -> email_addcontact": 1,
+              "email_sendemail -> email_sendemail": 4,
+              "general_greet -> general_joke": 1,
+              "general_joke -> general_joke": 4,
+              "general_joke -> general_quirky": 1,
+              "general_quirky -> news_query": 1,
+              "general_quirky -> qa_factoid": 1,
+              "general_quirky -> general_quirky": 2,
+              "general_quirky -> lists_createoradd": 1,
+              "iot_cleaning -> iot_cleaning": 5,
+              "iot_coffee -> iot_coffee": 5,
+              "iot_hue_lightchange -> iot_hue_lightchange": 5,
+              "iot_hue_lightdim -> iot_hue_lightdim": 3,
+              "iot_hue_lightdim -> iot_hue_lightchange": 2,
+              "iot_hue_lightoff -> iot_hue_lightoff": 4,
+              "iot_hue_lightoff -> iot_wemo_off": 1,
+              "iot_hue_lighton -> iot_hue_lightdim": 1,
+              "iot_hue_lighton -> iot_hue_lighton": 2,
+              "iot_hue_lightup -> iot_hue_lightup": 3,
+              "iot_hue_lightup -> iot_hue_lighton": 2,
+              "iot_wemo_off -> iot_wemo_on": 1,
+              "iot_wemo_off -> iot_wemo_off": 2,
+              "iot_wemo_on -> iot_wemo_on": 3,
+              "lists_createoradd -> lists_createoradd": 4,
+              "lists_createoradd -> calendar_set": 1,
+              "lists_query -> lists_query": 2,
+              "lists_query -> general_quirky": 2,
+              "lists_query -> lists_createoradd": 1,
+              "lists_remove -> lists_remove": 5,
+              "music_dislikeness -> music_dislikeness": 1,
+              "music_likeness -> music_likeness": 5,
+              "music_query -> music_query": 5,
+              "music_settings -> play_music": 2,
+              "music_settings -> music_settings": 2,
+              "news_query -> news_query": 5,
+              "play_audiobook -> play_audiobook": 4,
+              "play_audiobook -> play_music": 1,
+              "play_game -> play_game": 5,
+              "play_music -> play_music": 5,
+              "play_podcasts -> play_podcasts": 4,
+              "play_podcasts -> play_audiobook": 1,
+              "play_radio -> music_query": 1,
+              "play_radio -> play_radio": 4,
+              "qa_currency -> qa_currency": 5,
+              "qa_definition -> general_quirky": 1,
+              "qa_definition -> qa_definition": 4,
+              "qa_factoid -> weather_query": 1,
+              "qa_factoid -> qa_factoid": 3,
+              "qa_factoid -> news_query": 1,
+              "qa_maths -> qa_maths": 4,
+              "qa_maths -> news_query": 1,
+              "qa_stock -> qa_stock": 5,
+              "recommendation_events -> recommendation_events": 5,
+              "recommendation_locations -> recommendation_locations": 5,
+              "recommendation_movies -> recommendation_events": 1,
+              "recommendation_movies -> recommendation_movies": 4,
+              "social_post -> social_post": 5,
+              "social_query -> social_query": 2,
+              "social_query -> general_quirky": 1,
+              "social_query -> social_post": 1,
+              "social_query -> lists_query": 1,
+              "takeaway_order -> takeaway_order": 4,
+              "takeaway_order -> takeaway_query": 1,
+              "takeaway_query -> takeaway_query": 5,
+              "transport_query -> transport_query": 5,
+              "transport_taxi -> transport_taxi": 5,
+              "transport_ticket -> transport_ticket": 4,
+              "transport_ticket -> transport_query": 1,
+              "transport_traffic -> transport_traffic": 5,
+              "weather_query -> weather_query": 5
+            },
+            "brier_multiclass_sum": 0.2150016787459257,
+            "nll": 0.5507510365157589,
+            "ece_10_equal_width": 0.06782668183091782,
+            "selective": {
+              "0.5": {
+                "coverage": 0.9560439560439561,
+                "accepted": 261,
+                "errors": 31
+              },
+              "0.7": {
+                "coverage": 0.9047619047619048,
+                "accepted": 247,
+                "errors": 21
+              },
+              "0.9": {
+                "coverage": 0.8131868131868132,
+                "accepted": 222,
+                "errors": 12
+              },
+              "0.95": {
+                "coverage": 0.7142857142857143,
+                "accepted": 195,
+                "errors": 7
+              }
+            }
+          }
+        }
+      }
+    },
+    "crosswoz": {
+      "v5-reference": {
+        "n": 150,
+        "tasks": {
+          "intent": {
+            "n": 150,
+            "correct": 148,
+            "accuracy": 0.9866666666666667,
+            "accuracy_wilson_95_descriptive": [
+              0.9526921436197238,
+              0.9963359476117768
+            ],
+            "macro_f1_gold_supported_classes": 0.986768726079825,
+            "supported_classes": [
+              "attraction",
+              "hotel",
+              "metro",
+              "restaurant",
+              "taxi"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "restaurant -> restaurant": 30,
+              "attraction -> attraction": 30,
+              "hotel -> hotel": 29,
+              "metro -> metro": 29,
+              "taxi -> taxi": 30,
+              "hotel -> taxi": 1,
+              "metro -> taxi": 1
+            },
+            "brier_multiclass_sum": 0.0263274020496885,
+            "nll": 0.09977647234297685,
+            "ece_10_equal_width": 0.012344725731403328,
+            "selective": {
+              "0.5": {
+                "coverage": 1.0,
+                "accepted": 150,
+                "errors": 2
+              },
+              "0.7": {
+                "coverage": 1.0,
+                "accepted": 150,
+                "errors": 2
+              },
+              "0.9": {
+                "coverage": 1.0,
+                "accepted": 150,
+                "errors": 2
+              },
+              "0.95": {
+                "coverage": 0.9933333333333333,
+                "accepted": 149,
+                "errors": 2
+              }
+            }
+          }
+        }
+      },
+      "step-200": {
+        "n": 150,
+        "tasks": {
+          "intent": {
+            "n": 150,
+            "correct": 147,
+            "accuracy": 0.98,
+            "accuracy_wilson_95_descriptive": [
+              0.9428523341357583,
+              0.9931753722843516
+            ],
+            "macro_f1_gold_supported_classes": 0.9801002070467604,
+            "supported_classes": [
+              "attraction",
+              "hotel",
+              "metro",
+              "restaurant",
+              "taxi"
+            ],
+            "invalid": 0,
+            "confusion": {
+              "restaurant -> restaurant": 29,
+              "attraction -> attraction": 30,
+              "hotel -> hotel": 29,
+              "metro -> metro": 29,
+              "restaurant -> attraction": 1,
+              "taxi -> taxi": 30,
+              "hotel -> taxi": 1,
+              "metro -> taxi": 1
+            },
+            "brier_multiclass_sum": 0.02725092497448743,
+            "nll": 0.07857590624196256,
+            "ece_10_equal_width": 0.014236578203603769,
+            "selective": {
+              "0.5": {
+                "coverage": 1.0,
+                "accepted": 150,
+                "errors": 3
+              },
+              "0.7": {
+                "coverage": 0.9933333333333333,
+                "accepted": 149,
+                "errors": 2
+              },
+              "0.9": {
+                "coverage": 0.98,
+                "accepted": 147,
+                "errors": 1
+              },
+              "0.95": {
+                "coverage": 0.98,
+                "accepted": 147,
+                "errors": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

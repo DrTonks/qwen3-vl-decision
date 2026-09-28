@@ -1,0 +1,108 @@
+{
+  "source_hashes": {
+    "data/support-curriculum-v2-reviewed-01/manifest.json": "64a00e976015764260ab8bd6ed46d18b281691738bc5cb897de46040d01a07f4",
+    "data/processed/support-v6/manifest.json": "6822eb42aefa2f424088933929602d3ae5a91a03277681a8ff9f22aa3f0529f0",
+    "data/processed/v5/business-train.jsonl": "df079f7300e705937dfa97b590fbd5226221fb5eebdf3b850dd12372f0660366",
+    "data/processed/v5/business-dev.jsonl": "bcef8468adcc766bbe689006c5ad04a0753bedfbb985c3c045dcc5ea7cc608a1",
+    "data/processed/v5/business-calibration.jsonl": "7d321bf365b9f81a1b8b7810e9e18f5d348dea56d5ed0e7042f44bbf9b9ccf1e",
+    "data/processed/v5/business-test.jsonl": "4f7b6b3e473813a715a8c742e6f61ad0aad0411cd6233b9c1e9b6784b8f0e9b3",
+    "data/processed/v5/massive-dev.jsonl": "9b8cf94aafa750b1fac8f71fdf802063833cbdd91a20416c295cc87549bca38f",
+    "data/processed/v5/massive-calibration.jsonl": "36103d35aaf202e4d735f2f06f81dae1498f5790d08b1c84be421b5a9e52460b",
+    "data/processed/v5/massive-test.jsonl": "44b06681e1cd5db405ee517082a2af1f2c2a3d617f633f83830901b9906dfd26",
+    "data/processed/v5/crosswoz-dev.jsonl": "cd165819f4584b6a786b1e734c5ce841c72aa39ee9723c8cd9ddbba62bea5672",
+    "data/processed/v5/crosswoz-calibration.jsonl": "7b92958b0b8e9bbec513e737cfc719a7dc739ea5ad857920d9a0c3997b5eaeff",
+    "data/processed/v5/crosswoz-test.jsonl": "9f0278b376a94af0fabae557cf06fc86429e951d9e791f397add7c39742bb500"
+  },
+  "files": {
+    "business-train.jsonl": {
+      "rows": 5901,
+      "sha256": "421b0e8db7053eed97607918a1fb893ce4ce9cf89d2a71f9fd1c75c3a476aafd"
+    },
+    "business-dev.jsonl": {
+      "rows": 120,
+      "sha256": "634867f7f2abeea3eacb2693079a91493e247aa762a36ff49573546fcae7d771"
+    },
+    "massive-train.jsonl": {
+      "rows": 1200,
+      "sha256": "0562ca4de7fd0d860fe1acc2e42ead4b73c71ca72c0d4a7351796b5a3ae1cd48"
+    },
+    "massive-dev.jsonl": {
+      "rows": 273,
+      "sha256": "9b8cf94aafa750b1fac8f71fdf802063833cbdd91a20416c295cc87549bca38f"
+    },
+    "crosswoz-train.jsonl": {
+      "rows": 300,
+      "sha256": "ed0b7ba2a65fc17ba0cef6e3945219424967d4882daf56a29c5e4c43ca51383f"
+    },
+    "crosswoz-dev.jsonl": {
+      "rows": 150,
+      "sha256": "cd165819f4584b6a786b1e734c5ce841c72aa39ee9723c8cd9ddbba62bea5672"
+    },
+    "legacy-dev.jsonl": {
+      "rows": 402,
+      "sha256": "bcef8468adcc766bbe689006c5ad04a0753bedfbb985c3c045dcc5ea7cc608a1"
+    }
+  },
+  "reviewed_project_count": 3901,
+  "legacy_replay_count": 2000,
+  "legacy_replay_condition_counts": {
+    "guest": 140,
+    "missing_id": 28,
+    "not_found": 56,
+    "unknown_auth": 112,
+    "boundary": 54,
+    "standard": 194,
+    "missing_code": 28,
+    "unknown_code": 28,
+    "no_page": 28,
+    "no_reason": 28,
+    "denied": 110,
+    "other_owner": 83,
+    "timeout_twice": 110,
+    "unavailable": 110,
+    "tool_down": 27,
+    "failed_troubleshooting": 27,
+    "complete": 108,
+    "empty_success": 54,
+    "known_reason_4": 27,
+    "known_reason_5": 27,
+    "known_reason_6": 27,
+    "known_reason_7": 27,
+    "known_reason_8": 27,
+    "known_reason_9": 27,
+    "live": 108,
+    "partial": 108,
+    "stale": 108,
+    "timeout_once": 108,
+    "code_0": 27,
+    "code_1": 27,
+    "code_2": 27
+  },
+  "legacy_replay_route_counts": {
+    "clarify": 476,
+    "human": 615,
+    "llm": 390,
+    "tool": 519
+  },
+  "legacy_replay_intent_counts": {
+    "application_detail": 381,
+    "applications": 330,
+    "credit": 327,
+    "general": 55,
+    "products": 299,
+    "status_code": 164,
+    "ui_issue": 279,
+    "handoff": 33,
+    "payment_dispute": 33,
+    "repayment": 66,
+    "security": 33
+  },
+  "legacy_replay_group_count": 146,
+  "eligible_replay_pool_count": 4118,
+  "replay_exclusions": {
+    "heldout_overlap": 786
+  },
+  "human_review_does_not_extend_to_replay": true,
+  "selection_uses_development_only": true,
+  "known_limitation": "Development errors informed broad condition coverage; exact de-duplication is not semantic independence"
+}

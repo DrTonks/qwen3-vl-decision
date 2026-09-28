@@ -19,6 +19,9 @@ results/smoke*/
 results/**/verification.json
 results/**/*console.txt
 results/**/training-state.json
+# Active V8 output is published only after completion and a separate audit.
+results/support-v8/
+results/support-v8-setup-failure-*/
 jev-api-key.txt
 *api*key*.txt
 .env

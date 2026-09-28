@@ -1,0 +1,8 @@
+{
+  "stage": "stopped_at_gate",
+  "updated_at": "2026-09-28T09:56:22.178520+00:00",
+  "pid": 50556,
+  "step": 200,
+  "selected": "v5-reference",
+  "training_started": true
+}

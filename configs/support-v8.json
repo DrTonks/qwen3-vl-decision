@@ -1,0 +1,75 @@
+{
+  "seed": 20260928,
+  "epochs": 2,
+  "pilot_steps": 200,
+  "micro_batch": 2,
+  "gradient_accumulation": 4,
+  "learning_rate": 1.5e-05,
+  "warmup_fraction": 0.02,
+  "weight_decay": 0.01,
+  "checkpoint_every": 100,
+  "replay_rows": {
+    "massive": 1200,
+    "crosswoz": 300
+  },
+  "weights": {
+    "business.intent": 1.0,
+    "business.route": 2.0,
+    "business.tool": 1.5,
+    "massive.intent": 0.5,
+    "crosswoz.intent": 0.35
+  },
+  "business_tasks": [
+    "intent",
+    "route",
+    "tool"
+  ],
+  "group_weighting": "inverse business group size, mean one; all rows traversed once per epoch",
+  "initial_adapter": ".local/checkpoints/joint-v5/step-7110",
+  "reviewed_source": "data/support-curriculum-v2-reviewed-01",
+  "gate": {
+    "max_regression": 0.03,
+    "min_route_f1_gain": 0.01,
+    "min_route_correct_gain": 1,
+    "max_extra_human_misses": 0,
+    "min_business_route_accuracy": 0.95,
+    "min_legacy_route_accuracy": 0.96
+  },
+  "jev_calls": 0,
+  "training_authorization": {
+    "confirmed": true,
+    "date": "2026-09-28",
+    "user_message": "继续",
+    "scope": "one V8 gated experiment and conditional final evaluation; no V9, deployment, commit or push"
+  },
+  "legacy_replay_rows": 2000,
+  "anchor_strength": 0.5,
+  "distillation": {
+    "temperature": 2.0,
+    "strength": 1.0,
+    "origin": "legacy_state_replay",
+    "tasks": [
+      "intent",
+      "route",
+      "tool"
+    ],
+    "batch_size": 2,
+    "teacher": "initial_v5_adapter",
+    "cache_precision": "nf4_kbit_prepared_eval",
+    "cache_expected_items": 6000
+  },
+  "final_evaluation": {
+    "datasets": {
+      "calibration": "data/support-curriculum-v2-reviewed-01/calibration-candidates.jsonl",
+      "challenge": "data/support-curriculum-v2-reviewed-01/challenge-model-candidates.jsonl",
+      "legacy": "data/processed/v5/business-test.jsonl",
+      "massive": "data/processed/v5/massive-test.jsonl",
+      "crosswoz": "data/processed/v5/crosswoz-test.jsonl"
+    },
+    "speed_case_count": 32,
+    "speed_repeats": 3,
+    "jev_max_requests": 180,
+    "acceptance": "challenge route >= V5 and within 3pp of Jev; no extra human misses; legacy/public accuracy and macroF1 drop <=3pp; p50 faster than Jev and p95 <=1.2x Jev; no automatic deployment",
+    "calibration": "positive temperature only; no new abstention threshold selected from challenge"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "config": {
+    "seed": 20260928,
+    "epochs": 2,
+    "pilot_steps": 200,
+    "micro_batch": 2,
+    "gradient_accumulation": 4,
+    "learning_rate": 3e-05,
+    "warmup_fraction": 0.05,
+    "weight_decay": 0.01,
+    "checkpoint_every": 100,
+    "replay_rows": {
+      "massive": 1200,
+      "crosswoz": 300
+    },
+    "weights": {
+      "business.intent": 1.0,
+      "business.route": 2.0,
+      "business.tool": 1.5,
+      "massive.intent": 0.5,
+      "crosswoz.intent": 0.35
+    },
+    "business_tasks": [
+      "intent",
+      "route",
+      "tool"
+    ],
+    "group_weighting": "inverse business group size, mean one; all rows traversed once per epoch",
+    "initial_adapter": ".local/checkpoints/joint-v5/step-7110",
+    "reviewed_source": "data/support-curriculum-v2-reviewed-01",
+    "gate": {
+      "max_regression": 0.03,
+      "min_route_f1_gain": 0.01,
+      "min_route_correct_gain": 1,
+      "max_extra_human_misses": 0
+    },
+    "jev_calls": 0,
+    "training_authorization": {
+      "confirmed": true,
+      "date": "2026-09-28",
+      "user_message": "可以开始。",
+      "scope": "pilot then up to two epochs only if the frozen development gate passes; no deployment"
+    }
+  },
+  "prepared_manifest_sha256": "6822eb42aefa2f424088933929602d3ae5a91a03277681a8ff9f22aa3f0529f0",
+  "source_hashes": {
+    "src/qwenlab/support_train.py": "68a86635469492bbee5fe99c111e98894b037d78bc4de346572e0d69a6534df4",
+    "src/qwenlab/joint_v5.py": "80190210f3c07578768e27120dd48b97192b01a90b6f8b97f32bcc7c44f15ed7",
+    "src/qwenlab/joint_v4.py": "26378ca85470108c880bb4eae98f93a6969d5938c96b238596727c2e8d46e0db",
+    "src/qwenlab/modeling.py": "fbcac24e76e3afee2804e09669a52786cf2d603bbcb9c95ccd423d2673d2264e",
+    "src/qwenlab/common.py": "37878b6390ec81133b959a4db0a1c215add1d6a175ed7227df855478f765e683",
+    "configs/support-v6.json": "dc2798fed317d5a6ba9044d85041d0daa19ce3c8934c67ea856ec1f3c362765e",
+    "configs/decision-v5.json": "749a240c0e0af360e44bebc66ce929dd48a61dc5be880ee1bd4af5877d75e3fe",
+    "data/processed/v2/massive-spec.json": "bade9dd8a58a1c4b333a45fd3d78ff219a4f936e62167aa2632c9c9f5581b174",
+    "data/processed/v2/crosswoz-spec.json": "139f36a128e62c27dc4eb170a929369923ea1c667f22ec0ebf3b1d717d3bd12c"
+  },
+  "initial_adapter_hashes": {
+    "adapter_model.safetensors": "875b96e198cf7e65cadc27d7e93a8ca9a6111afae37420c4b287a56451d905d7",
+    "adapter_config.json": "84585c045afbf25038d9a72ae605131f553ea94bb99910b9aadf1917244238f7"
+  },
+  "new_business_rows_reviewed": true,
+  "public_replay_uses_original_labels": true,
+  "evaluation_batch": 1,
+  "no_jev_or_test_predictions_used_for_training": true
+}

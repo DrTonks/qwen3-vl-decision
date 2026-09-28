@@ -1,0 +1,185 @@
+{
+  "version": "support-curriculum-v1",
+  "status": "ai_preannotated_offline_experiment",
+  "hash_algorithm": "sha256_after_CRLF_to_LF",
+  "training_started": false,
+  "public_data_downloaded": false,
+  "card_count": 60,
+  "family_count": 30,
+  "authored_slots": 300,
+  "unique_normalized_messages": 272,
+  "case_count": 600,
+  "split_counts": {
+    "development": 120,
+    "calibration": 120,
+    "train": 360
+  },
+  "challenge_count": 90,
+  "challenge_families": 18,
+  "actions": {
+    "tool": 230,
+    "answer": 160,
+    "refuse": 30,
+    "clarify": 110,
+    "human": 60,
+    "close": 10
+  },
+  "draft_candidate_counts": {
+    "development": 120,
+    "calibration": 110,
+    "train": 298,
+    "challenge": 79
+  },
+  "draft_candidate_routes": {
+    "train": {
+      "tool": 108,
+      "clarify": 60,
+      "llm": 90,
+      "human": 40
+    },
+    "development": {
+      "tool": 60,
+      "llm": 40,
+      "clarify": 10,
+      "human": 10
+    },
+    "calibration": {
+      "tool": 50,
+      "llm": 30,
+      "clarify": 20,
+      "human": 10
+    }
+  },
+  "draft_candidate_intents": {
+    "train": {
+      "products": 30,
+      "application_detail": 70,
+      "general": 90,
+      "status_code": 20,
+      "repayment": 20,
+      "ui_issue": 10,
+      "security": 10,
+      "applications": 8,
+      "handoff": 20,
+      "payment_dispute": 10,
+      "credit": 10
+    },
+    "development": {
+      "products": 20,
+      "general": 30,
+      "application_detail": 10,
+      "credit": 10,
+      "repayment": 20,
+      "payment_dispute": 10,
+      "applications": 10,
+      "status_code": 10
+    },
+    "calibration": {
+      "products": 10,
+      "general": 30,
+      "applications": 10,
+      "application_detail": 20,
+      "status_code": 10,
+      "ui_issue": 10,
+      "handoff": 10,
+      "credit": 10
+    }
+  },
+  "draft_candidate_tools": {
+    "train": {
+      "queryLoanProducts": 30,
+      "queryApplicationDetail": 50,
+      "none": 190,
+      "explainApplicationStatus": 10,
+      "queryMyApplications": 8,
+      "queryMyCreditScore": 10
+    },
+    "development": {
+      "queryLoanProducts": 20,
+      "none": 60,
+      "queryApplicationDetail": 10,
+      "queryMyCreditScore": 10,
+      "queryMyApplications": 10,
+      "explainApplicationStatus": 10
+    },
+    "calibration": {
+      "queryLoanProducts": 10,
+      "none": 60,
+      "queryMyApplications": 10,
+      "queryApplicationDetail": 10,
+      "explainApplicationStatus": 10,
+      "queryMyCreditScore": 10
+    }
+  },
+  "runtime_paths": {
+    "model": 583,
+    "guard": 107
+  },
+  "coverage": {
+    "train": {
+      "missing_routes": [],
+      "missing_tools": []
+    },
+    "development": {
+      "missing_routes": [],
+      "missing_tools": []
+    },
+    "calibration": {
+      "missing_routes": [],
+      "missing_tools": []
+    }
+  },
+  "held_reason_counts": {
+    "outside_current_four_routes": 50,
+    "policy_discussion:P04": 30,
+    "policy_discussion:P06": 10,
+    "seen_regression_utterance": 24,
+    "guard_conflicts_with_proposed_action": 3,
+    "policy_discussion:P05": 10
+  },
+  "regression_corpora": {
+    "regression-1:cases.jsonl": {
+      "sha256": "b76390f98f227fcd7b34a3c33667f34105b593d20d769545b9146eecebce6bbd",
+      "count": 139
+    },
+    "regression-2:business-test.jsonl": {
+      "sha256": "4f7b6b3e473813a715a8c742e6f61ad0aad0411cd6233b9c1e9b6784b8f0e9b3",
+      "count": 402
+    }
+  },
+  "source_hashes": {
+    "src/qwenlab/support_curriculum.py": "5645a9e59830aa4c3b2d2b438d7963e74d93e9030cf54e9808e17eccc4432667",
+    "src/qwenlab/support_scenario_catalog.py": "b409c3db7105f38cc5d063d01335aa2b4b872bff8d19bf7f36845c05cdd60d81",
+    "src/qwenlab/support_challenge_catalog.py": "1c9e5476a5ce1085b4fbcec4fb24ce44133d47d5519d09f34e1c328a09973d27",
+    "configs/decision-v5.json": "749a240c0e0af360e44bebc66ce929dd48a61dc5be880ee1bd4af5877d75e3fe"
+  },
+  "limitations": [
+    "AI labels, not human gold",
+    "No independent acceptance collected",
+    "No GPU inference, training or API calls",
+    "Source hashes describe working files, not remote HEAD",
+    "Argument validation is feasibility only, not label truth",
+    "Exact normalized overlap checks are not semantic decontamination",
+    "Neutral-history pairs and punctuation variants are dependent",
+    "Guard-handled human examples may supervise the classifier; live guarded results are not model accuracy",
+    "No public dataset content imported; no database or personal records accessed"
+  ],
+  "files_sha256": {
+    "calibration-candidates.jsonl": "3e690e23ce4dd563562dc8e5215fb5020cf9ce64b40faf654c00bb69abe046c7",
+    "calibration-cases.jsonl": "30a60dacd0d1c5494b0cab9c9d534cc6a9846795caac7dd01412bbbd3b130fca",
+    "cards.jsonl": "12e00122b2c4ffd58aef98359a9c7ba05b846ad24fa340cae6f19c1292b28935",
+    "cases.jsonl": "31281d4ef01e133f109d5bbbf884c47ed2aa96239e80896d458f5f4baa9de6cc",
+    "challenge-cards.jsonl": "94c168968dd156ce9ae21f1a669ad147a863b9babf47da9fa2979a5b13561ce8",
+    "challenge-cases.jsonl": "8152e65bb19df75c1afed815524b8798563ef592cae730372cec7b78e6cacaa6",
+    "challenge-model-candidates.jsonl": "9ef0edf12313e030d367baea223c7d29bb3d1a023a7904e4ff5d9b98c254fc1d",
+    "development-candidates.jsonl": "634867f7f2abeea3eacb2693079a91493e247aa762a36ff49573546fcae7d771",
+    "development-cases.jsonl": "2e91db0fdabcb513afe89f1b52261060f6171a2aa49962993ce6bc25b7fb540b",
+    "eligibility.jsonl": "7fa9c191be29d1ce3672b4eed32af67ecaa9868a6e14fd2115cebf00851e89fd",
+    "review.csv": "6985cb90fc4b19d8db947136d4652b538ca10df70fccbe12420a7e0ccfceda1c",
+    "runtime-inputs.jsonl": "8c5a604001a11db476c1897ff96dfae327e8884f9324f8a0846c50aeb4da21bb",
+    "source-snapshot.json": "eac74a1e995491d9b4f88941b731193263467900dd0b200eb70dc16958263015",
+    "train-candidates.jsonl": "296b5821afc6a439cdfb5cf492c6535b387577d4b3536c92600920ece2b42472",
+    "train-cases.jsonl": "152df215f1236a1166bde3299f0077e8a995f74f52c169813d1c5b1bf13d2d8b",
+    "场景卡.md": "c5a31bdb5ae025a071542802cc8b19d174898863d24cb5bb1418747d79228274"
+  }
+}

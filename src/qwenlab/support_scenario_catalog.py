@@ -1,0 +1,225 @@
+"""Project-grounded seed cards; proposals, never human gold or model predictions.
+
+Each family stays in one split. Five authored utterances per card are exercised
+with and without a neutral earlier exchange by support_curriculum.py.
+"""
+from copy import deepcopy
+
+TOOLS = ['queryLoanProducts', 'queryMyApplications', 'queryApplicationDetail',
+         'queryMyCreditScore', 'explainApplicationStatus']
+
+
+def cards():
+    result = []
+
+    def add(family, variant, title, messages, action, intent, tool=None, arguments=None,
+            history=None, state=None, sources=None, rationale='', discussion=None):
+        if not history and state and state.get('selectedApplicationId'):
+            history = [{'role': 'assistant', 'content': f'当前正在查看申请{state["selectedApplicationId"]}。'}]
+        result.append({
+            'id': f'{family}-{variant}', 'family': family, 'title': title,
+            'messages': messages.split('|'),
+            'history': deepcopy(history or []),
+            'state': {'pending': None, 'selectedApplicationId': None, **(state or {})},
+            'expected': {'action': action, 'route': {'answer': 'llm', 'tool': 'tool',
+                         'clarify': 'clarify', 'human': 'human'}.get(action),
+                         'intent': intent, 'tool': tool, 'arguments': arguments or {}},
+            'sources': sources or ['tools', 'policy'], 'rationale': rationale or title,
+            'discussion': discussion, 'review_status': 'ai_preannotated',
+        })
+
+    add('F01', 'A', '浏览当前可用产品',
+        '能把目前上架的贷款列给我吗|我还没选产品，先看看平台提供哪些|想了解现在可借的产品有哪些|打开当前贷款产品目录给我看看|最近平台在售的是哪几种贷款',
+        'tool', 'products', 'queryLoanProducts')
+    add('F01', 'B', '解释产品概念不需要查个人记录',
+        '贷款产品这个词指的是什么|产品和贷款申请是同一件事吗|先给我讲讲贷款产品是什么意思|为什么一个平台会有多种贷款产品|申请一笔贷款和选择产品有什么区别',
+        'answer', 'general', rationale='通用概念解释；不输出未经查询的具体产品参数。')
+    add('F02', 'A', '产品额度是实时产品字段',
+        '当前工薪贷设置的最高金额是多少|把上架产品的额度上限一起列出来|我想比较在售产品的最高可借金额|平台产品标注的最高额度分别是多少|查一下极速贷产品的金额上限',
+        'tool', 'products', 'queryLoanProducts', sources=['tools', 'seed'])
+    add('F02', 'B', '产品上限不保证本人获批额度',
+        '产品写的最高额度等于我一定能借到的钱吗|最高可借金额是不是审批承诺|看到产品额度上限就代表已经给我授信了吗|产品额度和个人批准额度有什么区别|产品标的最高金额能当成必过保证吗',
+        'answer', 'general', rationale='解释上限与个人审批的区别，不承诺审批。')
+    add('F03', 'A', '同事推荐不构成越权',
+        '同事让我来看看，请列下在售贷款|室友推荐这个平台，我想浏览贷款产品|朋友说这里有贷款，给我看看产品目录|我是听同事介绍来的，查查现在上架的产品|朋友推荐我来比较产品最高额度，列一下吧',
+        'tool', 'products', 'queryLoanProducts')
+    add('F03', 'B', '他人私有申请不可查询',
+        '帮我查询同事的贷款申请|把朋友的信用分调出来给我|我要看室友的还款记录|列出别人的申请明细|我想知道他人的贷款审批情况',
+        'refuse', None, rationale='产品介绍是公开业务；他人的账户记录属于不同权限范围。',
+        discussion='P04')
+    add('F04', 'A', '本人申请列表不要求先选单笔',
+        '我在平台提交过哪些借款申请|把我名下的申请记录列给我|我想查看自己的所有申请|帮我看名下有没有待审的申请|我的几笔借款分别是什么审批状态',
+        'tool', 'applications', 'queryMyApplications', sources=['tools', 'orders'])
+    add('F04', 'B', '申请入门问题应说明流程',
+        '第一次使用平台怎样发起借款申请|我还没提交过，申请贷款要从哪里操作|请说明从选产品到提交申请的大致步骤|新用户想申请贷款先做什么|我想了解提交申请的操作顺序',
+        'answer', 'general', sources=['apply', 'policy'],
+        rationale='引导现有申请页面，不把操作教程当成查询已有记录。')
+    detail = '我想查看这笔的详细信息|帮我刷新那笔申请的进度|这笔贷款现在审批到哪了|给我查那单的申请详情|再查一下这单目前的状态'
+    add('F05', 'A', '服务端已选中本人申请', detail, 'tool', 'application_detail',
+        'queryApplicationDetail', {'applicationId': 85011}, state={'selectedApplicationId': 85011})
+    add('F05', 'B', '指代没有确定对象', detail, 'clarify', 'application_detail',
+        rationale='当前没有可用对象，建议先明确单笔申请。', discussion='P01')
+    add('F06', 'A', '明确申请编号与金额并存',
+        '查申请85013，金额六千元那笔|申请85013是我周一提交的，刷新进度|想了解编号85013的申请详情|申请号85013，查一下这单|查申请85013的审批，不是询问借款额度',
+        'tool', 'application_detail', 'queryApplicationDetail', {'applicationId': 85013})
+    add('F06', 'B', '金额日期不能当作申请编号',
+        '查申请6000元的那笔|我周一提交了申请，帮我看那笔详情|申请金额是6000元，我想知道审批结果|那笔申请是9月提交的，帮我查看|借了6000块的申请进度怎么样',
+        'clarify', 'application_detail', rationale='金额/日期不足以唯一确定申请对象。', discussion='P01')
+    correction = '改查85013|不对，是85013|换成85013|是85013|不对，85013'
+    add('F07', 'A', '当前选中对象允许简短纠正', correction, 'tool', 'application_detail',
+        'queryApplicationDetail', {'applicationId': 85013}, state={'selectedApplicationId': 85011},
+        history=[{'role': 'assistant', 'content': '你正在查看申请85011。'}])
+    add('F07', 'B', '孤立编号缺乏任务上下文', correction, 'clarify', 'general',
+        rationale='新会话的裸纠正表达无法证明是申请编号；先确认想查询什么。')
+    numbers = '85011|85011。|85011！|85011？|85011!'
+    add('F08', 'A', '申请编号补槽接受短回复', numbers, 'tool', 'application_detail',
+        'queryApplicationDetail', {'applicationId': 85011}, state={'pending': 'applicationId'},
+        history=[{'role': 'assistant', 'content': '请提供需要查看的申请编号。'}])
+    add('F08', 'B', '无上下文数字不得擅自查询', numbers, 'clarify', 'general',
+        rationale='没有待补申请编号，不能把孤立数字当成授权的查询对象。')
+    add('F09', 'A', '两个申请编号尚未选定',
+        '查申请85011或85013的详情|申请85011和85013，帮我查那笔|申请85011以及85013，查哪笔我还没选|申请85011、85013的那笔详情|申请85011或者85013，我没分清是哪笔',
+        'clarify', 'application_detail', rationale='当前仅支持一次选择一笔，不能默取第一个编号。', discussion='P01')
+    add('F09', 'B', '明确单笔申请可以查询',
+        '只查申请85011|这次我要查编号85011的详情|申请85011的进度给我看一下|申请号是85011，请查审批|我的申请85011已经批了吗',
+        'tool', 'application_detail', 'queryApplicationDetail', {'applicationId': 85011})
+    add('F10', 'A', '本人信用分需要查询',
+        '帮我读取账户现在的信用评分|我名下的信用分目前是多少|请查一下我在平台的当前评分|想看我自己的信用分数|把本账户已经记录的信用分给我看看',
+        'tool', 'credit', 'queryMyCreditScore', sources=['tools', 'credit'])
+    add('F10', 'B', '信用分概念不需要查询账户',
+        '信用评分一般代表什么|信用分和产品额度有什么关系|为什么借款平台会显示信用分|信用分能当成必定批款的保证吗|信用评分这个数字通常怎么理解',
+        'answer', 'general', rationale='概念说明不读取个人记录，也不编造评分公式。')
+    add('F11', 'A', '明确状态码含义走现有工具',
+        '解释一下状态码2的含义|申请状态2代表什么阶段|状态码为2是什么意思|我想知道代码2在申请里表示什么|申请状态显示2，请解释一下',
+        'tool', 'status_code', 'explainApplicationStatus', {'status': 2})
+    add('F11', 'B', '超出现有释义工具范围',
+        '解释一下状态码9的含义|申请状态9代表什么阶段|状态码为9是什么意思|我想知道代码9在申请里表示什么|申请状态显示9，请解释一下',
+        'clarify', 'status_code', rationale='现有释义工具只支持0/1/2；核对字段和页面，不凭空解释。',
+        discussion='P06')
+    code = '2|2。|2！|2？|2!'
+    add('F12', 'A', '状态码追问后的短回复', code, 'tool', 'status_code',
+        'explainApplicationStatus', {'status': 2}, state={'pending': 'statusCode'},
+        history=[{'role': 'assistant', 'content': '请核对并告诉我页面显示的申请状态码。'}])
+    add('F12', 'B', '没有待补状态码不能解释数字', code, 'clarify', 'general',
+        rationale='孤立数字也可能是数量或选择项，先明确问题。')
+    add('F13', 'A', '多状态码不能默取第一项',
+        '状态码1或2是什么意思|页面状态是1/2，我没看清|代码1、2到底是哪种|申请状态1以及2，先确认哪个|状态码是1或者2，能先帮我核对吗',
+        'clarify', 'status_code', rationale='当前工具一次解释一个明确状态，不默取首项。')
+    add('F13', 'B', '单一拒绝状态码可明确解释',
+        '申请状态码0的含义是什么|代码0在审批里表示什么|我看到状态0，请解释|申请状态为0是哪个阶段|解释一下状态码0，不用查我的记录',
+        'tool', 'status_code', 'explainApplicationStatus', {'status': 0})
+    add('F14', 'A', '普通还款入口说明',
+        '正常还款应该从App哪里进入|给我说一下自己操作还款的步骤|我想知道还款按钮在哪个页面|还款需要我在什么页面确认|如何在申请详情里进行正常还款',
+        'answer', 'repayment', sources=['detail', 'policy'],
+        rationale='已有页面提供正常还款操作；仅说明路径，不代扣款。')
+    add('F14', 'B', '扣款争议需要人工处理',
+        '同一期账单好像扣了两次钱|我已经还款但又被重复扣款了|还款记录和实际扣款对不上，我要申诉|账单重复扣款，请协助核实|发生扣款争议了，钱扣了两遍',
+        'human', 'payment_dispute', rationale='异常资金争议不能通过解释正常还款流程解决。')
+    add('F15', 'A', '提前还款操作指引',
+        '提前还款的入口在哪|我自己想提前还款，要怎么点|请讲讲提前还款时怎样选择期数|在申请详情里如何发起提前还款|提前还款需要我在哪一步确认',
+        'answer', 'repayment', sources=['detail', 'policy'],
+        rationale='说明现有页面操作，不编造手续费或替用户付款。')
+    add('F15', 'B', '要求客服直接代扣资金',
+        '替我还款，直接扣我的钱|你替我还款，不要再让我确认|直接替我扣款把贷款还掉|帮我直接扣款，不用经过页面确认|不用告诉我步骤，替我还款就行',
+        'refuse', None, rationale='客服无支付执行权限；可指引本人操作，但不能声称已代扣。', discussion='P04')
+    add('F16', 'A', '补充材料页面操作',
+        '收入证明要从哪里补交|补充材料页面在哪个入口|申请后如何自行上传补充资料|想补交银行流水，应该去哪个页面|资料需要补充时怎样进入上传页面',
+        'answer', 'general', sources=['detail', 'materials'],
+        rationale='说明申请详情中的材料入口，不声称审核通过。')
+    add('F16', 'B', '材料界面问题先定位',
+        '材料上传按钮是灰色的怎么回事|我点补交资料没有反应|上传收入证明那里一直点不了|补材料页面报错，但我没记住提示|补充资料的按钮无法使用，怎么排查',
+        'clarify', 'ui_issue', sources=['materials', 'policy'],
+        rationale='缺少提示信息与当前步骤；先追问，不推断拒贷或直接升级。')
+    add('F17', 'A', '申请按钮问题缺少原因证据',
+        '申请按钮按不下去，应该怎么办|产品页的申请键一直是灰的|点立即申请没有反应，也没看清提示|在贷款页面不能提交，先帮我看看|申请按钮变灰了，我还不知道原因',
+        'clarify', 'ui_issue', sources=['apply', 'policy'],
+        rationale='当前不传截图或页面状态，追问位置和提示。')
+    add('F17', 'B', '页面问题已明确要求人工',
+        '申请按钮不能点，我要转人工|产品页一直报错，请找人工客服|申请界面有问题，请转人工帮忙|提交不了申请，我需要真人客服|页面按钮失灵了，请联系工作人员',
+        'human', 'handoff', rationale='明确人工诉求优先；尚无真实转接时必须如实说明。')
+    add('F18', 'A', '拒绝状态解释不代表需要改审批',
+        '未通过和待审批这两个词有什么区别|待审批是不是还没有最终结论|已通过是否等同于客服保证马上到账|看到未通过这个文字通常表示什么|申请状态文字和还款状态是一回事吗',
+        'answer', 'general', rationale='仅解释状态概念，不推测具体拒绝原因。')
+    add('F18', 'B', '要求篡改审批结果',
+        '把我的审批结果改成通过|帮我修改审批结论让我过|请篡改申请审核结果|把未通过直接改成已通过|修改审批记录，别再让我等审核',
+        'refuse', None, rationale='拒绝篡改审批；合法申诉是另一条流程。', discussion='P04')
+    add('F19', 'A', '安全知识咨询',
+        '验证码为什么不能随便告诉别人|如何辨认冒充客服索要验证码的情况|怎样保护自己的登录验证码|客服会要求我提供完整密码吗|账号安全方面平时应该注意哪些信息',
+        'answer', 'general', rationale='预防性常识咨询；没有声称风险事件已经发生。')
+    add('F19', 'B', '已经发生账号风险',
+        '我的账号可能被盗用了|不是我申请的贷款出现在账户里|有人盗用了身份在这里申请借款|我怀疑账号被别人盗用，请帮忙处理|我的借款申请不是我操作的',
+        'human', 'security', rationale='实际风险事件优先升级，不以一般知识回答替代处理。')
+    add('F20', 'A', '否定人工但保留明确查询诉求',
+        '不用人工客服，列出我名下申请|不要转人工，先查询我的申请列表|暂时不找人工客服，我只想看申请记录|不需要真人客服，查一下我的所有申请|先不联系工作人员，给我看自己的申请',
+        'tool', 'applications', 'queryMyApplications')
+    add('F20', 'B', '明确希望联系人工',
+        '请转人工，我想让人来处理|帮我找人工客服接着聊|我需要真人客服协助|请联系工作人员处理我的问题|我现在想转人工咨询',
+        'human', 'handoff')
+    add('F21', 'A', '工作人员推荐不等于请求转接',
+        '工作人员推荐我来查当前贷款产品|工作人员说可以在这里看产品列表，给我看看|有工作人员让我先浏览在售贷款|我是按工作人员提示来查产品最高额度的|工作人员介绍了这个入口，我要看产品目录',
+        'tool', 'products', 'queryLoanProducts')
+    add('F21', 'B', '不想人工也不能忽略资金争议',
+        '不用人工客服，但我被重复扣款了|我不想转人工，不过同一期扣了两次|暂时不找工作人员，先处理重复扣款|不要转人工，我有扣款争议需要解决|不需要真人客服，可是还款被扣了两次',
+        'human', 'payment_dispute', rationale='不愿转人工不改变资金争议的处理权限边界。')
+    add('F22', 'A', '问候不产生查询或升级',
+        '你好，我先了解一下你能做什么|您好，能介绍下客服服务范围吗|我刚进来，想知道这里能问什么|哈喽，你可以帮忙处理哪些问题|在吗，我想先了解客服能提供的帮助',
+        'answer', 'general')
+    add('F22', 'B', '无法定位诉求时澄清',
+        '那个不对，帮我处理一下|就是刚才那个，有问题|弄一下那个东西|怎么又这样了啊|这到底是怎么回事，帮我看看',
+        'clarify', 'general', rationale='输入未提供可定位的业务对象或问题。')
+    add('F23', 'A', '明确结束当前咨询',
+        '结束本次咨询|结束这次咨询。|没有别的问题了|问题解决了，再见|不用继续了',
+        'close', None, rationale='仅结束客服会话，不退出账户或修改贷款。', discussion='P05')
+    add('F23', 'B', '感谢之后还有问题不能结束',
+        '谢谢你的介绍，我先看一下|谢谢，暂时让我读一下刚才的说明|感谢说明，请稍等我看看|收到，谢谢，我还在看这些说明|谢谢，先别结束，我整理一下问题',
+        'answer', 'general', rationale='仅礼貌回应或等待，不应自动结束会话。')
+    switch_credit = [{'role': 'user', 'content': '我想查某笔申请详情。'},
+                     {'role': 'assistant', 'content': '请告诉我申请编号。'}]
+    add('F24', 'A', '申请补槽中改问信用分',
+        '先不查申请了，看看我自己的信用分|那个申请放一放，先查我的评分|我换个问题，查询我的信用分|不查那笔了，给我看看本账户信用分|暂时不用申请详情，我想查自己的信用评分',
+        'tool', 'credit', 'queryMyCreditScore', history=switch_credit, state={'pending': 'applicationId'})
+    add('F24', 'B', '申请补槽中改问普通操作',
+        '先不查申请了，告诉我还款入口在哪|那个申请放一放，讲讲正常还款步骤|我换个问题，怎样自己操作提前还款|不查那笔了，想知道还款按钮在哪里|暂时不用申请详情，我想了解还款操作流程',
+        'answer', 'repayment', history=switch_credit, state={'pending': 'applicationId'}, sources=['detail', 'policy'])
+    switch_status = [{'role': 'user', 'content': '状态码9是什么意思？'},
+                     {'role': 'assistant', 'content': '请核对具体的申请状态码。'}]
+    add('F25', 'A', '状态码补槽中切换产品查询',
+        '先不解释状态了，看看在售产品|状态稍后再说，先查贷款产品列表|我改问产品，现在上架哪些贷款|不讨论状态码了，请列贷款产品|先暂停这个问题，我想比较产品最高额度',
+        'tool', 'products', 'queryLoanProducts', history=switch_status, state={'pending': 'statusCode'})
+    add('F25', 'B', '状态码补槽中切换申请列表',
+        '先不解释状态了，列出我的申请|状态稍后再说，先查我提交的申请列表|我改问自己的申请，都有哪些记录|不讨论状态码了，请列我的借款申请|先暂停这个问题，我想查询名下所有申请',
+        'tool', 'applications', 'queryMyApplications', history=switch_status, state={'pending': 'statusCode'})
+    add('F26', 'A', '个人评分与评分知识切换',
+        '不是问分数含义，查我现在的信用分|我想知道的是本账户实际信用评分|不用解释概念，给我查个人信用分|先别介绍信用分，查询我的分数|我要看实际记录的个人评分，不是科普',
+        'tool', 'credit', 'queryMyCreditScore', history=[{'role': 'assistant', 'content': '信用分是平台展示的信用信息之一。'}])
+    add('F26', 'B', '当前只问概念不再查询',
+        '不是要查我，讲一下信用分是什么意思|不用读取账户，解释信用评分这个概念|先别查个人记录，信用分一般代表什么|我只想知道信用分的含义，不是我的分数|不需要查询我的评分，讲讲它有什么作用',
+        'answer', 'general', history=[{'role': 'assistant', 'content': '你可以查询自己的信用信息。'}])
+    add('F27', 'A', '近期历史已返回记录后的释义',
+        '刚才说的待审批意味着还在等审核吗|你刚才给出的待审批要怎么理解|只解释刚查到的待审批这个词|不用刷新，刚才那个待审批指什么|刚查到的待审批是否还没最终结果',
+        'answer', 'general', history=[{'role': 'assistant', 'content': '申请85011：状态为待审批。'}],
+        state={'selectedApplicationId': 85011}, rationale='明确只解释已有文字，不当作最新状态查询。')
+    add('F27', 'B', '明确刷新不能仅复述旧状态',
+        '刷新这笔申请，看看现在有没有变化|重新查一下这笔目前审批结果|那筆先前是待审批，重新查那笔|不要只复述，查询这笔最新进度|再查这笔当前状态是否更新了',
+        'tool', 'application_detail', 'queryApplicationDetail', {'applicationId': 85011},
+        history=[{'role': 'assistant', 'content': '申请85011：状态为待审批。'}], state={'selectedApplicationId': 85011})
+    add('F28', 'A', '合法申诉与修改结果区分',
+        '我对申请审核结果有异议，想申诉|请转人工复核我的审批结果|我想投诉审批处理流程|审核结论有问题，能安排复核吗|我需要工作人员处理我的审批申诉',
+        'human', 'handoff', rationale='合法申诉交人工；不能承诺会改为通过。')
+    add('F28', 'B', '已选对象可查询基本详情',
+        '查这笔申请的金额和期数|这笔申请填写的用途是什么|给我看看那笔的产品和金额|想查看这单的借款月份数|查一下那单记录的金额和用途',
+        'tool', 'application_detail', 'queryApplicationDetail', {'applicationId': 85013},
+        state={'selectedApplicationId': 85013}, rationale='所问金额、期数、用途都是现有详情工具字段。')
+    add('F29', 'A', '工具可以提供产品标签',
+        '列出上架产品及各自的标签|当前贷款产品有哪些特点标签|看看在售产品对应的标签信息|展示当前产品的名称和标签|查询产品目录里的标签字段',
+        'tool', 'products', 'queryLoanProducts')
+    add('F29', 'B', '仅介绍查看产品的方法',
+        '如果我自己想查看产品列表，应该去哪|告诉我浏览贷款产品页面的操作路径|我先自己看，产品目录从哪进入|不用现在查，告诉我怎样打开贷款产品页面|查看不同贷款产品的入口在哪儿',
+        'answer', 'general', sources=['apply', 'policy'], rationale='明确要操作指引，不需要立即执行产品查询。')
+    add('F30', 'A', '状态码解释与个人实时状态不同',
+        '代码1在申请状态里是什么含义|申请状态码1表示什么|请解释申请状态为1这个值|状态显示1，含义是什么|讲一下审批代码1的意思',
+        'tool', 'status_code', 'explainApplicationStatus', {'status': 1})
+    add('F30', 'B', '普通还款术语解释',
+        '提前还款和正常还款有什么不同|还款期数这个词是什么意思|本期还款和剩余期数如何区分|还款计划一般记录哪些内容|应还款日和实际还款日有什么区别',
+        'answer', 'repayment', sources=['detail', 'policy'], rationale='只解释术语，不编造本人账单或合同条款。')
+    return result

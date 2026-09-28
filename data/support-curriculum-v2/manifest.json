@@ -1,0 +1,125 @@
+{
+  "version": "support-curriculum-v2",
+  "hash_algorithm": "sha256_after_CRLF_to_LF",
+  "status": "ready_for_review",
+  "training_started": false,
+  "count": 3946,
+  "eligible_train_count": 3922,
+  "scenario_groups": 166,
+  "unique_messages": 1050,
+  "routes": {
+    "tool": 1416,
+    "clarify": 672,
+    "llm": 1170,
+    "human": 664
+  },
+  "intents": {
+    "products": 510,
+    "application_detail": 598,
+    "general": 810,
+    "status_code": 140,
+    "repayment": 404,
+    "ui_issue": 394,
+    "security": 298,
+    "applications": 248,
+    "handoff": 68,
+    "payment_dispute": 298,
+    "credit": 154
+  },
+  "tools": {
+    "queryLoanProducts": 510,
+    "queryApplicationDetail": 398,
+    "none": 2506,
+    "explainApplicationStatus": 106,
+    "queryMyApplications": 248,
+    "queryMyCreditScore": 154
+  },
+  "runtime_paths": {
+    "model": 3838,
+    "guard": 84
+  },
+  "contexts": {
+    "base": 149,
+    "neutral_history": 149,
+    "fresh": 906,
+    "pending_application": 906,
+    "pending_status": 906,
+    "selected_application": 906
+  },
+  "review_counts": {
+    "ai_preannotated": 3922
+  },
+  "all_row_review_counts": {
+    "ai_preannotated": 3946
+  },
+  "reviewed_eligible_count": 0,
+  "held_reasons": {
+    "guard_conflicts_with_proposed_action": 24
+  },
+  "provenance": {
+    "source_manifest_sha256": "326bbf7aab6ea205752baa0f966d67ec06ea0cb01d949016f0d9a50cec80ce49",
+    "origin": "Assistant-authored training scenarios, programmatic expression/context composition; human review recorded per row",
+    "legacy_train_rows": 298,
+    "new_proposed_rows": 3648,
+    "duplicate_rows_removed": [],
+    "heldout_sources": {
+      "1:development-cases.jsonl": {
+        "sha256": "2e91db0fdabcb513afe89f1b52261060f6171a2aa49962993ce6bc25b7fb540b",
+        "count": 120
+      },
+      "2:calibration-cases.jsonl": {
+        "sha256": "30a60dacd0d1c5494b0cab9c9d534cc6a9846795caac7dd01412bbbd3b130fca",
+        "count": 120
+      },
+      "3:challenge-cases.jsonl": {
+        "sha256": "8152e65bb19df75c1afed815524b8798563ef592cae730372cec7b78e6cacaa6",
+        "count": 90
+      },
+      "4:cases.jsonl": {
+        "sha256": "b76390f98f227fcd7b34a3c33667f34105b593d20d769545b9146eecebce6bbd",
+        "count": 139
+      },
+      "5:business-dev.jsonl": {
+        "sha256": "bcef8468adcc766bbe689006c5ad04a0753bedfbb985c3c045dcc5ea7cc608a1",
+        "count": 402
+      },
+      "6:business-calibration.jsonl": {
+        "sha256": "7d321bf365b9f81a1b8b7810e9e18f5d348dea56d5ed0e7042f44bbf9b9ccf1e",
+        "count": 402
+      },
+      "7:business-test.jsonl": {
+        "sha256": "4f7b6b3e473813a715a8c742e6f61ad0aad0411cd6233b9c1e9b6784b8f0e9b3",
+        "count": 402
+      }
+    },
+    "human_review_completed": false
+  },
+  "generator_hashes": {
+    "src/qwenlab/support_expansion.py": "c2ac83d2bd3a4ff6a5b081ee70159f61a5e7b35b3576811e98b5c9dd9f08e76e",
+    "src/qwenlab/support_expansion_catalog.py": "dd0db591dad7e9cd8ae212c850fb0ad6d1b91ef0e28f4980632ded80dfb3040a",
+    "src/qwenlab/support_curriculum.py": "5645a9e59830aa4c3b2d2b438d7963e74d93e9030cf54e9808e17eccc4432667",
+    "configs/decision-v5.json": "749a240c0e0af360e44bebc66ce929dd48a61dc5be880ee1bd4af5877d75e3fe"
+  },
+  "limitations": [
+    "Rows are scenario/expression/context combinations, not independent users",
+    "Exact normalized de-duplication does not establish semantic independence",
+    "Model and full component metrics must attribute backend guards separately",
+    "Await actual review; future review is not counted as completed"
+  ],
+  "files_sha256": {
+    "calibration-candidates.jsonl": "3e690e23ce4dd563562dc8e5215fb5020cf9ce64b40faf654c00bb69abe046c7",
+    "calibration-cases.jsonl": "30a60dacd0d1c5494b0cab9c9d534cc6a9846795caac7dd01412bbbd3b130fca",
+    "cases.jsonl": "5159a211af5315690dc4c33fad47e4253ed40f6d57cbc3565fe497104443d82c",
+    "challenge-cases.jsonl": "8152e65bb19df75c1afed815524b8798563ef592cae730372cec7b78e6cacaa6",
+    "challenge-model-candidates.jsonl": "9ef0edf12313e030d367baea223c7d29bb3d1a023a7904e4ff5d9b98c254fc1d",
+    "development-candidates.jsonl": "634867f7f2abeea3eacb2693079a91493e247aa762a36ff49573546fcae7d771",
+    "development-cases.jsonl": "2e91db0fdabcb513afe89f1b52261060f6171a2aa49962993ce6bc25b7fb540b",
+    "eligibility.jsonl": "3c9a838767f266954402f0d05cea79b4a06a6ea8e1bd170ab76a1c73cd1c2642",
+    "regression-fingerprints.json": "ecc2e649afed06e71ea3fa282870c95bd92b52b2538828c2d602f82be0d9707c",
+    "review.json": "af0bfa6c999a1af0af7a192a537bc10361281830e50c1bf6f725ef2fb14a0b4e",
+    "runtime-inputs.jsonl": "40ad45f9f6caa12ed8550ce22409873cb210cd260d1d6c1a39b3e18f1ac9fb35",
+    "source-snapshot.json": "eac74a1e995491d9b4f88941b731193263467900dd0b200eb70dc16958263015",
+    "train-candidates.jsonl": "a1e2348cb1081f925a7dc90d94c523969c9206775c08ad6f9c7e0a0b4152c059",
+    "train-reviewed-only.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

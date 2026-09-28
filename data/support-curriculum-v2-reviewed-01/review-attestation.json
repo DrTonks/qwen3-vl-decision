@@ -1,0 +1,19 @@
+{
+  "recorded_at_utc": "2026-09-28T05:26:36.354715+00:00",
+  "confirmed_by": "project_owner_user",
+  "confirmation_channel": "explicit_user_message",
+  "statement": "我已经复查过了，暂时没有修改文件。你可以再启用子agent复查一遍，如果没有问题可以考虑标注为已人工复查非纯AI生成，得到我允许后可以进入下一步训练",
+  "scope_count": 3922,
+  "scope_source": "support-curriculum-v2/review.json",
+  "source_manifest_sha256": "fcf4001dc7cd698b9e5c52932fd3ecceff20015e9da78aee977c5ede5a67e9bb",
+  "workbook_raw_sha256": "987e8bd0219196b975e84ddffb3fae4b74d03ac33ef86be6dadd86537ebd27bb",
+  "content_unchanged_verified": true,
+  "source_authorship": "assistant_authored",
+  "review_description": "助手起草，用户确认已人工复查原版且未修改内容；独立审查另隔离21条，未改写其问题或标签。",
+  "independent_audit_scope": "All integrity checks; semantic catalog/context/group inspection, not proof of exhaustive error-free labeling",
+  "accepted_after_audit_count": 3901,
+  "pending_semantic_count": 21,
+  "unreviewed_original_drafts_count": 24,
+  "evaluation_rows_in_scope": false,
+  "training_authorized": false
+}

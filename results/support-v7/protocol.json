@@ -1,0 +1,84 @@
+{
+  "config": {
+    "seed": 20260928,
+    "epochs": 2,
+    "pilot_steps": 200,
+    "micro_batch": 2,
+    "gradient_accumulation": 4,
+    "learning_rate": 1.5e-05,
+    "warmup_fraction": 0.02,
+    "weight_decay": 0.01,
+    "checkpoint_every": 100,
+    "replay_rows": {
+      "massive": 1200,
+      "crosswoz": 300
+    },
+    "weights": {
+      "business.intent": 1.0,
+      "business.route": 2.0,
+      "business.tool": 1.5,
+      "massive.intent": 0.5,
+      "crosswoz.intent": 0.35
+    },
+    "business_tasks": [
+      "intent",
+      "route",
+      "tool"
+    ],
+    "group_weighting": "inverse business group size, mean one; all rows traversed once per epoch",
+    "initial_adapter": ".local/checkpoints/joint-v5/step-7110",
+    "reviewed_source": "data/support-curriculum-v2-reviewed-01",
+    "gate": {
+      "max_regression": 0.03,
+      "min_route_f1_gain": 0.01,
+      "min_route_correct_gain": 1,
+      "max_extra_human_misses": 0
+    },
+    "jev_calls": 0,
+    "training_authorization": {
+      "confirmed": true,
+      "date": "2026-09-28",
+      "user_message": "继续",
+      "scope": "diagnose v6 regression; start a separately frozen pilot with train-only state replay and constraints; extend only if original development gate passes; no deployment"
+    },
+    "legacy_replay_rows": 2000,
+    "anchor_strength": 0.5
+  },
+  "prepared_manifest_sha256": "672e4a96270f7a84191ecb5c180e38bc58742b7f75730bca8cb7ef01206db62d",
+  "source_hashes": {
+    "src/qwenlab/support_train_v7.py": "70a9bfa35e121bdc84dadcfffadd43f448cba4f5d12b2d78e33c9f0bee385f06",
+    "src/qwenlab/support_replay.py": "3304467f132685734543f0abb9ea394ed57d72b96d8c2b5f7fbe3f249f2c40d0",
+    "src/qwenlab/joint_v5.py": "80190210f3c07578768e27120dd48b97192b01a90b6f8b97f32bcc7c44f15ed7",
+    "src/qwenlab/joint_v4.py": "26378ca85470108c880bb4eae98f93a6969d5938c96b238596727c2e8d46e0db",
+    "src/qwenlab/modeling.py": "fbcac24e76e3afee2804e09669a52786cf2d603bbcb9c95ccd423d2673d2264e",
+    "src/qwenlab/common.py": "37878b6390ec81133b959a4db0a1c215add1d6a175ed7227df855478f765e683",
+    "configs/support-v7.json": "5373cf47e853f8ec42d1eae3f6cc80666b009963d2a9064c63573189e8eb404b",
+    "configs/decision-v5.json": "749a240c0e0af360e44bebc66ce929dd48a61dc5be880ee1bd4af5877d75e3fe",
+    "data/processed/v2/massive-spec.json": "bade9dd8a58a1c4b333a45fd3d78ff219a4f936e62167aa2632c9c9f5581b174",
+    "data/processed/v2/crosswoz-spec.json": "139f36a128e62c27dc4eb170a929369923ea1c667f22ec0ebf3b1d717d3bd12c"
+  },
+  "initial_adapter_hashes": {
+    "adapter_model.safetensors": "875b96e198cf7e65cadc27d7e93a8ca9a6111afae37420c4b287a56451d905d7",
+    "adapter_config.json": "84585c045afbf25038d9a72ae605131f553ea94bb99910b9aadf1917244238f7"
+  },
+  "evaluation_batch": 1,
+  "reviewed_project_rows": 3901,
+  "legacy_replay_is_separately_attributed": true,
+  "development_informed_adaptation": true,
+  "no_heldout_rows_used_as_training_supervision": true,
+  "reference_reuse": {
+    "source": "results/support-v6/v5-reference",
+    "batch": 1,
+    "source_protocol_sha256": "55bba12b9ee6d6b10e7640fe6c1ac3b2b69790f12c23c4f9ef70c34d332a60ad",
+    "files_sha256": {
+      "business-dev.jsonl": "6ae26326a065b208fd4771364e365f46f70546b1a8543ff67acb83f18db8f0cc",
+      "business-dev-metrics.json": "323ce827d990b95086f91b6be6522010db2fec719992afbed59548f02a06215b",
+      "massive-dev.jsonl": "f58f1ec460ab2e674e83b37a3759b56fe805d8cec08752526255d1550a3953c7",
+      "massive-dev-metrics.json": "4f5ca9cf8c5b19018dee8294aaafba18a97b4b6e80c24d6f0d020d8d23734228",
+      "crosswoz-dev.jsonl": "12ccde51f7973fe21c3555f1ea3e74edc6ab46b85a66fe9fc9f300b259509f79",
+      "crosswoz-dev-metrics.json": "72ebea6dd048bbe9ddc0b5fe23841d0b1e41a6fbe0b9cc075ae609eed5487a20",
+      "legacy-dev.jsonl": "0bb99843cbe5da917b68b1ce4c97a4e0c4590a1c1431dd36cd9d57d257accb7f",
+      "legacy-dev-metrics.json": "ef3c599ee415586d008704a2896a94b9380e45f9418b9748986fedd863a153d1"
+    }
+  }
+}

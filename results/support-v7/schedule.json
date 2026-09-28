@@ -1,0 +1,17 @@
+{
+  "pilot_steps": 200,
+  "total_steps": 4802,
+  "steps_per_epoch": 2401,
+  "evaluation_steps": [
+    200,
+    2401,
+    4802
+  ],
+  "examples_per_epoch": {
+    "business.intent": 5901,
+    "business.route": 5901,
+    "business.tool": 5901,
+    "massive.intent": 1200,
+    "crosswoz.intent": 300
+  }
+}
