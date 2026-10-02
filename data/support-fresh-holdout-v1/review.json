@@ -1,0 +1,19 @@
+{
+  "reviewer": "review_scenarios",
+  "reviewed_groups": 64,
+  "reviewed_rows": 128,
+  "before_any_scoring": true,
+  "human_reviewed": false,
+  "issues_fixed": [
+    "NEW-013-2 production application-id extraction",
+    "NEW-015-1 production status extraction",
+    "NEW-063 removed explicit handoff and answer leakage",
+    "NEW-064-2 removed explicit handoff intent conflict"
+  ],
+  "code_reviewer": "review_training_runner",
+  "code_review_fixes": [
+    "expanded source hashes",
+    "full v4/v5 train overlap audit"
+  ],
+  "remaining_limitation": "Synthetic, author has seen earlier experiments; state is constructed, not an end-to-end dataset."
+}

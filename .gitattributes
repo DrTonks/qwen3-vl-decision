@@ -5,4 +5,4 @@ data/financial-training-text-v1/** -text
 data/financial-eight-actions-v2/** -text
 
 # Preserve frozen evaluation data hashes across Windows/Linux checkouts.
-data/support-fresh-holdout-v1/** -text
+data/support-fresh-holdout-v1/** -text whitespace=cr-at-eol

@@ -1,0 +1,23 @@
+{
+  "old_files": {
+    "data/processed/support-v8/business-dev.jsonl": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+    "data/processed/support-v8/business-train.jsonl": "03a95d8d8006c38d5a33bf1f627d31fd24afd19fe27da8e9f4c7e7b8a81657e8",
+    "data/processed/support-v8/crosswoz-dev.jsonl": "6f7e2f48f3e9e27357e156abc203c53a99229fd8a289841c5702f7c18d069a0a",
+    "data/processed/support-v8/crosswoz-train.jsonl": "dbf341f4178a2993a374b8ec42a0fbb34c37bfe5f9af70c1be148314b8db69fd",
+    "data/processed/support-v8/legacy-dev.jsonl": "246ba99eab0d0ccc638d08d978d87598230dc41c9a145e963c6e968a03625e10",
+    "data/processed/support-v8/massive-dev.jsonl": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+    "data/processed/support-v8/massive-train.jsonl": "a085813e51324ed2bd5921f6dcbb40bfc04c6ea625bf2e77dbc2a22eee738bc5",
+    "data/support-curriculum-v2-reviewed-01/calibration-candidates.jsonl": "aee2f3cb4a1c60c6818c017338b703e6e256a3780b7d0e0b1c91bb3ac9218e5e",
+    "data/support-curriculum-v2-reviewed-01/challenge-model-candidates.jsonl": "d81c333afd3e7c378597ede8339d6a8af3b48c9d72fa04297deeb3dd3fe773c8",
+    "data/support-curriculum-v2-reviewed-01/development-candidates.jsonl": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+    "data/support-curriculum-v2-reviewed-01/train-candidates.jsonl": "523655b142dc49ca86f66763a891efa279350a59c384a60719bf7b2e55d9fa5e",
+    "data/processed/v4/business-train.jsonl": "105fa6d1151c47a16c32663e073b03c854450212ceddd2b01c731f515deb89c7",
+    "data/processed/v5/business-train.jsonl": "58dd7a7e6670f5b9f5a0456f4d7ab0e9a4ac5d96ca14fcdc3c30069138fdd8b1",
+    "data/processed/v5/business-test.jsonl": "1b0e3fd2f0de07d94e44f783e7d026c267b9071bd592eb05f5e1efa82dd33c9d",
+    "data/processed/v5/business-calibration.jsonl": "f9f8fc66ec1c6d3c5cd1b06d51801d272b25ad243986626211a178a336a4b927"
+  },
+  "exact_or_normalized_matches": [],
+  "near_matches_for_review": [],
+  "threshold": 0.78,
+  "limitation": "String checks do not prove semantic or source independence; categories intentionally overlap the same business policy."
+}

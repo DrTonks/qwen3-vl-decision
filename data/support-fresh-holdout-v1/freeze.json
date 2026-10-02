@@ -1,0 +1,12 @@
+{
+  "frozen_at": "2026-09-29T04:53:46.163003+00:00",
+  "files": {
+    "cases.jsonl": "1df9d0d1c0a2d2f04cc4b22d3667fb315d11a63601a0c5279b06b57ddeffa3be",
+    "manifest.json": "b1b303d763510b16649b8931c9a72b350083ff89401a67fadd81aa6b29459290",
+    "overlap-audit.json": "4b9f027d92ef08c9a0807c65292ac1d88ed192d4387509fe9c433e311a4e994f",
+    "review.json": "36f5d27b6d3cc788ba4844da4e491c5bb6d33702aca8bf6b9806220cbe0ec846"
+  },
+  "selected_adapter_sha256": "6c3b9e65d1784fd7d9ec54a9f4527d84c66911d731dc22c1d6d3c7d78b0b332b",
+  "evaluation_only": true,
+  "new_jev_requests": 0
+}

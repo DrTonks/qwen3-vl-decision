@@ -1,0 +1,18 @@
+{
+  "rows": 128,
+  "groups": 64,
+  "routes": {
+    "tool": 32,
+    "clarify": 32,
+    "llm": 32,
+    "human": 32
+  },
+  "origin": "assistant-authored synthetic episodes; not real customer data",
+  "review": "independent agent reviewed before scoring; not human-reviewed",
+  "new_inputs_before_scoring": true,
+  "model_frozen_before_authoring": ".local/checkpoints/support-v8-observe/step-2801",
+  "policy_sha256": "ba4ca13ed1da614864a37c533fd9c23b6dd1a34b2afc1141fc1129020a8faa4d",
+  "known_limitation": "Author has seen previous experiments; not external blind data.",
+  "no_training": true,
+  "jev_new_requests": 0
+}
