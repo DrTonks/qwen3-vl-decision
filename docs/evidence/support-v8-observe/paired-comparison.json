@@ -1,0 +1,141 @@
+{
+  "challenge": {
+    "base": {
+      "n": 79,
+      "groups": 16,
+      "both_correct": 49,
+      "fixed": 26,
+      "regressed": 2,
+      "both_wrong": 2,
+      "accuracy_delta": 0.3037974683544304,
+      "group_bootstrap_95_descriptive": [
+        0.1125,
+        0.5189873417721519
+      ],
+      "bootstrap_repeats": 10000,
+      "seed": 20260929,
+      "transitions": {
+        "tool: tool -> human": 1,
+        "llm: tool -> llm": 10,
+        "llm: tool -> clarify": 2,
+        "clarify: tool -> clarify": 15,
+        "human: human -> llm": 1,
+        "human: tool -> human": 1
+      },
+      "limitation": "descriptive cluster resampling; synthetic groups and adaptive experiment, not a deployment guarantee"
+    },
+    "v5-reference": {
+      "n": 79,
+      "groups": 16,
+      "both_correct": 61,
+      "fixed": 14,
+      "regressed": 0,
+      "both_wrong": 4,
+      "accuracy_delta": 0.17721518987341772,
+      "group_bootstrap_95_descriptive": [
+        0.05,
+        0.3291139240506329
+      ],
+      "bootstrap_repeats": 10000,
+      "seed": 20260929,
+      "transitions": {
+        "llm: clarify -> llm": 7,
+        "llm: human -> llm": 2,
+        "llm: tool -> llm": 1,
+        "clarify: human -> clarify": 4
+      },
+      "limitation": "descriptive cluster resampling; synthetic groups and adaptive experiment, not a deployment guarantee"
+    },
+    "step-200": {
+      "n": 79,
+      "groups": 16,
+      "both_correct": 69,
+      "fixed": 6,
+      "regressed": 0,
+      "both_wrong": 4,
+      "accuracy_delta": 0.0759493670886076,
+      "group_bootstrap_95_descriptive": [
+        0.025,
+        0.13924050632911392
+      ],
+      "bootstrap_repeats": 10000,
+      "seed": 20260929,
+      "transitions": {
+        "tool: llm -> human": 1,
+        "tool: llm -> tool": 1,
+        "llm: clarify -> llm": 3,
+        "clarify: human -> clarify": 1,
+        "clarify: tool -> clarify": 1
+      },
+      "limitation": "descriptive cluster resampling; synthetic groups and adaptive experiment, not a deployment guarantee"
+    },
+    "jev": {
+      "n": 79,
+      "groups": 16,
+      "both_correct": 73,
+      "fixed": 2,
+      "regressed": 4,
+      "both_wrong": 0,
+      "accuracy_delta": -0.02531645569620253,
+      "group_bootstrap_95_descriptive": [
+        -0.1,
+        0.0379746835443038
+      ],
+      "bootstrap_repeats": 10000,
+      "seed": 20260929,
+      "transitions": {
+        "tool: tool -> human": 1,
+        "llm: llm -> clarify": 2,
+        "clarify: llm -> clarify": 1,
+        "clarify: tool -> clarify": 1,
+        "human: human -> llm": 1
+      },
+      "limitation": "descriptive cluster resampling; synthetic groups and adaptive experiment, not a deployment guarantee"
+    }
+  },
+  "legacy": {
+    "v5-reference": {
+      "n": 402,
+      "groups": 21,
+      "both_correct": 388,
+      "fixed": 7,
+      "regressed": 2,
+      "both_wrong": 5,
+      "accuracy_delta": 0.012437810945273632,
+      "group_bootstrap_95_descriptive": [
+        -0.009010369886502816,
+        0.03194103194103194
+      ],
+      "bootstrap_repeats": 10000,
+      "seed": 20260929,
+      "transitions": {
+        "tool: human -> tool": 3,
+        "clarify: human -> clarify": 4,
+        "clarify: clarify -> llm": 2
+      },
+      "limitation": "descriptive cluster resampling; synthetic groups and adaptive experiment, not a deployment guarantee"
+    },
+    "step-200": {
+      "n": 402,
+      "groups": 21,
+      "both_correct": 390,
+      "fixed": 5,
+      "regressed": 1,
+      "both_wrong": 6,
+      "accuracy_delta": 0.009950248756218905,
+      "group_bootstrap_95_descriptive": [
+        -0.002967359050445104,
+        0.022965109303385876
+      ],
+      "bootstrap_repeats": 10000,
+      "seed": 20260929,
+      "transitions": {
+        "tool: human -> tool": 2,
+        "tool: llm -> tool": 1,
+        "clarify: human -> clarify": 2,
+        "clarify: clarify -> llm": 1
+      },
+      "limitation": "descriptive cluster resampling; synthetic groups and adaptive experiment, not a deployment guarantee"
+    }
+  }
+}

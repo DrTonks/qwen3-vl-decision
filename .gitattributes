@@ -1,0 +1,8 @@
+data/financial-public-rewrite-completion-v1/*.jsonl text eol=lf
+data/financial-public-rewrite-completion-v1/parts/*.jsonl text eol=lf
+# Preserve all manifest-bound bytes, including copied original review packets.
+data/financial-training-text-v1/** -text
+data/financial-eight-actions-v2/** -text
+
+# Preserve frozen evaluation data hashes across Windows/Linux checkouts.
+data/support-fresh-holdout-v1/** -text

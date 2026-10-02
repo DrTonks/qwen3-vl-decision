@@ -1,4 +1,5 @@
 .venv/
+.venv-qwen35/
 .cache/
 models/
 .local/
@@ -21,6 +22,7 @@ results/**/*console.txt
 results/**/training-state.json
 # Active V8 output is published only after completion and a separate audit.
 results/support-v8/
+results/support-v8-observe/
 results/support-v8-setup-failure-*/
 jev-api-key.txt
 *api*key*.txt
@@ -43,3 +45,12 @@ __pycache__/
 data/raw/
 data/review/*
 !data/review/support-actions-v1-template.csv
+
+results/support-fresh-v1/
+results/financial-eight-actions-pilot*/
+results/financial-qwen35*/
+# Keep the large combined audit artifact local; portable parts are versioned.
+data/financial-public-rewrite-completion-v1/cases.jsonl
+data/financial-public-rewrite-completion-v1.staging-*/
+data/financial-training-text-v1.staging-*/
+data/financial-eight-actions-v2.staging-*/

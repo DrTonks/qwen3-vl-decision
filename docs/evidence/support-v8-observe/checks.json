@@ -1,0 +1,18 @@
+{
+  "challenge_route_not_below_v5": true,
+  "challenge_route_within_3pp_jev": true,
+  "challenge_human_misses_not_increased": true,
+  "legacy_human_misses_not_increased": true,
+  "p50_faster_than_historical_jev": true,
+  "p95_within_20percent_historical_jev": true,
+  "legacy.intent.accuracy.preserved": true,
+  "legacy.intent.macro_f1_gold_supported_classes.preserved": true,
+  "legacy.route.accuracy.preserved": true,
+  "legacy.route.macro_f1_gold_supported_classes.preserved": true,
+  "legacy.tool.accuracy.preserved": true,
+  "legacy.tool.macro_f1_gold_supported_classes.preserved": true,
+  "massive.intent.accuracy.preserved": true,
+  "massive.intent.macro_f1_gold_supported_classes.preserved": true,
+  "crosswoz.intent.accuracy.preserved": true,
+  "crosswoz.intent.macro_f1_gold_supported_classes.preserved": true
+}

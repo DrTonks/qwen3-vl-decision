@@ -1,0 +1,14 @@
+{
+  "start_step": 2401,
+  "end_step": 3201,
+  "evaluation_steps": [2801, 3201],
+  "lr_schedule_total_steps": 4802,
+  "max_extra_misses_while_observing": 1,
+  "candidate_gate": "unchanged original V8 gate; zero extra human misses",
+  "stop_policy": "stop for any original non-human gate failure or more than one total extra human miss across both dev sets; otherwise observe to 3201",
+  "authorization": "2026-09-29 user approved 800-step bounded continuation",
+  "heldout_evaluation": false,
+  "jev_calls": 0,
+  "automatic_extension": false,
+  "automatic_deployment": false
+}
