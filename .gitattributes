@@ -92,3 +92,17 @@ src/qwenlab/financial_expansion.py -text
 src/qwenlab/financial_batch_a.py -text
 src/qwenlab/financial_batch_b.py -text
 src/qwenlab/financial_state_pairs.py -text
+src/qwenlab/financial_preauth_cycle.py -text
+tests/test_financial_preauth_cycle.py -text
+configs/financial-preauth-execution-v1.json -text
+scripts/start-financial-preauth.ps1 -text
+scripts/pause-financial-preauth.ps1 -text
+scripts/resume-financial-preauth.ps1 -text
+scripts/audit-financial-preauth.py -text
+docs/evidence/financial-preauth-audit-v1/** -text
+src/qwenlab/financial_public_inventory.py -text
+src/qwenlab/financial_public_rewrite.py -text
+src/qwenlab/financial_rewrite_massive.py -text
+src/qwenlab/financial_rewrite_crosswoz.py -text
+src/qwenlab/financial_completion.py -text
+data/financial-public-rewrite-v1/** -text whitespace=cr-at-eol

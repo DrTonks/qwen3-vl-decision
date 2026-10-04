@@ -1,0 +1,76 @@
+{
+  "date": "2026-09-29",
+  "prepared_source_rows": 22530,
+  "records": {
+    "data/processed/v5/business-train.jsonl": {
+      "rows": 4904,
+      "unique_normalized_messages": 494,
+      "groups": 146,
+      "sha256": "58dd7a7e6670f5b9f5a0456f4d7ab0e9a4ac5d96ca14fcdc3c30069138fdd8b1"
+    },
+    "data/support-curriculum-v2-reviewed-01/train-reviewed-only.jsonl": {
+      "rows": 3901,
+      "unique_normalized_messages": 1050,
+      "groups": 166,
+      "sha256": "523655b142dc49ca86f66763a891efa279350a59c384a60719bf7b2e55d9fa5e"
+    },
+    "data/processed/v5/massive-train.jsonl": {
+      "rows": 10725,
+      "unique_normalized_messages": 10725,
+      "groups": 10725,
+      "sha256": "3385d841339741936619be2426427541abbbb2a68840b4f4e53c9549f78a3cfb"
+    },
+    "data/processed/v5/crosswoz-train.jsonl": {
+      "rows": 3000,
+      "unique_normalized_messages": 2988,
+      "groups": 2286,
+      "sha256": "3dcf83b76c26ee26a1489d50f22b2fca7b25f79fb182af1cc0e52c52e9ab3b9c"
+    }
+  },
+  "raw_sources": {
+    "massive": {
+      "partitions": {
+        "test": 2974,
+        "train": 11514,
+        "dev": 2033
+      },
+      "sha256": "992bf0bef3d678f08c27e514739bc851163e8f40f530bfb4d5970a2c24408ace"
+    },
+    "crosswoz_train": {
+      "dialogs": 5012,
+      "utterances_by_role": {
+        "usr": 42346,
+        "sys": 42346
+      },
+      "sha256": "b81f6a0845011bb4593d21dd58e2d76af4dd5d52e300ecc68cb8dee17ccc3cf8"
+    },
+    "crosswoz_val": {
+      "dialogs": 500,
+      "utterances_by_role": {
+        "usr": 4229,
+        "sys": 4229
+      },
+      "sha256": "b2b717990f6f0a1c98daaf5dc465e61d42f7de69c0d31e88e674275b1f34c94c"
+    },
+    "crosswoz_test": {
+      "dialogs": 500,
+      "utterances_by_role": {
+        "usr": 4238,
+        "sys": 4238
+      },
+      "sha256": "e57703894995211bba8638f130dc7df81e8992b71f3c05c10022ad23d6ca5310"
+    }
+  },
+  "business_combined": {
+    "rows": 8805,
+    "unique_normalized_messages": 1544,
+    "unique_exact_inputs": 8805
+  },
+  "limitations": [
+    "Source inventory, not eight-action gold labels or a ready training release",
+    "Prepared CrossWOZ 3000 is included in raw train user turns 42346",
+    "Prepared MASSIVE train is included in raw train 11514",
+    "No dev/calibration/test input may be converted to training, including paraphrases",
+    "Existing human review covers prior policy only; changed text or new action labels require review"
+  ]
+}
