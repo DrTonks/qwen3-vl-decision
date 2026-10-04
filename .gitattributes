@@ -6,3 +6,89 @@ data/financial-eight-actions-v2/** -text
 
 # Preserve frozen evaluation data hashes across Windows/Linux checkouts.
 data/support-fresh-holdout-v1/** -text whitespace=cr-at-eol
+docs/evidence/financial-jev-reference-v1/** -text whitespace=cr-at-eol
+data/financial-boundary-candidates-v1/** -text whitespace=cr-at-eol
+data/financial-boundary-training-v1/** -text whitespace=cr-at-eol
+docs/evidence/financial-boundary-label-review.json -text
+docs/evidence/financial-boundary-study-v1/** -text
+data/financial-contract-audit-v1/** -text
+docs/evidence/financial-contract-audit-v1-*.json -text
+data/financial-contract-revision-v2/** -text
+configs/support-financial-v2.json -text
+configs/financial-support-contract-draft-v2.json -text
+src/qwenlab/financial_contract_audit.py -text
+src/qwenlab/financial_contract_revision.py -text
+src/qwenlab/financial_serve_v2.py -text
+tests/test_financial_serve_v2.py -text
+scripts/verify-financial-v2-http.py -text
+docs/evidence/financial-serve-v2-review.json -text
+docs/evidence/financial-v2-http-smoke.json -text
+docs/evidence/financial-node-v2-review.json -text
+tests/test_financial_contract_revision.py -text
+
+# New-contract dataset and design evidence are bound by byte-level SHA256.
+data/financial-service-v2/** -text
+configs/financial-service-v2-study.json -text
+src/qwenlab/financial_service_v2_data.py -text
+src/qwenlab/financial_prompt_v2.py -text
+src/qwenlab/financial_service_v2_eval_catalog.py -text
+src/qwenlab/financial_service_v2_preflight.py -text
+tests/test_financial_service_v2_data.py -text
+docs/evidence/financial-service-v2-*.json -text
+docs/evidence/financial-v2-migration-semantic-review.json -text
+src/qwenlab/financial_service_v2_cycle.py -text
+src/qwenlab/financial_service_v2_metrics.py -text
+tests/test_financial_service_v2_cycle.py -text
+scripts/start-financial-service-v2.ps1 -text
+scripts/pause-financial-service-v2.ps1 -text
+scripts/resume-financial-service-v2.ps1 -text
+src/qwenlab/financial_service_v2_diagnosis.py -text
+scripts/inspect-financial-service-v2-grounding.cjs -text
+docs/evidence/financial-service-v2-diagnosis-v1/** -text
+docs/evidence/financial-input-current-v1.jsonl -text
+data/financial-supplement-pilot-v1/** -text
+src/qwenlab/financial_supplement_pilot.py -text
+scripts/screen-financial-supplement-overlap.py -text
+scripts/finalize-financial-supplement-review.py -text
+docs/evidence/financial-supplement-pilot-*.json -text
+
+# Expanded candidates, review evidence and their replay dependencies use byte hashes.
+data/financial-supplement-expansion-v1/** -text
+configs/financial-supplement-heldout-index-v1.json -text
+src/qwenlab/financial_supplement_expansion.py -text
+scripts/finalize-financial-expansion.py -text
+scripts/screen-financial-expansion-overlap.py -text
+docs/evidence/financial-supplement-expansion-*.json -text
+
+# Sampling-design snapshots and replay dependencies.
+data/financial-sampling-study-v1/** -text
+configs/financial-sampling-study-v1.json -text
+src/qwenlab/financial_sampling_*.py -text
+src/qwenlab/common.py -text
+docs/evidence/financial-sampling-*.json -text
+scripts/start-financial-sampling.ps1 -text
+scripts/pause-financial-sampling.ps1 -text
+scripts/resume-financial-sampling.ps1 -text
+tests/test_financial_sampling_cycle.py -text
+tests/test_financial_sampling_scripts.py -text
+scripts/audit-financial-sampling.py -text
+docs/evidence/financial-sampling-audit-v1/** -text
+src/qwenlab/financial_coverage_audit.py -text
+scripts/inspect-financial-training-inputs.cjs -text
+tests/test_financial_coverage_audit.py -text
+docs/evidence/financial-coverage-audit-v1/** -text
+src/qwenlab/financial_preauth_schedule.py -text
+tests/test_financial_preauth_schedule.py -text
+configs/financial-preauth-schedule-v1.json -text
+data/financial-preauth-study-v1/** -text
+docs/evidence/financial-preauth-*.json -text
+
+# Preserve the early candidate snapshots and their recorded source hashes.
+data/financial-actions-text-pilot-v1/** -text whitespace=cr-at-eol
+data/financial-actions-text-v2/** -text whitespace=cr-at-eol
+src/qwenlab/financial_pilot.py -text
+src/qwenlab/financial_pilot_catalog.py -text
+src/qwenlab/financial_expansion.py -text
+src/qwenlab/financial_batch_a.py -text
+src/qwenlab/financial_batch_b.py -text
+src/qwenlab/financial_state_pairs.py -text

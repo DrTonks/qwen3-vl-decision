@@ -4,6 +4,7 @@
 models/
 .local/
 .planning/
+tmp/
 dist/
 build/
 *.egg-info/
@@ -49,6 +50,12 @@ data/review/*
 results/support-fresh-v1/
 results/financial-eight-actions-pilot*/
 results/financial-qwen35*/
+results/financial-service-v2-*/
+results/financial-jev-reference*/
+results/financial-sampling-v1/
+results/financial-sampling-probe-v1/
+results/financial-preauth-v1/
+results/financial-preauth-probe-v1/
 # Keep the large combined audit artifact local; portable parts are versioned.
 data/financial-public-rewrite-completion-v1/cases.jsonl
 data/financial-public-rewrite-completion-v1.staging-*/
