@@ -1,0 +1,20 @@
+{
+  "business": {
+    "file": "data/support-curriculum-v2-reviewed-01/train-reviewed-only.jsonl",
+    "sha256": "523655b142dc49ca86f66763a891efa279350a59c384a60719bf7b2e55d9fa5e",
+    "review": "old policy user-reviewed; current labels not human reviewed"
+  },
+  "massive": {
+    "file": "data/processed/v5/massive-train.jsonl",
+    "sha256": "3385d841339741936619be2426427541abbbb2a68840b4f4e53c9549f78a3cfb",
+    "url": "https://github.com/alexa/massive",
+    "license": "CC-BY-4.0",
+    "attribution": "FitzGerald et al., MASSIVE, Amazon Science",
+    "split": "train"
+  },
+  "new_text": "assistant authored; hypothetical loan scenes; no private database records",
+  "source_code": {
+    "src/qwenlab/financial_pilot.py": "8ecf6e5b757957cb889768f86827de6009578b1012cb1643fd2f3506fb698ab1",
+    "src/qwenlab/financial_pilot_catalog.py": "cce6a41c42a0f094b1a5c23288ef5a718954db850a8264a8759329fda2126d83"
+  }
+}

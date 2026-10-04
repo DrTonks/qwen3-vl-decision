@@ -1,0 +1,53 @@
+{
+  "rows": 1020,
+  "actions": {
+    "tool": 110,
+    "clarify": 127,
+    "answer": 127,
+    "human": 124,
+    "retrieve": 109,
+    "redirect": 201,
+    "refuse": 121,
+    "close": 101
+  },
+  "eligible_draft_candidates": 1019,
+  "pending_discussion": 1,
+  "eligible_actions": {
+    "tool": 110,
+    "clarify": 126,
+    "answer": 127,
+    "human": 124,
+    "retrieve": 109,
+    "redirect": 201,
+    "refuse": 121,
+    "close": 101
+  },
+  "source_kinds": {
+    "business_policy_migration": 86,
+    "public_original_reannotated": 20,
+    "assistant_authored": 54,
+    "public_loan_adaptation": 8,
+    "assistant_authored_state_pair": 12,
+    "assistant_authored_expansion": 640,
+    "assistant_authored_state_pair_expansion": 20,
+    "public_original_reannotated_expansion": 180
+  },
+  "families": 443,
+  "unique_normalized_messages": 1004,
+  "duplicate_canonical_inputs": 0,
+  "protected_exact_normalized_matches": 0,
+  "human_reviewed_current_version": 0,
+  "training_release": false,
+  "with_history": 167,
+  "by_action_history": {
+    "tool": 35,
+    "answer": 33,
+    "retrieve": 7,
+    "clarify": 27,
+    "human": 26,
+    "refuse": 17,
+    "close": 21,
+    "redirect": 1
+  },
+  "provenance_note": "Family count is a provenance grouping count, not independent real-user scenario count."
+}

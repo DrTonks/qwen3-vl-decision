@@ -1,0 +1,17 @@
+{
+  "inherited_pilot": "data/financial-actions-text-pilot-v1",
+  "public": {
+    "file": "data/processed/v5/massive-train.jsonl",
+    "split": "train",
+    "license": "CC-BY-4.0",
+    "attribution": "FitzGerald et al., MASSIVE, Amazon Science",
+    "url": "https://github.com/alexa/massive"
+  },
+  "new_authored": "Assistant agents A/B, synthetic loan-service scenes; no real private records",
+  "source_code": {
+    "src/qwenlab/financial_expansion.py": "9f0cfb28bf43f8df5dd204b23272c8cec639a50717777f1f4526875cfa5b0b8e",
+    "src/qwenlab/financial_batch_a.py": "157a618c894336d9ef3fb9938e215c699d9f26cf1a2c241089dbb7afda6b63d4",
+    "src/qwenlab/financial_batch_b.py": "fab3255296a9ccda9ce012f25e9f7fbd619550728edb08fa50a9d25634f9f1bc",
+    "src/qwenlab/financial_state_pairs.py": "e8caf880a9fc5beaf73c7ce6b24235873be997f71c9a84df9f4c678b247f3a58"
+  }
+}

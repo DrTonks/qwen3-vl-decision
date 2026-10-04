@@ -1,0 +1,12 @@
+{
+  "review_type": "independent_agent_review_not_human",
+  "previous_cases_sha256": "9e03dfb847a5330c88ec6ae85aa850f6bd6ce300fea1b1212177d559c7186bbb",
+  "current_cases_sha256": "e3354a4d2261acd2d2a83c50d111743bc731e87fd7b93cbfe53f0be5eb0c1203",
+  "changed_ids": [
+    "FIN-T2-B-want-right-one-03",
+    "FIN-T2-B-want-right-one-04",
+    "FIN-T2-S-meaning-02"
+  ],
+  "original_pilot_unchanged": true,
+  "training_started": false
+}

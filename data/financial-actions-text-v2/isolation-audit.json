@@ -1,0 +1,358 @@
+{
+  "protected_file_hashes": {
+    "data/massive_zh_test.jsonl": "aee730f80c0663936a58f4d5895d5aa8accba211bc558472ad64efadcc522e65",
+    "data/support-curriculum-v1/calibration-candidates.jsonl": "aee2f3cb4a1c60c6818c017338b703e6e256a3780b7d0e0b1c91bb3ac9218e5e",
+    "data/support-curriculum-v1/calibration-cases.jsonl": "7381e70f2e2a9a566f73f1bfa4fb2414b700c6ee5ad7fd17131e453924d12080",
+    "data/support-curriculum-v1/challenge-cards.jsonl": "e5395d96144dd35f39b9bbff9917b06423718e09afdf79d5624229db94121385",
+    "data/support-curriculum-v1/challenge-cases.jsonl": "9115860368b78e57e9f9978fe115b3f7c406950c9db459349b0ab1b36806b0ff",
+    "data/support-curriculum-v1/challenge-model-candidates.jsonl": "d81c333afd3e7c378597ede8339d6a8af3b48c9d72fa04297deeb3dd3fe773c8",
+    "data/support-curriculum-v1/development-candidates.jsonl": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+    "data/support-curriculum-v1/development-cases.jsonl": "af03d4405df40d620e3d7e68ed5c7139abbf6eef6b3f743d1c939376a945a97a",
+    "data/support-curriculum-v2/calibration-candidates.jsonl": "aee2f3cb4a1c60c6818c017338b703e6e256a3780b7d0e0b1c91bb3ac9218e5e",
+    "data/support-curriculum-v2/calibration-cases.jsonl": "7381e70f2e2a9a566f73f1bfa4fb2414b700c6ee5ad7fd17131e453924d12080",
+    "data/support-curriculum-v2/challenge-cases.jsonl": "9115860368b78e57e9f9978fe115b3f7c406950c9db459349b0ab1b36806b0ff",
+    "data/support-curriculum-v2/challenge-model-candidates.jsonl": "d81c333afd3e7c378597ede8339d6a8af3b48c9d72fa04297deeb3dd3fe773c8",
+    "data/support-curriculum-v2/development-candidates.jsonl": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+    "data/support-curriculum-v2/development-cases.jsonl": "af03d4405df40d620e3d7e68ed5c7139abbf6eef6b3f743d1c939376a945a97a",
+    "data/support-curriculum-v2-reviewed-01/calibration-candidates.jsonl": "aee2f3cb4a1c60c6818c017338b703e6e256a3780b7d0e0b1c91bb3ac9218e5e",
+    "data/support-curriculum-v2-reviewed-01/calibration-cases.jsonl": "7381e70f2e2a9a566f73f1bfa4fb2414b700c6ee5ad7fd17131e453924d12080",
+    "data/support-curriculum-v2-reviewed-01/challenge-cases.jsonl": "9115860368b78e57e9f9978fe115b3f7c406950c9db459349b0ab1b36806b0ff",
+    "data/support-curriculum-v2-reviewed-01/challenge-model-candidates.jsonl": "d81c333afd3e7c378597ede8339d6a8af3b48c9d72fa04297deeb3dd3fe773c8",
+    "data/support-curriculum-v2-reviewed-01/development-candidates.jsonl": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+    "data/support-curriculum-v2-reviewed-01/development-cases.jsonl": "af03d4405df40d620e3d7e68ed5c7139abbf6eef6b3f743d1c939376a945a97a",
+    "data/support-fresh-holdout-v1/cases.jsonl": "1df9d0d1c0a2d2f04cc4b22d3667fb315d11a63601a0c5279b06b57ddeffa3be",
+    "data/processed/support-v6/business-dev.jsonl": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+    "data/processed/support-v6/crosswoz-dev.jsonl": "6f7e2f48f3e9e27357e156abc203c53a99229fd8a289841c5702f7c18d069a0a",
+    "data/processed/support-v6/legacy-dev.jsonl": "246ba99eab0d0ccc638d08d978d87598230dc41c9a145e963c6e968a03625e10",
+    "data/processed/support-v6/massive-dev.jsonl": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+    "data/processed/support-v7/business-dev.jsonl": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+    "data/processed/support-v7/crosswoz-dev.jsonl": "6f7e2f48f3e9e27357e156abc203c53a99229fd8a289841c5702f7c18d069a0a",
+    "data/processed/support-v7/legacy-dev.jsonl": "246ba99eab0d0ccc638d08d978d87598230dc41c9a145e963c6e968a03625e10",
+    "data/processed/support-v7/massive-dev.jsonl": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+    "data/processed/support-v8/business-dev.jsonl": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+    "data/processed/support-v8/crosswoz-dev.jsonl": "6f7e2f48f3e9e27357e156abc203c53a99229fd8a289841c5702f7c18d069a0a",
+    "data/processed/support-v8/legacy-dev.jsonl": "246ba99eab0d0ccc638d08d978d87598230dc41c9a145e963c6e968a03625e10",
+    "data/processed/support-v8/massive-dev.jsonl": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+    "data/processed/v2/business-calibration.jsonl": "52a370d58aa5609d655276ee316ef466b9e4989f7dee0a97495baa9faaa04862",
+    "data/processed/v2/business-dev.jsonl": "dd71581d8aacf297e8dc1ca60270fdd2cdb7c4a930293c16fd89573de61face7",
+    "data/processed/v2/business-test.jsonl": "6e0e9eaa663c1cdb6cae9abee349eae85279b3fe905693cab7d8ab9d60fd3f8d",
+    "data/processed/v2/crosswoz-test.jsonl": "431918d072a75a39e4572e3b373dd286ed0259f085ac7f2e95bbf76fba1c359e",
+    "data/processed/v2/massive-calibration.jsonl": "59404c8f4337ee100347a18f0f0b43e29690b4b2f884607ac5c379e9ec8a6cd6",
+    "data/processed/v2/massive-dev.jsonl": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+    "data/processed/v2/massive-test.jsonl": "f6835bfc538e57675b47d0affc73a4535e314562e36082f4ed564bb96a60afbb",
+    "data/processed/v4/business-calibration.jsonl": "70548d58094784591ac6eea541cd3bc3553c381c9bbf5b9e85943ba1e0d4a11a",
+    "data/processed/v4/business-dev.jsonl": "fa5b46918e449e38ac3d88a1216a762ee17461a4edbbd25ba80b8b45dcd001fd",
+    "data/processed/v4/business-test.jsonl": "ed42f720dd24901f1603c8cba96096296e7b48339f2ff9649c6c6e4ba20d7260",
+    "data/processed/v4/massive-calibration.jsonl": "59404c8f4337ee100347a18f0f0b43e29690b4b2f884607ac5c379e9ec8a6cd6",
+    "data/processed/v4/massive-dev.jsonl": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+    "data/processed/v4/massive-test.jsonl": "f6835bfc538e57675b47d0affc73a4535e314562e36082f4ed564bb96a60afbb",
+    "data/processed/v5/business-calibration.jsonl": "f9f8fc66ec1c6d3c5cd1b06d51801d272b25ad243986626211a178a336a4b927",
+    "data/processed/v5/business-dev.jsonl": "246ba99eab0d0ccc638d08d978d87598230dc41c9a145e963c6e968a03625e10",
+    "data/processed/v5/business-test.jsonl": "1b0e3fd2f0de07d94e44f783e7d026c267b9071bd592eb05f5e1efa82dd33c9d",
+    "data/processed/v5/crosswoz-calibration.jsonl": "3e707473c3f689a4e831fe309acfe6d5dd31f595d6470f07c052500b50e43ce4",
+    "data/processed/v5/crosswoz-dev.jsonl": "6f7e2f48f3e9e27357e156abc203c53a99229fd8a289841c5702f7c18d069a0a",
+    "data/processed/v5/crosswoz-test.jsonl": "431918d072a75a39e4572e3b373dd286ed0259f085ac7f2e95bbf76fba1c359e",
+    "data/processed/v5/massive-calibration.jsonl": "59404c8f4337ee100347a18f0f0b43e29690b4b2f884607ac5c379e9ec8a6cd6",
+    "data/processed/v5/massive-dev.jsonl": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+    "data/processed/v5/massive-test.jsonl": "f6835bfc538e57675b47d0affc73a4535e314562e36082f4ed564bb96a60afbb",
+    "data/raw/massive-1.1-zh-CN.jsonl": "992bf0bef3d678f08c27e514739bc851163e8f40f530bfb4d5970a2c24408ace",
+    "data/raw/crosswoz-val.json.zip": "b2b717990f6f0a1c98daaf5dc465e61d42f7de69c0d31e88e674275b1f34c94c",
+    "data/raw/crosswoz-test.json.zip": "e57703894995211bba8638f130dc7df81e8992b71f3c05c10022ad23d6ca5310"
+  },
+  "protected_unique_messages": 13014,
+  "near_matches_to_review": [
+    {
+      "id": "FIN-P1-F13-A-01-base",
+      "protected_normalized_message": "状态码2是什么意思",
+      "ratio": 0.9
+    }
+  ],
+  "scope": "Exact normalized current message only, plus finance lexical similarity; not semantic or conversation-level independence",
+  "source_file_hashes": {
+    "data/financial-actions-text-pilot-v1/annotation-guide.md": "4e768bd9522dc5dc5a8d8c4bd864c548906fddfe398f59a2c6742d84a35a7545",
+    "data/financial-actions-text-pilot-v1/cases.jsonl": "c31f3944bbffbc406d811a3451f5260160846349d82877fbc70593660ca858d1",
+    "data/financial-actions-text-pilot-v1/contract.json": "8e5cb0a5fd91f5c873353eb4fcfedc85770704d293cec6c2d111613381245e08",
+    "data/financial-actions-text-pilot-v1/isolation-audit.json": "1cf141436fc611cca4d8eeec74e50034bb61e8bd9cd77f7d40e23101fd5ffdfe",
+    "data/financial-actions-text-pilot-v1/manifest.json": "e0a6d9a0e2e304577a391599ef20d0d1697fab95f81b09b6383a479950e214a8",
+    "data/financial-actions-text-pilot-v1/README.md": "38f16e0993f41c886037ca3f3750d3c8e1030b9e4a363a6be1b0c947d6cc1be2",
+    "data/financial-actions-text-pilot-v1/review.md": "c6380d4300564e3342d904844ca9e741134154f559e49092fb34df026658db76",
+    "data/financial-actions-text-pilot-v1/self-review.json": "1e7d81c7fa29ff7535dbc451c72d392cea9c9dabf30059f4fa48af7503b85bd6",
+    "data/financial-actions-text-pilot-v1/sources.json": "4642cdb0cc29e2eb7212971fe8e9307c957a37b87b8533ce311f18d803f6a02a",
+    "data/financial-actions-text-pilot-v1/validation.json": "71838950aeff536902630ee24f459ee03eb6f7ad2b0c1d31a10fa6c57ddafb87",
+    "data/processed/v5/massive-train.jsonl": "3385d841339741936619be2426427541abbbb2a68840b4f4e53c9549f78a3cfb"
+  },
+  "public_selection_skipped": [
+    {
+      "source_id": "massive-train-28",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-32",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-34",
+      "reason": "existing_or_protected_normalized_message"
+    },
+    {
+      "source_id": "massive-train-66",
+      "reason": "existing_or_protected_normalized_message"
+    },
+    {
+      "source_id": "massive-train-87",
+      "reason": "existing_or_protected_normalized_message"
+    },
+    {
+      "source_id": "massive-train-88",
+      "reason": "existing_or_protected_normalized_message"
+    },
+    {
+      "source_id": "massive-train-96",
+      "reason": "existing_or_protected_normalized_message"
+    },
+    {
+      "source_id": "massive-train-97",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-98",
+      "reason": "existing_or_protected_normalized_message"
+    },
+    {
+      "source_id": "massive-train-110",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-130",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-133",
+      "reason": "source_label_without_explicit_domain_evidence"
+    },
+    {
+      "source_id": "massive-train-141",
+      "reason": "source_label_without_explicit_domain_evidence"
+    },
+    {
+      "source_id": "massive-train-200",
+      "reason": "source_label_without_explicit_domain_evidence"
+    },
+    {
+      "source_id": "massive-train-218",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-226",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-240",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-241",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-284",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-291",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-913",
+      "reason": "source_label_without_explicit_domain_evidence"
+    },
+    {
+      "source_id": "massive-train-935",
+      "reason": "source_label_without_explicit_domain_evidence"
+    },
+    {
+      "source_id": "massive-train-958",
+      "reason": "source_label_without_explicit_domain_evidence"
+    },
+    {
+      "source_id": "massive-train-959",
+      "reason": "source_label_without_explicit_domain_evidence"
+    },
+    {
+      "source_id": "massive-train-3891",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-4444",
+      "reason": "source_label_without_explicit_domain_evidence"
+    },
+    {
+      "source_id": "massive-train-4445",
+      "reason": "source_label_without_explicit_domain_evidence"
+    },
+    {
+      "source_id": "massive-train-4446",
+      "reason": "source_label_without_explicit_domain_evidence"
+    },
+    {
+      "source_id": "massive-train-6362",
+      "reason": "existing_or_protected_normalized_message"
+    },
+    {
+      "source_id": "massive-train-6419",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-6440",
+      "reason": "existing_or_protected_normalized_message"
+    },
+    {
+      "source_id": "massive-train-6453",
+      "reason": "existing_or_protected_normalized_message"
+    },
+    {
+      "source_id": "massive-train-6479",
+      "reason": "source_label_without_explicit_domain_evidence"
+    },
+    {
+      "source_id": "massive-train-6480",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-6492",
+      "reason": "source_label_without_explicit_domain_evidence"
+    },
+    {
+      "source_id": "massive-train-6508",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-8378",
+      "reason": "source_label_without_explicit_domain_evidence"
+    },
+    {
+      "source_id": "massive-train-8379",
+      "reason": "“有什么活动”可能指平台活动，缺少足够域外对象。"
+    },
+    {
+      "source_id": "massive-train-8787",
+      "reason": "source_label_without_explicit_domain_evidence"
+    },
+    {
+      "source_id": "massive-train-9185",
+      "reason": "source_label_without_explicit_domain_evidence"
+    },
+    {
+      "source_id": "massive-train-9210",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-9911",
+      "reason": "existing_or_protected_normalized_message"
+    },
+    {
+      "source_id": "massive-train-9913",
+      "reason": "existing_or_protected_normalized_message"
+    },
+    {
+      "source_id": "massive-train-9914",
+      "reason": "existing_or_protected_normalized_message"
+    },
+    {
+      "source_id": "massive-train-10251",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-10253",
+      "reason": "source_label_without_explicit_domain_evidence"
+    },
+    {
+      "source_id": "massive-train-10264",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-10265",
+      "reason": "source_label_without_explicit_domain_evidence"
+    },
+    {
+      "source_id": "massive-train-10266",
+      "reason": "source_label_without_explicit_domain_evidence"
+    },
+    {
+      "source_id": "massive-train-10270",
+      "reason": "source_label_without_explicit_domain_evidence"
+    },
+    {
+      "source_id": "massive-train-11258",
+      "reason": "source_label_without_explicit_domain_evidence"
+    },
+    {
+      "source_id": "massive-train-11260",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-11264",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-11268",
+      "reason": "source_label_without_explicit_domain_evidence"
+    },
+    {
+      "source_id": "massive-train-11274",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-11277",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-11284",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-11564",
+      "reason": "source_label_without_explicit_domain_evidence"
+    },
+    {
+      "source_id": "massive-train-12122",
+      "reason": "existing_or_protected_normalized_message"
+    },
+    {
+      "source_id": "massive-train-12123",
+      "reason": "existing_or_protected_normalized_message"
+    },
+    {
+      "source_id": "massive-train-12126",
+      "reason": "existing_or_protected_normalized_message"
+    },
+    {
+      "source_id": "massive-train-12140",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-12143",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-12156",
+      "reason": "too_short_for_unambiguous_scope"
+    },
+    {
+      "source_id": "massive-train-12169",
+      "reason": "source_label_without_explicit_domain_evidence"
+    },
+    {
+      "source_id": "massive-train-12170",
+      "reason": "“电报上的交通”表达异常，暂不用于确定标签。"
+    },
+    {
+      "source_id": "massive-train-12183",
+      "reason": "source_label_without_explicit_domain_evidence"
+    },
+    {
+      "source_id": "massive-train-12184",
+      "reason": "source_label_without_explicit_domain_evidence"
+    }
+  ]
+}

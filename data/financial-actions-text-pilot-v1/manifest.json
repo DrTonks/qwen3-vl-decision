@@ -1,0 +1,43 @@
+{
+  "version": "loan-eight-actions-pilot-1",
+  "rows": 180,
+  "actions": {
+    "tool": 26,
+    "clarify": 24,
+    "answer": 23,
+    "human": 21,
+    "retrieve": 26,
+    "redirect": 20,
+    "refuse": 20,
+    "close": 20
+  },
+  "source_kinds": {
+    "business_policy_migration": 86,
+    "public_original_reannotated": 20,
+    "assistant_authored": 54,
+    "public_loan_adaptation": 8,
+    "assistant_authored_state_pair": 12
+  },
+  "families": 93,
+  "unique_normalized_messages": 174,
+  "duplicate_canonical_inputs": 0,
+  "protected_exact_normalized_matches": 0,
+  "human_reviewed_current_version": 0,
+  "training_release": false,
+  "source_review": "assistant_draft_pending_current_version_review",
+  "cases_sha256": "c31f3944bbffbc406d811a3451f5260160846349d82877fbc70593660ca858d1",
+  "all_candidates_train_only": true,
+  "future_split_rule": "Source conversation/family and every original/adaptation remain in one partition; already trained sources cannot become independent final tests.",
+  "eligible_draft_candidates": 179,
+  "pending_discussion": 1,
+  "eligible_actions": {
+    "tool": 26,
+    "clarify": 23,
+    "answer": 23,
+    "human": 21,
+    "retrieve": 26,
+    "redirect": 20,
+    "refuse": 20,
+    "close": 20
+  }
+}

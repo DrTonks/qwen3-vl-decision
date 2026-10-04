@@ -1,0 +1,15 @@
+{
+  "reviewer": "assistant_self_review",
+  "human_review": false,
+  "previous_cases_sha256": "4a286b43dada321e7095c1f9622fb4632bcf2fc688e4228ccfeec2f759f3aa63",
+  "current_cases_sha256": "c31f3944bbffbc406d811a3451f5260160846349d82877fbc70593660ca858d1",
+  "pending": {
+    "FIN-P1-F13-A-01-base": "可能是在同时询问两个状态，而非缺少状态；旧澄清标签未必成立，暂不纳入可选训练候选。"
+  },
+  "near_match_review": "The sole lexical near-match is the pending two-status question. Excluded from eligible draft candidates for label ambiguity. No evaluation answers were used to create new training text. String checks do not establish semantic independence.",
+  "changes": [
+    "Exclude ambiguous two-status question from eligible draft counts",
+    "Add history to state-pair evidence paths"
+  ],
+  "training_started": false
+}

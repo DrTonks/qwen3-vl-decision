@@ -1,0 +1,30 @@
+{
+  "version": "loan-eight-actions-pilot-1",
+  "actions": [
+    "clarify",
+    "retrieve",
+    "tool",
+    "answer",
+    "human",
+    "redirect",
+    "refuse",
+    "close"
+  ],
+  "tools": [
+    "queryLoanProducts",
+    "queryMyApplications",
+    "queryApplicationDetail",
+    "queryMyCreditScore",
+    "explainApplicationStatus"
+  ],
+  "collections": [
+    "loan_service_docs",
+    "privacy_policy"
+  ],
+  "model_visible_field": "input",
+  "canonicalization": "sort JSON object keys and set-like tool/collection arrays",
+  "production_compatible": false,
+  "knowledge_profile": "planned synthetic capability; current backend has no retrieval",
+  "human_semantics": "request/recommend escalation; never imply a ticket exists",
+  "answer_when_no_kb": "truthful capability limitation; do not invent missing platform facts"
+}

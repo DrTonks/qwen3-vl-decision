@@ -1,0 +1,38 @@
+{
+  "rows": 180,
+  "actions": {
+    "tool": 26,
+    "clarify": 24,
+    "answer": 23,
+    "human": 21,
+    "retrieve": 26,
+    "redirect": 20,
+    "refuse": 20,
+    "close": 20
+  },
+  "eligible_draft_candidates": 179,
+  "pending_discussion": 1,
+  "eligible_actions": {
+    "tool": 26,
+    "clarify": 23,
+    "answer": 23,
+    "human": 21,
+    "retrieve": 26,
+    "redirect": 20,
+    "refuse": 20,
+    "close": 20
+  },
+  "source_kinds": {
+    "business_policy_migration": 86,
+    "public_original_reannotated": 20,
+    "assistant_authored": 54,
+    "public_loan_adaptation": 8,
+    "assistant_authored_state_pair": 12
+  },
+  "families": 93,
+  "unique_normalized_messages": 174,
+  "duplicate_canonical_inputs": 0,
+  "protected_exact_normalized_matches": 0,
+  "human_reviewed_current_version": 0,
+  "training_release": false
+}
