@@ -1,0 +1,17 @@
+{
+  "human_review": false,
+  "reviewers": {
+    "MASSIVE_160": "public_inventory, independent of author",
+    "CrossWOZ_180": "rewrite_massive, independent of author",
+    "retained_60": "rewrite_crosswoz, independent of selector"
+  },
+  "corrections": [
+    "454-2/2720-2 application_id",
+    "10274-2 error_context",
+    "391-2 clarify before product comparison",
+    "coffee/podcast rationale precision"
+  ],
+  "corrections_rechecked": true,
+  "cpu_tests_passed": 38,
+  "full_rewrite_complete": false
+}

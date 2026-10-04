@@ -1,0 +1,12 @@
+{
+  "previous_cases_sha256": "df79cb59f9ef859f5d4ac2b0b5533142adf0ce65f0873f18782f55b18befe12c",
+  "current_cases_sha256": "c2d8ef4fb9b958fad5fe8d695d0472496ac2eb89bea3a9a6b4521daf40a33f4f",
+  "review_type": "independent_agent_review_not_human",
+  "changes": [
+    "CrossWOZ 454-2 and 2720-2 missing application_id",
+    "CrossWOZ 10274-2 missing error_context",
+    "CrossWOZ 391-2 retrieve to clarify: product objects not specified",
+    "Retained coffee/podcast rationale broadened to match observed requests"
+  ],
+  "training_started": false
+}

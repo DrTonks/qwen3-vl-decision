@@ -1,0 +1,194 @@
+{
+  "protected_file_hashes": {
+    "data/massive_zh_test.jsonl": "aee730f80c0663936a58f4d5895d5aa8accba211bc558472ad64efadcc522e65",
+    "data/support-curriculum-v1/calibration-candidates.jsonl": "aee2f3cb4a1c60c6818c017338b703e6e256a3780b7d0e0b1c91bb3ac9218e5e",
+    "data/support-curriculum-v1/calibration-cases.jsonl": "7381e70f2e2a9a566f73f1bfa4fb2414b700c6ee5ad7fd17131e453924d12080",
+    "data/support-curriculum-v1/challenge-cards.jsonl": "e5395d96144dd35f39b9bbff9917b06423718e09afdf79d5624229db94121385",
+    "data/support-curriculum-v1/challenge-cases.jsonl": "9115860368b78e57e9f9978fe115b3f7c406950c9db459349b0ab1b36806b0ff",
+    "data/support-curriculum-v1/challenge-model-candidates.jsonl": "d81c333afd3e7c378597ede8339d6a8af3b48c9d72fa04297deeb3dd3fe773c8",
+    "data/support-curriculum-v1/development-candidates.jsonl": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+    "data/support-curriculum-v1/development-cases.jsonl": "af03d4405df40d620e3d7e68ed5c7139abbf6eef6b3f743d1c939376a945a97a",
+    "data/support-curriculum-v2/calibration-candidates.jsonl": "aee2f3cb4a1c60c6818c017338b703e6e256a3780b7d0e0b1c91bb3ac9218e5e",
+    "data/support-curriculum-v2/calibration-cases.jsonl": "7381e70f2e2a9a566f73f1bfa4fb2414b700c6ee5ad7fd17131e453924d12080",
+    "data/support-curriculum-v2/challenge-cases.jsonl": "9115860368b78e57e9f9978fe115b3f7c406950c9db459349b0ab1b36806b0ff",
+    "data/support-curriculum-v2/challenge-model-candidates.jsonl": "d81c333afd3e7c378597ede8339d6a8af3b48c9d72fa04297deeb3dd3fe773c8",
+    "data/support-curriculum-v2/development-candidates.jsonl": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+    "data/support-curriculum-v2/development-cases.jsonl": "af03d4405df40d620e3d7e68ed5c7139abbf6eef6b3f743d1c939376a945a97a",
+    "data/support-curriculum-v2-reviewed-01/calibration-candidates.jsonl": "aee2f3cb4a1c60c6818c017338b703e6e256a3780b7d0e0b1c91bb3ac9218e5e",
+    "data/support-curriculum-v2-reviewed-01/calibration-cases.jsonl": "7381e70f2e2a9a566f73f1bfa4fb2414b700c6ee5ad7fd17131e453924d12080",
+    "data/support-curriculum-v2-reviewed-01/challenge-cases.jsonl": "9115860368b78e57e9f9978fe115b3f7c406950c9db459349b0ab1b36806b0ff",
+    "data/support-curriculum-v2-reviewed-01/challenge-model-candidates.jsonl": "d81c333afd3e7c378597ede8339d6a8af3b48c9d72fa04297deeb3dd3fe773c8",
+    "data/support-curriculum-v2-reviewed-01/development-candidates.jsonl": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+    "data/support-curriculum-v2-reviewed-01/development-cases.jsonl": "af03d4405df40d620e3d7e68ed5c7139abbf6eef6b3f743d1c939376a945a97a",
+    "data/support-fresh-holdout-v1/cases.jsonl": "1df9d0d1c0a2d2f04cc4b22d3667fb315d11a63601a0c5279b06b57ddeffa3be",
+    "data/processed/support-v6/business-dev.jsonl": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+    "data/processed/support-v6/crosswoz-dev.jsonl": "6f7e2f48f3e9e27357e156abc203c53a99229fd8a289841c5702f7c18d069a0a",
+    "data/processed/support-v6/legacy-dev.jsonl": "246ba99eab0d0ccc638d08d978d87598230dc41c9a145e963c6e968a03625e10",
+    "data/processed/support-v6/massive-dev.jsonl": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+    "data/processed/support-v7/business-dev.jsonl": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+    "data/processed/support-v7/crosswoz-dev.jsonl": "6f7e2f48f3e9e27357e156abc203c53a99229fd8a289841c5702f7c18d069a0a",
+    "data/processed/support-v7/legacy-dev.jsonl": "246ba99eab0d0ccc638d08d978d87598230dc41c9a145e963c6e968a03625e10",
+    "data/processed/support-v7/massive-dev.jsonl": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+    "data/processed/support-v8/business-dev.jsonl": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+    "data/processed/support-v8/crosswoz-dev.jsonl": "6f7e2f48f3e9e27357e156abc203c53a99229fd8a289841c5702f7c18d069a0a",
+    "data/processed/support-v8/legacy-dev.jsonl": "246ba99eab0d0ccc638d08d978d87598230dc41c9a145e963c6e968a03625e10",
+    "data/processed/support-v8/massive-dev.jsonl": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+    "data/processed/v2/business-calibration.jsonl": "52a370d58aa5609d655276ee316ef466b9e4989f7dee0a97495baa9faaa04862",
+    "data/processed/v2/business-dev.jsonl": "dd71581d8aacf297e8dc1ca60270fdd2cdb7c4a930293c16fd89573de61face7",
+    "data/processed/v2/business-test.jsonl": "6e0e9eaa663c1cdb6cae9abee349eae85279b3fe905693cab7d8ab9d60fd3f8d",
+    "data/processed/v2/crosswoz-test.jsonl": "431918d072a75a39e4572e3b373dd286ed0259f085ac7f2e95bbf76fba1c359e",
+    "data/processed/v2/massive-calibration.jsonl": "59404c8f4337ee100347a18f0f0b43e29690b4b2f884607ac5c379e9ec8a6cd6",
+    "data/processed/v2/massive-dev.jsonl": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+    "data/processed/v2/massive-test.jsonl": "f6835bfc538e57675b47d0affc73a4535e314562e36082f4ed564bb96a60afbb",
+    "data/processed/v4/business-calibration.jsonl": "70548d58094784591ac6eea541cd3bc3553c381c9bbf5b9e85943ba1e0d4a11a",
+    "data/processed/v4/business-dev.jsonl": "fa5b46918e449e38ac3d88a1216a762ee17461a4edbbd25ba80b8b45dcd001fd",
+    "data/processed/v4/business-test.jsonl": "ed42f720dd24901f1603c8cba96096296e7b48339f2ff9649c6c6e4ba20d7260",
+    "data/processed/v4/massive-calibration.jsonl": "59404c8f4337ee100347a18f0f0b43e29690b4b2f884607ac5c379e9ec8a6cd6",
+    "data/processed/v4/massive-dev.jsonl": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+    "data/processed/v4/massive-test.jsonl": "f6835bfc538e57675b47d0affc73a4535e314562e36082f4ed564bb96a60afbb",
+    "data/processed/v5/business-calibration.jsonl": "f9f8fc66ec1c6d3c5cd1b06d51801d272b25ad243986626211a178a336a4b927",
+    "data/processed/v5/business-dev.jsonl": "246ba99eab0d0ccc638d08d978d87598230dc41c9a145e963c6e968a03625e10",
+    "data/processed/v5/business-test.jsonl": "1b0e3fd2f0de07d94e44f783e7d026c267b9071bd592eb05f5e1efa82dd33c9d",
+    "data/processed/v5/crosswoz-calibration.jsonl": "3e707473c3f689a4e831fe309acfe6d5dd31f595d6470f07c052500b50e43ce4",
+    "data/processed/v5/crosswoz-dev.jsonl": "6f7e2f48f3e9e27357e156abc203c53a99229fd8a289841c5702f7c18d069a0a",
+    "data/processed/v5/crosswoz-test.jsonl": "431918d072a75a39e4572e3b373dd286ed0259f085ac7f2e95bbf76fba1c359e",
+    "data/processed/v5/massive-calibration.jsonl": "59404c8f4337ee100347a18f0f0b43e29690b4b2f884607ac5c379e9ec8a6cd6",
+    "data/processed/v5/massive-dev.jsonl": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+    "data/processed/v5/massive-test.jsonl": "f6835bfc538e57675b47d0affc73a4535e314562e36082f4ed564bb96a60afbb",
+    "data/raw/massive-1.1-zh-CN.jsonl": "992bf0bef3d678f08c27e514739bc851163e8f40f530bfb4d5970a2c24408ace",
+    "data/raw/crosswoz-val.json.zip": "b2b717990f6f0a1c98daaf5dc465e61d42f7de69c0d31e88e674275b1f34c94c",
+    "data/raw/crosswoz-test.json.zip": "e57703894995211bba8638f130dc7df81e8992b71f3c05c10022ad23d6ca5310"
+  },
+  "source_hashes": {
+    "data/raw/massive-1.1-zh-CN.jsonl": "992bf0bef3d678f08c27e514739bc851163e8f40f530bfb4d5970a2c24408ace",
+    "data/raw/crosswoz-train.json.zip": "b81f6a0845011bb4593d21dd58e2d76af4dd5d52e300ecc68cb8dee17ccc3cf8",
+    "data/crosswoz-training-source.json": "a787d096e8f434b52c0e6000f7a859f3effb3cebd7b8555f9c3ef21da846e6c3",
+    "data/processed/v5/massive-train.jsonl": "3385d841339741936619be2426427541abbbb2a68840b4f4e53c9549f78a3cfb",
+    "data/processed/v5/crosswoz-train.jsonl": "3dcf83b76c26ee26a1489d50f22b2fca7b25f79fb182af1cc0e52c52e9ab3b9c",
+    "data/financial-actions-text-v2/cases.jsonl": "e3354a4d2261acd2d2a83c50d111743bc731e87fd7b93cbfe53f0be5eb0c1203"
+  },
+  "original_and_rewrite_exact_message_checks": true,
+  "semantic_independence_proven": false,
+  "quarantined": [
+    {
+      "id": "FIN-R3-M-166",
+      "parent_id": "massive-train-166",
+      "reason": "original_source_exact_protected_message"
+    },
+    {
+      "id": "FIN-R3-M-213",
+      "parent_id": "massive-train-213",
+      "reason": "original_source_exact_protected_message"
+    },
+    {
+      "id": "FIN-R3-M-57",
+      "parent_id": "massive-train-57",
+      "reason": "original_source_exact_protected_message"
+    },
+    {
+      "id": "FIN-R3-M-202",
+      "parent_id": "massive-train-202",
+      "reason": "original_source_exact_protected_message"
+    },
+    {
+      "id": "FIN-R3-M-117",
+      "parent_id": "massive-train-117",
+      "reason": "original_source_exact_protected_message"
+    },
+    {
+      "id": "FIN-R3-M-121",
+      "parent_id": "massive-train-121",
+      "reason": "original_source_exact_protected_message"
+    },
+    {
+      "id": "FIN-R3-M-164",
+      "parent_id": "massive-train-164",
+      "reason": "original_source_exact_protected_message"
+    },
+    {
+      "id": "FIN-R3-M-165",
+      "parent_id": "massive-train-165",
+      "reason": "original_source_exact_protected_message"
+    },
+    {
+      "id": "FIN-R3-M-340",
+      "parent_id": "massive-train-340",
+      "reason": "original_source_exact_protected_message"
+    },
+    {
+      "id": "FIN-R3-M-341",
+      "parent_id": "massive-train-341",
+      "reason": "original_source_exact_protected_message"
+    },
+    {
+      "id": "FIN-R3-M-187",
+      "parent_id": "massive-train-187",
+      "reason": "original_source_exact_protected_message"
+    },
+    {
+      "id": "FIN-R3-M-6511",
+      "parent_id": "massive-train-6511",
+      "reason": "original_source_exact_protected_message"
+    },
+    {
+      "id": "FIN-R3-C-8283-4",
+      "parent_id": "crosswoz-train-8283-4",
+      "reason": "original_source_exact_protected_message"
+    },
+    {
+      "id": "FIN-R3-C-5379-4",
+      "parent_id": "crosswoz-train-5379-4",
+      "reason": "original_source_exact_protected_message"
+    },
+    {
+      "id": "FIN-R3-C-7262-4",
+      "parent_id": "crosswoz-train-7262-4",
+      "reason": "original_source_exact_protected_message"
+    },
+    {
+      "id": "FIN-R3-C-5592-4",
+      "parent_id": "crosswoz-train-5592-4",
+      "reason": "original_source_exact_protected_message"
+    },
+    {
+      "id": "FIN-R3-C-6766-2",
+      "parent_id": "crosswoz-train-6766-2",
+      "reason": "original_source_exact_protected_message"
+    },
+    {
+      "id": "FIN-R3-C-6766-4",
+      "parent_id": "crosswoz-train-6766-4",
+      "reason": "original_source_exact_protected_message"
+    },
+    {
+      "id": "FIN-R3-C-12021-2",
+      "parent_id": "crosswoz-train-12021-2",
+      "reason": "original_source_exact_protected_message"
+    },
+    {
+      "id": "FIN-R3-C-12021-4",
+      "parent_id": "crosswoz-train-12021-4",
+      "reason": "original_source_exact_protected_message"
+    },
+    {
+      "id": "FIN-R3-C-10266-4",
+      "parent_id": "crosswoz-train-10266-4",
+      "reason": "original_source_exact_protected_message"
+    },
+    {
+      "id": "FIN-R3-C-12318-4",
+      "parent_id": "crosswoz-train-12318-4",
+      "reason": "original_source_exact_protected_message"
+    },
+    {
+      "id": "FIN-R3-C-12303-4",
+      "parent_id": "crosswoz-train-12303-4",
+      "reason": "original_source_exact_protected_message"
+    },
+    {
+      "id": "FIN-R3-C-7521-4",
+      "parent_id": "crosswoz-train-7521-4",
+      "reason": "original_source_exact_protected_message"
+    }
+  ]
+}

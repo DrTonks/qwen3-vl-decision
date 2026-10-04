@@ -1,0 +1,61 @@
+{
+  "version": "financial-public-rewrite-v1",
+  "rows": 376,
+  "actions": {
+    "retrieve": 129,
+    "tool": 65,
+    "human": 23,
+    "clarify": 29,
+    "answer": 39,
+    "redirect": 65,
+    "close": 5,
+    "refuse": 21
+  },
+  "eligible_draft_candidates": 376,
+  "pending_discussion": 0,
+  "eligible_actions": {
+    "retrieve": 129,
+    "tool": 65,
+    "human": 23,
+    "clarify": 29,
+    "answer": 39,
+    "redirect": 65,
+    "close": 5,
+    "refuse": 21
+  },
+  "source_kinds": {
+    "public_financial_rewrite": 316,
+    "public_retained_scope_example": 60
+  },
+  "families": 243,
+  "unique_normalized_messages": 376,
+  "duplicate_canonical_inputs": 0,
+  "protected_exact_normalized_matches": 0,
+  "human_reviewed_current_version": 0,
+  "training_release": false,
+  "with_history": 82,
+  "by_action_history": {
+    "clarify": 6,
+    "retrieve": 30,
+    "tool": 7,
+    "answer": 6,
+    "refuse": 9,
+    "redirect": 24
+  },
+  "provenance_note": "Family count is a provenance grouping count, not independent real-user scenario count.",
+  "selected_rewrites": 340,
+  "accepted_rewrites": 316,
+  "accepted_retained": 60,
+  "quarantined": 24,
+  "full_inventory_status": {
+    "already_integrated_v2": 200,
+    "pending_financial_adaptation_review": 46308,
+    "protected_source_do_not_rewrite": 6952,
+    "financial_rewrite_candidate": 316,
+    "quarantined": 24,
+    "retained_scope_candidate": 60
+  },
+  "whole_rewrite_goal_complete": false,
+  "cases_sha256": "c2d8ef4fb9b958fad5fe8d695d0472496ac2eb89bea3a9a6b4521daf40a33f4f",
+  "ledger_sha256": "02e3fd03dd4aab921c4b37ee80f77c9ef5cde5f1a55bfe220239dd18ed5a40d9"
+}

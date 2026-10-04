@@ -1,0 +1,48 @@
+{
+  "raw_train_rows": 53860,
+  "remaining_rows": 53660,
+  "integrated_unique_parents": 200,
+  "already_processed_rows": 13725,
+  "by_source": {
+    "massive": {
+      "rows": 11514,
+      "processed": 10725,
+      "integrated": 200,
+      "remaining": 11314,
+      "groups": 11022,
+      "history_length_counts": {
+        "0": 11514
+      }
+    },
+    "crosswoz": {
+      "rows": 42346,
+      "processed": 3000,
+      "integrated": 0,
+      "remaining": 42346,
+      "groups": 5012,
+      "history_length_counts": {
+        "0": 5012,
+        "2": 5012,
+        "4": 32322
+      }
+    }
+  },
+  "remaining_triage_counts": {
+    "out_of_scope_rewrite_pool": 46384,
+    "ambiguous_or_general_review": 1969,
+    "social_close_or_ambiguous_review": 4996,
+    "finance_other_review": 309,
+    "loan_related_review": 1,
+    "suspected_improper_review": 1
+  },
+  "source_sha256": {
+    "data/raw/massive-1.1-zh-CN.jsonl": "992bf0bef3d678f08c27e514739bc851163e8f40f530bfb4d5970a2c24408ace",
+    "data/raw/crosswoz-train.json.zip": "b81f6a0845011bb4593d21dd58e2d76af4dd5d52e300ecc68cb8dee17ccc3cf8",
+    "data/crosswoz-training-source.json": "a787d096e8f434b52c0e6000f7a859f3effb3cebd7b8555f9c3ef21da846e6c3",
+    "data/processed/v5/massive-train.jsonl": "3385d841339741936619be2426427541abbbb2a68840b4f4e53c9549f78a3cfb",
+    "data/processed/v5/crosswoz-train.jsonl": "3dcf83b76c26ee26a1489d50f22b2fca7b25f79fb182af1cc0e52c52e9ab3b9c",
+    "data/financial-actions-text-v2/cases.jsonl": "e3354a4d2261acd2d2a83c50d111743bc731e87fd7b93cbfe53f0be5eb0c1203"
+  },
+  "crosswoz_license_evidence": "https://raw.githubusercontent.com/thu-coai/CrossWOZ/df82c9fdff91b9b130f2d6b89110d3870ba6260e/LICENSE",
+  "triage_is_gold": false
+}
