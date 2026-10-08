@@ -1,0 +1,50 @@
+{
+  "decision": "pass",
+  "reviewer": "release_review",
+  "human_review": false,
+  "unresolved_findings": [],
+  "actual_read_files": [
+    "src/qwenlab/financial_ready.py",
+    "src/qwenlab/financial_actions_prompt.py",
+    "src/qwenlab/financial_actions_metrics.py",
+    "configs/financial-eight-actions-pilot-v2.json",
+    "tests/test_financial_ready.py",
+    "docs/36-金融客服八动作数据冻结与短试训协议.md"
+  ],
+  "file_sha256": {
+    "src/qwenlab/financial_ready.py": "450683f8f1ccc7a88e7df447b2ab61f496b88181055656532ac22ac9b2263085",
+    "src/qwenlab/financial_actions_prompt.py": "817bd6578c99ee0dce3d5e1d784830ce1d70cd85a9ff54f6cdf8ec34515f2b36",
+    "src/qwenlab/financial_actions_metrics.py": "3d4f63967b1748116ea820d2dfdd0ab368926c16f8ee5863d4fbcf9903022a73",
+    "configs/financial-eight-actions-pilot-v2.json": "1c72a03bab3458d3ad3d81d9847d96e2fbcf86ec122387b86e411a6dc5036c78",
+    "tests/test_financial_ready.py": "355df6c48d131551a377224a8bdd2e782d458015d6d79e084d6b348ea90d9011",
+    "docs/36-金融客服八动作数据冻结与短试训协议.md": "cb4e936168effcfe0731a3965776320397c15074445df62856cf165de475428a"
+  },
+  "verification": {
+    "actual_tests_command": "python -m unittest discover -s tests -p test_financial_ready.py -v",
+    "actual_tests_passed": 18,
+    "actual_assemble_review_coverage_overlap_pass": true,
+    "train_total": 11899,
+    "evaluation_rows": {
+      "development": 384,
+      "calibration": 256,
+      "final": 512
+    },
+    "near_pairs_after_revision": 0
+  },
+  "confirmed": [
+    "Complete per-ID input/annotation/provenance/family/partition digest and exact source ID coverage bind original independent review; published packet SHA also bound.",
+    "Train adapter enumerates only immutable V1 train shards and explicit new train additions; evaluation uses standard arrays and real split labels, final requires explicit access.",
+    "Group reconstruction covers source family, masked text/history and evaluation macro scenes, and exact old-source intersections are checked; old protection and V1 not modified.",
+    "Portable validate checks exact inventory, per-file hashes, per-ID reviewed semantics, grouping, quota and review evidence; source verify reconstructs original candidates. This is self-consistency, not external signature authenticity.",
+    "Prompt reads visible input only, status dictionary not leaked, tools described within real capability bounds. A-H plus conditional five-tool second prompt declared, no gold action-conditioned inference or learned parameter claim.",
+    "Metrics require exact split prediction coverage; tool joint correctness includes action failures, grounding separately attributed. Development gate requires development, same data/prompt/protocol, all actions and finite probability metrics.",
+    "Docs36 explicitly state synthetic non-human gold, eight macro clusters/split, differing partition difficulty, calibration no history, no new model effect/speed/Jev, no executable trainer yet."
+  ],
+  "limits": [
+    "Candidate lexical retrieval is finite and current-message-only; zero pairs is not proof of no semantic overlap.",
+    "Reported run hashes, argument source and timings need honest future executor capture; metrics alone cannot prove actual inference execution.",
+    "Final access flag enforces API discipline but is not a security system against deliberate direct file reads.",
+    "No external authentication or coordinated evidence re-signing protection is claimed.",
+    "No GPU/model/API/Git invoked; approval is only to freeze data/protocol, not start training or deploy."
+  ]
+}

@@ -1,0 +1,377 @@
+{
+  "version": "financial-sampling-independent-code-review-v1",
+  "reviewer": "independent-agent-supplement_labels_review",
+  "independent": true,
+  "human_reviewed": false,
+  "status": "pass_with_scope_limits",
+  "reviewed_at_utc": "2026-10-04T01:33:40.534497+00:00",
+  "source_sha256": {
+    "src/qwenlab/financial_sampling_data.py": "d47df736854fc35204c38edb09958019e187b656e3dbfbf1800e17f5e9012c08",
+    "src/qwenlab/financial_sampling_plan.py": "b599e6f3cb67f829c7eae18ebb45dd47f2406cea3277955defdf6de526eabb98",
+    "tests/test_financial_sampling_data.py": "37590618505d61c20bc6d1b5a471ffad2f223ae44453e3d80b3f6dc0aecba0e2",
+    "tests/test_financial_sampling_plan.py": "acf8e8528a4f8451ab70fd233cb58518bb453a91c458e8b842258be4cd9d411b",
+    "src/qwenlab/financial_sampling_freeze.py": "57a5ea7711d0538a3f57f1d87c40fef2c8f4578405e58c65160d5c3e9ce85014",
+    "tests/test_financial_sampling_freeze.py": "ebe8c5f363d0f1e122cca36daca351a7d4d88b2fdae458966b4abebfb5a9031c",
+    "configs/financial-sampling-study-v1.json": "74c03b1f48b603fb9c916e993a4b4e80d6e38f9307fae591d31086537c23fe36"
+  },
+  "evaluation_examples_read": false,
+  "predictions_read": false,
+  "blind_screen_report_read": false,
+  "training_text_displayed": false,
+  "training_metadata_statistics_only": true,
+  "compute_executed_by_reviewer": false,
+  "training_started": false,
+  "model_weights_loaded": false,
+  "model_api_requests": 0,
+  "open_findings": [],
+  "resolved_findings": [
+    {
+      "id": "POOL01",
+      "problem": "旧训练数据仅自洽manifest验证，缺少预定冻结内容SHA",
+      "resolution": "LEGACY_DIGEST固定11756旧train字节，读取前验证；合成测试证明漂移拒绝且旧loader不执行。"
+    },
+    {
+      "id": "POOL02",
+      "problem": "依赖闭包缺实际执行的pilot与common",
+      "resolution": "sources显式加入financial_supplement_pilot.py/common.py，与old/expansion/screener及政策路径共同绑定。"
+    },
+    {
+      "id": "PLAN01",
+      "problem": "split缺失默认train，可接受角色不明数据",
+      "resolution": "row.get(split)必须显式train；初始独立负测复现缺split20行被接受，修复后合成测试覆盖拒绝。"
+    },
+    {
+      "id": "PLAN02",
+      "problem": "CLI发布本地绝对路径，且未复查输入读取后漂移",
+      "resolution": "限制input/output在repo内；保存repo相对路径；生成后重新验证输入字节SHA，exclusive-create拒绝覆写。"
+    }
+  ],
+  "tests": {
+    "test_financial_sampling_data": {
+      "passed": 7,
+      "failed": 0,
+      "fixtures": "synthetic"
+    },
+    "test_financial_sampling_plan": {
+      "passed": 17,
+      "failed": 0,
+      "fixtures": "synthetic"
+    },
+    "independent_partition_probes": [
+      "conflicting full input quarantines both groups and all siblings",
+      "unknown heldout group rejected",
+      "source objects unchanged"
+    ],
+    "pre_filter_metadata_capacity_probe": {
+      "rows": 13242,
+      "groups": 6059,
+      "largest_group_rows": 23,
+      "groups_over_16_rows": 45,
+      "cross_layer_groups": 1224,
+      "sum_group_capacity": 42116,
+      "exploratory_seed": 20261003,
+      "not_final_protocol_seed": true,
+      "uniform": {
+        "exposures": 3200,
+        "row_max": 1,
+        "group_max": 11,
+        "seen_groups": 2233
+      },
+      "stratified": {
+        "exposures": 3200,
+        "row_max": 4,
+        "group_max": 7,
+        "seen_groups": 1623,
+        "layer_counts": {
+          "current-node": 1440,
+          "current-component": 480,
+          "planned": 800,
+          "preauth": 480
+        }
+      },
+      "note": "仅提取训练ID/group/cohort/input_layer元数据，使用固定dummy action（不影响抽样路径）验证容量；未显示正文，未读取评测。最终seed20261004以及盲筛后池仍需正式schedule验证。"
+    },
+    "test_financial_sampling_freeze": {
+      "passed": 16,
+      "failed": 0,
+      "fixtures": "synthetic; independently read and executed"
+    }
+  },
+  "verified_behaviors": [
+    "只能从固定旧train和固定新accepted合并，候选副本split=train但eligibility仍false，原数据不写回。",
+    "check_row验证政策、认证/工具白名单、工具参数形状与已知state目标一致、检索集合及动作字段约束。",
+    "heldout-only盲筛禁用training_pool自匹配；仍验证索引数据完整性，未把heldout内容加入训练。",
+    "相同完整input且动作/工具/参数/知识集合/缺槽不同，保守隔离所有相关故事组。",
+    "build拒绝已有输出目录；manifest依赖与输出集合精确检查，compute前后source drift拒绝。",
+    "stratified跨层共享组计数、行cap4/groupcap16、配额20块内打散、分层组与组内行轮转；无容量时失败不改配额。",
+    "uniform真正整池洗牌，抽到超cap直接失败，不静默拒绝采样；CLI产物不可覆盖。",
+    "200前缀来源于同一400步序列；两臂数据内容hash按ID排序绑定，源码另由本报告冻结。",
+    "freeze manifest最后提交；输出清单、依赖闭包、tokenizer本地文件及Python/transformers/tokenizers/jinja2/huggingface-hub运行版本固定。",
+    "freeze默认verify实际重放计划/逐行ledger/汇总；--tokenize另作全池真实编码重放。合成token-length重签伪造只有真实重编码能拒绝，该边界已明确记录。",
+    "全池action及真实tool编码，无tool行为None；每行SHA、长度整数范围、不截断2048、原microbatch2内分开padding统计均有负测。"
+  ],
+  "scope_limits": [
+    "未由本审阅者运行compute或读取真实heldout报告；根节点已完成pool verify --replay，证据明确记录。",
+    "本审阅者独立重算正式seed20261004两臂顺序、全6400ledger位置/行SHA、全部hash闭包及统计；真实分词由根节点verify --tokenize完成并绑定证据。默认verify不能替代真实重编码。",
+    "保留同label完整input重复属于当前声明设计；不同ID/故事仍可能语义相关，组cap不是所有近义样本去重证明。",
+    "未编写或启动GPU执行器；初始adapter相同、未来训练loss与microbatch/padding一致、优化器RNG恢复及GPU单占需要后续执行器独立验证。"
+  ],
+  "root_reported_verification": {
+    "pool_blind_replay": "separate CLI financial_sampling_data verify --replay completed with exit0 before preparation; 13242 rows",
+    "schedule_actual_tokenizer_replay": "verified; tokenizer_replayed=true",
+    "evidence_file": "docs/evidence/financial-sampling-cpu-preflight.json",
+    "evidence_sha256": "a2256fc2da13d676fc0e1e1e36874b33bb1b7b2114eb2c6313dedf4c7bdd6395"
+  },
+  "frozen": true,
+  "final_cpu_freeze": {
+    "seed": 20261004,
+    "pool_rows": 13242,
+    "pool_groups": 6059,
+    "pool_rows_quarantined": 0,
+    "pool_blind_replay": "root evidence reports successful actual verify --replay; reviewer did not read heldout content or blind report",
+    "actual_tokenizer_replay": "root preflight status verified/tokenizer_replayed=true, evidence manifest/config hashes independently matched",
+    "independent_metadata_validation": [
+      "all manifest source and output SHA matched",
+      "both3200 sequence orders independently regenerated from permitted training metadata",
+      "400x8 step structure and counts match, 200 prefix from same sequence",
+      "all6400 exposure ledger records independently checked for position/step/microbatch/occurrence/group/layer/full-row SHA",
+      "full pool token13242 action/2518 true-tool record inventory validated; summary recomputed from saved lengths",
+      "rowcap4 and shared cross-layer groupcap16 met; uniform no repeats"
+    ],
+    "pool_token_rows": {
+      "action": 13242,
+      "tool": 2518
+    },
+    "pool_max_input_tokens": {
+      "action": 634,
+      "tool": 682
+    },
+    "arms": {
+      "uniform": {
+        "prefix_200": {
+          "steps": 200,
+          "original_row_exposures": 1600,
+          "true_tool_exposures": 308,
+          "supervised_tasks": 1908,
+          "supervised_weight": 1831.0,
+          "unique_rows": 1600,
+          "unique_groups": 1279,
+          "repeated_row_exposures": 0,
+          "rows_seen_more_than_once": 0,
+          "max_row_exposure": 1,
+          "max_group_exposure": 8,
+          "layer_counts": {
+            "current-component": 122,
+            "current-node": 107,
+            "planned": 822,
+            "preauth": 549
+          },
+          "action_counts": {
+            "answer": 286,
+            "clarify": 205,
+            "close": 79,
+            "human": 204,
+            "redirect": 99,
+            "refuse": 137,
+            "retrieve": 282,
+            "tool": 308
+          },
+          "tool_counts": {
+            "explainApplicationStatus": 50,
+            "queryApplicationDetail": 65,
+            "queryLoanProducts": 114,
+            "queryMyApplications": 45,
+            "queryMyCreditScore": 34
+          },
+          "action_microbatches": 800,
+          "nonempty_tool_microbatches": 277,
+          "raw_input_tokens": {
+            "action": 824675,
+            "tool": 175521,
+            "total": 1000196
+          },
+          "padded_input_tokens": {
+            "action": 846842,
+            "tool": 176741,
+            "total": 1023583
+          },
+          "max_input_tokens": {
+            "action": 609,
+            "tool": 653
+          }
+        },
+        "full_400": {
+          "steps": 400,
+          "original_row_exposures": 3200,
+          "true_tool_exposures": 618,
+          "supervised_tasks": 3818,
+          "supervised_weight": 3663.5,
+          "unique_rows": 3200,
+          "unique_groups": 2225,
+          "repeated_row_exposures": 0,
+          "rows_seen_more_than_once": 0,
+          "max_row_exposure": 1,
+          "max_group_exposure": 10,
+          "layer_counts": {
+            "current-component": 227,
+            "current-node": 218,
+            "planned": 1654,
+            "preauth": 1101
+          },
+          "action_counts": {
+            "answer": 562,
+            "clarify": 407,
+            "close": 169,
+            "human": 391,
+            "redirect": 175,
+            "refuse": 259,
+            "retrieve": 619,
+            "tool": 618
+          },
+          "tool_counts": {
+            "explainApplicationStatus": 86,
+            "queryApplicationDetail": 144,
+            "queryLoanProducts": 223,
+            "queryMyApplications": 106,
+            "queryMyCreditScore": 59
+          },
+          "action_microbatches": 1600,
+          "nonempty_tool_microbatches": 561,
+          "raw_input_tokens": {
+            "action": 1650070,
+            "tool": 351494,
+            "total": 2001564
+          },
+          "padded_input_tokens": {
+            "action": 1695624,
+            "tool": 353492,
+            "total": 2049116
+          },
+          "max_input_tokens": {
+            "action": 609,
+            "tool": 653
+          }
+        }
+      },
+      "stratified": {
+        "prefix_200": {
+          "steps": 200,
+          "original_row_exposures": 1600,
+          "true_tool_exposures": 360,
+          "supervised_tasks": 1960,
+          "supervised_weight": 1870.0,
+          "unique_rows": 1581,
+          "unique_groups": 990,
+          "repeated_row_exposures": 19,
+          "rows_seen_more_than_once": 18,
+          "max_row_exposure": 3,
+          "max_group_exposure": 4,
+          "layer_counts": {
+            "current-component": 240,
+            "current-node": 720,
+            "planned": 400,
+            "preauth": 240
+          },
+          "action_counts": {
+            "answer": 334,
+            "clarify": 263,
+            "close": 53,
+            "human": 295,
+            "redirect": 53,
+            "refuse": 85,
+            "retrieve": 157,
+            "tool": 360
+          },
+          "tool_counts": {
+            "explainApplicationStatus": 36,
+            "queryApplicationDetail": 146,
+            "queryLoanProducts": 74,
+            "queryMyApplications": 54,
+            "queryMyCreditScore": 50
+          },
+          "action_microbatches": 800,
+          "nonempty_tool_microbatches": 316,
+          "raw_input_tokens": {
+            "action": 807979,
+            "tool": 199986,
+            "total": 1007965
+          },
+          "padded_input_tokens": {
+            "action": 821088,
+            "tool": 200733,
+            "total": 1021821
+          },
+          "max_input_tokens": {
+            "action": 606,
+            "tool": 642
+          }
+        },
+        "full_400": {
+          "steps": 400,
+          "original_row_exposures": 3200,
+          "true_tool_exposures": 753,
+          "supervised_tasks": 3953,
+          "supervised_weight": 3764.75,
+          "unique_rows": 2498,
+          "unique_groups": 1630,
+          "repeated_row_exposures": 702,
+          "rows_seen_more_than_once": 663,
+          "max_row_exposure": 4,
+          "max_group_exposure": 7,
+          "layer_counts": {
+            "current-component": 480,
+            "current-node": 1440,
+            "planned": 800,
+            "preauth": 480
+          },
+          "action_counts": {
+            "answer": 666,
+            "clarify": 493,
+            "close": 106,
+            "human": 587,
+            "redirect": 105,
+            "refuse": 165,
+            "retrieve": 325,
+            "tool": 753
+          },
+          "tool_counts": {
+            "explainApplicationStatus": 72,
+            "queryApplicationDetail": 306,
+            "queryLoanProducts": 161,
+            "queryMyApplications": 117,
+            "queryMyCreditScore": 97
+          },
+          "action_microbatches": 1600,
+          "nonempty_tool_microbatches": 663,
+          "raw_input_tokens": {
+            "action": 1616925,
+            "tool": 417699,
+            "total": 2034624
+          },
+          "padded_input_tokens": {
+            "action": 1644396,
+            "tool": 419191,
+            "total": 2063587
+          },
+          "max_input_tokens": {
+            "action": 606,
+            "tool": 651
+          }
+        }
+      }
+    },
+    "artifact_sha256": {
+      "configs/financial-sampling-study-v1.json": "74c03b1f48b603fb9c916e993a4b4e80d6e38f9307fae591d31086537c23fe36",
+      "data/financial-sampling-study-v1/pool-v1/manifest.json": "56bee2bdaa144351ade5f120a65899093369b576fa9934a74ebf40761cde004d",
+      "data/financial-sampling-study-v1/pool-v1/train.json": "8b524ae86533d7b55e1add23e4b0b44591c68b615ecf767f34ec4a0d5a166f72",
+      "data/financial-sampling-study-v1/pool-v1/summary.json": "9aa5c07e8099aace204b0b3dc27b62187243aad7bc0cba39b1ade29d8c168693",
+      "data/financial-sampling-study-v1/schedule-v1/manifest.json": "8ed29d2bcd57a72cedb19bf0a09d6ebc315d5681e0bcc0a704b3a4fb62f973c4",
+      "docs/evidence/financial-sampling-cpu-preflight.json": "a2256fc2da13d676fc0e1e1e36874b33bb1b7b2114eb2c6313dedf4c7bdd6395",
+      "data/financial-sampling-study-v1/schedule-v1/exposure-ledger.json": "ca2b2424adfadd12216ec037c521c096cc14ffef8c3c7b959854beec6425b582",
+      "data/financial-sampling-study-v1/schedule-v1/stratified-plan.json": "58d86022245a217a859a4260a00a82fd421732c4d595523dbcaa45b2848c2518",
+      "data/financial-sampling-study-v1/schedule-v1/summary.json": "5cc7e3b43edc04f81d55b1c977ec46b9c7c444d4bb9b632c23614d8558577f46",
+      "data/financial-sampling-study-v1/schedule-v1/token-lengths.json": "61a8987a646472d0554615a48c1b6a314817c6b08f929e607dadfffac9d4dc77",
+      "data/financial-sampling-study-v1/schedule-v1/uniform-plan.json": "704bd5928599f292fafe6b73bb1e155cae1f5ed4df95b56b6824f0bcb9a6ecc7"
+    }
+  }
+}

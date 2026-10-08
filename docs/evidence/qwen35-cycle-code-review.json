@@ -1,0 +1,65 @@
+{
+  "reviewer": "independent-final-code-review",
+  "reviewed_at_utc": "2026-10-02T02:27:50.7068129Z",
+  "scope": [
+    "src/qwenlab/qwen35_cycle.py",
+    "src/qwenlab/qwen35_model.py",
+    "configs/financial-qwen35-v1.json",
+    "scripts/start-qwen35.ps1",
+    "scripts/pause-qwen35.ps1",
+    "scripts/resume-qwen35.ps1",
+    "tests/test_qwen35_cycle.py"
+  ],
+  "status": "final_review_pass_no_blocking_findings",
+  "findings": [],
+  "verified": [
+    "11899 rows x 2 independently shuffled complete epochs = 23798 positions / 2976 optimizer steps",
+    "Epoch tail contains 3 rows; micro batches of 2 and 1 contribute 2/3 and 1/3 of batch mean loss",
+    "Checkpoint records optimizer and RNG; resume offset follows saved step, not latest uncheckpointed log",
+    "Development selection uses bound development predictions; calibration only follows passing selection; final only follows frozen calibration",
+    "Qwen3.5 uses dedicated experiment namespace and fresh adapter, frozen BF16 base, language LoRA-only training",
+    "First-run preflight reuses frozen implementation with all required pilot fields; no optimizer update and RNG restored",
+    "Committed train log contiguous-step validation reviewed",
+    "NumPy seed, package versions and base/candidate dtype metadata reviewed",
+    "Real CPU serialization probe validated checkpoint inventory and model ID; resumed next AdamW update is bitwise equal to uninterrupted path"
+  ],
+  "tests": [
+    {
+      "name": "CPU epoch coverage and config arithmetic",
+      "passed": true,
+      "gpu": false,
+      "api": false
+    },
+    {
+      "name": "tests.test_qwen35_cycle",
+      "passed": true,
+      "count": 6,
+      "gpu": false,
+      "api": false,
+      "environment_note": "Initial sandbox Temp ACL errors; rerun with local permissions and D-disk TEMP passed"
+    },
+    {
+      "name": "Actual checkpoint save/load + AdamW/Python/NumPy/Torch RNG continuation + pause + checksum rejection",
+      "passed": true,
+      "gpu": false,
+      "api": false,
+      "report": ".local/qwen35/review-checkpoint-probe.json",
+      "probe": ".local/qwen35/review_checkpoint_probe.py"
+    }
+  ],
+  "limitations": [
+    "Did not load actual model, run GPU training or read final questions",
+    "CPU exact continuation does not establish CUDA kernel determinism",
+    "Binding audit covers supported worker flow, not deliberate coordinated rewriting of artifact hashes"
+  ],
+  "protected_files_modified": false,
+  "evaluated_files_sha256": {
+    "src/qwenlab/qwen35_model.py": "c11d5d7cead90cb2196f4fe3c716c585c4a61a914a18917c67697054cb82e54f",
+    "scripts/start-qwen35.ps1": "a3097cacb6088ef8430690d82f75eac6a4fdeb586d927ee71277190949afc6de",
+    "tests/test_qwen35_cycle.py": "855ce92a8691a871e1f130e6491379e7f77914647c38aca47fad5f77c3bb71da",
+    "scripts/resume-qwen35.ps1": "92b5e0b9dbe453059165d00e267367c4923f0e1e6752600c9fe13bb09dc61840",
+    "scripts/pause-qwen35.ps1": "38dfdf24723c28b986cdc2111bc299dd9eb806496a99a9c0ce5f40bd87a532b1",
+    "src/qwenlab/qwen35_cycle.py": "6a6f64537c933ecc8af1d881f876e6a329a65ec6d1b21668c025082623209d41",
+    "configs/financial-qwen35-v1.json": "49a0e2a9df8002e8b3c967d266f9b123a08fcb9b4ae7031b875ab3e9ab77ab2c"
+  }
+}

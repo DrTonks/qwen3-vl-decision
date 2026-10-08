@@ -1,0 +1,35 @@
+{
+  "selected": null,
+  "gates": {
+    "step-100": {
+      "passed": false,
+      "failures": [
+        "per_action_recall",
+        "human_recall",
+        "extra_false_refusals",
+        "unavailable_knowledge_retrieval",
+        "action_tool_joint_accuracy",
+        "status_tool_accuracy"
+      ],
+      "usage": "development_only_not_final_selection"
+    },
+    "step-200": {
+      "passed": false,
+      "failures": [
+        "per_action_recall",
+        "human_recall",
+        "extra_false_refusals",
+        "unavailable_knowledge_retrieval",
+        "action_tool_joint_accuracy",
+        "status_tool_accuracy"
+      ],
+      "usage": "development_only_not_final_selection"
+    }
+  },
+  "passed": false,
+  "usage": "development_candidate_only",
+  "default_provider_changed": false,
+  "calibration_evaluated": false,
+  "final_evaluated": false,
+  "protocol_sha256": "efef23777db1f35b5d54af67fa0e58861d3f201eabc3687cbd179f8be5701049"
+}

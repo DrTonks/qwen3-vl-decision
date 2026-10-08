@@ -1,0 +1,626 @@
+{
+  "version": "financial-preauth-audit-v1",
+  "status": "verified",
+  "training_eligible": false,
+  "protocol_sha256": "b0e942a2838367841ce411b471713a0f80a4e2712256a48f131cbcd8a672ef6f",
+  "audit_script_sha256": "834ce3a0525ba7a36282402d65b4dd933b9258b5723d4fe0d9608e6586e0d2e3",
+  "audit_helper_sha256": "1f8e3eadbfcb08d8801a1dafe007cb9a770cdfca7cf29923af2c9d97cd75cf37",
+  "artifact_sha256": {
+    "results/financial-preauth-v1/development/base/binding.json": "b08f1ab35edd15650804b2026297a07af583120800260f1722210c74b820a734",
+    "results/financial-preauth-v1/development/base/metrics.json": "7ae92b90a5165dc0cabe9f456ebf2dca2f4b041e17319325b3c9c5e6e86712d1",
+    "results/financial-preauth-v1/development/base/predictions.jsonl": "6b812d25191bc831676bf52c6ec7ebdf66576e63d36fcc2d5fb018c2f467a710",
+    "results/financial-preauth-v1/development/base/timing.json": "5866a7875144947d6bffc7e344520510f33d737d61f83064ba3322bc40bd7f77",
+    "results/financial-preauth-v1/development/preauth-step-200/binding.json": "62cbc2946083476e481182f21de0e6f8b48afd724a89e3f5587d7496e7b68743",
+    "results/financial-preauth-v1/development/preauth-step-200/metrics.json": "4c556c63a6be15a96f7e3310798e4a4647d400a7f636f672e570d5644ff07b21",
+    "results/financial-preauth-v1/development/preauth-step-200/predictions.jsonl": "a9e71d8680f9030e435907f7b6fe06ce27892cfc20f7e9e936b1f88640744daa",
+    "results/financial-preauth-v1/development/preauth-step-200/timing.json": "e8dac33caa6a57d5aecdb52bcda0a6c8e3de7c3b3f4d81cf35d2f4b5103f141b",
+    "results/financial-preauth-v1/development/preauth-step-400/binding.json": "2e0b46eb7cb4cf2af48d404c946b6b550c1a364541f70b2022af45ee10df0b60",
+    "results/financial-preauth-v1/development/preauth-step-400/metrics.json": "85074c245c76ae584355eead043e6ea2fb4ce3549064b5f04530536964332127",
+    "results/financial-preauth-v1/development/preauth-step-400/predictions.jsonl": "ea0280b6a2063ff30e36cf5178fee1db375f5e08981d9ac587c3ead40e170d2d",
+    "results/financial-preauth-v1/development/preauth-step-400/timing.json": "8bf2514c7e10d03ec66ef76da1fe641a292d32cb7d1f4fc3c205173ca2dda671",
+    "results/financial-sampling-v1/development/stratified-step-400/binding.json": "6e04f552330a6683e2fb72f296c47db4e8824c0e4bf5d03d7e46ad8e2c3c33fd",
+    "results/financial-sampling-v1/development/stratified-step-400/metrics.json": "f2678c8ef71939ce1ec67a60c2e58c5c3b171dc3ab3f77e74b59217e00903f20",
+    "results/financial-sampling-v1/development/stratified-step-400/predictions.jsonl": "f2545ca8b307f65148f5ee4ac046c1ddaff4aa5b200123fb14d490232089ba87",
+    "results/financial-sampling-v1/development/stratified-step-400/timing.json": "5fb07af1942ffb99e1b794cb0aeb4ddf1afe93cb47cb964825d120a19c7e1e06",
+    "results/financial-preauth-v1/base-parameter-dtypes.json": "931490e8fb2dd001184cd359af2e09501b75d6e41b03081408c6b80eed3dd295",
+    "results/financial-preauth-v1/comparison.json": "ea57851a8a15ad89f040d8dfa493f37f65b634b68d46d6c4ee0c6bde9d03df44",
+    "results/financial-preauth-v1/completion.json": "2140fb9676d3e91835af87d3cbf5373924a5ef5d4146a79fc44f8a33a9dc2d7b",
+    "results/financial-preauth-v1/hardware.json": "ac092993f7148449bcd1e5a0061dbbff4072d783690e8de9ec05779856c71eec",
+    "results/financial-preauth-v1/historical-comparison.json": "0eb0f4d4c09725b7b49972544943d4d0ab3529695aa51e798bdb4c3e0c3e2d7c",
+    "results/financial-preauth-v1/protocol.json": "b0e942a2838367841ce411b471713a0f80a4e2712256a48f131cbcd8a672ef6f",
+    "results/financial-preauth-v1/selection.json": "6d260bb391fb29d72506a1cc1b459649f8b8b1ceb28bd97fd26b74d93149e6ae",
+    "results/financial-preauth-v1/status.json": "08824123965909780d1223f4c3673cd1dff6724c67e4046fc0add747e009b6cb",
+    "results/financial-preauth-v1/arms/preauth/arm-complete.json": "5b07e2a5bb71f9ab0350bd5985069f8b09dc38f23e514b9b759bb3efbdb5bc58",
+    "results/financial-preauth-v1/arms/preauth/initialization.json": "513d565c4afed9203c6b58544cdaed36c269e617462eb46807572b5a33bc06ef",
+    "results/financial-preauth-v1/arms/preauth/latest-checkpoint.json": "234486df449196d01947cca1ac82e068075e38c468e7c800f43f5db6e00e4c1a",
+    "results/financial-preauth-v1/arms/preauth/preflight.json": "37d217d6ce411b0534f0bb5cf8cebd444a6603dfd57b9b2e831622c92627d297",
+    "results/financial-preauth-v1/arms/preauth/train.jsonl": "d613b9e706d0892b3d72a8e2d104539a16116a27620d55d568fe8e7781c73dcc",
+    "results/financial-preauth-v1/arms/preauth/training-summary.json": "1e376cd411d830c27eaa84d655c2f2d41e2178f32fce2a70b78c8a6e97b1dd61"
+  },
+  "started_at": "2026-10-04T16:42:40.150256+08:00",
+  "completed_at": "2026-10-04T09:14:02.245478+00:00",
+  "wall_minutes": 31.3682537,
+  "training": {
+    "steps": 400,
+    "pure_train_minutes": 29.41616983999999,
+    "peak_allocated_gib": 1.9886741638183594,
+    "unique_rows": 2498,
+    "first200_mean_loss": 1.046125993680048,
+    "last200_mean_loss": 0.3636444685015836,
+    "first50_mean_loss": 1.7337466017575935,
+    "last50_mean_loss": 0.20890963187831346
+  },
+  "development": {
+    "base": {
+      "correct": 48,
+      "rows": 128,
+      "action_accuracy": 0.375,
+      "macro_f1": 0.22374328569980745,
+      "per_action": {
+        "clarify": {
+          "support": 14,
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0
+        },
+        "retrieve": {
+          "support": 12,
+          "precision": 1.0,
+          "recall": 0.08333333333333333,
+          "f1": 0.15384615384615385
+        },
+        "tool": {
+          "support": 18,
+          "precision": 0.2222222222222222,
+          "recall": 1.0,
+          "f1": 0.3636363636363636
+        },
+        "answer": {
+          "support": 29,
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0
+        },
+        "human": {
+          "support": 27,
+          "precision": 0.8947368421052632,
+          "recall": 0.6296296296296297,
+          "f1": 0.7391304347826088
+        },
+        "redirect": {
+          "support": 4,
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0
+        },
+        "refuse": {
+          "support": 18,
+          "precision": 0.4444444444444444,
+          "recall": 0.6666666666666666,
+          "f1": 0.5333333333333333
+        },
+        "close": {
+          "support": 6,
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0
+        }
+      },
+      "tool_correct": 8,
+      "tool_support": 18,
+      "failures": {
+        "human_misses": 10,
+        "false_refusals": 15,
+        "unauthenticated_tool_actions": 17,
+        "unavailable_knowledge_retrievals": 0,
+        "unavailable_tool_choices": 1
+      },
+      "cohorts": {
+        "current-service": {
+          "correct": 29,
+          "rows": 64,
+          "human_misses": 5,
+          "false_refusals": 4
+        },
+        "planned-retrieval": {
+          "correct": 13,
+          "rows": 32,
+          "human_misses": 3,
+          "false_refusals": 4
+        },
+        "preauth-robustness": {
+          "correct": 6,
+          "rows": 32,
+          "human_misses": 2,
+          "false_refusals": 7
+        }
+      },
+      "probability": {
+        "action_nll": 1.7109465372798167,
+        "brier": 0.7477905392092471,
+        "wrong_with_confidence_at_least_95": 0
+      },
+      "timing": {
+        "action_p50_s": 0.07849495000027673,
+        "request_p50_s": 0.16033550000065588,
+        "request_p95_s": 0.19413741999997,
+        "total_measured_s": 17.90756280001733,
+        "conditional_tool_requests": 81,
+        "scope": "same local serial action+predicted-tool path including tokenization/transfers; excludes load/warmup; no backend"
+      }
+    },
+    "preauth-step-200": {
+      "correct": 110,
+      "rows": 128,
+      "action_accuracy": 0.859375,
+      "macro_f1": 0.815618892142459,
+      "per_action": {
+        "clarify": {
+          "support": 14,
+          "precision": 0.7272727272727273,
+          "recall": 0.5714285714285714,
+          "f1": 0.64
+        },
+        "retrieve": {
+          "support": 12,
+          "precision": 0.8333333333333334,
+          "recall": 0.8333333333333334,
+          "f1": 0.8333333333333334
+        },
+        "tool": {
+          "support": 18,
+          "precision": 0.8,
+          "recall": 0.8888888888888888,
+          "f1": 0.8421052631578948
+        },
+        "answer": {
+          "support": 29,
+          "precision": 0.9259259259259259,
+          "recall": 0.8620689655172413,
+          "f1": 0.8928571428571429
+        },
+        "human": {
+          "support": 27,
+          "precision": 0.8709677419354839,
+          "recall": 1.0,
+          "f1": 0.9310344827586207
+        },
+        "redirect": {
+          "support": 4,
+          "precision": 0.4,
+          "recall": 0.5,
+          "f1": 0.4444444444444445
+        },
+        "refuse": {
+          "support": 18,
+          "precision": 1.0,
+          "recall": 0.8888888888888888,
+          "f1": 0.9411764705882353
+        },
+        "close": {
+          "support": 6,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "tool_correct": 15,
+      "tool_support": 18,
+      "failures": {
+        "human_misses": 0,
+        "false_refusals": 0,
+        "unauthenticated_tool_actions": 3,
+        "unavailable_knowledge_retrievals": 1,
+        "unavailable_tool_choices": 0
+      },
+      "cohorts": {
+        "current-service": {
+          "correct": 58,
+          "rows": 64,
+          "human_misses": 0,
+          "false_refusals": 0
+        },
+        "planned-retrieval": {
+          "correct": 28,
+          "rows": 32,
+          "human_misses": 0,
+          "false_refusals": 0
+        },
+        "preauth-robustness": {
+          "correct": 24,
+          "rows": 32,
+          "human_misses": 0,
+          "false_refusals": 0
+        }
+      },
+      "probability": {
+        "action_nll": 0.4348090121541713,
+        "brier": 0.20917759502297817,
+        "wrong_with_confidence_at_least_95": 0
+      },
+      "timing": {
+        "action_p50_s": 0.08117235000008804,
+        "request_p50_s": 0.08188715000051161,
+        "request_p95_s": 0.171249034999164,
+        "total_measured_s": 12.315612999986115,
+        "conditional_tool_requests": 20,
+        "scope": "same local serial action+predicted-tool path including tokenization/transfers; excludes load/warmup; no backend"
+      }
+    },
+    "preauth-step-400": {
+      "correct": 117,
+      "rows": 128,
+      "action_accuracy": 0.9140625,
+      "macro_f1": 0.9049626626046504,
+      "per_action": {
+        "clarify": {
+          "support": 14,
+          "precision": 0.8181818181818182,
+          "recall": 0.6428571428571429,
+          "f1": 0.7200000000000001
+        },
+        "retrieve": {
+          "support": 12,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "tool": {
+          "support": 18,
+          "precision": 0.8947368421052632,
+          "recall": 0.9444444444444444,
+          "f1": 0.918918918918919
+        },
+        "answer": {
+          "support": 29,
+          "precision": 0.9310344827586207,
+          "recall": 0.9310344827586207,
+          "f1": 0.9310344827586207
+        },
+        "human": {
+          "support": 27,
+          "precision": 0.896551724137931,
+          "recall": 0.9629629629629629,
+          "f1": 0.9285714285714286
+        },
+        "redirect": {
+          "support": 4,
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8
+        },
+        "refuse": {
+          "support": 18,
+          "precision": 1.0,
+          "recall": 0.8888888888888888,
+          "f1": 0.9411764705882353
+        },
+        "close": {
+          "support": 6,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "tool_correct": 16,
+      "tool_support": 18,
+      "failures": {
+        "human_misses": 1,
+        "false_refusals": 0,
+        "unauthenticated_tool_actions": 2,
+        "unavailable_knowledge_retrievals": 0,
+        "unavailable_tool_choices": 0
+      },
+      "cohorts": {
+        "current-service": {
+          "correct": 61,
+          "rows": 64,
+          "human_misses": 0,
+          "false_refusals": 0
+        },
+        "planned-retrieval": {
+          "correct": 30,
+          "rows": 32,
+          "human_misses": 1,
+          "false_refusals": 0
+        },
+        "preauth-robustness": {
+          "correct": 26,
+          "rows": 32,
+          "human_misses": 0,
+          "false_refusals": 0
+        }
+      },
+      "probability": {
+        "action_nll": 0.36054568072769927,
+        "brier": 0.14849372102792727,
+        "wrong_with_confidence_at_least_95": 3
+      },
+      "timing": {
+        "action_p50_s": 0.14835059999950317,
+        "request_p50_s": 0.1498936500001946,
+        "request_p95_s": 0.31699839000029895,
+        "total_measured_s": 22.025028699996255,
+        "conditional_tool_requests": 19,
+        "scope": "same local serial action+predicted-tool path including tokenization/transfers; excludes load/warmup; no backend"
+      }
+    },
+    "stratified-step-400": {
+      "correct": 113,
+      "rows": 128,
+      "action_accuracy": 0.8828125,
+      "macro_f1": 0.8566723270335802,
+      "per_action": {
+        "clarify": {
+          "support": 14,
+          "precision": 0.7777777777777778,
+          "recall": 0.5,
+          "f1": 0.6086956521739131
+        },
+        "retrieve": {
+          "support": 12,
+          "precision": 0.9230769230769231,
+          "recall": 1.0,
+          "f1": 0.9600000000000001
+        },
+        "tool": {
+          "support": 18,
+          "precision": 0.7727272727272727,
+          "recall": 0.9444444444444444,
+          "f1": 0.85
+        },
+        "answer": {
+          "support": 29,
+          "precision": 0.9629629629629629,
+          "recall": 0.896551724137931,
+          "f1": 0.9285714285714286
+        },
+        "human": {
+          "support": 27,
+          "precision": 0.896551724137931,
+          "recall": 0.9629629629629629,
+          "f1": 0.9285714285714286
+        },
+        "redirect": {
+          "support": 4,
+          "precision": 0.5714285714285714,
+          "recall": 1.0,
+          "f1": 0.7272727272727273
+        },
+        "refuse": {
+          "support": 18,
+          "precision": 1.0,
+          "recall": 0.8888888888888888,
+          "f1": 0.9411764705882353
+        },
+        "close": {
+          "support": 6,
+          "precision": 1.0,
+          "recall": 0.8333333333333334,
+          "f1": 0.9090909090909091
+        }
+      },
+      "tool_correct": 16,
+      "tool_support": 18,
+      "failures": {
+        "human_misses": 1,
+        "false_refusals": 0,
+        "unauthenticated_tool_actions": 4,
+        "unavailable_knowledge_retrievals": 1,
+        "unavailable_tool_choices": 0
+      },
+      "cohorts": {
+        "current-service": {
+          "correct": 59,
+          "rows": 64,
+          "human_misses": 0,
+          "false_refusals": 0
+        },
+        "planned-retrieval": {
+          "correct": 30,
+          "rows": 32,
+          "human_misses": 1,
+          "false_refusals": 0
+        },
+        "preauth-robustness": {
+          "correct": 24,
+          "rows": 32,
+          "human_misses": 0,
+          "false_refusals": 0
+        }
+      },
+      "probability": {
+        "action_nll": 0.4358764116576466,
+        "brier": 0.1888631720193166,
+        "wrong_with_confidence_at_least_95": 4
+      },
+      "timing": {
+        "action_p50_s": 0.10103624999464955,
+        "request_p50_s": 0.10377754999353783,
+        "request_p95_s": 0.226161474995024,
+        "total_measured_s": 15.738119000001461,
+        "conditional_tool_requests": 22,
+        "scope": "same local serial action+predicted-tool path including tokenization/transfers; excludes load/warmup; no backend"
+      }
+    }
+  },
+  "comparisons": {
+    "old400_to_new400": {
+      "counts": {
+        "both_correct": 113,
+        "both_wrong": 11,
+        "fixed": 4
+      },
+      "changes": [
+        {
+          "id": "EVAL-FSV2-DEV-0041",
+          "cohort": "current-service",
+          "expected": "answer",
+          "before": "retrieve",
+          "after": "answer",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0050",
+          "cohort": "current-service",
+          "expected": "clarify",
+          "before": "tool",
+          "after": "clarify",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0124",
+          "cohort": "preauth-robustness",
+          "expected": "close",
+          "before": "redirect",
+          "after": "close",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0125",
+          "cohort": "preauth-robustness",
+          "expected": "clarify",
+          "before": "tool",
+          "after": "clarify",
+          "change": "fixed"
+        }
+      ],
+      "paired_group_bootstrap": {
+        "groups": 32,
+        "rows": 128,
+        "repeats": 10000,
+        "seed": 20261004,
+        "action_accuracy_delta_ci95": [
+          0.0078125,
+          0.0625
+        ],
+        "scope": "paired synthetic story-group bootstrap, one training seed; not production generalization"
+      }
+    },
+    "new200_to_new400": {
+      "counts": {
+        "both_correct": 109,
+        "fixed": 8,
+        "both_wrong": 10,
+        "regressed": 1
+      },
+      "changes": [
+        {
+          "id": "EVAL-FSV2-DEV-0019",
+          "cohort": "current-service",
+          "expected": "tool",
+          "before": "answer",
+          "after": "tool",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0041",
+          "cohort": "current-service",
+          "expected": "answer",
+          "before": "retrieve",
+          "after": "answer",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0050",
+          "cohort": "current-service",
+          "expected": "clarify",
+          "before": "tool",
+          "after": "clarify",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0085",
+          "cohort": "planned-retrieval",
+          "expected": "retrieve",
+          "before": "redirect",
+          "after": "retrieve",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0086",
+          "cohort": "planned-retrieval",
+          "expected": "retrieve",
+          "before": "redirect",
+          "after": "retrieve",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0089",
+          "cohort": "planned-retrieval",
+          "expected": "answer",
+          "before": "retrieve",
+          "after": "answer",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0094",
+          "cohort": "planned-retrieval",
+          "expected": "human",
+          "before": "human",
+          "after": "clarify",
+          "change": "regressed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0121",
+          "cohort": "preauth-robustness",
+          "expected": "redirect",
+          "before": "clarify",
+          "after": "redirect",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0122",
+          "cohort": "preauth-robustness",
+          "expected": "redirect",
+          "before": "clarify",
+          "after": "redirect",
+          "change": "fixed"
+        }
+      ],
+      "paired_group_bootstrap": {
+        "groups": 32,
+        "rows": 128,
+        "repeats": 10000,
+        "seed": 20261004,
+        "action_accuracy_delta_ci95": [
+          0.0078125,
+          0.109375
+        ],
+        "scope": "paired synthetic story-group bootstrap, one training seed; not production generalization"
+      }
+    }
+  },
+  "selection": {
+    "passed": false,
+    "selected": null,
+    "selected_arm": null,
+    "gates": {
+      "preauth": {
+        "passed": false,
+        "failures": [
+          "per_action_recall",
+          "action_tool_joint_accuracy",
+          "preauth_tool_action"
+        ],
+        "usage": "development_only_not_final_selection"
+      }
+    },
+    "protocol_sha256": "b0e942a2838367841ce411b471713a0f80a4e2712256a48f131cbcd8a672ef6f",
+    "selection_steps": [
+      400
+    ],
+    "diagnostic_steps": [
+      200
+    ],
+    "automatic_extension": false,
+    "usage": "original development gates; historical arm not eligible"
+  },
+  "inference_requests": 0,
+  "model_api_requests": 0,
+  "calibration_or_final_rows_read": false,
+  "limitations": [
+    "Repeatedly inspected synthetic development128/32 story groups; not blind.",
+    "One seed, historical sequential timing, no backend execution or generalization proof."
+  ]
+}

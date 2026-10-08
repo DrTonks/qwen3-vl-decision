@@ -1,0 +1,66 @@
+{
+  "status": "pass",
+  "scope": "Code and training-only migration preflight; approval to build training candidate artifacts, not to train or accept evaluation labels.",
+  "reviewer": "/root/boundary_code_review",
+  "human_reviewed": false,
+  "evaluation_data_read": false,
+  "training_started": false,
+  "model_calls": 0,
+  "api_calls": 0,
+  "files": {
+    "src/qwenlab/financial_service_v2_data.py": "fffde21c3023d7064c5e55ff7fc991624590f3c808f389403c47a47fcb55eae2",
+    "src/qwenlab/financial_prompt_v2.py": "25033aa2a7a3fadf60e51ece0eebe3fdfbbd0626cc9f04654b9641a91a4629ef",
+    "tests/test_financial_service_v2_data.py": "424ea9943db3fa0de7d4845e50424cef8ecd4a792ac5b6913b86668595cdf564",
+    "src/qwenlab/financial_serve_v2.py": "75c0684433213b82e12b36e9e1bf1ac923522157c34ea1b334cf58449eadb615",
+    "src/qwenlab/financial_contract_audit.py": "f6d5a27910b2884d696d0311c0d43d77e401bbe2ec77b325a27c08c9a200ce48",
+    "src/qwenlab/financial_contract_revision.py": "a9c731dc23f57dbb2c93e921d61008018b65ee6ef513ef4f21c72baa83b098c4",
+    "configs/support-financial-v2.json": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+    "docs/evidence/financial-v2-migration-semantic-review.json": "7def0873b9a4f6feccf1cccf8f854d712dfeaef5693c8f8f2dd4e219a9f3b6f2"
+  },
+  "tests": [
+    {
+      "command": ".venv/Scripts/python.exe -m unittest discover -s tests -p test_financial_service_v2_data.py -v",
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "name": "training-only in-memory migration and provenance closure",
+      "source_rows": 12235,
+      "migration_schema_checked": 11756,
+      "excluded_rows": 479,
+      "excluded_groups": 102,
+      "prior_quarantined_rows": 80,
+      "prior_quarantined_rows_preserved": 80,
+      "grounded_application_ids": 472,
+      "grounded_status_codes": 256,
+      "tool_parameters_without_trusted_state": 0,
+      "source_row_hash_unchanged": true
+    },
+    {
+      "name": "transitive partition/source_group/parent_id/source_id closure in reversed input order",
+      "passed": true
+    },
+    {
+      "name": "non-tool annotation rejects null/list tool_arguments and non-list missing_slots",
+      "cases": 3,
+      "passed": 3
+    }
+  ],
+  "resolved_findings": [
+    "prepare_evaluation/freeze_evaluation validate frozen train code/policy/source/artifact hashes through validate_train.",
+    "freeze_evaluation independently repeats complete 384-ID, role, family, split, cohort and action/tool coverage validation.",
+    "validate checks evaluation manifest train_sha256 against actual training artifact.",
+    "build_train verifies semantic evidence source hashes and every source row hash, and asserts old 80 quarantined IDs are not released.",
+    "Tool arguments reject contradictions with explicit trusted state; all 728 argument-bearing migration survivors also have that trusted state.",
+    "Review identity must be a nonempty string distinct from the known evaluation author; annotation argument/slot container types are strict."
+  ],
+  "findings": [],
+  "limitations": [
+    "Did not open new or old evaluation author data, development/calibration/final files, model outputs or result reports. Test fixtures are local synthetic CPU objects.",
+    "No training artifacts were built by this reviewer. Build-train should be run by parent after this review; training_eligible remains false.",
+    "Machine screening covered 12235 training rows, but semantic reading covered only 336 selected rows; migration does not certify complete new-policy semantic correctness.",
+    "Overlap auditing is exact normalized text plus top20 trigram candidates with SequenceMatcher>=0.86, not exhaustive semantic deduplication.",
+    "Prompt uses a strict Qwen3.5 closed non-thinking prefix and single-token A-H/A-E candidates. No real tokenizer/model speed or quality was evaluated in this review.",
+    "New inputs explicitly assume no handoff connector/in-session handoff; true legacy handoff source groups are quarantined, not converted into availability."
+  ]
+}

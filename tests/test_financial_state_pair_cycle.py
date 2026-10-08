@@ -1,0 +1,493 @@
+"""Synthetic CPU safety invariants; never load model weights or evaluation rows."""
+from copy import deepcopy
+import json
+from pathlib import Path
+from types import SimpleNamespace
+import unittest
+from unittest.mock import patch
+import uuid
+
+from qwenlab import financial_state_pair_cycle as cycle
+
+
+def protocol():
+    return {'common_binding': {'schedule_manifest_sha256': 'schedule-hash'}}
+
+
+def checkpoint(step=12):
+    return dict(step=step, arm='statepair', schedule_manifest_sha256='schedule-hash',
+                cursor=dict(arm='statepair', completed_steps=step, next_step=step + 1),
+                initial_parameter_sha256='a' * 64, sample_positions=step * 8)
+
+
+class CheckpointAndScheduleTests(unittest.TestCase):
+    def test_probe_and_main_have_separate_artifact_namespaces(self):
+        main, probe = cycle.Run(), cycle.Run(cycle.PROBE)
+        self.assertFalse(main.probe)
+        self.assertTrue(probe.probe)
+        for attribute in ('out', 'control', 'checkpoints', 'cache'):
+            self.assertNotEqual(getattr(main, attribute), getattr(probe, attribute))
+        with self.assertRaises(ValueError):
+            cycle.Run('financial-service-v2-main')
+        with self.assertRaises(ValueError): cycle.ArmRun(main, 'forbidden-old-arm')
+
+    def test_resume_cursor_is_the_next_unconsumed_business_batch(self):
+        value = checkpoint()
+        self.assertTrue(cycle.checkpoint_summary_binding(value, protocol(), 'statepair', 12))
+        for key, altered in (
+            ('step', 11), ('arm', 'forbidden-old-arm'), ('sample_positions', 95),
+            ('schedule_manifest_sha256', 'stale'), ('initial_parameter_sha256', 'short'),
+            ('cursor', dict(arm='statepair', completed_steps=12, next_step=12)),
+            ('cursor', dict(arm='forbidden-old-arm', completed_steps=12, next_step=13)),
+        ):
+            bad = deepcopy(value)
+            bad[key] = altered
+            with self.subTest(key=key, altered=altered), self.assertRaises(ValueError):
+                cycle.checkpoint_summary_binding(bad, protocol(), 'statepair', 12)
+        for key in value:
+            bad = deepcopy(value)
+            del bad[key]
+            with self.subTest(missing=key), self.assertRaises(ValueError):
+                cycle.checkpoint_summary_binding(bad, protocol(), 'statepair', 12)
+
+    def test_candidate_schedule_exact_replay_and_rejects_old_arm(self):
+        expected = {'step_rows': [['synthetic-a','synthetic-b']]}
+        rows = [{'id':'synthetic-a'},{'id':'synthetic-b'}]
+        with patch.object(cycle,'read',side_effect=[expected,[],{'step_rows':[]},{'pairs':[]},{}]), patch.object(cycle.pool,'verify',return_value=rows), patch.object(cycle.schedule,'validate_plan'):
+            self.assertEqual(cycle.validate_schedule(expected,rows,'statepair',{}),expected['step_rows'])
+        with self.assertRaises(ValueError): cycle.validate_schedule(expected,rows,'stratified',{})
+        with patch.object(cycle,'read',return_value=expected):
+            with self.assertRaises(ValueError): cycle.validate_schedule({'step_rows':[['synthetic-b','synthetic-a']]},rows,'statepair',{})
+
+    def test_probe_uses_frozen_400_step_learning_rate_not_25_step_decay(self):
+        cfg = {'learning_rate': 5e-5, 'warmup_steps': 100}
+        for step, expected in ((1, 5e-7), (12, 6e-6), (25, 1.25e-5),
+                               (100, 5e-5), (200, 3.35e-5), (400, 5e-5 / 300)):
+            with self.subTest(step=step):
+                self.assertAlmostEqual(cycle.learning_rate(step, cfg), expected)
+        for step in (0, 401, 1.5, True):
+            with self.subTest(step=step), self.assertRaises(ValueError):
+                cycle.learning_rate(step, cfg)
+
+    def test_resume_rejects_missing_duplicate_or_reordered_committed_business_rows(self):
+        arm = SimpleNamespace(out=Path('synthetic/arm'))
+        schedule = [['row-a', 'row-b'], ['row-c', 'row-d']]
+        valid = [dict(step=1, row_ids=schedule[0]), dict(step=2, row_ids=schedule[1])]
+        for records in (valid[:1], [valid[0], valid[0]],
+                        [dict(step=1, row_ids=list(reversed(schedule[0]))), valid[1]]):
+            raw = ''.join(json.dumps(r) + '\n' for r in records)
+            with self.subTest(records=records), patch.object(Path, 'exists', return_value=True), \
+                 patch.object(Path, 'read_text', return_value=raw):
+                with self.assertRaises(ValueError):
+                    cycle.recover_logs(arm, 2, schedule)
+
+    def test_resume_discards_only_uncommitted_suffix_and_preserves_evidence(self):
+        arm = SimpleNamespace(out=Path('synthetic/arm'))
+        schedule = [['row-a'], ['row-b']]
+        committed = dict(step=1, row_ids=['row-a'])
+        raw = json.dumps(committed) + '\n' + '{"step":2,"row_ids":'
+        with patch.object(Path, 'exists', return_value=True), \
+             patch.object(Path, 'read_text', return_value=raw), patch.object(Path, 'open') as opened, \
+             patch.object(cycle, 'durable_json') as evidence, patch.object(cycle.os, 'fsync'):
+            kept = cycle.recover_logs(arm, 1, schedule)
+            self.assertEqual(kept, [committed])
+            self.assertEqual(evidence.call_args.args[1], {'raw': raw, 'checkpoint_step': 1})
+            written = opened.return_value.__enter__.return_value.write.call_args.args[0].decode('utf-8')
+            self.assertEqual(json.loads(written), committed)
+
+
+
+
+class EncodedCacheTests(unittest.TestCase):
+    def setUp(self):
+        self.rows = [dict(id='synthetic-1', action='answer', tool_name=None)]
+        self.run = SimpleNamespace(cache=Path('synthetic/cache'), protocol_hash=lambda: 'protocol-hash')
+        keys = list(cycle.prompt.SPEC['actions'])
+        self.encoded = [dict(action=dict(id='synthetic-1', task='action', keys=keys,
+                                        target=keys.index('answer'),
+                                        tokens={'input_ids': [101, 102], 'attention_mask': [1, 1]}),
+                             tool=None)]
+        self.binding = dict(protocol_sha256='protocol-hash', ordered_row_ids=['synthetic-1'],
+                            row_sha256={'synthetic-1': 'row-hash'}, prompt_sha256='hash',
+                            schedule_manifest_sha256='hash')
+        self.meta = dict(binding=self.binding, file_sha256='hash',
+                         encoded_payload_sha256=cycle.digest(self.encoded))
+
+    def load_cache(self, encoded, meta, length=2):
+        def read(path):
+            if Path(path).name == 'encoded-meta.json':
+                return meta
+            if Path(path).name == 'encoded.json':
+                return encoded
+            if Path(path).name == 'token-lengths.json':
+                return {'rows': [{'row_id': 'synthetic-1', 'action_input_tokens': length,
+                                  'tool_input_tokens': None}]}
+            if Path(path).name == 'input-accounting.json':
+                return {'rows': []}
+            raise AssertionError('Unexpected read outside synthetic fixtures: ' + str(path))
+        with patch.object(Path, 'exists', return_value=True), patch.object(cycle, 'read', side_effect=read), \
+             patch.object(cycle, 'sha', return_value='hash'), \
+             patch.object(cycle.prompt, 'encode', return_value=deepcopy(self.encoded[0]['action'])), \
+             patch.object(cycle.parent_schedule, 'row_sha', return_value='row-hash'):
+            return cycle.encoded_training(self.run, None, self.rows)
+
+    def test_complete_cache_replays_only_when_source_and_token_bindings_match(self):
+        self.assertEqual(self.load_cache(self.encoded, self.meta), {'synthetic-1': self.encoded[0]})
+        for key in self.meta:
+            bad = deepcopy(self.meta)
+            del bad[key]
+            with self.subTest(missing=key), self.assertRaises((ValueError, KeyError)):
+                self.load_cache(self.encoded, bad)
+        bad = deepcopy(self.meta)
+        bad['binding']['row_sha256']['synthetic-1'] = 'stale-source'
+        with self.assertRaises(ValueError):
+            self.load_cache(self.encoded, bad)
+
+    def test_cache_rejects_missing_task_fields_and_token_payload_changes(self):
+        for key in ('id', 'task', 'target', 'keys', 'tokens'):
+            bad = deepcopy(self.encoded)
+            del bad[0]['action'][key]
+            with self.subTest(missing=key), self.assertRaises((ValueError, KeyError)):
+                self.load_cache(bad, self.meta)
+        bad = deepcopy(self.encoded)
+        bad[0]['action']['tokens']['input_ids'][0] = 999
+        with self.assertRaises(ValueError):
+            self.load_cache(bad, self.meta)
+        with self.assertRaises(ValueError):
+            self.load_cache(self.encoded, self.meta, length=3)
+
+    def test_resigned_same_length_cache_cannot_override_actual_prompt_encoding(self):
+        for changed_tokens in ({'input_ids': [999, 102], 'attention_mask': [1, 1]},
+                               {'input_ids': [101, 102]},
+                               {'input_ids': [101, 102], 'attention_mask': [1]}):
+            bad = deepcopy(self.encoded)
+            bad[0]['action']['tokens'] = changed_tokens
+            resigned = deepcopy(self.meta)
+            resigned['encoded_payload_sha256'] = cycle.digest(bad)
+            with self.subTest(tokens=changed_tokens), self.assertRaises(ValueError):
+                self.load_cache(bad, resigned)
+
+
+class FiniteAndSafeExitTests(unittest.TestCase):
+    def test_nonfinite_loss_or_gradient_stops_instead_of_continuing(self):
+        cycle.ensure_finite_training(0.8, 1.5)
+        for value in (float('nan'), float('inf'), float('-inf')):
+            for loss, norm in ((value, .5), (.5, value)):
+                with self.subTest(loss=loss, norm=norm), self.assertRaises(FloatingPointError):
+                    cycle.ensure_finite_training(loss, norm)
+
+    def test_shutdown_requires_terminal_saved_state_dead_worker_and_released_lock(self):
+        for stage in ('paused', 'complete'):
+            self.assertTrue(cycle.safe_exit_status({'stage': stage}, False, True, True))
+            self.assertFalse(cycle.safe_exit_status({'stage': stage}, True, True, True))
+            self.assertFalse(cycle.safe_exit_status({'stage': stage}, False, False, True))
+            self.assertFalse(cycle.safe_exit_status({'stage': stage}, False, True, False))
+        for stage in ('training', 'saving', 'loading_training', 'failed'):
+            self.assertFalse(cycle.safe_exit_status({'stage': stage}, False, True, True))
+
+
+def gate_config():
+    return dict(development_gate={
+        'minimum_macro_f1_gain_over_same_prompt_base': .01,
+        'minimum_per_action_recall': .8, 'minimum_human_recall': .95,
+        'maximum_extra_human_misses_over_base': 0,
+        'maximum_extra_false_refusals_on_non_refuse_over_base': 0,
+        'maximum_unavailable_knowledge_retrievals': 0,
+        'minimum_joint_action_tool_accuracy_on_true_tool': .9,
+        'minimum_status_tool_accuracy': .9,
+    }, current_service_additional_gate={
+        'minimum_human_recall': .95, 'maximum_extra_human_misses_over_base': 0,
+        'maximum_extra_false_refusals_on_non_refuse_over_base': 0,
+        'maximum_unavailable_knowledge_retrievals': 0,
+        'minimum_joint_action_tool_accuracy_on_true_tool': .9,
+    }, preauth_additional_gate={'maximum_tool_actions': 0},
+        capability_additional_gate={'maximum_unavailable_tool_choices': 0})
+
+
+def metric_report(macro=.9, joint=.96):
+    current = dict(data_sha256='d' * 64, per_action={'human': {'support': 4, 'recall': 1.}},
+                   human_misses=[], false_refusals=[], unavailable_knowledge_retrievals=[],
+                   action_tool_joint_accuracy=joint)
+    return dict(partition='development', rows=16, data_sha256='d' * 64,
+                prompt_sha256='e' * 64, protocol_sha256='f' * 64,
+                per_action={a: dict(support=2, precision=1., recall=1., f1=1.)
+                            for a in cycle.prompt.SPEC['actions']},
+                macro_f1=macro, action_tool_joint_accuracy=joint, status_tool_accuracy=1.,
+                human_misses=[], false_refusals=[], unavailable_knowledge_retrievals=[],
+                unauthenticated_tool_actions=[], unavailable_tool_choices=[],
+                cohorts={'current-service': current})
+
+
+
+
+class ProbePrerequisiteTests(unittest.TestCase):
+    def setUp(self):
+        self.summary = dict(status='complete', steps_per_arm=25, total_optimizer_steps=25,
+                            evaluation_rows_used=0, probe_adapter_used_for_main=False,
+                            adapters_discarded_from_training_use=True, real_pause_resume_verified=True,
+                            common_binding_sha256='common', protocol_sha256='hash',
+                            artifacts={'synthetic-proof': 'hash'})
+
+    def verify(self, summary, alive=False):
+        def read(path):
+            values = {'probe-summary.json': summary, 'protocol.json': {'common_binding_sha256': 'common'},
+                      'completion.json': {'probe_summary_sha256': 'hash'}, 'status.json': {'pid': 123}}
+            return values[Path(path).name]
+        with patch.object(cycle, 'read', side_effect=read), patch.object(cycle, 'sha', return_value='hash'), \
+             patch.object(cycle, 'probe_artifacts', return_value={'synthetic-proof': 'hash'}), \
+             patch.object(cycle, 'validate_probe_evidence'), patch.object(cycle, 'identity_alive', return_value=alive):
+            return cycle.verify_probe('common')
+
+    def test_main_requires_successful_matching_probe_with_exited_worker(self):
+        self.assertEqual(self.verify(self.summary), 'hash')
+        for key, value in (('status', 'paused'), ('steps_per_arm', 24), ('total_optimizer_steps', 49),
+                           ('evaluation_rows_used', 1), ('probe_adapter_used_for_main', True),
+                           ('adapters_discarded_from_training_use', False), ('real_pause_resume_verified', False),
+                           ('common_binding_sha256', 'stale'), ('protocol_sha256', 'stale'),
+                           ('artifacts', {})):
+            bad = deepcopy(self.summary)
+            bad[key] = value
+            with self.subTest(key=key), self.assertRaises(ValueError):
+                self.verify(bad)
+        with self.assertRaises(ValueError):
+            self.verify(self.summary, alive=True)
+        with patch.object(cycle, 'read', side_effect=FileNotFoundError('synthetic absent probe')):
+            with self.assertRaises(FileNotFoundError):
+                cycle.verify_probe('common')
+
+    def test_pause_evidence_requires_real_new_worker_and_exact_restored_states(self):
+        run = cycle.Run(cycle.PROBE)
+        evidence = dict(state='resumed', prior_worker_exited=True, protocol_sha256='hash',
+                        arm='statepair', completed_step=12, resumed_next_step=13,
+                        checkpoint_sha256='hash', checkpoint='synthetic/checkpoint',
+                        prior_worker={'pid': 1}, saved_parameter_sha256='params',
+                        saved_optimizer_sha256='optimizer', saved_rng_sha256='rng',
+                        restore_record=dict(next_step=13, checkpoint_sha256='hash', worker={'pid': 2},
+                            restored=dict(parameter_sha256='params', optimizer_sha256='optimizer', rng_sha256='rng')))
+        def verify(value, logs=None):
+            with patch.object(cycle, 'read', return_value=value), patch.object(cycle, 'sha', return_value='hash'), \
+                 patch.object(cycle.ft, 'validate_checkpoint'), \
+                 patch.object(cycle.ft, 'rows_file', return_value=[{'step': 13}] if logs is None else logs):
+                return cycle.validate_probe_evidence(run, {'probe_pause_at_step': 12})
+        self.assertEqual(verify(evidence), evidence)
+        for key in ('parameter_sha256', 'optimizer_sha256', 'rng_sha256'):
+            bad = deepcopy(evidence)
+            bad['restore_record']['restored'][key] = 'not-restored'
+            with self.subTest(key=key), self.assertRaises(ValueError):
+                verify(bad)
+        bad = deepcopy(evidence)
+        bad['restore_record']['worker'] = bad['prior_worker']
+        with self.assertRaises(ValueError):
+            verify(bad)
+        with self.assertRaises(ValueError):
+            verify(evidence, logs=[])
+
+
+class PreprotocolRecoveryTests(unittest.TestCase):
+    def setUp(self):
+        self.root = (Path(__file__).resolve().parents[1] / '.local'
+                     / f'synthetic-preprotocol-{uuid.uuid4().hex}')
+        self.root.mkdir(parents=True)
+        self.root_patch = patch.object(cycle, 'ROOT', self.root)
+        self.root_patch.start()
+        self.addCleanup(self.root_patch.stop)
+        self.addCleanup(self.cleanup)
+        self.run = cycle.Run(cycle.PROBE)
+        self.run.out.mkdir(parents=True)
+        self.status = dict(stage='failed', run_name=self.run.name, interrupted_stage='checking_protocol',
+                           requested_pause_at_step=12, pid=123, process_created=1.)
+        (self.run.out / 'status.json').write_text(json.dumps(self.status), encoding='utf-8')
+
+    def cleanup(self):
+        # Only this uniquely owned synthetic fixture is traversed and removed.
+        owned = self.root.resolve()
+        for item in sorted(self.root.rglob('*'), key=lambda p: len(p.parts), reverse=True):
+            if not item.resolve().is_relative_to(owned):
+                raise AssertionError('Refuse cleanup outside synthetic fixture')
+            if item.is_dir():
+                item.rmdir()
+            else:
+                item.unlink()
+        self.root.rmdir()
+
+    def recover(self, resume=True, live=False):
+        with patch.object(cycle, 'alive', return_value=live), \
+             patch.object(cycle, 'identity_alive', return_value=live):
+            return cycle.recover_preprotocol(self.run, resume, self.status)
+
+    def test_explicit_resume_can_retry_only_preprotocol_failure_and_preserves_status_evidence(self):
+        self.assertTrue(self.recover())
+        evidence = list(self.run.out.glob('preprotocol-failure-*.json'))
+        self.assertEqual(len(evidence), 1)
+        self.assertIn('failed', evidence[0].read_text(encoding='utf-8'))
+        self.assertFalse((self.run.out / 'protocol.json').exists())
+        self.assertFalse(self.run.checkpoints.exists())
+
+    def test_no_silent_fresh_restart_or_live_worker_recovery(self):
+        for resume, live in ((False, False), (True, True)):
+            with self.subTest(resume=resume, live=live), self.assertRaises(ValueError):
+                self.recover(resume=resume, live=live)
+
+    def test_recovery_requires_matching_run_status_and_original_probe_trigger(self):
+        original = deepcopy(self.status)
+        for key, value in (('run_name', cycle.DEFAULT), ('stage', 'training'),
+                           ('requested_pause_at_step', None), ('requested_pause_at_step', 25)):
+            self.status = deepcopy(original)
+            self.status[key] = value
+            (self.run.out / 'status.json').write_text(json.dumps(self.status), encoding='utf-8')
+            with self.subTest(key=key, value=value), self.assertRaises(ValueError):
+                self.recover()
+        self.status = deepcopy(original)
+        changed = dict(original, error='changed after status read')
+        (self.run.out / 'status.json').write_text(json.dumps(changed), encoding='utf-8')
+        with self.assertRaises(ValueError):
+            self.recover()
+
+    def test_training_evaluation_checkpoint_cache_or_unknown_residue_blocks_retry(self):
+        markers = [self.run.out / 'arms/uniform/train.jsonl',
+                   self.run.out / 'development/base/predictions.jsonl',
+                   self.run.out / 'unexpected.json',
+                   self.run.checkpoints / 'uniform/step-12/checkpoint.json',
+                   self.run.cache / 'uniform/encoded.json']
+        for marker in markers:
+            with self.subTest(marker=marker.relative_to(self.root)):
+                marker.parent.mkdir(parents=True, exist_ok=True)
+                marker.write_text('synthetic residual evidence', encoding='utf-8')
+                with self.assertRaises(ValueError):
+                    self.recover()
+                self.assertEqual(marker.read_text(encoding='utf-8'), 'synthetic residual evidence')
+                marker.unlink()
+                # Remove only the directories just introduced by this subtest.
+                directory = marker.parent
+                while directory not in (self.run.out, self.root) and directory.exists():
+                    if any(directory.iterdir()):
+                        break
+                    directory.rmdir()
+                    directory = directory.parent
+
+
+class NewExecutionTests(unittest.TestCase):
+    def test_merged_rows_and_lengths_include_additions_without_old_mutation(self):
+        old=[dict(id='old',annotation=dict(action='answer',tool_name=None))]
+        extra=[dict(id='new',annotation=dict(action='tool',tool_name='queryMyApplications'))]
+        with patch.object(cycle.pool,'verify',return_value=old),patch.object(cycle,'read',return_value=extra),patch.object(cycle.parent_schedule,'validate_rows'):
+            self.assertEqual([r['id'] for r in cycle.train_rows()],['old','new'])
+            self.assertNotIn('action',old[0]);self.assertNotIn('action',extra[0])
+        values=[dict(rows=[dict(row_id='old',action_input_tokens=2,tool_input_tokens=None)]),
+                dict(rows=[dict(id='new',action=3,tool=4)])]
+        with patch.object(cycle,'read',side_effect=values):
+            self.assertEqual(cycle.training_lengths()['new']['tool_input_tokens'],4)
+        values[1]['rows'][0]['id']='old'
+        with patch.object(cycle,'read',side_effect=values),self.assertRaisesRegex(ValueError,'Duplicate'):
+            cycle.training_lengths()
+
+    def test_missing_additions_rejected_even_when_row_ids_are_valid(self):
+        plan={'step_rows':[['old','new']]}
+        old=[{'id':'old'}];extra=[{'id':'new'}]
+        with patch.object(cycle,'read',side_effect=[plan,extra]),patch.object(cycle.pool,'verify',return_value=old):
+            with self.assertRaisesRegex(ValueError,'Execution rows differ'):
+                cycle.validate_schedule(plan,old,'statepair',{})
+
+    def test_new_checkpoint_namespace_rejects_old_variant(self):
+        run=cycle.Run()
+        with self.assertRaises(ValueError):cycle.checkpoint_for_variant(run,'preauth-step-400')
+        with patch.object(cycle.ft,'validate_checkpoint'):
+            self.assertEqual(cycle.checkpoint_for_variant(run,'statepair-step-400'),run.checkpoints/'statepair/step-400')
+
+    def test_original_numerical_checkpoint_and_resume_functions_preserved(self):
+        import ast
+        def nodes(module):
+            return {n.name:ast.dump(n, include_attributes=False) for n in ast.parse(Path(module.__file__).read_text(encoding='utf-8')).body
+                    if isinstance(n,ast.FunctionDef)}
+        old,new=nodes(cycle.parent_cycle),nodes(cycle)
+        for name in ('learning_rate','optimizer_for','save_checkpoint','record_restoration','nested_digest',
+                     'recover_logs','parameter_hash','reset_seed','ensure_finite_training','checkpoint_summary_binding',
+                     'evaluate','holdout','prediction_prefix','safe_exit_status','gpu_lock_released'):
+            with self.subTest(function=name): self.assertEqual(new[name],old[name])
+
+    def test_new_design_preserves_original_optimizer_loss_and_gates(self):
+        cfg=cycle.read(cycle.CONFIG); derived=cycle.check_design(cfg); old=cycle.read(cycle.DESIGN)
+        for key in ('seed','optimizer','learning_rate','warmup_steps','scheduler','loss','lora',
+                    'development_gate','current_service_additional_gate','preauth_additional_gate','capability_additional_gate'):
+            self.assertEqual(derived[key],old[key])
+        self.assertEqual(derived['execution_order'],['statepair'])
+        self.assertEqual(derived['probe']['total_steps'],25)
+        for key,value in [('steps_per_arm',401),('probe_pause_step',11),('probe_steps',50),
+                          ('model_api_requests',True),('deployment_enabled',True),('arms',['stratified'])]:
+            with self.subTest(key=key),self.assertRaises(ValueError):cycle.check_design(dict(cfg,**{key:value}))
+
+    def test_probe_rejects_other_pause_step_before_loading_model(self):
+        run=cycle.Run(cycle.PROBE)
+        with patch.object(cycle,'verify_review'),patch.object(cycle.schedule,'verify'):
+            for step in (0,1,11,13,24,True):
+                with self.subTest(step=step),self.assertRaises(ValueError):cycle.freeze(run,pause_at_step=step)
+            with patch.object(Path,'exists',return_value=False):
+                with self.assertRaisesRegex(ValueError,'step12'):cycle.freeze(run)
+
+    def test_one_candidate_cannot_select_step200_or_historical_arm(self):
+        reports={'base':metric_report(.7),'statepair':metric_report(.9)}
+        self.assertEqual(cycle.choose_candidate(reports,gate_config(),'f'*64)['selected'],'statepair-step-400')
+        for key in ('statepair-step-200','stratified','uniform'):
+            bad={'base':reports['base'],key:reports['statepair']}
+            with self.assertRaises(ValueError):cycle.choose_candidate(bad,gate_config(),'f'*64)
+
+    def test_original_safety_gates_reject_high_average(self):
+        mutations=[lambda r:r['per_action']['clarify'].update(recall=.7),
+                   lambda r:r.update(human_misses=['synthetic']),lambda r:r.update(false_refusals=['synthetic']),
+                   lambda r:r.update(unauthenticated_tool_actions=['synthetic']),
+                   lambda r:r.update(unavailable_tool_choices=['synthetic']),
+                   lambda r:r.update(unavailable_knowledge_retrievals=['synthetic']),
+                   lambda r:r.update(action_tool_joint_accuracy=.8),lambda r:r.update(status_tool_accuracy=.8),
+                   lambda r:r['cohorts']['current-service'].update(human_misses=['synthetic'])]
+        for mutate in mutations:
+            candidate=metric_report(.99);mutate(candidate)
+            result=cycle.choose_candidate({'base':metric_report(.7),'statepair':candidate},gate_config(),'f'*64)
+            self.assertFalse(result['passed']);self.assertIsNone(result['selected']);self.assertFalse(result['automatic_extension'])
+
+    def test_review_requires_both_bound_cpu_reviews(self):
+        review=dict(version='financial-state-pair-executor-review-v1',status='pass',independent=True,
+            reviewer='/synthetic-reviewer',human_reviewed=False,evaluation_examples_read=False,
+            predictions_read=False,gpu_used=False,model_api_requests=0,open_findings=[],
+            files={n:'hash' for n in cycle.REVIEW_FILES},config_sha256='hash',schedule_manifest_sha256='hash')
+        design=dict(schema_version='financial-state-pair-schedule-review-v1',reviewer='independent-agent/state_pair_code_review',
+                    blocking_findings=[],schedule_manifest={'sha256':'hash'},source_sha256={'synthetic.py':'hash'})
+        def verify(r,d):
+            with patch.object(cycle,'read',side_effect=[r,d]),patch.object(cycle,'sha',return_value='hash'):
+                return cycle.verify_review()
+        self.assertEqual(verify(review,design),review)
+        for field,value in [('status','pending'),('independent',False),('gpu_used',True),('model_api_requests',1),
+                            ('open_findings',['x']),('files',{}),('config_sha256','stale')]:
+            with self.subTest(field=field),self.assertRaises(ValueError):verify(dict(review,**{field:value}),design)
+        with self.assertRaises(ValueError):verify(review,dict(design,source_sha256={'synthetic.py':'stale'}))
+
+    def test_reference_rejects_runtime_model_prompt_and_budget_mismatch(self):
+        cfg=cycle.check_design(cycle.read(cycle.CONFIG))
+        common={'model_files':{'weights':'sha'},'runtime':{'gpu':'synthetic'},'historical_reference_sha256':{'x':'y'}}
+        old=dict(prompt_sha256='hash',policy_sha256=cycle.prompt.POLICY_HASH,evaluation={'split':'sha'},
+                 probe=False,arms=['preauth'],steps_per_arm=400,common_binding=deepcopy(common),config=deepcopy(cfg))
+        complete=dict(status='complete',protocol_sha256='hash',arm_steps={'preauth':400})
+        def check(p):
+            with patch.object(cycle,'read',side_effect=[p,complete,{'bound':True},{'bound':True}]),patch.object(cycle,'sha',return_value='hash'),\
+                 patch.object(cycle,'reference_bindings',return_value={'x':'y'}),\
+                 patch.object(cycle.parent_cycle,'eval_binding',return_value={'bound':True}):
+                return cycle.check_reference(common,{'split':'sha'},cfg)
+        self.assertEqual(check(old),old)
+        mutations=[lambda p:p.update(prompt_sha256='stale'),lambda p:p.update(evaluation={'split':'other'}),
+                   lambda p:p['common_binding'].update(runtime={'gpu':'different'}),
+                   lambda p:p['common_binding'].update(model_files={'weights':'other'}),
+                   lambda p:p['config'].update(learning_rate=.001),lambda p:p['config'].update(loss={})]
+        for mutate in mutations:
+            p=deepcopy(old);mutate(p)
+            with self.assertRaises(ValueError):check(p)
+        with patch.object(cycle,'read',side_effect=[old,complete,{'bound':True}]),patch.object(cycle,'sha',return_value='hash'),\
+             patch.object(cycle,'reference_bindings',return_value={'x':'y'}),\
+             patch.object(cycle.parent_cycle,'eval_binding',side_effect=FileNotFoundError('missing old checkpoint')):
+            with self.assertRaises(FileNotFoundError):cycle.check_reference(common,{'split':'sha'},cfg)
+
+    def test_probe_cannot_read_any_evaluation_split(self):
+        for split in ('development','calibration','final'):
+            with self.assertRaises(ValueError):cycle.evaluation_rows(cycle.Run(cycle.PROBE),{},split,'base')
+
+
+if __name__ == '__main__':
+    unittest.main()

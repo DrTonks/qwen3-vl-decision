@@ -1,0 +1,127 @@
+{
+  "status": "pass",
+  "reviewer": "/root/boundary_code_review",
+  "reviewer_type": "independent_ai_agent",
+  "human_reviewed": false,
+  "reviewed_at": "2026-10-03T03:12:25.041266+00:00",
+  "files": {
+    "src/qwenlab/financial_boundary_finalize.py": "4dc065aaafcc5e26ac7cc3a3808b32cb4a8c893c5d1ca250f0d5f01ef780d4a3",
+    "tests/test_financial_boundary_finalize.py": "c76df34b14649a8e79332ad6f4d2273c174d8cc34f8e29e7018605e144f03066"
+  },
+  "original_code_review_sha256": "8480e9802ccff88e676ba7dfba6fe395a243735acfc3213ca2dea800a5bb8b38",
+  "original_failed_status_sha256": "68b8d0a2a098c2697515a560b2908045314751cc7d9d1d5b157888da9abd0b3e",
+  "study_protocol_sha256": "525576f9f9c708ccab86524073e092918253e00f2db5e4ed68bdbcd78c9011be",
+  "scope": "Offline finalizer only; all training already complete. Recompute a raw-baseline metrics report in each verified arm context, then invoke unchanged development gate. No frozen source, predictions, stored metrics, threshold or failure status changes.",
+  "prior_review_miss": "The original independent code review did not catch study-hash versus arm-hash mismatch in development_gate; new integration test reproduces this missed failure. This review does not rewrite the earlier pass evidence.",
+  "independent_results": [
+    {
+      "variant": "replay/step-384",
+      "accuracy": 0.9661458333333334,
+      "joint": 1.0,
+      "human_misses": 4,
+      "false_refusals": 0,
+      "passed": false,
+      "failures": [
+        "human_recall"
+      ]
+    },
+    {
+      "variant": "replay/step-768",
+      "accuracy": 0.96875,
+      "joint": 0.9375,
+      "human_misses": 2,
+      "false_refusals": 1,
+      "passed": false,
+      "failures": [
+        "extra_false_refusals"
+      ]
+    },
+    {
+      "variant": "replay/step-1530",
+      "accuracy": 0.96875,
+      "joint": 0.921875,
+      "human_misses": 1,
+      "false_refusals": 2,
+      "passed": false,
+      "failures": [
+        "extra_false_refusals"
+      ]
+    },
+    {
+      "variant": "overlay/step-384",
+      "accuracy": 0.9713541666666666,
+      "joint": 0.953125,
+      "human_misses": 3,
+      "false_refusals": 2,
+      "passed": false,
+      "failures": [
+        "extra_false_refusals"
+      ]
+    },
+    {
+      "variant": "overlay/step-768",
+      "accuracy": 0.9713541666666666,
+      "joint": 0.984375,
+      "human_misses": 3,
+      "false_refusals": 1,
+      "passed": false,
+      "failures": [
+        "extra_false_refusals"
+      ]
+    },
+    {
+      "variant": "overlay/step-1530",
+      "accuracy": 0.9661458333333334,
+      "joint": 0.921875,
+      "human_misses": 2,
+      "false_refusals": 3,
+      "passed": false,
+      "failures": [
+        "extra_false_refusals"
+      ]
+    }
+  ],
+  "checks": [
+    "Independently recomputed all six 384-row development metrics from saved predictions and verified equality with stored metrics.",
+    "Verified all six checkpoint/evaluation bindings and each exact arm protocol equals the frozen study plus declared arm identity.",
+    "Both arm completion records report 1530 steps and 12235 sample positions.",
+    "Raw baseline is re-evaluated only after exact arm contract validation; same input labels/predictions and unmodified gate. No relabeling or in-place hash edit.",
+    "Any passing candidate explicitly stops this failure-only finalizer; no holdout/calibration inference or scoring exists in its flow.",
+    "Output is confined to separate recovery artifacts; original failed status and frozen trainer remain preserved.",
+    "Jev comparison consumes pinned development cache with hash/request validation; no network request path is called.",
+    "Original eight-file code review still validates unchanged."
+  ],
+  "tests": {
+    "command": ". .\\scripts\\use-env.ps1; .\\.venv-qwen35\\Scripts\\python.exe -m unittest tests.test_financial_boundary_finalize -v",
+    "result": "pass",
+    "count": 4,
+    "elapsed_s": 3.15,
+    "skipped": 0,
+    "coverage": [
+      "Reproduce original mixed-hash exception",
+      "Verified arm-context recomputation without changing prediction objects",
+      "Reject changed arm policy before evaluation",
+      "Any passing candidate blocks failure finalization"
+    ]
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "status": "resolved",
+      "description": "New tests use local ignored experimental artifacts. Missing artifacts now produce explicit SkipTest rather than failing a fresh clone."
+    },
+    {
+      "id": "F2",
+      "status": "resolved",
+      "description": "Report describes unique record IDs rather than statistically independent records/scenarios."
+    }
+  ],
+  "unresolved_blocking_findings": [],
+  "limitations": [
+    "This is approval of offline recovery bookkeeping, not approval of the candidate models. All six candidates fail the unchanged acceptance gate.",
+    "Development has been repeatedly observed and contains correlated synthetic macro stories; it does not establish blind real-user generalization.",
+    "Historical/staged latency is descriptive, not an equal-hardware-state causal speed comparison.",
+    "Frozen dependency/cache integrity validation may hash held-out artifacts, but this finalizer performs no held-out inference, scoring, label-guided training or selection.",
+    "Reviewer did not run finish or overwrite prior outputs; root performs the approved offline publication step."
+  ]
+}

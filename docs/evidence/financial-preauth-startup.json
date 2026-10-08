@@ -1,0 +1,45 @@
+{
+  "version": "financial-preauth-startup-v1",
+  "progress_snapshot": {
+    "stage": "training",
+    "run_name": "financial-preauth-v1",
+    "probe": false,
+    "updated_at": "2026-10-04T08:44:22.747304+00:00",
+    "pid": 25500,
+    "process_created": 1791103360.1710372,
+    "safe_to_shutdown": false,
+    "arm": "preauth",
+    "step": 11,
+    "total_steps": 400,
+    "run_exists": true,
+    "protocol_exists": true,
+    "worker_alive": true,
+    "arm_steps": {
+      "preauth": 11
+    },
+    "cycle_step": 11,
+    "percent": 2.75,
+    "recent_step_median_s": 3.487,
+    "remaining_train_minutes_estimate": 22.6,
+    "estimate_scope": "remaining optimizer updates only; current arm/stage shown separately; excludes evaluation/load/save"
+  },
+  "protocol_sha256": "b0e942a2838367841ce411b471713a0f80a4e2712256a48f131cbcd8a672ef6f",
+  "review_sha256": "a1df2b5e203dec8f489229e77731c0c11a5b07bfb745ff1ea7e5947a3dc7ac4d",
+  "probe_summary_sha256": "0e44b17d2d6ea1c1bf1bbe013f039b9a3633b9ab43c0e1367c7dd9b202e2524e",
+  "fresh_initialization": {
+    "initial_parameter_sha256": "a393388446d4af8f5c668a48d719d2ed158b4cba32e13de3b469395e0d990a25",
+    "seed": 20261004,
+    "protocol_sha256": "b0e942a2838367841ce411b471713a0f80a4e2712256a48f131cbcd8a672ef6f",
+    "common_binding_sha256": "ad48c625a6d5c8ad8dccef72ad8d30c9ac0f2985b040fc9ece178295ffdd91b2",
+    "fresh_official_base": true,
+    "probe_adapter_loaded": false,
+    "dtypes": {
+      "torch.bfloat16": 852985920,
+      "torch.float32": 1794048
+    },
+    "arm": "preauth"
+  },
+  "scope": "startup snapshot, not training completion or quality result",
+  "model_api_requests": 0,
+  "deployed": false
+}

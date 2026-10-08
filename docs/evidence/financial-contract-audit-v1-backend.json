@@ -1,0 +1,448 @@
+{
+  "audit": "financial-contract-audit-v1-backend",
+  "reviewer": "/root/boundary_code_review",
+  "reviewer_type": "independent_ai_agent",
+  "human_reviewed": false,
+  "at": "2026-10-03T03:31:31.617434+00:00",
+  "scope": "Read-only source/call-graph and pure function/fake ORM execution. No database, network API, model training or development/calibration/final dataset reads. This is current implementation evidence, not an instruction to amend frozen data.",
+  "files": {
+    "uestc_Integrated_Design/后端/package.json": "95791494f796d2fd6965920087bff93e4daec80113e27f09e2e6e42928842de0",
+    "uestc_Integrated_Design/后端/server.js": "cc797ca9959ae67808e8bb6a30b239cfc642143ac365486278c76668da3bcdc9",
+    "uestc_Integrated_Design/后端/scripts/start-support.js": "6023df65ba7f37be1a43ed3ecf11e9242c4d36bc16952efb734d607f21bf4ad8",
+    "uestc_Integrated_Design/后端/start-all.ps1": "8739b1864cdd397d7598b107c74f7b0d75486d959c380df443e7055fa13258fd",
+    "uestc_Integrated_Design/后端/api/agent.js": "fd7f4512d4fa37c831f5e04063f9c80207227d5482088b3af44a31fb377ce663",
+    "uestc_Integrated_Design/后端/middleware/authOnly.js": "809288044a9826ad314f854794a932481c4a4447691f3e8f8addab7877582e7d",
+    "uestc_Integrated_Design/后端/services/customerSupport/index.js": "c2e670d443c64811119d0a6bb6dc8193c329cfca98d6e390b47fe114a9e6b5a9",
+    "uestc_Integrated_Design/后端/services/customerSupport/contract.js": "1394d283d115354c2bab22b067c1a61635c32659e3b0e86d62bd7b248b39e243",
+    "uestc_Integrated_Design/后端/services/customerSupport/tools.js": "a2d756c8a883b8f62a9d281ebc89072a493fb54fce46cb8c3c361f6db01989fc",
+    "uestc_Integrated_Design/后端/services/customerSupport/parameters.js": "cdbd75fd8da71fa3d28282abd339655ed809dbe3f6bb3258f3bcf9d2d56ca085",
+    "uestc_Integrated_Design/后端/services/customerSupport/decisions.js": "b2797164af0de209e1dc582da6f127eb99ca8673186c0371d083b08871680956",
+    "uestc_Integrated_Design/后端/services/customerSupport/modelDecision.js": "84db5cd589c57b397f86d7747a5ebe006d2acfe05ef5978213f309af9fe9a3f3",
+    "uestc_Integrated_Design/后端/services/customerSupport/orchestrator.js": "fb55c8dd33fcec0e064e615c4a9c75dfbd65e9b062259e02d30cc690759c3877",
+    "uestc_Integrated_Design/后端/services/customerSupport/repository.js": "1c0c610c722eef4ecc38ec63eae781a51ca4b3487d754aad9fc7f4b9385a5210",
+    "uestc_Integrated_Design/后端/services/customerSupport/responses.js": "26231e47b330b5eede2c0947bc9fdc550376f6dba9f76aba8a403bb26772c5cc",
+    "uestc_Integrated_Design/后端/services/customerSupport/responseProvider.js": "5ce5bc63472849f73e8c5188bb4dd224a0255450c4d12aa4e2ae8cfeb2e4809d",
+    "uestc_Integrated_Design/后端/services/customerSupport/policies/decision-v5.json": "ba4ca13ed1da614864a37c533fd9c23b6dd1a34b2afc1141fc1129020a8faa4d",
+    "uestc_Integrated_Design/后端/agent/tools/CustomerSupportTools.java": "13e6ed64b7e8c141cc3aad803f08ccf31048abe1b1650a47e93f2966cadee58e",
+    "uestc_Integrated_Design/后端/agent/service/impl/CustomerSupportAgentServiceImpl.java": "22cb14fa4d142df399f029c3d399b93ad3284e227aba7b8075e1131446945099",
+    "uestc_Integrated_Design/Uni-ui/api/index.js": "e48ddae8f9aaa3f1fd67338c980177fe77cd0bbd7857beb2235d5fa194f8f828",
+    "uestc_Integrated_Design/Uni-ui/pages/profile/support.vue": "27dd5b818cfe2ccf6ec88a1fde27cd57546b074d3cecbf93e1ebff8957e8c635"
+  },
+  "training_prompt_file": {
+    "path": "qwen/src/qwenlab/financial_actions_prompt.py",
+    "sha256": "817bd6578c99ee0dce3d5e1d784830ce1d70cd85a9ff54f6cdf8ec34515f2b36"
+  },
+  "entrypoint": {
+    "conclusion": "The repository-declared runnable customer-support chain is Node services/customerSupport. The shown App API calls that Node route. No Node-to-Java dispatch was found in this chain.",
+    "evidence": [
+      {
+        "file": "后端/package.json",
+        "line": 6,
+        "claim": "dev:support:jev/qwen/rules run node scripts/start-support.js; start/dev run server.js"
+      },
+      {
+        "file": "后端/scripts/start-support.js",
+        "line": 4,
+        "claim": "Explicit provider mode then getSupport then server.startServer"
+      },
+      {
+        "file": "后端/server.js",
+        "line": 101,
+        "claim": "Requires ./api/agent; line116 app.use(agentRouter)"
+      },
+      {
+        "file": "后端/api/agent.js",
+        "line": 18,
+        "claim": "POST /agent/chat invokes support.chat(req.identity.id,chatInput(req.body))"
+      },
+      {
+        "file": "后端/services/customerSupport/index.js",
+        "line": 22,
+        "claim": "Builds Node orchestrator with Sequelize repository and Node tools"
+      },
+      {
+        "file": "Uni-ui/api/index.js",
+        "line": 57,
+        "claim": "App apiAgentChat posts /agent/chat"
+      },
+      {
+        "file": "Uni-ui/pages/profile/support.vue",
+        "line": 135,
+        "claim": "submit invokes apiAgentChat"
+      },
+      {
+        "file": "后端/start-all.ps1",
+        "line": 29,
+        "claim": "dev:all launches Node npm run dev, plus Python risk engine; no Java launch"
+      }
+    ],
+    "java_status": "Java source exists, but no pom.xml/build.gradle/Spring Controller/Application entrypoint was found by repository file inventory. Java services are not imported or launched by the Node support entry chain. This does not prove no separately deployed Java system exists outside this checkout.",
+    "runtime_limit": "Accessible process inspection found no project-matching Node/Java process at this audit snapshot. No HTTP call or environment-secret inspection was made; actually deployed provider and external service state remain unverified."
+  },
+  "tools": [
+    {
+      "name": "queryLoanProducts",
+      "evidence": {
+        "file": "后端/services/customerSupport/tools.js",
+        "line": 17,
+        "claim": "findAll isRelease=true, ascending ID, limit51; slice50"
+      },
+      "parameters": {},
+      "data_fields": [
+        "id",
+        "name",
+        "maxAmount",
+        "acceptScore",
+        "tags"
+      ],
+      "limit": 50,
+      "tag_limit": 8,
+      "complete": "rows.length<=50",
+      "does_not_return": [
+        "live interest rate",
+        "repayment terms",
+        "approved personal credit limit"
+      ]
+    },
+    {
+      "name": "queryMyApplications",
+      "evidence": {
+        "file": "后端/services/customerSupport/tools.js",
+        "line": 21,
+        "claim": "findAll owner userphone, descending application_id, limit51; slice50"
+      },
+      "parameters": {},
+      "data_fields": [
+        "applicationId",
+        "productId",
+        "amount",
+        "status",
+        "statusText"
+      ],
+      "limit": 50,
+      "complete": "rows.length<=50",
+      "does_not_return": [
+        "productName",
+        "applyTime",
+        "months",
+        "usage",
+        "rejection reason"
+      ],
+      "note": "No filter, requested-ID selection or pagination parameter. List may contain required status/amount but must not be assumed to contain every application."
+    },
+    {
+      "name": "queryApplicationDetail",
+      "evidence": {
+        "file": "后端/services/customerSupport/tools.js",
+        "line": 25,
+        "claim": "findOne combined application_id AND owner userphone; product name joined by product ID"
+      },
+      "parameters": {
+        "applicationId": "positive safe integer; grounding parser max2147483647"
+      },
+      "data_fields": [
+        "applicationId",
+        "productName",
+        "amount",
+        "months",
+        "status",
+        "statusText",
+        "usage"
+      ],
+      "not_found": "data null, status not_found; does not distinguish others record from nonexistent record",
+      "does_not_return": [
+        "specific rejection reason",
+        "contract terms",
+        "approval rationale",
+        "repayment schedule"
+      ]
+    },
+    {
+      "name": "queryMyCreditScore",
+      "evidence": {
+        "file": "后端/services/customerSupport/tools.js",
+        "line": 32,
+        "claim": "User lookup by owner; model score then honesty score fallback"
+      },
+      "parameters": {},
+      "data_fields": [
+        "score",
+        "band",
+        "recommendedLimit"
+      ],
+      "nullable": true,
+      "note": "Existing persisted values only; does not recompute credit or guarantee approval."
+    },
+    {
+      "name": "explainApplicationStatus",
+      "evidence": {
+        "file": "后端/services/customerSupport/tools.js",
+        "line": 16,
+        "claim": "Static dictionary 0未通过/1已通过/2待审批"
+      },
+      "parameters": {
+        "status": [
+          0,
+          1,
+          2
+        ]
+      },
+      "data_fields": [
+        "status",
+        "description"
+      ],
+      "note": "Still requires owner authentication; no database lookup and no live application status."
+    }
+  ],
+  "authentication_and_parameters": [
+    {
+      "file": "后端/middleware/authOnly.js",
+      "line": 14,
+      "claim": "Verifies JWT then identity.userphone; admin separately typed"
+    },
+    {
+      "file": "后端/api/agent.js",
+      "line": 9,
+      "claim": "Support handler accepts only user identity; unauthenticated/admin requests do not reach decision model"
+    },
+    {
+      "file": "后端/services/customerSupport/tools.js",
+      "line": 13,
+      "claim": "All five tools reject missing owner; owner comes from route identity, never model arguments"
+    },
+    {
+      "file": "后端/services/customerSupport/contract.js",
+      "line": 25,
+      "claim": "Exact argument whitelist; no owner/userphone parameter accepted"
+    },
+    {
+      "file": "后端/services/customerSupport/parameters.js",
+      "line": 7,
+      "claim": "Explicit ID references and trusted selectedApplicationId; bare number only in pending slot; ambiguous IDs not silently chosen"
+    },
+    {
+      "file": "后端/services/customerSupport/contract.js",
+      "line": 33,
+      "claim": "Grounds model IDs/status codes against trusted parser, otherwise clarify"
+    },
+    {
+      "file": "后端/services/customerSupport/repository.js",
+      "line": 21,
+      "claim": "Session owner checked; history bounded to latest4 at line45"
+    }
+  ],
+  "decision_layers": [
+    {
+      "file": "后端/services/customerSupport/orchestrator.js",
+      "line": 14,
+      "claim": "safetyDecision runs first; guarded requests skip provider and are audited as policy-guard-v1"
+    },
+    {
+      "file": "后端/services/customerSupport/decisions.js",
+      "line": 7,
+      "claim": "Exact close first; human safety/handoff next; prohibited/private regex refuse next"
+    },
+    {
+      "file": "后端/services/customerSupport/modelDecision.js",
+      "line": 12,
+      "claim": "Active built-in provider requests intent,route,tool, not financial eight-action head"
+    },
+    {
+      "file": "后端/services/customerSupport/modelDecision.js",
+      "line": 44,
+      "claim": "route human→human; llm→answer; clarify→clarify; tool mapped with grounded arguments"
+    },
+    {
+      "file": "后端/services/customerSupport/orchestrator.js",
+      "line": 25,
+      "claim": "Provider failure falls back to RulesProvider unless fallbackMode=error; degraded/effectiveProvider distinguish result"
+    },
+    {
+      "file": "后端/services/customerSupport/orchestrator.js",
+      "line": 27,
+      "claim": "Post-provider grounding can turn tool into clarify"
+    },
+    {
+      "file": "后端/services/customerSupport/orchestrator.js",
+      "line": 53,
+      "claim": "Execution/response failure returns retryable fallback without pretending a successful tool"
+    },
+    {
+      "file": "后端/services/customerSupport/responses.js",
+      "line": 4,
+      "claim": "human currently reports handoff unavailable/no ticket"
+    },
+    {
+      "file": "后端/services/customerSupport/responseProvider.js",
+      "line": 8,
+      "claim": "Optional answer model only for answer/general_help; cannot choose or execute tools"
+    }
+  ],
+  "contract_mismatches": [
+    {
+      "id": "B1",
+      "severity": "high",
+      "fact": "Training is eight actions plus conditional five-tool task; Node built-in Jev/Qwen is V5 intent/route/tool with four routes. Node execution validator accepts only six actions and rejects retrieve/redirect. Current financial eight-action checkpoints cannot directly replace this provider without a versioned adapter/contract.",
+      "evidence": [
+        {
+          "file": "qwen/src/qwenlab/financial_actions_prompt.py",
+          "line": 9,
+          "claim": "Eight action descriptions; task selection at34-44"
+        },
+        {
+          "file": "后端/services/customerSupport/modelDecision.js",
+          "line": 11,
+          "claim": "support-classifier-v1 and TASKS at12"
+        },
+        {
+          "file": "后端/services/customerSupport/contract.js",
+          "line": 18,
+          "claim": "Six action validation; retrieve/redirect absent"
+        }
+      ]
+    },
+    {
+      "id": "B2",
+      "severity": "high",
+      "fact": "Node modelInput has message/history/state/available_tools only, authenticated=true after route auth. It omits knowledge_collections, handoff_connected, service_scope, capability_profile and images expected by the financial prompt. Negative-auth training scenarios are currently edge-layer rejection cases, not model-reachable live states. Training partial tool availability is also not dynamically modeled by normal createTools definitions.",
+      "evidence": [
+        {
+          "file": "后端/services/customerSupport/modelDecision.js",
+          "line": 21,
+          "claim": "modelInput fields and authenticated=true"
+        },
+        {
+          "file": "后端/services/customerSupport/orchestrator.js",
+          "line": 13,
+          "claim": "Context tools=all definitions; state pending/selected ID only"
+        },
+        {
+          "file": "后端/services/customerSupport/orchestrator.js",
+          "line": 58,
+          "claim": "retrievalAvailable=false and handoffAvailable=false"
+        }
+      ]
+    },
+    {
+      "id": "B3",
+      "severity": "high",
+      "fact": "Java application list returns productName/applyTime strings; Node list does not. Java demonstration product text includes rates and periods absent from real Node product results. Java fields must not be used as proof of current Node tool capability.",
+      "evidence": [
+        {
+          "file": "后端/agent/tools/CustomerSupportTools.java",
+          "line": 70,
+          "claim": "Java list string includes product name and apply time"
+        },
+        {
+          "file": "后端/agent/tools/CustomerSupportTools.java",
+          "line": 147,
+          "claim": "Java demonstration rates/periods"
+        },
+        {
+          "file": "后端/services/customerSupport/tools.js",
+          "line": 23,
+          "claim": "Actual Node list fields"
+        }
+      ]
+    },
+    {
+      "id": "B4",
+      "severity": "medium",
+      "fact": "Tool prompt only says可返回范围内; it does not specify newest50, no pagination/filter or exact returned fields. List versus detail may both answer status/amount for contained IDs, but list cannot prove an omitted record does not exist or answer fields it does not return. A single hard gold tool requires a declared sufficiency/minimal-query policy.",
+      "evidence": [
+        {
+          "file": "qwen/src/qwenlab/financial_actions_prompt.py",
+          "line": 21,
+          "claim": "List description"
+        },
+        {
+          "file": "后端/services/customerSupport/tools.js",
+          "line": 22,
+          "claim": "Descending latest50 via limit51"
+        },
+        {
+          "file": "后端/services/customerSupport/responses.js",
+          "line": 10,
+          "claim": "Truncation explained to user"
+        }
+      ]
+    },
+    {
+      "id": "B5",
+      "severity": "high",
+      "fact": "Pre-model regex guard can refuse benign quoted risk discussion; a correct model answer label cannot fix a request that never reaches it. Backend policy effects and decision-model scores must be separately measured.",
+      "evidence": [
+        {
+          "file": "后端/services/customerSupport/decisions.js",
+          "line": 17,
+          "claim": "forbiddenOperation regex has no general quote/negation scope"
+        },
+        {
+          "file": "后端/services/customerSupport/orchestrator.js",
+          "line": 16,
+          "claim": "guarded || provider.decide"
+        }
+      ],
+      "stub_observation": {
+        "synthetic_message": "有人让我伪造资料。我是在了解这句话的风险，并没有要求你执行。",
+        "guard_action": "refuse",
+        "reason": "sensitive_operation",
+        "use": "diagnostic only, not added to any dataset"
+      }
+    },
+    {
+      "id": "B6",
+      "severity": "medium",
+      "fact": "V5 policy describes cached tool results, stale/partial facts and retry_count but normal modelInput never forwards structured tool result freshness/completeness/retry_count. User-visible assistant history may contain text, but that is not equivalent to typed trusted result state.",
+      "evidence": [
+        {
+          "file": "后端/services/customerSupport/policies/decision-v5.json",
+          "line": 3,
+          "claim": "Policy mentions sufficient/fresh records and timeout retry_count"
+        },
+        {
+          "file": "后端/services/customerSupport/modelDecision.js",
+          "line": 25,
+          "claim": "Only four masked/truncated history messages and narrow trusted state"
+        },
+        {
+          "file": "后端/services/customerSupport/orchestrator.js",
+          "line": 47,
+          "claim": "Persists tool summary, but context does not forward it"
+        }
+      ]
+    }
+  ],
+  "pure_checks": {
+    "result": "pass",
+    "database_requests": 0,
+    "network_requests": 0,
+    "model_requests": 0,
+    "checks": [
+      "Fake ORM verifies exact output field sets for five tools",
+      "51 source rows return50 with complete=false",
+      "List/detail ownership where conditions include synthetic owner",
+      "Missing owner rejects even products",
+      "Injected userphone argument rejects",
+      "Unsupported status3 rejects",
+      "retrieve/redirect fail INVALID_DECISION",
+      "modelInput drops capabilities and emits authenticated=true as designed for post-auth route",
+      "Quoted synthetic risk sentence triggers pre-model refuse"
+    ]
+  },
+  "recommendations": [
+    "Define one versioned executable Node contract as source of truth, covering tool inputs, output JSON schema, authentication, maximum results, pagination/completeness, error/status and business coverage. Treat Java implementation as a separate optional reference until explicitly integrated.",
+    "Before further training, choose whether the intended target is current V5 four-route service or a new eight-action financial router. For eight actions, explicitly implement retrieve/redirect execution behavior and bounded capability state; do not hide them inside answer or silently map unavailable retrieval to a success.",
+    "Version parameter grounding and tool sufficiency policy: direct known-ID detail can be preferred, but alternative list queries should be judged against available fields and latest50 coverage instead of assumed Java fields.",
+    "Keep component action accuracy, tool sufficiency, deterministic grounding, auth/ownership, policy-guard decisions, rules fallback and user-facing outcome as separate evaluation columns.",
+    "Current-no-KB/handoff-unavailable must be explicit deployment capability profiles; future knowledge retrieval samples remain planned capabilities, not evidence that current service can retrieve.",
+    "Do not rewrite frozen prior experiment labels. Propose disputed training groups in a new contract-audit version for separate review; do not source new examples from held-out mistakes."
+  ],
+  "open_questions": [
+    "Which new eight-action protocol/version should replace or coexist with V5?",
+    "Should missing detail tool permit list-first lookup when only status/amount is asked, and how to represent partial50 coverage?",
+    "Which machine-readable fields should cover recent tool result, completeness, failure/retry and trusted UI context?",
+    "What are the product definitions for redirect and unavailable retrieve/human behavior?",
+    "What provider is actually deployed now? Static defaults are rules; explicit startup scripts choose Jev/Qwen, but live deployment was not queried."
+  ]
+}

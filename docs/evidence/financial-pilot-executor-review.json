@@ -1,0 +1,78 @@
+{
+  "decision": "pass",
+  "reviewer": "release_review",
+  "human_review": false,
+  "actual_read_files": [
+    "src/qwenlab/financial_train.py",
+    "tests/test_financial_train.py",
+    "scripts/start-financial-pilot.ps1",
+    "scripts/pause-financial-pilot.ps1",
+    "scripts/resume-financial-pilot.ps1",
+    "scripts/use-env.ps1"
+  ],
+  "file_sha256": {
+    "src/qwenlab/financial_train.py": "1d6cc12c18531f01d1ab21aae1d7ae19f8e439e916bd87fd2152ed6ceb49c917",
+    "tests/test_financial_train.py": "f51c51a6f543667590fd265b15bfc3827cc5895640be38e6887ae472f3dfb95d",
+    "scripts/start-financial-pilot.ps1": "5fe7de2eaebea0a43b00f21ea882029aa183b8c16b887622d02b2ec003f8329f",
+    "scripts/pause-financial-pilot.ps1": "5d0c1ac30d01e8467eee8caa49872c54f15bfea4793254fe2a93f14ad93ba255",
+    "scripts/resume-financial-pilot.ps1": "ecd647585fd384e1c1d4472a3f70c5f3b0f10b65e864211a044ea2df42667fdf",
+    "scripts/use-env.ps1": "114190e9dfe979dafa92fb23fa110acc9fa55a0d07aa8673afdb96ba14779cca"
+  },
+  "tests": {
+    "command": "python -m unittest discover -s tests -p test_financial_train.py -v",
+    "actual_passed": 15,
+    "actual_last_rerun_passed": true,
+    "powershell_parse_errors_all_three_scripts": 0
+  },
+  "findings": [
+    {
+      "id": "PE-01",
+      "priority": "P1",
+      "issue": "Baseline NF4 nonquantized parameters remain BF16; candidates prepare_model_for_kbit_training upcasts non-Params4bit parameters FP32, so gain/speed has dtype preparation confound.",
+      "evidence": "Actually read financial_train worker/fresh_model, modeling.load_model, joint_v4.add_adapter and installed PEFT function source.",
+      "recommendation": "Prepare the no-adapter baseline identically; record parameter dtype summary and synthetic regression.",
+      "status": "resolved_independently_read_and_regression_pass"
+    },
+    {
+      "id": "PE-02",
+      "priority": "P2",
+      "issue": "Crash after metrics durable write but before timing write is not recoverable: completed-metrics early return never reconstructs timing; worker baseline metrics-only skip and report later reads missing timing.",
+      "synthetic_probe": "evaluate_development returned without accessing model and timing exists=False",
+      "recommendation": "Rebuild/verify deterministic timing from exact completed raw predictions on completed branch; validate baseline readiness before training.",
+      "status": "resolved_independently_read_and_regression_pass"
+    }
+  ],
+  "unresolved_findings": [],
+  "positive_observations": [
+    "Inference second tool task is conditioned on predicted action, including false tool predictions. No gold-triggered model calls.",
+    "Only development evaluator is accessed; base and both fixed checkpoints raw predictions/metrics/bindings recomputed before gated selection.",
+    "Sampling action/profile then group then row with replacement and sampler RNG state restored; loss sums tool CE divided all sampled rows, action/tool accumulated then clip/one optimizer update.",
+    "Durable staged checkpoints bind adapter/config/training optimizer/Python NumPy torch CUDA RNG/sampler/summary; inference RNG restored on normal dev completion.",
+    "No backend/parser performance is claimed; measured serial request includes tokenization/transfer/conditional second model task; warmup excluded and hardware temporal confound reported.",
+    "prepared_base used for no-adapter baseline and fresh/resumed candidate: identical NF4 and nonquantized FP32 preparation; candidate alone injects trainable language q/v LoRA. Dtype summaries recorded.",
+    "Completed raw predictions deterministically reconstruct and check both metrics and timing; base resume and selection use finalizer; actual checkpoint file hashes validated before binding selection.",
+    "Scripts use offline flags, hidden worker windows, safe run-name, duplicate worker rejection and bound script hashes; no execution launch was performed by reviewer."
+  ],
+  "did_start_gpu_model_api": false,
+  "did_read_final": false,
+  "resolved_additional_findings": [
+    {
+      "id": "PE-03",
+      "issue": "Printed startup commands lost path separators",
+      "resolution": "Actual script tail reread confirms copyable relative commands; PowerShell AST parsing all 3 scripts passes."
+    },
+    {
+      "id": "PE-04",
+      "issue": "Pause request during protocol hashing could be overwritten by resumed-control write",
+      "resolution": "Resume old-control write now occurs before publishing new worker PID; no unconditional control overwrite after worker becomes discoverable. Post-freeze pause checked and confirmed; synthetic race regression passed."
+    }
+  ],
+  "limitations": [
+    "No GPU/model loading, forward/backward/preflight or actual pause/restart integration performed by reviewer. Synthetic unit regressions and code review cannot prove hardware execution.",
+    "Same-preparation baseline removes the diagnosed dtype confound; actual quality/speed still need measured inference, sequential laptop timing remains temperature/power confounded.",
+    "OS fsync and atomic staged rename protect durable outputs but cannot promise storage-hardware power-loss guarantees.",
+    "Progress training percentage is optimizer budget completion, excluding baseline/encoding/checkpoint/evaluation overhead; ETA is explicitly exploratory.",
+    "Only development is accessed by this executor; no calibration/final or fee API has run."
+  ],
+  "approval_scope": "Reviewed implementation may enter user-authorized local baseline/preflight and <=200 optimizer update pilot; no model effectiveness, calibration/final permission, long training, deployment or Git claim."
+}

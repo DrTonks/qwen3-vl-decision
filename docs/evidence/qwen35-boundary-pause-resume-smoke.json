@@ -1,0 +1,76 @@
+{
+  "status": "pass",
+  "study_protocol_sha256": "525576f9f9c708ccab86524073e092918253e00f2db5e4ed68bdbcd78c9011be",
+  "paused_progress": {
+    "stage": "paused",
+    "updated_at": "2026-10-02T11:54:15.877537+00:00",
+    "pid": 46736,
+    "process_created": 1790941992.7798758,
+    "run_name": "financial-qwen35-boundary-v1",
+    "arm": "replay",
+    "interrupted_stage": "training",
+    "checkpoint": ".local/checkpoints/financial-qwen35-boundary-v1-replay/step-7",
+    "worker_alive": false,
+    "arms": {
+      "replay": {
+        "step": 7,
+        "total_steps": 1530,
+        "percent": 0.46,
+        "finished": false
+      },
+      "overlay": {
+        "step": 0,
+        "total_steps": 1530,
+        "percent": 0.0,
+        "finished": false
+      }
+    },
+    "total_percent": 0.23,
+    "remaining_train_minutes_estimate": 143.6,
+    "estimate_scope": "pure training only; excludes evaluation, saving, model loading and future hardware changes"
+  },
+  "control": {
+    "state": "paused",
+    "safe_to_shutdown": true,
+    "checkpoints": {
+      "replay": ".local/checkpoints/financial-qwen35-boundary-v1-replay/step-7"
+    },
+    "at": "2026-10-02T11:54:17.566763+00:00"
+  },
+  "checkpoint": ".local/checkpoints/financial-qwen35-boundary-v1-replay/step-7",
+  "checkpoint_manifest_sha256": "5152a807cef539cf4aa5fde8e9ca2fc7da422ccc8c672c72f814a6011dc9ad6a",
+  "checkpoint_step": 7,
+  "no_api_requests": true,
+  "numerical_equivalence_claim": false,
+  "resumed_progress": {
+    "stage": "training",
+    "updated_at": "2026-10-02T11:55:51.678959+00:00",
+    "pid": 24616,
+    "process_created": 1790942082.132592,
+    "run_name": "financial-qwen35-boundary-v1",
+    "arm": "replay",
+    "step": 14,
+    "total_steps": 1530,
+    "worker_alive": true,
+    "arms": {
+      "replay": {
+        "step": 14,
+        "total_steps": 1530,
+        "percent": 0.92,
+        "finished": false
+      },
+      "overlay": {
+        "step": 0,
+        "total_steps": 1530,
+        "percent": 0.0,
+        "finished": false
+      }
+    },
+    "total_percent": 0.46,
+    "remaining_train_minutes_estimate": 131.7,
+    "estimate_scope": "pure training only; excludes evaluation, saving, model loading and future hardware changes"
+  },
+  "continuous_steps": true,
+  "resumed_from_step": 7,
+  "scope": "Real GPU checkpoint save/exit/resume and continuous optimizer step IDs; not a bitwise comparison against uninterrupted training"
+}

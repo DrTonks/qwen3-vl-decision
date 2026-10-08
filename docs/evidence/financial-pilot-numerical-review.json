@@ -1,0 +1,103 @@
+{
+  "version": "financial-eight-actions-pilot-numerical-review-v1",
+  "reviewer": "release_safety_data",
+  "human_review": false,
+  "decision": "pass",
+  "unresolved_findings": [],
+  "created_at": "2026-10-01T13:10:47.077735+00:00",
+  "file_sha256": {
+    "src/qwenlab/financial_train.py": "1d6cc12c18531f01d1ab21aae1d7ae19f8e439e916bd87fd2152ed6ceb49c917",
+    "tests/test_financial_train.py": "f51c51a6f543667590fd265b15bfc3827cc5895640be38e6887ae472f3dfb95d",
+    "scripts/start-financial-pilot.ps1": "5fe7de2eaebea0a43b00f21ea882029aa183b8c16b887622d02b2ec003f8329f",
+    "scripts/resume-financial-pilot.ps1": "ecd647585fd384e1c1d4472a3f70c5f3b0f10b65e864211a044ea2df42667fdf",
+    "scripts/pause-financial-pilot.ps1": "5d0c1ac30d01e8467eee8caa49872c54f15bfea4793254fe2a93f14ad93ba255",
+    "scripts/use-env.ps1": "114190e9dfe979dafa92fb23fa110acc9fa55a0d07aa8673afdb96ba14779cca"
+  },
+  "actually_read_files": [
+    "src/qwenlab/financial_train.py",
+    "tests/test_financial_train.py",
+    "scripts/start-financial-pilot.ps1",
+    "scripts/resume-financial-pilot.ps1",
+    "scripts/pause-financial-pilot.ps1",
+    "scripts/use-env.ps1"
+  ],
+  "dependency_fragments_read": [
+    "src/qwenlab/modeling.py:load_model",
+    "src/qwenlab/joint_v4.py:add_adapter",
+    "src/qwenlab/joint_v5.py:exclusive_lock,rng_state,restore_rng",
+    "src/qwenlab/candidate_inference.py:CandidateScorer,CandidateLinear"
+  ],
+  "did_modify_source": false,
+  "did_run_gpu_or_model": false,
+  "did_read_real_development_or_final_questions": false,
+  "model_api_requests": 0,
+  "tests": {
+    "original_cpu_suite_passed": 12,
+    "final_cpu_suite_passed": 15,
+    "gradient_probe": {
+      "function": "micro_backward",
+      "method": "CPU logits/target-device shim; two equal microbatches and action/tool tasks share parameters; compare gradient to explicitly summed full-batch weighted mean",
+      "global_mean_loss": 1.9508372608385034,
+      "max_abs_gradient_difference": 5.551115123125783e-17,
+      "passed": true
+    },
+    "checkpoint_rng_probe": {
+      "method": "actual save_checkpoint on CPU Tiny Linear+Dropout, AdamW, Python/NumPy/Torch random inputs and GroupSampler; load saved safetensors/state then restore all CPU RNGs and continue",
+      "steps_before_and_after_resume": [
+        3,
+        3
+      ],
+      "max_abs_parameter_difference": 0.0,
+      "cuda_rng_saved": [],
+      "hash_validation_passed": true,
+      "passed": true
+    },
+    "post_fix_engineering_probes": {
+      "late_pause_after_check": "new pause_requested preserved, never overwritten by resuming",
+      "missing_timing_recovery": "complete durable synthetic predictions + existing metrics reconstructed timing without scorer/model",
+      "altered_timing": "rejected against verified raw predictions"
+    }
+  },
+  "resolved_findings": [
+    {
+      "id": "PN-01",
+      "file": "src/qwenlab/financial_train.py",
+      "issue": "Original evaluation saved metrics before timing and skipped finalization when metrics existed; interrupted finalization could leave a permanently missing timing report.",
+      "status": "resolved",
+      "resolution": "finalize_evaluation validates exact complete prefix, checkpoint/source binding and recomputed metrics/timing; missing outputs rebuilt; differing outputs rejected; select and baseline resume use same finalizer."
+    },
+    {
+      "id": "PN-02",
+      "file": "src/qwenlab/financial_train.py",
+      "issue": "Original resume acknowledgement after protocol hashing could overwrite a concurrently submitted pause; check-then-write still had a short race.",
+      "status": "resolved",
+      "resolution": "resuming acknowledgement is now written before publishing the new worker PID; after publication, pending pause wins and no unconditional resuming write remains. Hashing-stage and late-after-check synthetic probes verified preservation."
+    },
+    {
+      "id": "PN-03",
+      "file": "scripts/start-financial-pilot.ps1",
+      "issue": "Original printed progress/pause commands omitted path separators.",
+      "status": "resolved",
+      "resolution": "Read-back confirms executable .\\.venv\\Scripts\\python.exe and .\\scripts\\pause-financial-pilot.ps1 command text."
+    }
+  ],
+  "observations": [
+    "Mean action CE and weighted tool CE divide by all rows, then gradient accumulation divides by microbatch count; fixed equal-size blocks make this equivalent to one global mean. Tool-row frequency is not accidentally normalized away.",
+    "Checkpoint includes adapter, AdamW state, optimizer step, Python/NumPy/Torch/CUDA RNG, sampler RNG and coverage/elapsed summary; staging files fsynced, digest-bound and atomically renamed before pause acknowledgement.",
+    "Pause safe_to_shutdown stays false until confirmed matching worker PID/create-time exits and any referenced checkpoint validates. Failed workers do not get a shutdown success message.",
+    "Evaluation-induced RNG consumption is restored before subsequent updates; fresh/resumed LoRA uses same prepared base precision path. CUDA nondeterministic kernels are not proven bitwise reproducible by this review.",
+    "Frozen execution binds dataset/base manifests, model root files, implementation and launch/control script sources plus package versions. Resume rejects changed protocol rather than silently creating a different experiment.",
+    "Only explicit training adapter rows enter supervised prompts. Development-only evaluation and fixed 100/200 checkpoint selection are enforced; manual extra pause checkpoints are not selected. Final and calibration are not read by this runner.",
+    "Model chooses action before optional separate tool inference, including false-tool positives; no gold-driven second call, argument generation or backend guard accuracy is claimed.",
+    "CUDA synchronization surrounds measured component/request work; tokenizer, transfers, predicted conditional tool and CPU probability extraction included. Loading/warmup excluded, hardware-temperature/time-order limitations explicitly reported.",
+    "Language-only LoRA parameters checked, local-files-only model load and offline launch environment; max200 updates/no automatic longer run/no vendor API or deployment. Preflight checks longest actual training action/tool examples, finite gradients and observed memory before optimizer updates.",
+    "Run-name and checkpoint directory constraints, OS-owned exclusive pilot lock and active/paused state checks prevent duplicate local pilot launches. Resource isolation from unrelated GPU programs still relies on operator coordination.",
+    "Launch scripts use hidden background worker, relative persisted log paths and D-workspace cache/temp environment. Pause script waits for process exit and propagates failed confirmation; resume selects the recorded active run."
+  ],
+  "limits": [
+    "This is independent agent review, not human review or model acceptance.",
+    "CPU probes validate arithmetic and serialization/state replay logic, not Qwen CUDA output correctness, VRAM peak or measured GPU latency. Real frozen-run preflight remains necessary.",
+    "An orderly manual pause and normal OS shutdown are covered; abrupt power loss may leave uncommitted log tails/pending directories, which are not falsely treated as valid checkpoints.",
+    "Only local execution/control code was changed by its author; reviewer did not alter frozen V1/V2 datasets or existing model modules."
+  ]
+}

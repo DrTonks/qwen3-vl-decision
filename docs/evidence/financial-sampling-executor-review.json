@@ -1,0 +1,146 @@
+{
+  "version": "financial-sampling-executor-review-v1",
+  "status": "pass",
+  "reviewer": "independent-agent-supplement_labels_review",
+  "reviewer_type": "AI",
+  "independent": true,
+  "human_reviewed": false,
+  "evaluation_examples_read": false,
+  "predictions_read": false,
+  "blind_screen_report_read": false,
+  "gpu_used": false,
+  "model_weights_loaded": false,
+  "model_api_requests": 0,
+  "training_started": false,
+  "reviewed_at_utc": "2026-10-04T01:46:26.329206+00:00",
+  "files": {
+    "src/qwenlab/financial_sampling_cycle.py": "f1767c0293ee88b9e30671a496fc398e2a7eb628d793065ce30b63b28047eb55",
+    "tests/test_financial_sampling_cycle.py": "530089e1995e1a66219efc4cf221492a0a112e2dfa591e69387a616b29b38d2c",
+    "scripts/start-financial-sampling.ps1": "005c8c2d03ceff3cb97de8a9ed4a253eb72cbdb472f91e2d117beebb05332eb7",
+    "scripts/pause-financial-sampling.ps1": "960c949e8d446a53b6ecd3bfe2741ad1261dbbe400790e179ea3fc38c81413ba",
+    "scripts/resume-financial-sampling.ps1": "17f0cc531addc67fe7314d3e84f47fd9f70c9edeb7f8e4387daa6c4ec2a3594c"
+  },
+  "config_sha256": "74c03b1f48b603fb9c916e993a4b4e80d6e38f9307fae591d31086537c23fe36",
+  "schedule_manifest_sha256": "8ed29d2bcd57a72cedb19bf0a09d6ebc315d5681e0bcc0a704b3a4fb62f973c4",
+  "source_sha256": {
+    "configs/financial-sampling-study-v1.json": "74c03b1f48b603fb9c916e993a4b4e80d6e38f9307fae591d31086537c23fe36",
+    "configs/qwen35-model-source.json": "d133981b764cbfdbf9b2758e84f0d1bcba906801d2c0921d9e4bdd42d08fef11",
+    "configs/support-financial-v2.json": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+    "requirements-qwen35.txt": "a6b2034db0356d00b7a9ec6d5ed39b9294e40bfd1f3e7ae1c78180dede74f0f0",
+    "scripts/pause-financial-pilot.ps1": "5d0c1ac30d01e8467eee8caa49872c54f15bfea4793254fe2a93f14ad93ba255",
+    "scripts/pause-financial-sampling.ps1": "960c949e8d446a53b6ecd3bfe2741ad1261dbbe400790e179ea3fc38c81413ba",
+    "scripts/resume-financial-pilot.ps1": "ecd647585fd384e1c1d4472a3f70c5f3b0f10b65e864211a044ea2df42667fdf",
+    "scripts/resume-financial-sampling.ps1": "17f0cc531addc67fe7314d3e84f47fd9f70c9edeb7f8e4387daa6c4ec2a3594c",
+    "scripts/start-financial-pilot.ps1": "5fe7de2eaebea0a43b00f21ea882029aa183b8c16b887622d02b2ec003f8329f",
+    "scripts/start-financial-sampling.ps1": "005c8c2d03ceff3cb97de8a9ed4a253eb72cbdb472f91e2d117beebb05332eb7",
+    "scripts/use-env.ps1": "114190e9dfe979dafa92fb23fa110acc9fa55a0d07aa8673afdb96ba14779cca",
+    "src/qwenlab/candidate_inference.py": "ba00fe89818d4549b2b124ecb549e1c0dff8c5513434427d8495b32656bed547",
+    "src/qwenlab/common.py": "9a2aa40b6dc8a94aba7ac1fe0c2a85d60f8465b465532ea4d12ea98d190606d1",
+    "src/qwenlab/financial_actions_metrics.py": "3d4f63967b1748116ea820d2dfdd0ab368926c16f8ee5863d4fbcf9903022a73",
+    "src/qwenlab/financial_actions_prompt.py": "817bd6578c99ee0dce3d5e1d784830ce1d70cd85a9ff54f6cdf8ec34515f2b36",
+    "src/qwenlab/financial_completion.py": "1b7973b8307e51c9e61fd1d7663d6ab5538ed2c6f35971c92c547abdf6e408b2",
+    "src/qwenlab/financial_expansion.py": "9f0cfb28bf43f8df5dd204b23272c8cec639a50717777f1f4526875cfa5b0b8e",
+    "src/qwenlab/financial_pilot.py": "8ecf6e5b757957cb889768f86827de6009578b1012cb1643fd2f3506fb698ab1",
+    "src/qwenlab/financial_prompt_v2.py": "25033aa2a7a3fadf60e51ece0eebe3fdfbbd0626cc9f04654b9641a91a4629ef",
+    "src/qwenlab/financial_ready.py": "450683f8f1ccc7a88e7df447b2ab61f496b88181055656532ac22ac9b2263085",
+    "src/qwenlab/financial_release.py": "820defcdd6363226225ae380735a06500bb27ce46eb06fff9a47aefe05689eeb",
+    "src/qwenlab/financial_release_core.py": "7f6ab2d2df84f4d275459b2eefd14db903145f65540c362d5cc7a4c07b2b4d1b",
+    "src/qwenlab/financial_sampling_cycle.py": "f1767c0293ee88b9e30671a496fc398e2a7eb628d793065ce30b63b28047eb55",
+    "src/qwenlab/financial_sampling_data.py": "d47df736854fc35204c38edb09958019e187b656e3dbfbf1800e17f5e9012c08",
+    "src/qwenlab/financial_sampling_freeze.py": "57a5ea7711d0538a3f57f1d87c40fef2c8f4578405e58c65160d5c3e9ce85014",
+    "src/qwenlab/financial_sampling_plan.py": "b599e6f3cb67f829c7eae18ebb45dd47f2406cea3277955defdf6de526eabb98",
+    "src/qwenlab/financial_serve_v2.py": "75c0684433213b82e12b36e9e1bf1ac923522157c34ea1b334cf58449eadb615",
+    "src/qwenlab/financial_service_v2_cycle.py": "1a5d02a9138b9765510052b875f82ab9dce0bf3cea49a7ea7c1be2f91367d89c",
+    "src/qwenlab/financial_service_v2_data.py": "fffde21c3023d7064c5e55ff7fc991624590f3c808f389403c47a47fcb55eae2",
+    "src/qwenlab/financial_service_v2_metrics.py": "b5af29223c5f55bb39e560cb7cc09ab8387c8d52ce095d88b3d31168a93c40dd",
+    "src/qwenlab/financial_train.py": "1d6cc12c18531f01d1ab21aae1d7ae19f8e439e916bd87fd2152ed6ceb49c917",
+    "src/qwenlab/joint_v4.py": "26378ca85470108c880bb4eae98f93a6969d5938c96b238596727c2e8d46e0db",
+    "src/qwenlab/joint_v5.py": "80190210f3c07578768e27120dd48b97192b01a90b6f8b97f32bcc7c44f15ed7",
+    "src/qwenlab/modeling.py": "fbcac24e76e3afee2804e09669a52786cf2d603bbcb9c95ccd423d2673d2264e",
+    "src/qwenlab/prepare_v2.py": "ab1e6aebfd9aa452d3c5112dbca8e570527e6b39ba9e75316410132a18d7390b",
+    "src/qwenlab/qwen35_model.py": "c11d5d7cead90cb2196f4fe3c716c585c4a61a914a18917c67697054cb82e54f",
+    "tests/test_financial_sampling_cycle.py": "530089e1995e1a66219efc4cf221492a0a112e2dfa591e69387a616b29b38d2c"
+  },
+  "supporting_evidence_sha256": {
+    "docs/evidence/financial-sampling-cpu-preflight.json": "a2256fc2da13d676fc0e1e1e36874b33bb1b7b2114eb2c6313dedf4c7bdd6395",
+    "docs/evidence/financial-sampling-design-review.json": "daf0f3c6aed515fdfd208f7ae8976897c44c49ba5b7d3fc4c8315291d6b6751c",
+    "docs/evidence/financial-sampling-independent-code-review.json": "72da7b44bf9b0da4d6f2704c7a76bea57f3a2187db1e2e2580a6b872c3861b19",
+    "data/financial-sampling-study-v1/pool-v1/manifest.json": "56bee2bdaa144351ade5f120a65899093369b576fa9934a74ebf40761cde004d"
+  },
+  "open_findings": [],
+  "resolved_findings": [
+    {
+      "id": "EXEC01",
+      "issue": "启动脚本运行目录名与新runner命名空间不一致",
+      "resolution": "三个PS与runner统一financial-sampling-v1 / financial-sampling-probe-v1，旧实验目录不复用。"
+    },
+    {
+      "id": "EXEC02",
+      "issue": "缓存相同长度token/candidate IDs篡改并重签自身metadata可绕过检查",
+      "resolution": "独立CPU负测先复现接受；现cache读取用实际prompt.encode逐行逐task完整比较，hash-valid伪造也拒绝；63项测试含此回归。"
+    },
+    {
+      "id": "EXEC03",
+      "issue": "encoded.json与meta双文件提交之间硬中断无法恢复",
+      "resolution": "只将不完整缓存pair保留为.orphan并重新编码；已有完整pair不匹配拒绝，不重置optimizer。"
+    },
+    {
+      "id": "EXEC04",
+      "issue": "先写completion再写report会留下不可恢复的半完成状态",
+      "resolution": "report和比较产物成功后才提交completion作为最终完成标记。"
+    },
+    {
+      "id": "EXEC05",
+      "issue": "无protocol的半初始化失败既不能fresh也不能resume",
+      "resolution": "recover_preprotocol仅在显式resume、旧worker退出、状态匹配且无checkpoint/cache/train/eval/unknown残留时保留失败证据并fresh freeze；probe继承原记录pause trigger。4项合成回归验证允许/拒绝边界。"
+    },
+    {
+      "id": "EXEC06",
+      "issue": "暂停消息不能仅以已写paused状态宣称可关机",
+      "resolution": "Python progress与PS同时要求worker真实退出、checkpoint完整及共享GPU锁可获取释放；PS核验bool类型、stage与safe_to_shutdown。"
+    }
+  ],
+  "validation": {
+    "synthetic_cpu_suite": {
+      "command": ".venv-qwen35/Scripts/python.exe -m unittest discover -s tests -p test_financial_sampling*.py",
+      "passed": 63,
+      "failed": 0,
+      "independently_rerun": true,
+      "real_evaluation_data_used": false
+    },
+    "powershell_parser": {
+      "scripts": 3,
+      "passed": 3,
+      "scripts_executed": false
+    },
+    "independent_actual_cpu_numerical_probes": {
+      "adamw_state_roundtrip_digest": "pass; one synthetic CPU optimizer update, scalar step and momentum state restored exactly",
+      "loss_denominator": "pass; four microbatches of two original rows with three true-tool rows produced action gradient mean over8 and tool gradient weighted0.75/8, not divided by3 or1.75",
+      "completed_arm_resume": "pass; bound checkpoint+arm-complete branch returns without qm.load or any optimizer update",
+      "cuda_initialized_after_probes": false
+    },
+    "static_review_coverage": [
+      "full new runner from imports through worker/CLI",
+      "three PowerShell scripts and argument/status interfaces",
+      "new test fixtures and reused micro_backward/checkpoint/RNG/model loader/metrics/calibration source interfaces"
+    ]
+  },
+  "verified_invariants": [
+    "Probe25+25与main400+400使用独立结果、缓存和每臂checkpoint；main只能接受相同common source/runtime/config/schedule/review/model绑定且退出的probe，绝不加载probe adapter作为main初态。",
+    "每臂重新设置相同Python/NumPy/torch/CUDA seed，更新前FP32 language-only LoRA参数摘要跨臂和probe/main比较；正式参数load后恢复还核验参数、optimizer和RNG摘要。",
+    "每步使用冻结row-ID计划，原业务样本8、microbatch2、累积4；显式AdamW参数和400步LR公式，两probe也用此曲线前25步；不重新洗牌、不因200结果改计划。",
+    "第0步和完成optimizer步保存checkpoint，恢复cursor=completed+1；训练日志必须为固定schedule精确已提交前缀，未提交尾部保留证据后回退；已完成臂不重复更新，bound无完成标记只补评估/结果提交。",
+    "200和400评估保存并恢复训练RNG，结果绑定protocol/checkpoint/split SHA；缓存既校验文件/行哈希/任务/标签/长度又实际重新编码。",
+    "共享financial-eight-actions-gpu.lock覆盖整个worker，不绕过其他同契约训练；PS额外exclusive launch guard与双namespace活性检查避免重复启动。",
+    "安全暂停保存当前完整状态后退出；safe_to_shutdown还要求进程身份消失和锁已释放。Probe必须实际跨进程从暂停点恢复下一步且核验三个状态摘要，才可授予main前置通过。",
+    "400仅选择两臂，完整旧总体/current/preauth/能力gate保留，macroF1→joint→uniform固定；200只能诊断。无通过即终止，不延长。",
+    "Probe拒绝读取任何评估split；main校准只允许选中的400候选；final需固定通过的校准政策。模型推断先预测action再条件tool，不用金标路由。",
+    "旧源码/config/data未由本审阅者修改，新执行protocol记录授权但不改CPU冻结training_enabled=false；无部署/API操作。"
+  ],
+  "scope_limits": [
+    "本pass是源码、合成CPU测试与数值接口审核，不是GPU探针已经成功的声明；实际GPU step12暂停退出/新进程恢复、FP32 LoRA载入及峰值显存由根节点随后探针验证，runner把成功证据作为main硬前置。",
+    "CPU optimizer摘要往返已实测；device归一化通过detach.cpu.contiguous消除设备差异，GPU实际恢复摘要仍须真实probe通过。",
+    "预训练权重、旧development/calibration/final题面与预测均未由审阅者打开；只审读取隔离代码与合成fixture。",
+    "单种子、旧开发集回归与不等token/FLOP的统计限制沿用已冻结设计；本报告不声称模型效果或生产可用。"
+  ]
+}

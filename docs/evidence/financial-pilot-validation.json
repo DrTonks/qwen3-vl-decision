@@ -1,0 +1,41 @@
+{
+  "version": "financial-eight-actions-pilot-validation-v1",
+  "date": "2026-10-01",
+  "human_review": false,
+  "checks": [
+    {
+      "command": ".venv/Scripts/python.exe -m unittest discover -s tests -p test_financial*.py",
+      "exit_code": 0,
+      "actual_tests_passed": 106
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m qwenlab.financial_ready validate --verify-local",
+      "exit_code": 0,
+      "train_total": 11899,
+      "development_rows": 384,
+      "calibration_rows": 256,
+      "final_rows": 512,
+      "scope": "Dataset/protection validation only; no calibration/final model evaluation."
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m qwenlab.financial_pilot_analysis",
+      "exit_code": 0,
+      "selected": null,
+      "partition": "development"
+    }
+  ],
+  "runtime_protocol_sha256": "efef23777db1f35b5d54af67fa0e58861d3f201eabc3687cbd179f8be5701049",
+  "execution_source_sha256": "1d6cc12c18531f01d1ab21aae1d7ae19f8e439e916bd87fd2152ed6ceb49c917",
+  "model_api_requests": 0,
+  "default_provider_changed": false,
+  "git_commit_or_push_performed": false,
+  "ignored_paths_checked": [
+    ".local/learning/",
+    ".local/checkpoints/",
+    "models/",
+    "results/financial-eight-actions-pilot-v2/",
+    "jev-api-key.txt"
+  ],
+  "published_evidence_files": 29,
+  "published_evidence_bytes": 1325233
+}

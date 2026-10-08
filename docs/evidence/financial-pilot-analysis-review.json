@@ -1,0 +1,143 @@
+{
+  "decision": "pass",
+  "reviewer": "release_review",
+  "human_review": false,
+  "actual_read_files": [
+    "src/qwenlab/financial_pilot_analysis.py",
+    "tests/test_financial_pilot_analysis.py"
+  ],
+  "file_sha256": {
+    "src/qwenlab/financial_pilot_analysis.py": "14f06ef9eda121ac44cc1cb0dd69c6bb4cc7956fa1bfdab7c3dfcdfe6366d259",
+    "tests/test_financial_pilot_analysis.py": "0127a81c7be41e54d6ae1e8d3bfa46023f65fb8a094cf2eaef4b3e36e2932460"
+  },
+  "actual_tests_passed": 5,
+  "did_start_gpu_model_api": false,
+  "did_read_final": false,
+  "positive_observations": [
+    "True-tool joint denominator and failure decomposition are correct.",
+    "Capability stratification and paired action changed-correct/changed-wrong counts do not imply tool or argument improvements.",
+    "Cluster paired accuracy delta resamples effective partition_group, does not pseudo-inflate independent story count; eight-story/synthetic/development selection limits stated.",
+    "Training loss and actual coverage are correctly separated from fixed train accuracy or independent generalization."
+  ],
+  "resolved_findings": [
+    {
+      "id": "PA-01",
+      "priority": "P2",
+      "issue": "Completion protocol hash and full deterministic selection (winner/pass/protocol/usage) not verified, only status and gates; synthetic probe accepted wrong completion hash and step-999 selected despite all gates failed.",
+      "recommendation": "Require completion protocol binding and exact expected selection without mutating prior evidence; add regression; bind analysis raw/result file hashes."
+    }
+  ],
+  "unresolved_findings": [],
+  "actual_read_result_files": [
+    "results/financial-eight-actions-pilot-v2/diagnostics.json",
+    "results/financial-eight-actions-pilot-v2/diagnostics.md",
+    "results/financial-eight-actions-pilot-v2/comparison.json",
+    "results/financial-eight-actions-pilot-v2/completion.json",
+    "results/financial-eight-actions-pilot-v2/selection.json",
+    "results/financial-eight-actions-pilot-v2/protocol.json",
+    "results/financial-eight-actions-pilot-v2/training-summary.json",
+    "results/financial-eight-actions-pilot-v2/train.jsonl",
+    "results/financial-eight-actions-pilot-v2/base-parameter-dtypes.json",
+    "results/financial-eight-actions-pilot-v2/candidate-parameter-dtypes.json",
+    "results/financial-eight-actions-pilot-v2/base/predictions.jsonl",
+    "results/financial-eight-actions-pilot-v2/base/metrics.json",
+    "results/financial-eight-actions-pilot-v2/base/timing.json",
+    "results/financial-eight-actions-pilot-v2/base/binding.json",
+    "results/financial-eight-actions-pilot-v2/step-100/predictions.jsonl",
+    "results/financial-eight-actions-pilot-v2/step-100/metrics.json",
+    "results/financial-eight-actions-pilot-v2/step-100/timing.json",
+    "results/financial-eight-actions-pilot-v2/step-100/binding.json",
+    "results/financial-eight-actions-pilot-v2/step-200/predictions.jsonl",
+    "results/financial-eight-actions-pilot-v2/step-200/metrics.json",
+    "results/financial-eight-actions-pilot-v2/step-200/timing.json",
+    "results/financial-eight-actions-pilot-v2/step-200/binding.json"
+  ],
+  "result_sha256": {
+    "results/financial-eight-actions-pilot-v2/diagnostics.json": "60826b734ef5e084e374b7a0edeea04e3971f2130676d85dd67de95bd6b965fe",
+    "results/financial-eight-actions-pilot-v2/diagnostics.md": "3d006ecc35f11b190392b75ea7917ece045537e54f890d834fa21cfa8d133b45",
+    "results/financial-eight-actions-pilot-v2/comparison.json": "d5a82524e9b1fc57e62d9fea74b7897d5d2de2a5d96cf2def5a0f974047434ca",
+    "results/financial-eight-actions-pilot-v2/completion.json": "ba87b4520a0e8073280c0e7eca2d87ee676ae33a914a29ce283638160bd8be0f",
+    "results/financial-eight-actions-pilot-v2/selection.json": "4af5d22bcb5fbed07ac56d1c47ae065e80d1c6663d57f35f7a2fbb37de5e59fa",
+    "results/financial-eight-actions-pilot-v2/protocol.json": "efef23777db1f35b5d54af67fa0e58861d3f201eabc3687cbd179f8be5701049",
+    "results/financial-eight-actions-pilot-v2/training-summary.json": "0abb795ead7cf0c678156b2cb8c4825d0515dba7e1a4abb7a1ab8dbf48c0226d",
+    "results/financial-eight-actions-pilot-v2/train.jsonl": "f9e1a3496083fd35ed9ae48309adcd711bb5934bd1b835921750321457e3865a",
+    "results/financial-eight-actions-pilot-v2/base-parameter-dtypes.json": "fc44edc41d9268670499dae273a9a1f7d169b31d7adc1c26bac75dd894a4acd5",
+    "results/financial-eight-actions-pilot-v2/candidate-parameter-dtypes.json": "4aff3be2352f836764675994b6374f4f8b7d7451ebe1973d5bdbde1c03e5fa0d",
+    "results/financial-eight-actions-pilot-v2/base/predictions.jsonl": "52e272248d44ee859d8f084f0f5370b53975c54654a7751374445758e3e1e0f1",
+    "results/financial-eight-actions-pilot-v2/base/metrics.json": "09b10851a2dd9be27adda0ede23c234ce4274933a85df6fd2e66e207c02402ad",
+    "results/financial-eight-actions-pilot-v2/base/timing.json": "7206eef1891f161929b43a41d84bf5d459e63c5d2f05f7882547317c5fe472d3",
+    "results/financial-eight-actions-pilot-v2/base/binding.json": "c9dd3b5568f97dc5a107051bb028535bae0de1de1d3382d88566e12f9384fd49",
+    "results/financial-eight-actions-pilot-v2/step-100/predictions.jsonl": "c549e8b7849001393071e53f2dc742b9301558b9588ab739f9efa98018b4b4f8",
+    "results/financial-eight-actions-pilot-v2/step-100/metrics.json": "ccaaaa6ede6b21e4cc4c46636dafa927661518124bc36013bf16b3b11ebdd3aa",
+    "results/financial-eight-actions-pilot-v2/step-100/timing.json": "dc6edecc528b4845ce8cbbc4db1b18537c57c9df8dfef2ae3fcf27e08879c25a",
+    "results/financial-eight-actions-pilot-v2/step-100/binding.json": "862b62fed0ae86c01dfcbf03d8c3dfa4e3277594373ac65033bf313964462247",
+    "results/financial-eight-actions-pilot-v2/step-200/predictions.jsonl": "9daa43138b5c28c8733350c3233d0d7d27fe215eeeb6c6ea09142599c6c657f9",
+    "results/financial-eight-actions-pilot-v2/step-200/metrics.json": "40c7b287a5330e15f6cb049321e06f8eabac1e1ce2381f4df4d0179d67f3c240",
+    "results/financial-eight-actions-pilot-v2/step-200/timing.json": "d1dbd5a3aa57988eef42380fed62222e854f1276822ed2f2117879aadbf6a16b",
+    "results/financial-eight-actions-pilot-v2/step-200/binding.json": "ca8d4ecbd085046e09d6260f69c2d040e691e09dec8c4ca4ee547f7428b96c72"
+  },
+  "post_fix_probes": {
+    "bad_completion": "rejected: Completion is not bound to this protocol and selection",
+    "bad_winner": "rejected: Recorded selection differs from independently recomputed selection",
+    "bad_passed": "rejected: Recorded selection differs from independently recomputed selection"
+  },
+  "actual_raw_metrics_profiles_tools_pairs_cluster_hash_selection_checks_passed": true,
+  "actual_results": {
+    "dev_rows": 384,
+    "action_correct_base": 185,
+    "action_correct_200": 309,
+    "accuracy_gain_percentage_points": 32.29166666666667,
+    "human_misses_200": 9,
+    "false_refusals_200": 3,
+    "unavailable_retrievals_200": 1,
+    "tool_joint_200": "53/64",
+    "status_tool_joint_200": "13/16",
+    "selected": null,
+    "unique_training_rows": 1175,
+    "sample_positions": 1600
+  },
+  "limits": [
+    "No calibration or final question files read; only development diagnostics checked.",
+    "No GPU/model inference or API run by reviewer.",
+    "Eight authored macro-story cluster interval is development-dependent exploratory evidence, not real-user coverage or proof against overfitting.",
+    "No candidate passed frozen gates; preserve current default, do not auto-extend/deploy.",
+    "Comparison timings include conditional tool when predicted; temporal hardware conditions differ and no Jev/new-model comparisons measured."
+  ],
+  "final_report_review": {
+    "decision": "pass",
+    "human_review": false,
+    "actually_read": "Full docs38/export manifest, README/docs00 top summaries, exported source/copy bytes and measured supporting training/preflight/timing/pause outputs",
+    "file_sha256": {
+      "docs/38-金融八动作200步试训结果与诊断.md": "a9eb6932a9deb3c3da777c8f5832c12976297775c855d0ecb1bb5fcb328493b9",
+      "README.md": "fe4c48e0278dedce27758403a5ebb362c72f8f3779082b2e7c688f8735afc3ab",
+      "docs/00-阅读导航.md": "208bcd6eb97ec84f82288cc2f75da9c7a797cc409768c3c185438c94e5199c55",
+      "docs/evidence/financial-eight-actions-pilot-v2/export-manifest.json": "0aeec2e5ad2101554e80e4f523448ba27c7a4f763a086e95bfdf555a7813cca6"
+    },
+    "exported_files_verified": 29,
+    "exported_bytes_verified": 1325233,
+    "export_source_copy_all_hash_bytes_equal": true,
+    "no_absolute_windows_local_paths_found": true,
+    "resolved_editorial_findings": [
+      "docs00 stale V1 historical training-not-started wording corrected",
+      "tool definition includes read-only status explanation",
+      "Action timing named decision, including tokenization/transfers, not pure GPU forward"
+    ],
+    "measured_false_tool_routing": {
+      "predicted_tool": 75,
+      "wrong_on_non_tool": 22,
+      "gold_categories": {
+        "clarify": 9,
+        "human": 6,
+        "retrieve": 7
+      },
+      "precision": 0.7066666666666667
+    },
+    "unresolved_findings": [],
+    "limits": [
+      "Only development results, no Jev/V5 ranking or backend/parameter/response end-to-end quality claim.",
+      "No selected candidate passed frozen gates; no deployment/extension authorized.",
+      "Synthetic eight macro-story intervals exploratory, cannot rule out overfitting or guarantee real-user quality.",
+      "No GPU or completed full-suite test rerun necessary/performed for this editorial review."
+    ]
+  }
+}

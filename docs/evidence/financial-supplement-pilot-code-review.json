@@ -1,0 +1,87 @@
+{
+  "review_version": "financial-supplement-pilot-code-review-v1",
+  "reviewer": "independent AI subagent supplement_integrity_review",
+  "human_reviewed": false,
+  "training_eligible": false,
+  "status": "changes_requested",
+  "code_sha256": "fe7233948b8464033885f7354c49c5d9f247fba54f504fba771e383681fd7ae4",
+  "candidate_sha256": "74a76e142365009cc55d01262c1472a9d270229fdb75b98e70ee425d9712e768",
+  "current_code_sha256_during_independent_projection_test": "6d45723460d0554ac74b651ccf801c9e5258c7e39c0e87b9bb6264bc6f1e29c5",
+  "source_sha256": "cee25d512b15aacf35e7ebabea0791761ba40bb9e00198926b6bd03aa8981326",
+  "policy_sha256": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+  "node_exporter_sha256": "50400895a0bc418b6d8f937470ef387aba4df54df6a3b8556035ac7c0ab77f89",
+  "scope": {
+    "read_sources": [
+      "src/qwenlab/financial_supplement_pilot.py",
+      "data/financial-supplement-pilot-v1/authoring.json",
+      "data/financial-supplement-pilot-v1/build-v1/manifest.json",
+      "data/financial-supplement-pilot-v1/build-v1/candidates.json",
+      "configs/support-financial-v2.json",
+      "repo:uestc_Integrated_Design/后端/scripts/export-financial-input.cjs"
+    ],
+    "runtime_note": "Executed actual Node exporter; its normal business dependencies are loaded by Node. Python function AST extraction avoided importing out-of-scope modules. check_row implementation was not inspected or invoked.",
+    "heldout_files_read": false,
+    "prediction_or_diagnostic_text_read": false,
+    "model_weights_loaded": false,
+    "model_api_requests": 0,
+    "gpu_used": false,
+    "source_or_original_build_modified": false,
+    "review_focus": "Source -> actual Node projection -> component/planned capability transformations; draft integrity, editing/rebuilding and metadata boundaries.",
+    "not_claimed": [
+      "Human review",
+      "Cross-corpus overlap audit",
+      "Training approval",
+      "Production endpoint behavior",
+      "Independent exhaustive semantic adjudication"
+    ]
+  },
+  "checks": {
+    "source_structure": "pass; 160 rows, 80 source groups, required cohort and layer budgets",
+    "actual_node_regeneration": "pass; all 160 generated projections match existing manifest projection SHA",
+    "candidate_rematerialization": "pass; exact JSON equality for all 160 candidates after declared transforms",
+    "tool_and_retrieval_label_structural_checks": "pass; availability/auth/argument-key/retrieval-collection constraints independently checked",
+    "ai_origin_and_no_training_no_human_review": "pass for all candidate rows",
+    "manifest_core_hashes": "pass for source/policy/candidates; code changed concurrently during parent fix, original hash retained in this review",
+    "empty_candidates_missing_hash_accepted": "static finding; parent started fix before dynamic reproduction completed",
+    "empty_candidates_rehashed_accepted": "static finding; parent started fix before dynamic reproduction completed",
+    "manifest_eligibility_and_human_review_claims_accepted": "static finding; parent started fix before dynamic reproduction completed"
+  },
+  "findings": [
+    {
+      "id": "FSP-CODE-01",
+      "priority": "P1",
+      "title": "verify accepts an empty dataset and an empty or incomplete manifest file map",
+      "location": "financial_supplement_pilot.py:verify",
+      "evidence": "Static reading of original verify: iterates only supplied manifest.files; iterates candidate rows without validating count, IDs, groups, cohorts or source correspondence. Therefore files={} and candidates=[] bypass both loops. Parent began fixing before dynamic reproduction completed.",
+      "impact": "A damaged or rewritten manifest can remove candidate validation and all source-to-build invariants while verify reports success.",
+      "recommendation": "Require exact manifest keys/file set and safe filenames, validate draft flags, candidate length/IDs/groups/cohorts, regenerate fixtures from current authoring, validate projection metadata, and compare rematerialized candidates and summary/review artifacts."
+    },
+    {
+      "id": "FSP-CODE-02",
+      "priority": "P2",
+      "title": "verify does not establish current Node implementation or source-to-candidate lineage",
+      "location": "financial_supplement_pilot.py:build/verify",
+      "evidence": "Exporter embeds hashes of six actual Node source dependencies in each projection, but Python verification never compares those hashes with the backend or verifies projection-input hashes/metadata; it only checks manifest-listed bytes.",
+      "impact": "Node code can change while unchanged Python build verification still succeeds; a candidate and self-rehashed manifest can diverge from the editable source. The existing current build did independently reproduce exactly.",
+      "recommendation": "Record and validate backend dependency hashes, offer backend-aware verification or explicitly report snapshot-only verification, recompute projection hashes, and rematerialize candidate records from source and checked projection."
+    },
+    {
+      "id": "FSP-CODE-03",
+      "priority": "P2",
+      "title": "manifest-level draft and human-review claims are unchecked",
+      "location": "financial_supplement_pilot.py:verify",
+      "evidence": "Original code has no checks for manifest status/version/model/review flags; it checks only candidate-level eligibility and human review inside the per-row loop.",
+      "impact": "Consumers relying on manifest metadata can see claims that the validator never enforces.",
+      "recommendation": "Validate the manifest draft status and exact false flags; retain explicit AI synthetic provenance and separate independent AI review from human review."
+    }
+  ],
+  "observations": [
+    "Existing build is reproducible against real current Node exporter, not a handwritten Python imitation.",
+    "Only component-message-only removes application_id/status_code; planned cohort explicitly changes profile and knowledge collections; preauth remains visibly separate.",
+    "Build refuses an already existing output directory; Node exporter validates all rows before exclusive output write. Failed builds can leave a partial new directory, which correctly cannot be reused.",
+    "Wrapper exposes only build/verify/audit. Optional audit loads a local tokenizer, never trains or promotes eligibility.",
+    "Synthetic origin/licence statement is an author declaration, not proof of originality or human review.",
+    "A manifest stored beside writable files is not an adversarial signature; a separately trusted digest or immutable store is required for authenticity."
+  ],
+  "temporary_test_directory": "workspace:tmp/supplement-review-independent-v1-run2"
+}

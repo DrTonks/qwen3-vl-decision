@@ -150,3 +150,15 @@ data/financial-full-coverage-study-v1/** -text
 # Preserve the remaining bound model/config metadata.
 configs/financial-qwen35-boundary-v1.json -text
 configs/qwen35-model-source.json -text
+
+# Preserve remaining published verification artifacts byte for byte.
+docs/evidence/financial-eight-actions-pilot-v2/diagnostics.md -text
+docs/evidence/financial-eight-actions-pilot-v2/pause-resume-smoke.json -text
+docs/evidence/financial-eight-actions-pilot-v2/report.md -text
+docs/evidence/financial-eight-actions-v2-final-code-review.json -text
+docs/evidence/financial-pilot-numerical-review.json -text
+docs/evidence/financial-state-pair-candidate-readiness-review-v1.json -text
+docs/evidence/financial-state-pair-probe-v1.json -text
+docs/evidence/qwen35-cycle-code-review.json -text
+scripts/audit-financial-full-coverage.py -text
+scripts/audit-financial-state-pair.py -text

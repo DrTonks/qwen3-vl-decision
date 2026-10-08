@@ -1,0 +1,44 @@
+{
+  "status": "pass_for_interface_and_fixture_integration",
+  "reviewer": "/root",
+  "reviewer_type": "independent_ai_reviewer",
+  "source_sha256": {
+    "services/customerSupport/financialContract.js": "87a6b08b34aa5ed8f044ab5a3c676ad8882b2acc042c632833e9d8ad50a324ec",
+    "services/customerSupport/financialProvider.js": "de60d4a9e6e479fe59d8b621feab405fbc33449e4cb48d41d389c718cfd85932",
+    "services/customerSupport/financialOrchestrator.js": "d4de5f12106d022d1ce50aa30c2a5ea8afeb0d1f60b80786ec3fcdfc06418b08",
+    "services/customerSupport/index.js": "0c52711fc182c3a87f55d7ac5ce4a5ff249d195170cb402af5e2d4d8abf4f197",
+    "services/customerSupport/policies/support-financial-v2.json": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+    "scripts/start-support-financial.js": "68129590f096b28d008547961101b3a85e8e7290b9e40359c3fe60c89da31af8",
+    "scripts/verify-financial-v2-http.cjs": "15a3286a3eac16f43f64e741e1f559bbac55cb9273c171b0b8d001ca147ac067",
+    "tests/support.financial.cjs": "a97ac7fc8df7f0735ac53fe3a38f9c4f35804732988dbfa84f8e84285400c158"
+  },
+  "checks": {
+    "new_financial_tests": 11,
+    "legacy_provider_tests": 11,
+    "legacy_support_tests": 14,
+    "initial_combined_pass": 35,
+    "initial_combined_environment_failure": 1,
+    "restart_test_escalated_retry_pass": 1,
+    "real_http_fixture_requests": 10
+  },
+  "findings": [
+    {
+      "issue": "generic clarification was forced into applicationId slot",
+      "resolution": "default ambiguous_request with awaiting_input; targeted regression added"
+    },
+    {
+      "issue": "two maximum classifier calls plus execution exceeded default60s lease",
+      "resolution": "executionBudget extends v2 lease with5s margin; oldV5 unchanged"
+    },
+    {
+      "issue": "cross-runtime probability validation tolerances diverged",
+      "resolution": "same1e-5 sum tolerance and exact maximum choice check"
+    }
+  ],
+  "limitations": [
+    "No real model/GPU/vendor calls; fixed fixture outputs do not measure decision accuracy.",
+    "Legacy tests use in-memory and temporary SQLite, not MySQL acceptance.",
+    "v2 does not implement retrieval/handoff connectors or qualified new-policy model weights.",
+    "No App/default production/provider changes."
+  ]
+}

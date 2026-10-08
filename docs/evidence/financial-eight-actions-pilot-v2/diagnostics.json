@@ -1,0 +1,2124 @@
+{
+  "protocol_sha256": "efef23777db1f35b5d54af67fa0e58861d3f201eabc3687cbd179f8be5701049",
+  "analysis_source_sha256": "14f06ef9eda121ac44cc1cb0dd69c6bb4cc7956fa1bfdab7c3dfcdfe6366d259",
+  "evidence_sha256": {
+    "results/financial-eight-actions-pilot-v2/protocol.json": "efef23777db1f35b5d54af67fa0e58861d3f201eabc3687cbd179f8be5701049",
+    "results/financial-eight-actions-pilot-v2/completion.json": "ba87b4520a0e8073280c0e7eca2d87ee676ae33a914a29ce283638160bd8be0f",
+    "results/financial-eight-actions-pilot-v2/selection.json": "4af5d22bcb5fbed07ac56d1c47ae065e80d1c6663d57f35f7a2fbb37de5e59fa",
+    "results/financial-eight-actions-pilot-v2/training-summary.json": "0abb795ead7cf0c678156b2cb8c4825d0515dba7e1a4abb7a1ab8dbf48c0226d",
+    "results/financial-eight-actions-pilot-v2/train.jsonl": "f9e1a3496083fd35ed9ae48309adcd711bb5934bd1b835921750321457e3865a",
+    "results/financial-eight-actions-pilot-v2/base/predictions.jsonl": "52e272248d44ee859d8f084f0f5370b53975c54654a7751374445758e3e1e0f1",
+    "results/financial-eight-actions-pilot-v2/base/metrics.json": "09b10851a2dd9be27adda0ede23c234ce4274933a85df6fd2e66e207c02402ad",
+    "results/financial-eight-actions-pilot-v2/base/timing.json": "7206eef1891f161929b43a41d84bf5d459e63c5d2f05f7882547317c5fe472d3",
+    "results/financial-eight-actions-pilot-v2/base/binding.json": "c9dd3b5568f97dc5a107051bb028535bae0de1de1d3382d88566e12f9384fd49",
+    "results/financial-eight-actions-pilot-v2/step-100/predictions.jsonl": "c549e8b7849001393071e53f2dc742b9301558b9588ab739f9efa98018b4b4f8",
+    "results/financial-eight-actions-pilot-v2/step-100/metrics.json": "ccaaaa6ede6b21e4cc4c46636dafa927661518124bc36013bf16b3b11ebdd3aa",
+    "results/financial-eight-actions-pilot-v2/step-100/timing.json": "dc6edecc528b4845ce8cbbc4db1b18537c57c9df8dfef2ae3fcf27e08879c25a",
+    "results/financial-eight-actions-pilot-v2/step-100/binding.json": "862b62fed0ae86c01dfcbf03d8c3dfa4e3277594373ac65033bf313964462247",
+    "results/financial-eight-actions-pilot-v2/step-200/predictions.jsonl": "9daa43138b5c28c8733350c3233d0d7d27fe215eeeb6c6ea09142599c6c657f9",
+    "results/financial-eight-actions-pilot-v2/step-200/metrics.json": "40c7b287a5330e15f6cb049321e06f8eabac1e1ce2381f4df4d0179d67f3c240",
+    "results/financial-eight-actions-pilot-v2/step-200/timing.json": "d1dbd5a3aa57988eef42380fed62222e854f1276822ed2f2117879aadbf6a16b",
+    "results/financial-eight-actions-pilot-v2/step-200/binding.json": "ca8d4ecbd085046e09d6260f69c2d040e691e09dec8c4ca4ee547f7428b96c72"
+  },
+  "partition": "development",
+  "rows": 384,
+  "profiles": {
+    "base": {
+      "current-no-kb-v1": {
+        "rows": 166,
+        "action_accuracy": 0.46987951807228917,
+        "human_misses": 14,
+        "unavailable_retrievals": 1
+      },
+      "planned-kb-v1": {
+        "rows": 218,
+        "action_accuracy": 0.4908256880733945,
+        "human_misses": 11,
+        "unavailable_retrievals": 0
+      }
+    },
+    "step-100": {
+      "current-no-kb-v1": {
+        "rows": 166,
+        "action_accuracy": 0.7590361445783133,
+        "human_misses": 5,
+        "unavailable_retrievals": 1
+      },
+      "planned-kb-v1": {
+        "rows": 218,
+        "action_accuracy": 0.7064220183486238,
+        "human_misses": 4,
+        "unavailable_retrievals": 0
+      }
+    },
+    "step-200": {
+      "current-no-kb-v1": {
+        "rows": 166,
+        "action_accuracy": 0.8373493975903614,
+        "human_misses": 5,
+        "unavailable_retrievals": 1
+      },
+      "planned-kb-v1": {
+        "rows": 218,
+        "action_accuracy": 0.7798165137614679,
+        "human_misses": 4,
+        "unavailable_retrievals": 0
+      }
+    }
+  },
+  "tools": {
+    "base": {
+      "queryLoanProducts": {
+        "support": 8,
+        "routed_tool": 8,
+        "joint_correct": 8,
+        "joint_accuracy": 1.0,
+        "selected_correct_given_routed": 1.0,
+        "wrong_action_counts": {}
+      },
+      "queryMyApplications": {
+        "support": 16,
+        "routed_tool": 16,
+        "joint_correct": 11,
+        "joint_accuracy": 0.6875,
+        "selected_correct_given_routed": 0.6875,
+        "wrong_action_counts": {}
+      },
+      "queryApplicationDetail": {
+        "support": 16,
+        "routed_tool": 16,
+        "joint_correct": 16,
+        "joint_accuracy": 1.0,
+        "selected_correct_given_routed": 1.0,
+        "wrong_action_counts": {}
+      },
+      "queryMyCreditScore": {
+        "support": 8,
+        "routed_tool": 0,
+        "joint_correct": 0,
+        "joint_accuracy": 0.0,
+        "selected_correct_given_routed": null,
+        "wrong_action_counts": {
+          "answer": 8
+        }
+      },
+      "explainApplicationStatus": {
+        "support": 16,
+        "routed_tool": 3,
+        "joint_correct": 3,
+        "joint_accuracy": 0.1875,
+        "selected_correct_given_routed": 1.0,
+        "wrong_action_counts": {
+          "answer": 13
+        }
+      }
+    },
+    "step-100": {
+      "queryLoanProducts": {
+        "support": 8,
+        "routed_tool": 4,
+        "joint_correct": 4,
+        "joint_accuracy": 0.5,
+        "selected_correct_given_routed": 1.0,
+        "wrong_action_counts": {
+          "answer": 3,
+          "retrieve": 1
+        }
+      },
+      "queryMyApplications": {
+        "support": 16,
+        "routed_tool": 12,
+        "joint_correct": 12,
+        "joint_accuracy": 0.75,
+        "selected_correct_given_routed": 1.0,
+        "wrong_action_counts": {
+          "answer": 4
+        }
+      },
+      "queryApplicationDetail": {
+        "support": 16,
+        "routed_tool": 13,
+        "joint_correct": 13,
+        "joint_accuracy": 0.8125,
+        "selected_correct_given_routed": 1.0,
+        "wrong_action_counts": {
+          "answer": 2,
+          "clarify": 1
+        }
+      },
+      "queryMyCreditScore": {
+        "support": 8,
+        "routed_tool": 0,
+        "joint_correct": 0,
+        "joint_accuracy": 0.0,
+        "selected_correct_given_routed": null,
+        "wrong_action_counts": {
+          "answer": 8
+        }
+      },
+      "explainApplicationStatus": {
+        "support": 16,
+        "routed_tool": 2,
+        "joint_correct": 2,
+        "joint_accuracy": 0.125,
+        "selected_correct_given_routed": 1.0,
+        "wrong_action_counts": {
+          "answer": 14
+        }
+      }
+    },
+    "step-200": {
+      "queryLoanProducts": {
+        "support": 8,
+        "routed_tool": 7,
+        "joint_correct": 7,
+        "joint_accuracy": 0.875,
+        "selected_correct_given_routed": 1.0,
+        "wrong_action_counts": {
+          "retrieve": 1
+        }
+      },
+      "queryMyApplications": {
+        "support": 16,
+        "routed_tool": 15,
+        "joint_correct": 15,
+        "joint_accuracy": 0.9375,
+        "selected_correct_given_routed": 1.0,
+        "wrong_action_counts": {
+          "answer": 1
+        }
+      },
+      "queryApplicationDetail": {
+        "support": 16,
+        "routed_tool": 15,
+        "joint_correct": 15,
+        "joint_accuracy": 0.9375,
+        "selected_correct_given_routed": 1.0,
+        "wrong_action_counts": {
+          "clarify": 1
+        }
+      },
+      "queryMyCreditScore": {
+        "support": 8,
+        "routed_tool": 3,
+        "joint_correct": 3,
+        "joint_accuracy": 0.375,
+        "selected_correct_given_routed": 1.0,
+        "wrong_action_counts": {
+          "answer": 5
+        }
+      },
+      "explainApplicationStatus": {
+        "support": 16,
+        "routed_tool": 13,
+        "joint_correct": 13,
+        "joint_accuracy": 0.8125,
+        "selected_correct_given_routed": 1.0,
+        "wrong_action_counts": {
+          "answer": 2,
+          "clarify": 1
+        }
+      }
+    }
+  },
+  "pairs": {
+    "step-100": {
+      "improved": 119,
+      "regressed": 24,
+      "net": 95,
+      "improved_ids": [
+        {
+          "id": "FIN-F2-E-0001",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0004",
+          "gold": "clarify",
+          "before": "answer",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0005",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0017",
+          "gold": "answer",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0026",
+          "gold": "retrieve",
+          "before": "tool",
+          "after": "retrieve"
+        },
+        {
+          "id": "FIN-F2-E-0027",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0028",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0029",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0031",
+          "gold": "human",
+          "before": "clarify",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0035",
+          "gold": "human",
+          "before": "tool",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0037",
+          "gold": "refuse",
+          "before": "human",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0041",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0044",
+          "gold": "refuse",
+          "before": "clarify",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0046",
+          "gold": "redirect",
+          "before": "tool",
+          "after": "redirect"
+        },
+        {
+          "id": "FIN-F2-E-0048",
+          "gold": "redirect",
+          "before": "answer",
+          "after": "redirect"
+        },
+        {
+          "id": "FIN-F2-E-0051",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0053",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0065",
+          "gold": "answer",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0072",
+          "gold": "retrieve",
+          "before": "tool",
+          "after": "retrieve"
+        },
+        {
+          "id": "FIN-F2-E-0075",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0076",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0077",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0078",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0079",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0081",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0091",
+          "gold": "human",
+          "before": "tool",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0093",
+          "gold": "answer",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0098",
+          "gold": "answer",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0099",
+          "gold": "retrieve",
+          "before": "tool",
+          "after": "retrieve"
+        },
+        {
+          "id": "FIN-F2-E-0100",
+          "gold": "retrieve",
+          "before": "tool",
+          "after": "retrieve"
+        },
+        {
+          "id": "FIN-F2-E-0103",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0104",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0105",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0107",
+          "gold": "human",
+          "before": "clarify",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0109",
+          "gold": "human",
+          "before": "tool",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0114",
+          "gold": "refuse",
+          "before": "human",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0116",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0117",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0121",
+          "gold": "refuse",
+          "before": "tool",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0124",
+          "gold": "redirect",
+          "before": "answer",
+          "after": "redirect"
+        },
+        {
+          "id": "FIN-F2-E-0127",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0129",
+          "gold": "clarify",
+          "before": "answer",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0130",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0141",
+          "gold": "answer",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0144",
+          "gold": "answer",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0151",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0152",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0153",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0154",
+          "gold": "human",
+          "before": "tool",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0156",
+          "gold": "human",
+          "before": "tool",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0157",
+          "gold": "human",
+          "before": "tool",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0162",
+          "gold": "refuse",
+          "before": "redirect",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0164",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0165",
+          "gold": "clarify",
+          "before": "answer",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0170",
+          "gold": "refuse",
+          "before": "tool",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0177",
+          "gold": "human",
+          "before": "tool",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0178",
+          "gold": "human",
+          "before": "redirect",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0181",
+          "gold": "refuse",
+          "before": "redirect",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0189",
+          "gold": "refuse",
+          "before": "redirect",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0191",
+          "gold": "redirect",
+          "before": "answer",
+          "after": "redirect"
+        },
+        {
+          "id": "FIN-F2-E-0194",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0195",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0196",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0197",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0208",
+          "gold": "answer",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0209",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0211",
+          "gold": "answer",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0218",
+          "gold": "close",
+          "before": "tool",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0219",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0220",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0221",
+          "gold": "human",
+          "before": "tool",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0223",
+          "gold": "human",
+          "before": "tool",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0224",
+          "gold": "human",
+          "before": "tool",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0229",
+          "gold": "refuse",
+          "before": "answer",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0230",
+          "gold": "refuse",
+          "before": "clarify",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0231",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0232",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0235",
+          "gold": "retrieve",
+          "before": "tool",
+          "after": "retrieve"
+        },
+        {
+          "id": "FIN-F2-E-0236",
+          "gold": "refuse",
+          "before": "clarify",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0237",
+          "gold": "refuse",
+          "before": "answer",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0242",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0244",
+          "gold": "clarify",
+          "before": "answer",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0256",
+          "gold": "answer",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0259",
+          "gold": "answer",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0263",
+          "gold": "retrieve",
+          "before": "tool",
+          "after": "retrieve"
+        },
+        {
+          "id": "FIN-F2-E-0266",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0267",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0268",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0269",
+          "gold": "human",
+          "before": "tool",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0271",
+          "gold": "human",
+          "before": "clarify",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0276",
+          "gold": "refuse",
+          "before": "redirect",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0277",
+          "gold": "refuse",
+          "before": "answer",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0279",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0280",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0288",
+          "gold": "redirect",
+          "before": "clarify",
+          "after": "redirect"
+        },
+        {
+          "id": "FIN-F2-E-0291",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0293",
+          "gold": "clarify",
+          "before": "answer",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0304",
+          "gold": "answer",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0305",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0307",
+          "gold": "answer",
+          "before": "clarify",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0314",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0315",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0316",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0323",
+          "gold": "refuse",
+          "before": "redirect",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0327",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0328",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0332",
+          "gold": "refuse",
+          "before": "redirect",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0333",
+          "gold": "refuse",
+          "before": "clarify",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0335",
+          "gold": "redirect",
+          "before": "answer",
+          "after": "redirect"
+        },
+        {
+          "id": "FIN-F2-E-0341",
+          "gold": "clarify",
+          "before": "answer",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0353",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0361",
+          "gold": "retrieve",
+          "before": "tool",
+          "after": "retrieve"
+        },
+        {
+          "id": "FIN-F2-E-0362",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0363",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0364",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0370",
+          "gold": "human",
+          "before": "answer",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0375",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0380",
+          "gold": "refuse",
+          "before": "clarify",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0381",
+          "gold": "refuse",
+          "before": "tool",
+          "after": "refuse"
+        }
+      ],
+      "regressed_ids": [
+        {
+          "id": "FIN-F2-E-0007",
+          "gold": "tool",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0008",
+          "gold": "tool",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0022",
+          "gold": "answer",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0023",
+          "gold": "retrieve",
+          "before": "retrieve",
+          "after": "redirect"
+        },
+        {
+          "id": "FIN-F2-E-0054",
+          "gold": "tool",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0059",
+          "gold": "tool",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0068",
+          "gold": "answer",
+          "before": "answer",
+          "after": "redirect"
+        },
+        {
+          "id": "FIN-F2-E-0070",
+          "gold": "answer",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0118",
+          "gold": "answer",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0132",
+          "gold": "tool",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0133",
+          "gold": "tool",
+          "before": "tool",
+          "after": "retrieve"
+        },
+        {
+          "id": "FIN-F2-E-0166",
+          "gold": "answer",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0198",
+          "gold": "tool",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0200",
+          "gold": "tool",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0214",
+          "gold": "retrieve",
+          "before": "retrieve",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0233",
+          "gold": "answer",
+          "before": "answer",
+          "after": "redirect"
+        },
+        {
+          "id": "FIN-F2-E-0234",
+          "gold": "retrieve",
+          "before": "retrieve",
+          "after": "redirect"
+        },
+        {
+          "id": "FIN-F2-E-0249",
+          "gold": "tool",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0281",
+          "gold": "answer",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0294",
+          "gold": "tool",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0310",
+          "gold": "retrieve",
+          "before": "retrieve",
+          "after": "redirect"
+        },
+        {
+          "id": "FIN-F2-E-0337",
+          "gold": "clarify",
+          "before": "clarify",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0348",
+          "gold": "tool",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0349",
+          "gold": "tool",
+          "before": "tool",
+          "after": "answer"
+        }
+      ],
+      "usage": "development diagnosis only; do not append these errors to frozen training data"
+    },
+    "step-200": {
+      "improved": 139,
+      "regressed": 15,
+      "net": 124,
+      "improved_ids": [
+        {
+          "id": "FIN-F2-E-0001",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0003",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0004",
+          "gold": "clarify",
+          "before": "answer",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0005",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0006",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0011",
+          "gold": "tool",
+          "before": "answer",
+          "after": "tool"
+        },
+        {
+          "id": "FIN-F2-E-0014",
+          "gold": "tool",
+          "before": "answer",
+          "after": "tool"
+        },
+        {
+          "id": "FIN-F2-E-0017",
+          "gold": "answer",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0025",
+          "gold": "retrieve",
+          "before": "tool",
+          "after": "retrieve"
+        },
+        {
+          "id": "FIN-F2-E-0026",
+          "gold": "retrieve",
+          "before": "tool",
+          "after": "retrieve"
+        },
+        {
+          "id": "FIN-F2-E-0027",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0028",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0029",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0031",
+          "gold": "human",
+          "before": "clarify",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0035",
+          "gold": "human",
+          "before": "tool",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0037",
+          "gold": "refuse",
+          "before": "human",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0041",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0044",
+          "gold": "refuse",
+          "before": "clarify",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0046",
+          "gold": "redirect",
+          "before": "tool",
+          "after": "redirect"
+        },
+        {
+          "id": "FIN-F2-E-0048",
+          "gold": "redirect",
+          "before": "answer",
+          "after": "redirect"
+        },
+        {
+          "id": "FIN-F2-E-0050",
+          "gold": "clarify",
+          "before": "answer",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0051",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0053",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0055",
+          "gold": "tool",
+          "before": "answer",
+          "after": "tool"
+        },
+        {
+          "id": "FIN-F2-E-0058",
+          "gold": "tool",
+          "before": "answer",
+          "after": "tool"
+        },
+        {
+          "id": "FIN-F2-E-0065",
+          "gold": "answer",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0072",
+          "gold": "retrieve",
+          "before": "tool",
+          "after": "retrieve"
+        },
+        {
+          "id": "FIN-F2-E-0074",
+          "gold": "retrieve",
+          "before": "answer",
+          "after": "retrieve"
+        },
+        {
+          "id": "FIN-F2-E-0075",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0076",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0077",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0078",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0079",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0080",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0081",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0090",
+          "gold": "tool",
+          "before": "answer",
+          "after": "tool"
+        },
+        {
+          "id": "FIN-F2-E-0091",
+          "gold": "human",
+          "before": "tool",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0093",
+          "gold": "answer",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0099",
+          "gold": "retrieve",
+          "before": "tool",
+          "after": "retrieve"
+        },
+        {
+          "id": "FIN-F2-E-0100",
+          "gold": "retrieve",
+          "before": "tool",
+          "after": "retrieve"
+        },
+        {
+          "id": "FIN-F2-E-0103",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0104",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0105",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0107",
+          "gold": "human",
+          "before": "clarify",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0109",
+          "gold": "human",
+          "before": "tool",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0114",
+          "gold": "refuse",
+          "before": "human",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0116",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0117",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0121",
+          "gold": "refuse",
+          "before": "tool",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0124",
+          "gold": "redirect",
+          "before": "answer",
+          "after": "redirect"
+        },
+        {
+          "id": "FIN-F2-E-0127",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0129",
+          "gold": "clarify",
+          "before": "answer",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0130",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0134",
+          "gold": "tool",
+          "before": "answer",
+          "after": "tool"
+        },
+        {
+          "id": "FIN-F2-E-0135",
+          "gold": "tool",
+          "before": "answer",
+          "after": "tool"
+        },
+        {
+          "id": "FIN-F2-E-0138",
+          "gold": "tool",
+          "before": "answer",
+          "after": "tool"
+        },
+        {
+          "id": "FIN-F2-E-0141",
+          "gold": "answer",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0144",
+          "gold": "answer",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0151",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0152",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0153",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0154",
+          "gold": "human",
+          "before": "tool",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0156",
+          "gold": "human",
+          "before": "tool",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0157",
+          "gold": "human",
+          "before": "tool",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0162",
+          "gold": "refuse",
+          "before": "redirect",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0164",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0165",
+          "gold": "clarify",
+          "before": "answer",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0170",
+          "gold": "refuse",
+          "before": "tool",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0177",
+          "gold": "human",
+          "before": "tool",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0178",
+          "gold": "human",
+          "before": "redirect",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0181",
+          "gold": "refuse",
+          "before": "redirect",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0189",
+          "gold": "refuse",
+          "before": "redirect",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0191",
+          "gold": "redirect",
+          "before": "answer",
+          "after": "redirect"
+        },
+        {
+          "id": "FIN-F2-E-0194",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0195",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0196",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0197",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0208",
+          "gold": "answer",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0209",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0211",
+          "gold": "answer",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0218",
+          "gold": "close",
+          "before": "tool",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0219",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0220",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0221",
+          "gold": "human",
+          "before": "tool",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0223",
+          "gold": "human",
+          "before": "tool",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0224",
+          "gold": "human",
+          "before": "tool",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0229",
+          "gold": "refuse",
+          "before": "answer",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0230",
+          "gold": "refuse",
+          "before": "clarify",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0231",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0232",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0235",
+          "gold": "retrieve",
+          "before": "tool",
+          "after": "retrieve"
+        },
+        {
+          "id": "FIN-F2-E-0236",
+          "gold": "refuse",
+          "before": "clarify",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0237",
+          "gold": "refuse",
+          "before": "answer",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0242",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0243",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0244",
+          "gold": "clarify",
+          "before": "answer",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0250",
+          "gold": "tool",
+          "before": "answer",
+          "after": "tool"
+        },
+        {
+          "id": "FIN-F2-E-0256",
+          "gold": "answer",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0259",
+          "gold": "answer",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0263",
+          "gold": "retrieve",
+          "before": "tool",
+          "after": "retrieve"
+        },
+        {
+          "id": "FIN-F2-E-0266",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0267",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0268",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0269",
+          "gold": "human",
+          "before": "tool",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0271",
+          "gold": "human",
+          "before": "clarify",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0276",
+          "gold": "refuse",
+          "before": "redirect",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0277",
+          "gold": "refuse",
+          "before": "answer",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0279",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0280",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0288",
+          "gold": "redirect",
+          "before": "clarify",
+          "after": "redirect"
+        },
+        {
+          "id": "FIN-F2-E-0290",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0291",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0293",
+          "gold": "clarify",
+          "before": "answer",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0298",
+          "gold": "tool",
+          "before": "answer",
+          "after": "tool"
+        },
+        {
+          "id": "FIN-F2-E-0301",
+          "gold": "tool",
+          "before": "answer",
+          "after": "tool"
+        },
+        {
+          "id": "FIN-F2-E-0304",
+          "gold": "answer",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0305",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0313",
+          "gold": "retrieve",
+          "before": "tool",
+          "after": "retrieve"
+        },
+        {
+          "id": "FIN-F2-E-0314",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0315",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0316",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0323",
+          "gold": "refuse",
+          "before": "redirect",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0327",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0328",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0332",
+          "gold": "refuse",
+          "before": "redirect",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0333",
+          "gold": "refuse",
+          "before": "clarify",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0335",
+          "gold": "redirect",
+          "before": "answer",
+          "after": "redirect"
+        },
+        {
+          "id": "FIN-F2-E-0341",
+          "gold": "clarify",
+          "before": "answer",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0342",
+          "gold": "tool",
+          "before": "answer",
+          "after": "tool"
+        },
+        {
+          "id": "FIN-F2-E-0346",
+          "gold": "tool",
+          "before": "answer",
+          "after": "tool"
+        },
+        {
+          "id": "FIN-F2-E-0353",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0361",
+          "gold": "retrieve",
+          "before": "tool",
+          "after": "retrieve"
+        },
+        {
+          "id": "FIN-F2-E-0362",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0363",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0364",
+          "gold": "close",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0370",
+          "gold": "human",
+          "before": "answer",
+          "after": "human"
+        },
+        {
+          "id": "FIN-F2-E-0375",
+          "gold": "clarify",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0380",
+          "gold": "refuse",
+          "before": "clarify",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0381",
+          "gold": "refuse",
+          "before": "tool",
+          "after": "refuse"
+        }
+      ],
+      "regressed_ids": [
+        {
+          "id": "FIN-F2-E-0008",
+          "gold": "tool",
+          "before": "tool",
+          "after": "answer"
+        },
+        {
+          "id": "FIN-F2-E-0022",
+          "gold": "answer",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0023",
+          "gold": "retrieve",
+          "before": "retrieve",
+          "after": "redirect"
+        },
+        {
+          "id": "FIN-F2-E-0068",
+          "gold": "answer",
+          "before": "answer",
+          "after": "redirect"
+        },
+        {
+          "id": "FIN-F2-E-0070",
+          "gold": "answer",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0118",
+          "gold": "answer",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0132",
+          "gold": "tool",
+          "before": "tool",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0166",
+          "gold": "answer",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0210",
+          "gold": "answer",
+          "before": "answer",
+          "after": "clarify"
+        },
+        {
+          "id": "FIN-F2-E-0214",
+          "gold": "retrieve",
+          "before": "retrieve",
+          "after": "refuse"
+        },
+        {
+          "id": "FIN-F2-E-0233",
+          "gold": "answer",
+          "before": "answer",
+          "after": "redirect"
+        },
+        {
+          "id": "FIN-F2-E-0234",
+          "gold": "retrieve",
+          "before": "retrieve",
+          "after": "redirect"
+        },
+        {
+          "id": "FIN-F2-E-0281",
+          "gold": "answer",
+          "before": "answer",
+          "after": "close"
+        },
+        {
+          "id": "FIN-F2-E-0294",
+          "gold": "tool",
+          "before": "tool",
+          "after": "retrieve"
+        },
+        {
+          "id": "FIN-F2-E-0337",
+          "gold": "clarify",
+          "before": "clarify",
+          "after": "human"
+        }
+      ],
+      "usage": "development diagnosis only; do not append these errors to frozen training data"
+    }
+  },
+  "paired_accuracy_intervals": {
+    "step-100": {
+      "cluster_count": 8,
+      "resamples": 2000,
+      "interval95": [
+        0.20052083333333334,
+        0.2916666666666667
+      ],
+      "cluster_key": "effective partition_group, including macro-scene unions",
+      "limitation": "Only eight authored macro stories in development; synthetic cluster CI is not real-user generalization."
+    },
+    "step-200": {
+      "cluster_count": 8,
+      "resamples": 2000,
+      "interval95": [
+        0.2916666666666667,
+        0.3489583333333333
+      ],
+      "cluster_key": "effective partition_group, including macro-scene unions",
+      "limitation": "Only eight authored macro stories in development; synthetic cluster CI is not real-user generalization."
+    }
+  },
+  "train_coverage": {
+    "sample_positions": 1600,
+    "unique_rows": 1175,
+    "repeated_positions": 425,
+    "sampled_by_stratum": {
+      "clarify|planned-kb-v1": 94,
+      "tool|current-no-kb-v1": 106,
+      "redirect|planned-kb-v1": 103,
+      "retrieve|planned-kb-v1": 96,
+      "refuse|current-no-kb-v1": 98,
+      "tool|planned-kb-v1": 116,
+      "human|current-no-kb-v1": 104,
+      "close|current-no-kb-v1": 100,
+      "close|planned-kb-v1": 131,
+      "refuse|planned-kb-v1": 105,
+      "human|planned-kb-v1": 92,
+      "answer|planned-kb-v1": 102,
+      "redirect|current-no-kb-v1": 102,
+      "clarify|current-no-kb-v1": 123,
+      "answer|current-no-kb-v1": 128
+    },
+    "sampled_tools": {
+      "explainApplicationStatus": 82,
+      "queryLoanProducts": 54,
+      "queryMyCreditScore": 22,
+      "queryMyApplications": 35,
+      "queryApplicationDetail": 29
+    },
+    "training_elapsed_s": 1249.5513083000915,
+    "peak_allocated_gib": 3.8004722595214844
+  },
+  "training_loss": {
+    "first20_mean": 2.5144394061400397,
+    "last20_mean": 0.5681732513218833,
+    "note": "Stochastic train batches differ; not a fixed-set train accuracy or a measured generalization gap."
+  },
+  "selection": {
+    "selected": null,
+    "gates": {
+      "step-100": {
+        "passed": false,
+        "failures": [
+          "per_action_recall",
+          "human_recall",
+          "extra_false_refusals",
+          "unavailable_knowledge_retrieval",
+          "action_tool_joint_accuracy",
+          "status_tool_accuracy"
+        ],
+        "usage": "development_only_not_final_selection"
+      },
+      "step-200": {
+        "passed": false,
+        "failures": [
+          "per_action_recall",
+          "human_recall",
+          "extra_false_refusals",
+          "unavailable_knowledge_retrieval",
+          "action_tool_joint_accuracy",
+          "status_tool_accuracy"
+        ],
+        "usage": "development_only_not_final_selection"
+      }
+    },
+    "passed": false,
+    "usage": "development_candidate_only",
+    "default_provider_changed": false,
+    "calibration_evaluated": false,
+    "final_evaluated": false,
+    "protocol_sha256": "efef23777db1f35b5d54af67fa0e58861d3f201eabc3687cbd179f8be5701049"
+  },
+  "calibration_evaluated": false,
+  "final_evaluated": false,
+  "jev_evaluated": false
+}

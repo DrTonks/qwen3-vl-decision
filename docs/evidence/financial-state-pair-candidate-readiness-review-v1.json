@@ -1,0 +1,61 @@
+{
+  "schema_version": "financial-state-pair-readiness-code-review-fixed-v1",
+  "reviewer": "independent-agent/state_pair_code_review",
+  "source_sha256": {
+    "scripts/finalize-state-pair-candidates.py": "06be9af159fbcb8f9a6a305b1d9f9f1e16543a4e4757006472e222bd1fc9fe55",
+    "tests/test_state_pair_readiness.py": "686d9f4b1f7629931db3e73c30041e26e0796ebc7186448af1049c07fe961f7b"
+  },
+  "prior_review": {
+    "path": ".local/state-pair-readiness-code-review.json",
+    "sha256": "21f63fa2036439ac9562d33954ec949fe959363f43d7647eec78eb1886480d5f",
+    "preserved": true
+  },
+  "conclusion": "Previously reported P2 group-membership defect and tokenizer-accounting source-hash omission are fixed. No remaining blocking findings in the reviewed changes.",
+  "blocking_findings": [],
+  "resolved_findings": [
+    {
+      "original": "P2: review variants could be assigned to the wrong enclosing story group",
+      "file": "scripts/finalize-state-pair-candidates.py",
+      "lines": [
+        24,
+        25,
+        26
+      ],
+      "resolution": "Each group variant-ID set must exactly equal the candidate-ID set for that scene_family_id before quarantine decisions.",
+      "regression_test": "test_swapped_group_members_cannot_quarantine_wrong_story",
+      "verified": true
+    },
+    {
+      "original": "Tokenizer accounting script and prompt hashes were not explicitly validated",
+      "file": "scripts/finalize-state-pair-candidates.py",
+      "lines": [
+        69,
+        70
+      ],
+      "resolution": "Both recorded source SHA values are checked against the current accounting script and prompt module.",
+      "verified_by": "source inspection",
+      "verified": true
+    }
+  ],
+  "verification": {
+    "unit_tests_run": 8,
+    "unit_tests_passed": 8,
+    "readiness_manifest_files_and_source_hashes_match": true,
+    "reviewed_rows": 136,
+    "unsafe_split_or_eligibility_rows": 0,
+    "status": "ready_for_sampling_design_only",
+    "training_eligible": false,
+    "human_reviewed": false
+  },
+  "activity": {
+    "heldout_content_read": false,
+    "predictions_read": false,
+    "full_screen_rerun": false,
+    "training_run": false,
+    "model_api_requests": 0,
+    "model_weights_loaded": false,
+    "code_files_modified": false,
+    "frozen_data_modified": false,
+    "only_new_evidence": ".local/state-pair-readiness-code-review-fixed.json"
+  }
+}

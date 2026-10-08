@@ -1,0 +1,11 @@
+{
+  "status": "offline_recovery_complete_no_candidate",
+  "audit_sha256": "64428dff8d036924f6e76d59da07944ccd9fc754b78149bf1ef8629004f23818",
+  "report_sha256": "d8c60baf90ee2926869a25a845f7ae5e1c2cef37d7f406afd41ee22ffc669073",
+  "original_frozen_execution_modified": false,
+  "trained_again": false,
+  "model_api_requests": 0,
+  "calibration_evaluated": false,
+  "final_evaluated": false,
+  "selected": null
+}

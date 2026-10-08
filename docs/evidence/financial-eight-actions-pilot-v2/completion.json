@@ -1,0 +1,42 @@
+{
+  "status": "pilot_complete",
+  "at": "2026-10-01T13:39:03.467829+00:00",
+  "selection": {
+    "selected": null,
+    "gates": {
+      "step-100": {
+        "passed": false,
+        "failures": [
+          "per_action_recall",
+          "human_recall",
+          "extra_false_refusals",
+          "unavailable_knowledge_retrieval",
+          "action_tool_joint_accuracy",
+          "status_tool_accuracy"
+        ],
+        "usage": "development_only_not_final_selection"
+      },
+      "step-200": {
+        "passed": false,
+        "failures": [
+          "per_action_recall",
+          "human_recall",
+          "extra_false_refusals",
+          "unavailable_knowledge_retrieval",
+          "action_tool_joint_accuracy",
+          "status_tool_accuracy"
+        ],
+        "usage": "development_only_not_final_selection"
+      }
+    },
+    "passed": false,
+    "usage": "development_candidate_only",
+    "default_provider_changed": false,
+    "calibration_evaluated": false,
+    "final_evaluated": false,
+    "protocol_sha256": "efef23777db1f35b5d54af67fa0e58861d3f201eabc3687cbd179f8be5701049"
+  },
+  "protocol_sha256": "efef23777db1f35b5d54af67fa0e58861d3f201eabc3687cbd179f8be5701049",
+  "model_api_requests": 0,
+  "deployed": false
+}

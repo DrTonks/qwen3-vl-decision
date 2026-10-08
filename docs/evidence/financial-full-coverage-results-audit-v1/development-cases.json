@@ -1,0 +1,1076 @@
+{
+  "training_eligible": false,
+  "usage": "Development diagnosis only; do not train on these examples or use them as synthetic generation templates.",
+  "cases": [
+    {
+      "row": {
+        "id": "EVAL-FSV2-DEV-0008",
+        "scene_family_id": "FSV2-INDEPENDENT-DEVELOPMENT-festival_stall_applications",
+        "split": "development",
+        "cohort": "current-service",
+        "input": {
+          "message": "这个列表能翻到我第七十笔申请并显示申请日期吗？",
+          "history": [],
+          "state": {
+            "authenticated": true,
+            "handoff_status": "none"
+          },
+          "service_scope": "loan_platform",
+          "capability_profile": "current-node-no-kb",
+          "capabilities": {
+            "knowledge_collections": [],
+            "handoff_available": false
+          },
+          "available_tools": [
+            "queryLoanProducts",
+            "queryMyApplications",
+            "queryApplicationDetail",
+            "queryMyCreditScore",
+            "explainApplicationStatus"
+          ],
+          "images": []
+        },
+        "annotation": {
+          "action": "answer",
+          "tool_name": null,
+          "tool_arguments": {},
+          "retrieval_collection": null,
+          "missing_slots": [],
+          "reason": "能力询问；列表仅最近50项且没有分页或日期。",
+          "evidence_paths": [
+            "input.message",
+            "input.history",
+            "input.state",
+            "input.service_scope",
+            "input.capability_profile",
+            "input.capabilities",
+            "input.available_tools"
+          ],
+          "policy_version": "support-financial-v2"
+        },
+        "provenance": {
+          "origin": "synthetic",
+          "producer": "/root/financial_v2_eval_author",
+          "source": "independently_authored_from_business_contract"
+        },
+        "review": {
+          "status": "author_draft",
+          "human_reviewed_current_version": false
+        },
+        "training_eligible": false,
+        "dataset_role": "evaluation"
+      },
+      "predictions": {
+        "base": {
+          "action": "tool",
+          "tool_name": "queryLoanProducts"
+        },
+        "fullcover-step-500": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "fullcover-step-1000": {
+          "action": "tool",
+          "tool_name": "queryMyApplications"
+        },
+        "fullcover-step-1500": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "fullcover-step-1673": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "fullcover-step-2000": {
+          "action": "human",
+          "tool_name": null
+        },
+        "fullcover-step-2500": {
+          "action": "answer",
+          "tool_name": null
+        },
+        "fullcover-step-3000": {
+          "action": "human",
+          "tool_name": null
+        },
+        "fullcover-step-3346": {
+          "action": "human",
+          "tool_name": null
+        },
+        "preauth-step-400": {
+          "action": "answer",
+          "tool_name": null
+        },
+        "statepair-step-400": {
+          "action": "answer",
+          "tool_name": null
+        }
+      }
+    },
+    {
+      "row": {
+        "id": "EVAL-FSV2-DEV-0009",
+        "scene_family_id": "FSV2-INDEPENDENT-DEVELOPMENT-kitchen_equipment_detail",
+        "split": "development",
+        "cohort": "current-service",
+        "input": {
+          "message": "饭店换烤箱的申请 731，查一下金额、期数和用途。",
+          "history": [],
+          "state": {
+            "authenticated": true,
+            "handoff_status": "none"
+          },
+          "service_scope": "loan_platform",
+          "capability_profile": "current-node-no-kb",
+          "capabilities": {
+            "knowledge_collections": [],
+            "handoff_available": false
+          },
+          "available_tools": [
+            "queryLoanProducts",
+            "queryMyApplications",
+            "queryApplicationDetail",
+            "queryMyCreditScore",
+            "explainApplicationStatus"
+          ],
+          "images": []
+        },
+        "annotation": {
+          "action": "tool",
+          "tool_name": "queryApplicationDetail",
+          "tool_arguments": {
+            "applicationId": 731
+          },
+          "retrieval_collection": null,
+          "missing_slots": [],
+          "reason": "已认证且请求处于可用只读工具返回字段范围，调用对应工具。",
+          "evidence_paths": [
+            "input.message",
+            "input.history",
+            "input.state",
+            "input.service_scope",
+            "input.capability_profile",
+            "input.capabilities",
+            "input.available_tools"
+          ],
+          "policy_version": "support-financial-v2"
+        },
+        "provenance": {
+          "origin": "synthetic",
+          "producer": "/root/financial_v2_eval_author",
+          "source": "independently_authored_from_business_contract"
+        },
+        "review": {
+          "status": "author_draft",
+          "human_reviewed_current_version": false
+        },
+        "training_eligible": false,
+        "dataset_role": "evaluation"
+      },
+      "predictions": {
+        "base": {
+          "action": "tool",
+          "tool_name": "queryLoanProducts"
+        },
+        "fullcover-step-500": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "fullcover-step-1000": {
+          "action": "tool",
+          "tool_name": "queryApplicationDetail"
+        },
+        "fullcover-step-1500": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "fullcover-step-1673": {
+          "action": "tool",
+          "tool_name": "queryApplicationDetail"
+        },
+        "fullcover-step-2000": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "fullcover-step-2500": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "fullcover-step-3000": {
+          "action": "tool",
+          "tool_name": "queryApplicationDetail"
+        },
+        "fullcover-step-3346": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "preauth-step-400": {
+          "action": "tool",
+          "tool_name": "queryApplicationDetail"
+        },
+        "statepair-step-400": {
+          "action": "tool",
+          "tool_name": "queryApplicationDetail"
+        }
+      }
+    },
+    {
+      "row": {
+        "id": "EVAL-FSV2-DEV-0019",
+        "scene_family_id": "FSV2-INDEPENDENT-DEVELOPMENT-exported_status_legend",
+        "split": "development",
+        "cohort": "current-service",
+        "input": {
+          "message": "申请状态字段说明里出现了 2，请解释对应文字。",
+          "history": [],
+          "state": {
+            "authenticated": true,
+            "handoff_status": "none"
+          },
+          "service_scope": "loan_platform",
+          "capability_profile": "current-node-no-kb",
+          "capabilities": {
+            "knowledge_collections": [],
+            "handoff_available": false
+          },
+          "available_tools": [
+            "queryLoanProducts",
+            "queryMyApplications",
+            "queryApplicationDetail",
+            "queryMyCreditScore",
+            "explainApplicationStatus"
+          ],
+          "images": []
+        },
+        "annotation": {
+          "action": "tool",
+          "tool_name": "explainApplicationStatus",
+          "tool_arguments": {
+            "status": 2
+          },
+          "retrieval_collection": null,
+          "missing_slots": [],
+          "reason": "已认证且请求处于可用只读工具返回字段范围，调用对应工具。",
+          "evidence_paths": [
+            "input.message",
+            "input.history",
+            "input.state",
+            "input.service_scope",
+            "input.capability_profile",
+            "input.capabilities",
+            "input.available_tools"
+          ],
+          "policy_version": "support-financial-v2"
+        },
+        "provenance": {
+          "origin": "synthetic",
+          "producer": "/root/financial_v2_eval_author",
+          "source": "independently_authored_from_business_contract"
+        },
+        "review": {
+          "status": "author_draft",
+          "human_reviewed_current_version": false
+        },
+        "training_eligible": false,
+        "dataset_role": "evaluation"
+      },
+      "predictions": {
+        "base": {
+          "action": "tool",
+          "tool_name": "explainApplicationStatus"
+        },
+        "fullcover-step-500": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "fullcover-step-1000": {
+          "action": "tool",
+          "tool_name": "explainApplicationStatus"
+        },
+        "fullcover-step-1500": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "fullcover-step-1673": {
+          "action": "tool",
+          "tool_name": "explainApplicationStatus"
+        },
+        "fullcover-step-2000": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "fullcover-step-2500": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "fullcover-step-3000": {
+          "action": "tool",
+          "tool_name": "explainApplicationStatus"
+        },
+        "fullcover-step-3346": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "preauth-step-400": {
+          "action": "tool",
+          "tool_name": "explainApplicationStatus"
+        },
+        "statepair-step-400": {
+          "action": "answer",
+          "tool_name": null
+        }
+      }
+    },
+    {
+      "row": {
+        "id": "EVAL-FSV2-DEV-0020",
+        "scene_family_id": "FSV2-INDEPENDENT-DEVELOPMENT-exported_status_legend",
+        "split": "development",
+        "cohort": "current-service",
+        "input": {
+          "message": "用状态解释功能能确认我刚提交的那笔现在通过了吗？",
+          "history": [],
+          "state": {
+            "authenticated": true,
+            "handoff_status": "none"
+          },
+          "service_scope": "loan_platform",
+          "capability_profile": "current-node-no-kb",
+          "capabilities": {
+            "knowledge_collections": [],
+            "handoff_available": false
+          },
+          "available_tools": [
+            "queryLoanProducts",
+            "queryMyApplications",
+            "queryApplicationDetail",
+            "queryMyCreditScore",
+            "explainApplicationStatus"
+          ],
+          "images": []
+        },
+        "annotation": {
+          "action": "answer",
+          "tool_name": null,
+          "tool_arguments": {},
+          "retrieval_collection": null,
+          "missing_slots": [],
+          "reason": "只是询问功能；静态状态解释不能查询实时个人进度。",
+          "evidence_paths": [
+            "input.message",
+            "input.history",
+            "input.state",
+            "input.service_scope",
+            "input.capability_profile",
+            "input.capabilities",
+            "input.available_tools"
+          ],
+          "policy_version": "support-financial-v2"
+        },
+        "provenance": {
+          "origin": "synthetic",
+          "producer": "/root/financial_v2_eval_author",
+          "source": "independently_authored_from_business_contract"
+        },
+        "review": {
+          "status": "author_draft",
+          "human_reviewed_current_version": false
+        },
+        "training_eligible": false,
+        "dataset_role": "evaluation"
+      },
+      "predictions": {
+        "base": {
+          "action": "tool",
+          "tool_name": "explainApplicationStatus"
+        },
+        "fullcover-step-500": {
+          "action": "answer",
+          "tool_name": null
+        },
+        "fullcover-step-1000": {
+          "action": "tool",
+          "tool_name": "queryMyApplications"
+        },
+        "fullcover-step-1500": {
+          "action": "answer",
+          "tool_name": null
+        },
+        "fullcover-step-1673": {
+          "action": "answer",
+          "tool_name": null
+        },
+        "fullcover-step-2000": {
+          "action": "human",
+          "tool_name": null
+        },
+        "fullcover-step-2500": {
+          "action": "answer",
+          "tool_name": null
+        },
+        "fullcover-step-3000": {
+          "action": "tool",
+          "tool_name": "queryMyApplications"
+        },
+        "fullcover-step-3346": {
+          "action": "tool",
+          "tool_name": "queryMyApplications"
+        },
+        "preauth-step-400": {
+          "action": "answer",
+          "tool_name": null
+        },
+        "statepair-step-400": {
+          "action": "answer",
+          "tool_name": null
+        }
+      }
+    },
+    {
+      "row": {
+        "id": "EVAL-FSV2-DEV-0047",
+        "scene_family_id": "FSV2-INDEPENDENT-DEVELOPMENT-truncated_history_limits",
+        "split": "development",
+        "cohort": "current-service",
+        "input": {
+          "message": "申请列表是不是还能告诉我每笔的产品名和提交时间？",
+          "history": [],
+          "state": {
+            "authenticated": true,
+            "handoff_status": "none"
+          },
+          "service_scope": "loan_platform",
+          "capability_profile": "current-node-no-kb",
+          "capabilities": {
+            "knowledge_collections": [],
+            "handoff_available": false
+          },
+          "available_tools": [
+            "queryLoanProducts",
+            "queryMyApplications",
+            "queryApplicationDetail",
+            "queryMyCreditScore",
+            "explainApplicationStatus"
+          ],
+          "images": []
+        },
+        "annotation": {
+          "action": "answer",
+          "tool_name": null,
+          "tool_arguments": {},
+          "retrieval_collection": null,
+          "missing_slots": [],
+          "reason": "解释已知边界、风险或公开渠道的可见信息；无可用知识时如实说明限制。",
+          "evidence_paths": [
+            "input.message",
+            "input.history",
+            "input.state",
+            "input.service_scope",
+            "input.capability_profile",
+            "input.capabilities",
+            "input.available_tools"
+          ],
+          "policy_version": "support-financial-v2"
+        },
+        "provenance": {
+          "origin": "synthetic",
+          "producer": "/root/financial_v2_eval_author",
+          "source": "independently_authored_from_business_contract"
+        },
+        "review": {
+          "status": "author_draft",
+          "human_reviewed_current_version": false
+        },
+        "training_eligible": false,
+        "dataset_role": "evaluation"
+      },
+      "predictions": {
+        "base": {
+          "action": "tool",
+          "tool_name": "queryLoanProducts"
+        },
+        "fullcover-step-500": {
+          "action": "answer",
+          "tool_name": null
+        },
+        "fullcover-step-1000": {
+          "action": "tool",
+          "tool_name": "queryMyApplications"
+        },
+        "fullcover-step-1500": {
+          "action": "answer",
+          "tool_name": null
+        },
+        "fullcover-step-1673": {
+          "action": "tool",
+          "tool_name": "queryMyApplications"
+        },
+        "fullcover-step-2000": {
+          "action": "tool",
+          "tool_name": "queryMyApplications"
+        },
+        "fullcover-step-2500": {
+          "action": "answer",
+          "tool_name": null
+        },
+        "fullcover-step-3000": {
+          "action": "tool",
+          "tool_name": "queryMyApplications"
+        },
+        "fullcover-step-3346": {
+          "action": "tool",
+          "tool_name": "queryMyApplications"
+        },
+        "preauth-step-400": {
+          "action": "answer",
+          "tool_name": null
+        },
+        "statepair-step-400": {
+          "action": "answer",
+          "tool_name": null
+        }
+      }
+    },
+    {
+      "row": {
+        "id": "EVAL-FSV2-DEV-0083",
+        "scene_family_id": "FSV2-INDEPENDENT-DEVELOPMENT-debit_dispute_personal",
+        "split": "development",
+        "cohort": "planned-retrieval",
+        "input": {
+          "message": "我要的不是扣款规则，而是退回本人账户里多扣的钱。",
+          "history": [],
+          "state": {
+            "authenticated": true,
+            "handoff_status": "none"
+          },
+          "service_scope": "loan_platform",
+          "capability_profile": "planned-kb",
+          "capabilities": {
+            "knowledge_collections": [
+              "loan_service_docs",
+              "privacy_policy"
+            ],
+            "handoff_available": false
+          },
+          "available_tools": [
+            "queryLoanProducts",
+            "queryMyApplications",
+            "queryApplicationDetail",
+            "queryMyCreditScore",
+            "explainApplicationStatus"
+          ],
+          "images": []
+        },
+        "annotation": {
+          "action": "human",
+          "tool_name": null,
+          "tool_arguments": {},
+          "retrieval_collection": null,
+          "missing_slots": [],
+          "reason": "明确要求真人处理，或请求现有只读能力不能完成的合法个人事项；不能声称已经接通。",
+          "evidence_paths": [
+            "input.message",
+            "input.history",
+            "input.state",
+            "input.service_scope",
+            "input.capability_profile",
+            "input.capabilities",
+            "input.available_tools"
+          ],
+          "policy_version": "support-financial-v2"
+        },
+        "provenance": {
+          "origin": "synthetic",
+          "producer": "/root/financial_v2_eval_author",
+          "source": "independently_authored_from_business_contract"
+        },
+        "review": {
+          "status": "author_draft",
+          "human_reviewed_current_version": false
+        },
+        "training_eligible": false,
+        "dataset_role": "evaluation"
+      },
+      "predictions": {
+        "base": {
+          "action": "tool",
+          "tool_name": "queryLoanProducts"
+        },
+        "fullcover-step-500": {
+          "action": "refuse",
+          "tool_name": null
+        },
+        "fullcover-step-1000": {
+          "action": "refuse",
+          "tool_name": null
+        },
+        "fullcover-step-1500": {
+          "action": "refuse",
+          "tool_name": null
+        },
+        "fullcover-step-1673": {
+          "action": "refuse",
+          "tool_name": null
+        },
+        "fullcover-step-2000": {
+          "action": "human",
+          "tool_name": null
+        },
+        "fullcover-step-2500": {
+          "action": "refuse",
+          "tool_name": null
+        },
+        "fullcover-step-3000": {
+          "action": "refuse",
+          "tool_name": null
+        },
+        "fullcover-step-3346": {
+          "action": "refuse",
+          "tool_name": null
+        },
+        "preauth-step-400": {
+          "action": "human",
+          "tool_name": null
+        },
+        "statepair-step-400": {
+          "action": "human",
+          "tool_name": null
+        }
+      }
+    },
+    {
+      "row": {
+        "id": "EVAL-FSV2-DEV-0085",
+        "scene_family_id": "FSV2-INDEPENDENT-DEVELOPMENT-public_hotline_lookup",
+        "split": "development",
+        "cohort": "planned-retrieval",
+        "input": {
+          "message": "我只要平台公开客服电话，不用转接真人。",
+          "history": [],
+          "state": {
+            "authenticated": true,
+            "handoff_status": "none"
+          },
+          "service_scope": "loan_platform",
+          "capability_profile": "planned-kb",
+          "capabilities": {
+            "knowledge_collections": [
+              "loan_service_docs",
+              "privacy_policy"
+            ],
+            "handoff_available": false
+          },
+          "available_tools": [
+            "queryLoanProducts",
+            "queryMyApplications",
+            "queryApplicationDetail",
+            "queryMyCreditScore",
+            "explainApplicationStatus"
+          ],
+          "images": []
+        },
+        "annotation": {
+          "action": "retrieve",
+          "tool_name": null,
+          "tool_arguments": {},
+          "retrieval_collection": "loan_service_docs",
+          "missing_slots": [],
+          "reason": "请求未知的正式平台规则，当前正式知识集合可用，先检索。",
+          "evidence_paths": [
+            "input.message",
+            "input.history",
+            "input.state",
+            "input.service_scope",
+            "input.capability_profile",
+            "input.capabilities",
+            "input.available_tools"
+          ],
+          "policy_version": "support-financial-v2"
+        },
+        "provenance": {
+          "origin": "synthetic",
+          "producer": "/root/financial_v2_eval_author",
+          "source": "independently_authored_from_business_contract"
+        },
+        "review": {
+          "status": "author_draft",
+          "human_reviewed_current_version": false
+        },
+        "training_eligible": false,
+        "dataset_role": "evaluation"
+      },
+      "predictions": {
+        "base": {
+          "action": "tool",
+          "tool_name": "queryLoanProducts"
+        },
+        "fullcover-step-500": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "fullcover-step-1000": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "fullcover-step-1500": {
+          "action": "retrieve",
+          "tool_name": null
+        },
+        "fullcover-step-1673": {
+          "action": "retrieve",
+          "tool_name": null
+        },
+        "fullcover-step-2000": {
+          "action": "retrieve",
+          "tool_name": null
+        },
+        "fullcover-step-2500": {
+          "action": "retrieve",
+          "tool_name": null
+        },
+        "fullcover-step-3000": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "fullcover-step-3346": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "preauth-step-400": {
+          "action": "retrieve",
+          "tool_name": null
+        },
+        "statepair-step-400": {
+          "action": "retrieve",
+          "tool_name": null
+        }
+      }
+    },
+    {
+      "row": {
+        "id": "EVAL-FSV2-DEV-0093",
+        "scene_family_id": "FSV2-INDEPENDENT-DEVELOPMENT-tool_removed_for_repairs",
+        "split": "development",
+        "cohort": "planned-retrieval",
+        "input": {
+          "message": "申请 619 的店铺租金用途是否记录正确？请查本人详情。",
+          "history": [],
+          "state": {
+            "authenticated": true,
+            "handoff_status": "none"
+          },
+          "service_scope": "loan_platform",
+          "capability_profile": "planned-kb",
+          "capabilities": {
+            "knowledge_collections": [
+              "loan_service_docs",
+              "privacy_policy"
+            ],
+            "handoff_available": false
+          },
+          "available_tools": [
+            "queryLoanProducts",
+            "queryMyApplications",
+            "queryApplicationDetail",
+            "queryMyCreditScore",
+            "explainApplicationStatus"
+          ],
+          "images": []
+        },
+        "annotation": {
+          "action": "tool",
+          "tool_name": "queryApplicationDetail",
+          "tool_arguments": {
+            "applicationId": 619
+          },
+          "retrieval_collection": null,
+          "missing_slots": [],
+          "reason": "已认证且请求处于可用只读工具返回字段范围，调用对应工具。",
+          "evidence_paths": [
+            "input.message",
+            "input.history",
+            "input.state",
+            "input.service_scope",
+            "input.capability_profile",
+            "input.capabilities",
+            "input.available_tools"
+          ],
+          "policy_version": "support-financial-v2"
+        },
+        "provenance": {
+          "origin": "synthetic",
+          "producer": "/root/financial_v2_eval_author",
+          "source": "independently_authored_from_business_contract"
+        },
+        "review": {
+          "status": "author_draft",
+          "human_reviewed_current_version": false
+        },
+        "training_eligible": false,
+        "dataset_role": "evaluation"
+      },
+      "predictions": {
+        "base": {
+          "action": "tool",
+          "tool_name": "queryLoanProducts"
+        },
+        "fullcover-step-500": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "fullcover-step-1000": {
+          "action": "tool",
+          "tool_name": "queryApplicationDetail"
+        },
+        "fullcover-step-1500": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "fullcover-step-1673": {
+          "action": "tool",
+          "tool_name": "queryApplicationDetail"
+        },
+        "fullcover-step-2000": {
+          "action": "human",
+          "tool_name": null
+        },
+        "fullcover-step-2500": {
+          "action": "human",
+          "tool_name": null
+        },
+        "fullcover-step-3000": {
+          "action": "human",
+          "tool_name": null
+        },
+        "fullcover-step-3346": {
+          "action": "human",
+          "tool_name": null
+        },
+        "preauth-step-400": {
+          "action": "human",
+          "tool_name": null
+        },
+        "statepair-step-400": {
+          "action": "human",
+          "tool_name": null
+        }
+      }
+    },
+    {
+      "row": {
+        "id": "EVAL-FSV2-DEV-0094",
+        "scene_family_id": "FSV2-INDEPENDENT-DEVELOPMENT-tool_removed_for_repairs",
+        "split": "development",
+        "cohort": "planned-retrieval",
+        "input": {
+          "message": "申请 619 的用途我要核对一下，请查本人详情。",
+          "history": [],
+          "state": {
+            "authenticated": true,
+            "handoff_status": "none"
+          },
+          "service_scope": "loan_platform",
+          "capability_profile": "planned-kb",
+          "capabilities": {
+            "knowledge_collections": [
+              "loan_service_docs",
+              "privacy_policy"
+            ],
+            "handoff_available": false
+          },
+          "available_tools": [
+            "queryLoanProducts",
+            "queryMyApplications",
+            "queryMyCreditScore",
+            "explainApplicationStatus"
+          ],
+          "images": []
+        },
+        "annotation": {
+          "action": "human",
+          "tool_name": null,
+          "tool_arguments": {},
+          "retrieval_collection": null,
+          "missing_slots": [],
+          "reason": "详情工具当前未开放，列表也不含用途；合法个人查询只能人工处理。",
+          "evidence_paths": [
+            "input.message",
+            "input.history",
+            "input.state",
+            "input.service_scope",
+            "input.capability_profile",
+            "input.capabilities",
+            "input.available_tools"
+          ],
+          "policy_version": "support-financial-v2"
+        },
+        "provenance": {
+          "origin": "synthetic",
+          "producer": "/root/financial_v2_eval_author",
+          "source": "independently_authored_from_business_contract"
+        },
+        "review": {
+          "status": "author_draft",
+          "human_reviewed_current_version": false
+        },
+        "training_eligible": false,
+        "dataset_role": "evaluation"
+      },
+      "predictions": {
+        "base": {
+          "action": "tool",
+          "tool_name": "queryLoanProducts"
+        },
+        "fullcover-step-500": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "fullcover-step-1000": {
+          "action": "tool",
+          "tool_name": "queryApplicationDetail"
+        },
+        "fullcover-step-1500": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "fullcover-step-1673": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "fullcover-step-2000": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "fullcover-step-2500": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "fullcover-step-3000": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "fullcover-step-3346": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "preauth-step-400": {
+          "action": "clarify",
+          "tool_name": null
+        },
+        "statepair-step-400": {
+          "action": "clarify",
+          "tool_name": null
+        }
+      }
+    },
+    {
+      "row": {
+        "id": "EVAL-FSV2-DEV-0095",
+        "scene_family_id": "FSV2-INDEPENDENT-DEVELOPMENT-tool_removed_for_repairs",
+        "split": "development",
+        "cohort": "planned-retrieval",
+        "input": {
+          "message": "如果详情查询暂时没有开放，知识库能代替它看到我申请的用途吗？",
+          "history": [],
+          "state": {
+            "authenticated": true,
+            "handoff_status": "none"
+          },
+          "service_scope": "loan_platform",
+          "capability_profile": "planned-kb",
+          "capabilities": {
+            "knowledge_collections": [
+              "loan_service_docs",
+              "privacy_policy"
+            ],
+            "handoff_available": false
+          },
+          "available_tools": [
+            "queryLoanProducts",
+            "queryMyApplications",
+            "queryApplicationDetail",
+            "queryMyCreditScore",
+            "explainApplicationStatus"
+          ],
+          "images": []
+        },
+        "annotation": {
+          "action": "answer",
+          "tool_name": null,
+          "tool_arguments": {},
+          "retrieval_collection": null,
+          "missing_slots": [],
+          "reason": "解释已知边界、风险或公开渠道的可见信息；无可用知识时如实说明限制。",
+          "evidence_paths": [
+            "input.message",
+            "input.history",
+            "input.state",
+            "input.service_scope",
+            "input.capability_profile",
+            "input.capabilities",
+            "input.available_tools"
+          ],
+          "policy_version": "support-financial-v2"
+        },
+        "provenance": {
+          "origin": "synthetic",
+          "producer": "/root/financial_v2_eval_author",
+          "source": "independently_authored_from_business_contract"
+        },
+        "review": {
+          "status": "author_draft",
+          "human_reviewed_current_version": false
+        },
+        "training_eligible": false,
+        "dataset_role": "evaluation"
+      },
+      "predictions": {
+        "base": {
+          "action": "tool",
+          "tool_name": "queryLoanProducts"
+        },
+        "fullcover-step-500": {
+          "action": "answer",
+          "tool_name": null
+        },
+        "fullcover-step-1000": {
+          "action": "retrieve",
+          "tool_name": null
+        },
+        "fullcover-step-1500": {
+          "action": "retrieve",
+          "tool_name": null
+        },
+        "fullcover-step-1673": {
+          "action": "retrieve",
+          "tool_name": null
+        },
+        "fullcover-step-2000": {
+          "action": "retrieve",
+          "tool_name": null
+        },
+        "fullcover-step-2500": {
+          "action": "retrieve",
+          "tool_name": null
+        },
+        "fullcover-step-3000": {
+          "action": "retrieve",
+          "tool_name": null
+        },
+        "fullcover-step-3346": {
+          "action": "retrieve",
+          "tool_name": null
+        },
+        "preauth-step-400": {
+          "action": "answer",
+          "tool_name": null
+        },
+        "statepair-step-400": {
+          "action": "answer",
+          "tool_name": null
+        }
+      }
+    }
+  ]
+}

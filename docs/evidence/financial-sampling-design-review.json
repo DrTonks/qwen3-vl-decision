@@ -1,0 +1,386 @@
+{
+  "version": "financial-sampling-design-independent-review-v1",
+  "reviewer": "independent-agent-supplement_labels_review",
+  "independent": true,
+  "human_reviewed": false,
+  "status": "pass_with_scope_limits",
+  "reviewed_at_utc": "2026-10-04T01:33:40.518233+00:00",
+  "training_enabled": false,
+  "training_started": false,
+  "executor_written": false,
+  "model_weights_loaded": false,
+  "model_api_requests": 0,
+  "evaluation_examples_read": false,
+  "predictions_read": false,
+  "blind_screen_report_read": false,
+  "old_training_examples_read": false,
+  "source_sha256": {
+    "configs/financial-service-v2-study.json": "31b7b3b8fa47f1c0f9924cf9531e3cddc2e854c21e2a7c57a7df01f13a97a7ef",
+    "configs/support-financial-v2.json": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+    "data/financial-service-v2/train-summary.json": "b085f6af2ea2c7b89c1518897b6cc11b02a3b81318dba0ccbb4912fbdfeaa99d",
+    "data/financial-service-v2/train-manifest.json": "197d8b63331cf568356ece3e10184bf9457fbd8f64c339bfc5ebc7025c650e63",
+    "data/financial-service-v2/evaluation-summary.json": "81874e8158e17c0a4d27616e2098ad6ef9afcc3c8201f3fd6c0c67759525aafc",
+    "data/financial-supplement-expansion-v1/reviewed-v1/manifest.json": "7ee1dfd9ea2e3634208324f04fa7e00bb1a01aadfd1cbd6f0338eb92aee2cfb1",
+    "docs/evidence/financial-service-v2-study-review.json": "4392d93030130cfbb21880d6995d2878ea33bd25547f8bc30bc35c6de2be4fe4",
+    "docs/evidence/financial-service-v2-freeze.json": "449a2077c6d2bb4aef4a35b6c0284a87230172f84fa281f41e6d3feed3095774",
+    "src/qwenlab/financial_sampling_data.py": "d47df736854fc35204c38edb09958019e187b656e3dbfbf1800e17f5e9012c08",
+    "src/qwenlab/financial_sampling_plan.py": "b599e6f3cb67f829c7eae18ebb45dd47f2406cea3277955defdf6de526eabb98",
+    "src/qwenlab/financial_sampling_freeze.py": "57a5ea7711d0538a3f57f1d87c40fef2c8f4578405e58c65160d5c3e9ce85014",
+    "tests/test_financial_sampling_data.py": "37590618505d61c20bc6d1b5a471ffad2f223ae44453e3d80b3f6dc0aecba0e2",
+    "tests/test_financial_sampling_plan.py": "acf8e8528a4f8451ab70fd233cb58518bb453a91c458e8b842258be4cd9d411b",
+    "tests/test_financial_sampling_freeze.py": "ebe8c5f363d0f1e122cca36daca351a7d4d88b2fdae458966b4abebfb5a9031c",
+    "configs/financial-sampling-study-v1.json": "74c03b1f48b603fb9c916e993a4b4e80d6e38f9307fae591d31086537c23fe36"
+  },
+  "design_under_review": {
+    "pool_rows": 13242,
+    "old_train_rows": 11756,
+    "new_reviewed_rows": 1486,
+    "arms": [
+      "uniform",
+      "stratified"
+    ],
+    "fresh_official_base_lora_each_arm": true,
+    "steps_per_arm": 400,
+    "business_rows_per_step": 8,
+    "business_exposures_per_arm": 3200,
+    "diagnostic_only_step": 200,
+    "selection_step": 400,
+    "stratum_population_from_summaries": {
+      "current-node": 848,
+      "current-component": 851,
+      "planned": 7108,
+      "preauth": 4435
+    },
+    "uniform_expected_exposures_without_cap_conditioning": {
+      "current-node": 204.924,
+      "current-component": 205.649,
+      "planned": 1717.686,
+      "preauth": 1071.741
+    },
+    "stratified_exposures": {
+      "current-node": 1440,
+      "current-component": 480,
+      "planned": 800,
+      "preauth": 480
+    },
+    "stratified_prefix_200_steps": {
+      "current-node": 720,
+      "current-component": 240,
+      "planned": 400,
+      "preauth": 240
+    },
+    "row_cap": 4,
+    "global_story_group_cap": 16,
+    "seed": 20261004
+  },
+  "conclusion": "可作为固定原业务样本曝光预算、单种子、整套采样策略的探索性对照；不构成单独分层比例效应、等计算量试验、重新盲测或部署认证。源数据仍保持training_eligible=false；本轮只冻结设计及CPU产物。",
+  "required_controls": [
+    {
+      "id": "D01",
+      "topic": "估计目标与公平比较",
+      "control": "两臂使用完全相同的13242行内容、政策、提示、tokenizer、初始化、优化器及损失，只改预先声明的采样策略。将估计目标写为uniform versus stratified+group-round-robin+caps这一整体策略；组轮转、重复率、来源/动作比例均属于策略差异，不能声称只测9/3/5/3比例。旧全量2940步结果只作历史背景。"
+    },
+    {
+      "id": "D02",
+      "topic": "分层互斥与组容量",
+      "control": "分层映射固定为当前服务且可信node-projection→current-node；旧当前服务缺input_layer与新component-message-only→current-component；planned与preauth依cohort互斥处理，尤其preauth优先于planned-kb能力画像。未知/冲突元数据拒绝。全局组ID保留原故事关系，跨层共享16次预算，不能通过加层前缀或源前缀拆散同一故事。每层简单rows*4不充分：组跨层时以联合容量/实际3200步排程证明可行；耗尽时不得静默放宽cap或借别层配额。"
+    },
+    {
+      "id": "D03",
+      "topic": "uniform定义与随机性",
+      "control": "uniform定义为全池一次无放回洗牌取前3200行，不按组均匀。行cap自然不触发；若组cap16触发，必须按已冻结规则报不可行或明确命名为受限均匀采样，不能隐式跳过。随机种子在结果前固定，禁止反复换种子求通过。两臂采样随机流与训练/LoRA初始化随机流分离，训练初始化种子配对相同，记录初始adapter参数hash。"
+    },
+    {
+      "id": "D04",
+      "topic": "轮转与批序列冻结",
+      "control": "固定各层故事组初始置乱、组内行次序及每轮重置/再置乱规则。每20行配额9/3/5/3后固定独立随机的交错顺序，避免固定大段层顺序构造额外课程效应；20不整除batch8，故声明是40行/5step边界恢复整块，不要求每个batch满足比例。冻结各臂完整3200条(rowID,sourceRowSHA,globalGroupID,stratum,occurrence,step,microbatch)列表及SHA，200步只读其前1600行，不重新抽样。"
+    },
+    {
+      "id": "D05",
+      "topic": "超参及恢复对齐",
+      "control": "逐项锁定micro_batch2、有效batch8/累积4、lr5e-5、warmup100、bf16 base/fp32 LoRA、r8/alpha16/dropout0.05及language-only targets；另明确旧配置未列出的optimizer参数、weight decay、gradient clipping、scheduler类型/总步数及200/400学习率。两臂均400步且同一学习率序列；旧warmup100占新预算25%需披露。resume精确恢复采样游标/RNG/optimizer/scheduler，不能再洗牌。200诊断不得改变配比、超参、种子或停掉表现较差的一臂；非有限损失/硬故障可按既定规则停止并标试验不完整。"
+    },
+    {
+      "id": "D06",
+      "topic": "监督量与计算预算",
+      "control": "保持旧loss=sum(CE_action+0.75*I_tool*CE_tool)/B，B始终是原业务样本8；禁止按工具例数或1.75重新归一。两臂分别报告3200原样本、tool行数T、监督任务3200+T、总名义监督权重3200+0.75T、action/tool非padding token、实际padding token、长度分布、每步工具数、有效组数/唯一行数/重复分布。工具比例与长度使相同业务预算不等于相同token/FLOP；token仅为计算代理，不能称精确FLOPs。未来运行披露时长/显存，GPU执行顺序预先固定或随机，不与后台训练并行。"
+    },
+    {
+      "id": "D07",
+      "topic": "选择与不确定性",
+      "control": "400步才按原gate全部条件筛选：相同提示base、总体与current-service门槛、preauth零tool、不可用工具/知识零违规均不放宽；两臂都不通过则停止。两个都通过时预先固定旧macro-F1→joint accuracy→固定arm优先级的tie-break，不能用校准或final破平局。仅选择一个臂进入校准/final。旧dev128行32组（当前64行）已用于分析，明确只作回归与开发选择；单随机种子不估计训练种子方差。报告原始分母、逐组配对差值/组bootstrap，bootstrap评估组不等于跨训练种子不确定性，避免按相关改写行当独立样本宣称显著。"
+    },
+    {
+      "id": "D08",
+      "topic": "数据边界与后续评估",
+      "control": "训练加载allowlist仅冻结旧train.json与新accepted.json，不能目录通配引入quarantine、build候选、开发/校准/最终/预测文件。验证两份manifest和数据字节SHA；保持原training_eligible=false元数据不改写来绕过准入。新池与旧训练的重复排除是既有发行证据，非新的独立测试；旧训练并非全量新政策语义复审，风险保留。只读取旧配置/聚合summary/manifest本轮即可。后续仅胜出且过gate后开启校准，冻结温度/阈值后做一次最终比较；若最终集已被历史运行查看过，也不能称新盲测，不依据其错例返工本轮数据。"
+    }
+  ],
+  "cpu_freeze_acceptance_checklist": [
+    "13242行来源文件与字节SHA，互斥层统计848/851/7108/4435；若实际元数据不同则明确差异后重新冻结",
+    "各臂3200曝光完整序列与SHA，全部行/组cap、跨层组共享cap、200前缀与400终点一致；不可行则停止不自动减配额",
+    "按层/动作/工具/来源/组的曝光矩阵、唯一行/组、频次与组集中度，以及实际token/任务计数",
+    "同初始adapter与完整hyperparameter diff白名单仅sampling，固定scheduler、两臂执行顺序、400选择及tie-break规则",
+    "training_enabled=false，未加载权重、未生成执行器、未训练；后续执行仍须独立检查与明确启动步骤"
+  ],
+  "limitations": [
+    "独立审阅仅检查训练元数据、manifest和聚合统计；未读取旧评测题面/预测或盲筛报告。主节点真实盲筛重放与分词重放由已绑定preflight证据确认，未重复消耗分词。",
+    "13242行/6059组实际计划可行，两臂均3200原样本；stratified含702次重复曝光、2498唯一行，不能等同3200独立样本。",
+    "单训练种子、开发集已分析、采样同时改变层权重/故事权重/重复与工具监督；性能与部署结论尚不存在。",
+    "总GPU预算未来还包括25+25步废弃探针、base/dev及后续有条件评估，不是只有两臂800主训练步；本轮训练/API/模型权重均未启动。"
+  ],
+  "frozen": true,
+  "final_cpu_freeze": {
+    "seed": 20261004,
+    "pool_rows": 13242,
+    "pool_groups": 6059,
+    "pool_rows_quarantined": 0,
+    "pool_blind_replay": "root evidence reports successful actual verify --replay; reviewer did not read heldout content or blind report",
+    "actual_tokenizer_replay": "root preflight status verified/tokenizer_replayed=true, evidence manifest/config hashes independently matched",
+    "independent_metadata_validation": [
+      "all manifest source and output SHA matched",
+      "both3200 sequence orders independently regenerated from permitted training metadata",
+      "400x8 step structure and counts match, 200 prefix from same sequence",
+      "all6400 exposure ledger records independently checked for position/step/microbatch/occurrence/group/layer/full-row SHA",
+      "full pool token13242 action/2518 true-tool record inventory validated; summary recomputed from saved lengths",
+      "rowcap4 and shared cross-layer groupcap16 met; uniform no repeats"
+    ],
+    "pool_token_rows": {
+      "action": 13242,
+      "tool": 2518
+    },
+    "pool_max_input_tokens": {
+      "action": 634,
+      "tool": 682
+    },
+    "arms": {
+      "uniform": {
+        "prefix_200": {
+          "steps": 200,
+          "original_row_exposures": 1600,
+          "true_tool_exposures": 308,
+          "supervised_tasks": 1908,
+          "supervised_weight": 1831.0,
+          "unique_rows": 1600,
+          "unique_groups": 1279,
+          "repeated_row_exposures": 0,
+          "rows_seen_more_than_once": 0,
+          "max_row_exposure": 1,
+          "max_group_exposure": 8,
+          "layer_counts": {
+            "current-component": 122,
+            "current-node": 107,
+            "planned": 822,
+            "preauth": 549
+          },
+          "action_counts": {
+            "answer": 286,
+            "clarify": 205,
+            "close": 79,
+            "human": 204,
+            "redirect": 99,
+            "refuse": 137,
+            "retrieve": 282,
+            "tool": 308
+          },
+          "tool_counts": {
+            "explainApplicationStatus": 50,
+            "queryApplicationDetail": 65,
+            "queryLoanProducts": 114,
+            "queryMyApplications": 45,
+            "queryMyCreditScore": 34
+          },
+          "action_microbatches": 800,
+          "nonempty_tool_microbatches": 277,
+          "raw_input_tokens": {
+            "action": 824675,
+            "tool": 175521,
+            "total": 1000196
+          },
+          "padded_input_tokens": {
+            "action": 846842,
+            "tool": 176741,
+            "total": 1023583
+          },
+          "max_input_tokens": {
+            "action": 609,
+            "tool": 653
+          }
+        },
+        "full_400": {
+          "steps": 400,
+          "original_row_exposures": 3200,
+          "true_tool_exposures": 618,
+          "supervised_tasks": 3818,
+          "supervised_weight": 3663.5,
+          "unique_rows": 3200,
+          "unique_groups": 2225,
+          "repeated_row_exposures": 0,
+          "rows_seen_more_than_once": 0,
+          "max_row_exposure": 1,
+          "max_group_exposure": 10,
+          "layer_counts": {
+            "current-component": 227,
+            "current-node": 218,
+            "planned": 1654,
+            "preauth": 1101
+          },
+          "action_counts": {
+            "answer": 562,
+            "clarify": 407,
+            "close": 169,
+            "human": 391,
+            "redirect": 175,
+            "refuse": 259,
+            "retrieve": 619,
+            "tool": 618
+          },
+          "tool_counts": {
+            "explainApplicationStatus": 86,
+            "queryApplicationDetail": 144,
+            "queryLoanProducts": 223,
+            "queryMyApplications": 106,
+            "queryMyCreditScore": 59
+          },
+          "action_microbatches": 1600,
+          "nonempty_tool_microbatches": 561,
+          "raw_input_tokens": {
+            "action": 1650070,
+            "tool": 351494,
+            "total": 2001564
+          },
+          "padded_input_tokens": {
+            "action": 1695624,
+            "tool": 353492,
+            "total": 2049116
+          },
+          "max_input_tokens": {
+            "action": 609,
+            "tool": 653
+          }
+        }
+      },
+      "stratified": {
+        "prefix_200": {
+          "steps": 200,
+          "original_row_exposures": 1600,
+          "true_tool_exposures": 360,
+          "supervised_tasks": 1960,
+          "supervised_weight": 1870.0,
+          "unique_rows": 1581,
+          "unique_groups": 990,
+          "repeated_row_exposures": 19,
+          "rows_seen_more_than_once": 18,
+          "max_row_exposure": 3,
+          "max_group_exposure": 4,
+          "layer_counts": {
+            "current-component": 240,
+            "current-node": 720,
+            "planned": 400,
+            "preauth": 240
+          },
+          "action_counts": {
+            "answer": 334,
+            "clarify": 263,
+            "close": 53,
+            "human": 295,
+            "redirect": 53,
+            "refuse": 85,
+            "retrieve": 157,
+            "tool": 360
+          },
+          "tool_counts": {
+            "explainApplicationStatus": 36,
+            "queryApplicationDetail": 146,
+            "queryLoanProducts": 74,
+            "queryMyApplications": 54,
+            "queryMyCreditScore": 50
+          },
+          "action_microbatches": 800,
+          "nonempty_tool_microbatches": 316,
+          "raw_input_tokens": {
+            "action": 807979,
+            "tool": 199986,
+            "total": 1007965
+          },
+          "padded_input_tokens": {
+            "action": 821088,
+            "tool": 200733,
+            "total": 1021821
+          },
+          "max_input_tokens": {
+            "action": 606,
+            "tool": 642
+          }
+        },
+        "full_400": {
+          "steps": 400,
+          "original_row_exposures": 3200,
+          "true_tool_exposures": 753,
+          "supervised_tasks": 3953,
+          "supervised_weight": 3764.75,
+          "unique_rows": 2498,
+          "unique_groups": 1630,
+          "repeated_row_exposures": 702,
+          "rows_seen_more_than_once": 663,
+          "max_row_exposure": 4,
+          "max_group_exposure": 7,
+          "layer_counts": {
+            "current-component": 480,
+            "current-node": 1440,
+            "planned": 800,
+            "preauth": 480
+          },
+          "action_counts": {
+            "answer": 666,
+            "clarify": 493,
+            "close": 106,
+            "human": 587,
+            "redirect": 105,
+            "refuse": 165,
+            "retrieve": 325,
+            "tool": 753
+          },
+          "tool_counts": {
+            "explainApplicationStatus": 72,
+            "queryApplicationDetail": 306,
+            "queryLoanProducts": 161,
+            "queryMyApplications": 117,
+            "queryMyCreditScore": 97
+          },
+          "action_microbatches": 1600,
+          "nonempty_tool_microbatches": 663,
+          "raw_input_tokens": {
+            "action": 1616925,
+            "tool": 417699,
+            "total": 2034624
+          },
+          "padded_input_tokens": {
+            "action": 1644396,
+            "tool": 419191,
+            "total": 2063587
+          },
+          "max_input_tokens": {
+            "action": 606,
+            "tool": 651
+          }
+        }
+      }
+    },
+    "artifact_sha256": {
+      "configs/financial-sampling-study-v1.json": "74c03b1f48b603fb9c916e993a4b4e80d6e38f9307fae591d31086537c23fe36",
+      "data/financial-sampling-study-v1/pool-v1/manifest.json": "56bee2bdaa144351ade5f120a65899093369b576fa9934a74ebf40761cde004d",
+      "data/financial-sampling-study-v1/pool-v1/train.json": "8b524ae86533d7b55e1add23e4b0b44591c68b615ecf767f34ec4a0d5a166f72",
+      "data/financial-sampling-study-v1/pool-v1/summary.json": "9aa5c07e8099aace204b0b3dc27b62187243aad7bc0cba39b1ade29d8c168693",
+      "data/financial-sampling-study-v1/schedule-v1/manifest.json": "8ed29d2bcd57a72cedb19bf0a09d6ebc315d5681e0bcc0a704b3a4fb62f973c4",
+      "docs/evidence/financial-sampling-cpu-preflight.json": "a2256fc2da13d676fc0e1e1e36874b33bb1b7b2114eb2c6313dedf4c7bdd6395",
+      "data/financial-sampling-study-v1/schedule-v1/exposure-ledger.json": "ca2b2424adfadd12216ec037c521c096cc14ffef8c3c7b959854beec6425b582",
+      "data/financial-sampling-study-v1/schedule-v1/stratified-plan.json": "58d86022245a217a859a4260a00a82fd421732c4d595523dbcaa45b2848c2518",
+      "data/financial-sampling-study-v1/schedule-v1/summary.json": "5cc7e3b43edc04f81d55b1c977ec46b9c7c444d4bb9b632c23614d8558577f46",
+      "data/financial-sampling-study-v1/schedule-v1/token-lengths.json": "61a8987a646472d0554615a48c1b6a314817c6b08f929e607dadfffac9d4dc77",
+      "data/financial-sampling-study-v1/schedule-v1/uniform-plan.json": "704bd5928599f292fafe6b73bb1e155cae1f5ed4df95b56b6824f0bcb9a6ecc7"
+    }
+  },
+  "cpu_controls_status": "required CPU controls implemented and frozen; future GPU executor/init/RNG/resume controls remain unexecuted",
+  "historical_capacity_probe": "工程报告保留20261003旧seed的预过滤metadata-only容量试验；它不是本次最终配置，也未用于效果挑选。正式seed20261004及计划SHA见final_cpu_freeze。"
+}

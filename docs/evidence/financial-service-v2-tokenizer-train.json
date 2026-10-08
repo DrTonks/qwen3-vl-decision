@@ -1,0 +1,85 @@
+{
+  "status": "pass",
+  "scope": "train_only",
+  "policy_sha256": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+  "model": "Qwen/Qwen3.5-0.8B",
+  "model_weights_loaded": false,
+  "model_api_requests": 0,
+  "max_input_tokens": 2048,
+  "truncation": false,
+  "splits": {
+    "train": {
+      "rows": 11756,
+      "tokens": {
+        "action": {
+          "count": 11756,
+          "minimum": 473,
+          "maximum": 634,
+          "p50": 502,
+          "p95": 583
+        },
+        "tool": {
+          "count": 2205,
+          "minimum": 538,
+          "maximum": 682,
+          "p50": 559,
+          "p95": 633
+        }
+      },
+      "targets": {
+        "action": {
+          "clarify": 1390,
+          "retrieve": 2483,
+          "tool": 2205,
+          "human": 1376,
+          "answer": 2066,
+          "refuse": 992,
+          "close": 634,
+          "redirect": 610
+        },
+        "tool": {
+          "queryLoanProducts": 908,
+          "queryApplicationDetail": 472,
+          "queryMyCreditScore": 207,
+          "queryMyApplications": 362,
+          "explainApplicationStatus": 256
+        }
+      }
+    }
+  },
+  "source_files": {
+    "src/qwenlab/financial_prompt_v2.py": "25033aa2a7a3fadf60e51ece0eebe3fdfbbd0626cc9f04654b9641a91a4629ef",
+    "src/qwenlab/financial_service_v2_preflight.py": "b8a91281eb40c11d757a7d83b964fdc2f1c14b70e51172ff3c74f00926dd3773",
+    "data/financial-service-v2/train.json": "e12e359809ccb162ac242b2661b3f995b0e7bc44b5e8595c94e982c68bd5f021"
+  },
+  "tokenizer_files": {
+    "chat_template.jinja": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+    "merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+    "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+    "tokenizer_config.json": "49e2b6e395f959f077f1e992b338919c0d4a9732fc6e613995e06557f843500c",
+    "vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+  },
+  "packages": {
+    "transformers": "5.18.0",
+    "tokenizers": "0.23.2"
+  },
+  "candidate_token_ids": {
+    "action": {
+      "clarify": 32,
+      "retrieve": 33,
+      "tool": 34,
+      "answer": 35,
+      "human": 36,
+      "redirect": 37,
+      "refuse": 38,
+      "close": 39
+    },
+    "tool": {
+      "queryLoanProducts": 32,
+      "queryMyApplications": 33,
+      "queryApplicationDetail": 34,
+      "queryMyCreditScore": 35,
+      "explainApplicationStatus": 36
+    }
+  }
+}

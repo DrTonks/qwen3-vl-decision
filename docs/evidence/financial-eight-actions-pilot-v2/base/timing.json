@@ -1,0 +1,12 @@
+{
+  "action_p50_s": 0.10199069999725907,
+  "action_p95_s": 0.10789125000083004,
+  "request_p50_s": 0.10428769999998622,
+  "request_p95_s": 0.20803701499498856,
+  "conditional_tool_requests": 152,
+  "total_measured_s": 54.42482969995035,
+  "projection_counts": {
+    "candidate": 384
+  },
+  "scope": "384 serial development requests; tokenization, transfers and predicted conditional tool included; loading/warmup excluded. Action token count versus total processed tokens separate. No backend calls."
+}

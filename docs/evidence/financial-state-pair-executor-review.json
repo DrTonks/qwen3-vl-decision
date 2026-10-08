@@ -1,0 +1,62 @@
+{
+  "version": "financial-state-pair-executor-review-v1",
+  "status": "pass",
+  "independent": true,
+  "reviewer": "independent-agent/state_pair_code_review",
+  "human_reviewed": false,
+  "evaluation_examples_read": false,
+  "predictions_read": false,
+  "gpu_used": false,
+  "model_api_requests": 0,
+  "open_findings": [],
+  "files": {
+    "src/qwenlab/financial_state_pair_cycle.py": "89845914b00c59ef2f23683de01eb641ffddd6f298f6414f347f3859341ca247",
+    "tests/test_financial_state_pair_cycle.py": "2520841bfff507938953203476f20dc3ce1cc13a3cee2ae6e97aecd87ca24872",
+    "scripts/start-financial-state-pair.ps1": "a74847854c2c0fde8409bfca6739d76f6fdf3b754efe69c75f9285c49a05910c",
+    "scripts/pause-financial-state-pair.ps1": "fff38eeb040ce42925c28294895f533b29f0d14d43e0f9ffc9549ff80ab7d480",
+    "scripts/resume-financial-state-pair.ps1": "112df720a3623c9373c581075ab411b9b3cb5fb7864c439fc6b779913cd2f0d6"
+  },
+  "config_sha256": "69e1a3c78bfb6e84286af7dfb92b47458de6b16bbbbe20f4c386b52fbfcbd6b6",
+  "schedule_manifest_sha256": "51ff1813fa6ad420b2c167e76731eb7826fa77b9d88c78267ad1c8328656668f",
+  "schedule_review_sha256": "c6ad2869396600d10c2a6bf824c5ee0bebb2c6916ca50b6a90278bdd45be62b2",
+  "conclusion": "No blocking findings. The independently reviewed statepair executor keeps the frozen numerical and evaluation gates, merges both training and token inventories, and isolates new probe/main artifacts from the historical preauth reference.",
+  "validation": {
+    "synthetic_cpu_tests_passed": 28,
+    "synthetic_cpu_tests_total": 28,
+    "powershell_parser_errors": 0,
+    "actual_merged_training_rows": 13378,
+    "actual_merged_token_rows": 13378,
+    "old_training_rows": 13242,
+    "new_candidate_rows": 136,
+    "exact_row_token_inventory_coverage": true,
+    "token_lengths_within_2048": true,
+    "true_tool_token_presence_matches_labels": true,
+    "source_training_eligible_flags_remain_false": true,
+    "numerical_checkpoint_resume_eval_functions_ast_match_frozen_preauth": true,
+    "schedule_review_schema_and_bindings_inspected": true
+  },
+  "reviewed_invariants": [
+    "Execution rows equal the frozen old pool plus additions; the full statepair schedule is validated before model training.",
+    "Actual prompt encoding and cached tokens are checked against the merged old and candidate token lengths; re-signed same-length cache tampering is rejected.",
+    "Probe and main use separate statepair results, controls, caches and checkpoint paths; the historical reference uses preauth step 400.",
+    "Fresh official same-seed initialization is compared with archived preauth and successful probe initial trainable tensor hashes.",
+    "A 25-step train-only probe uses the original 400-step learning rate and must pause at step 12, restore in a new process, then execute step 13.",
+    "Main requires a successful bound probe with an exited worker; probe adapters cannot initialize main.",
+    "Shared GPU lock and launch guard prevent duplicate execution; pause waits for original PID and creation-time identity to exit and confirms checkpoint integrity and lock release.",
+    "Only statepair step 400 is eligible for selection; step 200 is diagnostic and historical preauth is a comparison only.",
+    "Calibration and final evaluation remain gated behind the original development and calibration criteria; the probe rejects all evaluation splits.",
+    "CPU candidate and schedule training-disabled metadata remain immutable; the separately authorized execution protocol records training permission."
+  ],
+  "limitations": [
+    "This is source review and synthetic CPU verification, not proof of successful GPU training or pause/resume on the real worker.",
+    "No model weights, evaluation examples or historical predictions were loaded by this reviewer.",
+    "The numerical/runtime/model-reference preflight reported by the parent was not independently rerun by this reviewer."
+  ],
+  "activity": {
+    "training_run": false,
+    "model_weights_loaded": false,
+    "old_frozen_outputs_modified": false,
+    "source_code_modified": false,
+    "gpu_or_model_api_used": false
+  }
+}

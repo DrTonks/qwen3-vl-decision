@@ -1,0 +1,1140 @@
+{
+  "scope": "Current-service development only; reconstructed context, not actual session or model inference",
+  "rows": [
+    {
+      "id": "EVAL-FSV2-DEV-0001",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "tool",
+      "original_tool": "queryLoanProducts",
+      "grounded_gold_decision": {
+        "action": "tool",
+        "reasonCode": "query",
+        "tool": "queryLoanProducts",
+        "arguments": {}
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0002",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "tool",
+      "original_tool": "queryLoanProducts",
+      "grounded_gold_decision": {
+        "action": "tool",
+        "reasonCode": "query",
+        "tool": "queryLoanProducts",
+        "arguments": {}
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0003",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "tool",
+      "original_tool": "queryLoanProducts",
+      "grounded_gold_decision": {
+        "action": "tool",
+        "reasonCode": "query",
+        "tool": "queryLoanProducts",
+        "arguments": {}
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0004",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "answer",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "answer",
+        "reasonCode": "general_help"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0005",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "tool",
+      "original_tool": "queryMyApplications",
+      "grounded_gold_decision": {
+        "action": "tool",
+        "reasonCode": "query",
+        "tool": "queryMyApplications",
+        "arguments": {}
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0006",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "tool",
+      "original_tool": "queryMyApplications",
+      "grounded_gold_decision": {
+        "action": "tool",
+        "reasonCode": "query",
+        "tool": "queryMyApplications",
+        "arguments": {}
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0007",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "tool",
+      "original_tool": "queryMyApplications",
+      "grounded_gold_decision": {
+        "action": "tool",
+        "reasonCode": "query",
+        "tool": "queryMyApplications",
+        "arguments": {}
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0008",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "answer",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "answer",
+        "reasonCode": "general_help"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0009",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "application_id": 731,
+        "handoff_status": "none"
+      },
+      "original_action": "tool",
+      "original_tool": "queryApplicationDetail",
+      "grounded_gold_decision": {
+        "action": "tool",
+        "reasonCode": "query",
+        "tool": "queryApplicationDetail",
+        "arguments": {
+          "applicationId": 731
+        }
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0010",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "application_id": 731,
+        "handoff_status": "none"
+      },
+      "original_action": "tool",
+      "original_tool": "queryApplicationDetail",
+      "grounded_gold_decision": {
+        "action": "tool",
+        "reasonCode": "query",
+        "tool": "queryApplicationDetail",
+        "arguments": {
+          "applicationId": 731
+        }
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0011",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none",
+        "application_id": 731
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "application_id": 731,
+        "handoff_status": "none"
+      },
+      "original_action": "tool",
+      "original_tool": "queryApplicationDetail",
+      "grounded_gold_decision": {
+        "action": "tool",
+        "reasonCode": "query",
+        "tool": "queryApplicationDetail",
+        "arguments": {
+          "applicationId": 731
+        }
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0012",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "clarify",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "clarify",
+        "reasonCode": "ambiguous_request"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0013",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "tool",
+      "original_tool": "queryMyCreditScore",
+      "grounded_gold_decision": {
+        "action": "tool",
+        "reasonCode": "query",
+        "tool": "queryMyCreditScore",
+        "arguments": {}
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0014",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "tool",
+      "original_tool": "queryMyCreditScore",
+      "grounded_gold_decision": {
+        "action": "tool",
+        "reasonCode": "query",
+        "tool": "queryMyCreditScore",
+        "arguments": {}
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0015",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "tool",
+      "original_tool": "queryMyCreditScore",
+      "grounded_gold_decision": {
+        "action": "tool",
+        "reasonCode": "query",
+        "tool": "queryMyCreditScore",
+        "arguments": {}
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0016",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "answer",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "answer",
+        "reasonCode": "general_help"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0017",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "status_code": 0,
+        "handoff_status": "none"
+      },
+      "original_action": "tool",
+      "original_tool": "explainApplicationStatus",
+      "grounded_gold_decision": {
+        "action": "tool",
+        "reasonCode": "query",
+        "tool": "explainApplicationStatus",
+        "arguments": {
+          "status": 0
+        }
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0018",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "tool",
+      "original_tool": "explainApplicationStatus",
+      "grounded_gold_decision": {
+        "action": "clarify",
+        "reasonCode": "invalid_status"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0019",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "tool",
+      "original_tool": "explainApplicationStatus",
+      "grounded_gold_decision": {
+        "action": "clarify",
+        "reasonCode": "invalid_status"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0020",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "answer",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "answer",
+        "reasonCode": "general_help"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0021",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "human",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "human",
+        "reasonCode": "human_requested"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0022",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "application_id": 806,
+        "handoff_status": "none"
+      },
+      "original_action": "human",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "human",
+        "reasonCode": "human_requested"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0023",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "human",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "human",
+        "reasonCode": "human_requested"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0024",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "answer",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "answer",
+        "reasonCode": "general_help"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0025",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "human",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "human",
+        "reasonCode": "human_requested"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0026",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "human",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "human",
+        "reasonCode": "human_requested"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0027",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "requested"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "human",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "human",
+        "reasonCode": "human_requested"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0028",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "failed"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "human",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "human",
+        "reasonCode": "human_requested"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0029",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "human",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "human",
+        "reasonCode": "human_requested"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0030",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "human",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "human",
+        "reasonCode": "human_requested"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0031",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "human",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "human",
+        "reasonCode": "human_requested"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0032",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "human",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "human",
+        "reasonCode": "human_requested"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0033",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "refuse",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "refuse",
+        "reasonCode": "sensitive_operation"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0034",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "refuse",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "refuse",
+        "reasonCode": "sensitive_operation"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0035",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "refuse",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "refuse",
+        "reasonCode": "sensitive_operation"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0036",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "refuse",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "refuse",
+        "reasonCode": "sensitive_operation"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0037",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "refuse",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "refuse",
+        "reasonCode": "sensitive_operation"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0038",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "refuse",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "refuse",
+        "reasonCode": "sensitive_operation"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0039",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "refuse",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "refuse",
+        "reasonCode": "sensitive_operation"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0040",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "refuse",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "refuse",
+        "reasonCode": "sensitive_operation"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0041",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "answer",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "answer",
+        "reasonCode": "general_help"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0042",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "answer",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "answer",
+        "reasonCode": "general_help"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0043",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "answer",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "answer",
+        "reasonCode": "general_help"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0044",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "answer",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "answer",
+        "reasonCode": "general_help"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0045",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "answer",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "answer",
+        "reasonCode": "general_help"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0046",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "human",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "human",
+        "reasonCode": "human_requested"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0047",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "answer",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "answer",
+        "reasonCode": "general_help"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0048",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "answer",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "answer",
+        "reasonCode": "general_help"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0049",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "clarify",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "clarify",
+        "reasonCode": "ambiguous_request"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0050",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "clarify",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "clarify",
+        "reasonCode": "ambiguous_request"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0051",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "clarify",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "clarify",
+        "reasonCode": "ambiguous_request"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0052",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none",
+        "pending": "applicationId"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "application_id": 908,
+        "pending": "applicationId",
+        "handoff_status": "none"
+      },
+      "original_action": "tool",
+      "original_tool": "queryApplicationDetail",
+      "grounded_gold_decision": {
+        "action": "tool",
+        "reasonCode": "query",
+        "tool": "queryApplicationDetail",
+        "arguments": {
+          "applicationId": 908
+        }
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0053",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "answer",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "answer",
+        "reasonCode": "general_help"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0054",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "close",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "close",
+        "reasonCode": "end_requested"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0055",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "human",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "human",
+        "reasonCode": "human_requested"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0056",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "close",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "close",
+        "reasonCode": "end_requested"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0057",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "redirect",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "redirect",
+        "reasonCode": "out_of_scope"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0058",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "redirect",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "redirect",
+        "reasonCode": "out_of_scope"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0059",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "answer",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "answer",
+        "reasonCode": "general_help"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0060",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "close",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "close",
+        "reasonCode": "end_requested"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0061",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "answer",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "answer",
+        "reasonCode": "general_help"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0062",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "human",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "human",
+        "reasonCode": "human_requested"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0063",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "refuse",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "refuse",
+        "reasonCode": "sensitive_operation"
+      }
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0064",
+      "original_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "reconstructed_node_state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "original_action": "answer",
+      "original_tool": null,
+      "grounded_gold_decision": {
+        "action": "answer",
+        "reasonCode": "general_help"
+      }
+    }
+  ]
+}

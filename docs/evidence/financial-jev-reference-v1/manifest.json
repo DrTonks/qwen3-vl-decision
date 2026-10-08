@@ -1,0 +1,14 @@
+{
+  "files": {
+    "calibration-predictions.json": "e5c3b95a916bef5a48c920bbea9f463831f02553c9afff89d0621be86968243f",
+    "comparison.json": "d85e48d318c1ab560a41df050ec6f7ac26569d172727d9c2fdc0a772fde44365",
+    "completion.json": "7272e902e39f08de7260803135a9054a291e3519f351d371d7ab7673f989c8a2",
+    "development-predictions.json": "7ef870830a355364edf2a1f9adabd119d43d75dc23634dc4b6ec1c09e08d5b62",
+    "final-predictions.json": "ce52706504a8eaa76c179644a1ce38e5eb64cd93494fe43bbf143b489713f8a6",
+    "protocol.json": "645a4d9b9e05545b3e8ca49c373953ccb43243c95655a8327bf5140be95b00b7",
+    "qwen-error-review.json": "458b605f69c3c322074c460ffed7c6828182f7971faa5824c62989bdc2a9a539"
+  },
+  "purpose": "Evaluation only, never teacher/training data",
+  "cache_validity": "Exact payload hash, action/tool/policy definitions, dataset version, provider model and call strategy",
+  "final_visibility": "Predictions cached without labels/score; scoring requires future fixed eligible candidate"
+}

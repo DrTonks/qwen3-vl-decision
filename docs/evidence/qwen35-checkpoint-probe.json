@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "cpu_only": true,
+  "real_model_loaded": false,
+  "final_data_read": false,
+  "optimizer_rng_parameter_continuation": "bitwise_equal",
+  "base_model_id": "Qwen/Qwen3.5-0.8B",
+  "pause_checkpoint_confirmed": true,
+  "checksum_tamper_rejected": true,
+  "artifact_directory": ".local/qwen35/review-probe-3a2c26bcb6284959bc35e43022d211cc"
+}

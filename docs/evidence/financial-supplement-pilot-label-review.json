@@ -1,0 +1,1355 @@
+{
+  "schema_version": "financial-supplement-pilot-label-review-v1",
+  "reviewer": "independent-agent-supplement_labels_review",
+  "reviewed_at_utc": "2026-10-03T15:22:56.867508+00:00",
+  "candidate_file": "data/financial-supplement-pilot-v1/build-v1/candidates.json",
+  "candidate_file_sha256": "74a76e142365009cc55d01262c1472a9d270229fdb75b98e70ee425d9712e768",
+  "human_reviewed": false,
+  "evaluation_data_read": false,
+  "training_or_api_run": false,
+  "candidate_or_source_modified": false,
+  "review_scope": "逐条人工智能语义复核160条候选，核对八动作、认证、可见历史/状态、工具及参数、知识集合、指代和标注理由；accept仅指本次独立AI审核，不代表人工确认或训练资格。",
+  "read_allowlist": [
+    "configs/support-financial-v2.json",
+    "data/financial-supplement-pilot-v1/authoring.json",
+    "data/financial-supplement-pilot-v1/build-v1/candidates.json",
+    "../uestc_Integrated_Design/后端/services/customerSupport/tools.js",
+    "../uestc_Integrated_Design/后端/services/customerSupport/financialContract.js"
+  ],
+  "statistics": {
+    "total": 160,
+    "decisions": {
+      "accept": 155,
+      "revise": 4,
+      "quarantine": 1
+    },
+    "actions": {
+      "clarify": 32,
+      "tool": 38,
+      "answer": 30,
+      "human": 25,
+      "redirect": 7,
+      "refuse": 8,
+      "close": 4,
+      "retrieve": 16
+    },
+    "cohorts": {
+      "current-service": 120,
+      "planned-retrieval": 24,
+      "preauth-robustness": 16
+    },
+    "input_layers": {
+      "component-message-only": 30,
+      "node-projection": 90,
+      "planned-capability-component": 24,
+      "preauth-component": 16
+    }
+  },
+  "required_revisions": [
+    "FSP1-C04-1",
+    "FSP1-C04-2",
+    "FSP1-C07-2",
+    "FSP1-C08-2"
+  ],
+  "risks": [
+    "四条revise修复后必须重新生成候选并以新的候选SHA和source_row_sha256复核，不继承本次accept。",
+    "C08-1动作语义可解释为clarify，但其Node投影仍保留被用户排除的旧编号；本次隔离的是输入状态冲突风险，不是把明确否定指代强行判作查询旧记录。",
+    "C04体现不支持的已知枚举与缺槽的边界；适配器invalid_status回退不能单独证明原文具有唯一clarify语义。",
+    "planned-retrieval共24条为声明能力的组件场景；当前Node适配器固定空知识集合，不能将这些条目当成当前线上检索已可用的证据。",
+    "component-message-only条目故意不依赖适配器抽取state；不能据此声称现行参数抽取器已覆盖所有自然表达。",
+    "A09与K11-1依赖服务端提供的助手查询历史；本次仅审核候选中的可见历史语义，未访问数据库或验证真实查询结果。",
+    "H11两条动作依据是available_tools中缺少对应工具；建议evidence_paths增加input.available_tools，使关键证据引用完整。",
+    "少数成对标注理由使用共用表述，可更精准：C01-2没有金额干扰；C11应描述编号尚未补齐；K11-2应描述纯能力询问而非再次检索同一事实。",
+    "候选均为合成数据，本审核未读取旧development/calibration/final/challenge、旧错例/报告或预测，也不证明线上泛化。"
+  ],
+  "rows": [
+    {
+      "id": "FSP1-C01-1",
+      "source_row_sha256": "f82682aacfeeed66f4bd2384af5d4fd86b746f6bafad15783ce415590843cda5",
+      "decision": "accept",
+      "reason": "指定单笔但缺少唯一编号；金额或未选目标不能可靠定位申请，clarify及applicationId槽合理。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-C01-2",
+      "source_row_sha256": "b4862b7793cfbc7c352ae0913fe3ed19cfcf010d8c007b93224a32dfc038b6dc",
+      "decision": "accept",
+      "reason": "指定单笔但缺少唯一编号；金额或未选目标不能可靠定位申请，clarify及applicationId槽合理。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-C02-1",
+      "source_row_sha256": "7662ea55dea69f0cc78d27364464fad8f10c82ef80e37acce2550c36bec363de",
+      "decision": "accept",
+      "reason": "两笔互斥目标且只指向其中一笔，不能任选编号；clarify合理。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-C02-2",
+      "source_row_sha256": "bbb1783c94f94fa86397a9a14a39e6b3729923a361c3f386cfb0571e7bf42085",
+      "decision": "accept",
+      "reason": "两笔互斥目标且只指向其中一笔，不能任选编号；clarify合理。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-C03-1",
+      "source_row_sha256": "cd05cb7e1bc24f5945fcf566116be92bb2cecb7e9d7338c40d7064d9e7bf4b62",
+      "decision": "accept",
+      "reason": "只表达状态含义需求但没有给出数字，缺statusCode，需追问。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-C03-2",
+      "source_row_sha256": "4e17131c5f57230e307277943a025f46211db5bcae5c3e310ad71352874f06c0",
+      "decision": "accept",
+      "reason": "只表达状态含义需求但没有给出数字，缺statusCode，需追问。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-C04-1",
+      "source_row_sha256": "843159bcbdf894a97d41e3ae45e6970f12d1f313ecd4a4d9230bda6b259587f1",
+      "decision": "revise",
+      "reason": "状态码7已经明确给出，问题是枚举不支持而非缺少statusCode；当前原文未请求核对或表达抄录不确定，clarify与answer说明限制存在歧义。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false,
+      "suggested_revision": "若保留clarify，明确写成数字抄录不确定、请求核对状态值；否则改answer、清空missing_slots，理由说明当前工具仅支持0/1/2且无KB可核实7。"
+    },
+    {
+      "id": "FSP1-C04-2",
+      "source_row_sha256": "fbb82d391e642bacc4daf5ce88c6c063139cd1573883b860ec89e0f9d871f215",
+      "decision": "revise",
+      "reason": "状态码8已明确给出，原文既要求解释又允许核对；缺statusCode的标签未说明究竟需补哪项信息，能力不足与必要澄清混在同一条。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false,
+      "suggested_revision": "选择单一边界：明确无法确认数字并需要补状态值时保留clarify；确认8且只问含义时改answer说明能力限制，不能标成缺失已给出的状态码。"
+    },
+    {
+      "id": "FSP1-C05-1",
+      "source_row_sha256": "6f4ae5ba0bbe6fea4ddda2c10627caab01494764825df9d97cfddecdbfb6e39d",
+      "decision": "accept",
+      "reason": "可见历史为空，问题页面与对象均不明确；problem_context槽合适。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-C05-2",
+      "source_row_sha256": "55f261d00191a5fdc05fbf00cfda73bfe349eaea8ff56668fb27dccc59d2a479",
+      "decision": "accept",
+      "reason": "可见历史为空，问题页面与对象均不明确；problem_context槽合适。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-C06-1",
+      "source_row_sha256": "ab9cf437cf7fc2506ecc2266ce56570ce8db4f00ac364073c6eb9c0040870713",
+      "decision": "accept",
+      "reason": "孤立数字没有pending或查询历史，无法确认业务意图；request_intent槽合适。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-C06-2",
+      "source_row_sha256": "7995eb32d2446ca409c46415c541abb5a0dd39175196930356cd7bb9f9c976ab",
+      "decision": "accept",
+      "reason": "孤立数字没有pending或查询历史，无法确认业务意图；request_intent槽合适。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-C07-1",
+      "source_row_sha256": "f6d77345b0498f28e13e539a09ff9d781110b8510fc4e6a8bdf7862b51030f1a",
+      "decision": "accept",
+      "reason": "用户尚未选择要执行哪类查询，不能直接调用工具；确认本次查询意图合理。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-C07-2",
+      "source_row_sha256": "0edf96757b21e6b95547afa7e82b4040e27ef9352027fdf32e5d662139131f00",
+      "decision": "revise",
+      "reason": "用户表示分不清列表与详情、未选好类型，没有明确发起实际查询；解释两种能力(answer)与追问执行目标(clarify)均合理，现理由过度解释为混合查询。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false,
+      "suggested_revision": "若保留clarify，增加明确要立即查询但尚未决定查询对象的诉求；或保持原文改answer，理由说明先解释列表和明细的区别。"
+    },
+    {
+      "id": "FSP1-C08-1",
+      "source_row_sha256": "8c827983a3326e98564a12a29c1f173da04828a93ee5e3f6b7c6c1221ab48fd9",
+      "decision": "quarantine",
+      "reason": "原文明确排除刚才那笔，clarify在意图语义上成立；但node-projection仍把被排除的旧selectedApplicationId=48351投影成application_id，导致服务端当前编号与消息目标不一致。不能把这一工程投影缺陷静默当成普通缺槽训练例。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false,
+      "suggested_revision": "本批不修后端：隔离此投影冲突条目，或改稿为不含会复用旧记录的代词且明确未给新申请号的独立缺编号情形，重新投影后复核。若将来保留为状态冲突研究样本，应单独声明场景与输入适配器局限。"
+    },
+    {
+      "id": "FSP1-C08-2",
+      "source_row_sha256": "68e7ff975f738a026346d3e62857b4ed495e267f2992fade5328d89f084e5c24",
+      "decision": "revise",
+      "reason": "clarify及applicationId槽合理，但候选可见state已移除旧application_id；理由所说已有选中项只存在于authoring原始状态，不能作为模型可见证据。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false,
+      "suggested_revision": "保留动作与槽，仅将理由改为：用户要换另一笔查看期数，但当前正文、可见历史和state均无该笔唯一编号，需确认applicationId。"
+    },
+    {
+      "id": "FSP1-C09-1",
+      "source_row_sha256": "dc7580e663fa286fc9033a3a9f1540e8b84f33c0a55df9260f52c6463d4b171e",
+      "decision": "accept",
+      "reason": "消息只含金额或月份，均不能当作单笔编号；详情查询缺applicationId。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-C09-2",
+      "source_row_sha256": "5b1de8569585f2a19ec762060871e9433fd16689bc8ef9b3334f82866ebfa499",
+      "decision": "accept",
+      "reason": "消息只含金额或月份，均不能当作单笔编号；详情查询缺applicationId。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-C10-1",
+      "source_row_sha256": "4b5c869a1d76f3552d4b0c627fcfbd14647de4d48ac04d488f0610755b61c99f",
+      "decision": "accept",
+      "reason": "同轮包含两个互斥状态码且用户明确不确定，不能替用户选择；clarify合理。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-C10-2",
+      "source_row_sha256": "317c3afa0537eac66bb253477ffa00738f1b29bee09ff7363a8f33a40491ce96",
+      "decision": "accept",
+      "reason": "同轮包含两个互斥状态码且用户明确不确定，不能替用户选择；clarify合理。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-C11-1",
+      "source_row_sha256": "6762805c8fe585672d9039e76d9759d0b17f35bb0cd038c234544f3b77bccb41",
+      "decision": "accept",
+      "reason": "可信pending仍为applicationId，当前消息没有补齐可用编号；继续clarify合理。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-C11-2",
+      "source_row_sha256": "e5c56368eba9600b054d07d4b7c1fff971520999ef2e2c739401fd970128ee98",
+      "decision": "accept",
+      "reason": "可信pending仍为applicationId，当前消息没有补齐可用编号；继续clarify合理。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T01-1",
+      "source_row_sha256": "d7866a5aeb43b9b4b666bb9cea4817d9a7d4fda44b8dd3d665306bb4fcc6009b",
+      "decision": "accept",
+      "reason": "明确执行上架产品目录查询；已认证且目录工具可用，空参数正确。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T01-2",
+      "source_row_sha256": "7e4fc1e38bf6a2c0e6cfdaaf51a0c59aaf46a945e3f1dda648ec0d071a0d9417",
+      "decision": "accept",
+      "reason": "明确执行上架产品目录查询；已认证且目录工具可用，空参数正确。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T02-1",
+      "source_row_sha256": "08c428966fd52f7831e3d10dbbad5b6e1d62c33e96f86753787bcf5ff0ff974b",
+      "decision": "accept",
+      "reason": "索取目录金额上限，属于maxAmount字段且非个人审批承诺；目录工具正确。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T02-2",
+      "source_row_sha256": "cf5ad06f914774611168b12e5e56e9023c0ec67554f75f4374838f52d9783aa5",
+      "decision": "accept",
+      "reason": "索取目录金额上限，属于maxAmount字段且非个人审批承诺；目录工具正确。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T03-1",
+      "source_row_sha256": "16f1c18c6714096f4114daa45bdc80f4db79e830fdeafc166b0600635dec7541",
+      "decision": "accept",
+      "reason": "索取产品标签或参考分，tools.js提供tags/acceptScore；目录工具正确。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T03-2",
+      "source_row_sha256": "7a5d2578ee2f7ecf77dd0932667d5a35cd551a3ac91e468ea3155f7429a200cc",
+      "decision": "accept",
+      "reason": "索取产品标签或参考分，tools.js提供tags/acceptScore；目录工具正确。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T04-1",
+      "source_row_sha256": "ae9dd7469964e8b82e027747af8ce26cb6495d29b85e0e87304c608a1646cfcb",
+      "decision": "accept",
+      "reason": "当前明确要求目录内容，没有要求报价或决定个人审批；目录工具正确。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T04-2",
+      "source_row_sha256": "538fbe05d4c41bd036bd933781c846b194ae0d5eae0d7599c12b0d8b2d4bf9a1",
+      "decision": "accept",
+      "reason": "当前明确要求目录内容，没有要求报价或决定个人审批；目录工具正确。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T05-1",
+      "source_row_sha256": "519ad34570b751497796710bb837d420ede3d817da0c5510ed87c34af6fa8c4b",
+      "decision": "accept",
+      "reason": "请求实际查看本人近期申请概览，没有指定单笔；列表工具及空参数正确。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T05-2",
+      "source_row_sha256": "eee62ae7e0c41d021a27dc209b526f1e4e014043a83d028f2d952f67a7e85f6a",
+      "decision": "accept",
+      "reason": "请求实际查看本人近期申请概览，没有指定单笔；列表工具及空参数正确。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T06-1",
+      "source_row_sha256": "8a746934b5fe410dbd5b87693bc8bf2f4ce7ce3d5cd68d3a8e8949fb4baf5489",
+      "decision": "accept",
+      "reason": "请求的编号/金额/状态均在列表返回范围内，不含产品名或时间；列表工具正确。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T06-2",
+      "source_row_sha256": "2bf86ce4d62fd694bdc96f221d9cff498ab6fadad2f92d9cb90ed244403c0daa",
+      "decision": "accept",
+      "reason": "请求的编号/金额/状态均在列表返回范围内，不含产品名或时间；列表工具正确。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T07-1",
+      "source_row_sha256": "3c140d028451f377a29b95d97b21cbfcc71fd9a34743fd285bc8737794ef5ce7",
+      "decision": "accept",
+      "reason": "用户接受最近最多50项的返回范围；查询列表即可，不推断全部历史完整。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T07-2",
+      "source_row_sha256": "0438f7f8e3fbc6ebe5422dab9373b8ad38416b6aad8916e3f5b02dae4061a7e5",
+      "decision": "accept",
+      "reason": "用户接受最近最多50项的返回范围；查询列表即可，不推断全部历史完整。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T08-1",
+      "source_row_sha256": "150285100e632a732e37294e326455b546c3adbd4856060494f691e95204c62f",
+      "decision": "accept",
+      "reason": "正文中明确唯一申请号，请求字段均由详情返回；参数取该编号正确。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T08-2",
+      "source_row_sha256": "46327c52018683373802b40c8aac99e4f206ed212f6bad09bc428cd2a290c72c",
+      "decision": "accept",
+      "reason": "正文中明确唯一申请号，请求字段均由详情返回；参数取该编号正确。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T09-1",
+      "source_row_sha256": "5e991a42b8d618c112b90a68f2f0e637936f47220d30d5dcc09994449ec4ffff",
+      "decision": "accept",
+      "reason": "显式申请编号与金额干扰可区分，参数未把金额当编号；详情工具正确。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T09-2",
+      "source_row_sha256": "30ab362990011ddef8dc837ecee4ccb0c57200e0866643aa20a7c28f41b9e90a",
+      "decision": "accept",
+      "reason": "显式申请编号与金额干扰可区分，参数未把金额当编号；详情工具正确。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T10-1",
+      "source_row_sha256": "e2266d2db5242538d34025a740ab4840ccbf1e87db26136254682932528ff39d",
+      "decision": "accept",
+      "reason": "明确单笔查询且编号唯一，优先详情工具，参数和正文一致。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T10-2",
+      "source_row_sha256": "909a628865bd8268d84bdc5d8dd66866867a879ccb0517bae71a331ef79b20c4",
+      "decision": "accept",
+      "reason": "明确单笔查询且编号唯一，优先详情工具，参数和正文一致。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T11-1",
+      "source_row_sha256": "c587c4fc14de628a1a4f6fb5d73156f2d61b3609978264081bbf3b86a94d2c55",
+      "decision": "accept",
+      "reason": "可见可信state包含唯一application_id，当前这笔/那单指代未排除它；详情参数匹配。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T11-2",
+      "source_row_sha256": "aab6d70115b90accd4905c2dcd7ca7c10b5b9acae0fa6a13ba88182927913236",
+      "decision": "accept",
+      "reason": "可见可信state包含唯一application_id，当前这笔/那单指代未排除它；详情参数匹配。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T12-1",
+      "source_row_sha256": "0407a674ae8b73428e6cc180913b8d296bb2a84567ee53532ae37042e0e80d52",
+      "decision": "accept",
+      "reason": "pending与可见助手历史均等待申请号，数字补充和state一致；详情参数匹配。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T12-2",
+      "source_row_sha256": "4bb1536f0bd7c07bfd7087268a5dae6fdc237e7662622143fa071640f151631b",
+      "decision": "accept",
+      "reason": "pending与可见助手历史均等待申请号，数字补充和state一致；详情参数匹配。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T13-1",
+      "source_row_sha256": "4f1d28916c9ed3d2948746badc76c329d618a51b26f10622cd06d7a2e822ac1d",
+      "decision": "accept",
+      "reason": "实际读取本人已存评分，无重新评分要求；信用工具可用且已认证。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T13-2",
+      "source_row_sha256": "feb39cc2eca9e40eeea4d1e2efbe409765343a3d390fe31d82deba017099ae7f",
+      "decision": "accept",
+      "reason": "实际读取本人已存评分，无重新评分要求；信用工具可用且已认证。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T14-1",
+      "source_row_sha256": "00a5f830546e319fdef20728905a14ebfb916bfa6f10b46545c0d2f0bf274cde",
+      "decision": "accept",
+      "reason": "评分/档位/建议额度属于已存信用工具返回字段，不作审批承诺。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T14-2",
+      "source_row_sha256": "7bf1282e97ff6d689760055dbdc0cad74a87033d1973cd7093fcaa73677d3cac",
+      "decision": "accept",
+      "reason": "评分/档位/建议额度属于已存信用工具返回字段，不作审批承诺。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T15-1",
+      "source_row_sha256": "44fefb4ef2477cd19816dfcfec28387cd4811ac81ff2d81006889d30aed8daad",
+      "decision": "accept",
+      "reason": "明示执行本人信用信息读取而非能力咨询；信用工具及空参数正确。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T15-2",
+      "source_row_sha256": "bddf19db53b97eaa583407c282bda87e8d16212842bafba2a3dcbc642548fd81",
+      "decision": "accept",
+      "reason": "明示执行本人信用信息读取而非能力咨询；信用工具及空参数正确。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T16-1",
+      "source_row_sha256": "6d5b32e03e1b2f27ed913e5ba9b5bae77e829ed569e10eda2247f7476846cf92",
+      "decision": "accept",
+      "reason": "静态状态码明确且属于0/1/2，认证和工具满足；status参数与原文一致。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T16-2",
+      "source_row_sha256": "540e3cfe254673275f4d95f216487d339666a74afedd2f78f67a05d6cf43e9d7",
+      "decision": "accept",
+      "reason": "静态状态码明确且属于0/1/2，认证和工具满足；status参数与原文一致。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T17-1",
+      "source_row_sha256": "d7859b281200e224288de74e631aec9559b16cfdcb6338e78a798dfec04885b3",
+      "decision": "accept",
+      "reason": "原文有明确合法状态值，仅解释静态含义；状态工具与参数正确。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T17-2",
+      "source_row_sha256": "be47da262c4851e3f17b8888f0812e7b76a5ff1681b5fd48fcf138eb819a9835",
+      "decision": "accept",
+      "reason": "原文有明确合法状态值，仅解释静态含义；状态工具与参数正确。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T18-1",
+      "source_row_sha256": "3283765f0244115f2df897704c547d8473b4b21fb1b48972e3d7a33b2044eff2",
+      "decision": "accept",
+      "reason": "明确状态码解释而非本人实时进度；已认证，状态参数与原文一致。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-T18-2",
+      "source_row_sha256": "c3326074bf9098e9f2ecb40d2a17ef3be2522010f46bb8dac6639b688a43c9a0",
+      "decision": "accept",
+      "reason": "明确状态码解释而非本人实时进度；已认证，状态参数与原文一致。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-A01-1",
+      "source_row_sha256": "5aa3b467e95d7b81963613ce272e46337d1bf90aed4913b9c46f8531e288ec5c",
+      "decision": "accept",
+      "reason": "只问已有能力并明确暂不查询；answer而非tool正确。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-A01-2",
+      "source_row_sha256": "b0a7533d1860c138ae243798a423d29a8b36ce7b40f2a36e7fa310af0b173360",
+      "decision": "accept",
+      "reason": "只问已有能力并明确暂不查询；answer而非tool正确。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-A02-1",
+      "source_row_sha256": "95e06e6e51e2dade2264262ba7281dbfd194f8174cff11567ff6da9390d21278",
+      "decision": "accept",
+      "reason": "只问未实现写能力且明确不办理；解释能力限制，非human或refuse。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-A02-2",
+      "source_row_sha256": "4df1ffa2383a39ee77637145b836cc9678e29e356bfc08db017b3a009fc08201",
+      "decision": "accept",
+      "reason": "只问未实现写能力且明确不办理；解释能力限制，非human或refuse。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-A03-1",
+      "source_row_sha256": "9a5ec46d8c06992288ce6425592f19e0965888d67f2946405503c47aa8379b5a",
+      "decision": "accept",
+      "reason": "字段局限由合同与tools.js确定；即使无历史，也可说明查询范围。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-A03-2",
+      "source_row_sha256": "09fe30e69e195d4c7766810e9650aa87b1622869d2eef68fc71754b5a83a6352",
+      "decision": "accept",
+      "reason": "字段局限由合同与tools.js确定；即使无历史，也可说明查询范围。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-A04-1",
+      "source_row_sha256": "d8316737dbe7b5d86b9d251af220b8d27a4886d55bc4c52fca5016d143a1e376",
+      "decision": "accept",
+      "reason": "询问未知平台规定且无正式知识集合，answer说明无法核实，不能retrieve。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-A04-2",
+      "source_row_sha256": "881872e9f98be194072124c421998c0be19af703248412df12ae659ef1760cdf",
+      "decision": "accept",
+      "reason": "询问未知平台规定且无正式知识集合，answer说明无法核实，不能retrieve。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-A05-1",
+      "source_row_sha256": "0b4ddf5730709be219f18204d4161a1c329cf650bcb0f54fafdc81a64f254ede",
+      "decision": "accept",
+      "reason": "实时利率不在工具字段内；纯能力/字段询问可直接解释限制。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-A05-2",
+      "source_row_sha256": "fae1d134a0719959aae90bd075a845dcae58b62a506d1f5cf5bffdc2dab4a916",
+      "decision": "accept",
+      "reason": "实时利率不在工具字段内；纯能力/字段询问可直接解释限制。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-A06-1",
+      "source_row_sha256": "6b1fa0310f7f87bc47813ddfa330590f26fae5d10b8f0815b2780e4dd61dd92f",
+      "decision": "accept",
+      "reason": "普通感谢或等待阅读没有明确结束，并未新发起业务；answer合理。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-A06-2",
+      "source_row_sha256": "73e98853244c57cac9cfeacd9d1196421a665198a3dab097fa3a54afa77ede05",
+      "decision": "accept",
+      "reason": "普通感谢或等待阅读没有明确结束，并未新发起业务；answer合理。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-A07-1",
+      "source_row_sha256": "2fe566e8c8d8350fceb47971376a258eb98a618b98c90a27715bebfc7d0646d7",
+      "decision": "accept",
+      "reason": "目录上限及建议额度不保证审批，是合同已知边界；answer合理。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-A07-2",
+      "source_row_sha256": "8a806807851a31be4a8c4128200769efa82a0400df612e8fe3813065311aead3",
+      "decision": "accept",
+      "reason": "目录上限及建议额度不保证审批，是合同已知边界；answer合理。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-A08-1",
+      "source_row_sha256": "e401cb6e80ea3195e23558fff18009a2f466e986d20f2e9c337154878fab4bab",
+      "decision": "accept",
+      "reason": "只索取公开联系方式，无可信已知值且无知识集合；answer说明限制。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-A08-2",
+      "source_row_sha256": "989a45c16aaf9d07cc1dc6ba895ae77c7ea74d6c468aad12134eaa9994377bbe",
+      "decision": "accept",
+      "reason": "只索取公开联系方式，无可信已知值且无知识集合；answer说明限制。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-A09-1",
+      "source_row_sha256": "c643b3581aa0b8e076443347a814e61be1ffa472b210219ef31557618aeb14e7",
+      "decision": "accept",
+      "reason": "可见助手历史已有查询结果，本轮复述确认，无重复读取意图；answer合理。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-A09-2",
+      "source_row_sha256": "f9c94219dd8f41c67dd60760d3ed5fac364a7aca6cd37f5dbbb871ab47ff23f4",
+      "decision": "accept",
+      "reason": "可见助手历史已有查询结果，本轮复述确认，无重复读取意图；answer合理。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-A10-1",
+      "source_row_sha256": "5d713d5d910811e9993872700ce339502e455c7414fdccde5d36de4305a739e8",
+      "decision": "accept",
+      "reason": "引用/否定越权行为并询问已知边界，不是在实施违规或要求调查；answer合理。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-A10-2",
+      "source_row_sha256": "055e28259133ce450f9603dd080c493e008d528053bce746b76cf913723cb3a1",
+      "decision": "accept",
+      "reason": "引用/否定越权行为并询问已知边界，不是在实施违规或要求调查；answer合理。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-A11-1",
+      "source_row_sha256": "57e75dacce302103e1d256e63f8468494e6499d31b041d60a93c406196581f4f",
+      "decision": "accept",
+      "reason": "最多50项无法证明遗漏记录不存在，为已知工具范围；answer合理。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-A11-2",
+      "source_row_sha256": "f2ab7d7dd0ae47758d85e5ac0f2a6414c485b00d3e1de3a6eeef2fa01e7cae60",
+      "decision": "accept",
+      "reason": "最多50项无法证明遗漏记录不存在，为已知工具范围；answer合理。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-A12-1",
+      "source_row_sha256": "38256cb67dcdd04570eb7281002867ddb67f03b4d7c06c0430297b4b595f95be",
+      "decision": "accept",
+      "reason": "只是询问人工或知识能力；可信capabilities为不可用，可如实answer。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-A12-2",
+      "source_row_sha256": "39aa956bfa7bb2177a212bca366c638ac8fd4e7803089440d5bce79a09e75807",
+      "decision": "accept",
+      "reason": "只是询问人工或知识能力；可信capabilities为不可用，可如实answer。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-H01-1",
+      "source_row_sha256": "b8b3181a572d40b21baf36d9ac97dfdd62bedc45359b83a102b8c8ba84a921c0",
+      "decision": "accept",
+      "reason": "实际办理本人合法资料变更，白名单只有只读工具；human合理，不能承诺已转接。",
+      "reviewed_action": "human",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-H01-2",
+      "source_row_sha256": "65f30c8d8a08a47bc1cc46812ba8f39c67774ed968c33dd0b07a6ec501117056",
+      "decision": "accept",
+      "reason": "实际办理本人合法资料变更，白名单只有只读工具；human合理，不能承诺已转接。",
+      "reviewed_action": "human",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-H02-1",
+      "source_row_sha256": "0ccb7fb812ee4dbb179975a768b6674a1dd74377b967b3da546caf75e5573ecf",
+      "decision": "accept",
+      "reason": "本人资料纠错并要求核验是合法办理诉求，超出工具范围；human合理。",
+      "reviewed_action": "human",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-H02-2",
+      "source_row_sha256": "90061941e61c39cc22b9ab502015546066a3c92d4e05e75a9fdf1d6ebbcfc012",
+      "decision": "accept",
+      "reason": "本人资料纠错并要求核验是合法办理诉求，超出工具范围；human合理。",
+      "reviewed_action": "human",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-H03-1",
+      "source_row_sha256": "dc115b6571a58c37b4023945bcfbfcaa407bbf5ab653e13719d061766afcb759",
+      "decision": "accept",
+      "reason": "实际请求还款日期/延期办理，非单纯规则咨询，未实现该业务；human合理。",
+      "reviewed_action": "human",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-H03-2",
+      "source_row_sha256": "ffbcea954ebace61d7da71a1cd527ffe65366309779ac68059fd4d0c202855a5",
+      "decision": "accept",
+      "reason": "实际请求还款日期/延期办理，非单纯规则咨询，未实现该业务；human合理。",
+      "reviewed_action": "human",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-H04-1",
+      "source_row_sha256": "ce5eb22477d8716701670ad7abf4251249533d4de3a33ca0eab3753ace385163",
+      "decision": "accept",
+      "reason": "明确扣款争议调查与人工处理请求，不能用只读申请工具代替；human合理。",
+      "reviewed_action": "human",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-H04-2",
+      "source_row_sha256": "9f24ae443022a3702921fabf0df807f1d9677634f1327df53d4b6c3ecff33250",
+      "decision": "accept",
+      "reason": "明确扣款争议调查与人工处理请求，不能用只读申请工具代替；human合理。",
+      "reviewed_action": "human",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-H05-1",
+      "source_row_sha256": "f54048f072c5717eb81e54ae798a49e0ab35b8eb77887530893884cf0b9513c0",
+      "decision": "accept",
+      "reason": "报告被冒用并请求核查，非要求实施冒用；human合理。",
+      "reviewed_action": "human",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-H05-2",
+      "source_row_sha256": "1417cd7c80fc925eaff01bc8d4d7b4cbb44fa70c917cd8896e574770d7a0ec41",
+      "decision": "accept",
+      "reason": "报告被冒用并请求核查，非要求实施冒用；human合理。",
+      "reviewed_action": "human",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-H06-1",
+      "source_row_sha256": "ef26dd6500a9e793b90b1c95bf9a463b8756dc15e14c3113c7ca3cf3451a1534",
+      "decision": "accept",
+      "reason": "当前实质问题明确要求真人，handoff_available=false不改变human意图标签。",
+      "reviewed_action": "human",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-H06-2",
+      "source_row_sha256": "a02245893534895e13e0d3935289b9b18eab0717680925928586fc1ecc782665",
+      "decision": "accept",
+      "reason": "当前实质问题明确要求真人，handoff_available=false不改变human意图标签。",
+      "reviewed_action": "human",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-H07-1",
+      "source_row_sha256": "7c7e7094bbc9bf23eaf2851d8a3a0c7cb14cf723a53891e22173c6e20a6801c4",
+      "decision": "accept",
+      "reason": "索取本人合同或还款证明，实际个人业务在只读工具范围外；human合理。",
+      "reviewed_action": "human",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-H07-2",
+      "source_row_sha256": "f4b4036f1e3663ac16286f9bb396855b617da004a976311716b8d550cf31a411",
+      "decision": "accept",
+      "reason": "索取本人合同或还款证明，实际个人业务在只读工具范围外；human合理。",
+      "reviewed_action": "human",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-H08-1",
+      "source_row_sha256": "9715aa8aaeb9947a8bbd58c5eb471808d12e82f6b59caec12192d8dcd40273a5",
+      "decision": "accept",
+      "reason": "要求人工解释审批原因/复核，详情无审批理由；human合理而非编造或拒绝。",
+      "reviewed_action": "human",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-H08-2",
+      "source_row_sha256": "68dba0a460d17f0bdd2d455d36baa65d1d849506d995fbc1b164c3efc753ea26",
+      "decision": "accept",
+      "reason": "要求人工解释审批原因/复核，详情无审批理由；human合理而非编造或拒绝。",
+      "reviewed_action": "human",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-H09-1",
+      "source_row_sha256": "04b7254e06180dbd685132c83175ad03e854557539a17208dd163d3c59d2aa62",
+      "decision": "accept",
+      "reason": "办理本人授权/隐私业务，已实现工具无法执行；human合理。",
+      "reviewed_action": "human",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-H09-2",
+      "source_row_sha256": "68590c6fa3fcd602fa22ef726a311ab729cab8a159efc0375544b0d0ede41fe3",
+      "decision": "accept",
+      "reason": "办理本人授权/隐私业务，已实现工具无法执行；human合理。",
+      "reviewed_action": "human",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-H10-1",
+      "source_row_sha256": "3edb7e5d766f1f4603d7ff06154d32db8891c6b9a2657219f33d4bc54e9c01d5",
+      "decision": "accept",
+      "reason": "本人支付账户绑定变更要求核验办理，合法但无写能力；human合理。",
+      "reviewed_action": "human",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-H10-2",
+      "source_row_sha256": "b43614ffc4686d073be32cb2ce180a4fcdae6ebddd6a8f5f9fde6fd57c65b411",
+      "decision": "accept",
+      "reason": "本人支付账户绑定变更要求核验办理，合法但无写能力；human合理。",
+      "reviewed_action": "human",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-H11-1",
+      "source_row_sha256": "902410c01f761c677eec4c81f7cb991ecbd98377f98e21a5b05e475c630e3a55",
+      "decision": "accept",
+      "reason": "所需查询工具确实不在本条available_tools中，个人查询明确；human而非补槽合理。",
+      "reviewed_action": "human",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-H11-2",
+      "source_row_sha256": "477e9cca5fb9e7b74448a1a1e79f0fa644122642abb80db030d744164f61ac14",
+      "decision": "accept",
+      "reason": "所需查询工具确实不在本条available_tools中，个人查询明确；human而非补槽合理。",
+      "reviewed_action": "human",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-R01-1",
+      "source_row_sha256": "a28bf987f87580c67cc1e248b12e0ace497a2c0584f5a6dcf053080617d9ca03",
+      "decision": "accept",
+      "reason": "合法生活请求与贷款客服无关；redirect符合服务范围。",
+      "reviewed_action": "redirect",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-R01-2",
+      "source_row_sha256": "5508718d790e9811f0dc315264d1429e195f15977141c0c2da157aa7192d5cf5",
+      "decision": "accept",
+      "reason": "合法生活请求与贷款客服无关；redirect符合服务范围。",
+      "reviewed_action": "redirect",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-R02-1",
+      "source_row_sha256": "62a206eae734ef136516c5477f1daa10e8a3052894b542fe978a8f1f1ca4799d",
+      "decision": "accept",
+      "reason": "合法域外创作，没有金融业务诉求或禁止内容；redirect合理。",
+      "reviewed_action": "redirect",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-R02-2",
+      "source_row_sha256": "1057ca53c70730c73c6f26c12ca443eae30a4089fb1ea8a4b394f1d64243e0cb",
+      "decision": "accept",
+      "reason": "合法域外创作，没有金融业务诉求或禁止内容；redirect合理。",
+      "reviewed_action": "redirect",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-R03-1",
+      "source_row_sha256": "1f50eb1978ed694726e72be16ddc010030d7935e3d9584423e79eba445a9117a",
+      "decision": "accept",
+      "reason": "其他设备的一般使用咨询，与平台操作无关；redirect合理。",
+      "reviewed_action": "redirect",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-R03-2",
+      "source_row_sha256": "4574e0afbfbb8c929fc41e084cc7ada38f1eb8f0bbabaa977d7a4e508df747d2",
+      "decision": "accept",
+      "reason": "其他设备的一般使用咨询，与平台操作无关；redirect合理。",
+      "reviewed_action": "redirect",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-F01-1",
+      "source_row_sha256": "637280b4773a68e5a48f035dc5008d8ddb07a27f4e5b08eedd88cca0dac7b780",
+      "decision": "accept",
+      "reason": "实际索取用于骗取贷款审核的虚假材料；refuse优先于工具或人工。",
+      "reviewed_action": "refuse",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-F01-2",
+      "source_row_sha256": "4d9d85b90a87cbe95fc528bbc8cbb533846b8924cd44e92fb699ed2c7b12fd5f",
+      "decision": "accept",
+      "reason": "实际索取用于骗取贷款审核的虚假材料；refuse优先于工具或人工。",
+      "reviewed_action": "refuse",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-F02-1",
+      "source_row_sha256": "cc27c76017584e47131102d41a99c0f1cee84a52b2421414e2b57a084e54f265",
+      "decision": "accept",
+      "reason": "实际查询他人私有金融记录且无授权；refuse，不按本人查询处理。",
+      "reviewed_action": "refuse",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-F02-2",
+      "source_row_sha256": "9b827b22afe48cda55637988ef3f2d3c048d217dc98193cb6df1bd1d96230c64",
+      "decision": "accept",
+      "reason": "实际查询他人私有金融记录且无授权；refuse，不按本人查询处理。",
+      "reviewed_action": "refuse",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-F03-1",
+      "source_row_sha256": "63eeadb23bfd0f895322cc71e82ec8ca5c99e615436adbfdc9c968a18cc0b8a0",
+      "decision": "accept",
+      "reason": "实际要求篡改记录/绕过认证而非依法纠错；refuse合理。",
+      "reviewed_action": "refuse",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-F03-2",
+      "source_row_sha256": "49d906ecdfe2562dccd0ab9434f7fdcdf42adbbd95020ba5799bae42d87cd8e4",
+      "decision": "accept",
+      "reason": "实际要求篡改记录/绕过认证而非依法纠错；refuse合理。",
+      "reviewed_action": "refuse",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-E01-1",
+      "source_row_sha256": "3f4ba0ef8b44d998288659930cb6e7baaa80ef68ceba0b2a80784cd7329b23fe",
+      "decision": "accept",
+      "reason": "明确无剩余问题并结束本次咨询；可见上下文没有未处理业务，close合理。",
+      "reviewed_action": "close",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-E01-2",
+      "source_row_sha256": "3a44715efb155b9f6ff113e8c2c7695ebe8e8b026553a97c42eb4c6361c03dad",
+      "decision": "accept",
+      "reason": "明确无剩余问题并结束本次咨询；可见上下文没有未处理业务，close合理。",
+      "reviewed_action": "close",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-E02-1",
+      "source_row_sha256": "75e42da54d36b5d203b88c1d8de28a4f9235b681bb679807ea3d547f9029dddf",
+      "decision": "accept",
+      "reason": "明确结束对话而非撤销贷款或注销账户；close合理。",
+      "reviewed_action": "close",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-E02-2",
+      "source_row_sha256": "b054466a490138742ae2c24e930191ea6f81fa1f3326730c42fac2e7a01e23ba",
+      "decision": "accept",
+      "reason": "明确结束对话而非撤销贷款或注销账户；close合理。",
+      "reviewed_action": "close",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-K01-1",
+      "source_row_sha256": "cbb341ceea178e8e336e6b86d03d2bcc521ebcea2b6217b5e0a1f1c10eba7ea3",
+      "decision": "accept",
+      "reason": "虽有正式知识集合，但具体知识问题仍缺失；knowledge_topic槽及clarify合理。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-K01-2",
+      "source_row_sha256": "b585bd6cdeda26fb4a13c168766fc39caf76a83ef4591f354ea1df4f3cb40e51",
+      "decision": "accept",
+      "reason": "虽有正式知识集合，但具体知识问题仍缺失；knowledge_topic槽及clarify合理。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-K02-1",
+      "source_row_sha256": "f08ac1bb1d9fa9b261aebfa4fc88d87e99e656f94aa565bedf03f538325c8d7d",
+      "decision": "accept",
+      "reason": "平台材料规则未知，loan_service_docs在可用集合中，retrieve合理。",
+      "reviewed_action": "retrieve",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-K02-2",
+      "source_row_sha256": "081cbaf745288391028cfe0bfc1d0dd0c17ce31c9f212de56a922b9cb0ee8edc",
+      "decision": "accept",
+      "reason": "平台材料规则未知，loan_service_docs在可用集合中，retrieve合理。",
+      "reviewed_action": "retrieve",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-K03-1",
+      "source_row_sha256": "1f62f0c70a19374d2ec4674e3be4538ecce0d7bf81c54856304ed72999021891",
+      "decision": "accept",
+      "reason": "询问一般官方办理步骤而非实际提交个人业务；可用贷款知识集合可检索。",
+      "reviewed_action": "retrieve",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-K03-2",
+      "source_row_sha256": "332c49a9b14a259d905716f03ca24d12c8a45d707c56142cfafe34a1dad599ee",
+      "decision": "accept",
+      "reason": "询问一般官方办理步骤而非实际提交个人业务；可用贷款知识集合可检索。",
+      "reviewed_action": "retrieve",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-K04-1",
+      "source_row_sha256": "06b94b4b64426d4542bdc2e5457bbc6dd2c2a83e3244834ad22f34de715b7eda",
+      "decision": "accept",
+      "reason": "只问合同/凭证的一般规范，可用loan_service_docs，retrieve合理。",
+      "reviewed_action": "retrieve",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-K04-2",
+      "source_row_sha256": "3a2c2879c25e4d1e39e134ca6ebaac7dc63e1b5e522c7a7190016ef8cc743989",
+      "decision": "accept",
+      "reason": "只问合同/凭证的一般规范，可用loan_service_docs，retrieve合理。",
+      "reviewed_action": "retrieve",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-K05-1",
+      "source_row_sha256": "6924c001b113ea2f0f8319660996da15cb46ce1eb3c3052fe51c729ae960e895",
+      "decision": "accept",
+      "reason": "请求平台一般申请条件，尚无已知答案且有正式知识集合；retrieve合理。",
+      "reviewed_action": "retrieve",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-K05-2",
+      "source_row_sha256": "4468e36030a2f9b7f9aad3a367f181abf48fce31b1f1d5bf12d3f031a3f89921",
+      "decision": "accept",
+      "reason": "请求平台一般申请条件，尚无已知答案且有正式知识集合；retrieve合理。",
+      "reviewed_action": "retrieve",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-K06-1",
+      "source_row_sha256": "8af7458cadaafa51a8ea50962be69c8f1e43fc8362e1de108e3ae10ab835530d",
+      "decision": "accept",
+      "reason": "只问公开入口或流程并排除代办，适合检索而非转人工办理。",
+      "reviewed_action": "retrieve",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-K06-2",
+      "source_row_sha256": "e75c87df86b06cee3c779a4a3dfff6ca6c5fd43da02d55cdc08fa9a6243504ce",
+      "decision": "accept",
+      "reason": "只问公开入口或流程并排除代办，适合检索而非转人工办理。",
+      "reviewed_action": "retrieve",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-K07-1",
+      "source_row_sha256": "5f068bd6a7ac3e39ba99f7afafaf420c3a124c015b3aabe18bd2b8ffe98530c6",
+      "decision": "accept",
+      "reason": "隐私政策的收集依据/必填资料问题与privacy_policy集合匹配。",
+      "reviewed_action": "retrieve",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-K07-2",
+      "source_row_sha256": "56a3795f5d1bae0aaa3cb65aff2285c2ac67dfb0a651375c3336ea1acc6de2fb",
+      "decision": "accept",
+      "reason": "隐私政策的收集依据/必填资料问题与privacy_policy集合匹配。",
+      "reviewed_action": "retrieve",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-K08-1",
+      "source_row_sha256": "3889d729d1919693526fd08d56c93ddabcaae9393a0ab50d6e84e4aeebbb96c6",
+      "decision": "accept",
+      "reason": "隐私共享/保存期限问题与privacy_policy集合匹配，无需工具读取个人记录。",
+      "reviewed_action": "retrieve",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-K08-2",
+      "source_row_sha256": "b14a7337e3a0b7160ae13bc997eb496eb7e98a8c2ba52b85f416bfc57393d5b3",
+      "decision": "accept",
+      "reason": "隐私共享/保存期限问题与privacy_policy集合匹配，无需工具读取个人记录。",
+      "reviewed_action": "retrieve",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-K09-1",
+      "source_row_sha256": "571a522743344582b3253dd212e74667fc7f3530fbe68d38623f94fde7eef0be",
+      "decision": "accept",
+      "reason": "仅索取公开联系方式并排除转接，有loan_service_docs可检索；retrieve合理。",
+      "reviewed_action": "retrieve",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-K09-2",
+      "source_row_sha256": "781894fccd29ee8b1044afb0fad2ad50e8dbc6dc2c341113b2dc2b990a9ed008",
+      "decision": "accept",
+      "reason": "仅索取公开联系方式并排除转接，有loan_service_docs可检索；retrieve合理。",
+      "reviewed_action": "retrieve",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-K10-1",
+      "source_row_sha256": "7729d0c51e44a9f01ef143924caff0fca0945b2e6d2aa165696c7fa849c20845",
+      "decision": "accept",
+      "reason": "请求执行当前产品目录读取，知识集合不替代已实现只读工具；tool合理。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-K10-2",
+      "source_row_sha256": "2898bf6605e2133de6497d57eb4934d446b611ed59177bf246badd1446c427e3",
+      "decision": "accept",
+      "reason": "请求执行当前产品目录读取，知识集合不替代已实现只读工具；tool合理。",
+      "reviewed_action": "tool",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-K11-1",
+      "source_row_sha256": "f28b4d2a7187aef98ef284b2861a35d92c76c92154bfaf0445e7d2529c0d702b",
+      "decision": "accept",
+      "reason": "已有可信信息或已知能力即可解释，不需检索未知规则，也不应执行明确暂停的查询。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-K11-2",
+      "source_row_sha256": "c7069c8f59f77b5e3953e4bf50d8b5323c9bb0e2c94bec190226964d430af518",
+      "decision": "accept",
+      "reason": "已有可信信息或已知能力即可解释，不需检索未知规则，也不应执行明确暂停的查询。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-K12-1",
+      "source_row_sha256": "6facb6d1e1ae0d04eed07b2908f0a3301950275d52229fdeb92b5bc0c4f0a878",
+      "decision": "accept",
+      "reason": "本人凭证补开为人工办理；冒用他人凭证为禁止行为，两条各自标签与原文一致。",
+      "reviewed_action": "human",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-K12-2",
+      "source_row_sha256": "80b1655d8fe32f2f29eccc9a49602a74db466df22add41f2c5c020f8e387ae4c",
+      "decision": "accept",
+      "reason": "本人凭证补开为人工办理；冒用他人凭证为禁止行为，两条各自标签与原文一致。",
+      "reviewed_action": "refuse",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-U01-1",
+      "source_row_sha256": "da0e7967e278010a2ca13abf1a85a37de238900cae923bb7739179671c058ba5",
+      "decision": "accept",
+      "reason": "未认证的本人列表执行请求，所需工具存在；缺authentication，clarify正确。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-U01-2",
+      "source_row_sha256": "a0834c29e2930d4a1f983df6d996183c1a0b276594762afabfad0ccb9244a26d",
+      "decision": "accept",
+      "reason": "未认证的本人列表执行请求，所需工具存在；缺authentication，clarify正确。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-U02-1",
+      "source_row_sha256": "9465dbee76b4ed7b08d99a5c6a871be1cdae2a0bb3a7524642f264e521e51c26",
+      "decision": "accept",
+      "reason": "已知编号不能替代认证，详情工具存在；先补authentication正确。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-U02-2",
+      "source_row_sha256": "9db895691a8c10e9157e073db5180d5ad46792011fab8c3077546cff074a2a8b",
+      "decision": "accept",
+      "reason": "已知编号不能替代认证，详情工具存在；先补authentication正确。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-U03-1",
+      "source_row_sha256": "041de26eae5ffe1ebf4def5d1a062f7d739c031f78ad01f9a0e706f405919f4a",
+      "decision": "accept",
+      "reason": "执行公开目录/静态码工具同样受tools.js统一owner检查；未认证需clarify。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-U03-2",
+      "source_row_sha256": "0bdcff210dc6818bdd871655b09fc444245275e8e326f862c612b4dd373a8463",
+      "decision": "accept",
+      "reason": "执行公开目录/静态码工具同样受tools.js统一owner检查；未认证需clarify。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-U04-1",
+      "source_row_sha256": "43640127b94c4764f1b34244150a1807c42b638e7c2ea5c635dae955e52382ae",
+      "decision": "accept",
+      "reason": "本人已存信用查询工具存在而认证缺失；clarify不是虚构未实现能力。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-U04-2",
+      "source_row_sha256": "bf62c7790fc49e986748fba475aee723ed04bc7a522ede27fdece1e8c3f13b16",
+      "decision": "accept",
+      "reason": "本人已存信用查询工具存在而认证缺失；clarify不是虚构未实现能力。",
+      "reviewed_action": "clarify",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-U05-1",
+      "source_row_sha256": "6fab23411b8b7a7a729c95092e7335e94e82fa47bb3e79e8852f3224b452114c",
+      "decision": "accept",
+      "reason": "纯能力询问并明确不查，认证不是解释能力的前置条件；answer正确。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-U05-2",
+      "source_row_sha256": "3ff012584af6d3efb1bd6c48b6b87e3dd2e4a5267cc075305b03bffdcf49eed1",
+      "decision": "accept",
+      "reason": "纯能力询问并明确不查，认证不是解释能力的前置条件；answer正确。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-U06-1",
+      "source_row_sha256": "305d03eb7e0d2a0289d0a4da33061ccbbb6fe1af8bfc91b7aaffcd6e4a987f66",
+      "decision": "accept",
+      "reason": "无知识库的未知规则/联系方式无法靠登录补齐；answer说明限制正确。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-U06-2",
+      "source_row_sha256": "0b1544704b846f3ba5ac27f33cddb9b816b198a684ac5ffa16a0ff76243a23c6",
+      "decision": "accept",
+      "reason": "无知识库的未知规则/联系方式无法靠登录补齐；answer说明限制正确。",
+      "reviewed_action": "answer",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-U07-1",
+      "source_row_sha256": "659258adafe36e4f2d61e3dca59543ce43a88a7078b0af225bc6b0bcf8ff02ba",
+      "decision": "accept",
+      "reason": "当前人工调查/核验诉求不因未登录变成一般查询；human正确。",
+      "reviewed_action": "human",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-U07-2",
+      "source_row_sha256": "7a5727a1dc2065ad7cbd4739d6e3cb98b8c40e26289021e331e91c946e491e9a",
+      "decision": "accept",
+      "reason": "当前人工调查/核验诉求不因未登录变成一般查询；human正确。",
+      "reviewed_action": "human",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-U08-1",
+      "source_row_sha256": "4f02493111f7ebdae0e56b02394eed502af90dae97511da6421df66bb48e55d0",
+      "decision": "accept",
+      "reason": "域外合法创作应redirect；贷款造假执行请求应refuse，认证不改变各自意图。",
+      "reviewed_action": "redirect",
+      "human_reviewed": false
+    },
+    {
+      "id": "FSP1-U08-2",
+      "source_row_sha256": "696de56da0a3d2edb7b13046fe4403cc9b2ed0d2838c4067fdcdef5a5101ea8b",
+      "decision": "accept",
+      "reason": "域外合法创作应redirect；贷款造假执行请求应refuse，认证不改变各自意图。",
+      "reviewed_action": "refuse",
+      "human_reviewed": false
+    }
+  ],
+  "required_quarantines": [
+    "FSP1-C08-1"
+  ]
+}

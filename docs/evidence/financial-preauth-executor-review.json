@@ -1,0 +1,179 @@
+{
+  "version": "financial-preauth-executor-review-v1",
+  "status": "pass",
+  "reviewer": "independent-agent-supplement_labels_review",
+  "reviewer_type": "AI",
+  "independent": true,
+  "human_reviewed": false,
+  "evaluation_examples_read": false,
+  "predictions_read": false,
+  "blind_screen_report_read": false,
+  "gpu_used": false,
+  "model_weights_loaded": false,
+  "model_api_requests": 0,
+  "training_started": false,
+  "reviewed_at_utc": "2026-10-04T08:37:37.066246+00:00",
+  "files": {
+    "src/qwenlab/financial_preauth_cycle.py": "dea193444621b8af33dc17e2840ba5917d3fd6175e28f781e4953d2589864f7c",
+    "tests/test_financial_preauth_cycle.py": "1e224e5a14d1c8738a0c3907a983aead3d18410b1e18ae1dac47163f084be788",
+    "scripts/start-financial-preauth.ps1": "048e69de942eb6077981f9b4410b77869e5ac060c1854a10f54ca1a96b68c687",
+    "scripts/pause-financial-preauth.ps1": "da6d1ef15023529714731184d618141fa2c9382808ade4964c03d516e5e852f5",
+    "scripts/resume-financial-preauth.ps1": "a00b77006887ed127dc551d1ac71e60469260e470e28822f7cc1107d7e95d5cb"
+  },
+  "config_sha256": "10cd8619b09af283a03e2e1145c9d9ba738430d496bea9fd54959c1f519a65bb",
+  "schedule_manifest_sha256": "2c66638da21603ba1b5680cdf25b2fb0ba9e012879bd33ead307bd3da1675c4f",
+  "source_sha256": {
+    "configs/financial-preauth-execution-v1.json": "10cd8619b09af283a03e2e1145c9d9ba738430d496bea9fd54959c1f519a65bb",
+    "configs/financial-sampling-study-v1.json": "74c03b1f48b603fb9c916e993a4b4e80d6e38f9307fae591d31086537c23fe36",
+    "configs/qwen35-model-source.json": "d133981b764cbfdbf9b2758e84f0d1bcba906801d2c0921d9e4bdd42d08fef11",
+    "configs/support-financial-v2.json": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+    "requirements-qwen35.txt": "a6b2034db0356d00b7a9ec6d5ed39b9294e40bfd1f3e7ae1c78180dede74f0f0",
+    "scripts/pause-financial-pilot.ps1": "5d0c1ac30d01e8467eee8caa49872c54f15bfea4793254fe2a93f14ad93ba255",
+    "scripts/pause-financial-preauth.ps1": "da6d1ef15023529714731184d618141fa2c9382808ade4964c03d516e5e852f5",
+    "scripts/resume-financial-pilot.ps1": "ecd647585fd384e1c1d4472a3f70c5f3b0f10b65e864211a044ea2df42667fdf",
+    "scripts/resume-financial-preauth.ps1": "a00b77006887ed127dc551d1ac71e60469260e470e28822f7cc1107d7e95d5cb",
+    "scripts/start-financial-pilot.ps1": "5fe7de2eaebea0a43b00f21ea882029aa183b8c16b887622d02b2ec003f8329f",
+    "scripts/start-financial-preauth.ps1": "048e69de942eb6077981f9b4410b77869e5ac060c1854a10f54ca1a96b68c687",
+    "scripts/use-env.ps1": "114190e9dfe979dafa92fb23fa110acc9fa55a0d07aa8673afdb96ba14779cca",
+    "src/qwenlab/candidate_inference.py": "ba00fe89818d4549b2b124ecb549e1c0dff8c5513434427d8495b32656bed547",
+    "src/qwenlab/common.py": "9a2aa40b6dc8a94aba7ac1fe0c2a85d60f8465b465532ea4d12ea98d190606d1",
+    "src/qwenlab/financial_actions_metrics.py": "3d4f63967b1748116ea820d2dfdd0ab368926c16f8ee5863d4fbcf9903022a73",
+    "src/qwenlab/financial_actions_prompt.py": "817bd6578c99ee0dce3d5e1d784830ce1d70cd85a9ff54f6cdf8ec34515f2b36",
+    "src/qwenlab/financial_completion.py": "1b7973b8307e51c9e61fd1d7663d6ab5538ed2c6f35971c92c547abdf6e408b2",
+    "src/qwenlab/financial_expansion.py": "9f0cfb28bf43f8df5dd204b23272c8cec639a50717777f1f4526875cfa5b0b8e",
+    "src/qwenlab/financial_pilot.py": "8ecf6e5b757957cb889768f86827de6009578b1012cb1643fd2f3506fb698ab1",
+    "src/qwenlab/financial_preauth_cycle.py": "dea193444621b8af33dc17e2840ba5917d3fd6175e28f781e4953d2589864f7c",
+    "src/qwenlab/financial_preauth_schedule.py": "57b6dc4f7157197ee4fcc22d27e063515b32e6cb2e70153749866f0081d2700d",
+    "src/qwenlab/financial_prompt_v2.py": "25033aa2a7a3fadf60e51ece0eebe3fdfbbd0626cc9f04654b9641a91a4629ef",
+    "src/qwenlab/financial_ready.py": "450683f8f1ccc7a88e7df447b2ab61f496b88181055656532ac22ac9b2263085",
+    "src/qwenlab/financial_release.py": "820defcdd6363226225ae380735a06500bb27ce46eb06fff9a47aefe05689eeb",
+    "src/qwenlab/financial_release_core.py": "7f6ab2d2df84f4d275459b2eefd14db903145f65540c362d5cc7a4c07b2b4d1b",
+    "src/qwenlab/financial_sampling_cycle.py": "f1767c0293ee88b9e30671a496fc398e2a7eb628d793065ce30b63b28047eb55",
+    "src/qwenlab/financial_sampling_data.py": "d47df736854fc35204c38edb09958019e187b656e3dbfbf1800e17f5e9012c08",
+    "src/qwenlab/financial_sampling_freeze.py": "57a5ea7711d0538a3f57f1d87c40fef2c8f4578405e58c65160d5c3e9ce85014",
+    "src/qwenlab/financial_sampling_plan.py": "b599e6f3cb67f829c7eae18ebb45dd47f2406cea3277955defdf6de526eabb98",
+    "src/qwenlab/financial_serve_v2.py": "75c0684433213b82e12b36e9e1bf1ac923522157c34ea1b334cf58449eadb615",
+    "src/qwenlab/financial_service_v2_cycle.py": "1a5d02a9138b9765510052b875f82ab9dce0bf3cea49a7ea7c1be2f91367d89c",
+    "src/qwenlab/financial_service_v2_data.py": "fffde21c3023d7064c5e55ff7fc991624590f3c808f389403c47a47fcb55eae2",
+    "src/qwenlab/financial_service_v2_metrics.py": "b5af29223c5f55bb39e560cb7cc09ab8387c8d52ce095d88b3d31168a93c40dd",
+    "src/qwenlab/financial_train.py": "1d6cc12c18531f01d1ab21aae1d7ae19f8e439e916bd87fd2152ed6ceb49c917",
+    "src/qwenlab/joint_v4.py": "26378ca85470108c880bb4eae98f93a6969d5938c96b238596727c2e8d46e0db",
+    "src/qwenlab/joint_v5.py": "80190210f3c07578768e27120dd48b97192b01a90b6f8b97f32bcc7c44f15ed7",
+    "src/qwenlab/modeling.py": "fbcac24e76e3afee2804e09669a52786cf2d603bbcb9c95ccd423d2673d2264e",
+    "src/qwenlab/prepare_v2.py": "ab1e6aebfd9aa452d3c5112dbca8e570527e6b39ba9e75316410132a18d7390b",
+    "src/qwenlab/qwen35_model.py": "c11d5d7cead90cb2196f4fe3c716c585c4a61a914a18917c67697054cb82e54f",
+    "tests/test_financial_preauth_cycle.py": "1e224e5a14d1c8738a0c3907a983aead3d18410b1e18ae1dac47163f084be788"
+  },
+  "supporting_evidence_sha256": {
+    "docs/evidence/financial-preauth-schedule-review.json": "d0687421de4421d012bf7b046497fa7fc9b35cdb59503bb07a94a037a60057b3",
+    "docs/evidence/financial-sampling-executor-review.json": "9608f3ab966b35dc0f2ff9f92196bf7bc04fcf6e0a41a55fb47b97674a8c40a9",
+    "data/financial-preauth-study-v1/schedule-v1/manifest.json": "2c66638da21603ba1b5680cdf25b2fb0ba9e012879bd33ead307bd3da1675c4f",
+    "data/financial-sampling-study-v1/schedule-v1/manifest.json": "8ed29d2bcd57a72cedb19bf0a09d6ebc315d5681e0bcc0a704b3a4fb62f973c4",
+    "data/financial-sampling-study-v1/pool-v1/manifest.json": "56bee2bdaa144351ade5f120a65899093369b576fa9934a74ebf40761cde004d"
+  },
+  "open_findings": [],
+  "resolved_findings": [
+    {
+      "id": "PREAUTH-EXEC01",
+      "issue": "配置固定12步暂停，但初版CLI及失败恢复允许任意1至24步，探针证据不足以兑现约定。",
+      "resolution": "新freeze强制pause_at_step=12，preprotocol恢复保留并只接受12；PS首次Probe默认自动传12；恢复不得更改触发点；合成测试拒绝其他步。"
+    },
+    {
+      "id": "PREAUTH-EXEC02",
+      "issue": "复制后的缓存测试仍patch新schedule不存在的row_sha。",
+      "resolution": "改为parent_schedule.row_sha，与真实runner一致，缓存重签伪造负测通过。"
+    },
+    {
+      "id": "PREAUTH-EXEC03",
+      "issue": "历史对照最初只有文件hash绑定，未校验比较的数值与评估口径；缺旧checkpoint可能在新400步后才失败。",
+      "resolution": "训练前校验历史完成状态、官方模型/runtime、prompt/policy、evaluation绑定及完整数值配置/门槛；历史step400 checkpoint元数据纳入绑定并前置验证；收尾才解析开发预测重算metrics和配对统计，旧归档不参加选型。"
+    }
+  ],
+  "validation": {
+    "synthetic_cpu_suite": {
+      "command": ".venv-qwen35/Scripts/python.exe -m unittest discover -s tests -p test_financial_preauth_cycle.py -v",
+      "passed": 25,
+      "failed": 0,
+      "independently_rerun": true,
+      "real_evaluation_data_used": false
+    },
+    "powershell_parser": {
+      "scripts": 3,
+      "passed": 3,
+      "scripts_executed": false
+    },
+    "ast_equivalence": {
+      "method": "Independently compare AST without location attributes against byte-identical previously reviewed sampling executor",
+      "unchanged_definitions": [
+        "ArmRun",
+        "alive",
+        "checkpoint_summary_binding",
+        "checkpoints_safe",
+        "digest",
+        "ensure_finite_training",
+        "eval_binding",
+        "evaluate",
+        "evaluation_bindings",
+        "gpu_lock_released",
+        "holdout",
+        "identity_alive",
+        "immutable_json",
+        "learning_rate",
+        "main",
+        "nested_digest",
+        "optimizer_for",
+        "paired_bootstrap",
+        "parameter_hash",
+        "pause",
+        "prediction_prefix",
+        "probe_artifacts",
+        "process_identity",
+        "record_restoration",
+        "recover_logs",
+        "relative",
+        "reset_seed",
+        "runtime_binding",
+        "safe_exit_status",
+        "save_checkpoint",
+        "train_rows",
+        "verify_model",
+        "worker"
+      ],
+      "unchanged_count": 33,
+      "meaning": "数值优化器、学习率、RNG/optimizer摘要与恢复、检查点写入、评估缓存、holdout和安全退出的旧审核结论继续适用；变化函数已逐项人工审查。"
+    },
+    "static_review_coverage": [
+      "完整新runner与旧冻结runner差异及新函数",
+      "三份新PowerShell与CLI/状态接口",
+      "全部25项纯合成测试",
+      "继承旧数值配置、计划读取与缓存SHA/真实encode检查",
+      "新历史protocol/model/runtime/config绑定、checkpoints前置及开发结果收尾比较"
+    ],
+    "old_frozen_files": {
+      "sampling_runner_sha_matches_prior_review": true,
+      "sampling_config_sha_matches_prior_review": true,
+      "candidate_schedule_manifest_matches_cpu_review": true
+    }
+  },
+  "verified_invariants": [
+    "新模块及financial-preauth-v1/financial-preauth-probe-v1结果、缓存、控制和检查点独立；旧冻结执行器、配置与清单保持原字节。",
+    "只允许单臂preauth；探针25步、主实验400步；同seed官方全新LoRA，更新前FP32可训练参数SHA与历史stratified初始化相同，主实验还与新探针初始化SHA相同；不加载探针adapter继续训练。",
+    "计划由冻结13242训练池重放，逐行ID顺序与新plan完整一致；微批2、业务有效批8、累积4；工具损失原0.75/8业务分母不变，不因工具数变化重新归一化；显式AdamW与400步LR沿用旧实现。",
+    "步骤0及已完成optimizer步保存完整状态；恢复按completed+1推进并验证样本曝光前缀；已完成臂不重复更新；200/400评估恢复只补缺的缓存结果且保护训练RNG。",
+    "探针必须实际第12步保存并退出，新的进程恢复parameter/optimizer/RNG三个摘要且执行第13步，完整25步和文件绑定通过、worker退出才可授予400步前置条件。",
+    "缓存绑定protocol/row canonical SHA/prompt/schedule，并逐task重新encode完整payload比较；不完整缓存保留orphan证据重新编码，完整但不匹配缓存拒绝。",
+    "共用financial-eight-actions-gpu.lock覆盖worker；PS额外启动guard与双namespace活性检查；pause仅在检查点完整、worker实际退出、GPU锁已释放后确认safe_to_shutdown。",
+    "200仅诊断，只有preauth400可选；原总体/current/preauth/能力门槛完全保留；未通过停止，不校准/最终、不延长；通过后才校准，固定通过的校准政策才可读取最终集。",
+    "新训练前检查历史官方权重清单、runtime、prompt/policy/evaluation和主要数值设计一致；历史文件与step400 checkpoint绑定冻结；初始化SHA再做实际参数一致性验证。",
+    "历史开发预测仅在训练收尾作归档指标重算、配对story bootstrap和分群/延迟比较，不参与采样、200提前选型或放宽门槛；报告明确单种子、重复分析开发集与历史顺序比较限制。",
+    "本审阅仅源码、合成fixture、冻结配置和SHA元数据；未打开开发/校准/最终题面或预测，未运行模型API、权重加载或GPU。"
+  ],
+  "scope_limits": [
+    "这是执行器源码与合成CPU审核通过，不是实际GPU探针已成功。由主节点执行第12步暂停退出/新进程第13步恢复和25步完成后，runner才允许启动400步。",
+    "optimizer设备归一化、FP32 LoRA载入、CUDA RNG恢复和峰值显存仍须真实探针验证；本轮沿用经AST确认相同的旧数值接口审核，没有开启GPU。",
+    "真实历史模型/runtime/evaluation兼容检查在freeze运行时执行；本审核只对代码与合成条件覆盖作结论，没有加载历史模型或读取归档预测。",
+    "数据CPU审核仍独立保留：2720已登录行位置不变，480登录前槽无KB320/有KB160；严格认证动作对照旧新均2，故事组减少与多因素采样混淆不能解释为纯配额因果效果。",
+    "历史归档是非同期比较；相同环境绑定不保证GPU负载或时钟相同；旧开发集只能做回归，不宣称新盲测或生产可用。",
+    "未批准部署、App/后端变更或额外API；校准和最终仍受原门槛与固定400候选隔离。"
+  ]
+}

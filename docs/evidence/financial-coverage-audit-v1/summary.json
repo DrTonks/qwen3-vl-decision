@@ -1,0 +1,2166 @@
+{
+  "version": "financial-coverage-audit-v1",
+  "training_enabled": false,
+  "model_weights_loaded": false,
+  "evaluation_examples_read": false,
+  "model_api_requests": 0,
+  "original_labels_changed": false,
+  "pool": {
+    "rows": 13242,
+    "story_groups": 6059,
+    "unique_visible_inputs": 13242,
+    "action_counts": {
+      "clarify": 1627,
+      "retrieve": 2651,
+      "tool": 2518,
+      "human": 1656,
+      "answer": 2371,
+      "refuse": 1085,
+      "close": 678,
+      "redirect": 656
+    },
+    "isolated_cell_capacity_row4_group16": 42116,
+    "action_story_groups": {
+      "answer": 1653,
+      "clarify": 1439,
+      "close": 323,
+      "human": 1322,
+      "redirect": 143,
+      "refuse": 262,
+      "retrieve": 1758,
+      "tool": 1601
+    },
+    "exposures": {
+      "uniform": 3200,
+      "stratified": 3200
+    },
+    "unique_exposed": {
+      "uniform": 3200,
+      "stratified": 2498
+    }
+  },
+  "segments": {
+    "authenticated-kb": {
+      "rows": 7108,
+      "story_groups": 4019,
+      "unique_visible_inputs": 7108,
+      "action_counts": {
+        "retrieve": 1388,
+        "tool": 1884,
+        "answer": 988,
+        "clarify": 649,
+        "close": 323,
+        "human": 991,
+        "refuse": 608,
+        "redirect": 277
+      },
+      "isolated_cell_capacity_row4_group16": 25152,
+      "action_story_groups": {
+        "answer": 805,
+        "clarify": 639,
+        "close": 165,
+        "human": 833,
+        "redirect": 79,
+        "refuse": 128,
+        "retrieve": 1022,
+        "tool": 1327
+      },
+      "exposures": {
+        "uniform": 1654,
+        "stratified": 800
+      },
+      "unique_exposed": {
+        "uniform": 1654,
+        "stratified": 800
+      }
+    },
+    "authenticated-no-kb": {
+      "rows": 1699,
+      "story_groups": 396,
+      "unique_visible_inputs": 1699,
+      "action_counts": {
+        "answer": 321,
+        "tool": 634,
+        "clarify": 229,
+        "human": 278,
+        "redirect": 69,
+        "refuse": 106,
+        "close": 62
+      },
+      "isolated_cell_capacity_row4_group16": 5736,
+      "action_story_groups": {
+        "answer": 254,
+        "clarify": 173,
+        "close": 39,
+        "human": 234,
+        "redirect": 42,
+        "refuse": 78,
+        "tool": 274
+      },
+      "exposures": {
+        "uniform": 445,
+        "stratified": 1920
+      },
+      "unique_exposed": {
+        "uniform": 445,
+        "stratified": 1218
+      }
+    },
+    "preauth-kb": {
+      "rows": 4091,
+      "story_groups": 2545,
+      "unique_visible_inputs": 4091,
+      "action_counts": {
+        "clarify": 632,
+        "retrieve": 1263,
+        "human": 343,
+        "refuse": 333,
+        "redirect": 275,
+        "answer": 972,
+        "close": 273
+      },
+      "isolated_cell_capacity_row4_group16": 15280,
+      "action_story_groups": {
+        "answer": 776,
+        "clarify": 629,
+        "close": 151,
+        "human": 276,
+        "redirect": 75,
+        "refuse": 89,
+        "retrieve": 929
+      },
+      "exposures": {
+        "uniform": 1018,
+        "stratified": 461
+      },
+      "unique_exposed": {
+        "uniform": 1018,
+        "stratified": 461
+      }
+    },
+    "preauth-no-kb": {
+      "rows": 344,
+      "story_groups": 91,
+      "unique_visible_inputs": 344,
+      "action_counts": {
+        "answer": 90,
+        "clarify": 117,
+        "human": 44,
+        "redirect": 35,
+        "refuse": 38,
+        "close": 20
+      },
+      "isolated_cell_capacity_row4_group16": 1156,
+      "action_story_groups": {
+        "answer": 40,
+        "clarify": 48,
+        "close": 8,
+        "human": 19,
+        "redirect": 11,
+        "refuse": 13
+      },
+      "exposures": {
+        "uniform": 83,
+        "stratified": 19
+      },
+      "unique_exposed": {
+        "uniform": 83,
+        "stratified": 19
+      }
+    }
+  },
+  "source_sha256": {
+    "src/qwenlab/financial_coverage_audit.py": "cf79cff87b00899b0ebdfb0c21c254810535ac9248f0744f357ff2378f3f8929",
+    "scripts/inspect-financial-training-inputs.cjs": "5859121bb66459f84a87c5862d33c2f33f3e407afd6f83635f139aa5c42bb10d",
+    "configs/support-financial-v2.json": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+    "data/financial-sampling-study-v1/pool-v1/manifest.json": "56bee2bdaa144351ade5f120a65899093369b576fa9934a74ebf40761cde004d",
+    "data/financial-sampling-study-v1/pool-v1/train.json": "8b524ae86533d7b55e1add23e4b0b44591c68b615ecf767f34ec4a0d5a166f72",
+    "data/financial-sampling-study-v1/schedule-v1/manifest.json": "8ed29d2bcd57a72cedb19bf0a09d6ebc315d5681e0bcc0a704b3a4fb62f973c4",
+    "data/financial-sampling-study-v1/schedule-v1/uniform-plan.json": "704bd5928599f292fafe6b73bb1e155cae1f5ed4df95b56b6824f0bcb9a6ecc7",
+    "data/financial-sampling-study-v1/schedule-v1/stratified-plan.json": "58d86022245a217a859a4260a00a82fd421732c4d595523dbcaa45b2848c2518"
+  },
+  "backend_source_sha256": {
+    "services/customerSupport/financialContract.js": "e579e1674c3b55f78b6b578ad02b169e88ee088b4aba0179d287a62d4c0b4a9d",
+    "services/customerSupport/parameters.js": "7f2372eee24930107556c5ce7b290af2cf189d0c85f6f16487aa6075d8209779",
+    "services/customerSupport/contract.js": "1394d283d115354c2bab22b067c1a61635c32659e3b0e86d62bd7b248b39e243",
+    "services/customerSupport/policies/support-financial-v2.json": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91"
+  },
+  "node_adapter_version": "financial-node-input-v1.1",
+  "node_replay_scope": "Training-only reconstructed parameter replay; capability deployment, database, actual session and model predictions not tested",
+  "hard_violations": [],
+  "grounded_gold_action_changes": [
+    {
+      "id": "FIN-R4-crosswoz-train-10186-2",
+      "group": "FSV2-G-8443ef2626dde1d1a1a7",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-2085-20",
+      "group": "FSV2-G-478d0671ac454cf13773",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-5080-10",
+      "group": "FSV2-G-0062bb1ff5d2076969ee",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-12418-14",
+      "group": "FSV2-G-30dc2d63ca3ebe17c74b",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-TR1-C-0106",
+      "group": "FSV2-G-e33f14d84835f20f8559",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-9476-8",
+      "group": "FSV2-G-f4e9e7cfd37a8c6a19c9",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-7788-4",
+      "group": "FSV2-G-7feb6aaa22fef6fd8c2b",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-TR1-C-0088",
+      "group": "FSV2-G-51b9045d9aaa34569859",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11347-14",
+      "group": "FSV2-G-ba8a78bf1ce993e05cc3",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-TR1-C-0092",
+      "group": "FSV2-G-3ae5b3b0b7805c0608ad",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-TR1-C-0096",
+      "group": "FSV2-G-3de6181e2c3efcabbcf2",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-9713-8",
+      "group": "FSV2-G-168c1441339e784c8b77",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-1662-14",
+      "group": "FSV2-G-80a273c632b948af47c8",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-TR1-C-0110",
+      "group": "FSV2-G-2d938e8a9a39d3a13016",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10618-12",
+      "group": "FSV2-G-fc6ce346d5e0c9078e55",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8840-14",
+      "group": "FSV2-G-9b484aee231f98bcb9cd",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-TR1-C-0094",
+      "group": "FSV2-G-eab430cd5c32aac422b7",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-7853-6",
+      "group": "FSV2-G-acaa34ababe4375d6538",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-TR1-C-0076",
+      "group": "FSV2-G-e822931be348251f5560",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-TR1-C-0098",
+      "group": "FSV2-G-7c419052ce0a830273a3",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11851-10",
+      "group": "FSV2-G-d3de4b84385a050983ba",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-massive-train-4000",
+      "group": "FSV2-G-ac57678fab75d2e45fb4",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8745-4",
+      "group": "FSV2-G-4bb9039b7b20aabe17fe",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-4326-10",
+      "group": "FSV2-G-8f248851784535b7d1ad",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-6940-14",
+      "group": "FSV2-G-51ca5c15983b0fdf694c",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11386-8",
+      "group": "FSV2-G-ed3a4bf235ec85eb3493",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8105-16",
+      "group": "FSV2-G-80f0ecce94194e6013b4",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-5611-14",
+      "group": "FSV2-G-19bd3e6a3ae84419a34f",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-TR1-C-0108",
+      "group": "FSV2-G-259e5afd0e38de37c953",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-9476-6",
+      "group": "FSV2-G-f4e9e7cfd37a8c6a19c9",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-TR1-C-0104",
+      "group": "FSV2-G-1065a744adce9aeeab54",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-1662-4",
+      "group": "FSV2-G-80a273c632b948af47c8",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10756-12",
+      "group": "FSV2-G-57885ebd2733ed9ce2e7",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-3157-6",
+      "group": "FSV2-G-8a1658ab80c9f2bb8f98",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-12169-2",
+      "group": "FSV2-G-667141dbed24af3fe82b",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-12418-6",
+      "group": "FSV2-G-30dc2d63ca3ebe17c74b",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-398-10",
+      "group": "FSV2-G-cb78e28ab04345e2f94f",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11994-12",
+      "group": "FSV2-G-e04cd4dfd7bd43db88a0",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8743-20",
+      "group": "FSV2-G-e74d13b82c3e429a6855",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10197-4",
+      "group": "FSV2-G-3d8f504065dcc875e6cb",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-12418-4",
+      "group": "FSV2-G-30dc2d63ca3ebe17c74b",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-9944-8",
+      "group": "FSV2-G-d8450d2cc179c298a47e",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-TR1-C-0086",
+      "group": "FSV2-G-b531cbcfeaea8a43a39c",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8541-22",
+      "group": "FSV2-G-f8b3ad4eacf169977e28",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10233-4",
+      "group": "FSV2-G-fa95d32e134c9ebe6991",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-4100-8",
+      "group": "FSV2-G-68ffe89b3b602807d9f2",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10186-6",
+      "group": "FSV2-G-8443ef2626dde1d1a1a7",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10233-6",
+      "group": "FSV2-G-fa95d32e134c9ebe6991",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-7788-6",
+      "group": "FSV2-G-7feb6aaa22fef6fd8c2b",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-398-12",
+      "group": "FSV2-G-cb78e28ab04345e2f94f",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-TR1-C-0072",
+      "group": "FSV2-G-72fec104665068ea374e",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8791-10",
+      "group": "FSV2-G-9e40537ef6fd451e5a18",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8541-20",
+      "group": "FSV2-G-f8b3ad4eacf169977e28",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11851-8",
+      "group": "FSV2-G-d3de4b84385a050983ba",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-12370-18",
+      "group": "FSV2-G-6e80429228c84e081252",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-TR1-C-0082",
+      "group": "FSV2-G-6e1626c260e59733915b",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-massive-train-3735",
+      "group": "FSV2-G-5bb0ce99a0c3e203c314",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-TR1-C-0074",
+      "group": "FSV2-G-7230fe85991909b9f3dc",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-4326-8",
+      "group": "FSV2-G-8f248851784535b7d1ad",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11362-8",
+      "group": "FSV2-G-0e29b4d8f55096cc0a3e",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-1662-16",
+      "group": "FSV2-G-80a273c632b948af47c8",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10233-16",
+      "group": "FSV2-G-fa95d32e134c9ebe6991",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-TR1-C-0078",
+      "group": "FSV2-G-52ecf59fcc156f59ecbf",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-7665-8",
+      "group": "FSV2-G-8a98429e4e023614f7f9",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-4100-14",
+      "group": "FSV2-G-68ffe89b3b602807d9f2",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-5611-10",
+      "group": "FSV2-G-19bd3e6a3ae84419a34f",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-2152-12",
+      "group": "FSV2-G-dc05b21f419802957668",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10756-14",
+      "group": "FSV2-G-57885ebd2733ed9ce2e7",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-massive-train-1691",
+      "group": "FSV2-G-fd151e350044d87273ff",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8791-4",
+      "group": "FSV2-G-9e40537ef6fd451e5a18",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-TR1-C-0102",
+      "group": "FSV2-G-3feff1bb52209551bd8e",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-9365-30",
+      "group": "FSV2-G-0275c5ccb34ea5468859",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-7853-4",
+      "group": "FSV2-G-acaa34ababe4375d6538",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-98-14",
+      "group": "FSV2-G-450ed9c12fd6860b52f9",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-398-14",
+      "group": "FSV2-G-cb78e28ab04345e2f94f",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11347-12",
+      "group": "FSV2-G-ba8a78bf1ce993e05cc3",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11386-10",
+      "group": "FSV2-G-ed3a4bf235ec85eb3493",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-2635-4",
+      "group": "FSV2-G-7bf5adc6bc3d3cb3bd3d",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-5611-4",
+      "group": "FSV2-G-19bd3e6a3ae84419a34f",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8569-4",
+      "group": "FSV2-G-e3f56d8f481faabc83e8",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-9534-4",
+      "group": "FSV2-G-9085183f7e2f8b7d7f90",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10233-8",
+      "group": "FSV2-G-fa95d32e134c9ebe6991",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-2635-10",
+      "group": "FSV2-G-7bf5adc6bc3d3cb3bd3d",
+      "layer": "planned-capability-component",
+      "segment": "authenticated-kb",
+      "target_tool": "queryApplicationDetail",
+      "form": "tool:structured_application_id",
+      "reason": "missing_application_id"
+    },
+    {
+      "id": "FIN-F2-T-0001",
+      "group": "FSV2-G-0ee87bc495052e443e40",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0002",
+      "group": "FSV2-G-0ee87bc495052e443e40",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0005",
+      "group": "FSV2-G-0ee87bc495052e443e40",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0007",
+      "group": "FSV2-G-0ee87bc495052e443e40",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0008",
+      "group": "FSV2-G-0ee87bc495052e443e40",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0009",
+      "group": "FSV2-G-0ee87bc495052e443e40",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0010",
+      "group": "FSV2-G-0ee87bc495052e443e40",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0012",
+      "group": "FSV2-G-48c9f50d75743011518b",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0013",
+      "group": "FSV2-G-48c9f50d75743011518b",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0015",
+      "group": "FSV2-G-48c9f50d75743011518b",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0017",
+      "group": "FSV2-G-48c9f50d75743011518b",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0018",
+      "group": "FSV2-G-48c9f50d75743011518b",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0020",
+      "group": "FSV2-G-48c9f50d75743011518b",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0021",
+      "group": "FSV2-G-81ed39e6b56f5978f4b8",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0022",
+      "group": "FSV2-G-81ed39e6b56f5978f4b8",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0025",
+      "group": "FSV2-G-81ed39e6b56f5978f4b8",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0032",
+      "group": "FSV2-G-044061ae27bbe1d7ab82",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0034",
+      "group": "FSV2-G-044061ae27bbe1d7ab82",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0035",
+      "group": "FSV2-G-044061ae27bbe1d7ab82",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0038",
+      "group": "FSV2-G-044061ae27bbe1d7ab82",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0039",
+      "group": "FSV2-G-044061ae27bbe1d7ab82",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0042",
+      "group": "FSV2-G-cda5ce795690b75d85fd",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0051",
+      "group": "FSV2-G-27872297f99a407d0d22",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0054",
+      "group": "FSV2-G-27872297f99a407d0d22",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0055",
+      "group": "FSV2-G-27872297f99a407d0d22",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0061",
+      "group": "FSV2-G-a96e991e95a305878964",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0064",
+      "group": "FSV2-G-a96e991e95a305878964",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0070",
+      "group": "FSV2-G-a96e991e95a305878964",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0071",
+      "group": "FSV2-G-f8f13eb1f8a00e023bdc",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0075",
+      "group": "FSV2-G-f8f13eb1f8a00e023bdc",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0076",
+      "group": "FSV2-G-f8f13eb1f8a00e023bdc",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0081",
+      "group": "FSV2-G-142c3949ec2e909e05d1",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0082",
+      "group": "FSV2-G-142c3949ec2e909e05d1",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0083",
+      "group": "FSV2-G-142c3949ec2e909e05d1",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0086",
+      "group": "FSV2-G-142c3949ec2e909e05d1",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0087",
+      "group": "FSV2-G-142c3949ec2e909e05d1",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0090",
+      "group": "FSV2-G-142c3949ec2e909e05d1",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0091",
+      "group": "FSV2-G-19660b0dd98ce2b04a0a",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0095",
+      "group": "FSV2-G-19660b0dd98ce2b04a0a",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0096",
+      "group": "FSV2-G-19660b0dd98ce2b04a0a",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0100",
+      "group": "FSV2-G-19660b0dd98ce2b04a0a",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0103",
+      "group": "FSV2-G-155bec2be14a358c2206",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0106",
+      "group": "FSV2-G-155bec2be14a358c2206",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0108",
+      "group": "FSV2-G-155bec2be14a358c2206",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0112",
+      "group": "FSV2-G-25cb06c88d7696370e03",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0117",
+      "group": "FSV2-G-25cb06c88d7696370e03",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0122",
+      "group": "FSV2-G-a600e2ca55f816386322",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0125",
+      "group": "FSV2-G-a600e2ca55f816386322",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0127",
+      "group": "FSV2-G-a600e2ca55f816386322",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0129",
+      "group": "FSV2-G-a600e2ca55f816386322",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0130",
+      "group": "FSV2-G-a600e2ca55f816386322",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0131",
+      "group": "FSV2-G-177c270ba1ed56085156",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0132",
+      "group": "FSV2-G-177c270ba1ed56085156",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0133",
+      "group": "FSV2-G-177c270ba1ed56085156",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0134",
+      "group": "FSV2-G-177c270ba1ed56085156",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0135",
+      "group": "FSV2-G-177c270ba1ed56085156",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0136",
+      "group": "FSV2-G-177c270ba1ed56085156",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0137",
+      "group": "FSV2-G-177c270ba1ed56085156",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0138",
+      "group": "FSV2-G-177c270ba1ed56085156",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0139",
+      "group": "FSV2-G-177c270ba1ed56085156",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0142",
+      "group": "FSV2-G-a8bd3d62ade690670a07",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0143",
+      "group": "FSV2-G-a8bd3d62ade690670a07",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0146",
+      "group": "FSV2-G-a8bd3d62ade690670a07",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0150",
+      "group": "FSV2-G-a8bd3d62ade690670a07",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0153",
+      "group": "FSV2-G-be6e60159164c8002dc8",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0154",
+      "group": "FSV2-G-be6e60159164c8002dc8",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0158",
+      "group": "FSV2-G-be6e60159164c8002dc8",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0160",
+      "group": "FSV2-G-be6e60159164c8002dc8",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0161",
+      "group": "FSV2-G-db392e9bfe9c2fa3b0bd",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0162",
+      "group": "FSV2-G-db392e9bfe9c2fa3b0bd",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0163",
+      "group": "FSV2-G-db392e9bfe9c2fa3b0bd",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0164",
+      "group": "FSV2-G-db392e9bfe9c2fa3b0bd",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0165",
+      "group": "FSV2-G-db392e9bfe9c2fa3b0bd",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0166",
+      "group": "FSV2-G-db392e9bfe9c2fa3b0bd",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0167",
+      "group": "FSV2-G-db392e9bfe9c2fa3b0bd",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0170",
+      "group": "FSV2-G-db392e9bfe9c2fa3b0bd",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0172",
+      "group": "FSV2-G-d83d0d8125bf12da19ab",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0173",
+      "group": "FSV2-G-d83d0d8125bf12da19ab",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0180",
+      "group": "FSV2-G-d83d0d8125bf12da19ab",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0181",
+      "group": "FSV2-G-470d7bd388d853f0e750",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0185",
+      "group": "FSV2-G-470d7bd388d853f0e750",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0186",
+      "group": "FSV2-G-470d7bd388d853f0e750",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0187",
+      "group": "FSV2-G-470d7bd388d853f0e750",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0189",
+      "group": "FSV2-G-470d7bd388d853f0e750",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0190",
+      "group": "FSV2-G-470d7bd388d853f0e750",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0191",
+      "group": "FSV2-G-da3d5591ae951d324b32",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0192",
+      "group": "FSV2-G-da3d5591ae951d324b32",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0193",
+      "group": "FSV2-G-da3d5591ae951d324b32",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0194",
+      "group": "FSV2-G-da3d5591ae951d324b32",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0195",
+      "group": "FSV2-G-da3d5591ae951d324b32",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0196",
+      "group": "FSV2-G-da3d5591ae951d324b32",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0197",
+      "group": "FSV2-G-da3d5591ae951d324b32",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0198",
+      "group": "FSV2-G-da3d5591ae951d324b32",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0199",
+      "group": "FSV2-G-da3d5591ae951d324b32",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0200",
+      "group": "FSV2-G-da3d5591ae951d324b32",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0201",
+      "group": "FSV2-G-f699a70be12db167fc5e",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0202",
+      "group": "FSV2-G-f699a70be12db167fc5e",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0203",
+      "group": "FSV2-G-f699a70be12db167fc5e",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0204",
+      "group": "FSV2-G-f699a70be12db167fc5e",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0205",
+      "group": "FSV2-G-f699a70be12db167fc5e",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0206",
+      "group": "FSV2-G-f699a70be12db167fc5e",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0207",
+      "group": "FSV2-G-f699a70be12db167fc5e",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0208",
+      "group": "FSV2-G-f699a70be12db167fc5e",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0209",
+      "group": "FSV2-G-f699a70be12db167fc5e",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0210",
+      "group": "FSV2-G-f699a70be12db167fc5e",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0211",
+      "group": "FSV2-G-29d26d39fe004b91290d",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0212",
+      "group": "FSV2-G-29d26d39fe004b91290d",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0213",
+      "group": "FSV2-G-29d26d39fe004b91290d",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0214",
+      "group": "FSV2-G-29d26d39fe004b91290d",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0215",
+      "group": "FSV2-G-29d26d39fe004b91290d",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0216",
+      "group": "FSV2-G-29d26d39fe004b91290d",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0217",
+      "group": "FSV2-G-29d26d39fe004b91290d",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0218",
+      "group": "FSV2-G-29d26d39fe004b91290d",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0219",
+      "group": "FSV2-G-29d26d39fe004b91290d",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0220",
+      "group": "FSV2-G-29d26d39fe004b91290d",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0221",
+      "group": "FSV2-G-48ba1bee352692c74276",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0222",
+      "group": "FSV2-G-48ba1bee352692c74276",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0223",
+      "group": "FSV2-G-48ba1bee352692c74276",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0224",
+      "group": "FSV2-G-48ba1bee352692c74276",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0225",
+      "group": "FSV2-G-48ba1bee352692c74276",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0226",
+      "group": "FSV2-G-48ba1bee352692c74276",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0227",
+      "group": "FSV2-G-48ba1bee352692c74276",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0228",
+      "group": "FSV2-G-48ba1bee352692c74276",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0229",
+      "group": "FSV2-G-48ba1bee352692c74276",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0230",
+      "group": "FSV2-G-48ba1bee352692c74276",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0231",
+      "group": "FSV2-G-eb9a89975802b8b6ef37",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0235",
+      "group": "FSV2-G-eb9a89975802b8b6ef37",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0236",
+      "group": "FSV2-G-eb9a89975802b8b6ef37",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0237",
+      "group": "FSV2-G-eb9a89975802b8b6ef37",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0238",
+      "group": "FSV2-G-eb9a89975802b8b6ef37",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0239",
+      "group": "FSV2-G-eb9a89975802b8b6ef37",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    },
+    {
+      "id": "FIN-F2-T-0240",
+      "group": "FSV2-G-eb9a89975802b8b6ef37",
+      "layer": "component-message-only",
+      "segment": "authenticated-no-kb",
+      "target_tool": "explainApplicationStatus",
+      "form": "tool:structured_status_code",
+      "reason": "invalid_status"
+    }
+  ],
+  "grounded_gold_parameter_mismatches": [],
+  "exact_surface_auth_pairs": {
+    "buckets": 73,
+    "story_groups": 73,
+    "tool_clarify_buckets": 73,
+    "tool_clarify_story_groups": 73
+  },
+  "proposed_preauth_split_capacity": {
+    "status": "capacity_check_only_not_a_frozen_schedule",
+    "fixed_authenticated_exposures": 2720,
+    "proposed_no_kb": 320,
+    "proposed_kb": 160,
+    "unique_no_kb_capacity_after_fixed": 344,
+    "unique_disjoint_kb_capacity_after_fixed": 4064,
+    "feasible_for_these_constraints": true,
+    "repeated_preauth_rows_required": false,
+    "group_cap": 16,
+    "caveat": "Capacity proof uses disjoint story groups for the two preauth pools; no actual ordering, action floors, token budget or training permission produced."
+  },
+  "slot_spellings": {
+    "error_context": 245,
+    "request_details": 933,
+    "application_id": 104,
+    "authentication": 177,
+    "status_code": 12,
+    "applicationId": 82,
+    "statusCode": 21,
+    "problem_context": 6,
+    "request_intent": 67,
+    "knowledge_topic": 2
+  },
+  "limitations": [
+    "Training metadata and labels are audited, not independently re-labelled.",
+    "Node parameters are replayed from reconstructed context, not actual sessions; unresolved is not automatically a wrong label.",
+    "Story groups can cross cells; summing cell group counts overstates independent groups.",
+    "Cell capacity under row4/group16 is an isolated upper bound, not joint schedule feasibility.",
+    "No development/calibration/final examples, predictions, or errors used to construct coverage cells."
+  ]
+}

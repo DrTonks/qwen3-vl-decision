@@ -1,0 +1,7 @@
+{
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "total_gpu_gib": 7.99560546875,
+  "torch": "2.8.0+cu128",
+  "cuda": "12.8",
+  "at": "2026-10-01T13:17:16.454848+00:00"
+}

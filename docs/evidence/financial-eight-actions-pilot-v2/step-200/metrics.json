@@ -1,0 +1,195 @@
+{
+  "rows": 384,
+  "data_sha256": "e2636fa13e1ac2b1cad647665433596a5a8ce4a4e53ec7c92f75733ab191bb3e",
+  "partition": "development",
+  "prompt_sha256": "817bd6578c99ee0dce3d5e1d784830ce1d70cd85a9ff54f6cdf8ec34515f2b36",
+  "protocol_sha256": "efef23777db1f35b5d54af67fa0e58861d3f201eabc3687cbd179f8be5701049",
+  "action_accuracy": 0.8046875,
+  "macro_f1": 0.8125862993772962,
+  "per_action": {
+    "clarify": {
+      "support": 64,
+      "precision": 0.7419354838709677,
+      "recall": 0.71875,
+      "f1": 0.7301587301587302
+    },
+    "retrieve": {
+      "support": 48,
+      "precision": 0.9375,
+      "recall": 0.625,
+      "f1": 0.75
+    },
+    "tool": {
+      "support": 64,
+      "precision": 0.7066666666666667,
+      "recall": 0.828125,
+      "f1": 0.762589928057554
+    },
+    "answer": {
+      "support": 48,
+      "precision": 0.6595744680851063,
+      "recall": 0.6458333333333334,
+      "f1": 0.6526315789473683
+    },
+    "human": {
+      "support": 64,
+      "precision": 0.9649122807017544,
+      "recall": 0.859375,
+      "f1": 0.9090909090909092
+    },
+    "redirect": {
+      "support": 24,
+      "precision": 0.7272727272727273,
+      "recall": 1.0,
+      "f1": 0.8421052631578948
+    },
+    "refuse": {
+      "support": 48,
+      "precision": 0.9387755102040817,
+      "recall": 0.9583333333333334,
+      "f1": 0.9484536082474228
+    },
+    "close": {
+      "support": 24,
+      "precision": 0.8275862068965517,
+      "recall": 1.0,
+      "f1": 0.9056603773584906
+    }
+  },
+  "confusion": {
+    "clarify": {
+      "clarify": 46,
+      "retrieve": 0,
+      "tool": 9,
+      "answer": 5,
+      "human": 1,
+      "redirect": 2,
+      "refuse": 1,
+      "close": 0,
+      "invalid": 0
+    },
+    "retrieve": {
+      "clarify": 3,
+      "retrieve": 30,
+      "tool": 7,
+      "answer": 3,
+      "human": 1,
+      "redirect": 3,
+      "refuse": 1,
+      "close": 0,
+      "invalid": 0
+    },
+    "tool": {
+      "clarify": 2,
+      "retrieve": 1,
+      "tool": 53,
+      "answer": 8,
+      "human": 0,
+      "redirect": 0,
+      "refuse": 0,
+      "close": 0,
+      "invalid": 0
+    },
+    "answer": {
+      "clarify": 7,
+      "retrieve": 1,
+      "tool": 0,
+      "answer": 31,
+      "human": 0,
+      "redirect": 4,
+      "refuse": 0,
+      "close": 5,
+      "invalid": 0
+    },
+    "human": {
+      "clarify": 2,
+      "retrieve": 0,
+      "tool": 6,
+      "answer": 0,
+      "human": 55,
+      "redirect": 0,
+      "refuse": 1,
+      "close": 0,
+      "invalid": 0
+    },
+    "redirect": {
+      "clarify": 0,
+      "retrieve": 0,
+      "tool": 0,
+      "answer": 0,
+      "human": 0,
+      "redirect": 24,
+      "refuse": 0,
+      "close": 0,
+      "invalid": 0
+    },
+    "refuse": {
+      "clarify": 2,
+      "retrieve": 0,
+      "tool": 0,
+      "answer": 0,
+      "human": 0,
+      "redirect": 0,
+      "refuse": 46,
+      "close": 0,
+      "invalid": 0
+    },
+    "close": {
+      "clarify": 0,
+      "retrieve": 0,
+      "tool": 0,
+      "answer": 0,
+      "human": 0,
+      "redirect": 0,
+      "refuse": 0,
+      "close": 24,
+      "invalid": 0
+    }
+  },
+  "human_misses": [
+    "FIN-F2-E-0016",
+    "FIN-F2-E-0062",
+    "FIN-F2-E-0092",
+    "FIN-F2-E-0140",
+    "FIN-F2-E-0159",
+    "FIN-F2-E-0206",
+    "FIN-F2-E-0255",
+    "FIN-F2-E-0318",
+    "FIN-F2-E-0350"
+  ],
+  "false_refusals": [
+    "FIN-F2-E-0185",
+    "FIN-F2-E-0214",
+    "FIN-F2-E-0318"
+  ],
+  "unavailable_knowledge_retrievals": [
+    "FIN-F2-E-0357"
+  ],
+  "tool_support": 64,
+  "action_tool_joint_accuracy": 0.828125,
+  "status_tool_support": 16,
+  "status_tool_accuracy": 0.8125,
+  "parameter_results": {
+    "model": {
+      "rows": 0,
+      "correct": 0,
+      "accuracy": null
+    },
+    "trusted_state_parser": {
+      "rows": 0,
+      "correct": 0,
+      "accuracy": null
+    }
+  },
+  "latency": {
+    "measured_rows": 384,
+    "p50_s": 0.10613409999859869,
+    "p95_s": 0.2112689000008686
+  },
+  "input_tokens": {
+    "measured_rows": 384,
+    "p50": 362.0,
+    "p95": 374.84999999999997
+  },
+  "note": "Trusted-state parameter results are backend grounding, not learned argument generation. Correlated macro stories require cluster-aware uncertainty; sample counts are not independent user counts."
+}

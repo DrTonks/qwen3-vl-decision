@@ -1,0 +1,2661 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-10-02T11:43:23.822667+00:00",
+  "candidate_file": "data/financial-boundary-candidates-v1/candidates.json",
+  "candidate_sha256": "b7717a190ed4fb6eb612ee7611b15cb2079b8636e94b94086ef9fa0562abed4e",
+  "source_snapshot_sha256": "4a229ae0c8f32a3e4ea3ed475c4bc346e51120e2b380e4fcb420d0c9b86a2ff8",
+  "reviewer": "/root/boundary_labels_review",
+  "reviewer_type": "independent_ai_agent",
+  "human_reviewed": false,
+  "method": "Read all 124 source messages with grouped variants; read quoted-risk/report messages and connected-channel inputs; independently assert all 372 exact input transformations, source hashes and action/tool constraints. Compare alternatives against visible prompt and current backend implementation. No generation model, API, training or held-out errors used.",
+  "references": [
+    "docs/41-金融客服边界规范与下一轮对照数据.md",
+    "src/qwenlab/financial_actions_prompt.py",
+    "sibling repository uestc_Integrated_Design: 后端/agent/tools/CustomerSupportTools.java:52-76"
+  ],
+  "summary": {
+    "verdict": "partial_accept_group_quarantine_required",
+    "reviewed_rows": 372,
+    "accepted_rows_before_group_quarantine": 360,
+    "needs_discussion_rows": 12,
+    "rejected_rows": 0,
+    "quarantined_source_groups": 12,
+    "quarantined_rows_including_siblings": 36,
+    "eligible_rows_after_group_quarantine": 336,
+    "eligible_source_groups": 112,
+    "eligible_action_counts": {
+      "clarify": 48,
+      "human": 176,
+      "tool": 48,
+      "refuse": 32,
+      "answer": 32
+    },
+    "quarantine_groups": [
+      "FT-G-0fb1dbc2f5fe7237b5ac",
+      "FT-G-1252fb7e7bd0786a8036",
+      "FT-G-2c04ebd74608a7b85a07",
+      "FT-G-30d5ea0fd7e614bfd14d",
+      "FT-G-38459bfa1d6d0abdbd06",
+      "FT-G-53cf07d06c4a0e3184d1",
+      "FT-G-5b553d8ae9b901f79258",
+      "FT-G-86e21349880117bf3e1f",
+      "FT-G-bff1c682b7c286427c51",
+      "FT-G-c31e8948deb27797969f",
+      "FT-G-c960432ceee88d717af0",
+      "FT-G-e08e4f64b6ca551bc10e"
+    ],
+    "note": "Do not release all372. Release only the unchanged336 rows outside all12 quarantined source groups, under a separate frozen manifest and after executor review. No human review claimed."
+  },
+  "limitations": [
+    "Controlled expansions share templates and provenance; independent AI review does not imply human review or real-user distribution coverage.",
+    "Human is an intended action, not evidence a handoff or case creation succeeded.",
+    "List/detail substitutability is a real tool-contract concern; isolation avoids teaching a false unavailability rule.",
+    "Review covers this exact content hash; any changed text/state/annotation requires renewed review."
+  ],
+  "records": [
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-10402-1",
+      "source_id": "FIN-R4-massive-train-10402",
+      "source_group": "FT-G-86e21349880117bf3e1f",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-10402-2",
+      "source_id": "FIN-R4-massive-train-10402",
+      "source_group": "FT-G-86e21349880117bf3e1f",
+      "verdict": "needs_discussion",
+      "reason": "只询问状态，剩余queryMyApplications实际返回申请ID/产品/金额/状态，可按编号匹配；因此不能由缺detail工具直接推出human。冻结提示只概括列表能力，和真实后端能力有契约歧义，先隔离整来源组，不改冻结标签。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-10402-3",
+      "source_id": "FIN-R4-massive-train-10402",
+      "source_group": "FT-G-86e21349880117bf3e1f",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-F2-T-0692-1",
+      "source_id": "FIN-F2-T-0692",
+      "source_group": "FT-G-94e439e1fd04740d60d8",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-F2-T-0692-2",
+      "source_id": "FIN-F2-T-0692",
+      "source_group": "FT-G-94e439e1fd04740d60d8",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-F2-T-0692-3",
+      "source_id": "FIN-F2-T-0692",
+      "source_group": "FT-G-94e439e1fd04740d60d8",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-2857-1",
+      "source_id": "FIN-R4-massive-train-2857",
+      "source_group": "FT-G-cd9920322bdd005b80cb",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-2857-2",
+      "source_id": "FIN-R4-massive-train-2857",
+      "source_group": "FT-G-cd9920322bdd005b80cb",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-2857-3",
+      "source_id": "FIN-R4-massive-train-2857",
+      "source_group": "FT-G-cd9920322bdd005b80cb",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-1975-1",
+      "source_id": "FIN-R4-massive-train-1975",
+      "source_group": "FT-G-58ec570946fc7c393f75",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-1975-2",
+      "source_id": "FIN-R4-massive-train-1975",
+      "source_group": "FT-G-58ec570946fc7c393f75",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-1975-3",
+      "source_id": "FIN-R4-massive-train-1975",
+      "source_group": "FT-G-58ec570946fc7c393f75",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-1437-1",
+      "source_id": "FIN-R4-massive-train-1437",
+      "source_group": "FT-G-daf9b6e8e87016ffc448",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-1437-2",
+      "source_id": "FIN-R4-massive-train-1437",
+      "source_group": "FT-G-daf9b6e8e87016ffc448",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-1437-3",
+      "source_id": "FIN-R4-massive-train-1437",
+      "source_group": "FT-G-daf9b6e8e87016ffc448",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-crosswoz-train-7722-0-1",
+      "source_id": "FIN-R4-crosswoz-train-7722-0",
+      "source_group": "FT-G-6e7e2b48a065fe5194d3",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-crosswoz-train-7722-0-2",
+      "source_id": "FIN-R4-crosswoz-train-7722-0",
+      "source_group": "FT-G-6e7e2b48a065fe5194d3",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-crosswoz-train-7722-0-3",
+      "source_id": "FIN-R4-crosswoz-train-7722-0",
+      "source_group": "FT-G-6e7e2b48a065fe5194d3",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3795-1",
+      "source_id": "FIN-R4-massive-train-3795",
+      "source_group": "FT-G-cd32e6da2e35627a317e",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3795-2",
+      "source_id": "FIN-R4-massive-train-3795",
+      "source_group": "FT-G-cd32e6da2e35627a317e",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3795-3",
+      "source_id": "FIN-R4-massive-train-3795",
+      "source_group": "FT-G-cd32e6da2e35627a317e",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-12583-1",
+      "source_id": "FIN-R4-massive-train-12583",
+      "source_group": "FT-G-d9173e7a85bbebbafc72",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-12583-2",
+      "source_id": "FIN-R4-massive-train-12583",
+      "source_group": "FT-G-d9173e7a85bbebbafc72",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-12583-3",
+      "source_id": "FIN-R4-massive-train-12583",
+      "source_group": "FT-G-d9173e7a85bbebbafc72",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-1462-1",
+      "source_id": "FIN-R4-massive-train-1462",
+      "source_group": "FT-G-1252fb7e7bd0786a8036",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-1462-2",
+      "source_id": "FIN-R4-massive-train-1462",
+      "source_group": "FT-G-1252fb7e7bd0786a8036",
+      "verdict": "needs_discussion",
+      "reason": "只询问状态，剩余queryMyApplications实际返回申请ID/产品/金额/状态，可按编号匹配；因此不能由缺detail工具直接推出human。冻结提示只概括列表能力，和真实后端能力有契约歧义，先隔离整来源组，不改冻结标签。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-1462-3",
+      "source_id": "FIN-R4-massive-train-1462",
+      "source_group": "FT-G-1252fb7e7bd0786a8036",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-5096-1",
+      "source_id": "FIN-R4-massive-train-5096",
+      "source_group": "FT-G-c65a0a4de19b69fedf22",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-5096-2",
+      "source_id": "FIN-R4-massive-train-5096",
+      "source_group": "FT-G-c65a0a4de19b69fedf22",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-5096-3",
+      "source_id": "FIN-R4-massive-train-5096",
+      "source_group": "FT-G-c65a0a4de19b69fedf22",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-TR1-S-0863-1",
+      "source_id": "FIN-TR1-S-0863",
+      "source_group": "FT-G-bee21eaf583bdd523242",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-TR1-S-0863-2",
+      "source_id": "FIN-TR1-S-0863",
+      "source_group": "FT-G-bee21eaf583bdd523242",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-TR1-S-0863-3",
+      "source_id": "FIN-TR1-S-0863",
+      "source_group": "FT-G-bee21eaf583bdd523242",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-5310-1",
+      "source_id": "FIN-R4-massive-train-5310",
+      "source_group": "FT-G-d822e33d7bc7c22fd3ab",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-5310-2",
+      "source_id": "FIN-R4-massive-train-5310",
+      "source_group": "FT-G-d822e33d7bc7c22fd3ab",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-5310-3",
+      "source_id": "FIN-R4-massive-train-5310",
+      "source_group": "FT-G-d822e33d7bc7c22fd3ab",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-crosswoz-train-10233-0-1",
+      "source_id": "FIN-R4-crosswoz-train-10233-0",
+      "source_group": "FT-G-68e2f43547d0375c5bfd",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-crosswoz-train-10233-0-2",
+      "source_id": "FIN-R4-crosswoz-train-10233-0",
+      "source_group": "FT-G-68e2f43547d0375c5bfd",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-crosswoz-train-10233-0-3",
+      "source_id": "FIN-R4-crosswoz-train-10233-0",
+      "source_group": "FT-G-68e2f43547d0375c5bfd",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-5866-1",
+      "source_id": "FIN-R4-massive-train-5866",
+      "source_group": "FT-G-c6cdb00e8c3907627ff3",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-5866-2",
+      "source_id": "FIN-R4-massive-train-5866",
+      "source_group": "FT-G-c6cdb00e8c3907627ff3",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-5866-3",
+      "source_id": "FIN-R4-massive-train-5866",
+      "source_group": "FT-G-c6cdb00e8c3907627ff3",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-6278-1",
+      "source_id": "FIN-R4-massive-train-6278",
+      "source_group": "FT-G-16525009dfcb3a3d8578",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-6278-2",
+      "source_id": "FIN-R4-massive-train-6278",
+      "source_group": "FT-G-16525009dfcb3a3d8578",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-6278-3",
+      "source_id": "FIN-R4-massive-train-6278",
+      "source_group": "FT-G-16525009dfcb3a3d8578",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-10819-1",
+      "source_id": "FIN-R4-massive-train-10819",
+      "source_group": "FT-G-7cb84f450d790c7593ed",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-10819-2",
+      "source_id": "FIN-R4-massive-train-10819",
+      "source_group": "FT-G-7cb84f450d790c7593ed",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-10819-3",
+      "source_id": "FIN-R4-massive-train-10819",
+      "source_group": "FT-G-7cb84f450d790c7593ed",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3479-1",
+      "source_id": "FIN-R4-massive-train-3479",
+      "source_group": "FT-G-9ae2efd05019d6c4bfcc",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3479-2",
+      "source_id": "FIN-R4-massive-train-3479",
+      "source_group": "FT-G-9ae2efd05019d6c4bfcc",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3479-3",
+      "source_id": "FIN-R4-massive-train-3479",
+      "source_group": "FT-G-9ae2efd05019d6c4bfcc",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-6508-1",
+      "source_id": "FIN-R4-massive-train-6508",
+      "source_group": "FT-G-9527fc09c67c0f860873",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-6508-2",
+      "source_id": "FIN-R4-massive-train-6508",
+      "source_group": "FT-G-9527fc09c67c0f860873",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-6508-3",
+      "source_id": "FIN-R4-massive-train-6508",
+      "source_group": "FT-G-9527fc09c67c0f860873",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-2294-1",
+      "source_id": "FIN-R4-massive-train-2294",
+      "source_group": "FT-G-656bda204762a130bebc",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-2294-2",
+      "source_id": "FIN-R4-massive-train-2294",
+      "source_group": "FT-G-656bda204762a130bebc",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-2294-3",
+      "source_id": "FIN-R4-massive-train-2294",
+      "source_group": "FT-G-656bda204762a130bebc",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-F2-T-0721-1",
+      "source_id": "FIN-F2-T-0721",
+      "source_group": "FT-G-30d5ea0fd7e614bfd14d",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-F2-T-0721-2",
+      "source_id": "FIN-F2-T-0721",
+      "source_group": "FT-G-30d5ea0fd7e614bfd14d",
+      "verdict": "needs_discussion",
+      "reason": "只询问金额，剩余queryMyApplications实际返回申请ID/产品/金额/状态，可按编号匹配；因此不能由缺detail工具直接推出human。冻结提示只概括列表能力，和真实后端能力有契约歧义，先隔离整来源组，不改冻结标签。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-F2-T-0721-3",
+      "source_id": "FIN-F2-T-0721",
+      "source_group": "FT-G-30d5ea0fd7e614bfd14d",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-557-1",
+      "source_id": "FIN-R4-massive-train-557",
+      "source_group": "FT-G-55df10767755a3735638",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-557-2",
+      "source_id": "FIN-R4-massive-train-557",
+      "source_group": "FT-G-55df10767755a3735638",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-557-3",
+      "source_id": "FIN-R4-massive-train-557",
+      "source_group": "FT-G-55df10767755a3735638",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-F2-T-0731-1",
+      "source_id": "FIN-F2-T-0731",
+      "source_group": "FT-G-0fb1dbc2f5fe7237b5ac",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-F2-T-0731-2",
+      "source_id": "FIN-F2-T-0731",
+      "source_group": "FT-G-0fb1dbc2f5fe7237b5ac",
+      "verdict": "needs_discussion",
+      "reason": "只询问状态，剩余queryMyApplications实际返回申请ID/产品/金额/状态，可按编号匹配；因此不能由缺detail工具直接推出human。冻结提示只概括列表能力，和真实后端能力有契约歧义，先隔离整来源组，不改冻结标签。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-F2-T-0731-3",
+      "source_id": "FIN-F2-T-0731",
+      "source_group": "FT-G-0fb1dbc2f5fe7237b5ac",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-TR1-S-0957-1",
+      "source_id": "FIN-TR1-S-0957",
+      "source_group": "FT-G-166590ece8cfb656838f",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-TR1-S-0957-2",
+      "source_id": "FIN-TR1-S-0957",
+      "source_group": "FT-G-166590ece8cfb656838f",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-TR1-S-0957-3",
+      "source_id": "FIN-TR1-S-0957",
+      "source_group": "FT-G-166590ece8cfb656838f",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-7478-1",
+      "source_id": "FIN-R4-massive-train-7478",
+      "source_group": "FT-G-27627bbf610aca9a075e",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-7478-2",
+      "source_id": "FIN-R4-massive-train-7478",
+      "source_group": "FT-G-27627bbf610aca9a075e",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-7478-3",
+      "source_id": "FIN-R4-massive-train-7478",
+      "source_group": "FT-G-27627bbf610aca9a075e",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-9315-1",
+      "source_id": "FIN-R4-massive-train-9315",
+      "source_group": "FT-G-c31e8948deb27797969f",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-9315-2",
+      "source_id": "FIN-R4-massive-train-9315",
+      "source_group": "FT-G-c31e8948deb27797969f",
+      "verdict": "needs_discussion",
+      "reason": "只询问产品名称，剩余queryMyApplications实际返回申请ID/产品/金额/状态，可按编号匹配；因此不能由缺detail工具直接推出human。冻结提示只概括列表能力，和真实后端能力有契约歧义，先隔离整来源组，不改冻结标签。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-9315-3",
+      "source_id": "FIN-R4-massive-train-9315",
+      "source_group": "FT-G-c31e8948deb27797969f",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-693-1",
+      "source_id": "FIN-R4-massive-train-693",
+      "source_group": "FT-G-bff1c682b7c286427c51",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-693-2",
+      "source_id": "FIN-R4-massive-train-693",
+      "source_group": "FT-G-bff1c682b7c286427c51",
+      "verdict": "needs_discussion",
+      "reason": "只询问状态，剩余queryMyApplications实际返回申请ID/产品/金额/状态，可按编号匹配；因此不能由缺detail工具直接推出human。冻结提示只概括列表能力，和真实后端能力有契约歧义，先隔离整来源组，不改冻结标签。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-693-3",
+      "source_id": "FIN-R4-massive-train-693",
+      "source_group": "FT-G-bff1c682b7c286427c51",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-8226-1",
+      "source_id": "FIN-R4-massive-train-8226",
+      "source_group": "FT-G-38459bfa1d6d0abdbd06",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-8226-2",
+      "source_id": "FIN-R4-massive-train-8226",
+      "source_group": "FT-G-38459bfa1d6d0abdbd06",
+      "verdict": "needs_discussion",
+      "reason": "只询问状态/进度，剩余queryMyApplications实际返回申请ID/产品/金额/状态，可按编号匹配；因此不能由缺detail工具直接推出human。冻结提示只概括列表能力，和真实后端能力有契约歧义，先隔离整来源组，不改冻结标签。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-8226-3",
+      "source_id": "FIN-R4-massive-train-8226",
+      "source_group": "FT-G-38459bfa1d6d0abdbd06",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3981-1",
+      "source_id": "FIN-R4-massive-train-3981",
+      "source_group": "FT-G-af07e0c47dad7c415e69",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3981-2",
+      "source_id": "FIN-R4-massive-train-3981",
+      "source_group": "FT-G-af07e0c47dad7c415e69",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3981-3",
+      "source_id": "FIN-R4-massive-train-3981",
+      "source_group": "FT-G-af07e0c47dad7c415e69",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-15188-1",
+      "source_id": "FIN-R4-massive-train-15188",
+      "source_group": "FT-G-d21543e55b3fb26cd6d0",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-15188-2",
+      "source_id": "FIN-R4-massive-train-15188",
+      "source_group": "FT-G-d21543e55b3fb26cd6d0",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-15188-3",
+      "source_id": "FIN-R4-massive-train-15188",
+      "source_group": "FT-G-d21543e55b3fb26cd6d0",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3488-1",
+      "source_id": "FIN-R4-massive-train-3488",
+      "source_group": "FT-G-1815be762a02c05caddd",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3488-2",
+      "source_id": "FIN-R4-massive-train-3488",
+      "source_group": "FT-G-1815be762a02c05caddd",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3488-3",
+      "source_id": "FIN-R4-massive-train-3488",
+      "source_group": "FT-G-1815be762a02c05caddd",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-1307-1",
+      "source_id": "FIN-R4-massive-train-1307",
+      "source_group": "FT-G-f6082efd16c81c3193c3",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-1307-2",
+      "source_id": "FIN-R4-massive-train-1307",
+      "source_group": "FT-G-f6082efd16c81c3193c3",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-1307-3",
+      "source_id": "FIN-R4-massive-train-1307",
+      "source_group": "FT-G-f6082efd16c81c3193c3",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-crosswoz-train-10000-0-1",
+      "source_id": "FIN-R4-crosswoz-train-10000-0",
+      "source_group": "FT-G-be3b3a828519f7f00391",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-crosswoz-train-10000-0-2",
+      "source_id": "FIN-R4-crosswoz-train-10000-0",
+      "source_group": "FT-G-be3b3a828519f7f00391",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-crosswoz-train-10000-0-3",
+      "source_id": "FIN-R4-crosswoz-train-10000-0",
+      "source_group": "FT-G-be3b3a828519f7f00391",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-crosswoz-train-7813-0-1",
+      "source_id": "FIN-R4-crosswoz-train-7813-0",
+      "source_group": "FT-G-2c04ebd74608a7b85a07",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-crosswoz-train-7813-0-2",
+      "source_id": "FIN-R4-crosswoz-train-7813-0",
+      "source_group": "FT-G-2c04ebd74608a7b85a07",
+      "verdict": "needs_discussion",
+      "reason": "只询问产品名称，剩余queryMyApplications实际返回申请ID/产品/金额/状态，可按编号匹配；因此不能由缺detail工具直接推出human。冻结提示只概括列表能力，和真实后端能力有契约歧义，先隔离整来源组，不改冻结标签。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-crosswoz-train-7813-0-3",
+      "source_id": "FIN-R4-crosswoz-train-7813-0",
+      "source_group": "FT-G-2c04ebd74608a7b85a07",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-crosswoz-train-12169-0-1",
+      "source_id": "FIN-R4-crosswoz-train-12169-0",
+      "source_group": "FT-G-84ee820209346e434718",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-crosswoz-train-12169-0-2",
+      "source_id": "FIN-R4-crosswoz-train-12169-0",
+      "source_group": "FT-G-84ee820209346e434718",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-crosswoz-train-12169-0-3",
+      "source_id": "FIN-R4-crosswoz-train-12169-0",
+      "source_group": "FT-G-84ee820209346e434718",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-7428-1",
+      "source_id": "FIN-R4-massive-train-7428",
+      "source_group": "FT-G-f154c102394c7ee4f63d",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-7428-2",
+      "source_id": "FIN-R4-massive-train-7428",
+      "source_group": "FT-G-f154c102394c7ee4f63d",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-7428-3",
+      "source_id": "FIN-R4-massive-train-7428",
+      "source_group": "FT-G-f154c102394c7ee4f63d",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-2345-1",
+      "source_id": "FIN-R4-massive-train-2345",
+      "source_group": "FT-G-c960432ceee88d717af0",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-2345-2",
+      "source_id": "FIN-R4-massive-train-2345",
+      "source_group": "FT-G-c960432ceee88d717af0",
+      "verdict": "needs_discussion",
+      "reason": "只询问状态，剩余queryMyApplications实际返回申请ID/产品/金额/状态，可按编号匹配；因此不能由缺detail工具直接推出human。冻结提示只概括列表能力，和真实后端能力有契约歧义，先隔离整来源组，不改冻结标签。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-2345-3",
+      "source_id": "FIN-R4-massive-train-2345",
+      "source_group": "FT-G-c960432ceee88d717af0",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-4451-1",
+      "source_id": "FIN-R4-massive-train-4451",
+      "source_group": "FT-G-092bfd4543d07a380739",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-4451-2",
+      "source_id": "FIN-R4-massive-train-4451",
+      "source_group": "FT-G-092bfd4543d07a380739",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-4451-3",
+      "source_id": "FIN-R4-massive-train-4451",
+      "source_group": "FT-G-092bfd4543d07a380739",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-7271-1",
+      "source_id": "FIN-R4-massive-train-7271",
+      "source_group": "FT-G-cdb7c0caced6d4e65970",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-7271-2",
+      "source_id": "FIN-R4-massive-train-7271",
+      "source_group": "FT-G-cdb7c0caced6d4e65970",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-7271-3",
+      "source_id": "FIN-R4-massive-train-7271",
+      "source_group": "FT-G-cdb7c0caced6d4e65970",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-2736-1",
+      "source_id": "FIN-R4-massive-train-2736",
+      "source_group": "FT-G-5b553d8ae9b901f79258",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-2736-2",
+      "source_id": "FIN-R4-massive-train-2736",
+      "source_group": "FT-G-5b553d8ae9b901f79258",
+      "verdict": "needs_discussion",
+      "reason": "只询问状态，剩余queryMyApplications实际返回申请ID/产品/金额/状态，可按编号匹配；因此不能由缺detail工具直接推出human。冻结提示只概括列表能力，和真实后端能力有契约歧义，先隔离整来源组，不改冻结标签。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-2736-3",
+      "source_id": "FIN-R4-massive-train-2736",
+      "source_group": "FT-G-5b553d8ae9b901f79258",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-1645-1",
+      "source_id": "FIN-R4-massive-train-1645",
+      "source_group": "FT-G-a11f0465ca2328ce08e1",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-1645-2",
+      "source_id": "FIN-R4-massive-train-1645",
+      "source_group": "FT-G-a11f0465ca2328ce08e1",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-1645-3",
+      "source_id": "FIN-R4-massive-train-1645",
+      "source_group": "FT-G-a11f0465ca2328ce08e1",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-11737-1",
+      "source_id": "FIN-R4-massive-train-11737",
+      "source_group": "FT-G-b902cbf839ac21a318ef",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-11737-2",
+      "source_id": "FIN-R4-massive-train-11737",
+      "source_group": "FT-G-b902cbf839ac21a318ef",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-11737-3",
+      "source_id": "FIN-R4-massive-train-11737",
+      "source_group": "FT-G-b902cbf839ac21a318ef",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3684-1",
+      "source_id": "FIN-R4-massive-train-3684",
+      "source_group": "FT-G-cb0818269b3988f3f34a",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3684-2",
+      "source_id": "FIN-R4-massive-train-3684",
+      "source_group": "FT-G-cb0818269b3988f3f34a",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3684-3",
+      "source_id": "FIN-R4-massive-train-3684",
+      "source_group": "FT-G-cb0818269b3988f3f34a",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-422-1",
+      "source_id": "FIN-R4-massive-train-422",
+      "source_group": "FT-G-53cf07d06c4a0e3184d1",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-422-2",
+      "source_id": "FIN-R4-massive-train-422",
+      "source_group": "FT-G-53cf07d06c4a0e3184d1",
+      "verdict": "needs_discussion",
+      "reason": "只询问状态，剩余queryMyApplications实际返回申请ID/产品/金额/状态，可按编号匹配；因此不能由缺detail工具直接推出human。冻结提示只概括列表能力，和真实后端能力有契约歧义，先隔离整来源组，不改冻结标签。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-422-3",
+      "source_id": "FIN-R4-massive-train-422",
+      "source_group": "FT-G-53cf07d06c4a0e3184d1",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3482-1",
+      "source_id": "FIN-R4-massive-train-3482",
+      "source_group": "FT-G-e08e4f64b6ca551bc10e",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3482-2",
+      "source_id": "FIN-R4-massive-train-3482",
+      "source_group": "FT-G-e08e4f64b6ca551bc10e",
+      "verdict": "needs_discussion",
+      "reason": "只询问状态，剩余queryMyApplications实际返回申请ID/产品/金额/状态，可按编号匹配；因此不能由缺detail工具直接推出human。冻结提示只概括列表能力，和真实后端能力有契约歧义，先隔离整来源组，不改冻结标签。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3482-3",
+      "source_id": "FIN-R4-massive-train-3482",
+      "source_group": "FT-G-e08e4f64b6ca551bc10e",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3925-1",
+      "source_id": "FIN-R4-massive-train-3925",
+      "source_group": "FT-G-48e97c0824170d6486c8",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3925-2",
+      "source_id": "FIN-R4-massive-train-3925",
+      "source_group": "FT-G-48e97c0824170d6486c8",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3925-3",
+      "source_id": "FIN-R4-massive-train-3925",
+      "source_group": "FT-G-48e97c0824170d6486c8",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-F2-T-0678-1",
+      "source_id": "FIN-F2-T-0678",
+      "source_group": "FT-G-8f9cc2cc56a47e6f7c71",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-F2-T-0678-2",
+      "source_id": "FIN-F2-T-0678",
+      "source_group": "FT-G-8f9cc2cc56a47e6f7c71",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-F2-T-0678-3",
+      "source_id": "FIN-F2-T-0678",
+      "source_group": "FT-G-8f9cc2cc56a47e6f7c71",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-1456-1",
+      "source_id": "FIN-R4-massive-train-1456",
+      "source_group": "FT-G-34f274658bb0a3123b25",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-1456-2",
+      "source_id": "FIN-R4-massive-train-1456",
+      "source_group": "FT-G-34f274658bb0a3123b25",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-1456-3",
+      "source_id": "FIN-R4-massive-train-1456",
+      "source_group": "FT-G-34f274658bb0a3123b25",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-2139-1",
+      "source_id": "FIN-R4-massive-train-2139",
+      "source_group": "FT-G-1961866dc99cac235ff4",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-2139-2",
+      "source_id": "FIN-R4-massive-train-2139",
+      "source_group": "FT-G-1961866dc99cac235ff4",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-2139-3",
+      "source_id": "FIN-R4-massive-train-2139",
+      "source_group": "FT-G-1961866dc99cac235ff4",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3171-1",
+      "source_id": "FIN-R4-massive-train-3171",
+      "source_group": "FT-G-5f897b2ad6841245577b",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3171-2",
+      "source_id": "FIN-R4-massive-train-3171",
+      "source_group": "FT-G-5f897b2ad6841245577b",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3171-3",
+      "source_id": "FIN-R4-massive-train-3171",
+      "source_group": "FT-G-5f897b2ad6841245577b",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-13520-1",
+      "source_id": "FIN-R4-massive-train-13520",
+      "source_group": "FT-G-4c21c9cfb2f5c4d7052e",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-13520-2",
+      "source_id": "FIN-R4-massive-train-13520",
+      "source_group": "FT-G-4c21c9cfb2f5c4d7052e",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-13520-3",
+      "source_id": "FIN-R4-massive-train-13520",
+      "source_group": "FT-G-4c21c9cfb2f5c4d7052e",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-F2-T-0662-1",
+      "source_id": "FIN-F2-T-0662",
+      "source_group": "FT-G-361faee9ece7653e8be7",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-F2-T-0662-2",
+      "source_id": "FIN-F2-T-0662",
+      "source_group": "FT-G-361faee9ece7653e8be7",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-F2-T-0662-3",
+      "source_id": "FIN-F2-T-0662",
+      "source_group": "FT-G-361faee9ece7653e8be7",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-2377-1",
+      "source_id": "FIN-R4-massive-train-2377",
+      "source_group": "FT-G-874c1afbe8feb09eaac3",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-2377-2",
+      "source_id": "FIN-R4-massive-train-2377",
+      "source_group": "FT-G-874c1afbe8feb09eaac3",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-2377-3",
+      "source_id": "FIN-R4-massive-train-2377",
+      "source_group": "FT-G-874c1afbe8feb09eaac3",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-1447-1",
+      "source_id": "FIN-R4-massive-train-1447",
+      "source_group": "FT-G-1b6a8d8b63a57e8ba368",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-1447-2",
+      "source_id": "FIN-R4-massive-train-1447",
+      "source_group": "FT-G-1b6a8d8b63a57e8ba368",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-1447-3",
+      "source_id": "FIN-R4-massive-train-1447",
+      "source_group": "FT-G-1b6a8d8b63a57e8ba368",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-7282-1",
+      "source_id": "FIN-R4-massive-train-7282",
+      "source_group": "FT-G-f15a09a4d4fe6495b06a",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-7282-2",
+      "source_id": "FIN-R4-massive-train-7282",
+      "source_group": "FT-G-f15a09a4d4fe6495b06a",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-7282-3",
+      "source_id": "FIN-R4-massive-train-7282",
+      "source_group": "FT-G-f15a09a4d4fe6495b06a",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-crosswoz-train-11815-0-1",
+      "source_id": "FIN-R4-crosswoz-train-11815-0",
+      "source_group": "FT-G-2ec476ed19ea099242dd",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-crosswoz-train-11815-0-2",
+      "source_id": "FIN-R4-crosswoz-train-11815-0",
+      "source_group": "FT-G-2ec476ed19ea099242dd",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-crosswoz-train-11815-0-3",
+      "source_id": "FIN-R4-crosswoz-train-11815-0",
+      "source_group": "FT-G-2ec476ed19ea099242dd",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-301-1",
+      "source_id": "FIN-R4-massive-train-301",
+      "source_group": "FT-G-d174a6d706a486160361",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-301-2",
+      "source_id": "FIN-R4-massive-train-301",
+      "source_group": "FT-G-d174a6d706a486160361",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-301-3",
+      "source_id": "FIN-R4-massive-train-301",
+      "source_group": "FT-G-d174a6d706a486160361",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3105-1",
+      "source_id": "FIN-R4-massive-train-3105",
+      "source_group": "FT-G-ad7c143b117bb8c024c4",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3105-2",
+      "source_id": "FIN-R4-massive-train-3105",
+      "source_group": "FT-G-ad7c143b117bb8c024c4",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-3105-3",
+      "source_id": "FIN-R4-massive-train-3105",
+      "source_group": "FT-G-ad7c143b117bb8c024c4",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-7673-1",
+      "source_id": "FIN-R4-massive-train-7673",
+      "source_group": "FT-G-1c9e1846d5fc68d80325",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-7673-2",
+      "source_id": "FIN-R4-massive-train-7673",
+      "source_group": "FT-G-1c9e1846d5fc68d80325",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-7673-3",
+      "source_id": "FIN-R4-massive-train-7673",
+      "source_group": "FT-G-1c9e1846d5fc68d80325",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-356-1",
+      "source_id": "FIN-R4-massive-train-356",
+      "source_group": "FT-G-a29510bad38d27c609c5",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-356-2",
+      "source_id": "FIN-R4-massive-train-356",
+      "source_group": "FT-G-a29510bad38d27c609c5",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-356-3",
+      "source_id": "FIN-R4-massive-train-356",
+      "source_group": "FT-G-a29510bad38d27c609c5",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-7359-1",
+      "source_id": "FIN-R4-massive-train-7359",
+      "source_group": "FT-G-b8d5146b5e6993aebb8a",
+      "verdict": "accept",
+      "reason": "本人只读查询但可信认证为false，先完成认证；文本自称登录不能覆盖state。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-7359-2",
+      "source_id": "FIN-R4-massive-train-7359",
+      "source_group": "FT-G-b8d5146b5e6993aebb8a",
+      "verdict": "accept",
+      "reason": "缺少完成当前个人查询所需能力，保留工具不能满足所需字段；human表示人工处理方向，不表示已经受理。"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-R4-massive-train-7359-3",
+      "source_id": "FIN-R4-massive-train-7359",
+      "source_group": "FT-G-b8d5146b5e6993aebb8a",
+      "verdict": "accept",
+      "reason": "真实诉求是本人只读查询，明确禁止增删改记录；否定违规写入不能标为refuse。认证和目标工具均可用。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-4223-1",
+      "source_id": "FIN-R4-massive-train-4223",
+      "source_group": "FT-G-48bae384e2a86eb1518f",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-4223-2",
+      "source_id": "FIN-R4-massive-train-4223",
+      "source_group": "FT-G-48bae384e2a86eb1518f",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-4223-3",
+      "source_id": "FIN-R4-massive-train-4223",
+      "source_group": "FT-G-48bae384e2a86eb1518f",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-13813-1",
+      "source_id": "FIN-R4-massive-train-13813",
+      "source_group": "FT-G-a138dd6743af9382c0b1",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-13813-2",
+      "source_id": "FIN-R4-massive-train-13813",
+      "source_group": "FT-G-a138dd6743af9382c0b1",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-13813-3",
+      "source_id": "FIN-R4-massive-train-13813",
+      "source_group": "FT-G-a138dd6743af9382c0b1",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-4629-1",
+      "source_id": "FIN-R4-massive-train-4629",
+      "source_group": "FT-G-fc79e6ab5e2388ceaab0",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-4629-2",
+      "source_id": "FIN-R4-massive-train-4629",
+      "source_group": "FT-G-fc79e6ab5e2388ceaab0",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-4629-3",
+      "source_id": "FIN-R4-massive-train-4629",
+      "source_group": "FT-G-fc79e6ab5e2388ceaab0",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-TR1-R-1094-1",
+      "source_id": "FIN-TR1-R-1094",
+      "source_group": "FT-G-388a10144b005fbfb57b",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-TR1-R-1094-2",
+      "source_id": "FIN-TR1-R-1094",
+      "source_group": "FT-G-388a10144b005fbfb57b",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-TR1-R-1094-3",
+      "source_id": "FIN-TR1-R-1094",
+      "source_group": "FT-G-388a10144b005fbfb57b",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-2317-1",
+      "source_id": "FIN-R4-massive-train-2317",
+      "source_group": "FT-G-29471ff68ce8d21d83b0",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-2317-2",
+      "source_id": "FIN-R4-massive-train-2317",
+      "source_group": "FT-G-29471ff68ce8d21d83b0",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-2317-3",
+      "source_id": "FIN-R4-massive-train-2317",
+      "source_group": "FT-G-29471ff68ce8d21d83b0",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-16351-1",
+      "source_id": "FIN-R4-massive-train-16351",
+      "source_group": "FT-G-7675e9ae8ce3d4a5b9f1",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-16351-2",
+      "source_id": "FIN-R4-massive-train-16351",
+      "source_group": "FT-G-7675e9ae8ce3d4a5b9f1",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-16351-3",
+      "source_id": "FIN-R4-massive-train-16351",
+      "source_group": "FT-G-7675e9ae8ce3d4a5b9f1",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-16191-1",
+      "source_id": "FIN-R4-massive-train-16191",
+      "source_group": "FT-G-0fd64c862108704dea9c",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-16191-2",
+      "source_id": "FIN-R4-massive-train-16191",
+      "source_group": "FT-G-0fd64c862108704dea9c",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-16191-3",
+      "source_id": "FIN-R4-massive-train-16191",
+      "source_group": "FT-G-0fd64c862108704dea9c",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-TR1-R-0964-1",
+      "source_id": "FIN-TR1-R-0964",
+      "source_group": "FT-G-de5e4a47c0146c90267e",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-TR1-R-0964-2",
+      "source_id": "FIN-TR1-R-0964",
+      "source_group": "FT-G-de5e4a47c0146c90267e",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-TR1-R-0964-3",
+      "source_id": "FIN-TR1-R-0964",
+      "source_group": "FT-G-de5e4a47c0146c90267e",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-7822-1",
+      "source_id": "FIN-R4-massive-train-7822",
+      "source_group": "FT-G-43573151bfc64043c799",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-7822-2",
+      "source_id": "FIN-R4-massive-train-7822",
+      "source_group": "FT-G-43573151bfc64043c799",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-7822-3",
+      "source_id": "FIN-R4-massive-train-7822",
+      "source_group": "FT-G-43573151bfc64043c799",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-3888-1",
+      "source_id": "FIN-R4-massive-train-3888",
+      "source_group": "FT-G-928fb404673a02d11ed5",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-3888-2",
+      "source_id": "FIN-R4-massive-train-3888",
+      "source_group": "FT-G-928fb404673a02d11ed5",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-3888-3",
+      "source_id": "FIN-R4-massive-train-3888",
+      "source_group": "FT-G-928fb404673a02d11ed5",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-TR1-R-1070-1",
+      "source_id": "FIN-TR1-R-1070",
+      "source_group": "FT-G-5a90e8cecd37d9e32b17",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-TR1-R-1070-2",
+      "source_id": "FIN-TR1-R-1070",
+      "source_group": "FT-G-5a90e8cecd37d9e32b17",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-TR1-R-1070-3",
+      "source_id": "FIN-TR1-R-1070",
+      "source_group": "FT-G-5a90e8cecd37d9e32b17",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-12487-1",
+      "source_id": "FIN-R4-massive-train-12487",
+      "source_group": "FT-G-c54c31512ae9ba6bda01",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-12487-2",
+      "source_id": "FIN-R4-massive-train-12487",
+      "source_group": "FT-G-c54c31512ae9ba6bda01",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-12487-3",
+      "source_id": "FIN-R4-massive-train-12487",
+      "source_group": "FT-G-c54c31512ae9ba6bda01",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-12269-1",
+      "source_id": "FIN-R4-massive-train-12269",
+      "source_group": "FT-G-bccf812dfb5bbd3a06dd",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-12269-2",
+      "source_id": "FIN-R4-massive-train-12269",
+      "source_group": "FT-G-bccf812dfb5bbd3a06dd",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-12269-3",
+      "source_id": "FIN-R4-massive-train-12269",
+      "source_group": "FT-G-bccf812dfb5bbd3a06dd",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-6054-1",
+      "source_id": "FIN-R4-massive-train-6054",
+      "source_group": "FT-G-51b3a6cf325c1f4ea0d9",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-6054-2",
+      "source_id": "FIN-R4-massive-train-6054",
+      "source_group": "FT-G-51b3a6cf325c1f4ea0d9",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-6054-3",
+      "source_id": "FIN-R4-massive-train-6054",
+      "source_group": "FT-G-51b3a6cf325c1f4ea0d9",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-F2-T-0483-1",
+      "source_id": "FIN-F2-T-0483",
+      "source_group": "FT-G-201fdea22178c2f9602f",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-F2-T-0483-2",
+      "source_id": "FIN-F2-T-0483",
+      "source_group": "FT-G-201fdea22178c2f9602f",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-F2-T-0483-3",
+      "source_id": "FIN-F2-T-0483",
+      "source_group": "FT-G-201fdea22178c2f9602f",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-8962-1",
+      "source_id": "FIN-R4-massive-train-8962",
+      "source_group": "FT-G-ab7a5a552f0beb514722",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-8962-2",
+      "source_id": "FIN-R4-massive-train-8962",
+      "source_group": "FT-G-ab7a5a552f0beb514722",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-8962-3",
+      "source_id": "FIN-R4-massive-train-8962",
+      "source_group": "FT-G-ab7a5a552f0beb514722",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-16295-1",
+      "source_id": "FIN-R4-massive-train-16295",
+      "source_group": "FT-G-96ee5c9a978a7281f1b1",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-16295-2",
+      "source_id": "FIN-R4-massive-train-16295",
+      "source_group": "FT-G-96ee5c9a978a7281f1b1",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-16295-3",
+      "source_id": "FIN-R4-massive-train-16295",
+      "source_group": "FT-G-96ee5c9a978a7281f1b1",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-15965-1",
+      "source_id": "FIN-R4-massive-train-15965",
+      "source_group": "FT-G-d0468878c71a6d761770",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-15965-2",
+      "source_id": "FIN-R4-massive-train-15965",
+      "source_group": "FT-G-d0468878c71a6d761770",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-15965-3",
+      "source_id": "FIN-R4-massive-train-15965",
+      "source_group": "FT-G-d0468878c71a6d761770",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-TR1-R-0995-1",
+      "source_id": "FIN-TR1-R-0995",
+      "source_group": "FT-G-d82384eeaa7b3a58a50d",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-TR1-R-0995-2",
+      "source_id": "FIN-TR1-R-0995",
+      "source_group": "FT-G-d82384eeaa7b3a58a50d",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-TR1-R-0995-3",
+      "source_id": "FIN-TR1-R-0995",
+      "source_group": "FT-G-d82384eeaa7b3a58a50d",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-F2-T-0477-1",
+      "source_id": "FIN-F2-T-0477",
+      "source_group": "FT-G-7516bdf39990f371024c",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-F2-T-0477-2",
+      "source_id": "FIN-F2-T-0477",
+      "source_group": "FT-G-7516bdf39990f371024c",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-F2-T-0477-3",
+      "source_id": "FIN-F2-T-0477",
+      "source_group": "FT-G-7516bdf39990f371024c",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-12215-1",
+      "source_id": "FIN-R4-massive-train-12215",
+      "source_group": "FT-G-0ed6edeb7f2daa998498",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-12215-2",
+      "source_id": "FIN-R4-massive-train-12215",
+      "source_group": "FT-G-0ed6edeb7f2daa998498",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-12215-3",
+      "source_id": "FIN-R4-massive-train-12215",
+      "source_group": "FT-G-0ed6edeb7f2daa998498",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-TR1-R-0911-1",
+      "source_id": "FIN-TR1-R-0911",
+      "source_group": "FT-G-2ff8f05800094cd0f350",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-TR1-R-0911-2",
+      "source_id": "FIN-TR1-R-0911",
+      "source_group": "FT-G-2ff8f05800094cd0f350",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-TR1-R-0911-3",
+      "source_id": "FIN-TR1-R-0911",
+      "source_group": "FT-G-2ff8f05800094cd0f350",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-16370-1",
+      "source_id": "FIN-R4-massive-train-16370",
+      "source_group": "FT-G-abd872b93c38fdb45ab3",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-16370-2",
+      "source_id": "FIN-R4-massive-train-16370",
+      "source_group": "FT-G-abd872b93c38fdb45ab3",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-16370-3",
+      "source_id": "FIN-R4-massive-train-16370",
+      "source_group": "FT-G-abd872b93c38fdb45ab3",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-TR1-R-1007-1",
+      "source_id": "FIN-TR1-R-1007",
+      "source_group": "FT-G-58bbf64ca9170549adfb",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-TR1-R-1007-2",
+      "source_id": "FIN-TR1-R-1007",
+      "source_group": "FT-G-58bbf64ca9170549adfb",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-TR1-R-1007-3",
+      "source_id": "FIN-TR1-R-1007",
+      "source_group": "FT-G-58bbf64ca9170549adfb",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-12397-1",
+      "source_id": "FIN-R4-massive-train-12397",
+      "source_group": "FT-G-2a9010a676140c194c18",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-12397-2",
+      "source_id": "FIN-R4-massive-train-12397",
+      "source_group": "FT-G-2a9010a676140c194c18",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-12397-3",
+      "source_id": "FIN-R4-massive-train-12397",
+      "source_group": "FT-G-2a9010a676140c194c18",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-TR1-R-0937-1",
+      "source_id": "FIN-TR1-R-0937",
+      "source_group": "FT-G-61f8aa2dbdff63283d7f",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-TR1-R-0937-2",
+      "source_id": "FIN-TR1-R-0937",
+      "source_group": "FT-G-61f8aa2dbdff63283d7f",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-TR1-R-0937-3",
+      "source_id": "FIN-TR1-R-0937",
+      "source_group": "FT-G-61f8aa2dbdff63283d7f",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-13885-1",
+      "source_id": "FIN-R4-massive-train-13885",
+      "source_group": "FT-G-fea4b5231e05433a2369",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-13885-2",
+      "source_id": "FIN-R4-massive-train-13885",
+      "source_group": "FT-G-fea4b5231e05433a2369",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-13885-3",
+      "source_id": "FIN-R4-massive-train-13885",
+      "source_group": "FT-G-fea4b5231e05433a2369",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-TR1-R-1079-1",
+      "source_id": "FIN-TR1-R-1079",
+      "source_group": "FT-G-1946172c6441fe018fdd",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-TR1-R-1079-2",
+      "source_id": "FIN-TR1-R-1079",
+      "source_group": "FT-G-1946172c6441fe018fdd",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-TR1-R-1079-3",
+      "source_id": "FIN-TR1-R-1079",
+      "source_group": "FT-G-1946172c6441fe018fdd",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-12425-1",
+      "source_id": "FIN-R4-massive-train-12425",
+      "source_group": "FT-G-e9c4644c9235b8ca891c",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-12425-2",
+      "source_id": "FIN-R4-massive-train-12425",
+      "source_group": "FT-G-e9c4644c9235b8ca891c",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-12425-3",
+      "source_id": "FIN-R4-massive-train-12425",
+      "source_group": "FT-G-e9c4644c9235b8ca891c",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-16335-1",
+      "source_id": "FIN-R4-massive-train-16335",
+      "source_group": "FT-G-1138ea5f233e517c5fd4",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-16335-2",
+      "source_id": "FIN-R4-massive-train-16335",
+      "source_group": "FT-G-1138ea5f233e517c5fd4",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-16335-3",
+      "source_id": "FIN-R4-massive-train-16335",
+      "source_group": "FT-G-1138ea5f233e517c5fd4",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-4068-1",
+      "source_id": "FIN-R4-massive-train-4068",
+      "source_group": "FT-G-1cdb3b9eca6c51dc6dc8",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-4068-2",
+      "source_id": "FIN-R4-massive-train-4068",
+      "source_group": "FT-G-1cdb3b9eca6c51dc6dc8",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-4068-3",
+      "source_id": "FIN-R4-massive-train-4068",
+      "source_group": "FT-G-1cdb3b9eca6c51dc6dc8",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-10930-1",
+      "source_id": "FIN-R4-massive-train-10930",
+      "source_group": "FT-G-adb02b49b5ab5b5cd08d",
+      "verdict": "accept",
+      "reason": "用户明确要求真人/人工处理个案；未登录不取消人工意图，后续人工仍必须核验身份。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-10930-2",
+      "source_id": "FIN-R4-massive-train-10930",
+      "source_group": "FT-G-adb02b49b5ab5b5cd08d",
+      "verdict": "accept",
+      "reason": "用户明确要求人工，自动查询工具全部不可用，保留human意图合理。"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-10930-3",
+      "source_id": "FIN-R4-massive-train-10930",
+      "source_group": "FT-G-adb02b49b5ab5b5cd08d",
+      "verdict": "accept",
+      "reason": "明确人工诉求持续成立；capabilities.handoff_connected=true表示人工通道能力，不是创建重复工单或声称受理成功的授权。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0576-1",
+      "source_id": "FIN-TR1-R-0576",
+      "source_group": "FT-G-cf6b291905f562de0226",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0576-2",
+      "source_id": "FIN-TR1-R-0576",
+      "source_group": "FT-G-cf6b291905f562de0226",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0576-3",
+      "source_id": "FIN-TR1-R-0576",
+      "source_group": "FT-G-cf6b291905f562de0226",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0273-1",
+      "source_id": "FIN-TR1-R-0273",
+      "source_group": "FT-G-f54e7736fd857cb6953e",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0273-2",
+      "source_id": "FIN-TR1-R-0273",
+      "source_group": "FT-G-f54e7736fd857cb6953e",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0273-3",
+      "source_id": "FIN-TR1-R-0273",
+      "source_group": "FT-G-f54e7736fd857cb6953e",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-R4-massive-train-10348-1",
+      "source_id": "FIN-R4-massive-train-10348",
+      "source_group": "FT-G-2ed05a68afb3bafc374f",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-R4-massive-train-10348-2",
+      "source_id": "FIN-R4-massive-train-10348",
+      "source_group": "FT-G-2ed05a68afb3bafc374f",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-R4-massive-train-10348-3",
+      "source_id": "FIN-R4-massive-train-10348",
+      "source_group": "FT-G-2ed05a68afb3bafc374f",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-R4-massive-train-8706-1",
+      "source_id": "FIN-R4-massive-train-8706",
+      "source_group": "FT-G-d224c56b7336639aa378",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-R4-massive-train-8706-2",
+      "source_id": "FIN-R4-massive-train-8706",
+      "source_group": "FT-G-d224c56b7336639aa378",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-R4-massive-train-8706-3",
+      "source_id": "FIN-R4-massive-train-8706",
+      "source_group": "FT-G-d224c56b7336639aa378",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0418-1",
+      "source_id": "FIN-TR1-R-0418",
+      "source_group": "FT-G-4dd974415f2c896e2089",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0418-2",
+      "source_id": "FIN-TR1-R-0418",
+      "source_group": "FT-G-4dd974415f2c896e2089",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0418-3",
+      "source_id": "FIN-TR1-R-0418",
+      "source_group": "FT-G-4dd974415f2c896e2089",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0622-1",
+      "source_id": "FIN-TR1-R-0622",
+      "source_group": "FT-G-f2d25e3afbf4b24b19e3",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0622-2",
+      "source_id": "FIN-TR1-R-0622",
+      "source_group": "FT-G-f2d25e3afbf4b24b19e3",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0622-3",
+      "source_id": "FIN-TR1-R-0622",
+      "source_group": "FT-G-f2d25e3afbf4b24b19e3",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0696-1",
+      "source_id": "FIN-TR1-R-0696",
+      "source_group": "FT-G-c03ea9d2aa18f2651d75",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0696-2",
+      "source_id": "FIN-TR1-R-0696",
+      "source_group": "FT-G-c03ea9d2aa18f2651d75",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0696-3",
+      "source_id": "FIN-TR1-R-0696",
+      "source_group": "FT-G-c03ea9d2aa18f2651d75",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0178-1",
+      "source_id": "FIN-TR1-R-0178",
+      "source_group": "FT-G-02a35b10fa84c4e9a8bf",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0178-2",
+      "source_id": "FIN-TR1-R-0178",
+      "source_group": "FT-G-02a35b10fa84c4e9a8bf",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0178-3",
+      "source_id": "FIN-TR1-R-0178",
+      "source_group": "FT-G-02a35b10fa84c4e9a8bf",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0306-1",
+      "source_id": "FIN-TR1-R-0306",
+      "source_group": "FT-G-3fb7c85baf4751e77541",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0306-2",
+      "source_id": "FIN-TR1-R-0306",
+      "source_group": "FT-G-3fb7c85baf4751e77541",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0306-3",
+      "source_id": "FIN-TR1-R-0306",
+      "source_group": "FT-G-3fb7c85baf4751e77541",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0156-1",
+      "source_id": "FIN-TR1-R-0156",
+      "source_group": "FT-G-87c9647490b2b1a2b8ce",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0156-2",
+      "source_id": "FIN-TR1-R-0156",
+      "source_group": "FT-G-87c9647490b2b1a2b8ce",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0156-3",
+      "source_id": "FIN-TR1-R-0156",
+      "source_group": "FT-G-87c9647490b2b1a2b8ce",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0044-1",
+      "source_id": "FIN-TR1-R-0044",
+      "source_group": "FT-G-a77847e5f50922d97dc9",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0044-2",
+      "source_id": "FIN-TR1-R-0044",
+      "source_group": "FT-G-a77847e5f50922d97dc9",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0044-3",
+      "source_id": "FIN-TR1-R-0044",
+      "source_group": "FT-G-a77847e5f50922d97dc9",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-R4-massive-train-6740-1",
+      "source_id": "FIN-R4-massive-train-6740",
+      "source_group": "FT-G-50fb2145422d9a4ce257",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-R4-massive-train-6740-2",
+      "source_id": "FIN-R4-massive-train-6740",
+      "source_group": "FT-G-50fb2145422d9a4ce257",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-R4-massive-train-6740-3",
+      "source_id": "FIN-R4-massive-train-6740",
+      "source_group": "FT-G-50fb2145422d9a4ce257",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-F2-T-0610-1",
+      "source_id": "FIN-F2-T-0610",
+      "source_group": "FT-G-b9dece24c28306152101",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-F2-T-0610-2",
+      "source_id": "FIN-F2-T-0610",
+      "source_group": "FT-G-b9dece24c28306152101",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-F2-T-0610-3",
+      "source_id": "FIN-F2-T-0610",
+      "source_group": "FT-G-b9dece24c28306152101",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-F2-T-0616-1",
+      "source_id": "FIN-F2-T-0616",
+      "source_group": "FT-G-87b3d8c290d492ea4db8",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-F2-T-0616-2",
+      "source_id": "FIN-F2-T-0616",
+      "source_group": "FT-G-87b3d8c290d492ea4db8",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-F2-T-0616-3",
+      "source_id": "FIN-F2-T-0616",
+      "source_group": "FT-G-87b3d8c290d492ea4db8",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0702-1",
+      "source_id": "FIN-TR1-R-0702",
+      "source_group": "FT-G-c8a3f4916d43c468dd55",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0702-2",
+      "source_id": "FIN-TR1-R-0702",
+      "source_group": "FT-G-c8a3f4916d43c468dd55",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0702-3",
+      "source_id": "FIN-TR1-R-0702",
+      "source_group": "FT-G-c8a3f4916d43c468dd55",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0654-1",
+      "source_id": "FIN-TR1-R-0654",
+      "source_group": "FT-G-f8489a5c430df4501bd5",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0654-2",
+      "source_id": "FIN-TR1-R-0654",
+      "source_group": "FT-G-f8489a5c430df4501bd5",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0654-3",
+      "source_id": "FIN-TR1-R-0654",
+      "source_group": "FT-G-f8489a5c430df4501bd5",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0721-1",
+      "source_id": "FIN-TR1-R-0721",
+      "source_group": "FT-G-58234784ae8120e4727d",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0721-2",
+      "source_id": "FIN-TR1-R-0721",
+      "source_group": "FT-G-58234784ae8120e4727d",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0721-3",
+      "source_id": "FIN-TR1-R-0721",
+      "source_group": "FT-G-58234784ae8120e4727d",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0085-1",
+      "source_id": "FIN-TR1-R-0085",
+      "source_group": "FT-G-9b16c7cdf50f9587800f",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0085-2",
+      "source_id": "FIN-TR1-R-0085",
+      "source_group": "FT-G-9b16c7cdf50f9587800f",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0085-3",
+      "source_id": "FIN-TR1-R-0085",
+      "source_group": "FT-G-9b16c7cdf50f9587800f",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-R4-massive-train-13105-1",
+      "source_id": "FIN-R4-massive-train-13105",
+      "source_group": "FT-G-c01f2653afde6d9cf743",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-R4-massive-train-13105-2",
+      "source_id": "FIN-R4-massive-train-13105",
+      "source_group": "FT-G-c01f2653afde6d9cf743",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-R4-massive-train-13105-3",
+      "source_id": "FIN-R4-massive-train-13105",
+      "source_group": "FT-G-c01f2653afde6d9cf743",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0024-1",
+      "source_id": "FIN-TR1-R-0024",
+      "source_group": "FT-G-a512e5a2b21474fcdb7b",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0024-2",
+      "source_id": "FIN-TR1-R-0024",
+      "source_group": "FT-G-a512e5a2b21474fcdb7b",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0024-3",
+      "source_id": "FIN-TR1-R-0024",
+      "source_group": "FT-G-a512e5a2b21474fcdb7b",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0135-1",
+      "source_id": "FIN-TR1-R-0135",
+      "source_group": "FT-G-35e937b8c7618ced484d",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0135-2",
+      "source_id": "FIN-TR1-R-0135",
+      "source_group": "FT-G-35e937b8c7618ced484d",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0135-3",
+      "source_id": "FIN-TR1-R-0135",
+      "source_group": "FT-G-35e937b8c7618ced484d",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0352-1",
+      "source_id": "FIN-TR1-R-0352",
+      "source_group": "FT-G-59b8762b9d301e47463a",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0352-2",
+      "source_id": "FIN-TR1-R-0352",
+      "source_group": "FT-G-59b8762b9d301e47463a",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0352-3",
+      "source_id": "FIN-TR1-R-0352",
+      "source_group": "FT-G-59b8762b9d301e47463a",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0600-1",
+      "source_id": "FIN-TR1-R-0600",
+      "source_group": "FT-G-f1dfea6beae36b571051",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0600-2",
+      "source_id": "FIN-TR1-R-0600",
+      "source_group": "FT-G-f1dfea6beae36b571051",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0600-3",
+      "source_id": "FIN-TR1-R-0600",
+      "source_group": "FT-G-f1dfea6beae36b571051",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0115-1",
+      "source_id": "FIN-TR1-R-0115",
+      "source_group": "FT-G-8f0f58bc0cd28648dd94",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0115-2",
+      "source_id": "FIN-TR1-R-0115",
+      "source_group": "FT-G-8f0f58bc0cd28648dd94",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0115-3",
+      "source_id": "FIN-TR1-R-0115",
+      "source_group": "FT-G-8f0f58bc0cd28648dd94",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-R4-massive-train-4847-1",
+      "source_id": "FIN-R4-massive-train-4847",
+      "source_group": "FT-G-896e673c88a562ae0071",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-R4-massive-train-4847-2",
+      "source_id": "FIN-R4-massive-train-4847",
+      "source_group": "FT-G-896e673c88a562ae0071",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-R4-massive-train-4847-3",
+      "source_id": "FIN-R4-massive-train-4847",
+      "source_group": "FT-G-896e673c88a562ae0071",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-R4-massive-train-13833-1",
+      "source_id": "FIN-R4-massive-train-13833",
+      "source_group": "FT-G-f2992097b91a879a07c1",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-R4-massive-train-13833-2",
+      "source_id": "FIN-R4-massive-train-13833",
+      "source_group": "FT-G-f2992097b91a879a07c1",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-R4-massive-train-13833-3",
+      "source_id": "FIN-R4-massive-train-13833",
+      "source_group": "FT-G-f2992097b91a879a07c1",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0251-1",
+      "source_id": "FIN-TR1-R-0251",
+      "source_group": "FT-G-01d30ea428037a42f158",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0251-2",
+      "source_id": "FIN-TR1-R-0251",
+      "source_group": "FT-G-01d30ea428037a42f158",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0251-3",
+      "source_id": "FIN-TR1-R-0251",
+      "source_group": "FT-G-01d30ea428037a42f158",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-R4-massive-train-16976-1",
+      "source_id": "FIN-R4-massive-train-16976",
+      "source_group": "FT-G-0512472fadf77841ad87",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-R4-massive-train-16976-2",
+      "source_id": "FIN-R4-massive-train-16976",
+      "source_group": "FT-G-0512472fadf77841ad87",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-R4-massive-train-16976-3",
+      "source_id": "FIN-R4-massive-train-16976",
+      "source_group": "FT-G-0512472fadf77841ad87",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0447-1",
+      "source_id": "FIN-TR1-R-0447",
+      "source_group": "FT-G-c1db22e3d2f330fdf7d5",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0447-2",
+      "source_id": "FIN-TR1-R-0447",
+      "source_group": "FT-G-c1db22e3d2f330fdf7d5",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0447-3",
+      "source_id": "FIN-TR1-R-0447",
+      "source_group": "FT-G-c1db22e3d2f330fdf7d5",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0504-1",
+      "source_id": "FIN-TR1-R-0504",
+      "source_group": "FT-G-c7a4636c5ab0c426c248",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0504-2",
+      "source_id": "FIN-TR1-R-0504",
+      "source_group": "FT-G-c7a4636c5ab0c426c248",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0504-3",
+      "source_id": "FIN-TR1-R-0504",
+      "source_group": "FT-G-c7a4636c5ab0c426c248",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0675-1",
+      "source_id": "FIN-TR1-R-0675",
+      "source_group": "FT-G-c2a4c96c9c2a8f8f9138",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0675-2",
+      "source_id": "FIN-TR1-R-0675",
+      "source_group": "FT-G-c2a4c96c9c2a8f8f9138",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0675-3",
+      "source_id": "FIN-TR1-R-0675",
+      "source_group": "FT-G-c2a4c96c9c2a8f8f9138",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-R4-massive-train-16468-1",
+      "source_id": "FIN-R4-massive-train-16468",
+      "source_group": "FT-G-1ea54015a3ae461d3662",
+      "verdict": "accept",
+      "reason": "外层明确要求实际执行，内层是造假、越权或其他禁止操作；refuse正确。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-R4-massive-train-16468-2",
+      "source_id": "FIN-R4-massive-train-16468",
+      "source_group": "FT-G-1ea54015a3ae461d3662",
+      "verdict": "accept",
+      "reason": "外层明确询问已引用指令为何不应照办、否认执行要求；应安全解释风险，不因引用违规词自动拒绝。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-R4-massive-train-16468-3",
+      "source_id": "FIN-R4-massive-train-16468",
+      "source_group": "FT-G-1ea54015a3ae461d3662",
+      "verdict": "accept",
+      "reason": "用户明确没执行可疑指令并要求报告给真人；当前意图是人工求助，不是执行引用内容。"
+    }
+  ]
+}

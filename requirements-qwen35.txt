@@ -1,0 +1,6 @@
+# Overlay environment reuses the existing immutable D-drive torch runtime.
+transformers==5.18.0
+peft==0.21.2
+huggingface-hub==1.33.0
+tokenizers==0.23.2
+safetensors==0.8.0

@@ -1,0 +1,78 @@
+{
+  "version": "financial-serve-v2-independent-review",
+  "reviewed_at_utc": "2026-10-03T03:42:50.920217+00:00",
+  "reviewer": "/root/boundary_labels_review",
+  "reviewer_type": "independent_ai_reviewer",
+  "human_reviewed": false,
+  "status": "pass_for_fixture_transport_and_nontraining_review_packet",
+  "file_sha256": {
+    "src/qwenlab/financial_serve_v2.py": "75c0684433213b82e12b36e9e1bf1ac923522157c34ea1b334cf58449eadb615",
+    "tests/test_financial_serve_v2.py": "7ecee53bcc8037fc8d3e834c6741f505c7d34de2b587a9e48a1fcbeea7c6da39",
+    "configs/support-financial-v2.json": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+    "src/qwenlab/financial_contract_revision.py": "a9c731dc23f57dbb2c93e921d61008018b65ee6ef513ef4f21c72baa83b098c4",
+    "tests/test_financial_contract_revision.py": "60857d5f3daf8eac0784a2d940e0aadaf3aae0c3b948ea59156727009dd200bc",
+    "src/qwenlab/financial_contract_audit.py": "f6d5a27910b2884d696d0311c0d43d77e401bbe2ec77b325a27c08c9a200ce48"
+  },
+  "runtime_scope": {
+    "fixture_only": true,
+    "real_weights_tested": false,
+    "gpu_used": false,
+    "model_api_calls": 0,
+    "database_used": false,
+    "evaluation_data_read": false,
+    "external_http_calls": 0,
+    "flask_test_client_only": true
+  },
+  "checks": {
+    "financial_serve_cpu_suite": {
+      "tests": 5,
+      "passed": 5,
+      "command": ".venv/Scripts/python.exe -m unittest discover -s tests -p test_financial_serve_v2.py"
+    },
+    "contract_revision_cpu_suite": {
+      "tests": 4,
+      "passed": 4,
+      "command": ".venv/Scripts/python.exe -m unittest discover -s tests -p test_financial_contract_revision.py"
+    },
+    "protocol_and_input": [
+      "protocol version and exact policy-file SHA bound at app creation",
+      "extra fields and legacy protocol refused",
+      "server-side capability profile constraints and allowlist checked",
+      "tool request needs authentication and at least one tool",
+      "complete finite normalized probability vector; selected maximum; unavailable selected tool refused"
+    ],
+    "fixture_integrity": "Fixture marker, experimental flag and protocol envelope fixed at startup and not overridable by prediction. CLI only accepts explicit fixture choices.",
+    "concurrency": "BoundedSemaphore(1) refuses concurrent work withBUSY; finally releases gate; CPU blocking-engine test confirms recovery.",
+    "fixed_probes": {
+      "non_ascii_authorization": 401,
+      "raw2002_character_message_with2000_nonspace_characters": 400,
+      "invalid_tokens": {
+        "''": "rejected",
+        "'测试'": "rejected",
+        "'has space'": "rejected"
+      }
+    },
+    "review_packet": "validate command passed source/output hashes and proposal structure;160 candidates all train_candidate andtraining_eligible=false. Source reader opens named training paths only and verifies frozen file hashes; write targets stay in new revision directory."
+  },
+  "findings": [
+    {
+      "id": "unicode_authorization_500",
+      "severity": "P2",
+      "status": "fixed_and_retested",
+      "change": "Reject nonASCII or whitespace service token at startup and reject nonASCII Authorization with401."
+    },
+    {
+      "id": "stripped_message_length_bypass",
+      "severity": "P2",
+      "status": "fixed_and_retested",
+      "change": "Raw message length enforced separately from nonblank check; padded2002 chars now400."
+    }
+  ],
+  "limitations": [
+    "No real checkpoint or classifier accuracy/speed was tested.",
+    "Fixture probabilities are constants, not learned confidence.",
+    "No production readiness, deployment qualification or end-to-end real model claim.",
+    "Review packet is not an input migration or training release; quarantined rows remain excluded.",
+    "Code review does not prove correctness of all future injected model engines."
+  ]
+}

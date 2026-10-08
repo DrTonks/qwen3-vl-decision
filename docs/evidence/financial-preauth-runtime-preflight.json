@@ -1,0 +1,79 @@
+{
+  "version": "financial-preauth-runtime-preflight-v1",
+  "status": "pass",
+  "review_sha256": "a1df2b5e203dec8f489229e77731c0c11a5b07bfb745ff1ea7e5947a3dc7ac4d",
+  "config_sha256": "10cd8619b09af283a03e2e1145c9d9ba738430d496bea9fd54959c1f519a65bb",
+  "schedule_manifest_sha256": "2c66638da21603ba1b5680cdf25b2fb0ba9e012879bd33ead307bd3da1675c4f",
+  "probe_protocol_sha256": "c2b10c8ac38f862971706ff10472e6ee555632ed4dceb79d6b31b928adbda0ab",
+  "probe_summary_sha256": "0e44b17d2d6ea1c1bf1bbe013f039b9a3633b9ab43c0e1367c7dd9b202e2524e",
+  "probe_summary": {
+    "status": "complete",
+    "steps_per_arm": 25,
+    "total_optimizer_steps": 25,
+    "common_binding_sha256": "ad48c625a6d5c8ad8dccef72ad8d30c9ac0f2985b040fc9ece178295ffdd91b2",
+    "protocol_sha256": "c2b10c8ac38f862971706ff10472e6ee555632ed4dceb79d6b31b928adbda0ab",
+    "initial_parameter_sha256": "a393388446d4af8f5c668a48d719d2ed158b4cba32e13de3b469395e0d990a25",
+    "median_step_s": 3.7647780000006605,
+    "main_training_minutes_estimate": 25.098520000004402,
+    "evaluation_rows_used": 0,
+    "probe_adapter_used_for_main": false,
+    "adapters_discarded_from_training_use": true,
+    "artifacts_retained_for_audit": true,
+    "real_pause_resume_verified": true,
+    "model_api_requests": 0,
+    "artifacts": {
+      "results/financial-preauth-probe-v1/protocol.json": "c2b10c8ac38f862971706ff10472e6ee555632ed4dceb79d6b31b928adbda0ab",
+      "results/financial-preauth-probe-v1/pause-resume-evidence.json": "4b95b105788c8000e4fdac54a23641f371a6860922374590d6d845398d6497e2",
+      "results/financial-preauth-probe-v1/arms/preauth/initialization.json": "abff0915ddc21c0946b981d6968601bf619206ed75380c3893a5efc0ef748c1d",
+      "results/financial-preauth-probe-v1/arms/preauth/train.jsonl": "acd15a33bbc588f73d28fa6c4193b9695734e4df515e78d261475b365b9d3c5c",
+      "results/financial-preauth-probe-v1/arms/preauth/training-summary.json": "d9a968f5a746aec142184617a465a75707f697def246838d7bcfdaedca928801",
+      "results/financial-preauth-probe-v1/arms/preauth/arm-complete.json": "0138a9ff75fdc8f1975b28eb5ef3eda04870fc362bfa1c31e7e3162404be3842",
+      "results/financial-preauth-probe-v1/arms/preauth/projection-check.json": "410361bc81f7ca2cdcd9306bb433c721eb6b852ffbe72a071994937c98be96d9",
+      ".local/checkpoints/financial-preauth-probe-v1/preauth/step-0/checkpoint.json": "c7cee2e6924d666f3811a15d8fca58086454a24bae524902b32616305db8ad59",
+      ".local/checkpoints/financial-preauth-probe-v1/preauth/step-12/checkpoint.json": "0b5d2f48d5a40d7591730070adc45a3576a538e9db3ad6b7ab0296d2c264d137",
+      ".local/checkpoints/financial-preauth-probe-v1/preauth/step-25/checkpoint.json": "aee3601aa0f86bec9c7f78927de1c310cbfd7a00b879cf97c7c2544947314e4b"
+    },
+    "estimate_scope": "training only; excludes loading, evaluation, saving and hardware changes"
+  },
+  "pause_resume_evidence": {
+    "version": "financial-preauth-pause-resume-v1",
+    "state": "resumed",
+    "protocol_sha256": "c2b10c8ac38f862971706ff10472e6ee555632ed4dceb79d6b31b928adbda0ab",
+    "arm": "preauth",
+    "completed_step": 12,
+    "next_step": 13,
+    "prior_worker": {
+      "pid": 22524,
+      "process_created": 1791103092.6039948
+    },
+    "checkpoint": ".local/checkpoints/financial-preauth-probe-v1/preauth/step-12",
+    "checkpoint_sha256": "0b5d2f48d5a40d7591730070adc45a3576a538e9db3ad6b7ab0296d2c264d137",
+    "saved_parameter_sha256": "39bf2de3217881d68aacbd219d88c71878c6275281e05986a46ae021aeb60807",
+    "saved_optimizer_sha256": "dcdac027cb34e504b879fcef613a5e187e04b2450877562a05d2cca82d16548f",
+    "saved_rng_sha256": "7c009085cc0ae87f57943e0506d64026d3e63008c6d3ab17f4ecc935b8f994e7",
+    "at": "2026-10-04T08:40:17.188789+00:00",
+    "prior_worker_exited": true,
+    "restore_record": {
+      "protocol_sha256": "c2b10c8ac38f862971706ff10472e6ee555632ed4dceb79d6b31b928adbda0ab",
+      "checkpoint": ".local/checkpoints/financial-preauth-probe-v1/preauth/step-12",
+      "checkpoint_sha256": "0b5d2f48d5a40d7591730070adc45a3576a538e9db3ad6b7ab0296d2c264d137",
+      "arm": "preauth",
+      "completed_step": 12,
+      "next_step": 13,
+      "restored": {
+        "parameter_sha256": "39bf2de3217881d68aacbd219d88c71878c6275281e05986a46ae021aeb60807",
+        "optimizer_sha256": "dcdac027cb34e504b879fcef613a5e187e04b2450877562a05d2cca82d16548f",
+        "rng_sha256": "7c009085cc0ae87f57943e0506d64026d3e63008c6d3ab17f4ecc935b8f994e7"
+      },
+      "worker": {
+        "pid": 29584,
+        "process_created": 1791103248.5691187
+      },
+      "at": "2026-10-04T08:41:21.925990+00:00"
+    },
+    "resumed_next_step": 13
+  },
+  "not_model_quality_evaluation": true,
+  "model_api_requests": 0,
+  "deployed": false
+}

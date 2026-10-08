@@ -1,0 +1,14 @@
+{
+  "status": "runtime_pause_resume_verified",
+  "date": "2026-10-02",
+  "protocol_sha256": "373056a09611b5b7681ab5f112c6273384de62414f97915726afb2625898b5ef",
+  "paused_step": 11,
+  "pause_exit_code": 0,
+  "checkpoint_verified": true,
+  "old_worker_pid": 32536,
+  "old_worker_exited": true,
+  "safe_to_shutdown_was_confirmed": true,
+  "resumed_worker_pid": 33176,
+  "resumed_training_observed_step": 16,
+  "claim_limit": "Command and checkpoint runtime test; not a repeated CUDA bitwise trajectory experiment."
+}

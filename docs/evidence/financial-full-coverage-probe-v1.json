@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "probe_summary_sha256": "6491c822b5c916d42c56f2933d2d247606b96349d614790af9fed03ceba28b99",
+  "protocol_sha256": "00f41e39f2124e0718525afe88741199bff36f0767623751543bde624ba94461",
+  "common_binding_sha256": "e5f929092c929b50c3f9d914ef13af8bc6f178632ad488453c5f42ab5caedce5",
+  "steps": 25,
+  "median_step_s": 4.1650321500001155,
+  "full_training_minutes_estimate": 232.26995956500645,
+  "real_pause_resume_verified": true,
+  "completed_pause_step": 12,
+  "resumed_next_step": 13,
+  "restored_parameter_sha256": "41ad0456c38fb76d9df746a48096b0a54617e821c81caeb884a256b9d9f32699",
+  "restored_optimizer_sha256": "370baeb253101f8fb4e1d8911e34b90edb432c8bbbec3523febf8f9372b324fa",
+  "restored_rng_sha256": "e4ecf037223c6ee66fffb4a760420e48ef815f3694a0dd6cf679df8dd453797c",
+  "initial_parameter_sha256": "a393388446d4af8f5c668a48d719d2ed158b4cba32e13de3b469395e0d990a25",
+  "evaluation_rows_used": 0,
+  "model_api_requests": 0,
+  "probe_adapter_used_for_main": false
+}

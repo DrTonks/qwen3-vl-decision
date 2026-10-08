@@ -1,0 +1,185 @@
+{
+  "version": "financial-preauth-schedule-independent-review-v1",
+  "review_date": "2026-10-04",
+  "status": "pass",
+  "scope": "CPU-only candidate schedule design, code, synthetic tests, frozen artifacts and provenance; not training executor approval",
+  "reviewer": "independent AI reviewer /root/supplement_labels_review; not the module or schedule author",
+  "independent": true,
+  "ai_origin": true,
+  "human_reviewed": false,
+  "evaluation_data_read": false,
+  "evaluation_predictions_read": false,
+  "evaluation_error_examples_read": false,
+  "training_executed": false,
+  "gpu_used": false,
+  "model_weights_loaded": false,
+  "model_api_requests": 0,
+  "training_execution_approved": false,
+  "deployment_approved": false,
+  "source_sha256": {
+    "src/qwenlab/financial_preauth_schedule.py": "57b6dc4f7157197ee4fcc22d27e063515b32e6cb2e70153749866f0081d2700d",
+    "tests/test_financial_preauth_schedule.py": "495a4ff113557b858c00beec8d1aa663281349ea6dcfabfe1d5f54b4f9738d33",
+    "configs/financial-preauth-schedule-v1.json": "745c64f96f371e660be2e803d89b0b5974d1839719e55c48ab2286da5d27a44c"
+  },
+  "config_file": "configs/financial-preauth-schedule-v1.json",
+  "config_sha256": "745c64f96f371e660be2e803d89b0b5974d1839719e55c48ab2286da5d27a44c",
+  "schedule_manifest_file": "data/financial-preauth-study-v1/schedule-v1/manifest.json",
+  "schedule_manifest_sha256": "2c66638da21603ba1b5680cdf25b2fb0ba9e012879bd33ead307bd3da1675c4f",
+  "schedule_files_sha256": {
+    "data/financial-preauth-study-v1/schedule-v1/exposure-ledger.json": "55e56570b231d0df8a359d2c90ebeba4da9fb7cbbd569d2897d0ade96b07fae9",
+    "data/financial-preauth-study-v1/schedule-v1/plan.json": "97a078a3a3fb36e5942afe192192fec14417b144fe85303ed9f0d6373071c392",
+    "data/financial-preauth-study-v1/schedule-v1/replacement-ledger.json": "d87e95422ff5ca9485dc39afeb9d8eabeb7549011513af72d2400535dacd2a1b",
+    "data/financial-preauth-study-v1/schedule-v1/summary.json": "021ef9ac58f7bd131ad2fec16f08d744fa49e135baba8102a5e204bf2a8c2946"
+  },
+  "parent_bindings": {
+    "data/financial-sampling-study-v1/pool-v1/manifest.json": "56bee2bdaa144351ade5f120a65899093369b576fa9934a74ebf40761cde004d",
+    "data/financial-sampling-study-v1/pool-v1/train.json": "8b524ae86533d7b55e1add23e4b0b44591c68b615ecf767f34ec4a0d5a166f72",
+    "data/financial-sampling-study-v1/schedule-v1/manifest.json": "8ed29d2bcd57a72cedb19bf0a09d6ebc315d5681e0bcc0a704b3a4fb62f973c4",
+    "data/financial-sampling-study-v1/schedule-v1/stratified-plan.json": "58d86022245a217a859a4260a00a82fd421732c4d595523dbcaa45b2848c2518",
+    "data/financial-sampling-study-v1/schedule-v1/token-lengths.json": "61a8987a646472d0554615a48c1b6a314817c6b08f929e607dadfffac9d4dc77"
+  },
+  "checks": [
+    {
+      "name": "source_and_output_integrity",
+      "result": "pass",
+      "detail": "正式 verify 未重复分词，独立执行 exit 0；175 项 source 绑定与现有字节一致，完整继承父级依赖闭包；新清单四文件 SHA 与 manifest 一致。旧评测依赖仅作字节哈希核验，没有解析或显示题面。"
+    },
+    {
+      "name": "training_pool_boundary",
+      "result": "pass",
+      "detail": "仅冻结训练池 13242 条进入选取；独立检查 ID 唯一、split=train、training_eligible=false 及显式布尔认证。未读取旧开发、校准、最终题面或预测。"
+    },
+    {
+      "name": "actual_plan_replay",
+      "result": "pass",
+      "detail": "用冻结训练池、父清单与新配置调用 make_plan，完整 JSON 与实际 plan.json 相等；没有修改输入池或标注。"
+    },
+    {
+      "name": "authenticated_position_and_row_sha",
+      "result": "pass",
+      "detail": "独立按曝光下标重算全部 3200 条账本的 step/microbatch/position/occurrence/group 与 canonical row SHA；2720 个已登录位置的 ID 和行 SHA 与父账本逐项相同。"
+    },
+    {
+      "name": "preauth_quota_and_caps",
+      "result": "pass",
+      "detail": "480 个变动位置全部且仅为原登录前槽；480 条唯一。无KB320、有KB160；每原20位置块2:1，前200步160:80；实际行上限4、组上限8，符合4/16。"
+    },
+    {
+      "name": "group_exclusion_and_bucket_design",
+      "result": "pass",
+      "detail": "完整无KB池91组先排除KB候选27条/7组；实际选中无KB覆盖全部91组，KB无相交故事组。按动作与规范化缺槽保留非空桶，使用扣除固定曝光后唯一行容量的最大余数分配；共享组导致实际不可行时明确失败。"
+    },
+    {
+      "name": "tool_position_and_token_budget",
+      "result": "pass",
+      "detail": "独立使用冻结 token-lengths 按原两行微批次重算；全部工具曝光下标和ID与父清单相同；全程及前200步工具任务数、监督权重、非空微批、原始及补齐tool token均不变。"
+    },
+    {
+      "name": "report_56_interpretation",
+      "result": "pass",
+      "detail": "已核对报告56最终配对口径修正，明确宽口径认证双状态2到3，严格已登录tool/未登录clarify动作对照2到2；说明故事组减少、多因素共同变化及CPU限定。报告后续添加审核链接，故不绑定其SHA。"
+    }
+  ],
+  "independent_actual_statistics": {
+    "pool_rows": 13242,
+    "steps": 400,
+    "batch": 8,
+    "fixed_authenticated_positions": 2720,
+    "changed_preauth_positions": 480,
+    "unique_preauth_rows": 480,
+    "preauth_no_kb": 320,
+    "preauth_kb": 160,
+    "prefix_200_preauth_no_kb": 160,
+    "prefix_200_preauth_kb": 80,
+    "max_row_exposure": 4,
+    "max_group_exposure": 8,
+    "unique_rows": 2498,
+    "unique_groups": 1375,
+    "base_unique_groups": 1630,
+    "full_400": {
+      "true_tool_exposures": 753,
+      "supervised_tasks": 3953,
+      "supervised_weight": 3764.75,
+      "nonempty_tool_microbatches": 663,
+      "raw_action_tokens": 1611312,
+      "raw_tool_tokens": 417699,
+      "raw_total_tokens": 2029011,
+      "padded_action_tokens": 1635754,
+      "padded_tool_tokens": 419191,
+      "padded_total_tokens": 2054945
+    },
+    "prefix_200": {
+      "true_tool_exposures": 360,
+      "supervised_tasks": 1960,
+      "supervised_weight": 1870,
+      "nonempty_tool_microbatches": 316,
+      "raw_action_tokens": 806006,
+      "raw_tool_tokens": 199986,
+      "raw_total_tokens": 1005992,
+      "padded_action_tokens": 818362,
+      "padded_tool_tokens": 200733,
+      "padded_total_tokens": 1019095
+    },
+    "auth_pair_counts": {
+      "pool_strict_tool_clarify": 73,
+      "base_two_auth_states": 2,
+      "candidate_two_auth_states": 3,
+      "base_strict_authenticated_tool_unauthenticated_clarify": 2,
+      "candidate_strict_authenticated_tool_unauthenticated_clarify": 2
+    }
+  },
+  "tests": {
+    "persisted_synthetic_suite": {
+      "command": "python -m unittest discover -s tests -p test_financial_preauth_schedule.py -v",
+      "tests": 15,
+      "passed": 15,
+      "failed": 0,
+      "independently_executed": true
+    },
+    "additional_in_memory_negative_checks": {
+      "count": 4,
+      "passed": 4,
+      "cases": [
+        "共享组各桶容量上界之和可行但实际全局16容量耗尽时失败、不降配",
+        "篡改training_enabled拒绝",
+        "删除输出文件绑定拒绝",
+        "删除传递源码绑定拒绝"
+      ],
+      "frozen_files_modified": false
+    },
+    "independent_verify": {
+      "command": "python -m qwenlab.financial_preauth_schedule verify",
+      "exit_code": 0,
+      "tokenizer_replayed": false
+    },
+    "tokenizer_evidence_scope": "主节点报告实际prepare已完成全池本地分词重放；本审核未再次分词，独立核验冻结全池长度清单及来源SHA，并独立重算新旧计划全部微批预算。"
+  },
+  "resolved_findings": [
+    {
+      "id": "PREAUTH-01",
+      "issue": "初版未直接展开父级传递依赖闭包",
+      "resolution": "冻结前已修为 parent.source_bindings 合并直接来源；生成前后及验证重放后均核验。"
+    },
+    {
+      "id": "PREAUTH-02",
+      "issue": "初版配置分配文字与扣除组容量的实现不完全一致",
+      "resolution": "冻结前明确剩余唯一行容量、共享组耗尽即失败。"
+    },
+    {
+      "id": "PREAUTH-03",
+      "issue": "candidate_retained=3只计入选的两种认证状态，不保证入选动作是tool/clarify对照",
+      "resolution": "冻结产物不变；报告56已明确宽/严格两个口径，本审核独立严格复算旧新均2。这个宽口径数不能用于声称成对动作覆盖改善。"
+    }
+  ],
+  "open_findings": [],
+  "limitations": [
+    "通过仅适用于当前冻结候选CPU准备，不适用于任何训练执行器、暂停恢复、GPU预算或模型提升结论。",
+    "同时改变登录前能力比例、动作/缺槽桶覆盖、故事组排除和组内采样；不是纯粹单因素配额实验。",
+    "唯一故事组1630降至1375；认证动作对照完整保留仍为2；报错上下文仍仅3个故事组，曝光增加不等于语义多样性增加。",
+    "固定已登录ID/位置及工具输入不能保持后续梯度、dropout随机过程或优化器状态一致；动作补齐token总量有所改变。",
+    "冻结摘要exact_surface_auth_pairs.candidate_retained保持其原宽口径3；应与本审核严格动作方向指标2一并解释。",
+    "后续训练必须另立绑定此清单的新协议并审核执行器，从约定官方初始模型重新初始化，沿用原LR/loss/gates，200仅诊断、400才选型，不能从旧400步末端续训冒充对照。"
+  ],
+  "frozen_sources_modified_by_reviewer": false,
+  "review_report_only_written": true
+}

@@ -1,0 +1,187 @@
+{
+  "version": "financial-pilot-development-evidence-v1",
+  "protocol_sha256": "efef23777db1f35b5d54af67fa0e58861d3f201eabc3687cbd179f8be5701049",
+  "partition": "development",
+  "files": [
+    {
+      "source": "results/financial-eight-actions-pilot-v2/protocol.json",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/protocol.json",
+      "sha256": "efef23777db1f35b5d54af67fa0e58861d3f201eabc3687cbd179f8be5701049",
+      "bytes": 7617
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/completion.json",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/completion.json",
+      "sha256": "ba87b4520a0e8073280c0e7eca2d87ee676ae33a914a29ce283638160bd8be0f",
+      "bytes": 1242
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/selection.json",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/selection.json",
+      "sha256": "4af5d22bcb5fbed07ac56d1c47ae065e80d1c6663d57f35f7a2fbb37de5e59fa",
+      "bytes": 944
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/comparison.json",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/comparison.json",
+      "sha256": "d5a82524e9b1fc57e62d9fea74b7897d5d2de2a5d96cf2def5a0f974047434ca",
+      "bytes": 5939
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/report.md",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/report.md",
+      "sha256": "70160eb2c2e9cda9c276e1cec83a666bb8ba5416e807a1b3342da6aee00e8d7d",
+      "bytes": 1891
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/diagnostics.json",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/diagnostics.json",
+      "sha256": "60826b734ef5e084e374b7a0edeea04e3971f2130676d85dd67de95bd6b965fe",
+      "bytes": 52671
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/diagnostics.md",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/diagnostics.md",
+      "sha256": "3d006ecc35f11b190392b75ea7917ece045537e54f890d834fa21cfa8d133b45",
+      "bytes": 2880
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/training-summary.json",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/training-summary.json",
+      "sha256": "0abb795ead7cf0c678156b2cb8c4825d0515dba7e1a4abb7a1ab8dbf48c0226d",
+      "bytes": 37936
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/train.jsonl",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/train.jsonl",
+      "sha256": "f9e1a3496083fd35ed9ae48309adcd711bb5934bd1b835921750321457e3865a",
+      "bytes": 63894
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/environment.json",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/runtime-hardware.json",
+      "sha256": "e7a36e7f135bc668280a4addbbc9bbcaf858899cd6e62817890baca36d54e02d",
+      "bytes": 172
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/preflight.json",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/preflight.json",
+      "sha256": "8e5e9ee9ba3301e2f46db5c2f17881be28d78f9354f444bbdd4f907dc5706d2a",
+      "bytes": 221
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/pause-resume-smoke.json",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/pause-resume-smoke.json",
+      "sha256": "d80028d4e9a72c07debd1355a2e2d761afb718368387c37e3eb8f78e11e07fe2",
+      "bytes": 503
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/base-parameter-dtypes.json",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/base-parameter-dtypes.json",
+      "sha256": "fc44edc41d9268670499dae273a9a1f7d169b31d7adc1c26bac75dd894a4acd5",
+      "bytes": 61
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/candidate-parameter-dtypes.json",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/candidate-parameter-dtypes.json",
+      "sha256": "4aff3be2352f836764675994b6374f4f8b7d7451ebe1973d5bdbde1c03e5fa0d",
+      "bytes": 61
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/base/predictions.jsonl",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/base/predictions.jsonl",
+      "sha256": "52e272248d44ee859d8f084f0f5370b53975c54654a7751374445758e3e1e0f1",
+      "bytes": 408531
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/base/metrics.json",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/base/metrics.json",
+      "sha256": "09b10851a2dd9be27adda0ede23c234ce4274933a85df6fd2e66e207c02402ad",
+      "bytes": 4446
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/base/timing.json",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/base/timing.json",
+      "sha256": "7206eef1891f161929b43a41d84bf5d459e63c5d2f05f7882547317c5fe472d3",
+      "bytes": 503
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/base/binding.json",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/base/binding.json",
+      "sha256": "c9dd3b5568f97dc5a107051bb028535bae0de1de1d3382d88566e12f9384fd49",
+      "bytes": 228
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/base/warmup-sessions.jsonl",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/base/warmup-sessions.jsonl",
+      "sha256": "7dd6f7d375168da2b2c206f743e273c12b1576e6fe456faa5bbd4d4b1dc890fa",
+      "bytes": 142
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/step-100/predictions.jsonl",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/step-100/predictions.jsonl",
+      "sha256": "c549e8b7849001393071e53f2dc742b9301558b9588ab739f9efa98018b4b4f8",
+      "bytes": 355057
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/step-100/metrics.json",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/step-100/metrics.json",
+      "sha256": "ccaaaa6ede6b21e4cc4c46636dafa927661518124bc36013bf16b3b11ebdd3aa",
+      "bytes": 4237
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/step-100/timing.json",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/step-100/timing.json",
+      "sha256": "dc6edecc528b4845ce8cbbc4db1b18537c57c9df8dfef2ae3fcf27e08879c25a",
+      "bytes": 500
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/step-100/binding.json",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/step-100/binding.json",
+      "sha256": "862b62fed0ae86c01dfcbf03d8c3dfa4e3277594373ac65033bf313964462247",
+      "bytes": 294
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/step-100/warmup-sessions.jsonl",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/step-100/warmup-sessions.jsonl",
+      "sha256": "b3ee16dec7b385e5d8cc4651126dae14e1d6ce239c6d59570695a8021612f8bf",
+      "bytes": 142
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/step-200/predictions.jsonl",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/step-200/predictions.jsonl",
+      "sha256": "9daa43138b5c28c8733350c3233d0d7d27fe215eeeb6c6ea09142599c6c657f9",
+      "bytes": 369976
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/step-200/metrics.json",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/step-200/metrics.json",
+      "sha256": "40c7b287a5330e15f6cb049321e06f8eabac1e1ce2381f4df4d0179d67f3c240",
+      "bytes": 4208
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/step-200/timing.json",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/step-200/timing.json",
+      "sha256": "d1dbd5a3aa57988eef42380fed62222e854f1276822ed2f2117879aadbf6a16b",
+      "bytes": 501
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/step-200/binding.json",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/step-200/binding.json",
+      "sha256": "ca8d4ecbd085046e09d6260f69c2d040e691e09dec8c4ca4ee547f7428b96c72",
+      "bytes": 294
+    },
+    {
+      "source": "results/financial-eight-actions-pilot-v2/step-200/warmup-sessions.jsonl",
+      "published": "docs/evidence/financial-eight-actions-pilot-v2/step-200/warmup-sessions.jsonl",
+      "sha256": "7682bcbda9872baf7fe4c3a8854bfd5c8bf25bee87e25bb30358b566e89af260",
+      "bytes": 142
+    }
+  ],
+  "weights_included": false,
+  "credentials_included": false,
+  "absolute_local_paths_included": false,
+  "final_evaluated": false,
+  "calibration_evaluated": false,
+  "model_api_requests": 0
+}

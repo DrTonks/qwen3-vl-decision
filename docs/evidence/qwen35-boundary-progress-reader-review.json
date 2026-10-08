@@ -1,0 +1,55 @@
+{
+  "status": "pass",
+  "reviewer": "/root/boundary_code_review",
+  "reviewer_type": "independent_ai_agent",
+  "human_reviewed": false,
+  "reviewed_at": "2026-10-02T13:25:36.282305+00:00",
+  "files": {
+    "scripts/watch-qwen35-boundary.ps1": "9efdaf6e13197e2b71e4df86b581da78b64d7b9172da535cfbecacb4e4fbebc5"
+  },
+  "original_code_review_sha256": "8480e9802ccff88e676ba7dfba6fe395a243735acfc3213ca2dea800a5bb8b38",
+  "original_eight_reviewed_files_validation": "pass; no frozen trainer/protocol/config/test changes required",
+  "scope": "Independent review of new read-only progress observer. Does not approve or claim a writer atomic-replace fix.",
+  "findings": [
+    {
+      "id": "P1",
+      "status": "resolved",
+      "description": "Sharing comment changed from assertion of atomic-replace safety to best-effort only; observer avoids live status.json and training-summary.json."
+    },
+    {
+      "id": "P2",
+      "status": "resolved",
+      "description": "Absent protocol now reports initializing with unknown total/ETA instead of computing from null fields."
+    },
+    {
+      "id": "P3",
+      "status": "resolved",
+      "description": "PowerShell 7 ConvertFrom-Json converts ISO strings to DateTime. String roundtrip lost UTC Kind and produced an eight-hour PID-time mismatch. Reader now preserves DateTime via DateTimeOffset cast and parses only string values."
+    }
+  ],
+  "unresolved_blocking_findings": [],
+  "tests": {
+    "execution": "CPU-only synthetic filesystem fixtures in ignored .local; no live status/summary, GPU, API or model inference",
+    "result": "pass",
+    "fixture_checks": 8,
+    "powershell_parse_errors": 0,
+    "checks": [
+      "Missing protocol returns initializing with null ETA",
+      "Complete newline-terminated JSONL rows read; incomplete final append ignored",
+      "Observer succeeds while synthetic status and training-summary files are exclusively locked",
+      "Example ETA 152.9 minutes matches 3058 remaining steps times 3 seconds",
+      "Logs predating current launch flagged",
+      "Both UTC Z and +08 timestamps recognize the fixture process correctly",
+      "PID with mismatching creation timestamp marked not alive",
+      "Malformed earlier complete JSONL row raises rather than being silently ignored"
+    ]
+  },
+  "limitations": [
+    "WinError 5 root cause is not proven. FileShare.ReadWrite|Delete alone previously did not demonstrate safe replacement; this observer avoids reading the files training atomically replaces.",
+    "The frozen writer still has no retry. Future environmental file interference can still stop training.",
+    "Launcher existence and creation-time match are not proof that the actual worker makes progress; compare step observations and inspect process/error information when stopped.",
+    "JSONL is append-only during normal training but may be truncated back to the saved checkpoint during recovery. A snapshot during that transition is provisional and is not committed checkpoint evidence.",
+    "ETA excludes load/evaluation/saving and may include observations from before the current launch; log_precedes_current_launch helps identify that case.",
+    "Tests do not claim end-to-end uninterrupted GPU training or numerical resume equivalence."
+  ]
+}

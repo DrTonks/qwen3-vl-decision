@@ -1,0 +1,207 @@
+{
+  "rows": 384,
+  "data_sha256": "e2636fa13e1ac2b1cad647665433596a5a8ce4a4e53ec7c92f75733ab191bb3e",
+  "partition": "development",
+  "prompt_sha256": "817bd6578c99ee0dce3d5e1d784830ce1d70cd85a9ff54f6cdf8ec34515f2b36",
+  "protocol_sha256": "efef23777db1f35b5d54af67fa0e58861d3f201eabc3687cbd179f8be5701049",
+  "action_accuracy": 0.4817708333333333,
+  "macro_f1": 0.46866809116809116,
+  "per_action": {
+    "clarify": {
+      "support": 64,
+      "precision": 0.3,
+      "recall": 0.09375,
+      "f1": 0.14285714285714285
+    },
+    "retrieve": {
+      "support": 48,
+      "precision": 0.9583333333333334,
+      "recall": 0.4791666666666667,
+      "f1": 0.638888888888889
+    },
+    "tool": {
+      "support": 64,
+      "precision": 0.28289473684210525,
+      "recall": 0.671875,
+      "f1": 0.3981481481481481
+    },
+    "answer": {
+      "support": 48,
+      "precision": 0.31521739130434784,
+      "recall": 0.6041666666666666,
+      "f1": 0.4142857142857143
+    },
+    "human": {
+      "support": 64,
+      "precision": 0.9512195121951219,
+      "recall": 0.609375,
+      "f1": 0.7428571428571428
+    },
+    "redirect": {
+      "support": 24,
+      "precision": 0.6428571428571429,
+      "recall": 0.75,
+      "f1": 0.6923076923076924
+    },
+    "refuse": {
+      "support": 48,
+      "precision": 1.0,
+      "recall": 0.5625,
+      "f1": 0.72
+    },
+    "close": {
+      "support": 24,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0
+    }
+  },
+  "confusion": {
+    "clarify": {
+      "clarify": 6,
+      "retrieve": 0,
+      "tool": 50,
+      "answer": 8,
+      "human": 0,
+      "redirect": 0,
+      "refuse": 0,
+      "close": 0,
+      "invalid": 0
+    },
+    "retrieve": {
+      "clarify": 1,
+      "retrieve": 23,
+      "tool": 22,
+      "answer": 2,
+      "human": 0,
+      "redirect": 0,
+      "refuse": 0,
+      "close": 0,
+      "invalid": 0
+    },
+    "tool": {
+      "clarify": 0,
+      "retrieve": 0,
+      "tool": 43,
+      "answer": 21,
+      "human": 0,
+      "redirect": 0,
+      "refuse": 0,
+      "close": 0,
+      "invalid": 0
+    },
+    "answer": {
+      "clarify": 4,
+      "retrieve": 1,
+      "tool": 12,
+      "answer": 29,
+      "human": 0,
+      "redirect": 2,
+      "refuse": 0,
+      "close": 0,
+      "invalid": 0
+    },
+    "human": {
+      "clarify": 3,
+      "retrieve": 0,
+      "tool": 18,
+      "answer": 2,
+      "human": 39,
+      "redirect": 2,
+      "refuse": 0,
+      "close": 0,
+      "invalid": 0
+    },
+    "redirect": {
+      "clarify": 1,
+      "retrieve": 0,
+      "tool": 1,
+      "answer": 4,
+      "human": 0,
+      "redirect": 18,
+      "refuse": 0,
+      "close": 0,
+      "invalid": 0
+    },
+    "refuse": {
+      "clarify": 5,
+      "retrieve": 0,
+      "tool": 5,
+      "answer": 3,
+      "human": 2,
+      "redirect": 6,
+      "refuse": 27,
+      "close": 0,
+      "invalid": 0
+    },
+    "close": {
+      "clarify": 0,
+      "retrieve": 0,
+      "tool": 1,
+      "answer": 23,
+      "human": 0,
+      "redirect": 0,
+      "refuse": 0,
+      "close": 0,
+      "invalid": 0
+    }
+  },
+  "human_misses": [
+    "FIN-F2-E-0016",
+    "FIN-F2-E-0031",
+    "FIN-F2-E-0035",
+    "FIN-F2-E-0062",
+    "FIN-F2-E-0091",
+    "FIN-F2-E-0092",
+    "FIN-F2-E-0107",
+    "FIN-F2-E-0109",
+    "FIN-F2-E-0140",
+    "FIN-F2-E-0154",
+    "FIN-F2-E-0156",
+    "FIN-F2-E-0157",
+    "FIN-F2-E-0159",
+    "FIN-F2-E-0177",
+    "FIN-F2-E-0178",
+    "FIN-F2-E-0206",
+    "FIN-F2-E-0221",
+    "FIN-F2-E-0223",
+    "FIN-F2-E-0224",
+    "FIN-F2-E-0255",
+    "FIN-F2-E-0269",
+    "FIN-F2-E-0271",
+    "FIN-F2-E-0318",
+    "FIN-F2-E-0350",
+    "FIN-F2-E-0370"
+  ],
+  "false_refusals": [],
+  "unavailable_knowledge_retrievals": [
+    "FIN-F2-E-0357"
+  ],
+  "tool_support": 64,
+  "action_tool_joint_accuracy": 0.59375,
+  "status_tool_support": 16,
+  "status_tool_accuracy": 0.1875,
+  "parameter_results": {
+    "model": {
+      "rows": 0,
+      "correct": 0,
+      "accuracy": null
+    },
+    "trusted_state_parser": {
+      "rows": 0,
+      "correct": 0,
+      "accuracy": null
+    }
+  },
+  "latency": {
+    "measured_rows": 384,
+    "p50_s": 0.10428769999998622,
+    "p95_s": 0.20803701499498856
+  },
+  "input_tokens": {
+    "measured_rows": 384,
+    "p50": 362.0,
+    "p95": 374.84999999999997
+  },
+  "note": "Trusted-state parameter results are backend grounding, not learned argument generation. Correlated macro stories require cluster-aware uncertainty; sample counts are not independent user counts."
+}

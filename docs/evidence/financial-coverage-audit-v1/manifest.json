@@ -1,0 +1,22 @@
+{
+  "source_sha256": {
+    "src/qwenlab/financial_coverage_audit.py": "cf79cff87b00899b0ebdfb0c21c254810535ac9248f0744f357ff2378f3f8929",
+    "scripts/inspect-financial-training-inputs.cjs": "5859121bb66459f84a87c5862d33c2f33f3e407afd6f83635f139aa5c42bb10d",
+    "configs/support-financial-v2.json": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+    "data/financial-sampling-study-v1/pool-v1/manifest.json": "56bee2bdaa144351ade5f120a65899093369b576fa9934a74ebf40761cde004d",
+    "data/financial-sampling-study-v1/pool-v1/train.json": "8b524ae86533d7b55e1add23e4b0b44591c68b615ecf767f34ec4a0d5a166f72",
+    "data/financial-sampling-study-v1/schedule-v1/manifest.json": "8ed29d2bcd57a72cedb19bf0a09d6ebc315d5681e0bcc0a704b3a4fb62f973c4",
+    "data/financial-sampling-study-v1/schedule-v1/uniform-plan.json": "704bd5928599f292fafe6b73bb1e155cae1f5ed4df95b56b6824f0bcb9a6ecc7",
+    "data/financial-sampling-study-v1/schedule-v1/stratified-plan.json": "58d86022245a217a859a4260a00a82fd421732c4d595523dbcaa45b2848c2518"
+  },
+  "backend_source_sha256": {
+    "services/customerSupport/financialContract.js": "e579e1674c3b55f78b6b578ad02b169e88ee088b4aba0179d287a62d4c0b4a9d",
+    "services/customerSupport/parameters.js": "7f2372eee24930107556c5ce7b290af2cf189d0c85f6f16487aa6075d8209779",
+    "services/customerSupport/contract.js": "1394d283d115354c2bab22b067c1a61635c32659e3b0e86d62bd7b248b39e243",
+    "services/customerSupport/policies/support-financial-v2.json": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91"
+  },
+  "files": {
+    "summary.json": "f1aa75667206075f277ab9f6724a99df949fc2031f5e9227bf0622c3f159cd6a",
+    "coverage-cells.json": "af963c4a4960fa05256e07e8610724e0e54fce7ce50fa3642c9c318132dc68de"
+  }
+}

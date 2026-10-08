@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "no_optimizer_updates": true,
+  "elapsed_s": 3.513555900004576,
+  "max_action_tokens": 501,
+  "max_tool_tokens": 461,
+  "peak_allocated_gib": 3.809809684753418,
+  "trainable_parameters": 1605632
+}

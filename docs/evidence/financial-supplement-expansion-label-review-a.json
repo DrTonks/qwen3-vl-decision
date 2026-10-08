@@ -1,0 +1,5358 @@
+{
+  "candidate_sha256": "f2f9d3fad35a74858b080d3afbb60acf1c36966e3ea852cf94dcc0e153610ac5",
+  "policy_sha256": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+  "independent": true,
+  "human_reviewed": false,
+  "evaluation_data_read": false,
+  "reviewer": "AI independent reviewer of batch A; author of separate batch B, not author of reviewed A rows",
+  "review_method": "逐组分块实际阅读A全部760条消息、历史、可信状态、工具名单、目标动作及参数；每条中文判定依据为独立编写，非程序按作者标签全accept。冻结后逐行比对source与candidate注释及SHA，额外运行真实Node参数解析器验证工具参数与组件正文可定位性。",
+  "summary": {
+    "rows": 760,
+    "source_groups": 191,
+    "decisions": {
+      "accept": 752,
+      "quarantine": 6,
+      "revise": 2
+    },
+    "quarantined_groups": [
+      "SEA-G024",
+      "SEA-G045"
+    ],
+    "tool_rows_parameter_checked": 168,
+    "component_tool_rows_body_checked": 20,
+    "all_source_row_hashes_verified": true,
+    "candidate_hash_verified": true
+  },
+  "limitations": [
+    "这是不同作者代理进行的AI独立语义复核，不是人工签字审核；未运行模型或读取旧评测、预测、错例、盲筛结果。",
+    "G024-2报账语境中的编造名称有实施造假与能力询问歧义；G045-2缺工具的公开目录查询并非个人业务，human依据不足。两个来源组整体隔离，未修改作者数据。",
+    "G177-2/3的作者理由前缀是组名，字面上误称工具缺席。本审查记录其措辞瑕疵但保留正确动作，因为显式工具非空，缺少的是可信认证。",
+    "批次A采购场景和政策边界有重复，191个来源组并不等于191条全新政策规则；本审查不声称跨批语义去重或外部分布代表性。",
+    "参数检查只运行现有纯解析模块，未连接数据库、验证真实用户归属或执行业务工具。"
+  ],
+  "parameter_edge_diagnostics": [],
+  "rows": [
+    {
+      "id": "SEA-G001-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "310201明确且只读用途，明细字段受支持",
+      "source_row_sha256": "b5c4f30d3a8cf992fd9e1bd0ebf50cc2593eab1d420ad4d013b8fb740130042f"
+    },
+    {
+      "id": "SEA-G001-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "明确要人工查具体审批理由，现有详情不含理由",
+      "source_row_sha256": "391e66e280e0cf1833d357c5dbe058fb72c7e50097a378c7c179853cc24d21aa"
+    },
+    {
+      "id": "SEA-G001-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "忘记编号且没有选中状态，单笔期数须补编号",
+      "source_row_sha256": "6cc2a1431bbf68392e563cf5fc1962d7560493bc391dd03e8a9eb1bd9666f8e5"
+    },
+    {
+      "id": "SEA-G001-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "仅询问明细接口是否返回内部理由，解释能力即可",
+      "source_row_sha256": "a9aad1c600ffa9a2144f54ab5aa7af7463014b2cb9f44e6f0cc603710d05e835"
+    },
+    {
+      "id": "SEA-G002-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "310217唯一，金额期数均为明细字段",
+      "source_row_sha256": "1a5aa2fd030a0ff012b8daefdcfe9a7c17975e1eb32e931770ace782d6683e0d"
+    },
+    {
+      "id": "SEA-G002-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "要求实际修改并保存用途，超出只读工具",
+      "source_row_sha256": "8599791fdf4bb5eca1a286ee54c7fbc449bcdad67785dd1f78453d5b02d911cf"
+    },
+    {
+      "id": "SEA-G002-3",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "要求制作不存在的租赁合同上传，属于实施造假",
+      "source_row_sha256": "19e586217fb39c1f489823f52d55285316bed262eb6d7eceac1d58e226bfff12"
+    },
+    {
+      "id": "SEA-G002-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "明确否定造假，当前只问用途字段能力",
+      "source_row_sha256": "696ea2542b4877dd3f8c643310fb99189ee057e2c08999b99b6ff88e4a731127"
+    },
+    {
+      "id": "SEA-G003-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "本人最近申请列表可由列表工具读取",
+      "source_row_sha256": "160b692ede02d03fac336b3d5041db9707ce7c27d682cd05fcefc8601d3df399"
+    },
+    {
+      "id": "SEA-G003-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "310238明确，产品名需查单笔详情",
+      "source_row_sha256": "f4f4a7ee12ed367d7e246f3361d1c60b7fe1e9edbcd94c53e035b5bb8ea30654"
+    },
+    {
+      "id": "SEA-G003-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "询问能否凭陌生产品ID猜名称，应说明不可推断",
+      "source_row_sha256": "e8eb9d6e3e68a2f9cc041d1ddd78229f7b3dfa0ed820f05d5b826e763a7f1182"
+    },
+    {
+      "id": "SEA-G003-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "两笔未选择其一，须确认申请编号",
+      "source_row_sha256": "51262f2ccba929b95812c045a68f3e4a2a3838d5fc2cd2f7268cb0f82623b5f2"
+    },
+    {
+      "id": "SEA-G004-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "读取本人已存信用档位受支持",
+      "source_row_sha256": "37eada1e7fe6c661e8a223959383b403b1d94580a76e3a125721c5f4c551b5d5"
+    },
+    {
+      "id": "SEA-G004-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "要求更改档案职业字段，现有工具无法写入",
+      "source_row_sha256": "5c25e929597632c60cdcc9cad8300ec1f6a368c63dd27ed5e1d7bc03edc158f1"
+    },
+    {
+      "id": "SEA-G004-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "查询评分不能提供获批保证，解释边界",
+      "source_row_sha256": "670e0a8218292a17f4b91fc27286cd8c46a558bf727e6c4f7008c6e768cbd58c"
+    },
+    {
+      "id": "SEA-G004-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "明确未登录，读取已有档位须先认证",
+      "source_row_sha256": "2bcbe8d3afd2039fd17d4e14bdd6d143a479d7fbc0b5ff84731b3de2ef09f5ab"
+    },
+    {
+      "id": "SEA-G005-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "上架产品名及额度上限属于目录字段",
+      "source_row_sha256": "b36854e4cdddc7fa560142abbca95043c3aedf6ce1b7ee9827963279fb281936"
+    },
+    {
+      "id": "SEA-G005-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "产品上限不等于个人获批金额，解释已知边界",
+      "source_row_sha256": "ed7773d7d124502d84f25b20df485fb038d4e11bc423d68a3be25d2efb11367a"
+    },
+    {
+      "id": "SEA-G005-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际新建提交申请没有对应工具",
+      "source_row_sha256": "d52774039727ad04f6da13852de0b3d642a9fb2fd318aad220b62de3db8df38b"
+    },
+    {
+      "id": "SEA-G005-4",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "当前上架产品标签可通过目录读取",
+      "source_row_sha256": "854b7e36dded1e2d13ffd9665a05b2b07d82513d01b08addf7800c575d8fb8e2"
+    },
+    {
+      "id": "SEA-G006-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "明确状态码2，只需静态释义",
+      "source_row_sha256": "ab18b04a58b3c4087625b11e600bef753c853d794e00aca98624e58ac9711316"
+    },
+    {
+      "id": "SEA-G006-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "310266明确且要求重读本人记录状态",
+      "source_row_sha256": "aacf214692abf588cbee0205e917a778c289a982c0b02a1abd29f22e61783802"
+    },
+    {
+      "id": "SEA-G006-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "遗忘具体码值不能选择状态参数",
+      "source_row_sha256": "39d805b1dc26f6eb8bf78951b4fee8484e60d0b5873d0b0667bc75ee386edc45"
+    },
+    {
+      "id": "SEA-G006-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "已知待审批不能保证结束时间，无须重复查码",
+      "source_row_sha256": "4e71f24e3c80a140fbc07f5c7c87ae53865268c8aeca90a6bc9bf9c68907f1cb"
+    },
+    {
+      "id": "SEA-G007-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "正文310280应覆盖选中310279，参数正确",
+      "source_row_sha256": "122be1c387cfbce0f921a29d8b35fd730077db6ea9759b5ceca28a1de2689a29"
+    },
+    {
+      "id": "SEA-G007-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "这笔可由可信selectedApplicationId310279定位",
+      "source_row_sha256": "88aa65878bfe6120c492ea9552715d581e0c68f176fd37cf98514a39dab6a0d9"
+    },
+    {
+      "id": "SEA-G007-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "两笔未选且没有状态，无法唯一定位",
+      "source_row_sha256": "b869f453d7147db2b3f63f727068902089a24e86cd8dee08fb1a7d766aa05736"
+    },
+    {
+      "id": "SEA-G007-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "要求撤销310280，不能用关闭咨询替代业务处理",
+      "source_row_sha256": "298fd4f4d1666c76dadd078938bf1fa01d0b6fc09c2b30c74d2293526027708f"
+    },
+    {
+      "id": "SEA-G008-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "裸数310295配合pending申请号与可见追问足够定位",
+      "source_row_sha256": "06ecdb79470d4daa04b1fcdf9de99aa3c597e406c031501f3d31fd01aac7a613"
+    },
+    {
+      "id": "SEA-G008-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "金额九千不能作为申请编号",
+      "source_row_sha256": "ffab9dac83152a7b4a0aa6f32c5f90d72cfebc2a198ef68b262690c8fa05db74"
+    },
+    {
+      "id": "SEA-G008-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "310295明确且期数为详情字段",
+      "source_row_sha256": "18a5b4fce973d8562bbb5b55897840f4150238d74730b7f30a8e4b7c43e078df"
+    },
+    {
+      "id": "SEA-G008-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "询问金额是否足够定位，直接解释不足",
+      "source_row_sha256": "4ef13d387a2d48c15a5020bea054c00a3def9b1591a64fca9003679ef345cd2d"
+    },
+    {
+      "id": "SEA-G009-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "本人已存建议额度可由信用工具读取",
+      "source_row_sha256": "88dbc4ee3f13775ddba7a1a4930a06ce275887b099b65e75320e8258827305d6"
+    },
+    {
+      "id": "SEA-G009-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "建议额度不等于已经获批额度",
+      "source_row_sha256": "0fd9bbf78330be15032098b50fd1a0137427c9ae5f1ec0bebdb855944c8b8e4f"
+    },
+    {
+      "id": "SEA-G009-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "明确请求人工复核新增收入材料",
+      "source_row_sha256": "bcc862af7b72beb98f5f6e952cc535e736e1210d5fdf13e62998df4a2bdcb1e9"
+    },
+    {
+      "id": "SEA-G009-4",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "当前上架目录提供最高金额和参考分",
+      "source_row_sha256": "00f68b69ef5f7b3169fb93170bdf2bcace59daab768de2a0d027a9b8a6b12c7e"
+    },
+    {
+      "id": "SEA-G010-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "28是烤盘数量且没有申请号，应追问",
+      "source_row_sha256": "315017e1c2d97e4a65cf078896cdc61f6402afe0574c9006b380d47ade480b04"
+    },
+    {
+      "id": "SEA-G010-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "310326为明确申请号，28个物品不能替代它",
+      "source_row_sha256": "bf6378f0f0859811f7845dd59eb304b7bf6e10424c897a1f624cb1d4ecb311ce"
+    },
+    {
+      "id": "SEA-G010-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际增大并保存金额属个人写入业务",
+      "source_row_sha256": "466bb2cdf12a7836bf5a59f603019cd815db071b0f6a811caa15426092dc3afc"
+    },
+    {
+      "id": "SEA-G010-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "仅问解析是否会把数量当编号，说明边界即可",
+      "source_row_sha256": "19a7159e2c4ab2641380fa8f02e182c4e2c255d86ddf4daa038eb9b5d852b553"
+    },
+    {
+      "id": "SEA-G011-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "明确310341，状态属于详情返回字段",
+      "source_row_sha256": "e7da7da97873c78f9f8b4f5967ef6d384bf3102e45ab7a2a2265c5e6cf4b6f73"
+    },
+    {
+      "id": "SEA-G011-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "放款流水不在现有工具中，需要人工",
+      "source_row_sha256": "b29ab1316dbdc8a94ef1d7059ba4929e35fbde9cd07378177e1623daa67a9831"
+    },
+    {
+      "id": "SEA-G011-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "通过状态不能证明银行到账",
+      "source_row_sha256": "e0769b6828eba6efa3a8308c14f75536eab722362c3b5c07769fd0a6784e1ba9"
+    },
+    {
+      "id": "SEA-G011-4",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "明确状态码1且只需静态含义",
+      "source_row_sha256": "42fbef4229f048218e317bc73b2b82808b06c894b170a78bef689c8fb63a3442"
+    },
+    {
+      "id": "SEA-G012-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "310357唯一，保存用途为明细字段",
+      "source_row_sha256": "d1e5b0630e06c0ec86423c86994d9f6c2fab5823bbedb4ae85e8c41306e1a9ba"
+    },
+    {
+      "id": "SEA-G012-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "替换真实报价附件合法但没有上传工具",
+      "source_row_sha256": "6f4acbc8d0e97c53470ba341e6d4e314d92662823b5103d528a76cb002babbc6"
+    },
+    {
+      "id": "SEA-G012-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "询问附件替换能力，没有直接办理请求",
+      "source_row_sha256": "7c75c5d892cd28e20b77b4c01ac0dc909e569140f0d4f28a0652843240d445d8"
+    },
+    {
+      "id": "SEA-G012-4",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "将真实报价翻倍制作虚假附件以通过审核，应拒绝",
+      "source_row_sha256": "86e4da98357697ab76813cd7652bef958189f1e8a17812f54cc71306da0fe24f"
+    },
+    {
+      "id": "SEA-G013-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "目录标签和金额上限可查",
+      "source_row_sha256": "ae9ba9d269a3452bfc7375f36a9e57084137f42b95198a73e51570d67a1a7d14"
+    },
+    {
+      "id": "SEA-G013-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "本人最近编号列表可查",
+      "source_row_sha256": "ba46b49dd4ed1f5e1b371ce3ea27fd7c82f41041261539be96385bb7cff80f0f"
+    },
+    {
+      "id": "SEA-G013-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "明确不要列表且未知单笔号，须补编号",
+      "source_row_sha256": "ba0efdbb4eba29beec26b07915d9cbe860d92f801d31863b44815d11a0bc54cb"
+    },
+    {
+      "id": "SEA-G013-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际申请展期没有只读工具可执行",
+      "source_row_sha256": "5e738c99673033de9f6df910221f586b4dd01222b1f89625208a7b6d26302a84"
+    },
+    {
+      "id": "SEA-G014-1",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "当前无正式知识库，手续费规则只能说明限制",
+      "source_row_sha256": "6564e55b2cfaca6fc6100641c3ef558f8abdcfa510f4968198f253da0c9344da"
+    },
+    {
+      "id": "SEA-G014-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "明确要人工办理提前结清",
+      "source_row_sha256": "6e8efbd7af48c3efcfd131975b48b69c312e323322f82efbd52d092bdd50936b"
+    },
+    {
+      "id": "SEA-G014-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "310401金额期数是可查字段",
+      "source_row_sha256": "b852ac3082e1bbfcb877b9457901a7c8c5540e1afa06bf873167564c91f3a1b5"
+    },
+    {
+      "id": "SEA-G014-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "询问还款计划和费率是否返回，说明缺少字段",
+      "source_row_sha256": "386e7b220031432284ec1cf9a065b29a2e9dbe01a33ca13fdc6f628c80ca5b22"
+    },
+    {
+      "id": "SEA-G015-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "改查310418有已选310417状态，符合纠正解析",
+      "source_row_sha256": "806c0b81f3ff89a734e0d0f77d6d61b9eb73d60fe18bb676a33940673224e2bc"
+    },
+    {
+      "id": "SEA-G015-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "正文两个编号且未确定，不能任取",
+      "source_row_sha256": "030f64193dc908d92f28656b69dde85f3fce03dbdb3705a055dc70c3c306f5c2"
+    },
+    {
+      "id": "SEA-G015-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "310418明确且用途为明细字段",
+      "source_row_sha256": "928551b286ca82e2382eeaea890914c660a292cf71f83ebc5ccf7eafbc618516"
+    },
+    {
+      "id": "SEA-G015-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "修改收款卡为未实现个人业务",
+      "source_row_sha256": "b5bef426e5fe20e929eb86b99344a5ee97229565afc378133a2b42c788a15aaa"
+    },
+    {
+      "id": "SEA-G016-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "明确要求重拉本人近期列表",
+      "source_row_sha256": "fece95a93d078623e6f086ded290ca23cb3d7386d20f3f9df3506dce85aa16d7"
+    },
+    {
+      "id": "SEA-G016-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "50项截断不能证明未出现记录不存在",
+      "source_row_sha256": "43828f8e402e0b3875f4440ceb15262e4a5e02fe39521d73d0e3eaa505d55b7f"
+    },
+    {
+      "id": "SEA-G016-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "要求51条后全部历史导出，当前列表无分页导出",
+      "source_row_sha256": "f98024ecd4bc411d1f1c65bc0cfcdf128368c3d8c87ba2fe3f6742c07b5f195d"
+    },
+    {
+      "id": "SEA-G016-4",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "找到了310434，应直接查单笔明细",
+      "source_row_sha256": "d321b6b4bfb31d630e2238356ac71f28223ab5c2c67696f8f32d7ccdc785e03a"
+    },
+    {
+      "id": "SEA-G017-1",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "明确只问自动扣款功能",
+      "source_row_sha256": "9bb33d154dd619ba191f08d665aab29b0c6f46615637887d0b7e5af97ed2548a"
+    },
+    {
+      "id": "SEA-G017-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际还款不在工具范围",
+      "source_row_sha256": "d8a14893cde88c9ef4a8a36b5c2dec049ea14c2817f9af7f99eb328847ab9b92"
+    },
+    {
+      "id": "SEA-G017-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "本人已存建议额度可查",
+      "source_row_sha256": "fceca078a1f876f8e4157007f1c671bf7d1bd55b22af4ea98be5b4cf71e4c2e4"
+    },
+    {
+      "id": "SEA-G017-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "未登录要求读取已有评分，应先认证",
+      "source_row_sha256": "f5c10d7e30c286750aef50cde13ff4798d7931ce99235873e45ffc0f47a6e0d6"
+    },
+    {
+      "id": "SEA-G018-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "用户尚未确定查询或修改意图，先澄清",
+      "source_row_sha256": "5d5e15833f340d333248cf30687863ba1c4145ae292c8d5e01bd698ca98dcd51"
+    },
+    {
+      "id": "SEA-G018-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "310470明确且只查询现有金额",
+      "source_row_sha256": "f1530573419eca63c7774051a08e1c689edf27f309a9fc70c5984c6967471b83"
+    },
+    {
+      "id": "SEA-G018-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际修改保存新预算属写入业务",
+      "source_row_sha256": "9f599d6f3d142df5993aaadeefdf011f3f7457fedc99caf51e01887caaa5a2bc"
+    },
+    {
+      "id": "SEA-G018-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "仅查询已有金额不等于新建申请，解释即可",
+      "source_row_sha256": "6df2e5a31bbe1630b96f5625d8123ae63c976e70100e0243cab7363fdb65427d"
+    },
+    {
+      "id": "SEA-G019-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "310488明确声明本人，正常归属校验后可查用途",
+      "source_row_sha256": "16758cf0515f83c932a21db1e5a4d11c21b18bf46631bc1d5b6695a03f5d3440"
+    },
+    {
+      "id": "SEA-G019-2",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "明确无授权并要求绕过身份查看他人贷款",
+      "source_row_sha256": "cb529a94b4716f5671a7fcf7609e2676ec58201cfefa980255c231cf082d50b4"
+    },
+    {
+      "id": "SEA-G019-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "疑似冒用并明确要求人工调查",
+      "source_row_sha256": "8a4776dc43baa3392abeec65ec7478173d593aa861dd02b4276ea8867cee2e0b"
+    },
+    {
+      "id": "SEA-G019-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "报告未照做的越权话术，解释隐私风险而非拒绝",
+      "source_row_sha256": "82862e0c57e58afc494b02e791071993784592d4140bcf666e0310a1b787ba37"
+    },
+    {
+      "id": "SEA-G020-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "明确状态码0且只问静态含义",
+      "source_row_sha256": "0eeff21effb5273677d9c75ee3d743347b807ad491b59db8e765e0cbf839dfed"
+    },
+    {
+      "id": "SEA-G020-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "要求人工查拒绝原因并申诉",
+      "source_row_sha256": "568560289bcd9a982c5b526195edfec745e77140be480c28a7dcd05a69682509"
+    },
+    {
+      "id": "SEA-G020-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "310505明确，重查本人实时记录状态",
+      "source_row_sha256": "fb7af5630aae3359641be1d7abcaca6780a3eda756b5a8ef8843505d36a3e65d"
+    },
+    {
+      "id": "SEA-G020-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "0和2均出现且未指定当前一个，需确认码值",
+      "source_row_sha256": "acd4e1d406de68811ce634fd79994101345d7eea8b5ab488ac17695f67017509"
+    },
+    {
+      "id": "SEA-G021-1",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只问列表是否含准确提交时间，解释缺字段",
+      "source_row_sha256": "679d3a4b83fab7380b79b0760f82bab4a1092484fdf5c0a7cf50ef2a7a4cbf3a"
+    },
+    {
+      "id": "SEA-G021-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际调取精确提交时间凭证属未实现个人业务",
+      "source_row_sha256": "7b4406ac0ff081f6644c5656160a4e056fad93553724d91c9d5d7a3bfde30784"
+    },
+    {
+      "id": "SEA-G021-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "310522产品名期数均为详情字段",
+      "source_row_sha256": "96acc79adae40232189a099f39412a1349c855a623d7006f4e02597f2583e9fe"
+    },
+    {
+      "id": "SEA-G021-4",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "本人近期申请编号金额可由列表读取",
+      "source_row_sha256": "810fe2def703b6ea42e0909c7f8e3ba190fdce16e790445c3ab8f224285c368c"
+    },
+    {
+      "id": "SEA-G022-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "上架产品最高额度为目录字段",
+      "source_row_sha256": "75dadcc27bed0773fa684c35691aa95c8d8ca0951b9d57d8c47f9ea8ac401781"
+    },
+    {
+      "id": "SEA-G022-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "目录金额不能当个人授信承诺",
+      "source_row_sha256": "240347414ebcd7e05652cd7a43dff8c752144aa8a00f70a93f801f55a6862101"
+    },
+    {
+      "id": "SEA-G022-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际更改贷款分期属写入业务",
+      "source_row_sha256": "067ebb0eb8239044cc40211ecc7194dfe4538295f55b3f418a86a1bd231baf74"
+    },
+    {
+      "id": "SEA-G022-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "未知编号且没有选中项，无法查单笔期数",
+      "source_row_sha256": "bc03e02ec8b5d809e2726792387ce07c6da1bc3eb1719558c40d422dfae9f653"
+    },
+    {
+      "id": "SEA-G023-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "已存本人评分档位为信用工具能力",
+      "source_row_sha256": "9956d74108b16850c78c6c75b8045f9524ec5e13f1efe4f68f84297de5ec7c31"
+    },
+    {
+      "id": "SEA-G023-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "已有658分不能保证下一次审批通过",
+      "source_row_sha256": "7bcb6cf8340930571a16308c5438bb776e980ca54e352aaaa736c697eb635cdd"
+    },
+    {
+      "id": "SEA-G023-3",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "要求跳过真实复核直接改成900分，属于篡改",
+      "source_row_sha256": "ef84b895348eb998ab96c32aa9d83671cb98e1d429f1f7ad9d5c35063857481f"
+    },
+    {
+      "id": "SEA-G023-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "怀疑错人归属并明确要求人工核对",
+      "source_row_sha256": "d8cf3e9aebd024ccf29f262f5bff62560a40eeb044575995620622547db07e66"
+    },
+    {
+      "id": "SEA-G024-1",
+      "reviewed_action": "tool",
+      "decision": "quarantine",
+      "reason": "310580已知且求产品名，优先详情。本条动作可成立，但同组SEA-G024-2存在标签分歧，按整组隔离要求暂不接纳。",
+      "source_row_sha256": "eb74c4e25d81bd0734b5688fdf9cc3b264b2cf56b4e4993e2bb032549fbde78f"
+    },
+    {
+      "id": "SEA-G024-2",
+      "reviewed_action": "answer",
+      "decision": "revise",
+      "reason": "要求编造产品名称用于报账，具有实际造假用途，answer与refuse边界不清；建议改refuse或改写成纯能力询问后重审",
+      "source_row_sha256": "fdb2327aed7693e00e64ac2949e50765e07820977bf1245a7bab83534feebca6",
+      "suggested_action": "refuse"
+    },
+    {
+      "id": "SEA-G024-3",
+      "reviewed_action": "human",
+      "decision": "quarantine",
+      "reason": "转到另一贷款产品并提交是未实现写入业务。本条动作可成立，但同组SEA-G024-2存在标签分歧，按整组隔离要求暂不接纳。",
+      "source_row_sha256": "a82f76eaeefeac256f37e5b6c80803b603390b82fd0044fa6db5e68156da92e4"
+    },
+    {
+      "id": "SEA-G024-4",
+      "reviewed_action": "clarify",
+      "decision": "quarantine",
+      "reason": "要其中一笔产品名但未指明记录，需编号。本条动作可成立，但同组SEA-G024-2存在标签分歧，按整组隔离要求暂不接纳。",
+      "source_row_sha256": "96c3db401fddbb643457abeb119e2d0153e350bd0f5e4ba6f34c20dce99102f8"
+    },
+    {
+      "id": "SEA-G025-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "疑似重复时明确先查本人最近列表",
+      "source_row_sha256": "30aac8ba04198fa25a1980d2d9cbd37483bf58c1bd8ce77167955837cce43afb"
+    },
+    {
+      "id": "SEA-G025-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "310597唯一且金额用途可查",
+      "source_row_sha256": "91427a136c39f99d9bc73143d00b5230388a4ffcdf27fcd8b32d6f68f1721982"
+    },
+    {
+      "id": "SEA-G025-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "已确认重复后要求撤销，需人工办理",
+      "source_row_sha256": "b84a5f42a8f7f2f5e8a7c15fee9ede029525779f212aa8b5b940e4b64a96484d"
+    },
+    {
+      "id": "SEA-G025-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "撤销业务与结束咨询不同，解释即可",
+      "source_row_sha256": "232801d3e46740ec73453237dd8f8ccb622bd2758aac753a1a6b40cd7b218c33"
+    },
+    {
+      "id": "SEA-G026-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "310612明确，申请金额属于详情字段",
+      "source_row_sha256": "127772dddccc750adc4c5050e1d0d4f1c5c249c43ce62e980186e3a0fe31d110"
+    },
+    {
+      "id": "SEA-G026-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际降低借款金额属于写入操作",
+      "source_row_sha256": "512fc9008da27f66885687d8f139b091d143eab79284f90cc456e897e64dabe1"
+    },
+    {
+      "id": "SEA-G026-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "凭证只有日期没有编号，单笔金额无法定位",
+      "source_row_sha256": "ddb735adfefc5a9dfe052bdea06443d6e2ae05a1138fd48de3f4987f5feb8b40"
+    },
+    {
+      "id": "SEA-G026-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "没有实际利率字段，金额本身不能推算实际利率",
+      "source_row_sha256": "5c059ec24376c904545899bc5e2b100d14429e089a6ab1c0210705f1ca3834af"
+    },
+    {
+      "id": "SEA-G027-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "只取本人已存建议额度，不重算，信用工具适用",
+      "source_row_sha256": "3283b2cb169d7b7d988bbc7deac88fa1cf908733a9a6475d21081b049c935b88"
+    },
+    {
+      "id": "SEA-G027-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "重读记录不等于实时重算评分",
+      "source_row_sha256": "5d01aab7ee972592f3f8968fe05d41d6b601a6fafd7a60b94712e879e69e2a86"
+    },
+    {
+      "id": "SEA-G027-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "要求结合新材料重新评估，当前信用工具只读",
+      "source_row_sha256": "0aa6735d26a04357ecaa3e0e919d52a9a865c470a44955ceb0ae86e69abca0d1"
+    },
+    {
+      "id": "SEA-G027-4",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "上架目录产品名标签可查",
+      "source_row_sha256": "37599e9992b7e160306e6af0525a8cf58e015c57bf19d8d5990b3ac2e667bcaf"
+    },
+    {
+      "id": "SEA-G028-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "明确状态代码2，解析受支持",
+      "source_row_sha256": "7270b9b34496786e6f71e78db5d7b8ea237fef5c8ba5e356bbc29727d0b27565"
+    },
+    {
+      "id": "SEA-G028-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "码值被遮住不能解释未知数字",
+      "source_row_sha256": "9310039b507a4435c180c5204d0b791045758b4ec44331fd67461f3ae7f4ff82"
+    },
+    {
+      "id": "SEA-G028-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "310661明确且求本人记录状态",
+      "source_row_sha256": "789be4d96014be7cd4788f4f50a681718caec85bc6959ac3084a1ad8c84da09c"
+    },
+    {
+      "id": "SEA-G028-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "明确请求人工处理催审",
+      "source_row_sha256": "e332da0a87b85b66fa81d661f2e2a59455b4ce6be704734aebc916df4995aac7"
+    },
+    {
+      "id": "SEA-G029-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "310676明确，只读取保存用途",
+      "source_row_sha256": "0e0d00dbea75c11c5bdd14a6d6b8444fb80f968236827b99407c741714e943c8"
+    },
+    {
+      "id": "SEA-G029-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "条件式询问能否擅自补空用途，说明不能推测即可",
+      "source_row_sha256": "b92e4507b0db2b5fc66f8ce2d15827c0ada8488000076cb44ff98c81ae9dffea"
+    },
+    {
+      "id": "SEA-G029-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "补录真实用途并保存是合法未实现业务",
+      "source_row_sha256": "b218293da333a3f21321d6dc41eadfa3340a8c98a5aebd44ffb73b19e599c48e"
+    },
+    {
+      "id": "SEA-G029-4",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "冒充签字且写入虚假用途属实际造假",
+      "source_row_sha256": "1114edd0607505808dbe630043fae1676193a2b24bbd9343f78c0b1da8b58e41"
+    },
+    {
+      "id": "SEA-G030-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "31?694包含缺位，不能猜一个完整有效编号",
+      "source_row_sha256": "a41995832506c3f284cfd26630826f8a67c260a52ae9d49e611195dd3b6cae41"
+    },
+    {
+      "id": "SEA-G030-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "明确纠正为310694且读取金额",
+      "source_row_sha256": "d0f14545ec88abdaeb83d665e17fab017b25606dfcc6546f2060f7ec90c0100a"
+    },
+    {
+      "id": "SEA-G030-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "编号损坏后明确要求本人近期列表供核对",
+      "source_row_sha256": "eb17bc1efa7c35a6b66cfdec85487318dcfa1e0bcb155349a465c9506d940479"
+    },
+    {
+      "id": "SEA-G030-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "询问猜缺位是否保证本人归属，说明不能保证",
+      "source_row_sha256": "977a14193775fd69fc3cad974ad4b2cf58e26897b2b22d91ccdff3f9d6ec1d3a"
+    },
+    {
+      "id": "SEA-G031-1",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "重复扣款核查及实际退款没有相应工具",
+      "source_row_sha256": "e110e7c24bb262204d5d035d5901e989be48920f0a82953c0be90c4b02725f6b"
+    },
+    {
+      "id": "SEA-G031-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只问流水查询和退款工具是否存在",
+      "source_row_sha256": "0e882d2668bcdf860396df5bd2bf56cd28aa0ae8219d145a24a1a349d74d5b86"
+    },
+    {
+      "id": "SEA-G031-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "310710明确，只读取申请金额",
+      "source_row_sha256": "a1b412f239e0a32caaed353b5974246ab031c4f8a12af74ff0abe0f758d021e4"
+    },
+    {
+      "id": "SEA-G031-4",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "明确状态码1，静态释义可调用",
+      "source_row_sha256": "6b3382dc7ed3e848942f399e80ebcb0f6a54cc8a9fef6a8f85190cc4b0681c8c"
+    },
+    {
+      "id": "SEA-G032-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "目录名称参考分均为现有字段",
+      "source_row_sha256": "c61ac72f150106ec886d3e4ec3511fe9e740d80c0d9bb0f418ddc7e21faabb24"
+    },
+    {
+      "id": "SEA-G032-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "本人已存评分可查",
+      "source_row_sha256": "ef0e27c38b638a3e1b607a0cb8836e2a3b62607e34c4c24df51180751d76cc33"
+    },
+    {
+      "id": "SEA-G032-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "满足参考分不能保证审批通过",
+      "source_row_sha256": "4e719b92baf3e448b296f0c7bc5942a458059f4a5a205e85975b60692736580f"
+    },
+    {
+      "id": "SEA-G032-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际提交新申请为未实现个人业务",
+      "source_row_sha256": "ac1c45bffbe1c8fd3402bcb1735704a687b3c5793c3e077dcca9febfb6520478"
+    },
+    {
+      "id": "SEA-G033-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "可信选中310744允许代词定位产品名",
+      "source_row_sha256": "b74a7a527bf8e504df3c8c0ef34ae9350fa2d933231a52b7f6404dfc1a6f5d20"
+    },
+    {
+      "id": "SEA-G033-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "同样代词没有选中状态，缺申请号",
+      "source_row_sha256": "561dad9ea52a91f422cba3f3dc73e3cdc999fba5531b438935e9a60e3c32eb91"
+    },
+    {
+      "id": "SEA-G033-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "正文310744明确，产品名可查",
+      "source_row_sha256": "7c8f8af563673e806daf4aefe738264e5062421423050cfa3e429bb3f2ee2cca"
+    },
+    {
+      "id": "SEA-G033-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "注销账户属未实现业务，不能关闭聊天代替",
+      "source_row_sha256": "1882a5f4f6b8cb99306c6da1de6b92242ebc233dc27573eaa4acf547542b3dd6"
+    },
+    {
+      "id": "SEA-G034-1",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "用户已给金额期数且明确不要刷新，只解释字段",
+      "source_row_sha256": "2f765640f68aaee8973268cd7fa9535a0cffaa609e8257d4f5418c936fcf9410"
+    },
+    {
+      "id": "SEA-G034-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "明确要求刷新310761的金额期数",
+      "source_row_sha256": "512831e149c4f1fc9218b976e11fe9d517e666fe3325b9d29b3c43bf87ac2c1f"
+    },
+    {
+      "id": "SEA-G034-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "延期办理属未实现写入业务",
+      "source_row_sha256": "6388a29ebe024fe7aea786c9e12288bac4475156e78f4829a159d590dcb54581"
+    },
+    {
+      "id": "SEA-G034-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "无编号无选中项，无法重读单笔",
+      "source_row_sha256": "c8f49936b24d5ecba304dcf339f4003c6d98da7b6c7099f436487b97f4a6b355"
+    },
+    {
+      "id": "SEA-G035-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "9月18号是日期且用户没有申请号",
+      "source_row_sha256": "927de9955508797954174ac12e1f174760f7fe3a3ba441b1b55b131183c3548c"
+    },
+    {
+      "id": "SEA-G035-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "明确区分日期与310778，参数应取编号",
+      "source_row_sha256": "3fcced9c7e1e8f3c08dfdf14fd4f223efa1c42843683624367280ea6ba3310de"
+    },
+    {
+      "id": "SEA-G035-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "不指定单笔而要求本人最近列表",
+      "source_row_sha256": "d76ef49383fc2b744292f32e57bdf5a1286ed5001aa56ab4191e08894f55b38c"
+    },
+    {
+      "id": "SEA-G035-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "列表不含时间字段，不能确认日期归属",
+      "source_row_sha256": "005cd9e9f75536c56c7fe3565a4bd5173487687947859d7da052f9e8bbe6cd0b"
+    },
+    {
+      "id": "SEA-G036-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "本人310795明确且用途可读",
+      "source_row_sha256": "035b8e48475bf37a75d7ea4ec697e7b6512a35777ddb7510cc1af946a6316b69"
+    },
+    {
+      "id": "SEA-G036-2",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "要求跳过授权查询同行贷款，属越权",
+      "source_row_sha256": "50f505a6efcf4bdb1fdaea0c394cb2a31545b5c8d6694c1327a34b7e62375b6c"
+    },
+    {
+      "id": "SEA-G036-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "怀疑访问泄漏且明确转人工调查",
+      "source_row_sha256": "8caf972e750e3ba59ec5e3f9558bda07cab710e6fe9ed0c29fa6c0bdf4d4c98a"
+    },
+    {
+      "id": "SEA-G036-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "明确举报引用内容，不是实施越权请求",
+      "source_row_sha256": "84fadb1a923d723c0601ea177bafbd3fd53783c83a58ca53433db206420193c9"
+    },
+    {
+      "id": "SEA-G037-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "目录产品标签可查",
+      "source_row_sha256": "dc75360eccbe507a24b54de88b3fc44ce7f4495fd06eed94a21908f88f651f86"
+    },
+    {
+      "id": "SEA-G037-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "仅问目录是否含实际合同利率，说明无字段",
+      "source_row_sha256": "d6841bc4296e431b46284f422252c20343de727cbee745d65cbbeeb5b2aa22ad"
+    },
+    {
+      "id": "SEA-G037-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "要求实际获取个人已签合同利率，需人工",
+      "source_row_sha256": "7641d400eaaeebe6b2f070d44473a186c67dd20ba39ed827652b3f95ead68c53"
+    },
+    {
+      "id": "SEA-G037-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "单笔用途没有选定记录或编号",
+      "source_row_sha256": "60e65fa3f0864845d5d1c5493ca6f9b764b073443399dcbf683eb823442c8547"
+    },
+    {
+      "id": "SEA-G038-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "状态码0明确且要求静态解释",
+      "source_row_sha256": "95b06fd3ce6564de98032470da3df01fa8dda0d3915f8808381a836b0b824061"
+    },
+    {
+      "id": "SEA-G038-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "310827唯一，记录状态可读",
+      "source_row_sha256": "0f2c993d6a75feab0bfae87d145576f0ed23836c245b1e3d39daa6f5a097af74"
+    },
+    {
+      "id": "SEA-G038-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "询问状态码本身是否包含拒贷原因，解释不包含",
+      "source_row_sha256": "886da482ccbc839b2fd82aa8fcfcb6b0dafcdaa63d79d30e480a057c157a6b78"
+    },
+    {
+      "id": "SEA-G038-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "具体拒贷原因查询超出现有详情且明确人工",
+      "source_row_sha256": "c1ab5dd47f312f1d67a8d953c56be5254edb37cb0ab1ebbc086b3dacc754a744"
+    },
+    {
+      "id": "SEA-G039-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "2是水枪数量，未给状态码",
+      "source_row_sha256": "c5e1adec0e39ed6dab1acd1ccb0d1237ef7120afab8f021b17c044905c88c245"
+    },
+    {
+      "id": "SEA-G039-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "正文明确状态码2，数量不能干扰参数",
+      "source_row_sha256": "64de2c78b2438f969b3bf95df79d8cc9132b2944ac1586d155b6c62781ccb3fa"
+    },
+    {
+      "id": "SEA-G039-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "310844明确，查询本人状态",
+      "source_row_sha256": "4f686a29a7cf84bd8c87e7694537e3d4b8ea930f1d30cf4e22d0fc585cbd3f11"
+    },
+    {
+      "id": "SEA-G039-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "商品数量不能充当审批状态，直接解释",
+      "source_row_sha256": "576c2a1a68df4699268c7a4868dbb2d5217febc560224b5d1bd3633c1164d8ec"
+    },
+    {
+      "id": "SEA-G040-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "用户明确要本人列表找编号",
+      "source_row_sha256": "b0893ed5dee335ccf1a5437da17d0fc9409173f817940c2be1480feee7275d80"
+    },
+    {
+      "id": "SEA-G040-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "310861已知，产品名称应查明细",
+      "source_row_sha256": "2b552bc79ec00bc97059c692aa8011a412d769cdbd36da7e8b852f5f16c71c8e"
+    },
+    {
+      "id": "SEA-G040-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "取消贷款申请为未实现写入业务",
+      "source_row_sha256": "6d40eec0265209b006165a147dce4f6daa36cbe95073d16821f81a901ee046a5"
+    },
+    {
+      "id": "SEA-G040-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "无正式规则不能保证取消订单自动取消贷款",
+      "source_row_sha256": "349c95612fdef3270f400b0903f3e4351d45e11ba1877f7141f78229daab0bb9"
+    },
+    {
+      "id": "SEA-G041-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "信用评分及建议额度均为已存字段",
+      "source_row_sha256": "5ae6a7a785a2fae3616b8cb610b76a958dc89cc7d68dd5a912adfb03a16def06"
+    },
+    {
+      "id": "SEA-G041-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "建议额度异议要求人工核对更正",
+      "source_row_sha256": "8df09c6e5b51b37e76a4ee8a962068ad85e46e9e684f04db57a7a614ff617af2"
+    },
+    {
+      "id": "SEA-G041-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "空值不等于零分且不能据此拒绝",
+      "source_row_sha256": "973ed9f869edad3e7801ff31611a9fee8592696b09b194b1ae6362b9e1e97cf6"
+    },
+    {
+      "id": "SEA-G041-4",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "现售目录参考分受支持",
+      "source_row_sha256": "434f028ffce65022fc8603a416e1eeceaa30a57ad5c9aab5b818d54b6af85588"
+    },
+    {
+      "id": "SEA-G042-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "换成310893配合选中310892可解析纠正",
+      "source_row_sha256": "96dd2bdaeb227666f867bd43fd7cd40afb3a61eb98863889d69ca07bec1b5206"
+    },
+    {
+      "id": "SEA-G042-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "两个候选编号并存且未确定，须追问",
+      "source_row_sha256": "a546985c7a0120dc0023b1bd27d92fb10da39ccb76fa2d6392698f206fe19c10"
+    },
+    {
+      "id": "SEA-G042-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "明确310893且只读取用途",
+      "source_row_sha256": "cd1c63685e2e5ea3b1d3c50bee792c0a1fbc321293a8d0c2fd41eac121cd3ed1"
+    },
+    {
+      "id": "SEA-G042-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "要求人工修改保存用途",
+      "source_row_sha256": "d8412bb63a4399631e8528997b6e916002b75adaaca544ed82a37f3c77db1008"
+    },
+    {
+      "id": "SEA-G043-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "正常能力下读取本人建议额度可用",
+      "source_row_sha256": "1899ee2ab4236d1da8e2699c900bc56aa602fea756cbe93e236cf38eee1d83a1"
+    },
+    {
+      "id": "SEA-G043-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "白名单无信用工具，实际本人查询需人工",
+      "source_row_sha256": "fe8c02726e677ee10be311bd176a9baf4d74c4e5cdefc152a05fbf262b70b178"
+    },
+    {
+      "id": "SEA-G043-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "仅询问缺信用工具时的读取能力",
+      "source_row_sha256": "e68f132c153af584430a2761251f8fe0f49dc135d6b811ab0557795a119e17d1"
+    },
+    {
+      "id": "SEA-G043-4",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "可用列表含目录工具且用户请求目录",
+      "source_row_sha256": "aa7942d1af9d6fae71e8c44d89dd2552754640967c78a6cf66638b28401f12b2"
+    },
+    {
+      "id": "SEA-G044-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "310927明确，期数是详情字段",
+      "source_row_sha256": "b673c008d993d4462788cb0d5192f9000f58d9766945cd0652f860632540794c"
+    },
+    {
+      "id": "SEA-G044-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "只有列表工具无法取得单笔期数，应人工",
+      "source_row_sha256": "830790f0493133294b34a719e0dff51cd4725448066795d43522888ba34d7a5e"
+    },
+    {
+      "id": "SEA-G044-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "询问列表是否提供期数，说明不含该字段",
+      "source_row_sha256": "d389d4ae4468b770cc04f60b041161525d23f7b36479bb52904321f75f966165"
+    },
+    {
+      "id": "SEA-G044-4",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "只读本人编号列表且工具可用",
+      "source_row_sha256": "e68e69021bc872046456dfa6c2254d90cd91814a3bf3322ace76030d083c45b4"
+    },
+    {
+      "id": "SEA-G045-1",
+      "reviewed_action": "tool",
+      "decision": "quarantine",
+      "reason": "默认可用工具支持查询上架产品名称。本条动作可成立，但同组SEA-G045-2存在标签分歧，按整组隔离要求暂不接纳。",
+      "source_row_sha256": "182127573cf696d573b5e498a6519532211d81ccce6db0f827a237411e11da30"
+    },
+    {
+      "id": "SEA-G045-2",
+      "reviewed_action": "human",
+      "decision": "revise",
+      "reason": "空工具表下请求公开产品目录，既非个人业务也未明确要求人工；应说明查询能力限制，human缺乏策略依据",
+      "source_row_sha256": "b5b08869a31234f30a3b9dbbe4c7be98487ce1cd41eba095d5172837b08d40c4",
+      "suggested_action": "answer"
+    },
+    {
+      "id": "SEA-G045-3",
+      "reviewed_action": "answer",
+      "decision": "quarantine",
+      "reason": "明确询问空工具表能否查询目录。本条动作可成立，但同组SEA-G045-2存在标签分歧，按整组隔离要求暂不接纳。",
+      "source_row_sha256": "8b199929e1a0089d297c2a27a5a5f0679214575d6a2a19d36278f5ffcb4cb4ec"
+    },
+    {
+      "id": "SEA-G045-4",
+      "reviewed_action": "clarify",
+      "decision": "quarantine",
+      "reason": "未登录即使工具列出也不可调用目录。本条动作可成立，但同组SEA-G045-2存在标签分歧，按整组隔离要求暂不接纳。",
+      "source_row_sha256": "8fb445880e749522748e44bc47979184a702ab4ddcb47b81bc09d5f33e647401"
+    },
+    {
+      "id": "SEA-G046-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "310959明确，读取申请金额受支持",
+      "source_row_sha256": "47b70ebb25bd82ddaef2736b2889c5e600c84d2ae384a356f126d314537ae492"
+    },
+    {
+      "id": "SEA-G046-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "提交真实发票附件需要人工处理",
+      "source_row_sha256": "d6354a997d55e0904ba4e6244529924a661342eeeddf095b87c5a83756472ebd"
+    },
+    {
+      "id": "SEA-G046-3",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "要求伪造真发票以欺骗审核，应拒绝",
+      "source_row_sha256": "66de88d63e188e71ab1ae1533bc4709a5ceda1827c9383c16fbe867ec3f170ed"
+    },
+    {
+      "id": "SEA-G046-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "明确不交假票，只问真实材料上传能力",
+      "source_row_sha256": "2744716c4a9e5205a8ad43d2951f6169d53ae41f144e4f64ffe8967fcfe535a7"
+    },
+    {
+      "id": "SEA-G047-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "明确状态码1且解释工具默认可用",
+      "source_row_sha256": "ff82355a15a6f6dc13eae45eb6f7b61e295f016914f1355db64e5cb15e4fbc40"
+    },
+    {
+      "id": "SEA-G047-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "已给1为已通过，只确认不等于到账，无须工具",
+      "source_row_sha256": "fbce158f8d2052a396811fbed0281f583af6c432f833ef9676ac949056b849a9"
+    },
+    {
+      "id": "SEA-G047-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "无任何工具却要求个人明细状态，人工处理",
+      "source_row_sha256": "979b4fd6af46a12d9e78ca9583fdeaa0766edce6fedad14026ac3a9479d90756"
+    },
+    {
+      "id": "SEA-G047-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "询问无工具时读取明细的能力",
+      "source_row_sha256": "51cb0f6cb52fb33020ebdd723ec39cce15e3f9f9de2036c2a0be8178c8418e55"
+    },
+    {
+      "id": "SEA-G048-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "已认证且311018明确，用途字段受支持",
+      "source_row_sha256": "193647238409489ca654e7e649fcc48a1e4707e6b873b652e6e16740a019f45f"
+    },
+    {
+      "id": "SEA-G048-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "同查询未认证，先补认证",
+      "source_row_sha256": "4125dee03cca29f0bed51de2f9fef632c40267f9bf0a0be96a7fb41a5c3ea9de"
+    },
+    {
+      "id": "SEA-G048-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "未登录但明确人工办理注销，登录不创造注销工具",
+      "source_row_sha256": "1f9b9bb5ba8008499b654216a2607c8a19cb0f2346ba96b9451eebdf41db357a"
+    },
+    {
+      "id": "SEA-G048-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只是询问未登录读取能力，不实际查询",
+      "source_row_sha256": "33a71b24e132826833e15687440a8e00fb133d6043d7ea8591e5629cd430dc2e"
+    },
+    {
+      "id": "SEA-G049-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "上架名称参考分可查",
+      "source_row_sha256": "2db9fae974172e4c0264ba8fd2e99bfd5b3d4c15d8b60a5748e11130f86a9285"
+    },
+    {
+      "id": "SEA-G049-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "本人已存评分可查且不承诺审批",
+      "source_row_sha256": "53ea6a3cc6534ce1bb7df1ff7529af8875970db79b59df1732d07bca8245e0ba"
+    },
+    {
+      "id": "SEA-G049-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际新申请提交无工具可执行",
+      "source_row_sha256": "cd8412ad1a16c0457397c33d488259609014c1c18b9048fee05a1630c811b73a"
+    },
+    {
+      "id": "SEA-G049-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "两类分数满足也不能保证批准，解释即可",
+      "source_row_sha256": "95dd1862ed876c281786ed74e0c83930439e2eb5e9425d2acf45f1a4d31d17dd"
+    },
+    {
+      "id": "SEA-G050-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "311049金额读取是现有能力",
+      "source_row_sha256": "b095c81f564d0b2ff896003bc21aa27fd9c45d67f33b53fddd81533245ad249a"
+    },
+    {
+      "id": "SEA-G050-2",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "明确问题全部解决并结束，无遗留事项",
+      "source_row_sha256": "01fe21612390724a42c7fc580fc1a80ceb444fe0ca1ce0b266887cbf6fc1bd5d"
+    },
+    {
+      "id": "SEA-G050-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "谢谢之后仍要求人工结清，不能close",
+      "source_row_sha256": "48bc808c1aea5f0975a6cae25ce2c074ef4f4ebe41b732d51b10344e7341376f"
+    },
+    {
+      "id": "SEA-G050-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "谢谢之后仍查用途但没有编号或选中",
+      "source_row_sha256": "464fbc21164b1dafde3f5bf502b44779179fad4e83db023898d1b3244ee571f8"
+    },
+    {
+      "id": "SEA-G051-1",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "无正式库且费率未知，应说明限制",
+      "source_row_sha256": "720072c1e4d6b6b42b203bbcdaf21ba1e87904c86fe1e5417a522de01e21be65"
+    },
+    {
+      "id": "SEA-G051-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "311066明确，仅读取已存金额",
+      "source_row_sha256": "6d817231906522cd70432039493e3b2a13c249c9e7bf04b32e4235ba638f9c57"
+    },
+    {
+      "id": "SEA-G051-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "费用争议明确要求人工申诉",
+      "source_row_sha256": "009143d63ed83067297024c8b16fc0b5326054d5a6b2af922d741c4849323766"
+    },
+    {
+      "id": "SEA-G051-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "未给记录号且未选中，单笔金额须补槽",
+      "source_row_sha256": "07988721d30255e830e15601a01f229fe9eef74c9228f18e375c471c01051cf2"
+    },
+    {
+      "id": "SEA-G052-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "明确状态码2，只讲静态含义",
+      "source_row_sha256": "f1d4fb83123e64055488c804f06db24ef488e0429b3e946ac5336b54a335d0cf"
+    },
+    {
+      "id": "SEA-G052-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "待审批不支持编造精确出结果时点",
+      "source_row_sha256": "ee5bd2d4ba5c32d97db8875a95e6a1a270f90f0d51d415aa10122f4ca0439c96"
+    },
+    {
+      "id": "SEA-G052-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "印厂催款背景下明确转人工处理催审",
+      "source_row_sha256": "eb90a5413435e805d0b25b5abfd6b84ab417168589be4d5e7c6839e01e420b4a"
+    },
+    {
+      "id": "SEA-G052-4",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "311082明确，读取当前保存状态",
+      "source_row_sha256": "2f448f367ae1712ca6a6df92a5adf919abdbd1b711060a0f4941857350063287"
+    },
+    {
+      "id": "SEA-G053-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "目录名称额度上限可读",
+      "source_row_sha256": "344b2509bd1598f14cc2dba726662ff6f2ff19a8e2bc868be5978d0b9934280b"
+    },
+    {
+      "id": "SEA-G053-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "50项上限不保证覆盖全部目录",
+      "source_row_sha256": "608343d90468941b38a028056e8234e68b2f067b2b968d2560f96bad6bb38f12"
+    },
+    {
+      "id": "SEA-G053-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "明确请求人工取得未覆盖的完整产品记录",
+      "source_row_sha256": "826382a986bb14c15670f3b4b5d5dc58a74b3fe9b00726dd8220c6e82d2d3e7e"
+    },
+    {
+      "id": "SEA-G053-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "业务意图尚未说明，先澄清查或申请",
+      "source_row_sha256": "697bc9f5ec256a88231f8206fae5262bd555826d74a397fd0a55d73cad263ac0"
+    },
+    {
+      "id": "SEA-G054-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "311116明确且读取已存用途",
+      "source_row_sha256": "73c132b421d6f0ba5d104eed8935417d1fbdba676066e919a20ecd84ee537628"
+    },
+    {
+      "id": "SEA-G054-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "更正保存真实用途属合法写入业务",
+      "source_row_sha256": "24cc91e011b08cbf0e9b8b589e1f9adc9b93148cfbe927dc1503338052174dcc"
+    },
+    {
+      "id": "SEA-G054-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只问只读工具能否保存更正，直接说明",
+      "source_row_sha256": "9742382df4a26b3341d02d98cef26cf67f432b69a1b32f933e0b715152045b35"
+    },
+    {
+      "id": "SEA-G054-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "另一笔未给编号且未选择",
+      "source_row_sha256": "debd9bd5f823add9f6b64531ec85db2cb6bfb9795eb603c56d2b3ee08e6718f8"
+    },
+    {
+      "id": "SEA-G055-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "本人已有评分可查",
+      "source_row_sha256": "40121c9322d749a8d5b6db074462dd32540c6293d11a137c96ca01f0f4a0cb55"
+    },
+    {
+      "id": "SEA-G055-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "已存分不能称今天实时重新计算的分",
+      "source_row_sha256": "9dfb5df7d43e2d9d26989b5aa8b660b898886247d77e8611d5050e5b773cde32"
+    },
+    {
+      "id": "SEA-G055-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "明确要求人工复核收入与评分",
+      "source_row_sha256": "48267cfe90542097112b215a52b91968ed52be83e45d201e8e3599b31325abe1"
+    },
+    {
+      "id": "SEA-G055-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "已经退出账户，读取本人评分先认证",
+      "source_row_sha256": "ee45d613a8440c52f5236d17efc3f4e0c97f8a01d16dee79b299cab8e0b85d9c"
+    },
+    {
+      "id": "SEA-G056-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "311150.5不是合法正整数编号，须确认",
+      "source_row_sha256": "7489158f35a377803ab3c43c5faf6e9434f4a23ba73e286b3b49dc60328893a0"
+    },
+    {
+      "id": "SEA-G056-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "纠正后311150明确，读取金额",
+      "source_row_sha256": "4ddec9beb4d558d847e1a20f51dd30bea855d0dce7c28da84e15d8b1afeec515"
+    },
+    {
+      "id": "SEA-G056-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "编号出错后明确要本人列表",
+      "source_row_sha256": "570ec753d835d90f96ac4689669e3ff99ac7146030214965486e3f1de022dd55"
+    },
+    {
+      "id": "SEA-G056-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "不能私自截去小数猜编号，解释即可",
+      "source_row_sha256": "8e7b6aa34e3d956b4949c990f363b10e3f5d08b636be8fb109c1c8ea7398f5be"
+    },
+    {
+      "id": "SEA-G057-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "申请编号0无效，不能调用明细",
+      "source_row_sha256": "93111ac97bc79f71005cce71d10159996a46d4089a477d4693180bb1407ce449"
+    },
+    {
+      "id": "SEA-G057-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "311167明确且读取用途",
+      "source_row_sha256": "bf9b11e8de2ab9da9b2c45e99c8e1456b3baafc5cd95979ba460bb77ef2559b0"
+    },
+    {
+      "id": "SEA-G057-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际变更收货地址超出只读能力",
+      "source_row_sha256": "3b8f827c0588b67d445c598d8b6cbfa442c32c5dcc938ab80602c05e75302e8b"
+    },
+    {
+      "id": "SEA-G057-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "仅询问地址修改能力",
+      "source_row_sha256": "dd46d9ef3a9ea8ea5e48ee475babd4964381b9cf14e47354cc8f44eb9bc5953d"
+    },
+    {
+      "id": "SEA-G058-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "状态码7不在支持枚举内，须确认",
+      "source_row_sha256": "39c4c3b96d5a29202109560e5618ca7f3fd95a49eaf3c9f6453db019580843db"
+    },
+    {
+      "id": "SEA-G058-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "纠正后状态码1唯一有效",
+      "source_row_sha256": "5fc6241abbc05724600dbca87856c084eb41a5fe7c219c27f2770d9e31b0980e"
+    },
+    {
+      "id": "SEA-G058-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "311184明确且读取本人记录状态",
+      "source_row_sha256": "e462309b6342c6d83b50eeb6dfd332be54852d7c1af890ef95bc69c1d540b628"
+    },
+    {
+      "id": "SEA-G058-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "未知7不能照搬1的含义",
+      "source_row_sha256": "0d164b1b6dc188d9830773c95c06c24285e80221f53798723915920f46a70576"
+    },
+    {
+      "id": "SEA-G059-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "状态码1.5无效，不能截断或猜测",
+      "source_row_sha256": "f6325dc140aa33f2f8926531e1db2a4e4fff45aaa57660da835dff68af24cd06"
+    },
+    {
+      "id": "SEA-G059-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "真实状态码0明确且受支持",
+      "source_row_sha256": "a3eaa12fc7e79aece727b65d6b94f9b749c43c9cb26d16816ff77237e903d20c"
+    },
+    {
+      "id": "SEA-G059-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "明确请求人工调查错误材料使用",
+      "source_row_sha256": "84a66f3c8303806b72bc1980d6cc038ecb7ab2f4b7163b8c6013c328f2f016df"
+    },
+    {
+      "id": "SEA-G059-4",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "311201明确，状态用途为详情字段",
+      "source_row_sha256": "4d8dca7c2864b0311bbb1f63174b70dd1a1c4e2fab5a36765eb97243b10cef8a"
+    },
+    {
+      "id": "SEA-G060-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "两个申请号且未确定哪笔，须确认",
+      "source_row_sha256": "c1fb047ff1bc95d28cdcef5084e4c709ce393f3fba30bc1a6e3883630ff4ed51"
+    },
+    {
+      "id": "SEA-G060-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "311219唯一且期数可查",
+      "source_row_sha256": "8e39e26553e1af80438a9421d060f9fefb60ab7162d034b42e68ffb6d29b25b0"
+    },
+    {
+      "id": "SEA-G060-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "本人近期申请列表可用于自查",
+      "source_row_sha256": "f71a1161fd8c94ee4259cae592f02c0118068c1a50be893f84fa67843d63f673"
+    },
+    {
+      "id": "SEA-G060-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "关闭两笔业务申请属于撤销办理而非结束咨询",
+      "source_row_sha256": "253185546f64b7dbe137e0d4fe22301515f048995c2419fa9221281df67af727"
+    },
+    {
+      "id": "SEA-G061-1",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "已知金额字段只需解释口径，不用刷新",
+      "source_row_sha256": "a92b5421fac9f590646f01367a2b43358dc444c911cde9411299b57f2fef44a5"
+    },
+    {
+      "id": "SEA-G061-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "311236明确且要求重读金额",
+      "source_row_sha256": "a9e85b2af89c1416f3d01109c5ed9cd4f799ea43086db4441f73aae121ff8b05"
+    },
+    {
+      "id": "SEA-G061-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "另一笔未指明，无法确定明细参数",
+      "source_row_sha256": "56da3f41ae1dd09447802c42b9664d20d9902f5aeef5ffce4e3f88ede1b835d8"
+    },
+    {
+      "id": "SEA-G061-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "真实采购金额纠错明确需人工修改",
+      "source_row_sha256": "5a9bd2aed8d0ef01398651d1580fca0d8424509d30da91379dadb173ef626eb2"
+    },
+    {
+      "id": "SEA-G062-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "本人已存建议额度可查",
+      "source_row_sha256": "f1d3c22a83b8235dfc370c14db1f33fcaee7a265a6d61aa3b737d453bf0ec33a"
+    },
+    {
+      "id": "SEA-G062-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际提交临时提额不在只读能力",
+      "source_row_sha256": "f4bbd36fa2a09165d4961a54d9fe0d6a0231a0feb7c1da8414def68c10601df6"
+    },
+    {
+      "id": "SEA-G062-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只问查询是否包含实际提额，说明不包含",
+      "source_row_sha256": "3a0e27eaf068f483a56b2fee07010cde064d45022f7d221ed4def7534b55fb1a"
+    },
+    {
+      "id": "SEA-G062-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "未登录请求个人额度，先认证",
+      "source_row_sha256": "f11fc552e278cea6dddb9b89b59d2e6a99df8fe596f1bcc6e695d8223d6ea3e9"
+    },
+    {
+      "id": "SEA-G063-1",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "虽编号明确仍显式要求转人工，人工优先",
+      "source_row_sha256": "78c9990883ff942d5e8b160405e30ae4f266cf0703f803d7067739ed5dc3f72a"
+    },
+    {
+      "id": "SEA-G063-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "明确撤回人工意图而只用明细查311270状态",
+      "source_row_sha256": "6c042aff3130c1dbc56fb5d667869729a4d274e08402b96302ab695c3b87c643"
+    },
+    {
+      "id": "SEA-G063-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "尚未接通不能声称人工受理",
+      "source_row_sha256": "35eacc287ed231324ff669a55d693cd56c9169a7f235366887e26d417a3d4be2"
+    },
+    {
+      "id": "SEA-G063-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "明确已处理完且不用转接或继续查询",
+      "source_row_sha256": "298adbef5ed8b48b3274c4713cb44c3a2bd423991274d03d467ef23686a59710"
+    },
+    {
+      "id": "SEA-G064-1",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "无正式知识集合，未知逾期规则不应编造",
+      "source_row_sha256": "d05d78b81926927aa1b5b05445cde7495458615905b52aa21ec53977db0b3253"
+    },
+    {
+      "id": "SEA-G064-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "个人费用异议明确人工受理",
+      "source_row_sha256": "4c57a75a56b4b9d3f2a201f928c27e5b0b179a3ddd4cc8164b6daa5bde7d2134"
+    },
+    {
+      "id": "SEA-G064-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "311287金额期数可读",
+      "source_row_sha256": "84a01623603ee0703bbf73bd8c939998a0f8d63cbe76be50397373f69643f080"
+    },
+    {
+      "id": "SEA-G064-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "金额期数不足以确定合同逾期费率",
+      "source_row_sha256": "8fc06a703f3d01be539457ced9a80283ac776ed2be1a29937455055f17d7a4e3"
+    },
+    {
+      "id": "SEA-G065-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "纸条内容没有输入，缺可见申请编号",
+      "source_row_sha256": "e0ed4f6d152ea200d35460680211daf6ac6e0147949529b43567ccb23a1040be"
+    },
+    {
+      "id": "SEA-G065-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "手工提供311304，用途可读",
+      "source_row_sha256": "101be7cb5efe246b17dce5c5938e6aebd8317312e30a0e5992502ca3bbed441c"
+    },
+    {
+      "id": "SEA-G065-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "纸条不在时明确要求本人近期列表",
+      "source_row_sha256": "206208a3c7de8a837140946eeb88c6b9938c549920580c267de03b6c9c2754c4"
+    },
+    {
+      "id": "SEA-G065-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "不能从纸条存在这一说法读取未提供数字",
+      "source_row_sha256": "14a82910dc7e7ce662e47cfe2d2e189b88c059084b961e9e56276b95c97dc869"
+    },
+    {
+      "id": "SEA-G066-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "负号编号不符合正整数范围，需确认",
+      "source_row_sha256": "ccd7237b1cc99755402d959943bdc8dff243c2fe4e3e7bfb59e4f14a3c81f8c5"
+    },
+    {
+      "id": "SEA-G066-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "纠正311321明确，读取用途",
+      "source_row_sha256": "7ed2d48aad77eab8904afed731d3b342576d6127e308ad9f36c9cbea8b45af62"
+    },
+    {
+      "id": "SEA-G066-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际变更联系电话没有工具",
+      "source_row_sha256": "d203ff13a9971c64e2dfb04ec26728b528161f6f621d7c5bef53cf7da99671eb"
+    },
+    {
+      "id": "SEA-G066-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "仅问只读查询能否改电话",
+      "source_row_sha256": "792a81ff4ae7d6cec99f6897f55c6441b0ab5103ac1cb9dd014c2fd184eb5efe"
+    },
+    {
+      "id": "SEA-G067-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "0和1都出现但未选一个，需澄清",
+      "source_row_sha256": "6bb634be5136ce1fd10c6296411c8c2068798402415f1b9d962809ae85885885"
+    },
+    {
+      "id": "SEA-G067-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "明确选择状态码0",
+      "source_row_sha256": "1b5bf543fda4548ff1db7b2c2053ca9b0f492ebdea835b9fdd9788bf8ec97215"
+    },
+    {
+      "id": "SEA-G067-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "311338明确定向本人申请状态",
+      "source_row_sha256": "eb7daa1ecda128d3767e7fd90ec8b759f92442aa6324b01d1afd7d163aa2f6a6"
+    },
+    {
+      "id": "SEA-G067-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "怀疑展示错误并明确人工排查",
+      "source_row_sha256": "f0465b46690c43ce76499ba92e12934e6104dd5ec66a9bdf248df0eb5d06f3f7"
+    },
+    {
+      "id": "SEA-G068-1",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "转述未照做的造假广告，解释承诺风险",
+      "source_row_sha256": "97cf1002b2e5e39b9d054dae5d330958dce33b0b868882e88b07fb34b155f830"
+    },
+    {
+      "id": "SEA-G068-2",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "实际篡高收入凭证欺骗审批",
+      "source_row_sha256": "c1d12fd7992f047a11748cdfe21282b7792d9ebc72e7a02f1914fa504fb9f364"
+    },
+    {
+      "id": "SEA-G068-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "明确请求人工举报诱导造假广告",
+      "source_row_sha256": "5e13fb0a248302d22b66c5c859fe33851f7efbede2ff329ca16ecfd2fd0890dc"
+    },
+    {
+      "id": "SEA-G068-4",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "本人真实已存信用评分可查",
+      "source_row_sha256": "d2d53313efb517a6af0c3b36faa7ad29beba4b32c62491073ed5dec39d27b179"
+    },
+    {
+      "id": "SEA-G069-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "名称标签参考分均在产品目录范围",
+      "source_row_sha256": "eb1ff862582c998d800300d40f895b96e01f60cc379962b857ba7323b913c309"
+    },
+    {
+      "id": "SEA-G069-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "标签不能代替正式合同用途限制条款",
+      "source_row_sha256": "dd08156db0df1f88af30d5e50595c7725bb68346c09b3ff56a452c98bc47755b"
+    },
+    {
+      "id": "SEA-G069-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "调取已签个人合同条款超出现有工具",
+      "source_row_sha256": "47ebbdba498a3ec41fa70f635c6135dd321d7fb6f8081989519b8b670ff499de"
+    },
+    {
+      "id": "SEA-G069-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "本人单笔用途未知编号且无选中状态",
+      "source_row_sha256": "a6083e5d38f7d9d296a3fb1d02a3c48b83c448e85eb618d5605eac88e13030a6"
+    },
+    {
+      "id": "SEA-G070-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "311389明确，产品名称在明细里",
+      "source_row_sha256": "b2759ec9119aafa97444d23df9e3aa7693c148de2add02cb0eb8f5133fb34622"
+    },
+    {
+      "id": "SEA-G070-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际变更借款人是未实现个人业务",
+      "source_row_sha256": "4311ce2631c79cae3c924fa8131706de89d51bd046fd76595dd53e21ad701b29"
+    },
+    {
+      "id": "SEA-G070-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只问只读能力能否变更借款人",
+      "source_row_sha256": "64202390f5e809e935556a788f419cf7c29ac161875d8df698acdfc6163c78b7"
+    },
+    {
+      "id": "SEA-G070-4",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "对方不知情仍要求用其身份借款",
+      "source_row_sha256": "ce8d8eb49d293c2e5a03f25937e0218c31c04d6748bf686e8284310f6ac5deaa"
+    },
+    {
+      "id": "SEA-G071-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "本人最近申请金额编号可查",
+      "source_row_sha256": "b1248eea011f4f7d8a97f1638435a7bc4d6eebbe4d49452522316a2a54201007"
+    },
+    {
+      "id": "SEA-G071-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "列表中未选哪笔，明细参数缺失",
+      "source_row_sha256": "f46b0d56a1320ee3866d4549de828d8a716a70ed454924fd39d55fbeffcec1ee"
+    },
+    {
+      "id": "SEA-G071-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "311423明确，期数用途受支持",
+      "source_row_sha256": "e3c2b2bf86ed102350c3cc1500395be7f303e551fa12689e2c0318be935a0c7e"
+    },
+    {
+      "id": "SEA-G071-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "询问缺期数时是否可移用另一笔字段，应说明不能移用",
+      "source_row_sha256": "2db975f5a7c74a06ea4dc1cf81e0f5cd101255163ee693d9d70d05dd2e624574"
+    },
+    {
+      "id": "SEA-G072-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "已退出登录，即便编号明确也先认证",
+      "source_row_sha256": "ad5aad8dbd163a64dd3456e43bd9460383c785ec61e9b640f842ebf80150eb38"
+    },
+    {
+      "id": "SEA-G072-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "可信认证为真且311440明确，金额可查",
+      "source_row_sha256": "f140a139a3e59102d24cec35ac15aef5350092e0b74f094ec19845ae3a3bbdb0"
+    },
+    {
+      "id": "SEA-G072-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "修改紧急联系人属于写入业务",
+      "source_row_sha256": "f95fea6e9e144d49241a2e6a18c13042eabf6f6613da614e969873a8491b4613"
+    },
+    {
+      "id": "SEA-G072-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只问自称本人是否替代认证，解释边界",
+      "source_row_sha256": "9f1dda79c8519b25761f0e4f68dd49b0d76e991e1d707ac8764e0b83b5e786c6"
+    },
+    {
+      "id": "SEA-G073-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "已存本人信用档位可查",
+      "source_row_sha256": "5a015c58cb02d8c168181829f1818cf923509519bc6ae9e8143898b2053977ab"
+    },
+    {
+      "id": "SEA-G073-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "本地保存记录不代表刚查外部征信",
+      "source_row_sha256": "2eaf7b7bc7f0889cb963c543fc1c6b1457d52c5a5bdcf88a572217d779344670"
+    },
+    {
+      "id": "SEA-G073-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "明确要求人工协助更正相关征信错误",
+      "source_row_sha256": "1ccfc02f3dbb0b3ab8df920a64b959b1c6a7ff9b82eac21c3279fe96feef5ab9"
+    },
+    {
+      "id": "SEA-G073-4",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "要求隐藏逾期以规避征信审核",
+      "source_row_sha256": "86470f0fe5b7fd62e380db24e08f385cc0901cef7cc7948b0d376fdb089ed1ce"
+    },
+    {
+      "id": "SEA-G074-1",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "明确全部解决且无待办要求结束",
+      "source_row_sha256": "e8490aad095d146224e9c51ef5a2f2a7c07acac158a27665ba19c8648e56e6f3"
+    },
+    {
+      "id": "SEA-G074-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "谢谢之后仍要求查311474期数，先处理查询",
+      "source_row_sha256": "3a4ff7ec43b83cde370250e2f8dc35659edf6333d5df13f81cacb7236476e8ae"
+    },
+    {
+      "id": "SEA-G074-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "谢谢之后要求取消业务申请，不能关闭聊天",
+      "source_row_sha256": "0a7686a3cf93b218e340e9ed8b4a245227dc28f8c8cfbe0546601a071b8131cb"
+    },
+    {
+      "id": "SEA-G074-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只是解释普通致谢与结束会话的区别",
+      "source_row_sha256": "fc9645bf4c85a3035262e90e160fb30a1380d865f431b962842fb08b3c3c3d93"
+    },
+    {
+      "id": "SEA-G075-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "没有给码值，需状态码",
+      "source_row_sha256": "b66e82f6a586c9c8da8f8998d002ee4823f427035c9204f165ec5940b01dab15"
+    },
+    {
+      "id": "SEA-G075-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "补全唯一有效状态码2",
+      "source_row_sha256": "d2dfc5af9e1bde53a8b3fc4bacb0b9b7dd092094a155d245b678cb8eadfe4df4"
+    },
+    {
+      "id": "SEA-G075-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "待审批不能推出最终一定批准",
+      "source_row_sha256": "b4573a36d8cad89b6f76b5246cc500d9ce214c0c12d0323c1a64bacaa8864202"
+    },
+    {
+      "id": "SEA-G075-4",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "311491明确，读取实际申请状态",
+      "source_row_sha256": "63942e3d7652a55f9cd6c8ab187bf86acb02f870c51aa6627150be40d347d1f5"
+    },
+    {
+      "id": "SEA-G076-1",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "明确绕过归属读取别人申请",
+      "source_row_sha256": "76b47e267ed15bdb87ed44b57e3ed0c2dbc66d8335ae16bc2e935294019c84d7"
+    },
+    {
+      "id": "SEA-G076-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "311508声明本人且正常查询，实际工具仍校验归属",
+      "source_row_sha256": "d1b0e80b18093b1033166ca4af7d32e91f463294cd800d4c73e477e46c66644b"
+    },
+    {
+      "id": "SEA-G076-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "身份冒用举报明确请求人工调查",
+      "source_row_sha256": "9f377f7c012dc9f518949bdb7a636c01f9fdd296369305c77a56f10247612038"
+    },
+    {
+      "id": "SEA-G076-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "仅讨论申请号与身份核验的边界",
+      "source_row_sha256": "c4484c1b7b4354fa85dad1c3e9d53228051bf30c6312607a2c0bb0a5054b9a01"
+    },
+    {
+      "id": "SEA-G077-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "311525明确，期数用途可读",
+      "source_row_sha256": "722e2876c39195067e721efdd936fd0eb2eb56d72a158cb1fb1853acb093c5f5"
+    },
+    {
+      "id": "SEA-G077-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "本人完整合同下载超出现有工具",
+      "source_row_sha256": "78f53a425b1557231c5345d3d85d4c2187a91345fb0b8fb6d55ff270dfaf2d36"
+    },
+    {
+      "id": "SEA-G077-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "详情几个字段不代表完整合同",
+      "source_row_sha256": "c113ecd941afe029c4e60c7470e050463473ef2a636725f605758fbfcd43b6ac"
+    },
+    {
+      "id": "SEA-G077-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "旧申请没有编号且未选中",
+      "source_row_sha256": "d1013b5c25d8384eaab56da224b12d610e44dd01d02978f4604d613409d90b6d"
+    },
+    {
+      "id": "SEA-G078-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "原样带加号状态值不被参数规则接受",
+      "source_row_sha256": "84417a5a2b9cd429f86182232af010d84432632f59746e78770444dfdf60ba09"
+    },
+    {
+      "id": "SEA-G078-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "不带符号的状态码1明确受支持",
+      "source_row_sha256": "c9478fc8e9466a39a4db6f2664ed92c9fc0521952872dbeffecda85df5a10166"
+    },
+    {
+      "id": "SEA-G078-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "311542明确，查询当前保存状态",
+      "source_row_sha256": "624470edc6b94a4d356b172390e6aff47db82df3d98d442856d602b3a193c3b7"
+    },
+    {
+      "id": "SEA-G078-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "静态释义不会刷新本人记录状态",
+      "source_row_sha256": "4822c8862e0a91348287b9e0a5b15aa64fef07fe7752d44a238d2310671d0f7c"
+    },
+    {
+      "id": "SEA-G079-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "明确要本人近期列表找编号",
+      "source_row_sha256": "1237883c15d2523ea9f0a7d4ad199e3fe5dbb5d082c5bd4a0a417d70181404a9"
+    },
+    {
+      "id": "SEA-G079-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "明确人工调取51到100条，列表无分页",
+      "source_row_sha256": "f6720fe6584938a0ec5f39eea61e7eb08d7be4dcc66af94f84de656eede841fc"
+    },
+    {
+      "id": "SEA-G079-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "仅询问当前列表翻页能力",
+      "source_row_sha256": "500eab5a76c171504a6ba0a35df06f861a38150adf7a324ac1814887cc69a596"
+    },
+    {
+      "id": "SEA-G079-4",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "找到311559后可直接查详情",
+      "source_row_sha256": "3a3e0a1f96c5731069a36054bc0451b9d443ddd0fc628ee80eb279f2e246ab03"
+    },
+    {
+      "id": "SEA-G080-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "本人已存建议额度可查",
+      "source_row_sha256": "db1c429941968d927ff3e1707d383908894f9ce0a9a238a4c9b243facdf97080"
+    },
+    {
+      "id": "SEA-G080-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "档位空值不可猜成优质",
+      "source_row_sha256": "7100f9224894fe9cb64623dcef191b28bece9c9d83a3d7cddd82a723ed0df5bc"
+    },
+    {
+      "id": "SEA-G080-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "个人额度资料不符明确请求人工核对",
+      "source_row_sha256": "c465dcf1981abd6f79cdaf3ee34bc4045e3f928262580611997128faefa406b7"
+    },
+    {
+      "id": "SEA-G080-4",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "产品最高金额属于目录字段",
+      "source_row_sha256": "3544a52c9ab9a15951720a948da575de314ad6118643acd433580b3df8f1b925"
+    },
+    {
+      "id": "SEA-G081-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "311593明确，读取用途",
+      "source_row_sha256": "deea8f98f1296f84844f8f1b1cf63ac67c8617ed2f9238cd0b2a62a9f82fda16"
+    },
+    {
+      "id": "SEA-G081-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "无选中状态也无编号，代词无法定位",
+      "source_row_sha256": "804d8384e988428620bce61ef885ead398fb8fe5a20255999a5e705c32fd188a"
+    },
+    {
+      "id": "SEA-G081-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "无知识库且官方条件未知，应说明限制",
+      "source_row_sha256": "dd78aea7e7e6b021de6777dad9272b93e93d3dffa71f44cdc4059f50ee5f9da8"
+    },
+    {
+      "id": "SEA-G081-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "材料退回处理明确要求人工",
+      "source_row_sha256": "20a9a37d11dda8b9cf6a3e876c1587aaf9096d39104a88be7be6106010332a82"
+    },
+    {
+      "id": "SEA-G082-1",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "精确提交时间不在列表或详情，个人调取需人工",
+      "source_row_sha256": "5c3d77d15591ef7025b3c91962e2ae48bc86b07285937c636d37405cbb7f787e"
+    },
+    {
+      "id": "SEA-G082-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "编号排序不能给出提交秒数",
+      "source_row_sha256": "dfbced1b615de5bb12bdf82598e6411fcbbfce50e22d69cde1d081cce29185b0"
+    },
+    {
+      "id": "SEA-G082-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "311610明确且只读现有金额",
+      "source_row_sha256": "dbe7606c8899d78769cc7529417d887cff123f2aa56c62817d89c4dad05d3ede"
+    },
+    {
+      "id": "SEA-G082-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "另一笔未给编号无选中",
+      "source_row_sha256": "cba45002d9f50b4fe7ce07bdb5a1a5e5df90d66540ccde46e7baaae9ecc73517"
+    },
+    {
+      "id": "SEA-G083-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "本人已有信用记录中的建议额度可读",
+      "source_row_sha256": "faba27ea4970258be5698ac29c424391fe99bb24ff68703ee75d3de3af44680d"
+    },
+    {
+      "id": "SEA-G083-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "建议额度空值不能解释为批准零元",
+      "source_row_sha256": "bc776903a9a9868273ec4d72641af11745e138e4b6842765969fe9f9c0509797"
+    },
+    {
+      "id": "SEA-G083-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "真实收入数据变更属未实现写入业务",
+      "source_row_sha256": "d79ebd69c31394261e1dc372f1c2f2840a92c0b1d6fb130d86df2f64ed5e964e"
+    },
+    {
+      "id": "SEA-G083-4",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "不用真实资料直接捏造月收入，拒绝",
+      "source_row_sha256": "5d1e1edb4d4d398bc1a6fde76246710a90b34ea237f443b04170ab3794064a1a"
+    },
+    {
+      "id": "SEA-G084-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "2147483648超出上限，须确认有效编号",
+      "source_row_sha256": "8d758084aa12c3595975651d004c6b15ad9edaa510b4276fb50a26c439e67937"
+    },
+    {
+      "id": "SEA-G084-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "明确纠正311644，可读用途",
+      "source_row_sha256": "b2cc45acb53ff68d847719b7509bff8cb9ffae5b6bc5c1ef9e8f358ecd5a8bd7"
+    },
+    {
+      "id": "SEA-G084-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "本人近期列表找正确号为受支持查询",
+      "source_row_sha256": "9879d39b744c30da610ab4ebce063bb1d912c233cafea98d0346238cc8c8e9ac"
+    },
+    {
+      "id": "SEA-G084-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "不能随意截断超范围编号",
+      "source_row_sha256": "1372734d6b49453eb206946628a91e9c3cdc7e347abaa733c4b2246404af4f46"
+    },
+    {
+      "id": "SEA-G085-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "明确状态码0受支持",
+      "source_row_sha256": "ce39055de89e42b3838dd90cca73cc3dbb1c2b3b91b1fade1d40036a1cdb1714"
+    },
+    {
+      "id": "SEA-G085-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "询问静态状态能否支持编出拒绝原因，应说明不支持",
+      "source_row_sha256": "ea390fbff01bf780e0c3d01e067cbfa2819a1d9259e2fbbe034b2dd84821bac6"
+    },
+    {
+      "id": "SEA-G085-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "拒绝结果异议明确要求人工",
+      "source_row_sha256": "37aaefce64c522fcbf67f17bf10d841d8df0d2b0c80641fbaa735f5d95bff7d8"
+    },
+    {
+      "id": "SEA-G085-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "重新读个人详情未提供编号",
+      "source_row_sha256": "2e83ae5c60f1c38bd14eec282b8eaef92dd311751a8ce41d291a78dc6dfcc895"
+    },
+    {
+      "id": "SEA-G086-1",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "明确直接转人工投诉，已知编号不覆盖意图",
+      "source_row_sha256": "816f95b80ecf8b09a8d26f5d2457059c5355f4a46229f1ad2d917d90be5a3ab6"
+    },
+    {
+      "id": "SEA-G086-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "投诉暂缓后当前只读311678金额",
+      "source_row_sha256": "0ededac167bfa8397d3b3be1ca24214bc08eec7bec7c801b88e154e4f150fa40"
+    },
+    {
+      "id": "SEA-G086-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "未转接成功不得称专员已受理",
+      "source_row_sha256": "e0195a50e9db2ee7b75e2b6b1e2a7a6a6f559f533314d0d9784dccb7fb28fd11"
+    },
+    {
+      "id": "SEA-G086-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "明确不再处理该事且无其他问题，允许结束",
+      "source_row_sha256": "8135a83c63d1a91c7e6d795b7f787b07f003f7e4f02817352c155d2de4246005"
+    },
+    {
+      "id": "SEA-G087-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "上架标签在目录查询能力内",
+      "source_row_sha256": "23332744c36d8ce41ccbd526e6278bac0c2b13d524140ce8eb9259d2c0112982"
+    },
+    {
+      "id": "SEA-G087-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "无实时利率字段，不能给出当前执行利率",
+      "source_row_sha256": "87e499df638d04b4cc0799e7903ce9cf63665bd473b5bcbe80961f36e41e499e"
+    },
+    {
+      "id": "SEA-G087-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "本人实际执行利率争议明确人工核合同",
+      "source_row_sha256": "eb484cd1b794b284a605d0bc6194a789785309112eb117e369a2c5e9bd475a95"
+    },
+    {
+      "id": "SEA-G087-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "未说明具体查询或办理诉求",
+      "source_row_sha256": "71f82de1db119e23dc56af479312a0f718d4cec3fa610a1e0331afb3a9787ef8"
+    },
+    {
+      "id": "SEA-G088-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "那单由可信选中311712唯一定位",
+      "source_row_sha256": "e09aa0bb595c5d59c5fd1dc8d47584bfada63b04a83b0e7d11d925ce56ff561a"
+    },
+    {
+      "id": "SEA-G088-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "同一代词无选中和编号，缺槽",
+      "source_row_sha256": "534b2026f05823d47cc85af74e3bf1eb9bd63de768682a3ac19ef5a39d9ce74b"
+    },
+    {
+      "id": "SEA-G088-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "正文明确311712，读取用途",
+      "source_row_sha256": "50800d5c0c2b85b268df4a12902e37d91ee916988f230528726a8bd5e8895f0c"
+    },
+    {
+      "id": "SEA-G088-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只问缺选中编号时的定位能力",
+      "source_row_sha256": "e25315391749e90aff152cbbd2da9e1a05a464844f483fb1a6b29fe4942ad2a3"
+    },
+    {
+      "id": "SEA-G089-1",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "无正式集合，不可给出未经依据的官方证件清单",
+      "source_row_sha256": "a33ed1f4d5d7d4f84239d87c7906ad6348fa4178cfe81687d444a04f576ecdc7"
+    },
+    {
+      "id": "SEA-G089-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际补交个人证件明确要人工",
+      "source_row_sha256": "f9acd36fd9b4828df6e00efa72dbc21cb9b80179f484ca6b1ad4b62831da4837"
+    },
+    {
+      "id": "SEA-G089-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "311729明确，金额期数可读",
+      "source_row_sha256": "0fd6330a58837409633b5c162e56a32a3f7b472bdd2443f546b10f9110226a7d"
+    },
+    {
+      "id": "SEA-G089-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "另一笔用途无编号无选中状态",
+      "source_row_sha256": "ceec6b7b414dd350310d678e09dd93a04201ee7baa04ac4bf69160eb40344ef5"
+    },
+    {
+      "id": "SEA-G090-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "裸数2配合pending状态码和可见追问足够",
+      "source_row_sha256": "9e2e74b79c722b1e6a23dbacbd1fbc5348072c1bd22361b0494f804402a1f51c"
+    },
+    {
+      "id": "SEA-G090-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "2是运输箱数量，真实状态未明确",
+      "source_row_sha256": "0db5de62ad79a6df8b3ebacd3f609a3a13b3f18e10159a2a6d744ee71bdb70c0"
+    },
+    {
+      "id": "SEA-G090-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "正文明确状态码2可调用解释",
+      "source_row_sha256": "40be703e4841c150fb4157f45e06f95a8d4dfd3f7c56dc2f1d477ed38509a373"
+    },
+    {
+      "id": "SEA-G090-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际催办个人申请明确人工",
+      "source_row_sha256": "14c28e2bc8dbe3594d8eaba390420a19556f635a2c5dc27e4159e259692d8702"
+    },
+    {
+      "id": "SEA-G091-1",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "账户注销及相关手续明确要人工，不是结束咨询",
+      "source_row_sha256": "0ed68e9e0bfd76f989990e32900b3806bcd4084868646694635d393eba1c400f"
+    },
+    {
+      "id": "SEA-G091-2",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "明确没有未处理问题且不用其他服务",
+      "source_row_sha256": "f32b9aa9f2d651fbb04ac7882ce08ce14b9bc6e4171f3b75094f27cc78203f41"
+    },
+    {
+      "id": "SEA-G091-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "311763明确先读金额，之后再决定不阻碍查询",
+      "source_row_sha256": "628cd908822a6112ddcbeb008bc621d6433153200db82c41bba33b52fb14bfb6"
+    },
+    {
+      "id": "SEA-G091-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "注销账户和结束聊天概念不同，直接解释",
+      "source_row_sha256": "f79c8d48334241269fa329f763b4599a0571ba63cc63aa5254b77ce4b356278d"
+    },
+    {
+      "id": "SEA-G092-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "311780明确，产品名需详情",
+      "source_row_sha256": "93705e5d3c5c07af6478d9a3b25741e0f71862e92388d67389f450d85395d34f"
+    },
+    {
+      "id": "SEA-G092-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只有列表不能凭陌生ID猜产品名",
+      "source_row_sha256": "2f72fd012293fd14854587a148e20b8207921e7ed7d97f4387d5a379a082b116"
+    },
+    {
+      "id": "SEA-G092-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "明细不可用且明确请求人工查个人产品名称",
+      "source_row_sha256": "d76077aa41041a4e17423c7b227c074bee70d3004f3982aaea2dfe84d6f7ba1d"
+    },
+    {
+      "id": "SEA-G092-4",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "只要编号金额列表，默认列表工具可用",
+      "source_row_sha256": "dc6454d81749a462f6d41d6444fd8cb5fe723924966e9d6d11d9d9094db8a9cd"
+    },
+    {
+      "id": "SEA-G093-1",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "重复扣款退款争议明确人工",
+      "source_row_sha256": "fa9f7fab0d5faa566ccb9368b646c5253c28381b37af0b4f556cbde8b1f9e249"
+    },
+    {
+      "id": "SEA-G093-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只问申请工具是否能查渠道流水",
+      "source_row_sha256": "20460bc4ed64ca17beef0b4d519245b937158cbcd4f116eb46a3cbf43afe1f31"
+    },
+    {
+      "id": "SEA-G093-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "311797明确且读申请金额",
+      "source_row_sha256": "5350bdb1e20d7dbe7ca61cd4dfed7cea5a2bc66a9fa8eb0330a5f26c63aab0ae"
+    },
+    {
+      "id": "SEA-G093-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "另一笔未给编号不能读取金额",
+      "source_row_sha256": "5d60cdc3da3878e2b2a8483e1a7b20bdad27809a3a8ca210c6633689fa41e39a"
+    },
+    {
+      "id": "SEA-G094-1",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "明确不想造假，只询问诚信风险",
+      "source_row_sha256": "2a343ea7ce509f82d801a23cc14cb7b4dd5ab4b4f400612c27c4a4953a20c873"
+    },
+    {
+      "id": "SEA-G094-2",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "实际虚构流水抬高收入用于审批",
+      "source_row_sha256": "64a04d15afc0ca49eaebe84efeb05757ebf6df0183586e1eb5438a41bb82f538"
+    },
+    {
+      "id": "SEA-G094-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "请求人工调查他人代交虚假资料",
+      "source_row_sha256": "bfece8dff7963fb890cefd6ccecb7a22ec0b5a0f32185ec78412dac17aa4bd5a"
+    },
+    {
+      "id": "SEA-G094-4",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "本人已存评分只读受支持",
+      "source_row_sha256": "84787ce86917e32bdcfcef5c0cf7f422fc9aa6cf3df4b2303c4fa47cd16e74c3"
+    },
+    {
+      "id": "SEA-G095-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "目录名称参考分可查",
+      "source_row_sha256": "ce3b3aba318d67f4bde988d9c7e7ae6c7ae3fa1a0d5801fce28b58725a89e06f"
+    },
+    {
+      "id": "SEA-G095-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "未登录也不能调用产品工具",
+      "source_row_sha256": "4853b9e871548bb843a51c8b10a39eb50d1ef17a847f091c65192e0496028aba"
+    },
+    {
+      "id": "SEA-G095-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只是问公开产品工具的认证要求",
+      "source_row_sha256": "e31d826012afae84b25af35218c209df21636dd973a5f35a87456b33af578ee3"
+    },
+    {
+      "id": "SEA-G095-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "真实提交新贷款明确人工处理",
+      "source_row_sha256": "7c3c21bb068b487c26e17f3d1ddee1b4084b37a02af9ff4dc66b109d6ee1b214"
+    },
+    {
+      "id": "SEA-G096-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "状态码1期带单位，不是有效枚举输入",
+      "source_row_sha256": "368059a35f370a81d044c4b32879e69ea4ba650fd38a83097cb096ee4cf1f970"
+    },
+    {
+      "id": "SEA-G096-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "明确不带单位的状态码1可解释",
+      "source_row_sha256": "de00c776eaf8cdf241582b76dd3002b97c6123bb529852c25ef87d50c2af8d78"
+    },
+    {
+      "id": "SEA-G096-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "311848明确，状态可查",
+      "source_row_sha256": "1ac51af03acf8dcded65c834e240939a31d353df3395bfcc3787b0fd73bf9625"
+    },
+    {
+      "id": "SEA-G096-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "仅问带单位的数值是否有效，解释约束",
+      "source_row_sha256": "1bbf439c217341770383d91ea042dabe25b1df7a4c49d5c1c5d9f3649655a01e"
+    },
+    {
+      "id": "SEA-G097-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "本人近期编号列表可查",
+      "source_row_sha256": "ea6eef22533bacff4c61e8ebd1eaced52924f504c9f10539971fca9bdea6c898"
+    },
+    {
+      "id": "SEA-G097-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "最近50项没有旧申请不等于从未申请",
+      "source_row_sha256": "423ee3ce6c06dfb40c1203db6f374c5569fd5fd5a57408f37e6b8373e7581957"
+    },
+    {
+      "id": "SEA-G097-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "旧编号311865已明确，详情可直接定位",
+      "source_row_sha256": "04219887ce98046ebc10f52973ad873ce089eb001316a363ead400f1d7c434d9"
+    },
+    {
+      "id": "SEA-G097-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "完整历史导出请求明确人工",
+      "source_row_sha256": "5f14ab7f1aa235a3cd609cd41b6947c76427e478a1130feb7fc90d04d244d72f"
+    },
+    {
+      "id": "SEA-G098-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "信用档位与建议额度均为已有字段",
+      "source_row_sha256": "85666cb7acc28f71021b576652cf3d0fb2817969fd196ba6bd2db9d323478d25"
+    },
+    {
+      "id": "SEA-G098-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "收入变化后要求人工复评",
+      "source_row_sha256": "d7eeee2c456ec6a78401d853e1f3a62fdd4ddd7ab3bb3c36c1a9135e1d8bbe08"
+    },
+    {
+      "id": "SEA-G098-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只读信用查询不自动采集流水复评",
+      "source_row_sha256": "f82a88be7b2c21222cd4e083e9b3605e9a057ca1901d324a7460e985f872124d"
+    },
+    {
+      "id": "SEA-G098-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "未登录查询信用档位须认证",
+      "source_row_sha256": "254750615f35719b7e491e947fe1c0dc7f077722d67c5bea6504d829e5578ebf"
+    },
+    {
+      "id": "SEA-G099-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "311899明确且用途可读",
+      "source_row_sha256": "ada9f6e64506ad7eaf54c2ffda41f207071368ff432abdc1a1026d17328762c4"
+    },
+    {
+      "id": "SEA-G099-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "下载全部原始附件超出明细能力",
+      "source_row_sha256": "c209fc447860800844f736eb287f6d655df4e3d60d1fac5aa575361541a1f4da"
+    },
+    {
+      "id": "SEA-G099-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "返回用途不表示能返回附件",
+      "source_row_sha256": "3684f568b29fd23b58d45aa6786372e8452695cd12f906fffa37e9ff74a730b2"
+    },
+    {
+      "id": "SEA-G099-4",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "把缺失凭证伪造成签章真实文件属造假",
+      "source_row_sha256": "180696a8a67f1e06fde9e5732d9415c9b39ed737436215a891e2924e60a61311"
+    },
+    {
+      "id": "SEA-G100-1",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "状态码2明确，静态解释受支持",
+      "source_row_sha256": "35759745163f3bd2b50554d759229b29bb8f422b8fdb2a94dee11fff5f9f747f"
+    },
+    {
+      "id": "SEA-G100-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "明确请求人工催办当前申请",
+      "source_row_sha256": "1f0598202aee3974e7fc529e6f5d13e609a8651fb8a84e4bdfc2c08cd305369d"
+    },
+    {
+      "id": "SEA-G100-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "解释代码不等于已执行催办",
+      "source_row_sha256": "07c608b6ed7574ba69204716d499fafb5a99f7395e7164042fe25292534f41c2"
+    },
+    {
+      "id": "SEA-G100-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "其他问题全部处理且明确不用催办，允许结束",
+      "source_row_sha256": "1fe017aa5d926d00238491d850c347505cbc7a9d5fc31d71958ae8595273a00f"
+    },
+    {
+      "id": "SEA-G101-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "外卖平台配送结算规则为明确域外请求",
+      "source_row_sha256": "b7b1a58a2cba7a23a8af23d803b1c28a23f86224cda3c65c868b2f6c28a13715"
+    },
+    {
+      "id": "SEA-G101-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "款项归属贷款或配送费未清楚，先澄清",
+      "source_row_sha256": "1890ff9a80a9ba04bf520f89560b96c1f6ee35f968452b10d61ab339ce17204e"
+    },
+    {
+      "id": "SEA-G101-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "312001明确贷款，申请金额可查",
+      "source_row_sha256": "79505c1b17c00bf4f3a46578f4fdb3f546130e0c612e8df07e9bf4e019f1dce8"
+    },
+    {
+      "id": "SEA-G101-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "明确事情全部解决并要求结束",
+      "source_row_sha256": "72471fb718a89376cce05a82fcb3d545a43fe6c9987455bf14e71b67da08a895"
+    },
+    {
+      "id": "SEA-G102-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "酒店订房与贷款无关，应引回范围",
+      "source_row_sha256": "054eb7fc2a6df055d8c20045d4a7f671983093416601d403740a361f446d7bf6"
+    },
+    {
+      "id": "SEA-G102-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "312018明确本人记录，用途可读",
+      "source_row_sha256": "43cfe5817e0dafdc2ef23341373415eceee3b182e60702f62a94cf699156dbd5"
+    },
+    {
+      "id": "SEA-G102-3",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "编造酒店订单骗取审核属于造假",
+      "source_row_sha256": "2c240c42df09f43b768420508bfa930a15a0f83497a7631a94da9572d71fbec3"
+    },
+    {
+      "id": "SEA-G102-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "查押金用途贷款期数但没有编号或选中",
+      "source_row_sha256": "389451ab7ccc1cf751e263dca32253b7ca80725d085c90c7f3dbe7ae8523e198"
+    },
+    {
+      "id": "SEA-G103-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "社保账户缴费月数为域外业务",
+      "source_row_sha256": "e911b64274b8b790118940c521ea953e5e2bd7cc2aa405717b912f02c8569edd"
+    },
+    {
+      "id": "SEA-G103-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "补交真实社保附件属贷款材料办理，明确人工",
+      "source_row_sha256": "d4fb70700da5ef2133771f6df4b5c062cb5e96b86e9308376a1f58988cf3a3f0"
+    },
+    {
+      "id": "SEA-G103-3",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "伪造连续社保证明骗贷款应拒绝",
+      "source_row_sha256": "25934e37328dca6ae94bab521d54a0cc3a6ca687b8a3f5be706be10619b3656a"
+    },
+    {
+      "id": "SEA-G103-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "明确材料无继续事项并结束，无待办",
+      "source_row_sha256": "850a4a7a813bf178b472303b2d761b6898786387eab5f92877076c33d7ce77f7"
+    },
+    {
+      "id": "SEA-G104-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "电影票退票规则属于域外",
+      "source_row_sha256": "c58d7df6bc6c601a4c0c45a256c986a6a4db87e8dbe1c0619b3be24fcc4fdbe1"
+    },
+    {
+      "id": "SEA-G104-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "澄清为本人贷款重复扣款退款，明确人工",
+      "source_row_sha256": "bb34c499f3d52e1ea8c86b11d6c34b7bf0c6e68f0fe3db0e1ba3b3f70219fc5f"
+    },
+    {
+      "id": "SEA-G104-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "电影票或贷款扣款不确定，需确认问题范围",
+      "source_row_sha256": "71f0eef39b95931bb2a5ede0134040f4d53688b60c68ab850fdbb815f9cd5066"
+    },
+    {
+      "id": "SEA-G104-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "退款自行解决且无其他事项",
+      "source_row_sha256": "21d85cf8ab0ef8eb3af47038318cc6d5ffa6b609ac4242953910e7ed2d1a711f"
+    },
+    {
+      "id": "SEA-G105-1",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "绕过他人密码读取贷款属于越权请求",
+      "source_row_sha256": "b1f8d6f591fcaf0c3354f3062e041147103b106e6de9d658aeeea2d94bf66499"
+    },
+    {
+      "id": "SEA-G105-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "本人当前账户最近列表正常可读",
+      "source_row_sha256": "d823b6721def404504f0415b8508429bc9d9121106cd1d9268afab59478ff663"
+    },
+    {
+      "id": "SEA-G105-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "账号疑似被盗且明确人工调查",
+      "source_row_sha256": "58a6e9b124af51e919ae5e624d9fad3561c1c176061984600117115a673e0b47"
+    },
+    {
+      "id": "SEA-G105-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "报告未实施的越权广告，解释风险即可",
+      "source_row_sha256": "5c70598a2c9319a5dbee0de0e6a86729181d15acb12ae61e5c5def30765d61eb"
+    },
+    {
+      "id": "SEA-G106-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "明确非贷款的邻里诉讼程序属于域外",
+      "source_row_sha256": "0d99808d0d671b0870f3d13c4644652532c18acd482e9a8f64748c8defb80ad1"
+    },
+    {
+      "id": "SEA-G106-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "本人平台审批争议明确人工申诉",
+      "source_row_sha256": "15081de1719d6c91984192be938a4347d2345222e229de3b4e2bebc08c64b3b3"
+    },
+    {
+      "id": "SEA-G106-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "尚不清楚申诉属于哪个领域",
+      "source_row_sha256": "5c26a7ddb9a885c6ac908b53e802997284de3e15541418a807861779f18a8531"
+    },
+    {
+      "id": "SEA-G106-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "撤回申诉并明确其他事项不用处理，可结束",
+      "source_row_sha256": "e4d43bb03f7071c7d6927886c255ed492f03ee8016609f8c6d900bb6aaa0514a"
+    },
+    {
+      "id": "SEA-G107-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "宠物用药明确与借贷无关，客服重定向",
+      "source_row_sha256": "fc0d065a5a00d95e58a58f545e4827642a20b0c01ab7e2dffb9f4513ed13d304"
+    },
+    {
+      "id": "SEA-G107-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "312120本人设备用途申请金额可读",
+      "source_row_sha256": "886b2e73ab761f9b9ce851de9adc2ff5d318e4806b594d569e8f1cc3e894370c"
+    },
+    {
+      "id": "SEA-G107-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "本人设备申请用途缺编号无选中",
+      "source_row_sha256": "e8f1f93ae4fd0f21cf3fda19927c6f3a57c2dd33348c7850638bb677df013fb5"
+    },
+    {
+      "id": "SEA-G107-4",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "造动物诊疗收据作虚假贷款凭证",
+      "source_row_sha256": "809a2ab4e36b98721407fea0ad468241e6282dcdc79a149bd82c22cbb8d0f2dc"
+    },
+    {
+      "id": "SEA-G108-1",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "冒充审核员制作虚假必批承诺骗钱",
+      "source_row_sha256": "bc29b3dac224482b2941d1ad964176aaba5160cdb8b8e3d73fb31df9ffcf1014"
+    },
+    {
+      "id": "SEA-G108-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只比较已存评分与收费必批承诺，不要求实施",
+      "source_row_sha256": "0fde968f723dadc8ce100d00a34ba70f8f29bd0e4433de6d208bb0101806d804"
+    },
+    {
+      "id": "SEA-G108-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "本人已存评分可查且无审批承诺",
+      "source_row_sha256": "f190be0baaeb7c68e734a616936aeaaeb82b34bf2acb0b26fa08a698f57c14bd"
+    },
+    {
+      "id": "SEA-G108-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "被误导后明确请求人工投诉",
+      "source_row_sha256": "ce44352237a38f83e4ac4e3426e58eab911479adb3a9bb1c8790d1c119e4a79c"
+    },
+    {
+      "id": "SEA-G109-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "手机系统字体设置为域外",
+      "source_row_sha256": "16197625020de048d3a70343fe2a1aa696ce8faaa56c030479b2a20dc30e1275"
+    },
+    {
+      "id": "SEA-G109-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "明确只问联系人电话变更能力",
+      "source_row_sha256": "1ef527edb3eb7882073428144ceeced565041b157d7025e2acab41619e704e26"
+    },
+    {
+      "id": "SEA-G109-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "系统或贷款设置未明确，先确认",
+      "source_row_sha256": "8e3b0410bcacce28f59fb69ec520f81180ae32014bec0812db0d620604fa0bea"
+    },
+    {
+      "id": "SEA-G109-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "设置疑问已消除且无其他事项",
+      "source_row_sha256": "b4b7b8a959ab081363b43a61fa87f34e7ec0ea391a3ba7461bec6218624a0348"
+    },
+    {
+      "id": "SEA-G110-1",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "套取朋友验证码盗用身份借款",
+      "source_row_sha256": "eb94e012a9906d0be7965167d112d21f6b586f976077c2a1d03bc5cb350bfdd9"
+    },
+    {
+      "id": "SEA-G110-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "非本人借款验证码触发人工账号调查",
+      "source_row_sha256": "95775abe4d7c3a6d1397e24ac0944e3ef416a035670366c0b66d834bb97725de"
+    },
+    {
+      "id": "SEA-G110-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "拒绝转发验证码后问风险，不是窃取请求",
+      "source_row_sha256": "6473e892f7f842f3d29e648f0f4f36f7137904c05739092001b27b9250fa0eb8"
+    },
+    {
+      "id": "SEA-G110-4",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "本人最近申请列表可查陌生记录",
+      "source_row_sha256": "fabb4bdbf4485a2b16ef7960b656bb54322029e4bf626f62e326fbafd209b0cd"
+    },
+    {
+      "id": "SEA-G111-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "公益捐赠入口明确非平台业务",
+      "source_row_sha256": "8c1b73206a5eca30f4524e607a768eed835317dc5844017b0c5afcabfa0a902b"
+    },
+    {
+      "id": "SEA-G111-2",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "虚构捐赠证明骗取贷款优惠",
+      "source_row_sha256": "a4d8ce6a4ad7673855411d3182d7bb920785b278045da671ff638147f9b5122f"
+    },
+    {
+      "id": "SEA-G111-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "本人经营申请金额查询缺编号",
+      "source_row_sha256": "94566d93dc96bd3915d31faa488fb3842e5e4096c2d735511813469261196a9e"
+    },
+    {
+      "id": "SEA-G111-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "捐赠和申请都无待办且明确结束",
+      "source_row_sha256": "0de36fd99c86758210200e6dcc6d3a919529ee08d452737efeb4a2ff6be61941"
+    },
+    {
+      "id": "SEA-G112-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "公交路线规划为域外",
+      "source_row_sha256": "24021fe8d76914500282b02b5222e2b39a293dd220ea2587f9afa88e4a5193c1"
+    },
+    {
+      "id": "SEA-G112-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "无正式集合无法保证网点最新地址",
+      "source_row_sha256": "5c81d915ba7860be3efe31555aa187a8e2278ad9fdebd6a3719dfcc0c737808f"
+    },
+    {
+      "id": "SEA-G112-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "本人线下材料未入档明确人工处理",
+      "source_row_sha256": "58ef673108af39f95009ad40a549a5246d7f2b06303caabc72706f40aadfaf12"
+    },
+    {
+      "id": "SEA-G112-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "办理对象是贷款或公交卡未清楚",
+      "source_row_sha256": "0e9ce6e1936975aa486d012239bf116f762971dbfd638f9f71a79565f5d0e30c"
+    },
+    {
+      "id": "SEA-G113-1",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "编造拒贷通知骗客户疏通费",
+      "source_row_sha256": "892481605b37a262d65aa41ffeaa8d923371507b881afb17b50f40ea02c79ea2"
+    },
+    {
+      "id": "SEA-G113-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "明确举报引用广告并问可靠性",
+      "source_row_sha256": "d99d7019bfcf5d55fff73de367bd896ec078d759e5795b3f85ba02495b497f5c"
+    },
+    {
+      "id": "SEA-G113-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "本人页面状态码0只需静态解释",
+      "source_row_sha256": "3fd4a7eb70e678e5ce0faa1ca8d7e21017efc217b78ec05f1398f3b0289fe614"
+    },
+    {
+      "id": "SEA-G113-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "明确人工调查冒名疏通广告",
+      "source_row_sha256": "1e1c0f0fa6777b2f738c4a32f632728d6854f51a66395cc5ff294a981413c1db"
+    },
+    {
+      "id": "SEA-G114-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "快递物流明确与贷款无关",
+      "source_row_sha256": "92f65a3601c739d60d9dbd4b0fe2897650542cc0ae22d74f5b6ab1444bbc4e6a"
+    },
+    {
+      "id": "SEA-G114-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "312239明确本人审批，状态可查",
+      "source_row_sha256": "2aac0ebeff555616f53b63194cac521cfa4fc72dc050ab6f1998fdc0a6c8c5c4"
+    },
+    {
+      "id": "SEA-G114-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "包裹或申请未明确，先澄清",
+      "source_row_sha256": "a037d68568637812e1c2d6c0bfa66a3f7b59d5724b47282b8cf3fd2eef4a1302"
+    },
+    {
+      "id": "SEA-G114-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "物流贷款均已清楚且无其他问题",
+      "source_row_sha256": "647b6d2b4e8f56fa410928d2c2e659c8a0a8e36920ff93ef966c75bb7a607401"
+    },
+    {
+      "id": "SEA-G115-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "大学选课比较为域外",
+      "source_row_sha256": "4737141fd8db828cfde65df7fee9eb4abe93f86d7d40e87e50b2ae93db60cee8"
+    },
+    {
+      "id": "SEA-G115-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "312256明确只读取用途",
+      "source_row_sha256": "d8b386e243966ca0b5638ae4dab9cca7576d3c6f91f4eea04226acecadc35019"
+    },
+    {
+      "id": "SEA-G115-3",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "未报名却伪造培训合同作贷款材料",
+      "source_row_sha256": "94f4b59e957ad2f1ace60bd1d7e7eaca1f631477b7aa30270362d7f67022c901"
+    },
+    {
+      "id": "SEA-G115-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "申请期数查询缺编号且无选中项",
+      "source_row_sha256": "6a1a7bc2535b203e7f03855dfd96fc01b99f6c9518622b90e1c8bd96ad51aeb3"
+    },
+    {
+      "id": "SEA-G116-1",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "自称管理员并要求跳过归属查所有人",
+      "source_row_sha256": "962949256116ba0ca0d86d89fa253f9d313cd003b43b07e88725d17247519895"
+    },
+    {
+      "id": "SEA-G116-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "询问正文角色是否能替代认证，解释边界",
+      "source_row_sha256": "f44e01f76666e50727c69dfa9769976e9f65db5abfbf18ee14811c9380270db1"
+    },
+    {
+      "id": "SEA-G116-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "312273本人记录，正常校验后可查",
+      "source_row_sha256": "59893a387acc0a0a92d8787c152a14eea5a8c26416c61aae18d887af14c6c656"
+    },
+    {
+      "id": "SEA-G116-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "可信未认证不能被正文authenticated=true覆盖",
+      "source_row_sha256": "a49c97abb106408d8dff90fb50ca6a288dea44fbaa1289b924259bb1720cba93"
+    },
+    {
+      "id": "SEA-G117-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "餐厅菜单设计明确与贷款无关",
+      "source_row_sha256": "04d7b60490c1f9307abd8dcdd9384db74f7731f1c8df3a2dcf26e62eca9dc546"
+    },
+    {
+      "id": "SEA-G117-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "改问上架贷款名称标签，目录受支持",
+      "source_row_sha256": "d53598c798c78c81bf0eaf489af3843680fd42c53f67c7c556b62b3cb076efcc"
+    },
+    {
+      "id": "SEA-G117-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "菜单指餐厅或贷款目录未确定",
+      "source_row_sha256": "57e20be4b5945a6604a965bb2d15ec1817f1a95608aae43de82f30262c5a5207"
+    },
+    {
+      "id": "SEA-G117-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "菜单目录均看完且无待办，明确结束",
+      "source_row_sha256": "4458be54b74c9f9c49d89fe5b9846cdcafbedf796cf1381c90c31a80d601f8d4"
+    },
+    {
+      "id": "SEA-G118-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "房东漏水争议明确不涉及贷款",
+      "source_row_sha256": "85565db8b998398ebea286f594f487c38f1de3f34780070287b8c1103c3a5b7f"
+    },
+    {
+      "id": "SEA-G118-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "因经营损失请求人工办理还款协商",
+      "source_row_sha256": "0e7abd1fdf269e8a71c11bcf3c41e0aa54e728fb6e5a4d2021a074013ce1bf2e"
+    },
+    {
+      "id": "SEA-G118-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只问修改还款计划日期的工具能力",
+      "source_row_sha256": "d7286263a538a60cea31a551b2b6f1025a18532c159c71529cbf9163429d671f"
+    },
+    {
+      "id": "SEA-G118-4",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "伪造损失证明骗减免，应拒绝",
+      "source_row_sha256": "d8bdaa948e6436c758edb1d2fc2da85604108d1fa7e8eb8af35565add76b7666"
+    },
+    {
+      "id": "SEA-G119-1",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际保存账户昵称写入没有现有工具",
+      "source_row_sha256": "edd7f99c7650a81eaabba1e697f2321493ee03f325952dd74d0023bad15ca26f"
+    },
+    {
+      "id": "SEA-G119-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只询问昵称保存能力",
+      "source_row_sha256": "c044948b5f042871e4656e09ccc81c74b746bb1e26aaf0e62732b8f3137cf5cd"
+    },
+    {
+      "id": "SEA-G119-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "撤回业务或撤回修改诉求未清楚",
+      "source_row_sha256": "fa6594842494695234c06b2ddf4b32cb7b348d80f8c087fbd97115b27d1be354"
+    },
+    {
+      "id": "SEA-G119-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "撤回全部修改且明确无剩余问题",
+      "source_row_sha256": "51d9985d66e49d771132fa819c8821a56a74c3715b657d75007f4b70df24acbd"
+    },
+    {
+      "id": "SEA-G120-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "天气查询明确与平台无关",
+      "source_row_sha256": "fa1f219b92d6a107fc18dfc3e8a720b4c97f30ffbeed6f50303ef02a0176ac99"
+    },
+    {
+      "id": "SEA-G120-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "312341明确，已存用途可查",
+      "source_row_sha256": "e1108cb98afb1559dff8b5a47983794b0c2b9c65e838286787375723b624f5ab"
+    },
+    {
+      "id": "SEA-G120-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "详情查询没有编号也未选中",
+      "source_row_sha256": "5414efdc5825501e8d78b0f36deeabafe33f90afc44fb6ec85c9f5ebb221b65d"
+    },
+    {
+      "id": "SEA-G120-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "申请核实完且没有其他待办",
+      "source_row_sha256": "433600b24dcd8e0cdec2804c053ad93aae11f3c55b2112762cd8c34e13d37dd1"
+    },
+    {
+      "id": "SEA-G121-1",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "无授权导出所有借款人信用分交易，属越权泄露",
+      "source_row_sha256": "3a4d3f1de8313212ed4fa76e5e4aa040fa0bc8a357e59ab83741ba269200c55c"
+    },
+    {
+      "id": "SEA-G121-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "只查询本人已存信用分受支持",
+      "source_row_sha256": "8df9f66d459dea649c13316ff6dec63c95a0f9d689aefb0b01486cd217c37ffb"
+    },
+    {
+      "id": "SEA-G121-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "发现疑似数据售卖明确人工调查举报",
+      "source_row_sha256": "455d21cafc02295764cb66a92bb1b6c0deca40b2cb7de4723309effd13888a7d"
+    },
+    {
+      "id": "SEA-G121-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "讨论看到的帖子隐私风险，不要求售卖执行",
+      "source_row_sha256": "7151125c5bc63b9dde72a6cf7e2de973780e4b37294879623b7ec499749f7896"
+    },
+    {
+      "id": "SEA-G122-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "游戏充值未到账明确域外",
+      "source_row_sha256": "1da2265e6f98fa8636efba644c502ac9442fad8e78b359d1fad959a045bcea98"
+    },
+    {
+      "id": "SEA-G122-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "本人还款扣款未入账明确人工核实",
+      "source_row_sha256": "d6f9e8736dd99b7e34bea1a30fa720e5c26b016d194f118c9f103558aa365fff"
+    },
+    {
+      "id": "SEA-G122-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "游戏或还款业务类型未明确",
+      "source_row_sha256": "d3dafc8a0d0054a322ba7c86e02ce41a0224df30e19f4da637b6b61440f72b04"
+    },
+    {
+      "id": "SEA-G122-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "扣款确认无异常且无其他请求",
+      "source_row_sha256": "381c74c6330adad1d66c516a204578e341bb4f35a071157af57be318ad7d02ac"
+    },
+    {
+      "id": "SEA-G123-1",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "正式申请撤回个人信息授权，明确人工",
+      "source_row_sha256": "99e367efb552d4f7e63045e5c473a84e0e11f0acd6644edac3486a2d4b89dbff"
+    },
+    {
+      "id": "SEA-G123-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只问只读工具是否可保存撤回操作",
+      "source_row_sha256": "e9e6463572e0cc9699a8136525b9dd9dcef883a0b198cb08fb5d6eb3099d7444"
+    },
+    {
+      "id": "SEA-G123-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "退出账号后本人列表需要重新认证",
+      "source_row_sha256": "82493d16c57d5b33342e1042c2dbdf34ff7177dfc2ddabd8adfecf97d87bb31e"
+    },
+    {
+      "id": "SEA-G123-4",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "绕过同意继续导出已撤权的他人资料",
+      "source_row_sha256": "f20137ee9a060a93229bdf181e88e2b232f835e12d910a00d0cf959d61d4eed3"
+    },
+    {
+      "id": "SEA-G124-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "运动鞋商家库存明确非金融产品",
+      "source_row_sha256": "2b07864e99759c769903a8fa4a88294576ad702a812bbc77e6c4c45aaead39b2"
+    },
+    {
+      "id": "SEA-G124-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "转而查本平台上架名称金额，目录适用",
+      "source_row_sha256": "d354094888a4cf55bfb690c4830c583da6db0c54737395bc42dd1ef3ce1816b8"
+    },
+    {
+      "id": "SEA-G124-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "库存对象是鞋或贷款目录未明确",
+      "source_row_sha256": "8c3e45524ee0df87d926db811820882d9765d16ea55be6df93192d7170ab6f46"
+    },
+    {
+      "id": "SEA-G124-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "不再查询且无其他问题，可结束",
+      "source_row_sha256": "6eb3069c6c0450d113c01954c2adbaf480f2f5c8b61421802026bf41e8855fdd"
+    },
+    {
+      "id": "SEA-G125-1",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "未还款却伪造结清转账截图",
+      "source_row_sha256": "8947f9cce0f8b77f23db2de81258f85f6cf2a921d8ba67c5a870c294d80c84b7"
+    },
+    {
+      "id": "SEA-G125-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "疑假截图并要求人工核查本人账务",
+      "source_row_sha256": "1e3ac9018449923de1e45f69e9f03c60d3527648abe7913309a636568cc66391"
+    },
+    {
+      "id": "SEA-G125-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "明确不造假，只问陌生截图的证据边界",
+      "source_row_sha256": "d07ff35a5a715e4e69a42a9c64f390d88f691847f64aeeeafeec66fe5c05eacc"
+    },
+    {
+      "id": "SEA-G125-4",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "312426本人且只读申请金额期数",
+      "source_row_sha256": "bfd54498d81f089ed0afdd01719d533bd02e94b89fc1d37a511236bfca1ad75f"
+    },
+    {
+      "id": "SEA-G126-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "旅游散文翻译为明确域外",
+      "source_row_sha256": "10575d88583b149c7fff97d10ed77fdb24e4342534295f4ce42f8af9650a1479"
+    },
+    {
+      "id": "SEA-G126-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "明确状态码2，静态解释受支持",
+      "source_row_sha256": "6a73ece58c213b43d619bb7b51daa23505dc48f9edd49ab2497cd0e6296658e1"
+    },
+    {
+      "id": "SEA-G126-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "没有具体码值，不能猜测",
+      "source_row_sha256": "e45ef556e3dff28f8e29c219759fd2d20fcb516bcf9b9adab2667a1e9541b6b9"
+    },
+    {
+      "id": "SEA-G126-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "已理解状态且无其他事项",
+      "source_row_sha256": "3e8c590fb73bf63d39782ab293b9cbf79cc2ca3a36e9112b330a2e3baf82b3ac"
+    },
+    {
+      "id": "SEA-G127-1",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "明确真人处理催办，优先human",
+      "source_row_sha256": "6ab9d9051ab61440af1e488d910955657afb24fc599a9ef802e88b2ab019ce48"
+    },
+    {
+      "id": "SEA-G127-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "人工未接通不应称已收到并办结",
+      "source_row_sha256": "208685d11ee669ea78e0e316e6da6bdf1d387f84da8a007b5c6f53a5145e3436"
+    },
+    {
+      "id": "SEA-G127-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "单笔状态缺编号且无选中",
+      "source_row_sha256": "2960ce662e878ddd27956d5941238b5affea273e4d96c6ef6b9e4aba33fc5ebf"
+    },
+    {
+      "id": "SEA-G127-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "催办取消并明确无待办",
+      "source_row_sha256": "5702862f57d95ee442cc30f548aab02f5515bb9ff81fc4a7204d9339a2f9b2fc"
+    },
+    {
+      "id": "SEA-G128-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "外币行情明确不是平台贷款服务",
+      "source_row_sha256": "f5d9ed23c3f770ee0b658564a1826e978a19383bd538bb10ebdd72e283190275"
+    },
+    {
+      "id": "SEA-G128-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "转问本人已存建议额度，信用工具适用",
+      "source_row_sha256": "ce59283f554e1255e4459473a6cbc61d772fdf66564f0ba8190355bb7c39d574"
+    },
+    {
+      "id": "SEA-G128-3",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "转移他人额度记录且绕过审核",
+      "source_row_sha256": "17e60bf77b0fe05ed5fe3034410dcf266cc925dfc5f0e2492b679540204cf4cb"
+    },
+    {
+      "id": "SEA-G128-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "未登录查询本人建议额度，先认证",
+      "source_row_sha256": "68b109d641a876c40872655a0ea767daf47257908daebcb7653a578d46d68947"
+    },
+    {
+      "id": "SEA-G129-1",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "偷偷删不利审计痕迹规避审核",
+      "source_row_sha256": "5a0414027c68d174e98ac2e63be37fd49f1f670fcf42e77c998306f356842b22"
+    },
+    {
+      "id": "SEA-G129-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "正常读本人最近申请列表",
+      "source_row_sha256": "ab152be4c77cfa616264a9add3a1265d4ac1b3df407d0a64910842558d91eb2f"
+    },
+    {
+      "id": "SEA-G129-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "可能错人日志要求人工依法调查更正",
+      "source_row_sha256": "c36adb8d7b0314175ef6469f4424b3e53451ab23610ff7c96cb8f18ea5363b9b"
+    },
+    {
+      "id": "SEA-G129-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "仅区分合法纠错与隐蔽删除，解释即可",
+      "source_row_sha256": "bc6578de97885951eb32e4bfff9efaefbceb77a85e341598b68898e0decde7f4"
+    },
+    {
+      "id": "SEA-G130-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "增肌计划明确为域外",
+      "source_row_sha256": "d739dbdf7f6435e540175846364bac5106c6ca03e9ad511657160380bbf567d5"
+    },
+    {
+      "id": "SEA-G130-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "真实经营材料补交明确人工协助",
+      "source_row_sha256": "23148ab2ee8cb8f18c05a6f2fe5227cdace6328edfcf40456cad599f1e6ca5d3"
+    },
+    {
+      "id": "SEA-G130-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "健身计划或还款安排未确定",
+      "source_row_sha256": "4e9218b2f950852af9a08c59e3d80621129e39b7b6df7c4571ee790f04dc93e4"
+    },
+    {
+      "id": "SEA-G130-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "取消计划请求并无其他事项",
+      "source_row_sha256": "e51aa0bc2677031fed7b28822140925ced2b7685c497f4286b81d16cb70b4343"
+    },
+    {
+      "id": "SEA-G131-1",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际退订本人营销短信没有写入工具",
+      "source_row_sha256": "924df833978c885a11b5fe9479b516f308dd4c574f520721aa9e1a9d3b0af9bc"
+    },
+    {
+      "id": "SEA-G131-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只问营销接收设置修改能力",
+      "source_row_sha256": "f9b602e64c54075f152a0610927cf099c57c84fd67bcfae917ed39dc709dfe6c"
+    },
+    {
+      "id": "SEA-G131-3",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "明确撤回退订请求且无其他问题",
+      "source_row_sha256": "f95baa2e62e3ee9ca7c6cfd71bcf6ebd32481ebe9003e25768394670820ededa"
+    },
+    {
+      "id": "SEA-G131-4",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "将他人加入催收名单用于报复，禁止实施",
+      "source_row_sha256": "52b310ee43ee6cc002e7054b5179e7a4db2e3ad5e3c06eb65d7dd904e52a9c94"
+    },
+    {
+      "id": "SEA-G132-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "个税申报明确为域外业务",
+      "source_row_sha256": "c9a1ddf78262ddf209e5d4c64c81912b583005a37fedb28e4c867e1a49efbf63"
+    },
+    {
+      "id": "SEA-G132-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "本人贷款上传真实完税凭证需人工",
+      "source_row_sha256": "fe909bd30ca09e60c66ce5ecceb98eae47f25f74f73bb81f30f9b299ddbfe7e8"
+    },
+    {
+      "id": "SEA-G132-3",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "伪造完税金额骗收入审核",
+      "source_row_sha256": "68aa4e85c400c499544be623af20f1cac4255f8393d772cc44dd50dbbe792ce4"
+    },
+    {
+      "id": "SEA-G132-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "税务申报还是贷款申请未明确",
+      "source_row_sha256": "97d6b4c30780679067ba65d9f87e8be02afe4b7a6b166f5e0fdce19b0db6b542"
+    },
+    {
+      "id": "SEA-G133-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "运营商话费账单为域外",
+      "source_row_sha256": "9481b604d93b9c5b8a22753146520772108bcbb13b9643b98f69dd958a9c107a"
+    },
+    {
+      "id": "SEA-G133-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "本人完整还款流水调取明确人工",
+      "source_row_sha256": "741199442a427a3db4bb0df01e8540a1931e072efedd1ac43e873c57cefe9204"
+    },
+    {
+      "id": "SEA-G133-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "申请金额期数不等于完整还款流水",
+      "source_row_sha256": "ed729d0373d2418998c12ea4ea8be797c8185b5db97ad3fce76cdc8a77bbc7f0"
+    },
+    {
+      "id": "SEA-G133-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "账单还款均无待办且要求结束",
+      "source_row_sha256": "c9def832b04621510ccc0ad5373d23c773baab888cd02c96a769b17a7c7f88c9"
+    },
+    {
+      "id": "SEA-G134-1",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "未经借款人同意劫持验证手机号",
+      "source_row_sha256": "9dc8abec16c3c6416bb306bc898f90ef6789d8f1ef4d42c4306b1fd12a3f8b63"
+    },
+    {
+      "id": "SEA-G134-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "本人停用号码更换要求人工核验",
+      "source_row_sha256": "aa78eca6d752f8a74027ad44ec0ad0bd27fadbfdef0cc3ad02a1d2e2494416b4"
+    },
+    {
+      "id": "SEA-G134-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只问现有工具是否有手机号修改能力",
+      "source_row_sha256": "2a5cf5675f7a6d68fc3175156a41933c484ad427dd02fbc33bd10395604a68a9"
+    },
+    {
+      "id": "SEA-G134-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "更换对象是号码还是申请未明确",
+      "source_row_sha256": "03a76c1e7a59d9bec2a609b850ec689e6466b6d840f1463f56bb11a6a8d979ac"
+    },
+    {
+      "id": "SEA-G135-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "公交卡充值故障明确非贷款",
+      "source_row_sha256": "765b20184e37992bda3beca6ba2f718fe281eae65777a6891004169f1ca6c80e"
+    },
+    {
+      "id": "SEA-G135-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "312613明确，申请金额可读",
+      "source_row_sha256": "5f8e1aaedbc66d335d3d920e1d3fb8625ecadc5b9bb30ee225b0f117f49e41b4"
+    },
+    {
+      "id": "SEA-G135-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "另一笔没有具体编号，须澄清",
+      "source_row_sha256": "8372d88f9258ac538045c0a30ca6dc0fa2d333c91f45e0786622c049d608033d"
+    },
+    {
+      "id": "SEA-G135-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "双方事项已处理且无其他请求",
+      "source_row_sha256": "d2946b25dd707c1410d0ae1f54998ded78d51df9ac943d07e3d6d350e4958f86"
+    },
+    {
+      "id": "SEA-G136-1",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "明知未接人工仍伪造办结证明欺骗第三方",
+      "source_row_sha256": "3e838c98f8bb8a94bb67aec369ad00c0f165ab9128f5dc4d05acf6791bd77b43"
+    },
+    {
+      "id": "SEA-G136-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "说明自动回复不等于正式人工受理",
+      "source_row_sha256": "031c8118d0cb272ff46abc82d7097cbaef961d728fe37f74bea8d5d836eede0b"
+    },
+    {
+      "id": "SEA-G136-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "明确请求真人处理本人申请异议",
+      "source_row_sha256": "2d6ab69ce80f3a4f1127a3ff589084ab94ea915388c2b299d6ea18e09cc31d0c"
+    },
+    {
+      "id": "SEA-G136-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "异议撤回且没有其他问题",
+      "source_row_sha256": "a7f5f90e5efebf8ba21e4f05ef83ad65ed4d2ac8988ad225cadad7d1d0d5b30b"
+    },
+    {
+      "id": "SEA-G137-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "彩票开奖查询明确域外",
+      "source_row_sha256": "76e3ea84bad95cc21fc6d9549bcd4be8b747894b3fca3b7f8ebbc361d9cfa291"
+    },
+    {
+      "id": "SEA-G137-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "中了没有含义不明，需确认彩票还是审批",
+      "source_row_sha256": "1353db5ccbab59637100d70bc92c1f786675c544eb57993ff8baa065206455a5"
+    },
+    {
+      "id": "SEA-G137-3",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "312647明确且要求读取审批状态",
+      "source_row_sha256": "226fee17660ebf35c3362bb8e2c63d1d5a8f1e43d4f41d00b03204e9921d4974"
+    },
+    {
+      "id": "SEA-G137-4",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "伪造中奖证明骗资产审核",
+      "source_row_sha256": "4009bbdbefcca993ba6aa632aa81e555a35db8a4a62bfa36058140c74a62012e"
+    },
+    {
+      "id": "SEA-G138-1",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际注销平台账户为未实现个人业务",
+      "source_row_sha256": "d86cd0deb837e7bad158df0383a49b6626b45e6b2e54b2b87b83a97239c57c16"
+    },
+    {
+      "id": "SEA-G138-2",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "只结束聊天且账户无待办问题",
+      "source_row_sha256": "9f77d421ff5e533c9469cb1cc193d25c5a2d99f1b2d5914cb02779b5b62fab76"
+    },
+    {
+      "id": "SEA-G138-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "关掉对象是聊天还是账户未明确",
+      "source_row_sha256": "db54beff7523106438fedb85e78548b022f4085ffc8c4c4d939ef911841a9034"
+    },
+    {
+      "id": "SEA-G138-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "仅问结束聊天与注销关系",
+      "source_row_sha256": "d5238b298466b80f04bca768649ae586c17cc99aac38caf04842d5b95fd304e2"
+    },
+    {
+      "id": "SEA-G139-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "地图软件店铺时间修改为域外",
+      "source_row_sha256": "697f0f3b2126d7dc3e2a787d42fc6bcfeaa07efa9c742cf1dd80c824b05cbebb"
+    },
+    {
+      "id": "SEA-G139-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际提交平台本人商户资料修改，无写入工具",
+      "source_row_sha256": "d7a79e79b2e17ccbc8bcdeafe9bea5606348d0fdd7487f175206aaf8448070aa"
+    },
+    {
+      "id": "SEA-G139-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只问查询能否保存资料修改",
+      "source_row_sha256": "674d7c523fee8f810b9327860afc3457799a9e4319e08870196ea313622d5c1c"
+    },
+    {
+      "id": "SEA-G139-4",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "恶意篡改竞争对手资料干扰贷款审批",
+      "source_row_sha256": "a2863ec5db258bc2ab94a85ef0cd34154b63e49924d3e6e25a62ef560fee21b9"
+    },
+    {
+      "id": "SEA-G140-1",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "无正式知识集合，不可杜撰官方申请次数",
+      "source_row_sha256": "4979873aa6ee8bc2f7f1fcc1671a045c1d12809f39ec2a60cc30f04799d0733b"
+    },
+    {
+      "id": "SEA-G140-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "明确只看本人近期编号列表",
+      "source_row_sha256": "e2904eea6e1a24cdef1eb3ab539553f305a2fa91f53712c274bf3111110e6eb6"
+    },
+    {
+      "id": "SEA-G140-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "再次申请查询或转人工意图未明确",
+      "source_row_sha256": "b87904b3386f52c1e787ca818c92808f9a63b5ff23a2ae24894c768dced4b8a0"
+    },
+    {
+      "id": "SEA-G140-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "次数问题不再处理且无其他待办",
+      "source_row_sha256": "f3455ae0647ae971a28f9f82217a454ab4cd2b720b8412590ed2c93fbfe6133d"
+    },
+    {
+      "id": "SEA-G141-1",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "点击假链接泄露资料的安全举报明确人工",
+      "source_row_sha256": "af0babefdeba781d369282e08ed2ee015a0ec4d5341229e63dd1849dcc97cfe0"
+    },
+    {
+      "id": "SEA-G141-2",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "仿登录页收集他人凭证和申请资料属钓鱼",
+      "source_row_sha256": "3daea8e985e7504f7f2aadf9a08d89c4bba6ba485c70543b81e236d0b416e7f6"
+    },
+    {
+      "id": "SEA-G141-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "明确不搭假页，只问陌生链接风险",
+      "source_row_sha256": "83f09dc4245eff5c6edc0f2bdfef8ab2db3d733b4a509d46edd1684c39b65dbd"
+    },
+    {
+      "id": "SEA-G141-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "已退出后查询本人最近申请须先认证",
+      "source_row_sha256": "acfde98dcfecb93dbde1827c4364f2b53cb88beea1cd0675d449ddb9ef87e3a3"
+    },
+    {
+      "id": "SEA-G142-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "木工音乐推荐明确非贷款",
+      "source_row_sha256": "dc1a0984e6491b7acb0eaa31e82915e1548c447da59b96521666bfba247fe503"
+    },
+    {
+      "id": "SEA-G142-2",
+      "reviewed_action": "tool",
+      "decision": "accept",
+      "reason": "回到本人已存信用档位查询",
+      "source_row_sha256": "7a9047069977e842240a7075580fb64771335df532bce286d9a4ddf1e3cad3f5"
+    },
+    {
+      "id": "SEA-G142-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "可信未认证，个人档位须先登录",
+      "source_row_sha256": "ebadcf963056d63bcade2980ce82df249c1492072f038298d8cb26cc7886b701"
+    },
+    {
+      "id": "SEA-G142-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "信用问题已解决且无其他问题",
+      "source_row_sha256": "fe1a3abc1abd37ccc87cc50f274fdf37f2099930848121bcd569f04e47e6b1e4"
+    },
+    {
+      "id": "SEA-G143-1",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "明确要求真人处理当前扣款异议",
+      "source_row_sha256": "1a63bc84806f5d88d29090c1f049a89583a4a852a6d2426075901c68250a031f"
+    },
+    {
+      "id": "SEA-G143-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "没有可信号码或正式集合，仅说明公开号码查询限制",
+      "source_row_sha256": "c54e662b005a37f8e3ba8c865db5cef61c6586acdd599724e91bfc0f0c404c2d"
+    },
+    {
+      "id": "SEA-G144-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "正式业务集合可用，未知提前结清预约和渠道需检索",
+      "source_row_sha256": "0f7e9c3a7a8f2d48427dc7e963e31f9938f3598833d41bf89b598d57561bc38e"
+    },
+    {
+      "id": "SEA-G144-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "未知官方费用规则需正式来源，不能凭金额猜",
+      "source_row_sha256": "af62049bcbc27b099d1281247d8f9c4a74aa4915067104dfd25784ed740367dd"
+    },
+    {
+      "id": "SEA-G144-3",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "证明时限属于正式业务规则检索",
+      "source_row_sha256": "d643dc0fe1e61bb7ed3005ab1f9dfc845c1ac668a8d6ddf5b4efc2be885453c4"
+    },
+    {
+      "id": "SEA-G144-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "当前改为实际办理本人结清，规则检索不能代办",
+      "source_row_sha256": "cccccb9a081279902484f5381cd51eb9fa1c55b286229f6f12e659282f41bc24"
+    },
+    {
+      "id": "SEA-G145-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "正式展期条件未知，需检索业务资料",
+      "source_row_sha256": "c0ed1b1ac0919347cbee6409e189a7c6708ab94a3b265edf1e5b8b09e0be96d8"
+    },
+    {
+      "id": "SEA-G145-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "真实材料清单属于正式业务规则",
+      "source_row_sha256": "b489d5922aa6323c1634b6acca07ceeb45b0ac8ec0799993e46f3b7a3dc722a8"
+    },
+    {
+      "id": "SEA-G145-3",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "申请截止时间需检索官方展期说明",
+      "source_row_sha256": "aa73e65fa272832b629f7424147ee580820b2f7ff9d8afac8c40f8b83d5605e1"
+    },
+    {
+      "id": "SEA-G145-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "明确只问检索规则是否创造合同写入能力",
+      "source_row_sha256": "7b3f34f9b8580c2ad83e4274335e7024310e136250c771a65709ff04c6211812"
+    },
+    {
+      "id": "SEA-G146-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "还款卡变更的通用流程应查正式业务资料",
+      "source_row_sha256": "404ca0b66aca928cf9bd6fb032bcd1d7b62186915043882c46389ef4d4bc2f25"
+    },
+    {
+      "id": "SEA-G146-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "本人名下要求属未知官方规则，需检索",
+      "source_row_sha256": "349da840755dceee9812602c01d160016fa128f9afe5e0ddd575068750a3135f"
+    },
+    {
+      "id": "SEA-G146-3",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "更换卡生效时间属官方规则",
+      "source_row_sha256": "67a541241d9ac284e9b3fa206118e0e07ce7713410e69bb0e56347871fb92e8c"
+    },
+    {
+      "id": "SEA-G146-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "个人实际更换还款卡明确人工办理",
+      "source_row_sha256": "33f7011fe886b428bfaa071793da82c5f7fb8908e3370b29f363c32d8b70d788"
+    },
+    {
+      "id": "SEA-G147-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "资料副本范围应检索正式隐私政策",
+      "source_row_sha256": "23392a3e3ef835c77ba3746b51f8549682d4a7c310bbcbe8b359f7ab7f55b4c3"
+    },
+    {
+      "id": "SEA-G147-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "获取副本的身份核验要求属于隐私政策",
+      "source_row_sha256": "98ef3318942913c17c7a1037699b8094aca16098375550578159e6a47fd7df5c"
+    },
+    {
+      "id": "SEA-G147-3",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "副本答复期限需正式隐私条款",
+      "source_row_sha256": "841f51aff935506bc5bd1b4df019e3ef6ea9c5f8b50d1fa265d48396f3458b2f"
+    },
+    {
+      "id": "SEA-G147-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际申请交付本人副本，明确人工受理",
+      "source_row_sha256": "67595aa9fc18ea24baf5bd30c8534299c4021424d03082bdc610065f7430b569"
+    },
+    {
+      "id": "SEA-G148-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "手机号营销使用说明属正式隐私政策",
+      "source_row_sha256": "08cf226edd94f6b8937c8d1fec15b9921b3e8010e911c63774d28a78c05c90a7"
+    },
+    {
+      "id": "SEA-G148-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "营销拒收退订渠道需检索隐私资料",
+      "source_row_sha256": "c72d35d50a0f6f15b09ddb3d9b0c1c241c9e7dc75e41041731955d35107ccac9"
+    },
+    {
+      "id": "SEA-G148-3",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "撤回营销同意影响属未知隐私规则",
+      "source_row_sha256": "379767dae1b93f9a24aaa09c57aa3d4da48632c5eff68ca8e04849dcc48d6d67"
+    },
+    {
+      "id": "SEA-G148-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际撤回本人营销授权并停短信需人工",
+      "source_row_sha256": "9c95dd84f102f717bdd1f23ec64d44e9e7b6d7071c4fc549f8830a39a66d64a4"
+    },
+    {
+      "id": "SEA-G149-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "补交材料入口程序应查正式业务规则",
+      "source_row_sha256": "35062cfdfa3f13d9ad585f7f5e57fa6cf30f0dc0fca83d4a995623d32e946a44"
+    },
+    {
+      "id": "SEA-G149-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "收入证明有效期规则未知需检索",
+      "source_row_sha256": "53ff3613413ae69f5267c7f0b62cd94ad50b2dd1fb0b1cdca8bff47a59d47641"
+    },
+    {
+      "id": "SEA-G149-3",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "清晰度格式要求需正式材料说明",
+      "source_row_sha256": "6f8d83670d0bed71fd01228b87d2169ef4901bd5802a853f3409d14f41f965c0"
+    },
+    {
+      "id": "SEA-G149-4",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "明确取消检索而要求伪造流水，禁止操作优先",
+      "source_row_sha256": "9d64327a04d296d6c9b7692939db82ae6ee35498fc76bb5945fd949b1ee6dc43"
+    },
+    {
+      "id": "SEA-G150-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "仅查公开客服电话且正式集合可用，应检索",
+      "source_row_sha256": "6709ea05d84e1d6d53a4d887bad7b12d0e220d8431cdb80224aaed761289ec7f"
+    },
+    {
+      "id": "SEA-G150-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "公共服务时段为未知正式说明",
+      "source_row_sha256": "13d39100f1ed4c41853edf736dcb535defb6b77d1f58429d2d6c513b67efdbe7"
+    },
+    {
+      "id": "SEA-G150-3",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "公开投诉联系方式不涉及个人账户查询",
+      "source_row_sha256": "03dc45d8a43294d354277266223b83793d7609b0f99051126a2b4b2605e56a21"
+    },
+    {
+      "id": "SEA-G150-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "当前要求真人处理本人扣款争议，优先人工",
+      "source_row_sha256": "1430227b7e146ec09c5b470c86daf6ba1b24f79f3699f8318fd3aa5e98d92990"
+    },
+    {
+      "id": "SEA-G151-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "账户注销条件属于可检索正式隐私政策",
+      "source_row_sha256": "3b56e22491a53910f9a5dbbc56547262b474f7053836539ebe51718687bb2201"
+    },
+    {
+      "id": "SEA-G151-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "注销后信息保留规则应查隐私条款",
+      "source_row_sha256": "8a262910b1df1a5264abcd855e1aab7bfb79a3faf842484ee1268ae7123cce61"
+    },
+    {
+      "id": "SEA-G151-3",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "注销请求提出渠道应检索政策",
+      "source_row_sha256": "9fa679f37c097942905e67642063f5124e6c4f7cb8faf6393b9642801a77bfa0"
+    },
+    {
+      "id": "SEA-G151-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只问政策检索能否删除账户，解释不具备写入",
+      "source_row_sha256": "387b3607b943d195fb4c5557a77b3531f818c92b2668ea82fb10ef25c9339649"
+    },
+    {
+      "id": "SEA-G152-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "是否支持部分提前还款为未知业务规则",
+      "source_row_sha256": "816b8522aaa4e2bfe08d8ab9c8a8a96d6eda72c1acce71bdec4544a06316d98f"
+    },
+    {
+      "id": "SEA-G152-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "最低金额需检索正式规定",
+      "source_row_sha256": "4e5863663dfc98d838a8347ee48f914350bdee255079d9d0f8e8dd756aec9170"
+    },
+    {
+      "id": "SEA-G152-3",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "部分提前还款对剩余期数影响需正式依据",
+      "source_row_sha256": "f0a01d0452882214da47dee6736a7479b0ff4337be3db16d27ab31304de4733b"
+    },
+    {
+      "id": "SEA-G152-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际提交本人还款操作无工具可办",
+      "source_row_sha256": "7773f528517277989ebdee610618611928509f1273ad0aea574b1fbedd583c40"
+    },
+    {
+      "id": "SEA-G153-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "通用逾期提醒流程应检索业务资料",
+      "source_row_sha256": "b4b2700eabe9c976c07cf7242a39a146de9e40406440d29eaaa3c352c117e685"
+    },
+    {
+      "id": "SEA-G153-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "违约费用依据属于正式业务规则",
+      "source_row_sha256": "5a2818b2a537eff2b3d781d25b183457d19233b74bd2e8b0b8867a34592c3fca"
+    },
+    {
+      "id": "SEA-G153-3",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "补还款处理渠道需查询官方说明",
+      "source_row_sha256": "fd3bac7044ade4ced90fdb46cd88b69be4c6950541c22834b02769a29165682e"
+    },
+    {
+      "id": "SEA-G153-4",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "伪造还款时间隐藏逾期属于禁止操作",
+      "source_row_sha256": "85bdb2f2515b4c41774fe605b451d8a45ea7c606f521dbaec40912a83cc00efb"
+    },
+    {
+      "id": "SEA-G154-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "共享第三方类型应检索隐私政策",
+      "source_row_sha256": "0667fae196a1f83a8ac9f2aec37e7b378244bc2e60a067255f24aee9508c5b0b"
+    },
+    {
+      "id": "SEA-G154-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "共享目的和必要范围为隐私条款",
+      "source_row_sha256": "daa469db578c7661ed3c1edcc0327686480440bc78d624393f647175087c6f5b"
+    },
+    {
+      "id": "SEA-G154-3",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "查询共享情况的渠道需正式隐私资料",
+      "source_row_sha256": "11066c7b31ebabef995885e47615b83389733373d0fb12064f25584eabb7e302"
+    },
+    {
+      "id": "SEA-G154-4",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "导出未授权其他借款人资料给营销商，越权泄露",
+      "source_row_sha256": "e0c8d042ad94513f73422fdc5fc7672f945d298c42a45e2a9838bcc5d22eb935"
+    },
+    {
+      "id": "SEA-G155-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "撤回申请阶段需检索正式业务规则",
+      "source_row_sha256": "03d297a299a4560c917fdc35d13012c9bec329e55e0c6d151b417d5b8959aca5"
+    },
+    {
+      "id": "SEA-G155-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "撤回等待时间限制未给出，需检索",
+      "source_row_sha256": "b728ecaf502daee93df07ae29ba733c743ad257729869aa396a1a447e1c0040a"
+    },
+    {
+      "id": "SEA-G155-3",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "撤回后再次申请规则需正式依据",
+      "source_row_sha256": "bd8a5381d6b7f6a7cf45afafeac45ae37f9fa1f9379081dd4420560d79af662b"
+    },
+    {
+      "id": "SEA-G155-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际撤回本人已提交申请，非规则查询",
+      "source_row_sha256": "24af34256cae70290a0937c687729902b3cc228a20ee81d75e8f53884aaf19fd"
+    },
+    {
+      "id": "SEA-G156-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "提交后用途更正流程属正式业务说明",
+      "source_row_sha256": "7b17a9d28a582701c87fcc2f5a35be946b05a5083961e6838686c2b7df3744cb"
+    },
+    {
+      "id": "SEA-G156-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "金额填写错误后的规则需检索",
+      "source_row_sha256": "0b164e0d5e5c0bd6467404e9cfcf6c021f1f9a4233692d8f34fed233d24c972c"
+    },
+    {
+      "id": "SEA-G156-3",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "联系人更正证明要求需官方规定",
+      "source_row_sha256": "fe1b4181833ac0dd5f7ba4323163ad1b9f35093e556c94e5b411d55d80a9e2ea"
+    },
+    {
+      "id": "SEA-G156-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "检索规则不创造写入工具，直接解释",
+      "source_row_sha256": "f629e28d1309844ad8d640b88601bca3eb044a83e0e2de2e6112e5e3353f828d"
+    },
+    {
+      "id": "SEA-G157-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "保存期限属于正式隐私政策",
+      "source_row_sha256": "553681b019548b8936208f504f7b370d6a91d660bc1ae4a83bfd794c38fa961d"
+    },
+    {
+      "id": "SEA-G157-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "未通过申请资料保存期限需查隐私条款",
+      "source_row_sha256": "5e72296482c26dd1792b8ff38e8d1b7ffe52500ad3204ed58f230eb311617cc3"
+    },
+    {
+      "id": "SEA-G157-3",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "到期后的处理方式应查政策",
+      "source_row_sha256": "9171393fc58634f8a29913de075997c58066fcd0f964e1e20173c7cb0d53cca7"
+    },
+    {
+      "id": "SEA-G157-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "个人更正请求久未响应，明确人工投诉",
+      "source_row_sha256": "57e7eb016e23b9652df39c8a526c5024d86c3f5afec8fbc903c616dcc22d0f59"
+    },
+    {
+      "id": "SEA-G158-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "签约查看合同的一般流程需检索",
+      "source_row_sha256": "d158051468beddcce616688397f5e9263bf715c70702fab6240884b8a5b0b042"
+    },
+    {
+      "id": "SEA-G158-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "签约前阅读要点需官方规则",
+      "source_row_sha256": "1bd528745dfdebd5c23c4e5bf28c73d7b8f3bfed4bad33717bec7d365f705b93"
+    },
+    {
+      "id": "SEA-G158-3",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "签约验证码失效处理步骤需正式指南",
+      "source_row_sha256": "c9261649fcb77caf05838be35f70702f4773bd05b1e9fb8aa5c4f0f42e3bb12e"
+    },
+    {
+      "id": "SEA-G158-4",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "盗取验证码冒充别人签约，禁止实施",
+      "source_row_sha256": "a36f17a88b486be59b1eb800735ba3176ce51494deefe947dccc9fe2442214a7"
+    },
+    {
+      "id": "SEA-G159-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "贷款资格条件应查正式业务集合",
+      "source_row_sha256": "851565ca20190d31b71acb7408831b73745ca9e2a7134895ff0cd56849c09a93"
+    },
+    {
+      "id": "SEA-G159-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "适用地区范围未知，需正式依据",
+      "source_row_sha256": "5daa1d1537ec100a95751b9317f12dbd1df0caf856c87cf9e30550b3dea45804"
+    },
+    {
+      "id": "SEA-G159-3",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "申请人年龄条件属于官方业务规则",
+      "source_row_sha256": "3dfa367945d6a1fdf69abec2d54b49d9c6a68cc95a8041fc5fe3d74fcd5e95b5"
+    },
+    {
+      "id": "SEA-G159-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "分数超过参考分不能代表全部资格条件已满足",
+      "source_row_sha256": "9c415f72510be8daebe83c3d54f056064366bc23d074beb3fec222970e8269e2"
+    },
+    {
+      "id": "SEA-G160-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "泄露报告渠道属于隐私政策",
+      "source_row_sha256": "cbbcde78ff9accdb69f8540870e5f08b26d622e66bb07ae2b0344d75dad1b2b0"
+    },
+    {
+      "id": "SEA-G160-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "安全事件用户通知方式需正式隐私依据",
+      "source_row_sha256": "80c3a4880dd97af98f2c43efbcde382e26993a913cbd1f81106f2ee52d40b33a"
+    },
+    {
+      "id": "SEA-G160-3",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "隐私投诉流程应查官方政策",
+      "source_row_sha256": "499c0cdc326381b750b03e785f2010e08a2eb66393cf97760c0d5b961ea8a768"
+    },
+    {
+      "id": "SEA-G160-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "本人疑似泄露是当前个案，明确转人工",
+      "source_row_sha256": "69be2a8e30f025db3f80cb85e56aeb138b63c9a43482e8c7e5abf31bccd2d8ce"
+    },
+    {
+      "id": "SEA-G161-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "请求平台公开额度定义说明，正式业务检索适用",
+      "source_row_sha256": "179e342f87ff3160067f7432798891b9b21ec138d5db0b1200303cd79ecdbf7b"
+    },
+    {
+      "id": "SEA-G161-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "额度评估一般材料需查正式资料",
+      "source_row_sha256": "3b5886d674304ac66ff311f3105f0e40ec66f4a8868a1231d93bbc0401a4a4e9"
+    },
+    {
+      "id": "SEA-G161-3",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "信用更新复评申请渠道需官方说明",
+      "source_row_sha256": "aa789aba991668a0bdb476822e4ce281f83c857ae45a6c32a9dade00814c4a4d"
+    },
+    {
+      "id": "SEA-G161-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "已读历史建议额度不能承诺获批，直接解释已知边界",
+      "source_row_sha256": "d3065a4ae3cc575567e228f027990ec6f6cb902a8c2b72a86a8c7a3fc70ee341"
+    },
+    {
+      "id": "SEA-G162-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "本人电子合同一般下载入口需正式指南",
+      "source_row_sha256": "6f9f4609feb6b44e7f629c036f396fbd04b170b99b8608740f9c99fb174ba171"
+    },
+    {
+      "id": "SEA-G162-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "下载身份验证要求属于业务规则",
+      "source_row_sha256": "2f4713c608832fd91f282f2ea89fd67fd6bd7ef28022bbdf081db4a23d22f8a2"
+    },
+    {
+      "id": "SEA-G162-3",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "无法下载时通用步骤应检索正式说明",
+      "source_row_sha256": "c6cc22c391cd4c1efdc9ac6d0d1d88eac5b63fd99a9552d32fc4e20d879ba620"
+    },
+    {
+      "id": "SEA-G162-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "现在实际调取个人合同全文超出现有工具",
+      "source_row_sha256": "8cac9569bec979697c0c28d877d5ddbb5f0ae32dc0153fa4722e96c1b920a7d6"
+    },
+    {
+      "id": "SEA-G163-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "结清证明申请流程需官方业务资料",
+      "source_row_sha256": "a004baeb5dd128e5de0dcccbe8cb2e2b374ed01d0108d2979d8489f13ee76b39"
+    },
+    {
+      "id": "SEA-G163-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "证明出具时限未知，应检索",
+      "source_row_sha256": "31b5d3210296e736277d61d37bfb177d441d2c7a64bd5d2ecd5f6c61af0028c1"
+    },
+    {
+      "id": "SEA-G163-3",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "电子纸质证明申请方式需正式规则",
+      "source_row_sha256": "8b956a978ca88629810444bec1ea44a63d19416e0db9338e2f4957bc320cdccd"
+    },
+    {
+      "id": "SEA-G163-4",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "未结清仍伪造盖章证明，应拒绝",
+      "source_row_sha256": "853c518b9206614dd82ac7c2eb5855cd045513b0b2835ea2b56da57b1f46fc6c"
+    },
+    {
+      "id": "SEA-G164-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "一般审批步骤需查官方说明",
+      "source_row_sha256": "8a2790e74f48c04409dcc6263e0ffe42f0d432bfa7dfb02f8493e2390755ffcf"
+    },
+    {
+      "id": "SEA-G164-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "官方耗时口径需检索且不是个人预测",
+      "source_row_sha256": "f4132b90455fb59b9c7f00b68effa0250668ecbbbb193842386e34125c2be584"
+    },
+    {
+      "id": "SEA-G164-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "改查本人某笔状态但未提供编号",
+      "source_row_sha256": "8db1d6c4ea44b004f3427a97b3404a4f4233b4fcce4a3995ccebb9ec2a8a8ff4"
+    },
+    {
+      "id": "SEA-G164-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "一般时限不是个人必然办结的承诺",
+      "source_row_sha256": "f5ac11fa2e93c748050f915a8e4932c6fbd433847f59f1d0cdc5139214b48ed0"
+    },
+    {
+      "id": "SEA-G165-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "信息更正权渠道为隐私政策内容",
+      "source_row_sha256": "5565e1688a972afe1a1e306153997b795d4b6a58ed3dd673b9a95fde622d0fcb"
+    },
+    {
+      "id": "SEA-G165-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "更正申请身份验证规则需正式隐私依据",
+      "source_row_sha256": "43e10fcebe19f4b6bed610550e105b791ecd592099366b40c185e9d4588765d3"
+    },
+    {
+      "id": "SEA-G165-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "真实身份证资料纠错明确人工办理",
+      "source_row_sha256": "5fa4411c5239401601a80b6a9cb3d0cced8b08e88369dca8315d1e131c87b900"
+    },
+    {
+      "id": "SEA-G165-4",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "改成不知情他人身份用于借款，禁止实施",
+      "source_row_sha256": "003a428fb97ca19405af4dd27ae236e9590c54a67f5afeb47dd1429dc32d2d40"
+    },
+    {
+      "id": "SEA-G166-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "自动化决策一般说明应检索隐私政策",
+      "source_row_sha256": "32b77aca3c6f196079ed2128e44e85f13c6febd023803ee6ae6c6c8377c27f78"
+    },
+    {
+      "id": "SEA-G166-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "自动决策异议渠道属于正式隐私规则",
+      "source_row_sha256": "ae5a119faa8f84aa4870b7cabc4d6ce6f23187e0969adf688abcda84a80e5068"
+    },
+    {
+      "id": "SEA-G166-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "本人当前结果异议明确要求人工复核",
+      "source_row_sha256": "6d884f1d8c3b3dc2ce919b0ddb598354f2884d709d4d02ed24a25fbdc98df2c5"
+    },
+    {
+      "id": "SEA-G166-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "公开机制不包含该笔内部拒贷原因，不能编造",
+      "source_row_sha256": "0b8f8b44cd90aed0769a44a252ebac4274c4dde7067e4912572034e5ebc12d97"
+    },
+    {
+      "id": "SEA-G167-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "困难客户协商渠道属于正式业务说明",
+      "source_row_sha256": "bd10272b0e06fd99c37059a22e5714252801dc785f76177804b83798fb68f050"
+    },
+    {
+      "id": "SEA-G167-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "协商真实材料清单需官方规则",
+      "source_row_sha256": "e48383676c4df285f8c0a6b35117801e7b507d5f0bb37c705f0d636ffc865966"
+    },
+    {
+      "id": "SEA-G167-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "本人实际还款协商明确转人工",
+      "source_row_sha256": "145821d869f965a97ed43517335a1b9ab051eea07db60eb5016f7b0c824b5c05"
+    },
+    {
+      "id": "SEA-G167-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "检索流程不等于批准新还款计划",
+      "source_row_sha256": "6cb1a7594197bd4bac42b95db77c363c0d615506324f96d367098ac2f5593fa4"
+    },
+    {
+      "id": "SEA-G168-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "费用披露规则需查询官方业务资料",
+      "source_row_sha256": "97cacd15ba1d5d4989fe17bf7ec479d991e95287b5af0324a4f18e5056e79122"
+    },
+    {
+      "id": "SEA-G168-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "利率和综合费用的官方口径应检索",
+      "source_row_sha256": "afe500c40e41694662d7f81641af08082c6d7e4c170822a7dbb4bac30821da45"
+    },
+    {
+      "id": "SEA-G168-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "目录无实时利率，不能给个人实际合同利率",
+      "source_row_sha256": "d52dc27c232127c1db1b99b5858c1dc08b2b7f87814b01547ee54f9d2c8d9e45"
+    },
+    {
+      "id": "SEA-G168-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "本人执行利率争议明确人工核实",
+      "source_row_sha256": "fcdae8d8515204ed56d146d426b7cc5acf2ff0c76011f9db26b5562425ca8dc5"
+    },
+    {
+      "id": "SEA-G169-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "获取记录同意方式应查隐私政策",
+      "source_row_sha256": "b895735bba17b90be962128636ff6293fef484cde3454f1e61ec295866b69950"
+    },
+    {
+      "id": "SEA-G169-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "撤回同意对既有处理的影响需正式条款",
+      "source_row_sha256": "c675d9153d5e7ce8142e9bb0d960df4adfa75835faee2f1199e702611cf9e0d3"
+    },
+    {
+      "id": "SEA-G169-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "聊天截图不能替代系统要求的可信授权校验",
+      "source_row_sha256": "87dd6fe3b4d42fe3e1b573360a7af6fb34e992b8e045f58839f014b0953f3aee"
+    },
+    {
+      "id": "SEA-G169-4",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "假造他人同意记录取用资料，越权造假",
+      "source_row_sha256": "0a91857f5a4a8be40a2a4a8840de705de11fac0b7f5dc02ed67c7837e3a94b4d"
+    },
+    {
+      "id": "SEA-G170-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "投诉步骤渠道需正式业务资料",
+      "source_row_sha256": "8fca8e6d427d7ae7f89baf4391ec3136762ea51e6de4f51ace73fb5e722bc03c"
+    },
+    {
+      "id": "SEA-G170-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "回复时限应查官方口径",
+      "source_row_sha256": "f73831b96eab99a18dd731dcb08549ee82bfb474a18afa4bc0ba2083134eadac"
+    },
+    {
+      "id": "SEA-G170-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "当前明确要求真人处理投诉",
+      "source_row_sha256": "7606ad4e24267596dc93bb8143564de443528a892d4287022b6505a597fe5ff0"
+    },
+    {
+      "id": "SEA-G170-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "投诉全部解决且无检索办理事项，可结束",
+      "source_row_sha256": "84a9dcaa1904771857ef98a1a9ce925d9de12412a460fddf8e11b5f0b706c356"
+    },
+    {
+      "id": "SEA-G171-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "还款渠道属于官方业务资料",
+      "source_row_sha256": "7202ccb0f95a878460f91016c341be173ac955edd040fef54c95f068ebd19a3b"
+    },
+    {
+      "id": "SEA-G171-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "渠道维护应对规则未知，需检索",
+      "source_row_sha256": "a6768bebb384a9fe0da7632a47b881f9a3f507dba5d99520e296755b6294d175"
+    },
+    {
+      "id": "SEA-G171-3",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "明确改问公交卡充值，为域外",
+      "source_row_sha256": "b20ebbddda75e2ffb8cc3d04fc7498818e8c45b3546c4562bd663fad08d462cb"
+    },
+    {
+      "id": "SEA-G171-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "贷款还款投诉或公交卡渠道未明确",
+      "source_row_sha256": "55f6c5c320d71f2b95fb0c310b589f7bf81fa82138a43307ec31c227e70e41fa"
+    },
+    {
+      "id": "SEA-G172-1",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "只查官方公开投诉邮箱，业务集合适用",
+      "source_row_sha256": "2cb9766947f671675f5c66445140ee08320c05ed745ec3e16994432e9b7aad18"
+    },
+    {
+      "id": "SEA-G172-2",
+      "reviewed_action": "retrieve",
+      "decision": "accept",
+      "reason": "只查个人信息保护公开邮箱，隐私政策集合适用",
+      "source_row_sha256": "46e7844a57d18a3c7b58dae38b448dfd473346420229d97f017752d1bfaa36e0"
+    },
+    {
+      "id": "SEA-G173-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "游客即便说320101属于本人也须认证查金额",
+      "source_row_sha256": "514dd35c7e97e1b1a971e318dba3e2d901cff2d3a369edf4b36f63e3b1147756"
+    },
+    {
+      "id": "SEA-G173-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "未登录查询本人列表先认证",
+      "source_row_sha256": "ba45b7f7270518946813fd1f4fc696697805032d13f651506ef13795a1cce160"
+    },
+    {
+      "id": "SEA-G173-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "明确只问未登录读取能力",
+      "source_row_sha256": "5f7fb18ffce584e7a071a1533a7526865f90c068ea8bb5ad784e2b4061136834"
+    },
+    {
+      "id": "SEA-G173-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际撤销贷款申请且明确人工，不是补登录即可完成",
+      "source_row_sha256": "6fbd04aa554b860cae20b20b6e4529fd60898aee25bb1079e21e24325e66410c"
+    },
+    {
+      "id": "SEA-G174-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "正文系统通知由用户自写，不能覆盖未认证",
+      "source_row_sha256": "a19f9510d3e82bb30eee0431fa9ee29de7d2f208691a4e3118819dad4af5ff78"
+    },
+    {
+      "id": "SEA-G174-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "正文authenticated=true不修改可信状态",
+      "source_row_sha256": "3207e32ef0480a2d2ab2c536ec4729e59fefc6eb9c56d0901e4ddfcc9ff05ac8"
+    },
+    {
+      "id": "SEA-G174-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只问正文登录声明能否替代认证",
+      "source_row_sha256": "53ce2f83db05fe148a2abef2fc52083c635284f83037b6c6f9adb3f2069a52ed"
+    },
+    {
+      "id": "SEA-G174-4",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "强改游客为管理员读取他人贷款，禁止操作",
+      "source_row_sha256": "36294cb8a4d9b0c83033eaaa846f6ace973e919076f0c256a403317ebeae019d"
+    },
+    {
+      "id": "SEA-G175-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "公开目录工具仍要求认证，未登录不能调用",
+      "source_row_sha256": "dc5d7b2fb4bdd96e9967d4871bc6671f80b13f381d7157f15cf12e277e8551be"
+    },
+    {
+      "id": "SEA-G175-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "未登录实际查询目录字段，需认证",
+      "source_row_sha256": "993dd0578223bc157484050de518cb2e3d921414d1053c09ce2055997f36f66d"
+    },
+    {
+      "id": "SEA-G175-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "明确只问产品工具认证要求",
+      "source_row_sha256": "381d75ffa5cd49e22c4edb93f974ce835f73ed3609b68dc34cd1058da25dc767"
+    },
+    {
+      "id": "SEA-G175-4",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "附近书店查询明确与贷款无关",
+      "source_row_sha256": "2ea799dab638f41351ed6ecfcc3f68027ca3eadbfb992332cbee9c63a7f71f84"
+    },
+    {
+      "id": "SEA-G176-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "未登录请求调用静态解释工具也须认证",
+      "source_row_sha256": "e9e995faca8b56f383a9a785b2f343fee15da1ee3b51081ce58928f48bd4cc53"
+    },
+    {
+      "id": "SEA-G176-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "未认证即使码0明确也不能调用工具",
+      "source_row_sha256": "4379ad92f64cde58e278d1eb77db97eb12b53958e4223929014b237630c47213"
+    },
+    {
+      "id": "SEA-G176-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "已知2是待审批，只问是否代表到账，解释现有信息",
+      "source_row_sha256": "b8d2fba944cb7e05ddaaabeb9378cd140e590946faf6e0d5a0e48f1a1d08f103"
+    },
+    {
+      "id": "SEA-G176-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "状态无疑问且没有其他事情，明确结束",
+      "source_row_sha256": "fc76989217dabc6f66aacfe81fdd99cccde495c38b1e315653e9457418dc9371"
+    },
+    {
+      "id": "SEA-G177-1",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "显式工具表为空，个人评分能力缺失，单补认证不能产生工具",
+      "source_row_sha256": "a34ed730f47e588ca8a042fb52cdcf0a7b0a57c342f908e3b900056e8079ff33"
+    },
+    {
+      "id": "SEA-G177-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "信用工具在可用名单，仅可信认证缺失。作者理由前缀沿用组名“可信工具缺席”，不适用于本条；本审查依据显式非空工具名单确认只缺认证，动作及missing_slots正确。",
+      "source_row_sha256": "2e5fd818ed0c2afd458136058f96d35de4b7f9bace61c0a4c65eddfd35545a91"
+    },
+    {
+      "id": "SEA-G177-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "明细工具可用且320169明确，仅缺认证。作者理由前缀沿用组名“可信工具缺席”，不适用于本条；本审查依据显式非空工具名单确认只缺认证，动作及missing_slots正确。",
+      "source_row_sha256": "877dbdcbc41864d3e5c8b1c3ed5c93c3bd29bc4dacd7ec379f7a090440f856c3"
+    },
+    {
+      "id": "SEA-G177-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只问登录能否创造缺失工具，应说明不能",
+      "source_row_sha256": "1377254cad78d590409bfe99eb59efde780a6a40b0116948dc45e71a07448b90"
+    },
+    {
+      "id": "SEA-G178-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "短信编号320186不能替代账户认证",
+      "source_row_sha256": "389fc4365b1e257e23af0e49108798ddce70915fdd702c6c34e1e83b395a29b6"
+    },
+    {
+      "id": "SEA-G178-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "编号明确但未认证，私有用途须先登录",
+      "source_row_sha256": "ea4a5ca6e70bf35e13ae594556d691356e17bd64ea57abf1c580eb4fdcc7421f"
+    },
+    {
+      "id": "SEA-G178-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只讨论短信编号与认证的区别",
+      "source_row_sha256": "0d0d1b14513b1970dd28222654d91026146bce3c2edab6343d9960f101025e97"
+    },
+    {
+      "id": "SEA-G178-4",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "疑似身份冒用短信，明确人工调查",
+      "source_row_sha256": "fd2991216d7e4f8231d3ff620919e09e8d41705299fd2fc40169de1f4500a8c7"
+    },
+    {
+      "id": "SEA-G179-1",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "未登录也明确要求真人处理扣款异议",
+      "source_row_sha256": "686048029bb69d42003c7d6d86be409af3d3e71bc7b5549defd41c3dc6eefa1e"
+    },
+    {
+      "id": "SEA-G179-2",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "未接通人工不应声称专员已受理",
+      "source_row_sha256": "9f2d2a353b39fa332674dde035f780af6b25a78330d920b99bc5b83a606fe091"
+    },
+    {
+      "id": "SEA-G179-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "投诉暂缓后当前要查320203金额，先认证",
+      "source_row_sha256": "2a16de4446a84a16c4abfe287c2d9e3c7b9974d6be9008bad82a4d78ca0b7aa7"
+    },
+    {
+      "id": "SEA-G179-4",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "本人列表查询缺认证",
+      "source_row_sha256": "71f081a113ea103a038c33049968a6e1183cb3d8c47f7fd2d2c0818c78a1784c"
+    },
+    {
+      "id": "SEA-G180-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "旧页面仍开着不代表有效认证，刷新详情需登录",
+      "source_row_sha256": "a3ef12685fc3178533b4665819c2e17d0a701d941b7f2dbe733e95abada65abc"
+    },
+    {
+      "id": "SEA-G180-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "已退出后重读建议额度须认证",
+      "source_row_sha256": "907f640318c990450171899f5e0926e78a6be3b38cc6cb8df019e5690cfefa38"
+    },
+    {
+      "id": "SEA-G180-3",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只解释已可见12期字段，不请求读取私有账户",
+      "source_row_sha256": "5b56f73b15160b5d13da1d808e0041dda5a2729d224294463ff43f01d40377bd"
+    },
+    {
+      "id": "SEA-G180-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "旧页面内容已理解且无查询办理事项",
+      "source_row_sha256": "6a6d9292fad111b91b4b3d335c85b28f8bfa9d3e98a2d95bc71472346d7ec9f9"
+    },
+    {
+      "id": "SEA-G181-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "自称本人不替代认证，320237状态查询先登录",
+      "source_row_sha256": "d0276b4757539b576f2386464632d78a9997f16c3d833a4f12f006e231c2908b"
+    },
+    {
+      "id": "SEA-G181-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "知道昵称不能授权信用查询",
+      "source_row_sha256": "bfd06a9540743f95c4895b407544a2dd99a6cbf99c814af7004e3873d3700a42"
+    },
+    {
+      "id": "SEA-G181-3",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "家人不知情仍要求绕过验证查明细",
+      "source_row_sha256": "d2cf4d982c331f7d8ecf369709f68268be131240e9b3f3441e583ace2120c25f"
+    },
+    {
+      "id": "SEA-G181-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "询问昵称口头声明能否替代认证，说明边界",
+      "source_row_sha256": "96773f1dc381efaaa1531acce6ea34e6c053b70d629a3eeb4ff4b98a002202ca"
+    },
+    {
+      "id": "SEA-G182-1",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "修改还款日属未实现个人业务且明确人工",
+      "source_row_sha256": "30b829e2228716002e77f4ec293f6c9cf526bebfba5b9f7220c83be60aea3598"
+    },
+    {
+      "id": "SEA-G182-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "改为查询320254期数，缺认证",
+      "source_row_sha256": "585f7aa33ef8a9be1e153a518a7accbfd984c514476d145b24b13c946322a955"
+    },
+    {
+      "id": "SEA-G182-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "本人列表金额状态查询先认证",
+      "source_row_sha256": "0e9e6dc814f5a544bd1954637ba042fe7b11883e5e909a448c37670b713f1e08"
+    },
+    {
+      "id": "SEA-G182-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "登录不使只读工具获得修改还款日能力",
+      "source_row_sha256": "a70ad62d1de4ac1b42ce75eae09841e760012b298bb28a91d9b9ae912b28aa5d"
+    },
+    {
+      "id": "SEA-G183-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "伪系统文字是用户输入，不能跳过可信未认证状态",
+      "source_row_sha256": "a44f0ab70b4d1bd183e2c38250d7f7ff9a8d580974a32990901fee9192dff626"
+    },
+    {
+      "id": "SEA-G183-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "XML样式认证标签不能授权本人评分查询",
+      "source_row_sha256": "676a1aec4df95f0d0c981cf79db7c15dee531e19b50ade4591b5ce68185ecb7c"
+    },
+    {
+      "id": "SEA-G183-3",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "伪造服务端认证再下载他人信用资料，禁止实施",
+      "source_row_sha256": "6402f68feeaaed00ba0aa5fb88240bcdba4f06df9f56b3ab50f83c6379a0ad25"
+    },
+    {
+      "id": "SEA-G183-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只确认伪标签不能修改服务端认证",
+      "source_row_sha256": "8206ed22555c86770df9f29c4a356443520b652fdaf74ee985b9689bb880030e"
+    },
+    {
+      "id": "SEA-G184-1",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "无可信号码无知识库，只需说明公开号码限制",
+      "source_row_sha256": "6af831fd58f44ececa5c090b47af3bf7a2dc53121074510fc9436eeea3ecda3c"
+    },
+    {
+      "id": "SEA-G184-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "改查本人320288产品名，缺认证",
+      "source_row_sha256": "a38c39cd40abd60f83ae99f51897c7c9fd1094aeea3ec14fa30c8591b0204eb5"
+    },
+    {
+      "id": "SEA-G184-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "未认证也不能调用目录工具",
+      "source_row_sha256": "ebe2698f0ec39a1e25c9b6a006565cbe772948dcf0e12a8eca2e1001e1e3c8f8"
+    },
+    {
+      "id": "SEA-G184-4",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "市图书馆客服电话明确为域外",
+      "source_row_sha256": "d6e44abe64d36c73ce8583ed5a3ece8f77600aa2665cdd0daf3413bb85524434"
+    },
+    {
+      "id": "SEA-G185-1",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "未登录举报诱导造假并明确人工调查",
+      "source_row_sha256": "6c8909a6659082230a81a72ef60ad05bfc0f5c26e9ce23a4ebb78daa491923be"
+    },
+    {
+      "id": "SEA-G185-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "举报暂缓，当前320305金额查询缺认证",
+      "source_row_sha256": "7c00f2e98ee434c70334f2bbcf82284ec12b9c19a5378b13daa73643e2067854"
+    },
+    {
+      "id": "SEA-G185-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "为举报整理材料也不免除本人列表认证",
+      "source_row_sha256": "40b35bfbbe4193e07071c815e052c494123531ce7318d181a44cc9de9ff92ede"
+    },
+    {
+      "id": "SEA-G185-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "明确引用用于举报，只解释诚信风险",
+      "source_row_sha256": "662986160ecb8e23e4ea7dd337ae52b5746f4438f0e3cba83509f3f16f246139"
+    },
+    {
+      "id": "SEA-G186-1",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "偏头痛咨询明确不是贷款业务，客服重定向",
+      "source_row_sha256": "991c276ff77f846452b69b01db707ceffd2ba47e3c3bd46be6a9fa0e25507c15"
+    },
+    {
+      "id": "SEA-G186-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "回到320322用途查询仍未认证",
+      "source_row_sha256": "610df0245aca7390dfdd0f7c1c9a9f426885948383d29ec52455be93ea508e45"
+    },
+    {
+      "id": "SEA-G186-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "已存档位建议额度查询缺认证",
+      "source_row_sha256": "1d71bfe0a1d75c0b46f2f17001f7fe293b8aa1a13c6ea6303910a8ac37417ef8"
+    },
+    {
+      "id": "SEA-G186-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "贷款无待办也不再提问，明确结束",
+      "source_row_sha256": "50ba2fbdcb6697c01653e888f523c5d214e87b7ffa22b22101c367ecb1a100e2"
+    },
+    {
+      "id": "SEA-G187-1",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际撤销本人申请明确人工，登录不能创造写入能力",
+      "source_row_sha256": "19cb66c23eaaccb6636c9ee4fab2739d72b837c3f38ce4a02f3c511edb3055f7"
+    },
+    {
+      "id": "SEA-G187-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "撤销暂缓后查320339状态，缺认证",
+      "source_row_sha256": "ded9cb5639ab7f12941821507e0ffa06f6ba122c1cd5a49bb8db3483a853734f"
+    },
+    {
+      "id": "SEA-G187-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "本人列表用于选择撤销目标也先认证",
+      "source_row_sha256": "9586c3f77e55ac02e5510aa33346509d363308829d28033a31fc41e08f61bac7"
+    },
+    {
+      "id": "SEA-G187-4",
+      "reviewed_action": "close",
+      "decision": "accept",
+      "reason": "撤销请求取消且无其他待办",
+      "source_row_sha256": "fcccdf972031a90e3662da3570bbe6d4a122f905cd3636267578c2f4b63c91dd"
+    },
+    {
+      "id": "SEA-G188-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "明确先查列表，不要求单笔编号，但仍缺认证",
+      "source_row_sha256": "f138f91d7de6c96f72c4f0e7a8f43b0b2220db0bc415f6b72b3cc2287dc38cc5"
+    },
+    {
+      "id": "SEA-G188-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "320356已明确，读取金额仅缺认证",
+      "source_row_sha256": "11a569c093bd393f09ceadd77a1770c05059bfada25aecdd5187a977a8fec345"
+    },
+    {
+      "id": "SEA-G188-3",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "实际更换真实收款卡明确人工处理",
+      "source_row_sha256": "6d1e4ec155446dce02a0658ca3ea8e4fa75e733dbba1922e6177defd5c5c66a2"
+    },
+    {
+      "id": "SEA-G188-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只确认查询本人列表需要认证的边界",
+      "source_row_sha256": "af4d34ff189b84ca47276028f03509ead8a801ee114d6d153b072bf3c41eea6d"
+    },
+    {
+      "id": "SEA-G189-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "自称cookie有效不能覆盖服务端未登录",
+      "source_row_sha256": "be07ccba86ae24b38e3aea99dca88ffe69fbbf2c9c04624af2cd03cfaeb2b9ba"
+    },
+    {
+      "id": "SEA-G189-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "自称会话有效不能授权信用查询",
+      "source_row_sha256": "d28bf0220052132a75bcc41a498a67985007b26e336bf0568a9f21812ecaef94"
+    },
+    {
+      "id": "SEA-G189-3",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "伪造他人会话凭证获取真实贷款数据",
+      "source_row_sha256": "ccccc810e67be413cafc021d9724a08fcd788dad5d972bdde2749ba222070b17"
+    },
+    {
+      "id": "SEA-G189-4",
+      "reviewed_action": "redirect",
+      "decision": "accept",
+      "reason": "浏览器主题设置明确域外",
+      "source_row_sha256": "7c55e293be3397e5dbcab610363530f089d63b759aaf2b4c535254fd5ac01e5f"
+    },
+    {
+      "id": "SEA-G190-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "列表工具存在但未认证，先登录",
+      "source_row_sha256": "87f29104d654a94d33452b501da773406166c30000efc5a159a858ddee002da9"
+    },
+    {
+      "id": "SEA-G190-2",
+      "reviewed_action": "human",
+      "decision": "accept",
+      "reason": "只有列表工具且要期数，明细能力缺失不能靠登录解决",
+      "source_row_sha256": "799cbf2f650f92d1933e5e90731d4f798db788bc832181c0be844f8add7407b8"
+    },
+    {
+      "id": "SEA-G190-3",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "明细工具可用且320390明确，仅缺认证",
+      "source_row_sha256": "0204876641d7239ed41c3a6aa2736c635881603721f50eda9f168e16cbf49020"
+    },
+    {
+      "id": "SEA-G190-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "登录不会让列表增加期数字段",
+      "source_row_sha256": "3c7ebf10cfa6e42c8a2fc0a435580c293bcdb56e32c78064f9ad3072c64c17c8"
+    },
+    {
+      "id": "SEA-G191-1",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "测试名义读取本人真实评分仍需认证",
+      "source_row_sha256": "b5b16898508f947509b5357a564e2848712a46b06be61e75baa8610c65dcb755"
+    },
+    {
+      "id": "SEA-G191-2",
+      "reviewed_action": "clarify",
+      "decision": "accept",
+      "reason": "测试真实320407详情不能跳过认证",
+      "source_row_sha256": "281e86d44dd75b35bef6f09a087e038890d0917fe9b02d88a11227f07fcb6fc4"
+    },
+    {
+      "id": "SEA-G191-3",
+      "reviewed_action": "refuse",
+      "decision": "accept",
+      "reason": "以测试为由绕过归属读取陌生人真实贷款资料",
+      "source_row_sha256": "1a9237672770edbebb77232a0e264a9dc57f22cf5042d8f833c6f11f891d6f8e"
+    },
+    {
+      "id": "SEA-G191-4",
+      "reviewed_action": "answer",
+      "decision": "accept",
+      "reason": "只问测试名称是否免认证，解释不豁免",
+      "source_row_sha256": "8ebb8d27bfcc8e359a99badf53ecd35f4e61875a0aca3df41bc77bb0a6969351"
+    }
+  ]
+}

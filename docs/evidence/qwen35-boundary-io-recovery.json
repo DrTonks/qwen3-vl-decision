@@ -1,0 +1,21 @@
+{
+  "failure_at_beijing": "2026-10-02T19:56:54+08:00",
+  "failure_after_step": 38,
+  "error_type": "PermissionError",
+  "winerror": 5,
+  "failure_operation": "replace status.json.part -> status.json",
+  "root_cause": "Unconfirmed; coincided with progress observation; live file sharing contention suspected",
+  "checkpoint_restored": 7,
+  "resumed_at": "2026-10-02T21:18:43.5325741+08:00",
+  "protocol_sha256": "525576f9f9c708ccab86524073e092918253e00f2db5e4ed68bdbcd78c9011be",
+  "last_observed_logged_step": 108,
+  "continuous_steps": true,
+  "archive_files": [
+    "uncheckpointed-1790947196364553900.json"
+  ],
+  "original_execution_unchanged": true,
+  "model_api_requests": 0,
+  "observer": "scripts/watch-qwen35-boundary.ps1",
+  "observer_sha256": "9efdaf6e13197e2b71e4df86b581da78b64d7b9172da535cfbecacb4e4fbebc5",
+  "latest_valid_checkpoint": 100
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": "financial-state-pair-schedule-review-v1",
+  "reviewer": "independent-agent/state_pair_code_review",
+  "source_sha256": {
+    "src/qwenlab/financial_state_pair_schedule.py": "fe547c7ed009ab6823a6912a81556ebf10ada0e13a34c16614a6514afe2b1502",
+    "configs/financial-state-pair-schedule-v1.json": "def77a3b930c17847dd630125af3e4eec80546f358d17eff6fd9f0eee771d3af",
+    "tests/test_financial_state_pair_schedule.py": "a35422a4f9269d87aec88a7240398b34e86d7a24cea20b859b201792d1e920e7"
+  },
+  "schedule_manifest": {
+    "path": "data/financial-state-pair-study-v1/schedule-v1/manifest.json",
+    "sha256": "51ff1813fa6ad420b2c167e76731eb7826fa77b9d88c78267ad1c8328656668f"
+  },
+  "conclusion": "No blocking findings in the reviewed CPU-only schedule. Independent read-only plan replay, token accounting and exposure-ledger checks match the frozen outputs.",
+  "blocking_findings": [],
+  "verification": {
+    "steps": 400,
+    "effective_batch": 8,
+    "micro_batch": 2,
+    "total_positions": 3200,
+    "frozen_plan_and_replacement_ledger_replay": "pass",
+    "all_position_layer_auth_knowledge_action_tool_cells_preserved": true,
+    "new_candidate_rows": 136,
+    "candidate_exposures_per_half": 1,
+    "total_candidate_exposures": 272,
+    "old_pairs": 10,
+    "old_anchors": 17,
+    "old_anchor_insertions_before_step_200": 9,
+    "old_anchor_positions_preserved": true,
+    "old_fine_missing_slot_buckets_retained_in_each_half": true,
+    "changed_positions": 281,
+    "max_row_exposure_actual": 4,
+    "max_row_exposure_cap": 4,
+    "max_group_exposure_actual": 8,
+    "max_group_exposure_cap": 16,
+    "candidate_model_inputs_and_annotations_unchanged": true,
+    "candidate_training_eligible": false,
+    "candidate_human_reviewed": false,
+    "candidate_token_inventory_exact_coverage_and_types": "pass",
+    "token_totals_and_microbatch_padding_recomputed": "pass",
+    "all_3200_exposure_ledger_rows_recomputed": "pass",
+    "frozen_output_hashes_match": true,
+    "reviewed_source_hashes_match_frozen_manifest": true
+  },
+  "source_closure_review": {
+    "method": "Read-only source inspection and direct frozen-output hash checks; did not invoke load_sources or verify functions that create replay scratch outputs.",
+    "observed_dependencies": [
+      "Parent schedule and actual parent dependency closure",
+      "Candidate readiness manifest, files and source bindings",
+      "Candidate live verifier and its Node backend source replay checks",
+      "New scheduler, config, tests, frozen audit and helper sources"
+    ],
+    "full_transitive_source_hash_replay_run_by_this_reviewer": false
+  },
+  "interpretation": [
+    "The additions migrate split metadata from candidate to train solely for the existing design-only sampler; training_eligible and human_reviewed remain false.",
+    "No training or deployment approval is conveyed by this CPU schedule.",
+    "New preauth rows intentionally repeat across halves, as explicitly documented in the config.",
+    "This compares a joint change in story content, guaranteed exposure and replacement; it is not an isolated paired-loss or equal-FLOPs experiment."
+  ],
+  "activity": {
+    "heldout_examples_read": false,
+    "predictions_read": false,
+    "training_run": false,
+    "gpu_used": false,
+    "model_weights_loaded": false,
+    "model_api_requests": 0,
+    "full_blind_screen_rerun": false,
+    "code_modified": false,
+    "frozen_data_modified": false,
+    "unit_tests_rerun_by_this_reviewer": false,
+    "only_new_evidence": "docs/evidence/financial-state-pair-schedule-review.json"
+  }
+}

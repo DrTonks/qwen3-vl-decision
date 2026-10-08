@@ -1,0 +1,143 @@
+{
+  "version": "financial-eight-actions-pilot-execution-v1",
+  "run_name": "financial-eight-actions-pilot-v2",
+  "config": {
+    "version": "financial-eight-actions-pilot-v2",
+    "status": "data_and_protocol_preparation",
+    "base_checkpoint": "models/Qwen3-VL-2B-Instruct",
+    "initial_adapter": null,
+    "model_downloads": false,
+    "jev_requests": 0,
+    "precision": "nf4",
+    "dtype": "bfloat16",
+    "attention": "sdpa",
+    "tasks": [
+      "action",
+      "tool"
+    ],
+    "tool_task_training": "only true tool-action training rows; separate prompt/prefill",
+    "inference": "action first; tool task only when predicted action is tool; arguments and ownership validated separately",
+    "claim_limit": "action-only runs cannot claim learned tool selection or model-generated arguments",
+    "lora": {
+      "r": 8,
+      "alpha": 16,
+      "dropout": 0.05,
+      "targets": [
+        "q_proj",
+        "v_proj"
+      ],
+      "visual_frozen": true
+    },
+    "pilot": {
+      "seed": 20261001,
+      "max_steps": 200,
+      "micro_batch": 2,
+      "gradient_accumulation": 4,
+      "learning_rate": 5e-05,
+      "warmup_steps": 20,
+      "weight_decay": 0.01,
+      "checkpoint_steps": [
+        100,
+        200
+      ],
+      "max_input_tokens": 2048,
+      "action_loss_weight": 1.0,
+      "tool_loss_weight": 0.75,
+      "sampling": "uniform over nonempty train (action, capability_profile) strata, then uniform group, then uniform row; record actual coverage and repeats; no eval replay",
+      "extension": "none without explicit successful development gate and a new recorded budget"
+    },
+    "development_gate": {
+      "minimum_macro_f1_gain_over_same_prompt_base": 0.01,
+      "minimum_per_action_recall": 0.8,
+      "minimum_human_recall": 0.95,
+      "maximum_extra_human_misses_over_base": 0,
+      "maximum_extra_false_refusals_on_non_refuse_over_base": 0,
+      "maximum_unavailable_knowledge_retrievals": 0,
+      "minimum_joint_action_tool_accuracy_on_true_tool": 0.9,
+      "minimum_status_tool_accuracy": 0.9,
+      "required_comparison": "raw model results; backend guards and parameter grounding reported separately"
+    },
+    "calibration": {
+      "usage": "temperature and fallback thresholds only after development selects a candidate",
+      "never_train": true
+    },
+    "final": {
+      "usage": "one fixed candidate versus same-prompt base after selection and calibration freeze",
+      "never_train_or_select": true
+    },
+    "speed": {
+      "warmup_requests": 10,
+      "report": [
+        "p50",
+        "p95",
+        "input_token_distribution",
+        "action_only",
+        "action_plus_conditional_tool",
+        "backend_grounding"
+      ],
+      "quality_gate_override": false
+    },
+    "uncertainty": "group resampling must cluster by macro_scene; each split has only eight macro stories, so confidence intervals and real-user generalization are limited",
+    "limitations": [
+      "Synthetic author/reviewer bias remains",
+      "New eight-action contract is incompatible with V5 merged tool classes",
+      "No multimodal evidence",
+      "No Jev comparison until separate API budget is authorized"
+    ]
+  },
+  "dataset_manifest_sha256": "94e8454e17a2f4ae716c0f03385c18e1844d1162622cf9fe8cd3ee43796eaf30",
+  "parent_manifest_sha256": "5f4d778d584b02557a67e1fe0097c17dc2eb418213a28f0ca0e137243a807773",
+  "prompt_sha256": "817bd6578c99ee0dce3d5e1d784830ce1d70cd85a9ff54f6cdf8ec34515f2b36",
+  "source_sha256": {
+    "src/qwenlab/financial_train.py": "1d6cc12c18531f01d1ab21aae1d7ae19f8e439e916bd87fd2152ed6ceb49c917",
+    "src/qwenlab/financial_actions_prompt.py": "817bd6578c99ee0dce3d5e1d784830ce1d70cd85a9ff54f6cdf8ec34515f2b36",
+    "src/qwenlab/financial_actions_metrics.py": "3d4f63967b1748116ea820d2dfdd0ab368926c16f8ee5863d4fbcf9903022a73",
+    "src/qwenlab/financial_ready.py": "450683f8f1ccc7a88e7df447b2ab61f496b88181055656532ac22ac9b2263085",
+    "src/qwenlab/financial_pilot.py": "8ecf6e5b757957cb889768f86827de6009578b1012cb1643fd2f3506fb698ab1",
+    "src/qwenlab/financial_release.py": "820defcdd6363226225ae380735a06500bb27ce46eb06fff9a47aefe05689eeb",
+    "src/qwenlab/financial_release_core.py": "7f6ab2d2df84f4d275459b2eefd14db903145f65540c362d5cc7a4c07b2b4d1b",
+    "src/qwenlab/financial_completion.py": "1b7973b8307e51c9e61fd1d7663d6ab5538ed2c6f35971c92c547abdf6e408b2",
+    "src/qwenlab/financial_expansion.py": "9f0cfb28bf43f8df5dd204b23272c8cec639a50717777f1f4526875cfa5b0b8e",
+    "src/qwenlab/prepare_v2.py": "ab1e6aebfd9aa452d3c5112dbca8e570527e6b39ba9e75316410132a18d7390b",
+    "src/qwenlab/modeling.py": "fbcac24e76e3afee2804e09669a52786cf2d603bbcb9c95ccd423d2673d2264e",
+    "src/qwenlab/joint_v4.py": "26378ca85470108c880bb4eae98f93a6969d5938c96b238596727c2e8d46e0db",
+    "src/qwenlab/joint_v5.py": "80190210f3c07578768e27120dd48b97192b01a90b6f8b97f32bcc7c44f15ed7",
+    "src/qwenlab/candidate_inference.py": "ba00fe89818d4549b2b124ecb549e1c0dff8c5513434427d8495b32656bed547",
+    "src/qwenlab/common.py": "9a2aa40b6dc8a94aba7ac1fe0c2a85d60f8465b465532ea4d12ea98d190606d1",
+    "scripts/start-financial-pilot.ps1": "5fe7de2eaebea0a43b00f21ea882029aa183b8c16b887622d02b2ec003f8329f",
+    "scripts/pause-financial-pilot.ps1": "5d0c1ac30d01e8467eee8caa49872c54f15bfea4793254fe2a93f14ad93ba255",
+    "scripts/resume-financial-pilot.ps1": "ecd647585fd384e1c1d4472a3f70c5f3b0f10b65e864211a044ea2df42667fdf",
+    "scripts/use-env.ps1": "114190e9dfe979dafa92fb23fa110acc9fa55a0d07aa8673afdb96ba14779cca"
+  },
+  "model_files": {
+    "chat_template.json": "6f8a6a55027e3da5160105556cda5dd69f6423f1c32645f6730d32de7773d0c4",
+    "config.json": "bec4b3d446efa05807365c9e1cec03ac590836879d02f3a6da879971154bdd3b",
+    "download_manifest.json": "1a576d7c6d56eefea5a46cb0d82160c05a0810b22266fdf562d44569a0ecf02c",
+    "generation_config.json": "1e241830b48b397cb0900101421df5450baddc7adf01e5fc86b5615865f3bae4",
+    "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+    "model.safetensors": "7de1838c87a5349b016c26a1c3f7d2bc400a3d485f95ef39a7059ffd734977a0",
+    "preprocessor_config.json": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+    "README.md": "5fc5be1ca9a3910399bd6239ee5086ab5d82a2a59c5d2b00e887a8835cc110e4",
+    "tokenizer.json": "a5d85b6dcc535e6b93115a9ef287e6132fdbf30270da6218194ba742261173c7",
+    "tokenizer_config.json": "c2da771801886ad9ae98181793ffd3dfb7f1af30f6f7c6a4e15d7dbba52e2399",
+    "video_preprocessor_config.json": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "packages": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.57.1",
+    "peft": "0.17.1",
+    "bitsandbytes": "0.48.1",
+    "accelerate": "1.10.1",
+    "numpy": "2.2.6",
+    "psutil": "7.2.2"
+  },
+  "evaluation": "development only; calibration and final never evaluated here",
+  "baseline_preparation": "same NF4 and k-bit nonquantized FP32 preparation as candidate, without any adapter",
+  "inference": "candidate projection with startup full-head verification, batch one; report any fallback",
+  "parameters": "no argument parser or backend requests in this component experiment",
+  "training_loss": "mean action CE + .75 times tool CE per true-tool row, divided by all sampled rows",
+  "selection": "after both fixed checkpoints, passing highest macro-F1; ties joint tool then lower step",
+  "manual_pause": "extra durable checkpoints allowed for interruption only, never selection",
+  "budget": "200 optimizer updates; no automatic extension or vendor requests"
+}

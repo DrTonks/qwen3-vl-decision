@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "at": "2026-10-02T05:29:03.159216+00:00",
+  "requests": 1152,
+  "model": "jev-1.13.0",
+  "input_tokens": 1356965,
+  "estimated_input_cost_usd": 0.056992530000000007,
+  "protocol_sha256": "1660df69b6a7de39a1de595053d3e6519cc6f620f9c445e8371337c2a59ec013",
+  "retries": 0,
+  "final_scored": false,
+  "training_allowed": false
+}

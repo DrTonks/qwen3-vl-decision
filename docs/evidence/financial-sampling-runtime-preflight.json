@@ -1,0 +1,31 @@
+{
+  "version": "financial-sampling-runtime-preflight-v1",
+  "status": "pass",
+  "probe_summary_sha256": "b517d14ffbe46dd6f8f8417d60f1b98251887056b78f16a034c4405be1fb318b",
+  "review_sha256": "9608f3ab966b35dc0f2ff9f92196bf7bc04fcf6e0a41a55fb47b97674a8c40a9",
+  "probe_protocol_sha256": "c45da9f4e71c509617c963f5d3eee97c310a2e0f8dab23d794596d4d29ed278b",
+  "common_binding_sha256": "07dc7f163c814f325f2e4793045b6a793c875c4c403899f7250e42b5d2ac8395",
+  "actual_probe_steps": 50,
+  "real_pause_resume_verified": true,
+  "arms": {
+    "uniform": {
+      "steps": 25,
+      "median_step_s": 4.1983514499952435,
+      "training_elapsed_s": 102.86213729996234,
+      "peak_allocated_gib": 1.9873690605163574,
+      "initial_parameter_sha256": "a393388446d4af8f5c668a48d719d2ed158b4cba32e13de3b469395e0d990a25",
+      "finite_losses_and_gradients": true
+    },
+    "stratified": {
+      "steps": 25,
+      "median_step_s": 4.100653299996338,
+      "training_elapsed_s": 103.29757710003469,
+      "peak_allocated_gib": 1.9764509201049805,
+      "initial_parameter_sha256": "a393388446d4af8f5c668a48d719d2ed158b4cba32e13de3b469395e0d990a25",
+      "finite_losses_and_gradients": true
+    }
+  },
+  "model_api_requests": 0,
+  "evaluation_rows_used": 0,
+  "scope": "Execution smoke only; no model quality claim; actual probe adapters excluded from main"
+}

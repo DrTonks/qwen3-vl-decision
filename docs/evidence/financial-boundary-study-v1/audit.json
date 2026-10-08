@@ -1,0 +1,338 @@
+{
+  "study_protocol_sha256": "525576f9f9c708ccab86524073e092918253e00f2db5e4ed68bdbcd78c9011be",
+  "recovery_source_sha256": "4dc065aaafcc5e26ac7cc3a3808b32cb4a8c893c5d1ca250f0d5f01ef780d4a3",
+  "original_status": {
+    "stage": "failed",
+    "updated_at": "2026-10-03T02:33:25.860949+00:00",
+    "pid": 9256,
+    "process_created": 1790988853.1043007,
+    "run_name": "financial-qwen35-boundary-v1",
+    "error_type": "ValueError",
+    "error": "Compare the same frozen prompt and protocol"
+  },
+  "original_status_sha256": "68b8d0a2a098c2697515a560b2908045314751cc7d9d1d5b157888da9abd0b3e",
+  "repair": "Verify exact arm/study contracts, then re-evaluate raw baseline under each arm hash before unchanged gate",
+  "development": [
+    {
+      "variant": "raw_base",
+      "accuracy": 0.3046875,
+      "macro_f1": 0.15596016667291107,
+      "joint": 0.609375,
+      "human_misses": 63,
+      "false_refusals": 0,
+      "p50_ms": 67.58744999979172,
+      "p95_ms": 128.15290500002448,
+      "historical_timing": true
+    },
+    {
+      "variant": "initial_step2976",
+      "accuracy": 0.9765625,
+      "macro_f1": 0.9770000876936102,
+      "joint": 0.96875,
+      "human_misses": 3,
+      "false_refusals": 2,
+      "p50_ms": 121.92329999925278,
+      "p95_ms": 232.43564499944114,
+      "historical_timing": true
+    },
+    {
+      "variant": "replay/step-384",
+      "accuracy": 0.9661458333333334,
+      "macro_f1": 0.9693095838835439,
+      "joint": 1.0,
+      "human_misses": 4,
+      "false_refusals": 0,
+      "p50_ms": 73.16275000266614,
+      "p95_ms": 149.24153499632664,
+      "historical_timing": false
+    },
+    {
+      "variant": "replay/step-768",
+      "accuracy": 0.96875,
+      "macro_f1": 0.9711291224387308,
+      "joint": 0.9375,
+      "human_misses": 2,
+      "false_refusals": 1,
+      "p50_ms": 72.11054999788757,
+      "p95_ms": 145.48666000009686,
+      "historical_timing": false
+    },
+    {
+      "variant": "replay/step-1530",
+      "accuracy": 0.96875,
+      "macro_f1": 0.9676225902446534,
+      "joint": 0.921875,
+      "human_misses": 1,
+      "false_refusals": 2,
+      "p50_ms": 198.197199999413,
+      "p95_ms": 418.52142500210897,
+      "historical_timing": false
+    },
+    {
+      "variant": "overlay/step-384",
+      "accuracy": 0.9713541666666666,
+      "macro_f1": 0.9727942098755513,
+      "joint": 0.953125,
+      "human_misses": 3,
+      "false_refusals": 2,
+      "p50_ms": 76.49085000002742,
+      "p95_ms": 153.22629999990338,
+      "historical_timing": false
+    },
+    {
+      "variant": "overlay/step-768",
+      "accuracy": 0.9713541666666666,
+      "macro_f1": 0.9700118808953352,
+      "joint": 0.984375,
+      "human_misses": 3,
+      "false_refusals": 1,
+      "p50_ms": 174.5557500000814,
+      "p95_ms": 445.69325000004477,
+      "historical_timing": false
+    },
+    {
+      "variant": "overlay/step-1530",
+      "accuracy": 0.9661458333333334,
+      "macro_f1": 0.9650790718184209,
+      "joint": 0.921875,
+      "human_misses": 2,
+      "false_refusals": 3,
+      "p50_ms": 83.90790000021298,
+      "p95_ms": 166.9136099994375,
+      "historical_timing": false
+    },
+    {
+      "variant": "Jev-1.13.0-cached",
+      "accuracy": 0.8255208333333334,
+      "macro_f1": 0.8570483658123437,
+      "joint": 0.71875,
+      "human_misses": 30,
+      "false_refusals": 0,
+      "p50_ms": 462.32864999910817,
+      "p95_ms": 538.6314699992907,
+      "historical_timing": true
+    }
+  ],
+  "gates": {
+    "replay/step-384": {
+      "passed": false,
+      "failures": [
+        "human_recall"
+      ],
+      "usage": "development_only_not_final_selection"
+    },
+    "replay/step-768": {
+      "passed": false,
+      "failures": [
+        "extra_false_refusals"
+      ],
+      "usage": "development_only_not_final_selection"
+    },
+    "replay/step-1530": {
+      "passed": false,
+      "failures": [
+        "extra_false_refusals"
+      ],
+      "usage": "development_only_not_final_selection"
+    },
+    "overlay/step-384": {
+      "passed": false,
+      "failures": [
+        "extra_false_refusals"
+      ],
+      "usage": "development_only_not_final_selection"
+    },
+    "overlay/step-768": {
+      "passed": false,
+      "failures": [
+        "extra_false_refusals"
+      ],
+      "usage": "development_only_not_final_selection"
+    },
+    "overlay/step-1530": {
+      "passed": false,
+      "failures": [
+        "extra_false_refusals"
+      ],
+      "usage": "development_only_not_final_selection"
+    }
+  },
+  "coverage": {
+    "replay": {
+      "steps": 1530,
+      "positions": 12235,
+      "unique_rows": 11899,
+      "training_minutes": 111.54125239166994
+    },
+    "overlay": {
+      "steps": 1530,
+      "positions": 12235,
+      "unique_rows": 12235,
+      "training_minutes": 96.42362942333395
+    }
+  },
+  "changes_from_initial": {
+    "replay/step-384": {
+      "fixed": [
+        "FIN-F2-E-0084",
+        "FIN-F2-E-0131"
+      ],
+      "regressed": [
+        "FIN-F2-E-0002",
+        "FIN-F2-E-0078",
+        "FIN-F2-E-0193",
+        "FIN-F2-E-0338",
+        "FIN-F2-E-0341",
+        "FIN-F2-E-0350"
+      ]
+    },
+    "replay/step-768": {
+      "fixed": [
+        "FIN-F2-E-0084",
+        "FIN-F2-E-0369"
+      ],
+      "regressed": [
+        "FIN-F2-E-0009",
+        "FIN-F2-E-0078",
+        "FIN-F2-E-0088",
+        "FIN-F2-E-0132",
+        "FIN-F2-E-0341"
+      ]
+    },
+    "replay/step-1530": {
+      "fixed": [
+        "FIN-F2-E-0206",
+        "FIN-F2-E-0358",
+        "FIN-F2-E-0369"
+      ],
+      "regressed": [
+        "FIN-F2-E-0009",
+        "FIN-F2-E-0023",
+        "FIN-F2-E-0078",
+        "FIN-F2-E-0088",
+        "FIN-F2-E-0132",
+        "FIN-F2-E-0282"
+      ]
+    },
+    "overlay/step-384": {
+      "fixed": [
+        "FIN-F2-E-0358"
+      ],
+      "regressed": [
+        "FIN-F2-E-0009",
+        "FIN-F2-E-0078",
+        "FIN-F2-E-0341"
+      ]
+    },
+    "overlay/step-768": {
+      "fixed": [
+        "FIN-F2-E-0084",
+        "FIN-F2-E-0369"
+      ],
+      "regressed": [
+        "FIN-F2-E-0002",
+        "FIN-F2-E-0023",
+        "FIN-F2-E-0282",
+        "FIN-F2-E-0350"
+      ]
+    },
+    "overlay/step-1530": {
+      "fixed": [
+        "FIN-F2-E-0206",
+        "FIN-F2-E-0255",
+        "FIN-F2-E-0358"
+      ],
+      "regressed": [
+        "FIN-F2-E-0009",
+        "FIN-F2-E-0023",
+        "FIN-F2-E-0062",
+        "FIN-F2-E-0078",
+        "FIN-F2-E-0089",
+        "FIN-F2-E-0132",
+        "FIN-F2-E-0282"
+      ]
+    }
+  },
+  "overlay_vs_replay_changes": {
+    "384": {
+      "fixed": [
+        "FIN-F2-E-0002",
+        "FIN-F2-E-0193",
+        "FIN-F2-E-0338",
+        "FIN-F2-E-0350",
+        "FIN-F2-E-0358"
+      ],
+      "regressed": [
+        "FIN-F2-E-0009",
+        "FIN-F2-E-0084",
+        "FIN-F2-E-0131"
+      ]
+    },
+    "768": {
+      "fixed": [
+        "FIN-F2-E-0009",
+        "FIN-F2-E-0078",
+        "FIN-F2-E-0088",
+        "FIN-F2-E-0132",
+        "FIN-F2-E-0341"
+      ],
+      "regressed": [
+        "FIN-F2-E-0002",
+        "FIN-F2-E-0023",
+        "FIN-F2-E-0282",
+        "FIN-F2-E-0350"
+      ]
+    },
+    "1530": {
+      "fixed": [
+        "FIN-F2-E-0088",
+        "FIN-F2-E-0255"
+      ],
+      "regressed": [
+        "FIN-F2-E-0062",
+        "FIN-F2-E-0089",
+        "FIN-F2-E-0369"
+      ]
+    }
+  },
+  "result_bindings": {
+    "results/financial-qwen35-boundary-v1-replay/development/step-384/binding.json": "77aae75e976d3e75994c91176e8fa109ceb5dbf98e03610d6b3880b929b1c0b8",
+    "results/financial-qwen35-boundary-v1-replay/development/step-384/predictions.jsonl": "5211c51fc23d01b4636202ac367867c6364814334ca7c511d4fff01246feb492",
+    "results/financial-qwen35-boundary-v1-replay/development/step-384/metrics.json": "e6590ea529844ee1e7d29d50a5958b07c0d2c5657c88a4fb69abf3cd7ddc099e",
+    "results/financial-qwen35-boundary-v1-replay/development/step-384/timing.json": "7e349e56c424bf1ada85e63cd9b07985119ec199f08b2aa70ed69af7406301cf",
+    "results/financial-qwen35-boundary-v1-replay/development/step-768/binding.json": "6f0a34d03f13bc25d8d515091860b640eab5b8a7780d489ac6433015b9e10089",
+    "results/financial-qwen35-boundary-v1-replay/development/step-768/predictions.jsonl": "2df4cc599c9b46d5f7cef09c14f4b96d78827fa9aa62b42addd622daeeba3af4",
+    "results/financial-qwen35-boundary-v1-replay/development/step-768/metrics.json": "ee52b7426187a2e8a011d44ab70cb6e628c34b52f991b56dcf611c78f927a5ca",
+    "results/financial-qwen35-boundary-v1-replay/development/step-768/timing.json": "349e386457591b1197180340f0bb98e3a2c3266b84971c2592cd431f12d9b902",
+    "results/financial-qwen35-boundary-v1-replay/development/step-1530/binding.json": "302306ebbdb5bc27abaaadbefcf6fd27d8584dd3a8ddfd537baf4464ee27d3c9",
+    "results/financial-qwen35-boundary-v1-replay/development/step-1530/predictions.jsonl": "c90850b874df7731461a60560a64b702636b7ec3df0455c2dadb444b7cde7037",
+    "results/financial-qwen35-boundary-v1-replay/development/step-1530/metrics.json": "99a031e5e4d94af26886049483920b1ed9e8233d439b0769b88001283d720484",
+    "results/financial-qwen35-boundary-v1-replay/development/step-1530/timing.json": "692e1fe1466fb06f8eaa46f431641a670bd6f7acc4be0150096492e337e8520f",
+    "results/financial-qwen35-boundary-v1-overlay/development/step-384/binding.json": "e1d8543988cdac54ef15a2476880703664a4c4e6730ab080517c7b9747eedb1c",
+    "results/financial-qwen35-boundary-v1-overlay/development/step-384/predictions.jsonl": "f0efee56db8147a9d9e81ec323414b5b67b4dea58eeececcd8250f26a9b7ef19",
+    "results/financial-qwen35-boundary-v1-overlay/development/step-384/metrics.json": "6c97785aae68c1d7482b165ffd561d4367893ccaa544aca51055b35fd9c45dc8",
+    "results/financial-qwen35-boundary-v1-overlay/development/step-384/timing.json": "6493fde267b20bb291683fa0790e0a304973f0ba421eaeddb5f91f173221822a",
+    "results/financial-qwen35-boundary-v1-overlay/development/step-768/binding.json": "0e841e524a108e270d1a1b51232c284910660f22e97b59ca3fd4a5c3836bbbb7",
+    "results/financial-qwen35-boundary-v1-overlay/development/step-768/predictions.jsonl": "9a91bd07670e5503b5bc067782514e0082efb50e215690d97a690b02998d9929",
+    "results/financial-qwen35-boundary-v1-overlay/development/step-768/metrics.json": "be1a23a7170c8b526938b708bf666b306eb48ee7650ab0475afc4b031ef3936e",
+    "results/financial-qwen35-boundary-v1-overlay/development/step-768/timing.json": "429f5854f71768eec9588c70563a04bf64a71635aa226af4c95557f07ae4e825",
+    "results/financial-qwen35-boundary-v1-overlay/development/step-1530/binding.json": "da013d7825b08a4856a9e3d52a1f02cb5376f49de8fd6a6714425c4085dc85e5",
+    "results/financial-qwen35-boundary-v1-overlay/development/step-1530/predictions.jsonl": "f2a1b24d3400ea9b3d9ae761e94c1c1d815fb67eecab2b38dea07dd7f72cf3c6",
+    "results/financial-qwen35-boundary-v1-overlay/development/step-1530/metrics.json": "8b4ecc5841a1948be67057cc7f3aca490f5fa4b9359cd52ebd45a40b65c2d395",
+    "results/financial-qwen35-boundary-v1-overlay/development/step-1530/timing.json": "9a09005fb7dfce8869bc469eaf28231ce592f98fbe1f5588f9c0eb281b355c44"
+  },
+  "selected": null,
+  "passed": false,
+  "training_complete": true,
+  "final_evaluated": false,
+  "calibration_evaluated": false,
+  "model_api_requests": 0,
+  "new_training_steps": 0,
+  "deployed": false,
+  "limitations": [
+    "Repeatedly observed synthetic development with only eight macro stories",
+    "Historical and staged timings are not a controlled speed comparison",
+    "AI-reviewed synthetic boundary additions; no human review or multimodal training",
+    "Jev zero-shot project policy vs supervised Qwen; not a universal ability ranking"
+  ]
+}

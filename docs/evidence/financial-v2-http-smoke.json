@@ -1,0 +1,73 @@
+{
+  "status": "pass",
+  "fixture": true,
+  "realModelEvaluated": false,
+  "databaseRequests": 0,
+  "vendorRequests": 0,
+  "httpCalls": 10,
+  "ownerQueries": 1,
+  "fixtureRejectedByDefault": true,
+  "actions": [
+    {
+      "action": "clarify",
+      "finalAction": "clarify",
+      "calls": 1
+    },
+    {
+      "action": "retrieve",
+      "finalAction": "answer",
+      "calls": 1
+    },
+    {
+      "action": "tool",
+      "finalAction": "tool",
+      "calls": 2
+    },
+    {
+      "action": "answer",
+      "finalAction": "answer",
+      "calls": 1
+    },
+    {
+      "action": "human",
+      "finalAction": "human",
+      "calls": 1
+    },
+    {
+      "action": "redirect",
+      "finalAction": "redirect",
+      "calls": 1
+    },
+    {
+      "action": "refuse",
+      "finalAction": "refuse",
+      "calls": 1
+    },
+    {
+      "action": "close",
+      "finalAction": "close",
+      "calls": 1
+    }
+  ],
+  "policy_sha256": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+  "fixture_only": true,
+  "model_calls": 0,
+  "database_calls": 0,
+  "external_api_calls": 0,
+  "observed_http_inference_calls": {
+    "action": 9,
+    "tool": 1
+  },
+  "source_sha256": {
+    "qwen/scripts/verify-financial-v2-http.py": "090d1ab75ca4297df625d849cd87311f51471ab1563942196c067dc17e9bd5da",
+    "qwen/src/qwenlab/financial_serve_v2.py": "75c0684433213b82e12b36e9e1bf1ac923522157c34ea1b334cf58449eadb615",
+    "backend/scripts/verify-financial-v2-http.cjs": "15a3286a3eac16f43f64e741e1f559bbac55cb9273c171b0b8d001ca147ac067",
+    "backend/services/customerSupport/financialContract.js": "87a6b08b34aa5ed8f044ab5a3c676ad8882b2acc042c632833e9d8ad50a324ec",
+    "backend/services/customerSupport/financialProvider.js": "de60d4a9e6e479fe59d8b621feab405fbc33449e4cb48d41d389c718cfd85932",
+    "backend/services/customerSupport/financialOrchestrator.js": "d4de5f12106d022d1ce50aa30c2a5ea8afeb0d1f60b80786ec3fcdfc06418b08",
+    "backend/services/customerSupport/tools.js": "a2d756c8a883b8f62a9d281ebc89072a493fb54fce46cb8c3c361f6db01989fc",
+    "backend/services/customerSupport/parameters.js": "cdbd75fd8da71fa3d28282abd339655ed809dbe3f6bb3258f3bcf9d2d56ca085",
+    "backend/services/customerSupport/contract.js": "1394d283d115354c2bab22b067c1a61635c32659e3b0e86d62bd7b248b39e243",
+    "backend/services/customerSupport/responses.js": "26231e47b330b5eede2c0947bc9fdc550376f6dba9f76aba8a403bb26772c5cc"
+  }
+}

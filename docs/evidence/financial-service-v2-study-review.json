@@ -1,0 +1,102 @@
+{
+  "status": "pass",
+  "scope": "Study design and CPU tokenizer preflight only; new training executor is pending and not approved by this review.",
+  "reviewer": "/root/boundary_code_review",
+  "human_reviewed": false,
+  "evaluation_examples_read": false,
+  "evaluation_summary_statistics_read": true,
+  "model_scores_read": false,
+  "model_weights_loaded": false,
+  "model_api_requests": 0,
+  "training_started": false,
+  "files": {
+    "src/qwenlab/financial_service_v2_preflight.py": "b8a91281eb40c11d757a7d83b964fdc2f1c14b70e51172ff3c74f00926dd3773",
+    "configs/financial-service-v2-study.json": "31b7b3b8fa47f1c0f9924cf9531e3cddc2e854c21e2a7c57a7df01f13a97a7ef",
+    "src/qwenlab/financial_prompt_v2.py": "25033aa2a7a3fadf60e51ece0eebe3fdfbbd0626cc9f04654b9641a91a4629ef",
+    "src/qwenlab/financial_service_v2_data.py": "fffde21c3023d7064c5e55ff7fc991624590f3c808f389403c47a47fcb55eae2",
+    "configs/support-financial-v2.json": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+    "docs/evidence/financial-service-v2-tokenizer.json": "c3061b80b852cc71f4c647521520ae25d2cde03168f1300bf8230b0e94f8dbd1",
+    "docs/evidence/financial-service-v2-tokenizer-train.json": "7f6c66667f25cbb5375131cca96ebafa158773042277ff389eefa4b8a11271f0",
+    "data/financial-service-v2/train-summary.json": "b085f6af2ea2c7b89c1518897b6cc11b02a3b81318dba0ccbb4912fbdfeaa99d"
+  },
+  "checks": [
+    {
+      "name": "optimizer budget arithmetic",
+      "rows": 11756,
+      "effective_batch": 8,
+      "steps_per_epoch": 1470,
+      "epochs": 2,
+      "max_steps": 2940,
+      "last_batch_rows": 4,
+      "original_row_exposures": 23512,
+      "passed": true
+    },
+    {
+      "name": "loss denominator and tool objective",
+      "formula": "sum_i(CE_action_i + 0.75 * I(true_action_i == tool) * CE_tool_i) / B",
+      "denominator": "actual original rows B, including final partial batch; not number of tool rows or emitted tasks",
+      "per_row_division_by_1_75": false,
+      "tool_row_weighting": "Intentionally adds a 0.75 tool CE objective; equal sampling does not imply equal total loss contribution.",
+      "executor_implementation_verified": false
+    },
+    {
+      "name": "training and API remain disabled",
+      "training_enabled": false,
+      "initial_adapter": null,
+      "model_api_requests": 0,
+      "probe": "50 training-only steps using disposable fresh adapter; discard and reinitialize main run; not executed by reviewer",
+      "passed": true
+    },
+    {
+      "name": "tokenizer evidence consistency",
+      "train_only_and_all_split_train_report_equal": true,
+      "local_tokenizer_files_hash_checked": 5,
+      "source_module_hash_checked": 2,
+      "max_observed_input_tokens": 682,
+      "max_allowed_input_tokens": 2048,
+      "truncation": false,
+      "candidate_token_ids_action": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "candidate_token_ids_tool": [
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "passed": true
+    },
+    {
+      "name": "baseline separation",
+      "same_prompt_original_Qwen_required": true,
+      "old_Qwen_V5_Jev_not_matched_baselines": true,
+      "old_api_scores_not_reused": true,
+      "passed": true
+    },
+    {
+      "name": "split usage",
+      "development": "200-step diagnostic only, 1470/2940 gate+selection",
+      "calibration": "only after development selection; frozen temperature and threshold before final",
+      "final": "fixed comparison, no selection or retraining from final errors",
+      "passed": true
+    }
+  ],
+  "findings": [],
+  "limitations": [
+    "Current authenticated no-KB service cohort is only 574/11756 = 4.8826%, versus planned retrieval 6860/11756 = 58.3532% and preauth robustness 4322/11756 = 36.7642%. Aggregate gains may not reflect the currently deployed backend; require separate current-service gates and report raw denominators.",
+    "Current-service training action counts include only human44/refuse31/close25/redirect30 and no retrieve by capability design. Do not infer reliable real-traffic safety from aggregate sample size.",
+    "Tokenizer evidence verifies formatting, candidate tokens and context budget only. It provides no model-quality, GPU memory or training-duration estimate.",
+    "The study is a design freeze with training_enabled=false. New executor, crash-safe checkpoints, pause/resume and single-GPU ownership still require implementation and independent review.",
+    "Tool objective is intentionally additional supervision; do not describe the loss as equal weight per original row. Executor must use the stated formula and actual partial-batch count.",
+    "No evaluation examples or model-score files were opened by this reviewer. Only permitted tokenizer aggregate statistics and training summary were read. Existing nine CPU tests were not rerun because their sources were unchanged.",
+    "The small synthetic development/calibration/final groups require denominators, intervals and group-aware uncertainty; passing gates is not a deployment certification."
+  ]
+}

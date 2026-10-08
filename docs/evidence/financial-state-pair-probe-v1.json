@@ -1,0 +1,31 @@
+{
+  "version": "financial-state-pair-probe-evidence-v1",
+  "source_run": "results/financial-state-pair-probe-v1",
+  "protocol_sha256": "18eb875ccf0a3d24d1aa40920b3d5f26ac5f81d5043a3f35545447fefa522557",
+  "summary_sha256": "c62a0cba3bdf59b02d4fd0c9fe301212b0342f03325c1eb1615184a4471192aa",
+  "pause_resume_sha256": "5aa0ff9abc56a519cf3c618ac3342d5b5bc73726b4349047b74abe217584af5b",
+  "status": "complete",
+  "optimizer_steps": 25,
+  "real_pause_resume_verified": true,
+  "saved_step": 12,
+  "resumed_next_step": 13,
+  "prior_worker_exited": true,
+  "restored_hashes_match": true,
+  "probe_adapter_used_for_main": false,
+  "median_step_s": 3.7185089999998127,
+  "main_training_minutes_estimate": 24.79005999999875,
+  "estimate_scope": "training only; excludes loading, evaluation, saving and hardware changes",
+  "evaluation_rows_used": 0,
+  "model_api_requests": 0,
+  "model": "Qwen/Qwen3.5-0.8B",
+  "seed": 20261004,
+  "initial_parameter_sha256": "a393388446d4af8f5c668a48d719d2ed158b4cba32e13de3b469395e0d990a25",
+  "executor_review_sha256": "7e3f7a1569b910239198b6b808c75b5fe8f4d520f150cc7485ce233c1adeda7f",
+  "schedule_manifest_sha256": "51ff1813fa6ad420b2c167e76731eb7826fa77b9d88c78267ad1c8328656668f",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "human_reviewed": false,
+  "limitations": [
+    "25 train-only steps validate execution and checkpoint restoration, not model quality.",
+    "Single local GPU timing; full main cycle also includes load/save/evaluation."
+  ]
+}

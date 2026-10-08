@@ -1,0 +1,65 @@
+{
+  "version": "financial-jev-reference-v1",
+  "endpoint": "https://api.typesafe.ai/v1/systemone",
+  "requested_model": "jev-latest",
+  "resolved_model_policy": "pin first successful response; reject drift",
+  "specification": {
+    "policy": "你是贷款平台的客服决策组件。只根据可见消息、最多四条历史和可信状态决定下一步，不生成业务事实。五个工具都要求认证；工具不可用不能假称已查询。单笔申请需明确完整编号；状态解释仅支持0/1/2。已有提示文字可直接解释；未知平台规定仅在正式知识集合可用时检索，否则如实说明限制。人工未接通不能声称已转接。普通感谢不等于结束。合法域外需求引导，明确违规请求才拒绝。",
+    "questions": {
+      "action": {
+        "type": "choice",
+        "instructions": "选择下一步业务动作。",
+        "criteria": {
+          "clarify": "追问：缺必要对象、状态、提示原文或认证",
+          "retrieve": "检索：未知平台规则，且正式知识集合可用",
+          "tool": "查询：需要白名单只读能力获取业务记录或状态说明，已认证且相应工具可用",
+          "answer": "回答：已给信息可解释，或如实说明能力限制",
+          "human": "人工：明确人工诉求、具体争议或当前能力无法处理的个人事项",
+          "redirect": "引导：合法请求明确超出贷款平台服务范围",
+          "refuse": "拒绝：明确要求造假、越权或不允许的操作",
+          "close": "结束：明确结束当前咨询，不等于撤销申请或关闭账号"
+        }
+      },
+      "tool": {
+        "type": "choice",
+        "instructions": "假设下一步动作是查询，选择所需的一个可用工具；仍由后端校验身份和参数。此问题独立作答，非查询动作时此输出会被程序丢弃。",
+        "criteria": {
+          "queryLoanProducts": "查询当前产品目录：编号、名称、金额上限、审批参考分、标签",
+          "queryMyApplications": "查询本人可返回范围内的申请列表及列表状态",
+          "queryApplicationDetail": "查询已明确编号的本人单笔申请明细",
+          "queryMyCreditScore": "查询本人已有信用评分、档位和建议额度",
+          "explainApplicationStatus": "解释已给申请状态码，仅支持0/1/2，不读取本人实时进度"
+        }
+      }
+    }
+  },
+  "source_hashes": {
+    "src/qwenlab/financial_jev_reference.py": "ca515a82127570838f7d852ad93be7f94f03d7d11ca7fc9990b4941007588180",
+    "src/qwenlab/financial_actions_prompt.py": "817bd6578c99ee0dce3d5e1d784830ce1d70cd85a9ff54f6cdf8ec34515f2b36",
+    "src/qwenlab/financial_pilot.py": "8ecf6e5b757957cb889768f86827de6009578b1012cb1643fd2f3506fb698ab1"
+  },
+  "dataset_manifest_sha256": "94e8454e17a2f4ae716c0f03385c18e1844d1162622cf9fe8cd3ee43796eaf30",
+  "split_sha256": {
+    "development": "fdce2ab94a32ae72b8a032bb529fb7a47117f6c0497c54d6dbde07720f1da6eb",
+    "calibration": "773af48da01a07fb533628cc0308626952a0dd5315beaa540b52d87a59500534",
+    "final": "62c393b1462cdb40ca3d1141beda87d7f1769fa379df0c869772d0c1848abf17"
+  },
+  "split_rows": {
+    "development": 384,
+    "calibration": 256,
+    "final": 512
+  },
+  "max_requests": 1152,
+  "max_reported_input_tokens": 2000000,
+  "retries": 0,
+  "evaluation_only": true,
+  "training_allowed": false,
+  "final_scoring": "cached predictions only until an independently qualified fixed candidate",
+  "timing": "one serial HTTPS request, two parallel questions; includes network, excludes backend",
+  "price_estimate": {
+    "input_usd_per_million": 0.042,
+    "output_usd_per_million": 0,
+    "source": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+    "checked": "2026-10-02"
+  }
+}

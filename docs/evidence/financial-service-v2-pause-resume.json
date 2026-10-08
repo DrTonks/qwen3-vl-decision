@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "scope": "real local GPU process pause/resume flow, not bitwise full GPU equivalence",
+  "run_name": "financial-service-v2-probe",
+  "paused_step": 6,
+  "confirmed_safe_to_shutdown_before_resume": true,
+  "previous_worker_exited": true,
+  "resumed_with_new_worker": true,
+  "observed_resumed_step": 19,
+  "continuous_step_prefix": true,
+  "checkpoint_sha256": "808858e4b1a2325356dbe4a105e3c062b6d62e7841ede5fe633a2838b5c658fa",
+  "protocol_sha256": "dd690f3e564d77cbfef0f0c05c705baa11940bbda349fd56449065b792317c58",
+  "executor_review_sha256": "f0367c87e33f8b9670a5bf1c3a4ae8021045746aa365e0504678b61926377257",
+  "actions": [
+    "pause-financial-service-v2.ps1 -RunName financial-service-v2-probe",
+    "resume-financial-service-v2.ps1 -RunName financial-service-v2-probe"
+  ],
+  "model_api_requests": 0
+}

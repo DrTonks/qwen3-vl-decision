@@ -1,0 +1,164 @@
+{
+  "review_version": "financial-supplement-pilot-packaging-review-v1",
+  "reviewer": "independent AI subagent supplement_integrity_review",
+  "status": "pass_with_scope_limits",
+  "human_reviewed": false,
+  "training_eligible": false,
+  "packaging_code": "scripts/finalize-financial-supplement-review.py",
+  "packaging_code_sha256": "d7727195aa061c9b7408798705715b931778d93de1c08f7dadb3ffb8949d2cc6",
+  "reviewed_manifest": "data/financial-supplement-pilot-v1/reviewed-v1/manifest.json",
+  "reviewed_manifest_sha256": "63f1dd1bec5c817bcdc6df2f708ed14b13104d4741d5e53da9be11ed8a90b71a",
+  "candidate_sha256": "01ef9736f9662571140ec88e4591071163e9698fc78e6848f584c0a202e5110d",
+  "scope": {
+    "source_read": [
+      "scripts/finalize-financial-supplement-review.py",
+      "data/financial-supplement-pilot-v1/reviewed-v1/manifest.json"
+    ],
+    "hash_only_dependencies": [
+      "data/financial-supplement-pilot-v1/build-v2/manifest.json",
+      "data/financial-supplement-pilot-v1/build-v2/candidates.json",
+      "data/financial-supplement-pilot-v1/build-v2/audit.json",
+      "data/financial-supplement-pilot-v1/build-v2/blind-overlap.json",
+      "docs/evidence/financial-supplement-pilot-label-review-v2.json",
+      "docs/evidence/financial-supplement-pilot-code-review-v2.json",
+      "scripts/finalize-financial-supplement-review.py",
+      "data/financial-supplement-pilot-v1/reviewed-v1/accepted.json",
+      "data/financial-supplement-pilot-v1/reviewed-v1/quarantine.json"
+    ],
+    "execution": "Extracted and executed the exact classify function on four synthetic rows in two groups. The main CLI was inspected statically; it was not executed because it hashes heldout corpora.",
+    "heldout_corpus_read": false,
+    "blind_screen_contents_read": false,
+    "model_weights_loaded": false,
+    "model_api_requests": 0,
+    "gpu_used": false,
+    "original_data_modified": false,
+    "not_claimed": [
+      "Human review",
+      "Training eligibility",
+      "Semantic re-adjudication",
+      "Independent rerun of blind overlap screen"
+    ]
+  },
+  "checks": {
+    "classification_cases": [
+      {
+        "case": "all_reviewed_accept",
+        "status": "pass",
+        "accepted": 4,
+        "quarantined": 0
+      },
+      {
+        "case": "one_quarantine_blocks_entire_pair",
+        "status": "pass",
+        "accepted": 2,
+        "quarantined": 2
+      },
+      {
+        "case": "one_revise_blocks_entire_pair",
+        "status": "pass",
+        "accepted": 2,
+        "quarantined": 2
+      },
+      {
+        "case": "blind_quarantine_blocks_label_accepted_pair",
+        "status": "pass",
+        "accepted": 2,
+        "quarantined": 2
+      },
+      {
+        "case": "independent_blocks_union",
+        "status": "pass",
+        "accepted": 0,
+        "quarantined": 4
+      },
+      {
+        "case": "stale_label_candidate_sha",
+        "status": "pass_rejected",
+        "error": "Review does not bind these candidates"
+      },
+      {
+        "case": "stale_blind_candidate_sha",
+        "status": "pass_rejected",
+        "error": "Review does not bind these candidates"
+      },
+      {
+        "case": "stale_policy_sha",
+        "status": "pass_rejected",
+        "error": "Wrong label policy"
+      },
+      {
+        "case": "stale_source_row_sha",
+        "status": "pass_rejected",
+        "error": "Stale per-row annotation review"
+      },
+      {
+        "case": "stale_reviewed_action",
+        "status": "pass_rejected",
+        "error": "Stale per-row annotation review"
+      },
+      {
+        "case": "missing_review",
+        "status": "pass_rejected",
+        "error": "Independent review must cover every candidate exactly once"
+      },
+      {
+        "case": "duplicate_review",
+        "status": "pass_rejected",
+        "error": "Independent review must cover every candidate exactly once"
+      },
+      {
+        "case": "unknown_quarantine_group",
+        "status": "pass_rejected",
+        "error": "Unknown quarantine group"
+      },
+      {
+        "case": "invalid_decision",
+        "status": "pass_rejected",
+        "error": "Invalid review decision"
+      },
+      {
+        "case": "empty_review_reason",
+        "status": "pass_rejected",
+        "error": "Invalid review decision"
+      },
+      {
+        "case": "unconfirmed_human_reviewed",
+        "status": "pass_rejected",
+        "error": "Independent review scope not confirmed"
+      },
+      {
+        "case": "unconfirmed_heldout_read",
+        "status": "pass_rejected",
+        "error": "Independent review scope not confirmed"
+      },
+      {
+        "case": "unconfirmed_evaluation_data_read",
+        "status": "pass_rejected",
+        "error": "Independent review scope not confirmed"
+      },
+      {
+        "case": "unconfirmed_screen_results_read",
+        "status": "pass_rejected",
+        "error": "Independent review scope not confirmed"
+      },
+      {
+        "case": "unconfirmed_training_or_api_run",
+        "status": "pass_rejected",
+        "error": "Independent review scope not confirmed"
+      }
+    ],
+    "group_isolation": "pass; quarantine/revise and blind quarantine propagate to complete source groups, using their union",
+    "candidate_review_binding": "pass; code review, label review and blind report are bound to candidate SHA; per-row labels additionally bind source row SHA and action",
+    "main_entry_precondition": "pass by static inspection; calls backend-aware p.verify before classification, preventing changed/duplicate candidate rows from bypassing existing source lineage checks",
+    "no_automatic_training": "pass; classifier forcibly sets every output training_eligible=false; manifest says not_a_training_release; no train call",
+    "manifest_dependency_and_output_hashes": "pass; all listed source and output byte hashes match",
+    "manifest_summary": "158 accepted, C08 entire two-row group quarantined, 0 training eligible",
+    "relative_paths": "pass; manifest and this report contain repository or workspace-relative references only"
+  },
+  "open_findings": [],
+  "limitations": [
+    "Review and blind-screen evidence files are trusted inputs. Their matching hashes bind versions, but do not cryptographically prove authorship or prevent an actor able to rewrite all source/evidence from forging a review.",
+    "This review checks classification and packaging integrity. It does not repeat label semantics or inspect/recompute heldout overlap results.",
+    "Calling classify directly is not a replacement for main: main establishes candidate validation, code-review, token-audit and blind-screen dependency checks before classification."
+  ]
+}

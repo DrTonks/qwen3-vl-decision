@@ -1,0 +1,19 @@
+{
+  "status": "verified",
+  "tokenizer_replayed": true,
+  "rows": 13242,
+  "arms": [
+    "uniform",
+    "stratified"
+  ],
+  "exposures_per_arm": 3200,
+  "training_enabled": false,
+  "model_weights_loaded": false,
+  "model_api_requests": 0,
+  "checked_at_utc": "2026-10-04T01:33:01.535435+00:00",
+  "schedule_manifest_sha256": "8ed29d2bcd57a72cedb19bf0a09d6ebc315d5681e0bcc0a704b3a4fb62f973c4",
+  "pool_manifest_sha256": "56bee2bdaa144351ade5f120a65899093369b576fa9934a74ebf40761cde004d",
+  "config_sha256": "74c03b1f48b603fb9c916e993a4b4e80d6e38f9307fae591d31086537c23fe36",
+  "test_suite": "40 CPU synthetic tests passed; data+plan+freeze",
+  "pool_blind_replay": "separate CLI financial_sampling_data verify --replay completed with exit0 before preparation; 13242 rows"
+}

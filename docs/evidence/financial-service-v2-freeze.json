@@ -1,0 +1,36 @@
+{
+  "version": "financial-service-v2-data-design-freeze-v1",
+  "status": "data_and_design_frozen_executor_pending",
+  "training_enabled": false,
+  "training_started": false,
+  "model_weights_loaded": false,
+  "model_api_requests": 0,
+  "training_candidates": 11756,
+  "quarantined_rows": 479,
+  "evaluation_rows": 384,
+  "human_reviewed_current_version": false,
+  "files": {
+    "configs/financial-service-v2-study.json": "31b7b3b8fa47f1c0f9924cf9531e3cddc2e854c21e2a7c57a7df01f13a97a7ef",
+    "configs/support-financial-v2.json": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+    "data/financial-service-v2/train-manifest.json": "197d8b63331cf568356ece3e10184bf9457fbd8f64c339bfc5ebc7025c650e63",
+    "data/financial-service-v2/evaluation-manifest.json": "592ef937ce71a860d56c78f23afcdf7d2f4f5cf71621b5bf4b342e766f2e912f",
+    "src/qwenlab/financial_service_v2_data.py": "fffde21c3023d7064c5e55ff7fc991624590f3c808f389403c47a47fcb55eae2",
+    "src/qwenlab/financial_prompt_v2.py": "25033aa2a7a3fadf60e51ece0eebe3fdfbbd0626cc9f04654b9641a91a4629ef",
+    "src/qwenlab/financial_service_v2_eval_catalog.py": "e28515fade68b766001de0c1b5280127a497c1d69e6bf3a7d596d063ff34a05a",
+    "src/qwenlab/financial_service_v2_preflight.py": "b8a91281eb40c11d757a7d83b964fdc2f1c14b70e51172ff3c74f00926dd3773",
+    "docs/evidence/financial-service-v2-code-review.json": "dbb52fb5ec3821f8a67bc9ef8497bca5203df1b630edd22e94b8e04756457cbe",
+    "docs/evidence/financial-service-v2-study-review.json": "4392d93030130cfbb21880d6995d2878ea33bd25547f8bc30bc35c6de2be4fe4",
+    "docs/evidence/financial-service-v2-tokenizer.json": "c3061b80b852cc71f4c647521520ae25d2cde03168f1300bf8230b0e94f8dbd1",
+    "docs/evidence/financial-v2-migration-semantic-review.json": "7def0873b9a4f6feccf1cccf8f854d712dfeaef5693c8f8f2dd4e219a9f3b6f2"
+  },
+  "checks": {
+    "data_manifest_validation": "pass",
+    "independent_code_review": "pass",
+    "independent_study_review": "pass",
+    "independent_evaluation_review": "pass",
+    "lexical_overlap_hits": 0,
+    "tokenizer_no_truncation": "pass",
+    "portable_new_artifact_paths": "pass"
+  },
+  "next_step": "Implement and independently review new-contract training executor, then a disposable train-only 50-step timing probe; no automatic deployment or old API score reuse."
+}

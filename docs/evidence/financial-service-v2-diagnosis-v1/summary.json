@@ -1,0 +1,358 @@
+{
+  "status": "verified_completed_failed_gate",
+  "protocol_sha256": "c7fe858f5d6b5726992a5841265fd46e090342fd69e91c1023baed4560d1f9df",
+  "prediction_bindings": {
+    "base": {
+      "predictions.jsonl": "2bd4b9ac14ecaa5528442a55b3af66f0ac8fce5a010f5451a88612b9c41dd277",
+      "metrics.json": "de39829cdcf51b48925db7d1403d61c4cb1c613d41cfb00beac41ee41bccf892",
+      "binding.json": "31a66996c928f0158dad75a2e61955f736448cfa3e03dd6c416bfa9a0c94dd53",
+      "timing.json": "3972a672ee4a99a265a29fd8cd8973d7d378973771980a08e44d8a149545460a"
+    },
+    "step-200": {
+      "predictions.jsonl": "00ed846cccf032a066e780f35cb0125d939714106f5b84b9389d253ddedd39c9",
+      "metrics.json": "604c9f3bbd887b9ba766f19afdd4f5960a7a257f2a22d83f2e612d6fc28f7ba5",
+      "binding.json": "0bef51eb79e81eb9e340ae918d9f9c914ed0d982d2a2085b4f642c1d3da1b2db",
+      "timing.json": "e0a6c74d767546e5fb113f73fc6eca444351e00dfca1289af05a24e3984e7fbc"
+    },
+    "step-1470": {
+      "predictions.jsonl": "b0689ea29d169f47ed3943931c7d3afb0b4e090f85e131c032e03be1c41352b7",
+      "metrics.json": "fcc16948fc6d647345705b69c0e83c3b3ee8a87101b36fd6a706482af86974b3",
+      "binding.json": "e20ea28ddea3e824313c1a9c8eb0d68f0a7472eb4149f3f7ed2b7b3e6603d7db",
+      "timing.json": "c0b7988c607931e9b8c72e6d8fb628c6b06dffb1dab43d1556f1fbeb84d5a85f"
+    },
+    "step-2940": {
+      "predictions.jsonl": "54827d1b6426be46122acb19da6f6ec7c5f0b88177a1acc0cc2838ab20d9685b",
+      "metrics.json": "253310be76d0113c1c4cae1254aaff67f0abbc24e14632ee9a2e7f7e3137aab1",
+      "binding.json": "7d57e4fdaca6ec3aaf1b5e79147dfe31c682086e79eb52da0415c464ecc8a011",
+      "timing.json": "8d6d2a4bb4a3e29bacce982fa0a277a983afa946c9318529ffa1155f52a432b0"
+    }
+  },
+  "source_files": {
+    "src/qwenlab/financial_service_v2_diagnosis.py": "0912e5dce66b87a6cccdc0bb9e0f1e37ca56bccd9c927a1f0676063fb4ead722",
+    "scripts/inspect-financial-service-v2-grounding.cjs": "8a18f857eb9605f88431ea0051d861f955f056ba93b2e65abcb652e4e407a139",
+    "data/financial-service-v2/train.json": "e12e359809ccb162ac242b2661b3f995b0e7bc44b5e8595c94e982c68bd5f021",
+    "data/financial-service-v2/development.json": "56bd31ebfa75633143fefa5d6ae2dd77709a17d2bde642a583675ce638f558eb"
+  },
+  "backend_source_files": {
+    "../uestc_Integrated_Design/后端/services/customerSupport/financialContract.js": "87a6b08b34aa5ed8f044ab5a3c676ad8882b2acc042c632833e9d8ad50a324ec",
+    "../uestc_Integrated_Design/后端/services/customerSupport/parameters.js": "cdbd75fd8da71fa3d28282abd339655ed809dbe3f6bb3258f3bcf9d2d56ca085",
+    "../uestc_Integrated_Design/后端/services/customerSupport/financialOrchestrator.js": "d4de5f12106d022d1ce50aa30c2a5ea8afeb0d1f60b80786ec3fcdfc06418b08"
+  },
+  "selection": {
+    "selected": null,
+    "passed": false,
+    "gates": {
+      "step-1470": {
+        "passed": false,
+        "failures": [
+          "per_action_recall",
+          "human_recall",
+          "action_tool_joint_accuracy",
+          "current_human_recall",
+          "preauth_tool_action"
+        ],
+        "usage": "development_only_not_final_selection"
+      },
+      "step-2940": {
+        "passed": false,
+        "failures": [
+          "per_action_recall",
+          "human_recall",
+          "action_tool_joint_accuracy",
+          "status_tool_accuracy",
+          "current_human_recall",
+          "current_joint_tool_accuracy",
+          "preauth_tool_action"
+        ],
+        "usage": "development_only_not_final_selection"
+      }
+    },
+    "protocol_sha256": "c7fe858f5d6b5726992a5841265fd46e090342fd69e91c1023baed4560d1f9df",
+    "usage": "development_selection_only"
+  },
+  "table": [
+    {
+      "variant": "base",
+      "selection_candidate": false,
+      "accuracy": 0.375,
+      "macro_f1": 0.22374328569980745,
+      "human_misses": 10,
+      "false_refusals": 15,
+      "joint_tool_accuracy": 0.4444444444444444,
+      "preauth_tool_actions": 17,
+      "cohorts": {
+        "current-service": {
+          "rows": 64,
+          "accuracy": 0.453125,
+          "human_misses": 5,
+          "false_refusals": 4,
+          "joint_tool_accuracy": 0.5
+        },
+        "planned-retrieval": {
+          "rows": 32,
+          "accuracy": 0.40625,
+          "human_misses": 3,
+          "false_refusals": 4,
+          "joint_tool_accuracy": 0.0
+        },
+        "preauth-robustness": {
+          "rows": 32,
+          "accuracy": 0.1875,
+          "human_misses": 2,
+          "false_refusals": 7,
+          "joint_tool_accuracy": null
+        }
+      },
+      "confidence": {
+        "action_nll": 1.7109465534667507,
+        "multiclass_brier": 0.7477905392092471,
+        "ece_10_bins": 0.10500794823747128,
+        "wrong_action_count": 80,
+        "wrong_confidence_mean": 0.274546367675066,
+        "wrong_confidence_at_least_95": 0,
+        "usage": "raw development diagnostic, not calibration or threshold selection; ECE unstable on small samples"
+      },
+      "speed": {
+        "action_p50_ms": 81.69235000059416,
+        "request_p50_ms": 166.8946000008873,
+        "request_p95_ms": 184.3810900014432,
+        "predicted_tool_requests": 81,
+        "note": "Serial staged timings; changed tool-call frequency affects request latency; no controlled repeated hardware comparison"
+      }
+    },
+    {
+      "variant": "step-200",
+      "selection_candidate": false,
+      "accuracy": 0.65625,
+      "macro_f1": 0.6528053991125039,
+      "human_misses": 11,
+      "false_refusals": 2,
+      "joint_tool_accuracy": 0.8333333333333334,
+      "preauth_tool_actions": 5,
+      "cohorts": {
+        "current-service": {
+          "rows": 64,
+          "accuracy": 0.671875,
+          "human_misses": 6,
+          "false_refusals": 1,
+          "joint_tool_accuracy": 0.875
+        },
+        "planned-retrieval": {
+          "rows": 32,
+          "accuracy": 0.75,
+          "human_misses": 3,
+          "false_refusals": 1,
+          "joint_tool_accuracy": 0.5
+        },
+        "preauth-robustness": {
+          "rows": 32,
+          "accuracy": 0.53125,
+          "human_misses": 2,
+          "false_refusals": 0,
+          "joint_tool_accuracy": null
+        }
+      },
+      "confidence": {
+        "action_nll": 0.8162878684775607,
+        "multiclass_brier": 0.4269689449488873,
+        "ece_10_bins": 0.13981184805743396,
+        "wrong_action_count": 44,
+        "wrong_confidence_mean": 0.6373489546504888,
+        "wrong_confidence_at_least_95": 0,
+        "usage": "raw development diagnostic, not calibration or threshold selection; ECE unstable on small samples"
+      },
+      "speed": {
+        "action_p50_ms": 94.44419999999809,
+        "request_p50_ms": 96.21509999851696,
+        "request_p95_ms": 209.30860999887955,
+        "predicted_tool_requests": 27,
+        "note": "Serial staged timings; changed tool-call frequency affects request latency; no controlled repeated hardware comparison"
+      }
+    },
+    {
+      "variant": "step-1470",
+      "selection_candidate": true,
+      "accuracy": 0.890625,
+      "macro_f1": 0.9068918012316379,
+      "human_misses": 3,
+      "false_refusals": 2,
+      "joint_tool_accuracy": 0.8888888888888888,
+      "preauth_tool_actions": 2,
+      "cohorts": {
+        "current-service": {
+          "rows": 64,
+          "accuracy": 0.921875,
+          "human_misses": 1,
+          "false_refusals": 1,
+          "joint_tool_accuracy": 0.9375
+        },
+        "planned-retrieval": {
+          "rows": 32,
+          "accuracy": 0.875,
+          "human_misses": 1,
+          "false_refusals": 0,
+          "joint_tool_accuracy": 0.5
+        },
+        "preauth-robustness": {
+          "rows": 32,
+          "accuracy": 0.84375,
+          "human_misses": 1,
+          "false_refusals": 1,
+          "joint_tool_accuracy": null
+        }
+      },
+      "confidence": {
+        "action_nll": 0.4984380848641219,
+        "multiclass_brier": 0.18869598517929112,
+        "ece_10_bins": 0.08602874353528023,
+        "wrong_action_count": 14,
+        "wrong_confidence_mean": 0.8570658820016044,
+        "wrong_confidence_at_least_95": 6,
+        "usage": "raw development diagnostic, not calibration or threshold selection; ECE unstable on small samples"
+      },
+      "speed": {
+        "action_p50_ms": 101.1910999986867,
+        "request_p50_ms": 102.408300001116,
+        "request_p95_ms": 217.06153500053915,
+        "predicted_tool_requests": 21,
+        "note": "Serial staged timings; changed tool-call frequency affects request latency; no controlled repeated hardware comparison"
+      }
+    },
+    {
+      "variant": "step-2940",
+      "selection_candidate": true,
+      "accuracy": 0.8671875,
+      "macro_f1": 0.8882554732151506,
+      "human_misses": 5,
+      "false_refusals": 4,
+      "joint_tool_accuracy": 0.8333333333333334,
+      "preauth_tool_actions": 2,
+      "cohorts": {
+        "current-service": {
+          "rows": 64,
+          "accuracy": 0.875,
+          "human_misses": 3,
+          "false_refusals": 3,
+          "joint_tool_accuracy": 0.875
+        },
+        "planned-retrieval": {
+          "rows": 32,
+          "accuracy": 0.875,
+          "human_misses": 1,
+          "false_refusals": 0,
+          "joint_tool_accuracy": 0.5
+        },
+        "preauth-robustness": {
+          "rows": 32,
+          "accuracy": 0.84375,
+          "human_misses": 1,
+          "false_refusals": 1,
+          "joint_tool_accuracy": null
+        }
+      },
+      "confidence": {
+        "action_nll": 0.7857166941603704,
+        "multiclass_brier": 0.2332208090417518,
+        "ece_10_bins": 0.11487028212286532,
+        "wrong_action_count": 17,
+        "wrong_confidence_mean": 0.8616959014359642,
+        "wrong_confidence_at_least_95": 10,
+        "usage": "raw development diagnostic, not calibration or threshold selection; ECE unstable on small samples"
+      },
+      "speed": {
+        "action_p50_ms": 92.32364999843412,
+        "request_p50_ms": 93.51690000403323,
+        "request_p95_ms": 199.5985900030064,
+        "predicted_tool_requests": 19,
+        "note": "Serial staged timings; changed tool-call frequency affects request latency; no controlled repeated hardware comparison"
+      }
+    }
+  ],
+  "paired_first_second": {
+    "counts": {
+      "both_correct": 111,
+      "both_wrong": 14,
+      "regressed": 3
+    },
+    "delta_accuracy": -0.0234375,
+    "story_bootstrap_95": [
+      -0.0546875,
+      0.0
+    ],
+    "row_mcnemar_exact_two_sided_p": 0.25,
+    "limitation": "McNemar treats rows as independent; story correlation and synthetic author bias remain; 3 regressions alone cannot prove overfitting"
+  },
+  "training": {
+    "rows": 11756,
+    "steps": 2940,
+    "epochs": [
+      {
+        "epoch": 1,
+        "training_minutes": 109.5691045699988,
+        "step_median_s": 4.374772199998915,
+        "step_p95_s": 5.802810045001206,
+        "slow_steps_over_10s": 0,
+        "maximum_step_s": 7.446494499999972,
+        "mean_online_loss": 0.4542655037217182,
+        "first100_online_loss": 1.593824102665967,
+        "last100_online_loss": 0.26415550309333835
+      },
+      {
+        "epoch": 2,
+        "training_minutes": 157.07071853999793,
+        "step_median_s": 4.85936964999928,
+        "step_p95_s": 12.993548679998273,
+        "slow_steps_over_10s": 240,
+        "maximum_step_s": 46.7680057999969,
+        "mean_online_loss": 0.15722946259841314,
+        "first100_online_loss": 0.16851082019501404,
+        "last100_online_loss": 0.12276015808805121
+      }
+    ],
+    "total_training_minutes": 266.6398231099967,
+    "wall_minutes": 269.7462001721064,
+    "each_row_exposures": 2
+  },
+  "data_coverage": {
+    "train": {
+      "cohorts": {
+        "preauth-robustness": 4322,
+        "planned-retrieval": 6860,
+        "current-service": 574
+      },
+      "tool_context": {
+        "queryApplicationDetail": {
+          "rows": 472,
+          "explicit_state": 472
+        },
+        "explainApplicationStatus": {
+          "rows": 256,
+          "explicit_state": 256
+        }
+      }
+    },
+    "development": {
+      "cohorts": {
+        "current-service": 64,
+        "planned-retrieval": 32,
+        "preauth-robustness": 32
+      },
+      "tool_context": {
+        "queryApplicationDetail": {
+          "rows": 5,
+          "explicit_state": 1
+        },
+        "explainApplicationStatus": {
+          "rows": 3,
+          "explicit_state": 0
+        }
+      }
+    }
+  },
+  "development_error_union": 17,
+  "model_calls": 0,
+  "api_calls": 0,
+  "calibration_read": false,
+  "final_read": false,
+  "note": "Offline diagnosis only. No gates/labels/data/checkpoints changed. Development cases may not be used for training."
+}

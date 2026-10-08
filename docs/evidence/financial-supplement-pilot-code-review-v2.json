@@ -1,0 +1,134 @@
+{
+  "review_version": "financial-supplement-pilot-code-review-v2",
+  "reviewer": "independent AI subagent supplement_integrity_review",
+  "status": "pass_with_scope_limits",
+  "human_reviewed": false,
+  "training_eligible": false,
+  "code_sha256": "6d45723460d0554ac74b651ccf801c9e5258c7e39c0e87b9bb6264bc6f1e29c5",
+  "candidate_sha256": "01ef9736f9662571140ec88e4591071163e9698fc78e6848f584c0a202e5110d",
+  "source_sha256": "bfc68b5d2458320e5c7f0ba7690f940cb1af63b80df4ecaf6c245b26ecae58dd",
+  "policy_sha256": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+  "node_exporter_sha256": "50400895a0bc418b6d8f937470ef387aba4df54df6a3b8556035ac7c0ab77f89",
+  "prior_review": "docs/evidence/financial-supplement-pilot-code-review.json",
+  "scope": {
+    "build": "data/financial-supplement-pilot-v1/build-v2",
+    "review_focus": "Independent verification of source -> real Node replay -> declared transformations and rebuilt artifacts; previously identified integrity counterexamples.",
+    "execution_method": "Parsed exact current Python wrapper AST and ran its verify/materialize/source validation/summary/review functions with real Node exporter. Imports of out-of-scope qwenlab modules were avoided. protocol uses exact on-disk policy; imported check_row was a no-op for this structural boundary test. The unchanged build passed and all counterexamples fail outside check_row.",
+    "heldout_files_read": false,
+    "prediction_or_diagnostic_text_read": false,
+    "overlap_audit_read": false,
+    "model_weights_loaded": false,
+    "model_api_requests": 0,
+    "gpu_used": false,
+    "source_or_original_build_modified": false,
+    "not_claimed": [
+      "Exhaustive semantic adjudication of all 160 labels",
+      "Human review",
+      "Cross-corpus overlap validation",
+      "Training approval",
+      "Production endpoint behavior"
+    ]
+  },
+  "checks": {
+    "untampered_verify": "pass; 160 rows replayed with actual Node and matched candidate/summary/review",
+    "source_validation": "pass; 160 IDs, 80 groups, 120/24/16 cohorts, current service 90 node + 30 component",
+    "manifest_code_and_candidate_hashes": "pass",
+    "candidate_ai_origin_and_draft_flags": "pass for all 160",
+    "negative_cases": [
+      {
+        "case": "missing_candidate_hash",
+        "status": "pass_rejected",
+        "error": "Manifest requires the exact known fields and file set"
+      },
+      {
+        "case": "empty_file_map",
+        "status": "pass_rejected",
+        "error": "Manifest requires the exact known fields and file set"
+      },
+      {
+        "case": "empty_candidates_rehashed",
+        "status": "pass_rejected",
+        "error": "Candidates do not reproduce from authored source and actual Node"
+      },
+      {
+        "case": "candidate_label_drift_rehashed",
+        "status": "pass_rejected",
+        "error": "Candidates do not reproduce from authored source and actual Node"
+      },
+      {
+        "case": "human_reviewed_manifest",
+        "status": "pass_rejected",
+        "error": "Draft cannot claim eligibility/review or model work"
+      },
+      {
+        "case": "training_eligible_manifest",
+        "status": "pass_rejected",
+        "error": "Draft cannot claim eligibility/review or model work"
+      },
+      {
+        "case": "boolean_model_requests_manifest",
+        "status": "pass_rejected",
+        "error": "Draft cannot claim eligibility/review or model work"
+      },
+      {
+        "case": "extra_manifest_field",
+        "status": "pass_rejected",
+        "error": "Manifest requires the exact known fields and file set"
+      },
+      {
+        "case": "context_drift_rehashed",
+        "status": "pass_rejected",
+        "error": "Contexts differ from the editable authored source"
+      },
+      {
+        "case": "projection_drift_rehashed",
+        "status": "pass_rejected",
+        "error": "Node source hashes or projected inputs changed; use a new build"
+      },
+      {
+        "case": "node_source_hash_drift_rehashed",
+        "status": "pass_rejected",
+        "error": "Node source hashes or projected inputs changed; use a new build"
+      },
+      {
+        "case": "summary_drift_rehashed",
+        "status": "pass_rejected",
+        "error": "Summary/review does not reproduce"
+      },
+      {
+        "case": "review_drift_rehashed",
+        "status": "pass_rejected",
+        "error": "Summary/review does not reproduce"
+      },
+      {
+        "case": "unrehashed_candidate_drift",
+        "status": "pass_rejected",
+        "error": "Build output edited: candidates.json"
+      }
+    ]
+  },
+  "resolved_findings": [
+    {
+      "id": "FSP-CODE-01",
+      "status": "fixed",
+      "evidence": "Exact fixed manifest/file sets, source validation, rematerialization and full artifact equality reject missing hashes and empty or relabeled candidate files even after rehashing."
+    },
+    {
+      "id": "FSP-CODE-02",
+      "status": "fixed",
+      "evidence": "verify requires backend and replays its actual exporter, comparing full projection objects including sourceSha256 for all six Node source files. Rehashed projection content or source hash drift is rejected."
+    },
+    {
+      "id": "FSP-CODE-03",
+      "status": "fixed",
+      "evidence": "Manifest draft flags, model counters and field sets are explicitly checked. Both human_reviewed=true and training_eligible=true are rejected."
+    }
+  ],
+  "open_findings": [],
+  "limitations": [
+    "Integrity is relative to the current trusted editable source, wrapper and backend. This is reproducibility checking, not a cryptographic signature against an actor able to rewrite all trusted code/source/evidence.",
+    "Independent AI review does not confer human review or automatic training eligibility.",
+    "Semantic label review and old-corpus overlap checks remain separate review scopes."
+  ],
+  "temporary_test_directory": "workspace:tmp/supplement-review-independent-v2"
+}

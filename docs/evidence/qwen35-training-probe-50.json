@@ -1,0 +1,24 @@
+{
+  "status": "complete",
+  "steps": 50,
+  "sample_positions": 400,
+  "unique_rows": 400,
+  "trainable_parameters": 1794048,
+  "projection": {
+    "projection": "candidate",
+    "fallback": null
+  },
+  "warm_excluded_steps": 5,
+  "median_step_s": 2.6493412999998327,
+  "total_training_s": 132.424747699999,
+  "peak_allocated_gib": 1.8974676132202148,
+  "model_source_sha256": "d133981b764cbfdbf9b2758e84f0d1bcba906801d2c0921d9e4bdd42d08fef11",
+  "source_sha256": {
+    "src/qwenlab/qwen35_model.py": "c11d5d7cead90cb2196f4fe3c716c585c4a61a914a18917c67697054cb82e54f",
+    "src/qwenlab/qwen35_probe.py": "aa629ffec0704e2048a78fc6a8efef0595c81267733f743bb7081aef439e94ec",
+    "src/qwenlab/financial_train.py": "1d6cc12c18531f01d1ab21aae1d7ae19f8e439e916bd87fd2152ed6ceb49c917"
+  },
+  "evaluation_rows_used": 0,
+  "model_api_requests": 0,
+  "adapter_discarded": true
+}

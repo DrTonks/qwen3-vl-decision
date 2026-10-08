@@ -1,0 +1,1167 @@
+[
+  {
+    "id": "FIN-F2-E-0022",
+    "input": {
+      "message": "谢谢，你把贷款本金解释清楚了；我只是道谢，下一步还会继续咨询。",
+      "history": [],
+      "state": {
+        "authenticated": true
+      },
+      "service_scope": "loan_platform",
+      "capability_profile": "planned-kb-v1",
+      "capabilities": {
+        "knowledge_collections": [
+          "loan_service_docs",
+          "privacy_policy"
+        ],
+        "handoff_connected": false
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "queryMyCreditScore",
+        "explainApplicationStatus"
+      ],
+      "images": []
+    },
+    "annotation": {
+      "action": "answer",
+      "tool_name": null,
+      "tool_arguments": {},
+      "retrieval_collection": null,
+      "missing_slots": [],
+      "reason": "一般概念、充分假设下的算术、礼貌响应或充分已给事实可直接回应；不臆造平台规则或个人记录。",
+      "evidence_paths": [
+        "input.message",
+        "input.state",
+        "input.capabilities",
+        "input.available_tools"
+      ],
+      "policy_version": "loan-eight-actions-pilot-1"
+    },
+    "prediction": {
+      "id": "FIN-F2-E-0022",
+      "action": "close",
+      "tool_name": null,
+      "action_prediction": {
+        "choice": "close",
+        "probabilities": {
+          "clarify": 1.6519481960131088e-06,
+          "retrieve": 3.962817572755739e-06,
+          "tool": 1.457839175600384e-06,
+          "answer": 0.0010322077432647347,
+          "human": 1.0119408216269221e-05,
+          "redirect": 2.5585873117961455e-06,
+          "refuse": 2.723602165133343e-06,
+          "close": 0.9989452958106995
+        },
+        "logits": [
+          12.9375,
+          13.8125,
+          12.8125,
+          19.375,
+          14.75,
+          13.375,
+          13.4375,
+          26.25
+        ],
+        "input_tokens": 354,
+        "elapsed_s": 0.11650019999979122
+      },
+      "input_tokens": 354,
+      "action_elapsed_s": 0.11650019999979122,
+      "tool_elapsed_s": null,
+      "processed_input_tokens": 354,
+      "elapsed_s": 0.11657460000060382,
+      "projection": "candidate",
+      "projection_fallback": null,
+      "measured_at": "2026-10-02T05:10:30.558253+00:00"
+    },
+    "diagnostic_category": "否定与结束边界",
+    "review_note": "明确还会继续咨询，标签answer合理；不是结束。",
+    "reviewer": "assistant",
+    "human_review": false,
+    "disposition": "retain frozen labels; diagnostic only; never copy/rewrite into training",
+    "jev_prediction": {
+      "id": "FIN-F2-E-0022",
+      "split": "development",
+      "request_sha256": "750dfc798ba7d0ca43076e7b6b7a365c65025ff6d0f0ca11fe6ea804771c301a",
+      "model": "jev-1.13.0",
+      "action": "answer",
+      "tool_name": null,
+      "action_prediction": {
+        "choice": "answer",
+        "probabilities": {
+          "tool": 0.0,
+          "refuse": 0.0,
+          "retrieve": 0.0,
+          "clarify": 0.09,
+          "answer": 0.91,
+          "redirect": 0.0,
+          "close": 0.0,
+          "human": 0.0
+        },
+        "provider_confidence": 0.89
+      },
+      "raw_tool_prediction": {
+        "choice": "queryMyApplications",
+        "probabilities": {
+          "queryApplicationDetail": 0.03,
+          "explainApplicationStatus": 0.2,
+          "queryLoanProducts": 0.29,
+          "queryMyApplications": 0.46,
+          "queryMyCreditScore": 0.02
+        },
+        "provider_confidence": 0.33
+      },
+      "argument_source": null,
+      "elapsed_s": 0.4296131000010064,
+      "usage": {
+        "input_tokens": 1189,
+        "output_tokens": 153
+      },
+      "measured_at": "2026-10-02T05:19:37.192274+00:00"
+    }
+  },
+  {
+    "id": "FIN-F2-E-0084",
+    "input": {
+      "message": "把我这个用户已提交的申请清单给我，不要读室友账户。",
+      "history": [],
+      "state": {
+        "authenticated": true
+      },
+      "service_scope": "loan_platform",
+      "capability_profile": "planned-kb-v1",
+      "capabilities": {
+        "knowledge_collections": [
+          "loan_service_docs",
+          "privacy_policy"
+        ],
+        "handoff_connected": false
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "queryMyCreditScore",
+        "explainApplicationStatus"
+      ],
+      "images": []
+    },
+    "annotation": {
+      "action": "tool",
+      "tool_name": "queryMyApplications",
+      "tool_arguments": {},
+      "retrieval_collection": null,
+      "missing_slots": [],
+      "reason": "当前认证有效，请求明确需要白名单只读能力；状态/编号仅来自可见输入，后台仍须校验归属。",
+      "evidence_paths": [
+        "input.message",
+        "input.state",
+        "input.capabilities",
+        "input.available_tools"
+      ],
+      "policy_version": "loan-eight-actions-pilot-1"
+    },
+    "prediction": {
+      "id": "FIN-F2-E-0084",
+      "action": "refuse",
+      "tool_name": null,
+      "action_prediction": {
+        "choice": "refuse",
+        "probabilities": {
+          "clarify": 0.008809245191514492,
+          "retrieve": 0.0008722333004698157,
+          "tool": 0.07375890016555786,
+          "answer": 0.004715248942375183,
+          "human": 0.012817374430596828,
+          "redirect": 0.00034157148911617696,
+          "refuse": 0.8985673785209656,
+          "close": 0.00011804395035142079
+        },
+        "logits": [
+          18.125,
+          15.8125,
+          20.25,
+          17.5,
+          18.5,
+          14.875,
+          22.75,
+          13.8125
+        ],
+        "input_tokens": 351,
+        "elapsed_s": 0.11145550000037474
+      },
+      "input_tokens": 351,
+      "action_elapsed_s": 0.11145550000037474,
+      "tool_elapsed_s": null,
+      "processed_input_tokens": 351,
+      "elapsed_s": 0.11151950000021316,
+      "projection": "candidate",
+      "projection_fallback": null,
+      "measured_at": "2026-10-02T05:10:39.247486+00:00"
+    },
+    "diagnostic_category": "否定与本人查询",
+    "review_note": "要求查询本人，并明确排除室友账户，tool标签合理。",
+    "reviewer": "assistant",
+    "human_review": false,
+    "disposition": "retain frozen labels; diagnostic only; never copy/rewrite into training",
+    "jev_prediction": {
+      "id": "FIN-F2-E-0084",
+      "split": "development",
+      "request_sha256": "3ed628629b2ed02d1820c9f770d59584ac4beca195d543430582f3d8263f8697",
+      "model": "jev-1.13.0",
+      "action": "tool",
+      "tool_name": "queryMyApplications",
+      "action_prediction": {
+        "choice": "tool",
+        "probabilities": {
+          "tool": 0.94,
+          "redirect": 0.0,
+          "answer": 0.01,
+          "refuse": 0.01,
+          "clarify": 0.04,
+          "retrieve": 0.0,
+          "close": 0.0,
+          "human": 0.0
+        },
+        "provider_confidence": 0.93
+      },
+      "raw_tool_prediction": {
+        "choice": "queryMyApplications",
+        "probabilities": {
+          "queryMyCreditScore": 0.0,
+          "queryApplicationDetail": 0.0,
+          "queryLoanProducts": 0.0,
+          "queryMyApplications": 1.0,
+          "explainApplicationStatus": 0.0
+        },
+        "provider_confidence": 1.0
+      },
+      "argument_source": null,
+      "elapsed_s": 0.607409700000062,
+      "usage": {
+        "input_tokens": 1184,
+        "output_tokens": 153
+      },
+      "measured_at": "2026-10-02T05:20:08.033097+00:00"
+    }
+  },
+  {
+    "id": "FIN-F2-E-0118",
+    "input": {
+      "message": "谢谢解答设备贷款概念，我不是结束咨询，只先说声感谢。",
+      "history": [],
+      "state": {
+        "authenticated": true
+      },
+      "service_scope": "loan_platform",
+      "capability_profile": "current-no-kb-v1",
+      "capabilities": {
+        "knowledge_collections": [],
+        "handoff_connected": false
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "queryMyCreditScore",
+        "explainApplicationStatus"
+      ],
+      "images": []
+    },
+    "annotation": {
+      "action": "answer",
+      "tool_name": null,
+      "tool_arguments": {},
+      "retrieval_collection": null,
+      "missing_slots": [],
+      "reason": "一般概念、充分假设下的算术、礼貌响应或充分已给事实可直接回应；不臆造平台规则或个人记录。",
+      "evidence_paths": [
+        "input.message",
+        "input.state",
+        "input.capabilities",
+        "input.available_tools"
+      ],
+      "policy_version": "loan-eight-actions-pilot-1"
+    },
+    "prediction": {
+      "id": "FIN-F2-E-0118",
+      "action": "close",
+      "tool_name": null,
+      "action_prediction": {
+        "choice": "close",
+        "probabilities": {
+          "clarify": 3.2032885428634472e-06,
+          "retrieve": 4.961350441590184e-06,
+          "tool": 1.9428928226261633e-06,
+          "answer": 0.025956515222787857,
+          "human": 1.5282035747077316e-05,
+          "redirect": 3.2032885428634472e-06,
+          "refuse": 3.863903657475021e-06,
+          "close": 0.9740110635757446
+        },
+        "logits": [
+          12.875,
+          13.3125,
+          12.375,
+          21.875,
+          14.4375,
+          12.875,
+          13.0625,
+          25.5
+        ],
+        "input_tokens": 347,
+        "elapsed_s": 0.11252489999969839
+      },
+      "input_tokens": 347,
+      "action_elapsed_s": 0.11252489999969839,
+      "tool_elapsed_s": null,
+      "processed_input_tokens": 347,
+      "elapsed_s": 0.11261650000051304,
+      "projection": "candidate",
+      "projection_fallback": null,
+      "measured_at": "2026-10-02T05:10:44.096924+00:00"
+    },
+    "diagnostic_category": "否定与结束边界",
+    "review_note": "明确不是结束咨询，answer标签合理。",
+    "reviewer": "assistant",
+    "human_review": false,
+    "disposition": "retain frozen labels; diagnostic only; never copy/rewrite into training",
+    "jev_prediction": {
+      "id": "FIN-F2-E-0118",
+      "split": "development",
+      "request_sha256": "d7e6a3a6d9746bc645325f5f994e5ea7070a917646861cc61c9fcd6558b5dcdc",
+      "model": "jev-1.13.0",
+      "action": "answer",
+      "tool_name": null,
+      "action_prediction": {
+        "choice": "answer",
+        "probabilities": {
+          "redirect": 0.0,
+          "retrieve": 0.0,
+          "clarify": 0.19,
+          "close": 0.0,
+          "tool": 0.0,
+          "human": 0.0,
+          "refuse": 0.0,
+          "answer": 0.81
+        },
+        "provider_confidence": 0.78
+      },
+      "raw_tool_prediction": {
+        "choice": "queryLoanProducts",
+        "probabilities": {
+          "queryApplicationDetail": 0.0,
+          "queryMyCreditScore": 0.01,
+          "queryLoanProducts": 0.89,
+          "explainApplicationStatus": 0.04,
+          "queryMyApplications": 0.06
+        },
+        "provider_confidence": 0.85
+      },
+      "argument_source": null,
+      "elapsed_s": 0.45673540000098,
+      "usage": {
+        "input_tokens": 1174,
+        "output_tokens": 154
+      },
+      "measured_at": "2026-10-02T05:20:24.477076+00:00"
+    }
+  },
+  {
+    "id": "FIN-F2-E-0131",
+    "input": {
+      "message": "读取家长本人账号的申请列表，不要查孩子的个人资料。",
+      "history": [],
+      "state": {
+        "authenticated": true
+      },
+      "service_scope": "loan_platform",
+      "capability_profile": "current-no-kb-v1",
+      "capabilities": {
+        "knowledge_collections": [],
+        "handoff_connected": false
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "queryMyCreditScore",
+        "explainApplicationStatus"
+      ],
+      "images": []
+    },
+    "annotation": {
+      "action": "tool",
+      "tool_name": "queryMyApplications",
+      "tool_arguments": {},
+      "retrieval_collection": null,
+      "missing_slots": [],
+      "reason": "当前认证有效，请求明确需要白名单只读能力；状态/编号仅来自可见输入，后台仍须校验归属。",
+      "evidence_paths": [
+        "input.message",
+        "input.state",
+        "input.capabilities",
+        "input.available_tools"
+      ],
+      "policy_version": "loan-eight-actions-pilot-1"
+    },
+    "prediction": {
+      "id": "FIN-F2-E-0131",
+      "action": "refuse",
+      "tool_name": null,
+      "action_prediction": {
+        "choice": "refuse",
+        "probabilities": {
+          "clarify": 0.00010818149166880175,
+          "retrieve": 7.435198494931683e-05,
+          "tool": 0.005212476011365652,
+          "answer": 0.0007054319139569998,
+          "human": 0.00048483582213521004,
+          "redirect": 6.163994839880615e-05,
+          "refuse": 0.9933220744132996,
+          "close": 3.0994517146609724e-05
+        },
+        "logits": [
+          15.0,
+          14.625,
+          18.875,
+          16.875,
+          16.5,
+          14.4375,
+          24.125,
+          13.75
+        ],
+        "input_tokens": 343,
+        "elapsed_s": 0.11642720000054396
+      },
+      "input_tokens": 343,
+      "action_elapsed_s": 0.11642720000054396,
+      "tool_elapsed_s": null,
+      "processed_input_tokens": 343,
+      "elapsed_s": 0.11650829999962298,
+      "projection": "candidate",
+      "projection_fallback": null,
+      "measured_at": "2026-10-02T05:10:45.651198+00:00"
+    },
+    "diagnostic_category": "否定与本人查询",
+    "review_note": "按场景本人为家长且已认证，明确排除孩子资料，tool合理；孤立措辞可更清楚，但不据此回改冻结标签。",
+    "reviewer": "assistant",
+    "human_review": false,
+    "disposition": "retain frozen labels; diagnostic only; never copy/rewrite into training",
+    "jev_prediction": {
+      "id": "FIN-F2-E-0131",
+      "split": "development",
+      "request_sha256": "416749570a158c76153a3fbd18a0e0f7974ee4bd39d4f1311045f2c54b9af330",
+      "model": "jev-1.13.0",
+      "action": "tool",
+      "tool_name": "queryMyApplications",
+      "action_prediction": {
+        "choice": "tool",
+        "probabilities": {
+          "clarify": 0.16,
+          "human": 0.0,
+          "answer": 0.03,
+          "refuse": 0.01,
+          "redirect": 0.0,
+          "tool": 0.8,
+          "close": 0.0,
+          "retrieve": 0.0
+        },
+        "provider_confidence": 0.76
+      },
+      "raw_tool_prediction": {
+        "choice": "queryMyApplications",
+        "probabilities": {
+          "queryMyCreditScore": 0.0,
+          "queryMyApplications": 1.0,
+          "explainApplicationStatus": 0.0,
+          "queryLoanProducts": 0.0,
+          "queryApplicationDetail": 0.0
+        },
+        "provider_confidence": 1.0
+      },
+      "argument_source": null,
+      "elapsed_s": 0.48542020000058983,
+      "usage": {
+        "input_tokens": 1173,
+        "output_tokens": 153
+      },
+      "measured_at": "2026-10-02T05:20:31.177837+00:00"
+    }
+  },
+  {
+    "id": "FIN-F2-E-0143",
+    "input": {
+      "message": "我贴的提示是“尚未选择”，只是想理解这几个字。",
+      "history": [],
+      "state": {
+        "authenticated": true
+      },
+      "service_scope": "loan_platform",
+      "capability_profile": "planned-kb-v1",
+      "capabilities": {
+        "knowledge_collections": [
+          "loan_service_docs",
+          "privacy_policy"
+        ],
+        "handoff_connected": false
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "queryMyCreditScore",
+        "explainApplicationStatus"
+      ],
+      "images": []
+    },
+    "annotation": {
+      "action": "answer",
+      "tool_name": null,
+      "tool_arguments": {},
+      "retrieval_collection": null,
+      "missing_slots": [],
+      "reason": "一般概念、充分假设下的算术、礼貌响应或充分已给事实可直接回应；不臆造平台规则或个人记录。",
+      "evidence_paths": [
+        "input.message",
+        "input.state",
+        "input.capabilities",
+        "input.available_tools"
+      ],
+      "policy_version": "loan-eight-actions-pilot-1"
+    },
+    "prediction": {
+      "id": "FIN-F2-E-0143",
+      "action": "clarify",
+      "tool_name": null,
+      "action_prediction": {
+        "choice": "clarify",
+        "probabilities": {
+          "clarify": 0.9994357228279114,
+          "retrieve": 7.963439566083252e-05,
+          "tool": 2.7520913135958835e-05,
+          "answer": 0.00031496016890741885,
+          "human": 6.601923087146133e-05,
+          "redirect": 2.2815638658357784e-05,
+          "refuse": 2.7520913135958835e-05,
+          "close": 2.5853505576378666e-05
+        },
+        "logits": [
+          23.5,
+          14.0625,
+          13.0,
+          15.4375,
+          13.875,
+          12.8125,
+          13.0,
+          12.9375
+        ],
+        "input_tokens": 351,
+        "elapsed_s": 0.10993820000112464
+      },
+      "input_tokens": 351,
+      "action_elapsed_s": 0.10993820000112464,
+      "tool_elapsed_s": null,
+      "processed_input_tokens": 351,
+      "elapsed_s": 0.11002039999948465,
+      "projection": "candidate",
+      "projection_fallback": null,
+      "measured_at": "2026-10-02T05:10:47.846488+00:00"
+    },
+    "diagnostic_category": "提示原文与追问",
+    "review_note": "已提供“尚未选择”并只求字面含义，answer合理。",
+    "reviewer": "assistant",
+    "human_review": false,
+    "disposition": "retain frozen labels; diagnostic only; never copy/rewrite into training",
+    "jev_prediction": {
+      "id": "FIN-F2-E-0143",
+      "split": "development",
+      "request_sha256": "7a4ed2973cad9feba99bbb0ce8c1320010876d4a411a9665f1a8154d4019d62a",
+      "model": "jev-1.13.0",
+      "action": "answer",
+      "tool_name": null,
+      "action_prediction": {
+        "choice": "answer",
+        "probabilities": {
+          "tool": 0.0,
+          "human": 0.0,
+          "redirect": 0.0,
+          "close": 0.0,
+          "retrieve": 0.06,
+          "refuse": 0.0,
+          "answer": 0.85,
+          "clarify": 0.09
+        },
+        "provider_confidence": 0.82
+      },
+      "raw_tool_prediction": {
+        "choice": "explainApplicationStatus",
+        "probabilities": {
+          "queryMyCreditScore": 0.0,
+          "explainApplicationStatus": 0.82,
+          "queryMyApplications": 0.1,
+          "queryApplicationDetail": 0.01,
+          "queryLoanProducts": 0.07
+        },
+        "provider_confidence": 0.78
+      },
+      "argument_source": null,
+      "elapsed_s": 0.4230991999993421,
+      "usage": {
+        "input_tokens": 1181,
+        "output_tokens": 155
+      },
+      "measured_at": "2026-10-02T05:20:36.843963+00:00"
+    }
+  },
+  {
+    "id": "FIN-F2-E-0206",
+    "input": {
+      "message": "当前工具列表没有申请读取，我确实要核对本人提交记录。",
+      "history": [],
+      "state": {
+        "authenticated": true
+      },
+      "service_scope": "loan_platform",
+      "capability_profile": "current-no-kb-v1",
+      "capabilities": {
+        "knowledge_collections": [],
+        "handoff_connected": false
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryApplicationDetail",
+        "queryMyCreditScore",
+        "explainApplicationStatus"
+      ],
+      "images": []
+    },
+    "annotation": {
+      "action": "human",
+      "tool_name": null,
+      "tool_arguments": {},
+      "retrieval_collection": null,
+      "missing_slots": [],
+      "reason": "明确人工诉求、当前账户/资金争议或个人事项自动能力不足，应建议人工核实；当前未接通不能声称已连接/受理。",
+      "evidence_paths": [
+        "input.message",
+        "input.state",
+        "input.capabilities",
+        "input.available_tools"
+      ],
+      "policy_version": "loan-eight-actions-pilot-1"
+    },
+    "prediction": {
+      "id": "FIN-F2-E-0206",
+      "action": "tool",
+      "tool_name": "queryMyApplications",
+      "action_prediction": {
+        "choice": "tool",
+        "probabilities": {
+          "clarify": 0.04520464688539505,
+          "retrieve": 0.0008279518806375563,
+          "tool": 0.8012714982032776,
+          "answer": 0.012951347045600414,
+          "human": 0.1392400860786438,
+          "redirect": 0.0002525110903661698,
+          "refuse": 0.00015315569180529565,
+          "close": 9.888475324260071e-05
+        },
+        "logits": [
+          20.125,
+          16.125,
+          23.0,
+          18.875,
+          21.25,
+          14.9375,
+          14.4375,
+          14.0
+        ],
+        "input_tokens": 342,
+        "elapsed_s": 0.11326270000063232
+      },
+      "input_tokens": 342,
+      "action_elapsed_s": 0.11326270000063232,
+      "tool_elapsed_s": 0.10199040000043169,
+      "tool_prediction": {
+        "choice": "queryMyApplications",
+        "probabilities": {
+          "queryLoanProducts": 0.0013233082136139274,
+          "queryMyApplications": 0.9973829388618469,
+          "queryApplicationDetail": 0.00013947566912975162,
+          "queryMyCreditScore": 0.000909495516680181,
+          "explainApplicationStatus": 0.00024478742852807045
+        },
+        "logits": [
+          17.625,
+          24.25,
+          15.375,
+          17.25,
+          15.9375
+        ],
+        "input_tokens": 309,
+        "elapsed_s": 0.10199040000043169
+      },
+      "processed_input_tokens": 651,
+      "elapsed_s": 0.21534910000082164,
+      "projection": "candidate",
+      "projection_fallback": null,
+      "measured_at": "2026-10-02T05:10:56.443236+00:00"
+    },
+    "diagnostic_category": "工具可用性",
+    "review_note": "申请列表工具已移除；应如实说明人工未接通，不能选不可用工具。",
+    "reviewer": "assistant",
+    "human_review": false,
+    "disposition": "retain frozen labels; diagnostic only; never copy/rewrite into training",
+    "jev_prediction": {
+      "id": "FIN-F2-E-0206",
+      "split": "development",
+      "request_sha256": "3f827ab641cfb6a61878e8dce9570d4407bcbd69d3b35fbd31ca514b8d4de6b0",
+      "model": "jev-1.13.0",
+      "action": "clarify",
+      "tool_name": null,
+      "action_prediction": {
+        "choice": "clarify",
+        "probabilities": {
+          "refuse": 0.0,
+          "human": 0.0,
+          "close": 0.0,
+          "answer": 0.31,
+          "clarify": 0.5700000000000001,
+          "retrieve": 0.0,
+          "redirect": 0.0,
+          "tool": 0.12
+        },
+        "provider_confidence": 0.5
+      },
+      "raw_tool_prediction": {
+        "choice": "queryMyApplications",
+        "probabilities": {
+          "queryLoanProducts": 0.02,
+          "queryMyApplications": 0.64,
+          "queryMyCreditScore": 0.06,
+          "explainApplicationStatus": 0.04,
+          "queryApplicationDetail": 0.24
+        },
+        "provider_confidence": 0.56
+      },
+      "argument_source": null,
+      "elapsed_s": 0.4618613999991794,
+      "usage": {
+        "input_tokens": 1166,
+        "output_tokens": 154
+      },
+      "measured_at": "2026-10-02T05:21:07.611205+00:00"
+    }
+  },
+  {
+    "id": "FIN-F2-E-0255",
+    "input": {
+      "message": "通勤申请明细查询缺失，但我确实需要核实531703的记录。",
+      "history": [],
+      "state": {
+        "authenticated": true
+      },
+      "service_scope": "loan_platform",
+      "capability_profile": "current-no-kb-v1",
+      "capabilities": {
+        "knowledge_collections": [],
+        "handoff_connected": false
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyApplications",
+        "queryMyCreditScore",
+        "explainApplicationStatus"
+      ],
+      "images": []
+    },
+    "annotation": {
+      "action": "human",
+      "tool_name": null,
+      "tool_arguments": {},
+      "retrieval_collection": null,
+      "missing_slots": [],
+      "reason": "明确人工诉求、当前账户/资金争议或个人事项自动能力不足，应建议人工核实；当前未接通不能声称已连接/受理。",
+      "evidence_paths": [
+        "input.message",
+        "input.state",
+        "input.capabilities",
+        "input.available_tools"
+      ],
+      "policy_version": "loan-eight-actions-pilot-1"
+    },
+    "prediction": {
+      "id": "FIN-F2-E-0255",
+      "action": "tool",
+      "tool_name": "queryApplicationDetail",
+      "action_prediction": {
+        "choice": "tool",
+        "probabilities": {
+          "clarify": 0.011963656172156334,
+          "retrieve": 0.00019337447884026915,
+          "tool": 0.9503908753395081,
+          "answer": 0.00036127111525274813,
+          "human": 0.03685065358877182,
+          "redirect": 0.00016031308041419834,
+          "refuse": 5.204603439779021e-05,
+          "close": 2.7858235625899397e-05
+        },
+        "logits": [
+          19.25,
+          15.125,
+          23.625,
+          15.75,
+          20.375,
+          14.9375,
+          13.8125,
+          13.1875
+        ],
+        "input_tokens": 345,
+        "elapsed_s": 0.1221466999995755
+      },
+      "input_tokens": 345,
+      "action_elapsed_s": 0.1221466999995755,
+      "tool_elapsed_s": 0.1102653999987524,
+      "tool_prediction": {
+        "choice": "queryApplicationDetail",
+        "probabilities": {
+          "queryLoanProducts": 3.119890243397094e-05,
+          "queryMyApplications": 2.1442670913529582e-05,
+          "queryApplicationDetail": 0.9998723268508911,
+          "queryMyCreditScore": 5.8287219871999696e-05,
+          "explainApplicationStatus": 1.669956873229239e-05
+        },
+        "logits": [
+          16.375,
+          16.0,
+          26.75,
+          17.0,
+          15.75
+        ],
+        "input_tokens": 312,
+        "elapsed_s": 0.1102653999987524
+      },
+      "processed_input_tokens": 657,
+      "elapsed_s": 0.23252229999889096,
+      "projection": "candidate",
+      "projection_fallback": null,
+      "measured_at": "2026-10-02T05:11:03.613002+00:00"
+    },
+    "diagnostic_category": "工具可用性",
+    "review_note": "申请明细工具已移除，其他工具不能替代该单明细；human合理。",
+    "reviewer": "assistant",
+    "human_review": false,
+    "disposition": "retain frozen labels; diagnostic only; never copy/rewrite into training",
+    "jev_prediction": {
+      "id": "FIN-F2-E-0255",
+      "split": "development",
+      "request_sha256": "6be4d1320aab8b366f7b8db8000861ef30c88f26a733a2fe5f73371bf830ba37",
+      "model": "jev-1.13.0",
+      "action": "tool",
+      "tool_name": "queryMyApplications",
+      "action_prediction": {
+        "choice": "tool",
+        "probabilities": {
+          "redirect": 0.01,
+          "clarify": 0.15,
+          "retrieve": 0.0,
+          "refuse": 0.0,
+          "tool": 0.69,
+          "close": 0.0,
+          "human": 0.0,
+          "answer": 0.15
+        },
+        "provider_confidence": 0.64
+      },
+      "raw_tool_prediction": {
+        "choice": "queryMyApplications",
+        "probabilities": {
+          "queryMyApplications": 0.7,
+          "explainApplicationStatus": 0.06,
+          "queryMyCreditScore": 0.0,
+          "queryApplicationDetail": 0.24,
+          "queryLoanProducts": 0.0
+        },
+        "provider_confidence": 0.63
+      },
+      "argument_source": null,
+      "elapsed_s": 0.4539448999985325,
+      "usage": {
+        "input_tokens": 1168,
+        "output_tokens": 153
+      },
+      "measured_at": "2026-10-02T05:21:31.549512+00:00"
+    }
+  },
+  {
+    "id": "FIN-F2-E-0358",
+    "input": {
+      "message": "查生活用品用途是否在你们平台认可范围内的正式说明。",
+      "history": [],
+      "state": {
+        "authenticated": true
+      },
+      "service_scope": "loan_platform",
+      "capability_profile": "planned-kb-v1",
+      "capabilities": {
+        "knowledge_collections": [
+          "loan_service_docs",
+          "privacy_policy"
+        ],
+        "handoff_connected": false
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "queryMyCreditScore",
+        "explainApplicationStatus"
+      ],
+      "images": []
+    },
+    "annotation": {
+      "action": "retrieve",
+      "tool_name": null,
+      "tool_arguments": {},
+      "retrieval_collection": "loan_service_docs",
+      "missing_slots": [],
+      "reason": "需要未知的平台正式规则，当前规划知识集合可用；不将检索标签视为真实知识服务已部署。",
+      "evidence_paths": [
+        "input.message",
+        "input.state",
+        "input.capabilities",
+        "input.available_tools"
+      ],
+      "policy_version": "loan-eight-actions-pilot-1"
+    },
+    "prediction": {
+      "id": "FIN-F2-E-0358",
+      "action": "tool",
+      "tool_name": "queryLoanProducts",
+      "action_prediction": {
+        "choice": "tool",
+        "probabilities": {
+          "clarify": 0.0007442347705364227,
+          "retrieve": 0.18210823833942413,
+          "tool": 0.8161525130271912,
+          "answer": 0.00035155160003341734,
+          "human": 0.0004514011961873621,
+          "redirect": 7.368921797024086e-05,
+          "refuse": 7.368921797024086e-05,
+          "close": 4.4694770622299984e-05
+        },
+        "logits": [
+          16.625,
+          22.125,
+          23.625,
+          15.875,
+          16.125,
+          14.3125,
+          14.3125,
+          13.8125
+        ],
+        "input_tokens": 348,
+        "elapsed_s": 0.12745210000139195
+      },
+      "input_tokens": 348,
+      "action_elapsed_s": 0.12745210000139195,
+      "tool_elapsed_s": 0.11246080000091752,
+      "tool_prediction": {
+        "choice": "queryLoanProducts",
+        "probabilities": {
+          "queryLoanProducts": 0.9680793285369873,
+          "queryMyApplications": 0.0012844287557527423,
+          "queryApplicationDetail": 0.00026923089171759784,
+          "queryMyCreditScore": 0.0011335043236613274,
+          "explainApplicationStatus": 0.02923346310853958
+        },
+        "logits": [
+          23.25,
+          16.625,
+          15.0625,
+          16.5,
+          19.75
+        ],
+        "input_tokens": 315,
+        "elapsed_s": 0.11246080000091752
+      },
+      "processed_input_tokens": 663,
+      "elapsed_s": 0.24002800000016578,
+      "projection": "candidate",
+      "projection_fallback": null,
+      "measured_at": "2026-10-02T05:11:18.808829+00:00"
+    },
+    "diagnostic_category": "知识与产品查询",
+    "review_note": "请求正式用途规则，可用知识库支持retrieve；目录工具未提供用途规则。",
+    "reviewer": "assistant",
+    "human_review": false,
+    "disposition": "retain frozen labels; diagnostic only; never copy/rewrite into training",
+    "jev_prediction": {
+      "id": "FIN-F2-E-0358",
+      "split": "development",
+      "request_sha256": "65f0181ec34e6df925b641c49b5256e375a1bb1278331c0b1cbf204b6c5f1716",
+      "model": "jev-1.13.0",
+      "action": "retrieve",
+      "tool_name": null,
+      "action_prediction": {
+        "choice": "retrieve",
+        "probabilities": {
+          "refuse": 0.0,
+          "tool": 0.0,
+          "retrieve": 0.9,
+          "clarify": 0.02,
+          "redirect": 0.01,
+          "answer": 0.07,
+          "close": 0.0,
+          "human": 0.0
+        },
+        "provider_confidence": 0.89
+      },
+      "raw_tool_prediction": {
+        "choice": "queryLoanProducts",
+        "probabilities": {
+          "queryLoanProducts": 0.99,
+          "queryMyApplications": 0.0,
+          "explainApplicationStatus": 0.01,
+          "queryMyCreditScore": 0.0,
+          "queryApplicationDetail": 0.0
+        },
+        "provider_confidence": 0.98
+      },
+      "argument_source": null,
+      "elapsed_s": 0.4279260000002978,
+      "usage": {
+        "input_tokens": 1184,
+        "output_tokens": 154
+      },
+      "measured_at": "2026-10-02T05:22:21.381411+00:00"
+    }
+  },
+  {
+    "id": "FIN-F2-E-0369",
+    "input": {
+      "message": "我明确需要真人客服，不要继续自动介绍产品。",
+      "history": [],
+      "state": {
+        "authenticated": false
+      },
+      "service_scope": "loan_platform",
+      "capability_profile": "current-no-kb-v1",
+      "capabilities": {
+        "knowledge_collections": [],
+        "handoff_connected": false
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "queryMyCreditScore",
+        "explainApplicationStatus"
+      ],
+      "images": []
+    },
+    "annotation": {
+      "action": "human",
+      "tool_name": null,
+      "tool_arguments": {},
+      "retrieval_collection": null,
+      "missing_slots": [],
+      "reason": "明确人工诉求、当前账户/资金争议或个人事项自动能力不足，应建议人工核实；当前未接通不能声称已连接/受理。",
+      "evidence_paths": [
+        "input.message",
+        "input.state",
+        "input.capabilities",
+        "input.available_tools"
+      ],
+      "policy_version": "loan-eight-actions-pilot-1"
+    },
+    "prediction": {
+      "id": "FIN-F2-E-0369",
+      "action": "answer",
+      "tool_name": null,
+      "action_prediction": {
+        "choice": "answer",
+        "probabilities": {
+          "clarify": 0.0016286640893667936,
+          "retrieve": 0.00014231106615625322,
+          "tool": 2.0501853214227594e-05,
+          "answer": 0.9560019969940186,
+          "human": 0.042003799229860306,
+          "redirect": 6.72229944029823e-05,
+          "refuse": 4.91813916596584e-05,
+          "close": 8.63160312292166e-05
+        },
+        "logits": [
+          17.875,
+          15.4375,
+          13.5,
+          24.25,
+          21.125,
+          14.6875,
+          14.375,
+          14.9375
+        ],
+        "input_tokens": 343,
+        "elapsed_s": 0.12509529999988445
+      },
+      "input_tokens": 343,
+      "action_elapsed_s": 0.12509529999988445,
+      "tool_elapsed_s": null,
+      "processed_input_tokens": 343,
+      "elapsed_s": 0.1251732999990054,
+      "projection": "candidate",
+      "projection_fallback": null,
+      "measured_at": "2026-10-02T05:11:20.286735+00:00"
+    },
+    "diagnostic_category": "人工诉求优先级",
+    "review_note": "未认证不取消明确人工诉求；human表示下一步应升级，不宣称已经接通。",
+    "reviewer": "assistant",
+    "human_review": false,
+    "disposition": "retain frozen labels; diagnostic only; never copy/rewrite into training",
+    "jev_prediction": {
+      "id": "FIN-F2-E-0369",
+      "split": "development",
+      "request_sha256": "93a7862dbc29da7be184679e5edd1f8699dd2b447b6d0990797fe440ea06c35a",
+      "model": "jev-1.13.0",
+      "action": "human",
+      "tool_name": null,
+      "action_prediction": {
+        "choice": "human",
+        "probabilities": {
+          "refuse": 0.0,
+          "redirect": 0.0,
+          "tool": 0.0,
+          "human": 0.67,
+          "answer": 0.29,
+          "clarify": 0.04,
+          "retrieve": 0.0,
+          "close": 0.0
+        },
+        "provider_confidence": 0.61
+      },
+      "raw_tool_prediction": {
+        "choice": "queryMyApplications",
+        "probabilities": {
+          "queryApplicationDetail": 0.01,
+          "queryMyCreditScore": 0.01,
+          "queryMyApplications": 0.48,
+          "explainApplicationStatus": 0.13,
+          "queryLoanProducts": 0.37
+        },
+        "provider_confidence": 0.34
+      },
+      "argument_source": null,
+      "elapsed_s": 0.4261557999998331,
+      "usage": {
+        "input_tokens": 1169,
+        "output_tokens": 153
+      },
+      "measured_at": "2026-10-02T05:22:26.564590+00:00"
+    }
+  }
+]

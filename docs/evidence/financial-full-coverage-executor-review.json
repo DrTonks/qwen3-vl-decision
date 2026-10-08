@@ -1,0 +1,30 @@
+{
+  "version": "financial-full-coverage-cpu-verification-v1",
+  "status": "pass",
+  "independent": false,
+  "reviewer": "primary-agent/CPU-verification",
+  "human_reviewed": false,
+  "open_findings": [],
+  "model_api_requests": 0,
+  "evaluation_examples_read": false,
+  "predictions_read": false,
+  "gpu_used": false,
+  "tests": {
+    "command": ".venv-qwen35/Scripts/python.exe -m unittest discover -s tests -p test_financial_full_coverage_cycle.py -v",
+    "passed": 13
+  },
+  "powershell_scripts_parsed": 3,
+  "actual_pool_rows": 13378,
+  "full_epoch_last_batch": 6,
+  "files": {
+    "src/qwenlab/financial_full_coverage_cycle.py": "71dcb24b91e346eb23b52f6cd275499faa6edba5af208689e0990e4749f77a06",
+    "tests/test_financial_full_coverage_cycle.py": "96d2cfab0cac82adb076d78a025e7e2fb02d0999f2f061af0be5e921677ce9e4",
+    "scripts/start-financial-full-coverage.ps1": "94f69de01d75b3511a97a86639d9757758e0ff474908c456fcbc692895367da4",
+    "scripts/pause-financial-full-coverage.ps1": "4eca02fa8bb776a86a9ec38f930690a97949d001138b6e7f5a82f5810b6b5b86",
+    "scripts/resume-financial-full-coverage.ps1": "6d751ed9bebc6f39f64b41308bfdee4956e248e1c6de00d42fb636cfb96fb511",
+    "src/qwenlab/financial_full_coverage_schedule.py": "20547dcc0bd9e1efc65aec6d75bd0f9405cd1ec1094006657d6f6a3aed0e7dcf"
+  },
+  "config_sha256": "d279f2395264f2e94df8f00761445412e7e83ead6d5453bafd0c147b8551077e",
+  "schedule_manifest_sha256": "4d90cbe8a3a76749294834d4e6ac2a72f2b6094cd234218c809022c73af80658",
+  "note": "CPU self-verification only; no fabricated independent review. Original data review retained; real GPU probe required before main."
+}

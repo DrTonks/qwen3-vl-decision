@@ -1,0 +1,11 @@
+{
+  "stage": "runtime_pause_resume_verified",
+  "paused_step": 57,
+  "pause_command_exit_code": 0,
+  "checkpoint": ".local/checkpoints/financial-eight-actions-pilot-v2/step-57",
+  "checkpoint_verified_before_resume": true,
+  "old_worker_exited": true,
+  "resumed_worker_pid": 64328,
+  "resumed_training_observed_step": 92,
+  "note": "Runtime command smoke; exact numerical replay additionally tested with CPU dropout/AdamW/RNG probe. Not an independent repeated GPU trajectory experiment."
+}

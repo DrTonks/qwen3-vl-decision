@@ -1,0 +1,9 @@
+{
+  "files": {
+    "audit.json": "64428dff8d036924f6e76d59da07944ccd9fc754b78149bf1ef8629004f23818",
+    "completion.json": "38f6a75e753ba050a178d9440cdb3853f1d1e20df64c53fd0d8fb2bf31438683",
+    "report.md": "d8c60baf90ee2926869a25a845f7ae5e1c2cef37d7f406afd41ee22ffc669073",
+    "selection.json": "182adc0830edaa783824869b791f89302581619e5c6dc4d0363a080fd9a7ffc7"
+  },
+  "scope": "Offline audited development results; no selected candidate, no final scoring, no API calls"
+}

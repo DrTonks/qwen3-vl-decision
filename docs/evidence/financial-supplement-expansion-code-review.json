@@ -1,0 +1,203 @@
+{
+  "version": "financial-supplement-expansion-code-review-v1",
+  "reviewer": "independent-agent-supplement_labels_review",
+  "reviewer_type": "AI",
+  "ai_origin": true,
+  "independent": true,
+  "human_reviewed": false,
+  "heldout_read": false,
+  "evaluation_data_read": false,
+  "predictions_read": false,
+  "model_api_requests": 0,
+  "training_run": false,
+  "reviewed_at_utc": "2026-10-04T01:20:28.931411+00:00",
+  "status": "pass_with_scope_limits",
+  "candidate_sha256": "f2f9d3fad35a74858b080d3afbb60acf1c36966e3ea852cf94dcc0e153610ac5",
+  "candidate_review_pending": false,
+  "source_sha256": {
+    "src/qwenlab/financial_supplement_expansion.py": "85482cc6146c1545a4fd15b4200a172f745736277a0f939e9a87c11505c6e6f0",
+    "scripts/finalize-financial-expansion.py": "057e00c63005a33c7d17ea90fa68a5e5415e74f0228e1ec87ff3a745ca42db84",
+    "scripts/screen-financial-expansion-overlap.py": "b62bcac008cb3430253d86f9efbfcff9eff959106ae2e53b25434acf267f0263"
+  },
+  "tests": {
+    "existing_suite": {
+      "tests/test_financial_supplement_expansion.py": {
+        "passed": 5,
+        "failed": 0
+      },
+      "tests/test_financial_expansion_overlap.py": {
+        "passed": 9,
+        "failed": 0
+      },
+      "tests/test_financial_expansion_release.py": {
+        "passed": 24,
+        "failed": 0,
+        "fixtures": "synthetic only; independently read and executed"
+      }
+    },
+    "independent_synthetic_release_probes": [
+      {
+        "case": "empty_corpora",
+        "expected": "reject",
+        "observed": "accepted_one_candidate",
+        "output_writer_mocked": true
+      },
+      {
+        "case": "cleared_quarantine_with_hit",
+        "expected": "reject",
+        "observed": "accepted_one_candidate",
+        "output_writer_mocked": true
+      },
+      {
+        "case": "wrong_coverage",
+        "expected": "reject",
+        "observed": "accepted_one_candidate",
+        "output_writer_mocked": true
+      },
+      {
+        "case": "missing_tokens",
+        "expected": "reject",
+        "observed": "accepted_one_candidate",
+        "output_writer_mocked": true
+      },
+      {
+        "case": "zero_tool_count",
+        "expected": "reject",
+        "observed": "accepted_one_candidate",
+        "output_writer_mocked": true
+      }
+    ],
+    "note": "Initial probe using OS temporary directory encountered sandbox cleanup permission error; completed subsequent probes entirely with mocked filesystem writes. No model or corpus run occurred.",
+    "repair_retest": {
+      "runtime": ".venv-qwen35/Scripts/python.exe",
+      "blind_screen_fixture_mode": "Synthetic fresh report at subprocess/read boundary; no old corpus read. Actual comparison and rejection logic executed.",
+      "rejected": [
+        "empty_corpora",
+        "cleared_quarantine_with_remaining_hit",
+        "wrong_candidate_coverage",
+        "cleared_all_hits_and_quarantine",
+        "missing_tokens",
+        "zero_tool_count"
+      ],
+      "accepted_controls": [
+        "matching_report",
+        "matching_tokens"
+      ],
+      "existing_suites_after_repair": {
+        "passed": 14,
+        "failed": 0
+      }
+    },
+    "synthetic_1600_review_coverage": {
+      "rows": 1600,
+      "complete_coverage_accepted": true,
+      "rejected": [
+        "missing_row",
+        "duplicate_row",
+        "stale_source_row_hash",
+        "stale_reviewed_action"
+      ],
+      "one_nonaccept_quarantines_entire_group_rows": 4,
+      "remaining_accepted_rows": 1596,
+      "training_eligible_rows": 0
+    },
+    "actual_local_tokenizer": {
+      "synthetic_rows": 2,
+      "action": {
+        "count": 2,
+        "minimum": 487,
+        "maximum": 491,
+        "mean": 489.0
+      },
+      "tool": {
+        "count": 1,
+        "minimum": 535,
+        "maximum": 535,
+        "mean": 535.0
+      },
+      "over_budget_input_rejected_without_truncation": true,
+      "model_weights_loaded": false,
+      "api_calls": 0
+    },
+    "total_existing_suite": {
+      "passed": 38,
+      "failed": 0
+    }
+  },
+  "verified_strengths": [
+    "New authoring path allowlist, unique ID/source group structure, <=4 variants per group, cohort/authentication consistency.",
+    "Manifest requires exact output file set and expected Python/policy source dependency set; verify recomputes all generated artifacts.",
+    "Actual Node exporter emits sourceSha256 for six backend dependencies on every projected row; full node-projections replay detects dependency drift even when semantic input is unchanged. Earlier suspicion that backend dependency hashes were absent was independently checked against export-financial-input.cjs and withdrawn.",
+    "New semantic reviews require candidate and policy hashes, independent/AI-only flags, exactly one record for every new ID, matching source-row hash and reviewed action.",
+    "Any nonaccept semantic decision quarantines its whole source group. Exact visible-input duplicate groups are removed.",
+    "Final output forcibly keeps training_eligible=false and human_reviewed=false; this is a reviewed candidate package, never a training release.",
+    "Blind screen uses only text and ordered role/content history for lexical matching, preserves corpus roles, suppresses old row text/IDs/labels, validates index bytes/counts/readers and rejects unsafe paths."
+  ],
+  "scope_limits": [
+    "Read only index path/reader/hash/count metadata, not historical corpus content or predictions. Existing overlap tests use freshly generated synthetic fixtures.",
+    "Lexical nonmatches do not establish semantic independence.",
+    "No source code or author data changed; only this evidence report was written.",
+    "Repair negative tests substitute only the blind subprocess result/read boundary with synthetic complete reports to avoid prohibited historical content access; actual old-corpus end-to-end replay is left to the separately authorized blind screening execution.",
+    "No blind-screen report or historical payload was read. Actual isolated blind-screen replay and final group routing must run in the separately authorized root release process; this engineering pass does not itself certify the eventual accepted count.",
+    "Frozen candidate independently replayed with the real Node exporter/local tokenizer: 1678 action rows / 348 tool rows. Current A+B review records structurally validate every one of 1520 new rows exactly once, matching candidate/policy/source-row SHA and original annotated action. A report was read only for structural binding, not as independent semantic review by this reviewer; 158 inherited rows were verified by build replay."
+  ],
+  "resolved_findings": [
+    {
+      "id": "FSE-CODE-01",
+      "priority": "P1",
+      "file": "scripts/finalize-financial-expansion.py",
+      "line": 78,
+      "title": "Blind-screen report is not validated against full indexed coverage or recomputed hits",
+      "detail": "Release checks dependency hash strings, then only traverses the report-supplied corpora list. An empty/partial corpus list, wrong candidate_count, or remaining hits combined with cleared quarantine lists can pass. split_groups only checks internal agreement of the quarantine sets, not agreement with hits or index coverage.",
+      "evidence": "Synthetic main() negative probes accepted a candidate for empty_corpora, cleared_quarantine_with_hit, and wrong_coverage. Reads, hash providers and output writer were mocked to synthetic fixtures; no protected corpora or candidate files were opened.",
+      "requested_change": "Fail closed on exact report schema, full indexed corpus/coverage/candidate counts, and hits-to-group closure. Prefer actual blind screener replay against frozen inputs and comparison of the complete saved report before release, without emitting protected payloads.",
+      "resolution": "verify_screen now executes the isolated blind screener and compares the complete report exactly.",
+      "status": "resolved_and_independently_retested"
+    },
+    {
+      "id": "FSE-CODE-02",
+      "priority": "P1",
+      "file": "scripts/finalize-financial-expansion.py",
+      "line": 76,
+      "title": "Tool token audit can be omitted while release still passes",
+      "detail": "Release validates candidate_sha256/status/no_truncation only. It does not require token statistics or exact action/tool example counts and token maxima. Reports with tokens removed or tool count zero are accepted.",
+      "evidence": "Synthetic main() negative probes missing_tokens and zero_tool_count each accepted the tool candidate. Existing audit generation encodes both task kinds, but release accepts an incomplete or edited audit and does not independently enforce coverage.",
+      "requested_change": "Require exact action count equal to all rows, exact tool count equal to tool-labeled rows, strict finite/integer bounds and maxima within the configured token limit; bind tokenizer/config dependencies and ideally recompute the audit before release. Add negative release-gate tests.",
+      "resolution": "verify_tokens now recomputes e.token_stats across all action rows and actual tool rows using the local tokenizer, then compares exact statistics; encode rejects >2048 without truncation.",
+      "status": "resolved_and_independently_retested"
+    }
+  ],
+  "open_findings": [],
+  "candidate_file": "data/financial-supplement-expansion-v1/build-v1/candidates.json",
+  "actual_candidate_verification": {
+    "candidate_rows": 1678,
+    "new_rows": 1520,
+    "inherited_pilot_rows": 158,
+    "actual_node_replay": "pass",
+    "manifest_dependency_and_artifact_recompute": "pass",
+    "actual_local_tokenizer_replay": "pass",
+    "tokens": {
+      "action": {
+        "count": 1678,
+        "minimum": 472,
+        "maximum": 544,
+        "mean": 498.96
+      },
+      "tool": {
+        "count": 348,
+        "minimum": 521,
+        "maximum": 587,
+        "mean": 551.8
+      }
+    },
+    "no_truncation": true,
+    "model_weights_loaded": false,
+    "model_api_requests": 0,
+    "training_eligible_rows": 0,
+    "b_review_coverage": 760,
+    "b_review_sha256": "ddf6737cdaa24813fecde87dd4601cfa4404a823737918e67addf984bf143746",
+    "full_new_row_review_chain": "structural check passed for current A+B records; final frozen-review SHA binding is performed by root finalizer",
+    "new_rows_independently_reviewed": 1520
+  },
+  "frozen": true
+}

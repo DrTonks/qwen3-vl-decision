@@ -1,0 +1,82 @@
+{
+  "status": "pass",
+  "reviewer": "/root/boundary_code_review",
+  "reviewer_type": "independent_ai_agent",
+  "human_reviewed": false,
+  "reviewed_at": "2026-10-02T11:52:41.533709+00:00",
+  "scope": "Independent source review of release, two-arm executor, startup/pause/resume scripts, configuration and CPU tests. No GPU training or model/API inference performed by reviewer.",
+  "files": {
+    "src/qwenlab/qwen35_boundary_study.py": "1be5cb06dfc6e606a0b002c4b84837a35affd9cbaea1028b5d82de94041bb106",
+    "src/qwenlab/financial_boundary_release.py": "6a3e0302d6699503e5ac2d08f0e663cd56f9b2c78c35dd118f12293024f889db",
+    "scripts/start-qwen35-boundary.ps1": "c4712744b8cb1746c6fd649f34e1ad6ad78dcd9a38d0dfcda1e9dbc64e669681",
+    "scripts/pause-qwen35-boundary.ps1": "db28d39a0e6cd24031c6088ee4ea4ed203db2f8291690ec563aee6546638ae3e",
+    "scripts/resume-qwen35-boundary.ps1": "477cda2b58e8a326dc7eb4c0254525c14e0a47f0dda1decd991e9c190ba01cfb",
+    "tests/test_qwen35_boundary_study.py": "fed3a7909f68e4131666677141a56d9a2f83bacd63cbacdaa1c0d656a3e167c8",
+    "tests/test_financial_boundary_release.py": "44ef2c0ef92a3c13b8d853b62f104edb3151f6baf385c7b384e00680085645ed",
+    "configs/financial-qwen35-boundary-v1.json": "f4de1436d1c07925b8deac14574cfab93f94bd347b3449a51873c3fd8782f865"
+  },
+  "additional_reviewed_dependencies": {
+    "src/qwenlab/financial_boundary_candidates.py": "4d9d922bb436950b814a17f3b09078f0cd82b6c924137000ecb477dfec8d77fb",
+    "src/qwenlab/qwen35_cycle.py": "6a6f64537c933ecc8af1d881f876e6a329a65ec6d1b21668c025082623209d41",
+    "src/qwenlab/qwen35_model.py": "c11d5d7cead90cb2196f4fe3c716c585c4a61a914a18917c67697054cb82e54f",
+    "src/qwenlab/financial_train.py": "1d6cc12c18531f01d1ab21aae1d7ae19f8e439e916bd87fd2152ed6ceb49c917",
+    "src/qwenlab/joint_v5.py": "80190210f3c07578768e27120dd48b97192b01a90b6f8b97f32bcc7c44f15ed7",
+    "scripts/use-env.ps1": "114190e9dfe979dafa92fb23fa110acc9fa55a0d07aa8673afdb96ba14779cca",
+    "tests/test_financial_boundary_candidates.py": "6df91ef440753bfff0b896a96a1c80500236746cdd335acb622059531687c872",
+    "tests/test_qwen35_cycle.py": "855ce92a8691a871e1f130e6491379e7f77914647c38aca47fad5f77c3bb71da"
+  },
+  "data_bindings": {
+    "data/financial-boundary-candidates-v1/candidates.json": "b7717a190ed4fb6eb612ee7611b15cb2079b8636e94b94086ef9fa0562abed4e",
+    "docs/evidence/financial-boundary-label-review.json": "bda92b2f56ae5cd25f51815255817396574121e40be8b30461e221dcda7752c7",
+    "data/financial-boundary-training-v1/manifest.json": "19f3f1941cf2e7a6dc44d4e18e8ed3867fcf0dac480dfd93e2f0554fdff68611",
+    "data/financial-boundary-training-v1/training.json": "e4169b754df692e90086a6e7d68f188575a03ae1b65c68c283f40b028bfb1949"
+  },
+  "findings": [
+    {
+      "id": "R1",
+      "status": "resolved",
+      "description": "Startup originally lacked executable review binding; validate_code_review now requires exact hashes of all eight reviewed files and freezes review evidence hash in protocol."
+    },
+    {
+      "id": "R2",
+      "status": "resolved",
+      "description": "Initial incomplete-second-arm test had incomplete mock and did not prove full global gate; selection now validates both completion records first and test distinguishes completed replay from missing overlay before any development rows are read."
+    }
+  ],
+  "unresolved_blocking_findings": [],
+  "checks": {
+    "release": "Candidate SHA bound; exact full review coverage; any nonaccept excludes entire source group; synthetic provenance retained; no claim of human review.",
+    "matched_training": "Both arms load same initial step-2976 adapter, create fresh AdamW with identical LR/seed/weight-decay/1530 steps/12235 sample positions; resume restores only its own state. Overlay covers all 12235 rows once; replay covers 11899 rows plus 336 repeated positions.",
+    "selection": "Original raw-base development gate retained; both complete arms required before six fixed checkpoint candidates compared; immutable single global winner; initial adapter history is not a new candidate; calibration/final only via global accepted winner.",
+    "freeze": "Parent source/config/checkpoint/model and current data/dependencies/packages are validated and frozen; changed code review or release hashes stop subsequent execution.",
+    "concurrency": "Sequential arm execution and shared financial-eight-actions-gpu.lock; live PID plus creation time/command/cwd detection; hidden launch window.",
+    "pause_resume": "Shared control across arms; checkpoint files and optimizer/RNG state are persisted before safe pause; main process exit required before safe_to_shutdown; resume explicit; invalid full checkpoints rejected.",
+    "non_goals": "No Jev requests, no default service switch, no deployment, no modification of old frozen source/data."
+  },
+  "tests": [
+    {
+      "command": ". .\\scripts\\use-env.ps1; .\\.venv-qwen35\\Scripts\\python.exe -m unittest tests.test_financial_boundary_release tests.test_financial_boundary_candidates tests.test_qwen35_boundary_study tests.test_qwen35_cycle -v",
+      "result": "pass",
+      "count": 19,
+      "elapsed_s": 1.22,
+      "execution": "CPU; outside sandbox because Windows restricted tempfile directories caused permission errors in both old and new tests"
+    },
+    {
+      "name": "PowerShell Language.Parser parse all three boundary scripts",
+      "result": "pass",
+      "parse_errors": 0
+    },
+    {
+      "name": "Independent CPU fake-checkpoint corruption/missing-file rejection and actual Windows OS lock conflict",
+      "result": "pass",
+      "checks": 3,
+      "detail": "A complete CPU fixture validates; tampered adapter and missing training-state both reject; nested exclusive lock rejects. No actual model checkpoints changed."
+    }
+  ],
+  "limitations": [
+    "Code/CPU review does not demonstrate real GPU resume numerical equivalence; root must confirm live training initialization and safe pause/resume smoke separately.",
+    "Dataset remains synthetic, with developer-informed categories; independent AI review does not make it human-authored or eliminate adaptive-development bias.",
+    "Historical/raw timing and new-arm timing occur at different thermal/load states; comparisons are descriptive.",
+    "This review approves the bound execution code for the authorized experiment, not model deployment or accuracy acceptance."
+  ]
+}

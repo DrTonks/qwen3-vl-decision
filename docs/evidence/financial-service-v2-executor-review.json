@@ -1,0 +1,66 @@
+{
+  "status": "pass",
+  "reviewer": "/root/boundary_code_review",
+  "reviewer_type": "independent_ai_agent",
+  "human_reviewed": false,
+  "scope": "Static review and synthetic CPU execution checks of the six new execution files against the frozen study. Permit the authorized disposable probe, then bounded main run only after matching successful probe; not model-quality or deployment approval.",
+  "files": {
+    "src/qwenlab/financial_service_v2_cycle.py": "1a5d02a9138b9765510052b875f82ab9dce0bf3cea49a7ea7c1be2f91367d89c",
+    "src/qwenlab/financial_service_v2_metrics.py": "b5af29223c5f55bb39e560cb7cc09ab8387c8d52ce095d88b3d31168a93c40dd",
+    "tests/test_financial_service_v2_cycle.py": "ca7b5fd6835da67de56dee8a52390041a5087d1683176bb5b4b73bf69cb5d4f4",
+    "scripts/start-financial-service-v2.ps1": "c818e6f929707896f4b03820cb6b01033aaab470ca522a4962a141dfc668c8a0",
+    "scripts/pause-financial-service-v2.ps1": "6e0a3ec1d71c20aec0cc42a87031228e210c6b0e629e216836dda77fa94eff4e",
+    "scripts/resume-financial-service-v2.ps1": "618f86b96afc05e3862d7a4bc7782e7fc5e09370342c02756f91ef08fbf856c1"
+  },
+  "frozen_design_sha256": "31b7b3b8fa47f1c0f9924cf9531e3cddc2e854c21e2a7c57a7df01f13a97a7ef",
+  "data_design_freeze_sha256": "449a2077c6d2bb4aef4a35b6c0284a87230172f84fa281f41e6d3feed3095774",
+  "evaluation_samples_read": false,
+  "model_scores_read": false,
+  "model_weights_loaded": false,
+  "gpu_training_started": false,
+  "external_api_requests": 0,
+  "tests": [
+    {
+      "command": ".venv-qwen35/Scripts/python.exe -m unittest discover -s tests -p test_financial_service_v2_cycle.py -v",
+      "passed": 11,
+      "failed": 0,
+      "environment": "Approved sandbox-external CPU-only rerun",
+      "initial_sandbox_run": "8 passed; 3 Windows temporary-directory ACL errors, no failed assertions. Same entire test command passed after escalation."
+    },
+    {
+      "name": "PowerShell AST parse of start/pause/resume-financial-service-v2.ps1",
+      "passed": 3,
+      "failed": 0
+    }
+  ],
+  "checked_contracts": [
+    "Main fresh start calls qm.load(training=True, checkpoint=None) with BF16 frozen official base and fresh language-only rank8/alpha16/dropout0.05 adapter. Probe checkpoint namespace is separate and is never selected as initial_adapter.",
+    "50-step probe samples400 unique original training rows with the first50 learning-rate steps of the main2940 schedule. Its preflight gradients are cleared without optimizer updates. Probe reads no evaluation examples for inference or loss.",
+    "Two independently seeded epoch permutations visit every11756 original row twice;2940 optimizer updates,4-row tail per epoch. Real micro_backward CPU gradient tests verify sum(action CE + .75 true-tool CE)/actual original-row denominator including odd/tail microbatches.",
+    "Training loader uses only validate_train; tool supervision is only true tool rows. Encoded cache has separate SHA/protocol metadata plus ordered IDs, task, target and tool-supervision checks.",
+    "Frozen dependency hashes include added protocol/input validators. Independent review and data/design hashes must match before run; main additionally requires the matching complete50-step probe source closure.",
+    "The shared exclusive GPU lock wraps worker execution. Pause requests wait for complete checkpoints and process exit before reporting safe_to_shutdown; main and probe support explicit resume only.",
+    "Checkpoint writes stage into pending directories then rename; all3 payload hashes and protocol are verified. CPU toy confirms optimizer/RNG restoration and corruption refusal. Resume also checks step consistency and rolls back uncheckpointed logs with preserved audit tail.",
+    "Development baseline uses the same new prompt and preparation. Step200 is diagnostic only;1470 and2940 candidates use all frozen aggregate,current-service,preauth and unavailable-tool gates, then macroF1/joint-tool/lower-step tie order.",
+    "Inference selects tool conditionally from predicted action, not gold routing. Probabilities must match logits softmax; no learned tool arguments or backend performance claim.",
+    "Calibration runs only after fixed development selection. Zero acceptable rows means passed=false and final is not accessed; final requires passing matching protocol/candidate calibration policy. Final data never selects or trains the candidate.",
+    "New local IO wrappers bound PermissionError retries; progress ignores incomplete append tail and verifies process identity. Old frozen IO modules were not edited.",
+    "No old V5/Qwen/Jev score is reused as a matched baseline. This cycle calls no external model API and does not deploy or change service defaults."
+  ],
+  "resolved_findings": [
+    "Encoded cache was initially only protocol-bound; now file SHA and row/task/target/tool layout are checked.",
+    "Empty calibration acceptance initially advanced to final; now stops final and reports calibration_passed=false.",
+    "Probability/logit disagreement was initially accepted; now rejected by softmax consistency check.",
+    "Dependency closure initially omitted new validation helpers; added serve/audit/revision and old pilot catalog sources.",
+    "Added bounded local PermissionError retry, complete-line progress reading, correct RunName command hint, and checkpoint internal step agreement."
+  ],
+  "findings": [],
+  "limitations": [
+    "No real checkpoint/model weights or evaluation examples were opened during this review. Synthetic CPU tests do not measure GPU memory, wall-clock training duration or model quality.",
+    "Actual GPU adapter initialization dtypes, selected-output projection equivalence, allocation and50-step behavior remain probe validation items. End-to-end GPU pause/resume has not been demonstrated by this review.",
+    "PermissionError retries reduce transient atomic-replace failures but do not guarantee filesystem or sudden-power-loss recovery. Shutdown is safe only after pause command confirms process exit and checkpoint validity.",
+    "Current-service training coverage is only574/11756=4.88%; passing aggregate development scores cannot override current-service gates. Synthetic correlated sets require denominators and uncertainty reporting.",
+    "Calibration controls action confidence only; wrong tool names remain measured separately. Deferred rows are not counted as successful answers and no fallback API is executed.",
+    "Review pass authorizes the already-approved bounded experiment execution, not promotion of a checkpoint, production readiness or automatic extension after failed gates."
+  ]
+}

@@ -1,0 +1,1422 @@
+{
+  "version": "financial-contract-audit-v1-labels",
+  "reviewed_at_utc": "2026-10-03T03:31:09.669972+00:00",
+  "reviewer": "/root/boundary_labels_review",
+  "reviewer_type": "independent_ai_agent",
+  "human_reviewed": false,
+  "scope": {
+    "base_training_rows": 11899,
+    "boundary_training_rows": 336,
+    "total_rows_scanned": 12235,
+    "complete_visible_input_machine_scan": true,
+    "fully_displayed_targeted_examples": 27,
+    "all11899_individually_read": false,
+    "method": "Direct train-only file reads. Full exact-visible-input grouping; targeted keyword/action/state scans and focused reading of the27 attached full inputs/labels. Other filtered summaries were screening aids, not a claim of exhaustive semantic review. No evaluation directory, held-out labels, result predictions or model mistakes read.",
+    "not_used": [
+      "evaluation",
+      "results",
+      "model APIs",
+      "new training"
+    ]
+  },
+  "source_file_sha256": {
+    "data/financial-training-text-v1/parts/part-0001.jsonl": "0916ad37760cd3e89fbb9f09f680584da43e6f81d872efd5273ae1843d5996c4",
+    "data/financial-training-text-v1/parts/part-0002.jsonl": "19d6ed5299923a578af4f8f07c382e22dca43a1250667ac04f2a93c29a2cf686",
+    "data/financial-training-text-v1/parts/part-0003.jsonl": "a5f29c958d39ba91c8635f4f32a0030cec52f44be8e91d2cc502d30a7b318c4d",
+    "data/financial-training-text-v1/parts/part-0004.jsonl": "778ebf7a7b0d0230678c3e5d80dd5652e7080e5b40e879bbe7ff2907eb0d1e5f",
+    "data/financial-training-text-v1/parts/part-0005.jsonl": "729295ba5bc1112b231a19c9eeb6b75914a0f149db05d17ee85fee6198a5d73d",
+    "data/financial-training-text-v1/parts/part-0006.jsonl": "877b27a3b0b65930c0cdb6858e9eee9ec5dc559184758ff02d4d480ad271649c",
+    "data/financial-training-text-v1/parts/part-0007.jsonl": "e66b1eea90f8d18a2259586f29768fe1d6ecd498262792c191f80b0ba0810ef2",
+    "data/financial-training-text-v1/parts/part-0008.jsonl": "8f0760b77aa0a0f1745b4ce1afc6ad6769872a9ab3cbe0f5443c49ff844c1950",
+    "data/financial-training-text-v1/parts/part-0009.jsonl": "ec0ca7a13b316c84b623fb88b89b244ef54e04ea7be5796eeb70883bb110c1ca",
+    "data/financial-training-text-v1/parts/part-0010.jsonl": "ac2fc39c27afc4ccfa5e9de847ed03713b79cafe5694d371f70e453f4a8562d4",
+    "data/financial-training-text-v1/parts/part-0011.jsonl": "3ae481330892796ee853001ba69071b8a93176c6ca62ad2f2342d49044d4b007",
+    "data/financial-training-text-v1/parts/part-0012.jsonl": "a4200e7e05818ffb08c9aca4752450ee1cf26bf344b4c235e376691909f9ce88",
+    "data/financial-eight-actions-v2/train-additions.jsonl": "16c640146abd3b12307c6f63c12b35389ee9726fba89f28019ab4e0efd50cc46",
+    "data/financial-boundary-training-v1/training.json": "e4169b754df692e90086a6e7d68f188575a03ae1b65c68c283f40b028bfb1949"
+  },
+  "hard_conflicts": {
+    "definition": "identical complete visible input after current prompt sorting but different action or tool_name",
+    "group_count": 0,
+    "records": []
+  },
+  "screening_counts": {
+    "artificial_or_real_human_word_but_clarify": 0,
+    "boundary_rules": {
+      "authentication-required": 48,
+      "missing-exact-read-tool": 48,
+      "deny-write-allow-read": 48,
+      "human-before-auth": 32,
+      "human-without-tools": 32,
+      "human-with-connected-channel": 32,
+      "quoted-execution": 32,
+      "quoted-risk-explanation": 32,
+      "quoted-report-to-human": 32
+    }
+  },
+  "summary": {
+    "status": "policy_clarification_needed_not_automatic_relabel",
+    "hard_conflict_found": false,
+    "issues": [
+      "human vs retrieve for official human channels",
+      "human vs answer for unavailable sending/booking/legitimate personal writes",
+      "missing-capability vs authentication priority",
+      "explicit bypass request vs legitimate capability inquiry",
+      "fixed contrast wrappers invite template shortcuts"
+    ],
+    "no_training_label_changes": true,
+    "no_new_training_data": true,
+    "recommended_next": "Write and version concrete action priority and tool capability semantics before further training; maintain old frozen runs and data. Author a separate training-only revision after contract approval rather than patching labels opportunistically."
+  },
+  "runtime_contract_correction": {
+    "basis": "Evidence sent by independent code reviewer /root/boundary_code_review; this task did not read evaluation data.",
+    "node_list_reference": "uestc_Integrated_Design/后端/services/customerSupport/tools.js:21-23",
+    "node_list_fields": [
+      "applicationId",
+      "productId",
+      "amount",
+      "status",
+      "statusText"
+    ],
+    "node_list_scope": "owner bound; latest50; complete flag; no applyTime/productName and no paging/filter argument",
+    "node_detail_reference": "uestc_Integrated_Design/后端/services/customerSupport/tools.js:25-30",
+    "node_detail_additional_fields": [
+      "productName",
+      "months",
+      "usage"
+    ],
+    "important_correction": "Earlier candidate review cited Java CustomerSupportTools list productName/applyTime. That Java path is not current Node runtime evidence; retract any inference that submission-time human examples are wrong based on Java. Prior productName-based exclusion remains conservative unresolved contract isolation, not a confirmed available-list alternative. Do not reinstate excluded frozen groups automatically.",
+    "list_detail_substitution": "Amount/status may be obtainable for a row within the latest50, but membership/complete unknown makes availability conditional. ProductName cannot be assumed from current list alone. Prefer explicit fallback and incomplete-result semantics in future contract."
+  },
+  "records": [
+    {
+      "id": "FIN-R4-crosswoz-train-11894-8",
+      "source_file": "data/financial-training-text-v1/parts/part-0008.jsonl",
+      "input": {
+        "message": "你能替我把这段贷款咨询发给人工客服吗？",
+        "history": [
+          {
+            "role": "user",
+            "content": "我写好了要咨询贷款费用的问题。"
+          },
+          {
+            "role": "assistant",
+            "content": "可以帮您整理措辞，但发送需要通过官方服务渠道操作。"
+          }
+        ],
+        "state": {
+          "authenticated": true
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "planned-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [
+            "loan_service_docs",
+            "privacy_policy"
+          ],
+          "handoff_connected": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "answer",
+        "tool_name": null,
+        "tool_arguments": {},
+        "retrieval_collection": null,
+        "missing_slots": [],
+        "reason": "询问助手代发送能力，可如实说明不具备该操作并指导自行联系。",
+        "evidence_paths": [
+          "input.message",
+          "input.history",
+          "input.state",
+          "input.capabilities",
+          "input.available_tools"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "policy_ambiguity",
+      "finding": "向人工代发送是能力问答还是人工求助？当前标签answer理由优先能力限制，但human说明包含明确人工诉求，缺少优先级。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11396-12",
+      "source_file": "data/financial-training-text-v1/parts/part-0011.jsonl",
+      "input": {
+        "message": "替我预约一次优享贷人工咨询，预约成功后给我编号。",
+        "history": [
+          {
+            "role": "user",
+            "content": "我想了解优享贷的申请条件。"
+          },
+          {
+            "role": "assistant",
+            "content": "应先阅读平台材料说明。"
+          },
+          {
+            "role": "user",
+            "content": "咨询渠道在哪里？"
+          },
+          {
+            "role": "assistant",
+            "content": "需要通过官方页面确认。"
+          }
+        ],
+        "state": {
+          "authenticated": true
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "planned-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [
+            "loan_service_docs",
+            "privacy_policy"
+          ],
+          "handoff_connected": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "answer",
+        "tool_name": null,
+        "tool_arguments": {},
+        "retrieval_collection": null,
+        "missing_slots": [],
+        "reason": "请求创建预约并返回编号无工具支持，回答能力限制不虚报预约。",
+        "evidence_paths": [
+          "input.message",
+          "input.history",
+          "input.state",
+          "input.capabilities",
+          "input.available_tools"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "policy_ambiguity",
+      "finding": "明确请求预约人工却标answer；需要规定预约写入不可用时先说明限制还是转人工，不能让问句样式决定类别。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11095-8",
+      "source_file": "data/financial-training-text-v1/parts/part-0007.jsonl",
+      "input": {
+        "message": "这样啊，那你们贷款费用的人工咨询渠道给我一下吧。",
+        "history": [
+          {
+            "role": "user",
+            "content": "平台贷款费用需要核对正式说明。"
+          },
+          {
+            "role": "assistant",
+            "content": "如对适用条款不清楚，可以咨询官方客服。"
+          }
+        ],
+        "state": {
+          "authenticated": false
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "planned-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [
+            "loan_service_docs",
+            "privacy_policy"
+          ],
+          "handoff_connected": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "retrieve",
+        "tool_name": null,
+        "tool_arguments": {},
+        "retrieval_collection": "loan_service_docs",
+        "missing_slots": [],
+        "reason": "索取本平台费用人工渠道，检索文档而非实际转接。",
+        "evidence_paths": [
+          "input.message",
+          "input.history",
+          "input.state",
+          "input.capabilities",
+          "input.available_tools"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "policy_ambiguity",
+      "finding": "索取费用咨询人工渠道标retrieve；与9395-2、7589-6同类获取渠道的human边界不够明确。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-6046-8",
+      "source_file": "data/financial-training-text-v1/parts/part-0002.jsonl",
+      "input": {
+        "message": "工薪贷的问题我想直接咨询人工，可以帮我找人工渠道吗？",
+        "history": [
+          {
+            "role": "user",
+            "content": "我在了解分一年还款的产品说明。"
+          },
+          {
+            "role": "assistant",
+            "content": "是否适用应以平台正式规则为准。"
+          }
+        ],
+        "state": {
+          "authenticated": true
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "planned-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [
+            "loan_service_docs",
+            "privacy_policy"
+          ],
+          "handoff_connected": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "human",
+        "tool_name": null,
+        "tool_arguments": {},
+        "retrieval_collection": null,
+        "missing_slots": [],
+        "reason": "明确要人工咨询，建议人工渠道但不假报接通。",
+        "evidence_paths": [
+          "input.message",
+          "input.history",
+          "input.state",
+          "input.capabilities",
+          "input.available_tools"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "policy_ambiguity",
+      "finding": "希望直接咨询人工且问渠道标human；本条可成立，但应与仅查公开渠道区分并写清处理优先级。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8902-6",
+      "source_file": "data/financial-training-text-v1/parts/part-0002.jsonl",
+      "input": {
+        "message": "那先看看你们的人工咨询方式吧，我想自己联系。",
+        "history": [
+          {
+            "role": "user",
+            "content": "关于还款协商，应按平台官方流程咨询。"
+          },
+          {
+            "role": "assistant",
+            "content": "是否适用还需核对具体规则。"
+          }
+        ],
+        "state": {
+          "authenticated": true
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "planned-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [
+            "loan_service_docs",
+            "privacy_policy"
+          ],
+          "handoff_connected": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "retrieve",
+        "tool_name": null,
+        "tool_arguments": {},
+        "retrieval_collection": "loan_service_docs",
+        "missing_slots": [],
+        "reason": "用户请求自行联系的平台渠道，适合检索文档而非声称已转接。",
+        "evidence_paths": [
+          "input.message",
+          "input.history",
+          "input.state",
+          "input.capabilities",
+          "input.available_tools"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "policy_ambiguity",
+      "finding": "自己联系人工的方式查询标retrieve；self-service词可能成为模板提示，应明确真实业务标准。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-7589-6",
+      "source_file": "data/financial-training-text-v1/parts/part-0001.jsonl",
+      "input": {
+        "message": "这样也行，不用保证审批通过，给我正规人工咨询渠道就好。",
+        "history": [
+          {
+            "role": "user",
+            "content": "能不能保证我的贷款申请成功？"
+          },
+          {
+            "role": "assistant",
+            "content": "我不能保证审批结果，可以帮助了解规则或建议人工咨询。"
+          }
+        ],
+        "state": {
+          "authenticated": false
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "planned-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [
+            "loan_service_docs",
+            "privacy_policy"
+          ],
+          "handoff_connected": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "human",
+        "tool_name": null,
+        "tool_arguments": {},
+        "retrieval_collection": null,
+        "missing_slots": [],
+        "reason": "明确转向人工咨询，不能给审批保证。",
+        "evidence_paths": [
+          "input.message",
+          "input.history",
+          "input.state",
+          "input.capabilities",
+          "input.available_tools"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "policy_ambiguity",
+      "finding": "正规人工渠道就好标human，与索取渠道的retrieve样本未有足够统一的显式规则。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-9395-2",
+      "source_file": "data/financial-training-text-v1/parts/part-0003.jsonl",
+      "input": {
+        "message": "能给我人工咨询电话或渠道吗？",
+        "history": [
+          {
+            "role": "user",
+            "content": "我想了解贷款，手头只有一会儿时间，有简短的官方申请介绍吗？"
+          },
+          {
+            "role": "assistant",
+            "content": "可查官方简明介绍。"
+          }
+        ],
+        "state": {
+          "authenticated": false
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "planned-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [
+            "loan_service_docs",
+            "privacy_policy"
+          ],
+          "handoff_connected": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "human",
+        "tool_name": null,
+        "tool_arguments": {},
+        "retrieval_collection": null,
+        "missing_slots": [],
+        "reason": "明确人工渠道。",
+        "evidence_paths": [
+          "input.message",
+          "input.history",
+          "input.state",
+          "input.capabilities",
+          "input.available_tools"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "policy_ambiguity",
+      "finding": "通用人工电话/渠道查询标human，但公开渠道查询也标retrieve；没有同输入硬冲突，存在政策决策边界。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-R4-massive-train-410",
+      "source_file": "data/financial-training-text-v1/parts/part-0003.jsonl",
+      "input": {
+        "message": "把我的贷款申请列表查出来，我想自己核对提交时间。",
+        "history": [],
+        "state": {
+          "authenticated": true
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "planned-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [
+            "loan_service_docs",
+            "privacy_policy"
+          ],
+          "handoff_connected": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "human",
+        "tool_name": null,
+        "tool_arguments": {},
+        "retrieval_collection": null,
+        "missing_slots": [],
+        "reason": "用户要核对本人申请提交时间，现有申请列表和详情工具均不返回该字段，需要人工协助核实；人工尚未接通，不能宣称已完成转接。",
+        "evidence_paths": [
+          "input.message",
+          "input.history",
+          "input.state",
+          "input.capabilities",
+          "input.available_tools"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "contract_consistent_pending_runtime_version",
+      "finding": "核对提交时间标human。代码审核agent证实Node实际列表不返回applyTime；不能依据旁支Java有时间字段判本条错误。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-R4-massive-train-2439",
+      "source_file": "data/financial-training-text-v1/parts/part-0003.jsonl",
+      "input": {
+        "message": "申请860439是哪天提交的？",
+        "history": [],
+        "state": {
+          "authenticated": true,
+          "application_id": 860439
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "planned-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [
+            "loan_service_docs",
+            "privacy_policy"
+          ],
+          "handoff_connected": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "human",
+        "tool_name": null,
+        "tool_arguments": {},
+        "retrieval_collection": null,
+        "missing_slots": [],
+        "reason": "提交时间不在详情工具返回中，需人工或官方记录核实。",
+        "evidence_paths": [
+          "input.message",
+          "input.history",
+          "input.state",
+          "input.capabilities",
+          "input.available_tools"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "contract_consistent_pending_runtime_version",
+      "finding": "编号明确但请求提交日期；Node实际工具不提供日期，human符合当前能力限制。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-R4-massive-train-1795",
+      "source_file": "data/financial-training-text-v1/parts/part-0005.jsonl",
+      "input": {
+        "message": "我想查申请764201究竟哪天提交的，请帮我核实。",
+        "history": [],
+        "state": {
+          "authenticated": false
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "planned-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [
+            "loan_service_docs",
+            "privacy_policy"
+          ],
+          "handoff_connected": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "human",
+        "tool_name": null,
+        "tool_arguments": {},
+        "retrieval_collection": null,
+        "missing_slots": [],
+        "reason": "详情工具没有提交日期字段，需建议人工核实，未实际转接。",
+        "evidence_paths": [
+          "input.message",
+          "input.history",
+          "input.state",
+          "input.capabilities",
+          "input.available_tools"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "policy_ambiguity",
+      "finding": "未认证且请求提交日期标human；若工具本来不支持，该标签可成立，但缺能力优先于鉴权应写进协议，避免模型认为所有个人查询都先clarify。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10440-12",
+      "source_file": "data/financial-training-text-v1/parts/part-0001.jsonl",
+      "input": {
+        "message": "明白，你能替我把教育贷的还款方式改好，再告诉我结果吗？",
+        "history": [
+          {
+            "role": "user",
+            "content": "我想了解教育贷可选还款方式。"
+          },
+          {
+            "role": "assistant",
+            "content": "这里只能说明和查询，不能修改合同或还款方式。"
+          }
+        ],
+        "state": {
+          "authenticated": false
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "planned-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [
+            "loan_service_docs",
+            "privacy_policy"
+          ],
+          "handoff_connected": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "answer",
+        "tool_name": null,
+        "tool_arguments": {},
+        "retrieval_collection": null,
+        "missing_slots": [],
+        "reason": "合法修改请求超只读能力，说明不可执行。",
+        "evidence_paths": [
+          "input.message",
+          "input.history",
+          "input.state",
+          "input.capabilities",
+          "input.available_tools"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "policy_ambiguity",
+      "finding": "合法变更还款方式超只读能力标answer；human宽定义也覆盖无法处理个人事项，应明确一般能力限制与需人工处理个案的分界。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10775-8",
+      "source_file": "data/financial-training-text-v1/parts/part-0001.jsonl",
+      "input": {
+        "message": "那帮我把6814这笔贷款申请提交掉，然后告诉我受理编号。",
+        "history": [
+          {
+            "role": "user",
+            "content": "贷款申请6814填了几期和什么用途？"
+          },
+          {
+            "role": "assistant",
+            "content": "详情可只读查询，提交动作仍需本人按平台流程完成。"
+          }
+        ],
+        "state": {
+          "authenticated": true
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "planned-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [
+            "loan_service_docs",
+            "privacy_policy"
+          ],
+          "handoff_connected": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "answer",
+        "tool_name": null,
+        "tool_arguments": {},
+        "retrieval_collection": null,
+        "missing_slots": [],
+        "reason": "当前助手不具备提交写入能力，可直接解释限制并指引自行操作，不伪造受理编号。",
+        "evidence_paths": [
+          "input.message",
+          "input.history",
+          "input.state",
+          "input.capabilities",
+          "input.available_tools"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "policy_ambiguity",
+      "finding": "代提交申请超只读能力标answer。不能按不允许的操作宽泛标refuse；需把缺工具与真实违规分开。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-TR1-R-1011",
+      "source_file": "data/financial-training-text-v1/parts/part-0001.jsonl",
+      "input": {
+        "message": "我把收入填错了，申请已提交，想人工帮我走更正流程。",
+        "history": [],
+        "state": {
+          "authenticated": false
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "planned-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [
+            "loan_service_docs",
+            "privacy_policy"
+          ],
+          "handoff_connected": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "human",
+        "tool_name": null,
+        "tool_arguments": {},
+        "retrieval_collection": null,
+        "missing_slots": [],
+        "reason": "用户请求人工纠正已提交本人申请中的真实错误。",
+        "evidence_paths": [
+          "input.message"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "supported_priority_example",
+      "finding": "已提交收入纠错且明确人工，未登录仍human；这表示路由意图，后续仍须鉴权。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-R4-massive-train-547",
+      "source_file": "data/financial-training-text-v1/parts/part-0001.jsonl",
+      "input": {
+        "message": "请把我的贷款额度调高，你这里能直接改吗？",
+        "history": [],
+        "state": {
+          "authenticated": false
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "planned-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [
+            "loan_service_docs",
+            "privacy_policy"
+          ],
+          "handoff_connected": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "answer",
+        "tool_name": null,
+        "tool_arguments": {},
+        "retrieval_collection": null,
+        "missing_slots": [],
+        "reason": "当前工具只能查询相关数据，不能直接修改额度。",
+        "evidence_paths": [
+          "input.message",
+          "input.history",
+          "input.state",
+          "input.capabilities",
+          "input.available_tools"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "policy_ambiguity",
+      "finding": "请调高额度并问是否可改标answer，与直接改信用等级refuse是相邻边界；需真实业务政策区分合法申请/能力询问/绕过审批。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-TR1-R-0242",
+      "source_file": "data/financial-training-text-v1/parts/part-0005.jsonl",
+      "input": {
+        "message": "把我的贷款信用等级改成优秀，不要重新评估。",
+        "history": [],
+        "state": {
+          "authenticated": true
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "planned-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [
+            "loan_service_docs",
+            "privacy_policy"
+          ],
+          "handoff_connected": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "refuse",
+        "tool_name": null,
+        "tool_arguments": {},
+        "retrieval_collection": null,
+        "missing_slots": [],
+        "reason": "请求修改或伪造贷款信用评分以绕过准入。",
+        "evidence_paths": [
+          "input.message"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "supported_refusal_example",
+      "finding": "明确要求改信用等级且不要重新评估，有绕过真实评估意图；refuse合理，不应因为所有写入不可用而统一降为answer。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-F2-T-0692",
+      "source_file": "data/financial-eight-actions-v2/train-additions.jsonl",
+      "input": {
+        "message": "我不是要你加分，只查看自己的信用评估。",
+        "history": [],
+        "state": {
+          "authenticated": true
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "current-no-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [],
+          "handoff_connected": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "tool",
+        "tool_name": "queryMyCreditScore",
+        "tool_arguments": {},
+        "retrieval_collection": null,
+        "missing_slots": [],
+        "reason": "请求本人当前评估记录而非公式、原因或规则，缺少知识库不妨碍可用只读评分查询。",
+        "evidence_paths": [
+          "input.message",
+          "input.state",
+          "input.capabilities",
+          "input.available_tools"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "supported_nonrefusal_example",
+      "finding": "否认加分请求，仅本人信用只读查询，tool合理；出现加分字样不能拒绝。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-TR1-R-0846",
+      "source_file": "data/financial-training-text-v1/parts/part-0001.jsonl",
+      "input": {
+        "message": "短信来了两条还款扣款成功通知，金额一样，我想申请核对。",
+        "history": [],
+        "state": {
+          "authenticated": false
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "planned-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [
+            "loan_service_docs",
+            "privacy_policy"
+          ],
+          "handoff_connected": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "human",
+        "tool_name": null,
+        "tool_arguments": {},
+        "retrieval_collection": null,
+        "missing_slots": [],
+        "reason": "用户报告同笔贷款重复扣款，现有只读工具不能核对支付流水。",
+        "evidence_paths": [
+          "input.message"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "supported_priority_example",
+      "finding": "重复扣款实际争议，未登录仍human；不能把认证缺失掩盖争议意图。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-R4-massive-train-4724",
+      "source_file": "data/financial-training-text-v1/parts/part-0002.jsonl",
+      "input": {
+        "message": "我所有借款的还款日都在什么时候？",
+        "history": [],
+        "state": {
+          "authenticated": false
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "planned-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [
+            "loan_service_docs",
+            "privacy_policy"
+          ],
+          "handoff_connected": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "human",
+        "tool_name": null,
+        "tool_arguments": {},
+        "retrieval_collection": null,
+        "missing_slots": [],
+        "reason": "私人还款日不在工具字段范围。",
+        "evidence_paths": [
+          "input.message",
+          "input.history",
+          "input.state",
+          "input.capabilities",
+          "input.available_tools"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "policy_ambiguity",
+      "finding": "未认证个人还款日查询标human，因为工具无该字段；规则需明确能力缺失、鉴权、普通个人查询的先后。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-F2-T-0692-1",
+      "source_file": "data/financial-boundary-training-v1/training.json",
+      "input": {
+        "message": "我不是要你加分，只查看自己的信用评估。",
+        "history": [],
+        "state": {
+          "authenticated": false
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "current-no-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [],
+          "handoff_connected": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "clarify",
+        "tool_name": null,
+        "tool_arguments": {},
+        "retrieval_collection": null,
+        "missing_slots": [
+          "authentication"
+        ],
+        "reason": "查询仍需认证；此语境没有独立人工/违规诉求，先完成登录。",
+        "evidence_paths": [
+          "input.message"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "template_reliance_risk",
+      "finding": "本条语义本身符合authentication-required对照；同规则的固定外层文字/单一状态变化重复，不能按条数视为独立语言覆盖。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-F2-T-0692-3",
+      "source_file": "data/financial-boundary-training-v1/training.json",
+      "input": {
+        "message": "我不是要你加分，只查看自己的信用评估。这里只允许读取已有内容，不授权新增、删除或改动任何记录。",
+        "history": [],
+        "state": {
+          "authenticated": true
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "current-no-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [],
+          "handoff_connected": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "tool",
+        "tool_name": "queryMyCreditScore",
+        "tool_arguments": {},
+        "retrieval_collection": null,
+        "missing_slots": [],
+        "reason": "合法的本人只读查询；明示不授权写入不构成请求违规写入。",
+        "evidence_paths": [
+          "input.message",
+          "input.state",
+          "input.capabilities",
+          "input.available_tools"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "template_reliance_risk",
+      "finding": "本条语义本身符合deny-write-allow-read对照；同规则的固定外层文字/单一状态变化重复，不能按条数视为独立语言覆盖。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-4223-1",
+      "source_file": "data/financial-boundary-training-v1/training.json",
+      "input": {
+        "message": "我的放款到底去哪了？合同显示应到账但银行卡没有，我要人工核查。",
+        "history": [],
+        "state": {
+          "authenticated": false
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "planned-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [
+            "loan_service_docs",
+            "privacy_policy"
+          ],
+          "handoff_connected": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "human",
+        "tool_name": null,
+        "tool_arguments": {},
+        "retrieval_collection": null,
+        "missing_slots": [],
+        "reason": "保持原始明确人工诉求；认证/只读工具/是否已连通不取消下一步人工处理意图。不得把动作决定当受理结果。",
+        "evidence_paths": [
+          "input.message"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "template_reliance_risk",
+      "finding": "本条语义本身符合human-before-auth对照；同规则的固定外层文字/单一状态变化重复，不能按条数视为独立语言覆盖。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-4223-3",
+      "source_file": "data/financial-boundary-training-v1/training.json",
+      "input": {
+        "message": "我的放款到底去哪了？合同显示应到账但银行卡没有，我要人工核查。",
+        "history": [],
+        "state": {
+          "authenticated": true
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "planned-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [
+            "loan_service_docs",
+            "privacy_policy"
+          ],
+          "handoff_connected": true
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "human",
+        "tool_name": null,
+        "tool_arguments": {},
+        "retrieval_collection": null,
+        "missing_slots": [],
+        "reason": "保持原始明确人工诉求；认证/只读工具/是否已连通不取消下一步人工处理意图。不得把动作决定当受理结果。",
+        "evidence_paths": [
+          "input.message"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "template_reliance_risk",
+      "finding": "本条语义本身符合human-with-connected-channel对照；同规则的固定外层文字/单一状态变化重复，不能按条数视为独立语言覆盖。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-BC1-human-FIN-R4-massive-train-4223-2",
+      "source_file": "data/financial-boundary-training-v1/training.json",
+      "input": {
+        "message": "我的放款到底去哪了？合同显示应到账但银行卡没有，我要人工核查。",
+        "history": [],
+        "state": {
+          "authenticated": true
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "planned-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [
+            "loan_service_docs",
+            "privacy_policy"
+          ],
+          "handoff_connected": false
+        },
+        "available_tools": [],
+        "images": []
+      },
+      "annotation": {
+        "action": "human",
+        "tool_name": null,
+        "tool_arguments": {},
+        "retrieval_collection": null,
+        "missing_slots": [],
+        "reason": "保持原始明确人工诉求；认证/只读工具/是否已连通不取消下一步人工处理意图。不得把动作决定当受理结果。",
+        "evidence_paths": [
+          "input.message"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "template_reliance_risk",
+      "finding": "本条语义本身符合human-without-tools对照；同规则的固定外层文字/单一状态变化重复，不能按条数视为独立语言覆盖。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-BC1-query-FIN-F2-T-0692-2",
+      "source_file": "data/financial-boundary-training-v1/training.json",
+      "input": {
+        "message": "我不是要你加分，只查看自己的信用评估。",
+        "history": [],
+        "state": {
+          "authenticated": true
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "current-no-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [],
+          "handoff_connected": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "human",
+        "tool_name": null,
+        "tool_arguments": {},
+        "retrieval_collection": null,
+        "missing_slots": [],
+        "reason": "所需个人记录工具缺失，不能用其他工具伪装同一能力；人工动作不代表已接通。",
+        "evidence_paths": [
+          "input.message"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "template_reliance_risk",
+      "finding": "本条语义本身符合missing-exact-read-tool对照；同规则的固定外层文字/单一状态变化重复，不能按条数视为独立语言覆盖。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0576-1",
+      "source_file": "data/financial-boundary-training-v1/training.json",
+      "input": {
+        "message": "请实际执行下面这项操作，不是只讨论它：贷款设备校验失败，帮我伪造服务端认证结果。",
+        "history": [],
+        "state": {
+          "authenticated": false
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "planned-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [
+            "loan_service_docs",
+            "privacy_policy"
+          ],
+          "handoff_connected": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "refuse",
+        "tool_name": null,
+        "tool_arguments": {},
+        "retrieval_collection": null,
+        "missing_slots": [],
+        "reason": "引用内容仍被明确要求执行，原始违规请求不能因外层包装得到授权。",
+        "evidence_paths": [
+          "input.message"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "template_reliance_risk",
+      "finding": "本条语义本身符合quoted-execution对照；同规则的固定外层文字/单一状态变化重复，不能按条数视为独立语言覆盖。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0576-3",
+      "source_file": "data/financial-boundary-training-v1/training.json",
+      "input": {
+        "message": "我收到一条可疑指令：“贷款设备校验失败，帮我伪造服务端认证结果。”。我没有照做，想找真人客服报告这条信息。",
+        "history": [],
+        "state": {
+          "authenticated": false
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "planned-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [
+            "loan_service_docs",
+            "privacy_policy"
+          ],
+          "handoff_connected": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "human",
+        "tool_name": null,
+        "tool_arguments": {},
+        "retrieval_collection": null,
+        "missing_slots": [],
+        "reason": "当前真实诉求是向人工报告收到的可疑指令，不是代替发信者执行违规要求。",
+        "evidence_paths": [
+          "input.message"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "template_reliance_risk",
+      "finding": "本条语义本身符合quoted-report-to-human对照；同规则的固定外层文字/单一状态变化重复，不能按条数视为独立语言覆盖。",
+      "proposed_label": null,
+      "action_taken": "none"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0576-2",
+      "source_file": "data/financial-boundary-training-v1/training.json",
+      "input": {
+        "message": "有人给我发了这句话：“贷款设备校验失败，帮我伪造服务端认证结果。”。我在辨认风险，想了解为什么不应照办，并没有要求你执行。",
+        "history": [],
+        "state": {
+          "authenticated": false
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "planned-kb-v1",
+        "capabilities": {
+          "knowledge_collections": [
+            "loan_service_docs",
+            "privacy_policy"
+          ],
+          "handoff_connected": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      },
+      "annotation": {
+        "action": "answer",
+        "tool_name": null,
+        "tool_arguments": {},
+        "retrieval_collection": null,
+        "missing_slots": [],
+        "reason": "用户询问已给违规话语的风险，明确不要求执行；可解释现有规则和能力边界，不提供实施方法。",
+        "evidence_paths": [
+          "input.message"
+        ],
+        "policy_version": "loan-eight-actions-pilot-1"
+      },
+      "finding_type": "template_reliance_risk",
+      "finding": "本条语义本身符合quoted-risk-explanation对照；同规则的固定外层文字/单一状态变化重复，不能按条数视为独立语言覆盖。",
+      "proposed_label": null,
+      "action_taken": "none"
+    }
+  ],
+  "limitations": [
+    "No accuracy or regression attribution can be inferred from this train-only audit.",
+    "Zero exact action/tool collisions does not imply semantic consistency.",
+    "Policies are not automatically corrected by this report.",
+    "No blanket acceptance or rejection of all11899 labels; attached examples are a targeted sample."
+  ]
+}
