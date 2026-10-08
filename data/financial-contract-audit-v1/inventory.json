@@ -1,0 +1,166 @@
+{
+  "original": {
+    "rows": 11899,
+    "actions": {
+      "clarify": 1349,
+      "retrieve": 2550,
+      "tool": 2214,
+      "human": 1456,
+      "answer": 2120,
+      "refuse": 960,
+      "close": 640,
+      "redirect": 610
+    },
+    "profiles": {
+      "planned-kb-v1": 11089,
+      "current-no-kb-v1": 810
+    },
+    "action_by_profile": {
+      "current-no-kb-v1": {
+        "answer": 130,
+        "tool": 320,
+        "clarify": 110,
+        "human": 90,
+        "redirect": 60,
+        "refuse": 60,
+        "close": 40
+      },
+      "planned-kb-v1": {
+        "clarify": 1239,
+        "retrieve": 2550,
+        "tool": 1894,
+        "human": 1366,
+        "answer": 1990,
+        "refuse": 900,
+        "close": 600,
+        "redirect": 550
+      }
+    },
+    "history_lengths": {
+      "0": 7498,
+      "2": 2727,
+      "4": 1638,
+      "1": 35,
+      "3": 1
+    },
+    "authenticated": {
+      "False": 4349,
+      "True": 7550
+    },
+    "unique_full_inputs": 11899,
+    "same_input_target_conflicts": [],
+    "distinct_message_strings": 11752,
+    "number_masked_message_strings": 11749,
+    "limitation": "Message string diversity is not semantic diversity; controlled state contrasts are not duplicate errors."
+  },
+  "boundary": {
+    "rows": 336,
+    "actions": {
+      "clarify": 48,
+      "human": 176,
+      "tool": 48,
+      "refuse": 32,
+      "answer": 32
+    },
+    "profiles": {
+      "current-no-kb-v1": 21,
+      "planned-kb-v1": 315
+    },
+    "action_by_profile": {
+      "current-no-kb-v1": {
+        "clarify": 3,
+        "human": 11,
+        "tool": 3,
+        "refuse": 2,
+        "answer": 2
+      },
+      "planned-kb-v1": {
+        "clarify": 45,
+        "human": 165,
+        "tool": 45,
+        "refuse": 30,
+        "answer": 30
+      }
+    },
+    "history_lengths": {
+      "0": 336
+    },
+    "authenticated": {
+      "False": 137,
+      "True": 199
+    },
+    "unique_full_inputs": 336,
+    "same_input_target_conflicts": [],
+    "distinct_message_strings": 224,
+    "number_masked_message_strings": 224,
+    "limitation": "Message string diversity is not semantic diversity; controlled state contrasts are not duplicate errors."
+  },
+  "combined": {
+    "rows": 12235,
+    "actions": {
+      "clarify": 1397,
+      "retrieve": 2550,
+      "tool": 2262,
+      "human": 1632,
+      "answer": 2152,
+      "refuse": 992,
+      "close": 640,
+      "redirect": 610
+    },
+    "profiles": {
+      "planned-kb-v1": 11404,
+      "current-no-kb-v1": 831
+    },
+    "action_by_profile": {
+      "current-no-kb-v1": {
+        "answer": 132,
+        "tool": 323,
+        "clarify": 113,
+        "human": 101,
+        "redirect": 60,
+        "refuse": 62,
+        "close": 40
+      },
+      "planned-kb-v1": {
+        "clarify": 1284,
+        "retrieve": 2550,
+        "tool": 1939,
+        "human": 1531,
+        "answer": 2020,
+        "refuse": 930,
+        "close": 600,
+        "redirect": 550
+      }
+    },
+    "history_lengths": {
+      "0": 7834,
+      "2": 2727,
+      "4": 1638,
+      "1": 35,
+      "3": 1
+    },
+    "authenticated": {
+      "False": 4486,
+      "True": 7749
+    },
+    "unique_full_inputs": 12235,
+    "same_input_target_conflicts": [],
+    "distinct_message_strings": 11896,
+    "number_masked_message_strings": 11893,
+    "limitation": "Message string diversity is not semantic diversity; controlled state contrasts are not duplicate errors."
+  },
+  "review_queue": {
+    "rows": 184,
+    "flags": {
+      "human_word_nonhuman_review_only": 53,
+      "handoff_intent_vs_channel_information_review_only": 139
+    },
+    "interpretation": "Heuristic leads, not confirmed label errors or proposed new labels"
+  },
+  "boundary_fixed_wrappers": {
+    "请实际执行下面这项操作，不是只讨论它：": 32,
+    "有人给我发了这句话：": 32,
+    "我收到一条可疑指令：": 32
+  },
+  "boundary_deny_write_suffix_rows": 48
+}

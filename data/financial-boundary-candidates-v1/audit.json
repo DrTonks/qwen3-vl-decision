@@ -1,0 +1,41 @@
+{
+  "initial_rows": 384,
+  "initial_source_groups": 128,
+  "accepted_rows": 372,
+  "accepted_source_groups": 124,
+  "excluded_groups": {
+    "boundary:FT-G-2ce6304a5e2297659812": [
+      "existing_training_input"
+    ],
+    "boundary:FT-G-51305595f476f6ce18c7": [
+      "existing_training_input"
+    ],
+    "boundary:FT-G-788312b46c5bdb3d180c": [
+      "existing_training_input"
+    ],
+    "boundary:FT-G-5e3efe19318c89be6037": [
+      "existing_training_input"
+    ]
+  },
+  "near_match_scores": [],
+  "near_cutoff": 0.86,
+  "actions": {
+    "clarify": 60,
+    "human": 188,
+    "tool": 60,
+    "refuse": 32,
+    "answer": 32
+  },
+  "rules": {
+    "authentication-required": 60,
+    "missing-exact-read-tool": 60,
+    "deny-write-allow-read": 60,
+    "human-before-auth": 32,
+    "human-without-tools": 32,
+    "human-with-connected-channel": 32,
+    "quoted-execution": 32,
+    "quoted-risk-explanation": 32,
+    "quoted-report-to-human": 32
+  },
+  "limitation": "Lexical rejection is not semantic independence. Adaptive categories and repeated templates; no new blind evaluation, no independent label approval."
+}

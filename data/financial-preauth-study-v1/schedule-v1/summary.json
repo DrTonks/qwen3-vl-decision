@@ -1,0 +1,214 @@
+{
+  "version": "financial-preauth-summary-v1",
+  "training_enabled": false,
+  "model_weights_loaded": false,
+  "model_api_requests": 0,
+  "evaluation_examples_read": false,
+  "authenticated_positions_preserved": 2720,
+  "preauth_positions": 480,
+  "actually_changed_positions": 480,
+  "full_400": {
+    "steps": 400,
+    "original_row_exposures": 3200,
+    "true_tool_exposures": 753,
+    "supervised_tasks": 3953,
+    "supervised_weight": 3764.75,
+    "unique_rows": 2498,
+    "unique_groups": 1375,
+    "repeated_row_exposures": 702,
+    "rows_seen_more_than_once": 663,
+    "max_row_exposure": 4,
+    "max_group_exposure": 8,
+    "layer_counts": {
+      "current-component": 480,
+      "current-node": 1440,
+      "planned": 800,
+      "preauth": 480
+    },
+    "action_counts": {
+      "answer": 668,
+      "clarify": 530,
+      "close": 113,
+      "human": 584,
+      "redirect": 130,
+      "refuse": 199,
+      "retrieve": 223,
+      "tool": 753
+    },
+    "tool_counts": {
+      "explainApplicationStatus": 72,
+      "queryApplicationDetail": 306,
+      "queryLoanProducts": 161,
+      "queryMyApplications": 117,
+      "queryMyCreditScore": 97
+    },
+    "action_microbatches": 1600,
+    "nonempty_tool_microbatches": 663,
+    "raw_input_tokens": {
+      "action": 1611312,
+      "tool": 417699,
+      "total": 2029011
+    },
+    "padded_input_tokens": {
+      "action": 1635754,
+      "tool": 419191,
+      "total": 2054945
+    },
+    "max_input_tokens": {
+      "action": 606,
+      "tool": 651
+    }
+  },
+  "prefix_200": {
+    "steps": 200,
+    "original_row_exposures": 1600,
+    "true_tool_exposures": 360,
+    "supervised_tasks": 1960,
+    "supervised_weight": 1870.0,
+    "unique_rows": 1581,
+    "unique_groups": 886,
+    "repeated_row_exposures": 19,
+    "rows_seen_more_than_once": 18,
+    "max_row_exposure": 3,
+    "max_group_exposure": 6,
+    "layer_counts": {
+      "current-component": 240,
+      "current-node": 720,
+      "planned": 400,
+      "preauth": 240
+    },
+    "action_counts": {
+      "answer": 341,
+      "clarify": 280,
+      "close": 53,
+      "human": 290,
+      "redirect": 66,
+      "refuse": 101,
+      "retrieve": 109,
+      "tool": 360
+    },
+    "tool_counts": {
+      "explainApplicationStatus": 36,
+      "queryApplicationDetail": 146,
+      "queryLoanProducts": 74,
+      "queryMyApplications": 54,
+      "queryMyCreditScore": 50
+    },
+    "action_microbatches": 800,
+    "nonempty_tool_microbatches": 316,
+    "raw_input_tokens": {
+      "action": 806006,
+      "tool": 199986,
+      "total": 1005992
+    },
+    "padded_input_tokens": {
+      "action": 818362,
+      "tool": 200733,
+      "total": 1019095
+    },
+    "max_input_tokens": {
+      "action": 606,
+      "tool": 642
+    }
+  },
+  "base_full_400": {
+    "steps": 400,
+    "original_row_exposures": 3200,
+    "true_tool_exposures": 753,
+    "supervised_tasks": 3953,
+    "supervised_weight": 3764.75,
+    "unique_rows": 2498,
+    "unique_groups": 1630,
+    "repeated_row_exposures": 702,
+    "rows_seen_more_than_once": 663,
+    "max_row_exposure": 4,
+    "max_group_exposure": 7,
+    "layer_counts": {
+      "current-component": 480,
+      "current-node": 1440,
+      "planned": 800,
+      "preauth": 480
+    },
+    "action_counts": {
+      "answer": 666,
+      "clarify": 493,
+      "close": 106,
+      "human": 587,
+      "redirect": 105,
+      "refuse": 165,
+      "retrieve": 325,
+      "tool": 753
+    },
+    "tool_counts": {
+      "explainApplicationStatus": 72,
+      "queryApplicationDetail": 306,
+      "queryLoanProducts": 161,
+      "queryMyApplications": 117,
+      "queryMyCreditScore": 97
+    },
+    "action_microbatches": 1600,
+    "nonempty_tool_microbatches": 663,
+    "raw_input_tokens": {
+      "action": 1616925,
+      "tool": 417699,
+      "total": 2034624
+    },
+    "padded_input_tokens": {
+      "action": 1644396,
+      "tool": 419191,
+      "total": 2063587
+    },
+    "max_input_tokens": {
+      "action": 606,
+      "tool": 651
+    }
+  },
+  "preauth_segments": {
+    "preauth-kb": 160,
+    "preauth-no-kb": 320
+  },
+  "preauth_prefix_200": {
+    "preauth-kb": 80,
+    "preauth-no-kb": 160
+  },
+  "bucket_quotas": {
+    "no_kb": {
+      "answer|none_declared": 84,
+      "clarify|authentication": 76,
+      "clarify|error_context": 14,
+      "clarify|request_details": 19,
+      "close|none_declared": 19,
+      "human|none_declared": 41,
+      "redirect|none_declared": 32,
+      "refuse|none_declared": 35
+    },
+    "kb": {
+      "answer|none_declared": 36,
+      "clarify|application_id": 1,
+      "clarify|application_id+authentication": 2,
+      "clarify|authentication": 4,
+      "clarify|error_context": 4,
+      "clarify|request_details": 17,
+      "clarify|status_code": 1,
+      "close|none_declared": 11,
+      "human|none_declared": 14,
+      "redirect|none_declared": 11,
+      "refuse|none_declared": 13,
+      "retrieve|none_declared": 46
+    }
+  },
+  "limitations": [
+    "Changes capability allocation, bucket coverage and source-group selection together.",
+    "Fixed authenticated row IDs/positions do not imply identical gradients, padding, optimizer state or dropout RNG.",
+    "CPU schedule readiness is not training execution approval, model improvement or production readiness."
+  ],
+  "kb_group_exclusion": {
+    "rows": 27,
+    "groups": 7
+  },
+  "exact_surface_auth_pairs": {
+    "pool_buckets": 73,
+    "base_retained": 2,
+    "candidate_retained": 3
+  }
+}

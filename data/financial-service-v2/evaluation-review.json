@@ -1,0 +1,2890 @@
+{
+  "status": "pass",
+  "reviewer": "/root/boundary_labels_review",
+  "reviewer_type": "independent_ai_agent",
+  "human_reviewed": false,
+  "evaluation_path": ".local/financial-service-v2/evaluation-author.json",
+  "evaluation_sha256": "16f1c285d20b5d550c07d6bf86420ffeec9dfb55e1c735837c71eb271352a9ce",
+  "policy_sha256": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+  "reviewed_ids": [
+    "EVAL-FSV2-DEV-0001",
+    "EVAL-FSV2-DEV-0002",
+    "EVAL-FSV2-DEV-0003",
+    "EVAL-FSV2-DEV-0004",
+    "EVAL-FSV2-DEV-0005",
+    "EVAL-FSV2-DEV-0006",
+    "EVAL-FSV2-DEV-0007",
+    "EVAL-FSV2-DEV-0008",
+    "EVAL-FSV2-DEV-0009",
+    "EVAL-FSV2-DEV-0010",
+    "EVAL-FSV2-DEV-0011",
+    "EVAL-FSV2-DEV-0012",
+    "EVAL-FSV2-DEV-0013",
+    "EVAL-FSV2-DEV-0014",
+    "EVAL-FSV2-DEV-0015",
+    "EVAL-FSV2-DEV-0016",
+    "EVAL-FSV2-DEV-0017",
+    "EVAL-FSV2-DEV-0018",
+    "EVAL-FSV2-DEV-0019",
+    "EVAL-FSV2-DEV-0020",
+    "EVAL-FSV2-DEV-0021",
+    "EVAL-FSV2-DEV-0022",
+    "EVAL-FSV2-DEV-0023",
+    "EVAL-FSV2-DEV-0024",
+    "EVAL-FSV2-DEV-0025",
+    "EVAL-FSV2-DEV-0026",
+    "EVAL-FSV2-DEV-0027",
+    "EVAL-FSV2-DEV-0028",
+    "EVAL-FSV2-DEV-0029",
+    "EVAL-FSV2-DEV-0030",
+    "EVAL-FSV2-DEV-0031",
+    "EVAL-FSV2-DEV-0032",
+    "EVAL-FSV2-DEV-0033",
+    "EVAL-FSV2-DEV-0034",
+    "EVAL-FSV2-DEV-0035",
+    "EVAL-FSV2-DEV-0036",
+    "EVAL-FSV2-DEV-0037",
+    "EVAL-FSV2-DEV-0038",
+    "EVAL-FSV2-DEV-0039",
+    "EVAL-FSV2-DEV-0040",
+    "EVAL-FSV2-DEV-0041",
+    "EVAL-FSV2-DEV-0042",
+    "EVAL-FSV2-DEV-0043",
+    "EVAL-FSV2-DEV-0044",
+    "EVAL-FSV2-DEV-0045",
+    "EVAL-FSV2-DEV-0046",
+    "EVAL-FSV2-DEV-0047",
+    "EVAL-FSV2-DEV-0048",
+    "EVAL-FSV2-DEV-0049",
+    "EVAL-FSV2-DEV-0050",
+    "EVAL-FSV2-DEV-0051",
+    "EVAL-FSV2-DEV-0052",
+    "EVAL-FSV2-DEV-0053",
+    "EVAL-FSV2-DEV-0054",
+    "EVAL-FSV2-DEV-0055",
+    "EVAL-FSV2-DEV-0056",
+    "EVAL-FSV2-DEV-0057",
+    "EVAL-FSV2-DEV-0058",
+    "EVAL-FSV2-DEV-0059",
+    "EVAL-FSV2-DEV-0060",
+    "EVAL-FSV2-DEV-0061",
+    "EVAL-FSV2-DEV-0062",
+    "EVAL-FSV2-DEV-0063",
+    "EVAL-FSV2-DEV-0064",
+    "EVAL-FSV2-DEV-0065",
+    "EVAL-FSV2-DEV-0066",
+    "EVAL-FSV2-DEV-0067",
+    "EVAL-FSV2-DEV-0068",
+    "EVAL-FSV2-DEV-0069",
+    "EVAL-FSV2-DEV-0070",
+    "EVAL-FSV2-DEV-0071",
+    "EVAL-FSV2-DEV-0072",
+    "EVAL-FSV2-DEV-0073",
+    "EVAL-FSV2-DEV-0074",
+    "EVAL-FSV2-DEV-0075",
+    "EVAL-FSV2-DEV-0076",
+    "EVAL-FSV2-DEV-0077",
+    "EVAL-FSV2-DEV-0078",
+    "EVAL-FSV2-DEV-0079",
+    "EVAL-FSV2-DEV-0080",
+    "EVAL-FSV2-DEV-0081",
+    "EVAL-FSV2-DEV-0082",
+    "EVAL-FSV2-DEV-0083",
+    "EVAL-FSV2-DEV-0084",
+    "EVAL-FSV2-DEV-0085",
+    "EVAL-FSV2-DEV-0086",
+    "EVAL-FSV2-DEV-0087",
+    "EVAL-FSV2-DEV-0088",
+    "EVAL-FSV2-DEV-0089",
+    "EVAL-FSV2-DEV-0090",
+    "EVAL-FSV2-DEV-0091",
+    "EVAL-FSV2-DEV-0092",
+    "EVAL-FSV2-DEV-0093",
+    "EVAL-FSV2-DEV-0094",
+    "EVAL-FSV2-DEV-0095",
+    "EVAL-FSV2-DEV-0096",
+    "EVAL-FSV2-DEV-0097",
+    "EVAL-FSV2-DEV-0098",
+    "EVAL-FSV2-DEV-0099",
+    "EVAL-FSV2-DEV-0100",
+    "EVAL-FSV2-DEV-0101",
+    "EVAL-FSV2-DEV-0102",
+    "EVAL-FSV2-DEV-0103",
+    "EVAL-FSV2-DEV-0104",
+    "EVAL-FSV2-DEV-0105",
+    "EVAL-FSV2-DEV-0106",
+    "EVAL-FSV2-DEV-0107",
+    "EVAL-FSV2-DEV-0108",
+    "EVAL-FSV2-DEV-0109",
+    "EVAL-FSV2-DEV-0110",
+    "EVAL-FSV2-DEV-0111",
+    "EVAL-FSV2-DEV-0112",
+    "EVAL-FSV2-DEV-0113",
+    "EVAL-FSV2-DEV-0114",
+    "EVAL-FSV2-DEV-0115",
+    "EVAL-FSV2-DEV-0116",
+    "EVAL-FSV2-DEV-0117",
+    "EVAL-FSV2-DEV-0118",
+    "EVAL-FSV2-DEV-0119",
+    "EVAL-FSV2-DEV-0120",
+    "EVAL-FSV2-DEV-0121",
+    "EVAL-FSV2-DEV-0122",
+    "EVAL-FSV2-DEV-0123",
+    "EVAL-FSV2-DEV-0124",
+    "EVAL-FSV2-DEV-0125",
+    "EVAL-FSV2-DEV-0126",
+    "EVAL-FSV2-DEV-0127",
+    "EVAL-FSV2-DEV-0128",
+    "EVAL-FSV2-CAL-0129",
+    "EVAL-FSV2-CAL-0130",
+    "EVAL-FSV2-CAL-0131",
+    "EVAL-FSV2-CAL-0132",
+    "EVAL-FSV2-CAL-0133",
+    "EVAL-FSV2-CAL-0134",
+    "EVAL-FSV2-CAL-0135",
+    "EVAL-FSV2-CAL-0136",
+    "EVAL-FSV2-CAL-0137",
+    "EVAL-FSV2-CAL-0138",
+    "EVAL-FSV2-CAL-0139",
+    "EVAL-FSV2-CAL-0140",
+    "EVAL-FSV2-CAL-0141",
+    "EVAL-FSV2-CAL-0142",
+    "EVAL-FSV2-CAL-0143",
+    "EVAL-FSV2-CAL-0144",
+    "EVAL-FSV2-CAL-0145",
+    "EVAL-FSV2-CAL-0146",
+    "EVAL-FSV2-CAL-0147",
+    "EVAL-FSV2-CAL-0148",
+    "EVAL-FSV2-CAL-0149",
+    "EVAL-FSV2-CAL-0150",
+    "EVAL-FSV2-CAL-0151",
+    "EVAL-FSV2-CAL-0152",
+    "EVAL-FSV2-CAL-0153",
+    "EVAL-FSV2-CAL-0154",
+    "EVAL-FSV2-CAL-0155",
+    "EVAL-FSV2-CAL-0156",
+    "EVAL-FSV2-CAL-0157",
+    "EVAL-FSV2-CAL-0158",
+    "EVAL-FSV2-CAL-0159",
+    "EVAL-FSV2-CAL-0160",
+    "EVAL-FSV2-CAL-0161",
+    "EVAL-FSV2-CAL-0162",
+    "EVAL-FSV2-CAL-0163",
+    "EVAL-FSV2-CAL-0164",
+    "EVAL-FSV2-CAL-0165",
+    "EVAL-FSV2-CAL-0166",
+    "EVAL-FSV2-CAL-0167",
+    "EVAL-FSV2-CAL-0168",
+    "EVAL-FSV2-CAL-0169",
+    "EVAL-FSV2-CAL-0170",
+    "EVAL-FSV2-CAL-0171",
+    "EVAL-FSV2-CAL-0172",
+    "EVAL-FSV2-CAL-0173",
+    "EVAL-FSV2-CAL-0174",
+    "EVAL-FSV2-CAL-0175",
+    "EVAL-FSV2-CAL-0176",
+    "EVAL-FSV2-CAL-0177",
+    "EVAL-FSV2-CAL-0178",
+    "EVAL-FSV2-CAL-0179",
+    "EVAL-FSV2-CAL-0180",
+    "EVAL-FSV2-CAL-0181",
+    "EVAL-FSV2-CAL-0182",
+    "EVAL-FSV2-CAL-0183",
+    "EVAL-FSV2-CAL-0184",
+    "EVAL-FSV2-CAL-0185",
+    "EVAL-FSV2-CAL-0186",
+    "EVAL-FSV2-CAL-0187",
+    "EVAL-FSV2-CAL-0188",
+    "EVAL-FSV2-CAL-0189",
+    "EVAL-FSV2-CAL-0190",
+    "EVAL-FSV2-CAL-0191",
+    "EVAL-FSV2-CAL-0192",
+    "EVAL-FSV2-CAL-0193",
+    "EVAL-FSV2-CAL-0194",
+    "EVAL-FSV2-CAL-0195",
+    "EVAL-FSV2-CAL-0196",
+    "EVAL-FSV2-CAL-0197",
+    "EVAL-FSV2-CAL-0198",
+    "EVAL-FSV2-CAL-0199",
+    "EVAL-FSV2-CAL-0200",
+    "EVAL-FSV2-CAL-0201",
+    "EVAL-FSV2-CAL-0202",
+    "EVAL-FSV2-CAL-0203",
+    "EVAL-FSV2-CAL-0204",
+    "EVAL-FSV2-CAL-0205",
+    "EVAL-FSV2-CAL-0206",
+    "EVAL-FSV2-CAL-0207",
+    "EVAL-FSV2-CAL-0208",
+    "EVAL-FSV2-CAL-0209",
+    "EVAL-FSV2-CAL-0210",
+    "EVAL-FSV2-CAL-0211",
+    "EVAL-FSV2-CAL-0212",
+    "EVAL-FSV2-CAL-0213",
+    "EVAL-FSV2-CAL-0214",
+    "EVAL-FSV2-CAL-0215",
+    "EVAL-FSV2-CAL-0216",
+    "EVAL-FSV2-CAL-0217",
+    "EVAL-FSV2-CAL-0218",
+    "EVAL-FSV2-CAL-0219",
+    "EVAL-FSV2-CAL-0220",
+    "EVAL-FSV2-CAL-0221",
+    "EVAL-FSV2-CAL-0222",
+    "EVAL-FSV2-CAL-0223",
+    "EVAL-FSV2-CAL-0224",
+    "EVAL-FSV2-FIN-0225",
+    "EVAL-FSV2-FIN-0226",
+    "EVAL-FSV2-FIN-0227",
+    "EVAL-FSV2-FIN-0228",
+    "EVAL-FSV2-FIN-0229",
+    "EVAL-FSV2-FIN-0230",
+    "EVAL-FSV2-FIN-0231",
+    "EVAL-FSV2-FIN-0232",
+    "EVAL-FSV2-FIN-0233",
+    "EVAL-FSV2-FIN-0234",
+    "EVAL-FSV2-FIN-0235",
+    "EVAL-FSV2-FIN-0236",
+    "EVAL-FSV2-FIN-0237",
+    "EVAL-FSV2-FIN-0238",
+    "EVAL-FSV2-FIN-0239",
+    "EVAL-FSV2-FIN-0240",
+    "EVAL-FSV2-FIN-0241",
+    "EVAL-FSV2-FIN-0242",
+    "EVAL-FSV2-FIN-0243",
+    "EVAL-FSV2-FIN-0244",
+    "EVAL-FSV2-FIN-0245",
+    "EVAL-FSV2-FIN-0246",
+    "EVAL-FSV2-FIN-0247",
+    "EVAL-FSV2-FIN-0248",
+    "EVAL-FSV2-FIN-0249",
+    "EVAL-FSV2-FIN-0250",
+    "EVAL-FSV2-FIN-0251",
+    "EVAL-FSV2-FIN-0252",
+    "EVAL-FSV2-FIN-0253",
+    "EVAL-FSV2-FIN-0254",
+    "EVAL-FSV2-FIN-0255",
+    "EVAL-FSV2-FIN-0256",
+    "EVAL-FSV2-FIN-0257",
+    "EVAL-FSV2-FIN-0258",
+    "EVAL-FSV2-FIN-0259",
+    "EVAL-FSV2-FIN-0260",
+    "EVAL-FSV2-FIN-0261",
+    "EVAL-FSV2-FIN-0262",
+    "EVAL-FSV2-FIN-0263",
+    "EVAL-FSV2-FIN-0264",
+    "EVAL-FSV2-FIN-0265",
+    "EVAL-FSV2-FIN-0266",
+    "EVAL-FSV2-FIN-0267",
+    "EVAL-FSV2-FIN-0268",
+    "EVAL-FSV2-FIN-0269",
+    "EVAL-FSV2-FIN-0270",
+    "EVAL-FSV2-FIN-0271",
+    "EVAL-FSV2-FIN-0272",
+    "EVAL-FSV2-FIN-0273",
+    "EVAL-FSV2-FIN-0274",
+    "EVAL-FSV2-FIN-0275",
+    "EVAL-FSV2-FIN-0276",
+    "EVAL-FSV2-FIN-0277",
+    "EVAL-FSV2-FIN-0278",
+    "EVAL-FSV2-FIN-0279",
+    "EVAL-FSV2-FIN-0280",
+    "EVAL-FSV2-FIN-0281",
+    "EVAL-FSV2-FIN-0282",
+    "EVAL-FSV2-FIN-0283",
+    "EVAL-FSV2-FIN-0284",
+    "EVAL-FSV2-FIN-0285",
+    "EVAL-FSV2-FIN-0286",
+    "EVAL-FSV2-FIN-0287",
+    "EVAL-FSV2-FIN-0288",
+    "EVAL-FSV2-FIN-0289",
+    "EVAL-FSV2-FIN-0290",
+    "EVAL-FSV2-FIN-0291",
+    "EVAL-FSV2-FIN-0292",
+    "EVAL-FSV2-FIN-0293",
+    "EVAL-FSV2-FIN-0294",
+    "EVAL-FSV2-FIN-0295",
+    "EVAL-FSV2-FIN-0296",
+    "EVAL-FSV2-FIN-0297",
+    "EVAL-FSV2-FIN-0298",
+    "EVAL-FSV2-FIN-0299",
+    "EVAL-FSV2-FIN-0300",
+    "EVAL-FSV2-FIN-0301",
+    "EVAL-FSV2-FIN-0302",
+    "EVAL-FSV2-FIN-0303",
+    "EVAL-FSV2-FIN-0304",
+    "EVAL-FSV2-FIN-0305",
+    "EVAL-FSV2-FIN-0306",
+    "EVAL-FSV2-FIN-0307",
+    "EVAL-FSV2-FIN-0308",
+    "EVAL-FSV2-FIN-0309",
+    "EVAL-FSV2-FIN-0310",
+    "EVAL-FSV2-FIN-0311",
+    "EVAL-FSV2-FIN-0312",
+    "EVAL-FSV2-FIN-0313",
+    "EVAL-FSV2-FIN-0314",
+    "EVAL-FSV2-FIN-0315",
+    "EVAL-FSV2-FIN-0316",
+    "EVAL-FSV2-FIN-0317",
+    "EVAL-FSV2-FIN-0318",
+    "EVAL-FSV2-FIN-0319",
+    "EVAL-FSV2-FIN-0320",
+    "EVAL-FSV2-FIN-0321",
+    "EVAL-FSV2-FIN-0322",
+    "EVAL-FSV2-FIN-0323",
+    "EVAL-FSV2-FIN-0324",
+    "EVAL-FSV2-FIN-0325",
+    "EVAL-FSV2-FIN-0326",
+    "EVAL-FSV2-FIN-0327",
+    "EVAL-FSV2-FIN-0328",
+    "EVAL-FSV2-FIN-0329",
+    "EVAL-FSV2-FIN-0330",
+    "EVAL-FSV2-FIN-0331",
+    "EVAL-FSV2-FIN-0332",
+    "EVAL-FSV2-FIN-0333",
+    "EVAL-FSV2-FIN-0334",
+    "EVAL-FSV2-FIN-0335",
+    "EVAL-FSV2-FIN-0336",
+    "EVAL-FSV2-FIN-0337",
+    "EVAL-FSV2-FIN-0338",
+    "EVAL-FSV2-FIN-0339",
+    "EVAL-FSV2-FIN-0340",
+    "EVAL-FSV2-FIN-0341",
+    "EVAL-FSV2-FIN-0342",
+    "EVAL-FSV2-FIN-0343",
+    "EVAL-FSV2-FIN-0344",
+    "EVAL-FSV2-FIN-0345",
+    "EVAL-FSV2-FIN-0346",
+    "EVAL-FSV2-FIN-0347",
+    "EVAL-FSV2-FIN-0348",
+    "EVAL-FSV2-FIN-0349",
+    "EVAL-FSV2-FIN-0350",
+    "EVAL-FSV2-FIN-0351",
+    "EVAL-FSV2-FIN-0352",
+    "EVAL-FSV2-FIN-0353",
+    "EVAL-FSV2-FIN-0354",
+    "EVAL-FSV2-FIN-0355",
+    "EVAL-FSV2-FIN-0356",
+    "EVAL-FSV2-FIN-0357",
+    "EVAL-FSV2-FIN-0358",
+    "EVAL-FSV2-FIN-0359",
+    "EVAL-FSV2-FIN-0360",
+    "EVAL-FSV2-FIN-0361",
+    "EVAL-FSV2-FIN-0362",
+    "EVAL-FSV2-FIN-0363",
+    "EVAL-FSV2-FIN-0364",
+    "EVAL-FSV2-FIN-0365",
+    "EVAL-FSV2-FIN-0366",
+    "EVAL-FSV2-FIN-0367",
+    "EVAL-FSV2-FIN-0368",
+    "EVAL-FSV2-FIN-0369",
+    "EVAL-FSV2-FIN-0370",
+    "EVAL-FSV2-FIN-0371",
+    "EVAL-FSV2-FIN-0372",
+    "EVAL-FSV2-FIN-0373",
+    "EVAL-FSV2-FIN-0374",
+    "EVAL-FSV2-FIN-0375",
+    "EVAL-FSV2-FIN-0376",
+    "EVAL-FSV2-FIN-0377",
+    "EVAL-FSV2-FIN-0378",
+    "EVAL-FSV2-FIN-0379",
+    "EVAL-FSV2-FIN-0380",
+    "EVAL-FSV2-FIN-0381",
+    "EVAL-FSV2-FIN-0382",
+    "EVAL-FSV2-FIN-0383",
+    "EVAL-FSV2-FIN-0384"
+  ],
+  "reviewed_content_hash_algorithm": "SHA256(UTF-8(json.dumps(full_row,ensure_ascii=False,sort_keys=True,separators=(comma,colon))))",
+  "scope": {
+    "semantic_review": "按0-63、64-127、128-191、192-255、256-319、320-383六批逐条完整读取384条消息、全部历史、可信state、capabilities、available_tools与目标标注；不是仅靠机器检查宣称语义全审。共同service_scope和images先全量结构核验。14条修订后再次读取完整记录。 另重新读取FIN0247修后完整输入与历史，采用本轮state已更新新目标的契约。",
+    "criteria": "仅依据support-financial-v2政策及Node实际五工具字段、鉴权、前50条限制；未根据任何模型预测或旧评测错题调整标注。",
+    "not_performed": [
+      "GPU或API推理",
+      "训练或修改训练数据",
+      "真实业务端到端验收",
+      "跨训练池重合检查（由主agent在独立训练稿冻结后执行）"
+    ]
+  },
+  "summary": {
+    "rows": 384,
+    "scene_families": 96,
+    "accepted": 384,
+    "unresolved": 0,
+    "author_resolved_visible_object_issues": 14,
+    "action_counts": {
+      "tool": 63,
+      "answer": 77,
+      "clarify": 30,
+      "human": 89,
+      "refuse": 59,
+      "close": 16,
+      "redirect": 11,
+      "retrieve": 39
+    },
+    "split_counts": {
+      "development": 128,
+      "calibration": 96,
+      "final": 160
+    },
+    "cohort_counts": {
+      "current-service": 192,
+      "planned-retrieval": 96,
+      "preauth-robustness": 96
+    },
+    "author_resolved_trusted_state_issues": 1
+  },
+  "structural_checks": [
+    "384输入通过validate_input",
+    "全部目标动作合法、工具参数与鉴权白名单合法",
+    "retrieve仅引用可用集合",
+    "只有clarify带missing_slots",
+    "全部evaluation且training_eligible=false",
+    "同一scene_family_id不跨split",
+    "完全同可见输入无异动作/工具冲突",
+    "evidence_paths均为可见input字段路径",
+    "真实冻结器validate_evaluation_shape全384通过，含split/cohort/每组4条/每split八动作及五工具覆盖",
+    "真实冻结器check_row全384通过，含显式trusted state与tool arguments一致性"
+  ],
+  "resolved_issues": [
+    {
+      "id": "EVAL-FSV2-DEV-0010",
+      "issue": "原可见输入未明确申请编号或申请状态字段，不能借助隐藏scene_family推定对象。",
+      "resolution": "作者仅补足input.message中的对象说明；本审阅者重新读取后确认标签。",
+      "final_message": "我想核对申请 731 对应的产品名称，不要只给产品ID。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0018",
+      "issue": "原可见输入未明确申请编号或申请状态字段，不能借助隐藏scene_family推定对象。",
+      "resolution": "作者仅补足input.message中的对象说明；本审阅者重新读取后确认标签。",
+      "final_message": "导出表的申请状态字段写 1，帮我看这个状态码是什么意思，不用查账户。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0019",
+      "issue": "原可见输入未明确申请编号或申请状态字段，不能借助隐藏scene_family推定对象。",
+      "resolution": "作者仅补足input.message中的对象说明；本审阅者重新读取后确认标签。",
+      "final_message": "申请状态字段说明里出现了 2，请解释对应文字。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0103",
+      "issue": "原可见输入未明确申请编号或申请状态字段，不能借助隐藏scene_family推定对象。",
+      "resolution": "作者仅补足input.message中的对象说明；本审阅者重新读取后确认标签。",
+      "final_message": "登录信息在上一句已经说过了，帮我解释申请状态码 1。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0145",
+      "issue": "原可见输入未明确申请编号或申请状态字段，不能借助隐藏scene_family推定对象。",
+      "resolution": "作者仅补足input.message中的对象说明；本审阅者重新读取后确认标签。",
+      "final_message": "手机旧界面的申请状态徽标数值是 1，我仅想知道申请状态码对应的状态。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0146",
+      "issue": "原可见输入未明确申请编号或申请状态字段，不能借助隐藏scene_family推定对象。",
+      "resolution": "作者仅补足input.message中的对象说明；本审阅者重新读取后确认标签。",
+      "final_message": "现在把旧界面的申请状态码 0 解释一下。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0147",
+      "issue": "原可见输入未明确申请编号或申请状态字段，不能借助隐藏scene_family推定对象。",
+      "resolution": "作者仅补足input.message中的对象说明；本审阅者重新读取后确认标签。",
+      "final_message": "界面帮助的申请状态字段写 2，告诉我这个状态码的静态含义。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0148",
+      "issue": "原可见输入未明确申请编号或申请状态字段，不能借助隐藏scene_family推定对象。",
+      "resolution": "作者仅补足input.message中的对象说明；本审阅者重新读取后确认标签。",
+      "final_message": "申请状态的那个圆形数字图标是什么意思？我还没说数字。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0235",
+      "issue": "原可见输入未明确申请编号或申请状态字段，不能借助隐藏scene_family推定对象。",
+      "resolution": "作者仅补足input.message中的对象说明；本审阅者重新读取后确认标签。",
+      "final_message": "我知道申请编号2307，直接查对应产品名，不要只查列表产品ID。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0241",
+      "issue": "原可见输入未明确申请编号或申请状态字段，不能借助隐藏scene_family推定对象。",
+      "resolution": "作者仅补足input.message中的对象说明；本审阅者重新读取后确认标签。",
+      "final_message": "整理旧表时看到申请状态字段是数字 2，只求解释标准申请状态码。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0242",
+      "issue": "原可见输入未明确申请编号或申请状态字段，不能借助隐藏scene_family推定对象。",
+      "resolution": "作者仅补足input.message中的对象说明；本审阅者重新读取后确认标签。",
+      "final_message": "表格另一个申请状态样例写 0，不绑定任何申请，解释申请状态码。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0243",
+      "issue": "原可见输入未明确申请编号或申请状态字段，不能借助隐藏scene_family推定对象。",
+      "resolution": "作者仅补足input.message中的对象说明；本审阅者重新读取后确认标签。",
+      "final_message": "静态帮助中申请状态码 1 对应什么状态文字？"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0285",
+      "issue": "原可见输入未明确申请编号或申请状态字段，不能借助隐藏scene_family推定对象。",
+      "resolution": "作者仅补足input.message中的对象说明；本审阅者重新读取后确认标签。",
+      "final_message": "那个申请状态数字怎么解释？我看不清还没告诉你。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0287",
+      "issue": "原可见输入未明确申请编号或申请状态字段，不能借助隐藏scene_family推定对象。",
+      "resolution": "作者仅补足input.message中的对象说明；本审阅者重新读取后确认标签。",
+      "final_message": "我看清了，是申请状态码 7，只问这个解释功能是否支持。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0247",
+      "issue": "原消息目标2479与显式可信state.application_id旧值2476冲突；初次语义审阅按新消息改目标接受，但未覆盖冻结器额外一致性约束。",
+      "resolution": "作者更新本轮message与trusted state.application_id为同一新申请2479，保留旧历史；全384通过真实冻结器validate_evaluation_shape/check_row。",
+      "final_input": {
+        "message": "刚才认错发票了，现已确认新的申请编号是2479，请查该笔贷款用途。",
+        "history": [
+          {
+            "role": "user",
+            "content": "之前查的是2476。"
+          },
+          {
+            "role": "assistant",
+            "content": "请告诉我新的查询目标。"
+          }
+        ],
+        "state": {
+          "authenticated": true,
+          "handoff_status": "none",
+          "application_id": 2479
+        },
+        "service_scope": "loan_platform",
+        "capability_profile": "current-node-no-kb",
+        "capabilities": {
+          "knowledge_collections": [],
+          "handoff_available": false
+        },
+        "available_tools": [
+          "queryLoanProducts",
+          "queryMyApplications",
+          "queryApplicationDetail",
+          "queryMyCreditScore",
+          "explainApplicationStatus"
+        ],
+        "images": []
+      }
+    }
+  ],
+  "limitations": [
+    "合成AI作者与AI独立复核，不是真人标注或真实用户样本。",
+    "96个场景每组4条；跨split场景命名隔离不等于语言模板完全独立，多个规则采用相近句式。",
+    "含较多显式意图提示（只是问能力、不要查规则、请人工等），适合受控契约回归，不能单凭高分宣称真实用户泛化或排除过拟合。",
+    "development/calibration/final角色需持续隔离；不可将本审核或后续评测问题转为训练样本。",
+    "全部images为空，不能据此证明多模态能力；planned-kb只验证动作路由，不代表已实现知识检索。",
+    "pass表示草案标签契约审核通过，不表示模型、服务或生产部署通过。"
+  ],
+  "source_sha256": {
+    "configs/support-financial-v2.json": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+    "src/qwenlab/financial_serve_v2.py": "75c0684433213b82e12b36e9e1bf1ac923522157c34ea1b334cf58449eadb615",
+    "src/qwenlab/financial_service_v2_eval_catalog.py": "e28515fade68b766001de0c1b5280127a497c1d69e6bf3a7d596d063ff34a05a",
+    "../uestc_Integrated_Design/后端/services/customerSupport/tools.js": "a2d756c8a883b8f62a9d281ebc89072a493fb54fce46cb8c3c361f6db01989fc",
+    "src/qwenlab/financial_service_v2_data.py": "fffde21c3023d7064c5e55ff7fc991624590f3c808f389403c47a47fcb55eae2"
+  },
+  "records": [
+    {
+      "id": "EVAL-FSV2-DEV-0001",
+      "verdict": "accept",
+      "reviewed_content_sha256": "6d7b01b1de26ed9307937ba30c305b6671756930b1a9f8224b45c3556c27cd74",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0002",
+      "verdict": "accept",
+      "reviewed_content_sha256": "194b657521a1e87f0086f4038b848d3519fb5aa6957115dc29481e701ca8cad5",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0003",
+      "verdict": "accept",
+      "reviewed_content_sha256": "540451f1d45f2ad08c80c719317f244a0842ba000cc3fecea6b017781acb7c4f",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0004",
+      "verdict": "accept",
+      "reviewed_content_sha256": "1377a32031a1a5be3cc44e52e4bbe513ba596db8624b93a76eefe5a6714eae7d",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0005",
+      "verdict": "accept",
+      "reviewed_content_sha256": "3afffe51102bc131ce884e7a800ae1ea91f9b14c00cfca4c3835a9522524b86f",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0006",
+      "verdict": "accept",
+      "reviewed_content_sha256": "dca5c43d9529896983cccfbade4df34919bdbbe6e1d5098bebfa215a27a3379c",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0007",
+      "verdict": "accept",
+      "reviewed_content_sha256": "1656d68661adaad4cdb818986958fd64113a02965b50231385006fdeabd4ebfd",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0008",
+      "verdict": "accept",
+      "reviewed_content_sha256": "a870e692ecef94ea17495978ce44e704cabf24838528dcdaa72ce7d0bea869c9",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0009",
+      "verdict": "accept",
+      "reviewed_content_sha256": "b8ffe3de7a37b1b087fa3085da4bd02d87c60ec4d7c63a0cfb52f0290c7ccb37",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0010",
+      "verdict": "accept",
+      "reviewed_content_sha256": "feaa8a1038fff1474639bbde301c300b559e340c492b4ab8efb842fcbd687a8b",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。 原输入所指对象不足，作者已补足申请编号/申请状态码语义，已重新读取完整修后输入并确认原标签成立。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0011",
+      "verdict": "accept",
+      "reviewed_content_sha256": "7f9753ffae65abb37d9f84c31383aa53000ae94ba23bd64ee757172991ad4cc2",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0012",
+      "verdict": "accept",
+      "reviewed_content_sha256": "cbc187f9e7278a0e5e7fab98eba74e446146c2972671eed83aa3bf7d20cd4e03",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0013",
+      "verdict": "accept",
+      "reviewed_content_sha256": "7b4137c9976bc90a03714a6d809c77406007f505b0250e5afe85de267f0628c2",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0014",
+      "verdict": "accept",
+      "reviewed_content_sha256": "fe0f90482504e4ed23cfc66323552ad5d1f39251f6aa195a0129374722c46265",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0015",
+      "verdict": "accept",
+      "reviewed_content_sha256": "7d52fd05b648187e5dce282d3fa0103ce7cf67358ad639a92dfced79007bc94c",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0016",
+      "verdict": "accept",
+      "reviewed_content_sha256": "7fb03bc81e253d6d2351d3e02080becffdd5bb85dcb1331b73c5e21730d4b07c",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0017",
+      "verdict": "accept",
+      "reviewed_content_sha256": "136e8f1ae77dc683d1f44c86589ec786e6205c29582f77c7ad047e8b4a934c6f",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0018",
+      "verdict": "accept",
+      "reviewed_content_sha256": "22e1e943a5a6b589a1a4d778e6e76286174e20fa07ee6fc68a43d05033020412",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。 原输入所指对象不足，作者已补足申请编号/申请状态码语义，已重新读取完整修后输入并确认原标签成立。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0019",
+      "verdict": "accept",
+      "reviewed_content_sha256": "3641d6d3ea29e233b3f7676e6421409ff42763657831d2f94613a537005cd3c5",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。 原输入所指对象不足，作者已补足申请编号/申请状态码语义，已重新读取完整修后输入并确认原标签成立。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0020",
+      "verdict": "accept",
+      "reviewed_content_sha256": "6ef1603534738d49bae8980bab4b9b62f8a9b537190bec79d4b44fa7acc49e31",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0021",
+      "verdict": "accept",
+      "reviewed_content_sha256": "3e30b5f3f88d55062ff69ed565c1323b952a4bbe94850cb8eab1347b3c99a3dd",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0022",
+      "verdict": "accept",
+      "reviewed_content_sha256": "12f9f609003d8e14da9c8cf3ba248bf41f2423236404e3f42adb767fcee38931",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0023",
+      "verdict": "accept",
+      "reviewed_content_sha256": "ed61b4f4130a124b753a15877da142bb04f5631ef1a17419cc26e05c69077678",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0024",
+      "verdict": "accept",
+      "reviewed_content_sha256": "575f8180f948e6f1026f4b602f85e0edc708ea5acd5ff5bb6dc9a49b9ce0eb5a",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0025",
+      "verdict": "accept",
+      "reviewed_content_sha256": "0c7253421e3ae5f4050a55d0f7e1badc38f9fa5cd4ad6e73855dbfa86e0fee6a",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0026",
+      "verdict": "accept",
+      "reviewed_content_sha256": "131da84ee2f83a920200aaec5b46ca548796eade2bc0dfb07539f8fd442aca1f",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0027",
+      "verdict": "accept",
+      "reviewed_content_sha256": "4ee51a0fba69714eb89412ecbd5bb2433a2aa670690716f144190f21dd27ce32",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0028",
+      "verdict": "accept",
+      "reviewed_content_sha256": "c830b8ed9237abbca5548cceb5ea0ba7a3e1d0ac84881028a6eebafbd7107a53",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0029",
+      "verdict": "accept",
+      "reviewed_content_sha256": "2fadb56656781d8f1b3c05379c78e8f4d0164bdbaa2073491055f9c7e3515934",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0030",
+      "verdict": "accept",
+      "reviewed_content_sha256": "40f30c8790ac0907bfe8d8afcd9ab766eb5c462b05bc2207a357b49153d9946e",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0031",
+      "verdict": "accept",
+      "reviewed_content_sha256": "7867f92e2faa0bb55b3fa00b7055e00d68f1e169ffc3392301ecb18cc704024e",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0032",
+      "verdict": "accept",
+      "reviewed_content_sha256": "1477e29fe460ceb8850af6fea3ea6803c72f42eb09635c2db3a6fec16a9482bc",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0033",
+      "verdict": "accept",
+      "reviewed_content_sha256": "31e22696a280d0944fecd755aaec295193081f7e28372a20ea02cd8c92d609e6",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0034",
+      "verdict": "accept",
+      "reviewed_content_sha256": "063f03e4412fce7ee0e99b46c3d75b49bbe8f902bba3f9bc95178e98ff636862",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0035",
+      "verdict": "accept",
+      "reviewed_content_sha256": "42f342f82aec4cc80edb7da914b75fc796d5cbab45e5e6900b9c3622b318c2f6",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0036",
+      "verdict": "accept",
+      "reviewed_content_sha256": "aebd340516a3f6a1546e1932d9ff6a49acafac373f2ee7cd802339669c3a0ed9",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0037",
+      "verdict": "accept",
+      "reviewed_content_sha256": "ba186f3e7d11b437fd828eb05c2103b7bb89c866be68166b88e2f6b7849ebd17",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0038",
+      "verdict": "accept",
+      "reviewed_content_sha256": "76df2b567a0e4318cab1a27ea0cad6fae73f9bfce6feb7fb4b7affed71566296",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0039",
+      "verdict": "accept",
+      "reviewed_content_sha256": "36775f5c936a658921e7293646b67de8c71039ec38adc645b317756192748537",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0040",
+      "verdict": "accept",
+      "reviewed_content_sha256": "c56ea3b4bb414df121d58ac7cecfccaf4c2c8092e1fa249452d639d9e52dad63",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0041",
+      "verdict": "accept",
+      "reviewed_content_sha256": "176d5656c4e069dc36d02cce5e40d8d804db3a2bbaed5318798f797520c317ba",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0042",
+      "verdict": "accept",
+      "reviewed_content_sha256": "93341c50c2b8b676173708fbe635a8295a4b5d7b590e1674d420cfff4e8a319a",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0043",
+      "verdict": "accept",
+      "reviewed_content_sha256": "cf4dc4e10395571eacc9d2754ed56d0942f17f54b6870a8410282bb369964094",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0044",
+      "verdict": "accept",
+      "reviewed_content_sha256": "51fd85d4421394aed38114f6e6506c9b65784a2b9872718a266efc14898b8671",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0045",
+      "verdict": "accept",
+      "reviewed_content_sha256": "52fdd92376f2f62d0f659cf38594dea25d4d6928c18295f0f83d5e04d702bc31",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0046",
+      "verdict": "accept",
+      "reviewed_content_sha256": "709283a09c3ff317c67564160c1be4e8ad25f3c338e1370de14b897f8ebb269c",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0047",
+      "verdict": "accept",
+      "reviewed_content_sha256": "8999ab3b9cb55a1ee6725bfe0db4184946c938f622d26b8dc2055adb2d1bfdd0",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0048",
+      "verdict": "accept",
+      "reviewed_content_sha256": "b9f22ce892fc0ac2977cf97938a9fff9708ad6fe923cf0802df3a57d8556189a",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0049",
+      "verdict": "accept",
+      "reviewed_content_sha256": "c76824e07a081bc87c4ec170cfd6c0f7adac01a7328a1d9565dd20005073e287",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0050",
+      "verdict": "accept",
+      "reviewed_content_sha256": "ba8fb648fa2027aba4df283547e2204c83fab3fcdd6490afcc7620d9657bb74e",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0051",
+      "verdict": "accept",
+      "reviewed_content_sha256": "892c20c7cba53efabf9d32071bba8d44c6f12729ab85f73349eb337132d918d1",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0052",
+      "verdict": "accept",
+      "reviewed_content_sha256": "a9926140eb37a023367ed1366ab5b4c2467d55e9592ff54f2d54ad741921d5dd",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0053",
+      "verdict": "accept",
+      "reviewed_content_sha256": "265e6d2496d24ccf02795a4d306fe29edd111657e1d8a0927681e92a7ddb1830",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0054",
+      "verdict": "accept",
+      "reviewed_content_sha256": "5df01974eeb8eb9347fb42578befb7ea0c314b266957267fb5da9e64eac5aff9",
+      "reason": "明确停止本次咨询且无继续处理要求；不把感谢或账户业务操作当会话结束。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0055",
+      "verdict": "accept",
+      "reviewed_content_sha256": "b18df098db45bb506072c48d4adf5e7a02e1bb1b7ab0f419d8f1e376b32f4ecd",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0056",
+      "verdict": "accept",
+      "reviewed_content_sha256": "45cd5656036dbc57496dfa1cdcd122b76bd6e982a9cc28f8391cea810cae7f9f",
+      "reason": "明确停止本次咨询且无继续处理要求；不把感谢或账户业务操作当会话结束。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0057",
+      "verdict": "accept",
+      "reviewed_content_sha256": "270101d10fad7ac4707fd5148d2dc189d3a0e53bcf9ec408fbcd0afd114ec7c5",
+      "reason": "合法域外实际请求，未误判为金融业务或禁止操作。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0058",
+      "verdict": "accept",
+      "reviewed_content_sha256": "6243faf62c3ad4b0b8465605b69d17357bb7373e59fdc4bcebf49d3cdf296805",
+      "reason": "合法域外实际请求，未误判为金融业务或禁止操作。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0059",
+      "verdict": "accept",
+      "reviewed_content_sha256": "26dd7483095c32b034f5075f398e44cbe6dba4bf4860e41426ea783086aa18cb",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0060",
+      "verdict": "accept",
+      "reviewed_content_sha256": "ee9174c7a1ce4d50fcd480854e376d58cd15fe2ecfef2babc6c00b3efe88b267",
+      "reason": "明确停止本次咨询且无继续处理要求；不把感谢或账户业务操作当会话结束。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0061",
+      "verdict": "accept",
+      "reviewed_content_sha256": "fb870011522b6003e5ed710f390bc669f3b8cbcafaac72c3e06a94a9dd4452df",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0062",
+      "verdict": "accept",
+      "reviewed_content_sha256": "d95368c50a9d79433600a53ac274604e8c3ffac2cfbf091ed194b2d9424b2f1f",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0063",
+      "verdict": "accept",
+      "reviewed_content_sha256": "83d38108de61f96b49af75d717d7b5902e986ad60d21ab3b59c3ba5ce042c58f",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0064",
+      "verdict": "accept",
+      "reviewed_content_sha256": "973505b80c897fce7758f8b9a2d2493fa9fe2165939a00caa18e8d284aabd27b",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0065",
+      "verdict": "accept",
+      "reviewed_content_sha256": "fa6aaa7cc3bee0b1248d0ef8c91ac87cacbe3af46cf153718641b5570589a2a7",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0066",
+      "verdict": "accept",
+      "reviewed_content_sha256": "69664b4e56881c40e83390b80d559c9556e02ec5f41460468045679213c214b2",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0067",
+      "verdict": "accept",
+      "reviewed_content_sha256": "6f5d95609271c39b409613253264079df16f164ef891c98e2dab5a5af2831e16",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0068",
+      "verdict": "accept",
+      "reviewed_content_sha256": "26af8de7e32b2c45337f398f8004330a0571b0ebd1aaef423baf24ea700f0b3b",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0069",
+      "verdict": "accept",
+      "reviewed_content_sha256": "b3ae32f4881b24d276e9a10664b335962a9150a68d3b40901f44c6b57d0bc95d",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0070",
+      "verdict": "accept",
+      "reviewed_content_sha256": "e1cac086bdce7c3fa6b2ed6bab7b8d820a955d1bb43668de61123bb0e6836029",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0071",
+      "verdict": "accept",
+      "reviewed_content_sha256": "658e6f61193150bb5ca494f2e55ae5e66f9ca3389f5031e3c9e4691d893584be",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0072",
+      "verdict": "accept",
+      "reviewed_content_sha256": "9c2901604db3328157075d2615a386258b43d640ea63a736064be5ae2097c606",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0073",
+      "verdict": "accept",
+      "reviewed_content_sha256": "3e7ce7e8a3036d2fe54fc0f2a7da7f3803d2791cdc10e1fbb8c17203dbd9477d",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0074",
+      "verdict": "accept",
+      "reviewed_content_sha256": "d3cc0b173ae77e8c6624530cf18a1f9cadb0eea0253cfa6e37edff48700ccec0",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0075",
+      "verdict": "accept",
+      "reviewed_content_sha256": "9ecd12cdcaec72894febb961a42697bd81dbc71a21b61eadd86c66651616d8a2",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0076",
+      "verdict": "accept",
+      "reviewed_content_sha256": "b8a5c06841df757ca63a7bf56cd1c41124101819e6b31d2dc4eb678a3f297914",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0077",
+      "verdict": "accept",
+      "reviewed_content_sha256": "485efc0931231229afda706f306811b931f0fca5447ffb4899d9340658a69dfc",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0078",
+      "verdict": "accept",
+      "reviewed_content_sha256": "147add99a231f30707b869c8684a3e5ffac4d66568871cceb3558925880f3927",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0079",
+      "verdict": "accept",
+      "reviewed_content_sha256": "29e51aaf3b1a120d4212f72db5fda3d5b9b0825656dbf276c7d4ea27a2259a79",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0080",
+      "verdict": "accept",
+      "reviewed_content_sha256": "dac7b18f63ed7d1893a3f5e913e17dc6b5ded1305dff05e711fc6a63efd73209",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0081",
+      "verdict": "accept",
+      "reviewed_content_sha256": "6a4e2fea6722a094e38e4b39210935afe25d4c181431abc75dedbd844678a102",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0082",
+      "verdict": "accept",
+      "reviewed_content_sha256": "9f2001e1d56708c0dab29f2c1a8682c668db14ccd4254678d63be5bfd1fa5b77",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0083",
+      "verdict": "accept",
+      "reviewed_content_sha256": "4553364413aa2f74197bbec4e276cde9173e25d074bc8f5b6342a5463ef1314d",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0084",
+      "verdict": "accept",
+      "reviewed_content_sha256": "36f4794096e8866fab3888f4e95cf97f444da8ed110f7fd8ae974c8f17be0fe5",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0085",
+      "verdict": "accept",
+      "reviewed_content_sha256": "85d24eaf4825134ff27c3f53adc55848f21434539fe3049214995dc9f43cefac",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0086",
+      "verdict": "accept",
+      "reviewed_content_sha256": "a204e657aa91e110cfeeb9ff0e2713ae3ce1d0ae53a722e08186abf1b2490bc5",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0087",
+      "verdict": "accept",
+      "reviewed_content_sha256": "4d7b6c75a526e1ab3254183ccb6f981e9b419434d992f0c8549e070beceec337",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0088",
+      "verdict": "accept",
+      "reviewed_content_sha256": "7906b517f70438f5785391ef6bfa393ff0410348208cca50273fa9dd1d52b0ca",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0089",
+      "verdict": "accept",
+      "reviewed_content_sha256": "cc8bb18b5cf829d212426f06a6537b12160952ff80ea7f192f16ea59a2a3b79a",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0090",
+      "verdict": "accept",
+      "reviewed_content_sha256": "47910fed8c9041db47c7b9d64e142b6262d4bc62569be872d375451ef56df5cd",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0091",
+      "verdict": "accept",
+      "reviewed_content_sha256": "517ba11e217f839399141fe5f0afca2559f96b4f7d58fd847bc824b5feb1b99a",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0092",
+      "verdict": "accept",
+      "reviewed_content_sha256": "10cc051c7709e3d2bae32794e06e4f4d50643f6a48897fa52270f2632c3b92d1",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0093",
+      "verdict": "accept",
+      "reviewed_content_sha256": "144bc4a4067ae12ceb146ff4ed1e4e07a817cbacce25b0fb925f5722dee06329",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0094",
+      "verdict": "accept",
+      "reviewed_content_sha256": "16f2588fa75495e8391939429a40c0d5a6dd88bfddf2551bbe0b2659309d8054",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0095",
+      "verdict": "accept",
+      "reviewed_content_sha256": "1ae3f30f704e35ae64e8dcd99ac0bf12f5ffec3c89ded04a5ab425d079d0baa0",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0096",
+      "verdict": "accept",
+      "reviewed_content_sha256": "49de064b980b541ee9bc6bc9fd606a0f0e7a4ab4c3adeb2ab88e0ff5548ae808",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0097",
+      "verdict": "accept",
+      "reviewed_content_sha256": "53ae7da66a71e846d1c70fa1ebf2703e8db12b5d4e390c10cb640e04fe385e95",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0098",
+      "verdict": "accept",
+      "reviewed_content_sha256": "4fd80fe0edd045fedbe05be9af03717e9e41ea8bee872b05b8926dc21f8eaa60",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0099",
+      "verdict": "accept",
+      "reviewed_content_sha256": "629ce47ea400be2515552b5e3f3a34a7faf1dcca7b20ced93ff1f8e2c1964552",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0100",
+      "verdict": "accept",
+      "reviewed_content_sha256": "a14b817a7ff5940a89d330ac2c74dbcf940129fbc9c7338813f6be07708d2a11",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0101",
+      "verdict": "accept",
+      "reviewed_content_sha256": "9287a6aa11cfed4b024caabd1978601c8cb6eab14326cc5cf5bbc9d5e6684590",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0102",
+      "verdict": "accept",
+      "reviewed_content_sha256": "ad6b9a5c9f6c02ccbc1ef6018c18145ab9aa29bdf4d4b75ccc577270e22fc857",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0103",
+      "verdict": "accept",
+      "reviewed_content_sha256": "6efb4b2e2efd95ca51a4ba62c7a3db5a57686f65285d6c884861f97402704960",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。 原输入所指对象不足，作者已补足申请编号/申请状态码语义，已重新读取完整修后输入并确认原标签成立。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0104",
+      "verdict": "accept",
+      "reviewed_content_sha256": "8fef20db1db8851c65e007daa8c6d57f6a431850fba9f3875531455965421287",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0105",
+      "verdict": "accept",
+      "reviewed_content_sha256": "589f207012095b0fe51d5ada1557034337ca5505979ae9496dd4ac18f98d6654",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0106",
+      "verdict": "accept",
+      "reviewed_content_sha256": "ae2e696ac66e40cd8c86da5fc282c0e2439b6a6d0a61ddfe4d887dcf2a3d3f38",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0107",
+      "verdict": "accept",
+      "reviewed_content_sha256": "1b945c955f947ca55fca44a645ab647112b484ff8e23a7efb5f602125b22e869",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0108",
+      "verdict": "accept",
+      "reviewed_content_sha256": "7bfee98f5c437d5e73f77ed9fae0ea06c2520f606d01e75beb44a7c55486f1af",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0109",
+      "verdict": "accept",
+      "reviewed_content_sha256": "22f0e04f7da27b7f5edca07f7e3991f91c846d8874aa50cef0d13ea381996cd3",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0110",
+      "verdict": "accept",
+      "reviewed_content_sha256": "e5f80296d87b667609cb471527602fa9dfe9681d48e0c324b346dd1a54748788",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0111",
+      "verdict": "accept",
+      "reviewed_content_sha256": "b7a3358fc591c0ec9303204b0f047b6325c3417afe776c9182652bbc4e31daca",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0112",
+      "verdict": "accept",
+      "reviewed_content_sha256": "3926745bdac16d7bef9ce9141ad1ec808fa411b214b102962a92d4164adada82",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0113",
+      "verdict": "accept",
+      "reviewed_content_sha256": "ec5bdb37d8decf990620730398ad5c4cc95f31586996460ccae4fe0d8a9f5dd4",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0114",
+      "verdict": "accept",
+      "reviewed_content_sha256": "c39f8848557ca18e86787a46b02123d393f130af8d636c1bcaeed51f8a3553ee",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0115",
+      "verdict": "accept",
+      "reviewed_content_sha256": "31e484b00eb627c187b50f8e80b40125d2d3fa10dd11e758047785359271571d",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0116",
+      "verdict": "accept",
+      "reviewed_content_sha256": "7a4eea78e93d0ee0b90ae867e0df7ec1f40f373699111d643ab66f8b392383d2",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0117",
+      "verdict": "accept",
+      "reviewed_content_sha256": "80adf1d945940c293f41b177fd46dc19f6795b028cab9e828ebdbcd9613aef9d",
+      "reason": "明确停止本次咨询且无继续处理要求；不把感谢或账户业务操作当会话结束。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0118",
+      "verdict": "accept",
+      "reviewed_content_sha256": "7a847e7c5a6b15289f8c3b261d42aa1e243600c1edacf847a1878122a334b9ae",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0119",
+      "verdict": "accept",
+      "reviewed_content_sha256": "01b29894978e8dc0d56e7d80322e037e022ccdd283252473270498abb3b9621d",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0120",
+      "verdict": "accept",
+      "reviewed_content_sha256": "f75c7e540af7920c30ba42f42ef1b4d679b69f79fe260aa32e3941653becd138",
+      "reason": "明确停止本次咨询且无继续处理要求；不把感谢或账户业务操作当会话结束。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0121",
+      "verdict": "accept",
+      "reviewed_content_sha256": "87e574d1ecd1d9a11b56da47de68488ed5458830029ab74a4b097d059b54b611",
+      "reason": "合法域外实际请求，未误判为金融业务或禁止操作。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0122",
+      "verdict": "accept",
+      "reviewed_content_sha256": "5080e934f276fdc5430750cb073b06293ac54fbc21992d9b0c2af8ccc8bb9672",
+      "reason": "合法域外实际请求，未误判为金融业务或禁止操作。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0123",
+      "verdict": "accept",
+      "reviewed_content_sha256": "527ca320759a360017525d136d85226c0e486725faa0775cff0369ce1f8fefb2",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0124",
+      "verdict": "accept",
+      "reviewed_content_sha256": "9625444c0588e91efeea169c79919ac0439d12e70c5d4d04e5cdefa62eaecc2f",
+      "reason": "明确停止本次咨询且无继续处理要求；不把感谢或账户业务操作当会话结束。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0125",
+      "verdict": "accept",
+      "reviewed_content_sha256": "45f19ff9915e362853b914cc19cb7da03cd7c3d73ce83f6650a2499436627208",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0126",
+      "verdict": "accept",
+      "reviewed_content_sha256": "d2f284aef4f68aeefe2604225e3dc8d16ffef64c8abf0028b1cd366d865cb355",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0127",
+      "verdict": "accept",
+      "reviewed_content_sha256": "e6cdedb777f654c3e3950425b7e7b48f244a08e78d1efe7474ab8fbe240a1267",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0128",
+      "verdict": "accept",
+      "reviewed_content_sha256": "d78328d449f5efbc4d57f5419b21031508b045d0dd46095d1bdf96f7ffe9950b",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0129",
+      "verdict": "accept",
+      "reviewed_content_sha256": "494ad979ebd87acaa8f117cdd665740cccbd5b4d367a51949c296d9f3df2c610",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0130",
+      "verdict": "accept",
+      "reviewed_content_sha256": "11599b86a05563d591ff057962e1984898428f2e1ccfe00f5bb1ff13ff943100",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0131",
+      "verdict": "accept",
+      "reviewed_content_sha256": "b9560cb1c534592f865ad97e7dbd648805d433d2411dec7ce7da4ab83811eefe",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0132",
+      "verdict": "accept",
+      "reviewed_content_sha256": "1c6b68f4a569a9d52204fac1354e6d4b81b43eb26bc56fe45fa06dfc4b778fd4",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0133",
+      "verdict": "accept",
+      "reviewed_content_sha256": "df8178f5faca0a709f4da83bc272ed86f40a7bcefc750db0c459efdcc4967e92",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0134",
+      "verdict": "accept",
+      "reviewed_content_sha256": "85b8c30d7c04ad4833145a82afffebe0b97aeeaeb6f81cfe2633ff4aeff9e3aa",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0135",
+      "verdict": "accept",
+      "reviewed_content_sha256": "aad4453306807c8794b75b07dedb88b62139fe72d99f8470bd81a70e46b6803b",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0136",
+      "verdict": "accept",
+      "reviewed_content_sha256": "ceba33989704460835abffe31669f699edb4ad690b2fb671fe91096037f4f15c",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0137",
+      "verdict": "accept",
+      "reviewed_content_sha256": "fd7a56864cfd8fca440c26d52a0ffc1e48a0e0f347c33f2a037b1aa03b023ec2",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0138",
+      "verdict": "accept",
+      "reviewed_content_sha256": "16df9d538e12b716a08e6c1d9af47884b9c101eb2e238573aa4524e510a48925",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0139",
+      "verdict": "accept",
+      "reviewed_content_sha256": "2a39b9d91b4502edc63803b57fc4dcc1b2bc16918a38a52a275e0938e7360edf",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0140",
+      "verdict": "accept",
+      "reviewed_content_sha256": "fd2d18c3f339d885ab4fa5ed4054d7e2faf0ddf896cfe539b3b1f083d87f0e7b",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0141",
+      "verdict": "accept",
+      "reviewed_content_sha256": "263f6879525448c97f4361cd616d7a086c452bf7841c90403fe231ce4f6b3349",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0142",
+      "verdict": "accept",
+      "reviewed_content_sha256": "8d4ca90a65ea8f738e160477ffbe9a2dd09149973eca94fd07634aba66ce6f78",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0143",
+      "verdict": "accept",
+      "reviewed_content_sha256": "c43ac669f4a469fc4ba6dd5c6b3738f3ca7942f1f8cd4c26cd0143db4e33e191",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0144",
+      "verdict": "accept",
+      "reviewed_content_sha256": "2b494854709aa66893dd4ec5b1d6ed3ec40273acc1beedf9de39d20636f5aa45",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0145",
+      "verdict": "accept",
+      "reviewed_content_sha256": "5b882b62d4b82274993de91f28ae6b2a32812c46c2ee12d7a88f9d999f2b36fe",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。 原输入所指对象不足，作者已补足申请编号/申请状态码语义，已重新读取完整修后输入并确认原标签成立。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0146",
+      "verdict": "accept",
+      "reviewed_content_sha256": "788d798f4a6a6c6d4e2bba4f3c1a7b9804055b94d9734972efe2082202df5a54",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。 原输入所指对象不足，作者已补足申请编号/申请状态码语义，已重新读取完整修后输入并确认原标签成立。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0147",
+      "verdict": "accept",
+      "reviewed_content_sha256": "a8ea8f39cf597e96603bd4e60bb3e8349ae6d1bd9b1ba96b4c91c2fff14c30ac",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。 原输入所指对象不足，作者已补足申请编号/申请状态码语义，已重新读取完整修后输入并确认原标签成立。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0148",
+      "verdict": "accept",
+      "reviewed_content_sha256": "271d4db82aad5b402bd623f0fb7f53e9b1b6963a0c130c5398430aaecc61a0f7",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。 原输入所指对象不足，作者已补足申请编号/申请状态码语义，已重新读取完整修后输入并确认原标签成立。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0149",
+      "verdict": "accept",
+      "reviewed_content_sha256": "1bb6ee5b7652ecd6c328e98fb9c89e4096e0ece4e720593d49912d9341d3d0a6",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0150",
+      "verdict": "accept",
+      "reviewed_content_sha256": "e836ec8edbad535494208a1c68c4e9aa576b11524325949dcbe208b95186d238",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0151",
+      "verdict": "accept",
+      "reviewed_content_sha256": "655cc16fb16f0ef6260a1ed71ec570a357b10ff210844611964291b0d931c940",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0152",
+      "verdict": "accept",
+      "reviewed_content_sha256": "4ac1c7bab8bc4d86729ed1269d8a0d6b3a20c8ee9cf9b635d4cefe8f007d8e7f",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0153",
+      "verdict": "accept",
+      "reviewed_content_sha256": "4e2c146c4deacc355732c6edcc4c8cff5c2bfe2cdb3c14858a9b52dfca1ce6fa",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0154",
+      "verdict": "accept",
+      "reviewed_content_sha256": "70461d4b0b50c57f2ec5fc58cd9cd66a1b079806b0f3e12399fda8a88264fe44",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0155",
+      "verdict": "accept",
+      "reviewed_content_sha256": "517937d3a7b3983415ccaa79e9e710b252280f61e8ec953ebabec79be7a99aa1",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0156",
+      "verdict": "accept",
+      "reviewed_content_sha256": "881e4e37f884290d0dd99f4023bbfb1e78b0e1d6f1de983ec484510aa6829af1",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0157",
+      "verdict": "accept",
+      "reviewed_content_sha256": "cffe80b5db28a817ed05a26dcde3252d3dbfb0fc4d56576b75a46c26487fa1a0",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0158",
+      "verdict": "accept",
+      "reviewed_content_sha256": "9f4f9e54c79a2f09ab7507ebe8c7d281ebbde368ad989905d87cb31a33f99aa7",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0159",
+      "verdict": "accept",
+      "reviewed_content_sha256": "4d424961e13347d7def0360548350f8829ca0c75304fddeefc5c0eedd2574658",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0160",
+      "verdict": "accept",
+      "reviewed_content_sha256": "987642b30155713347291b58b83a7d39135849d67a6a61416340ab2184cbd3ff",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0161",
+      "verdict": "accept",
+      "reviewed_content_sha256": "595df902977ffcd6714f3de0a11251f95c0c6405c850ab9f891d364658f6b362",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0162",
+      "verdict": "accept",
+      "reviewed_content_sha256": "2c5cefa0091f555fe1224b914ba9dc2cf1166eb50457ec9efaa060c104da93e1",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0163",
+      "verdict": "accept",
+      "reviewed_content_sha256": "bb02001e374a03e712486068c3b8d84fb5ba5e243ad0cc6a9436720e753e4d0c",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0164",
+      "verdict": "accept",
+      "reviewed_content_sha256": "fb8fc4b4e9dc7bbad7d84310ab767b9f894317fa36d487cdf40a3ae6794d9940",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0165",
+      "verdict": "accept",
+      "reviewed_content_sha256": "6d49f450c0d33b1e14b2e2e44facc3d34e1d851c31c242e414f6000cc475d9b8",
+      "reason": "明确停止本次咨询且无继续处理要求；不把感谢或账户业务操作当会话结束。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0166",
+      "verdict": "accept",
+      "reviewed_content_sha256": "7dc0bf53b360ec02a0abf245f26d459a8b8bb33c2c9eb82fbee92b2e7b398815",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0167",
+      "verdict": "accept",
+      "reviewed_content_sha256": "b26dd43c885f2aaa2e355f4da289f0948211f64ab406dfd4ce89c595430b9ae9",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0168",
+      "verdict": "accept",
+      "reviewed_content_sha256": "dcb8376d8719a0d1cc5ca1a3d1f64a27cc9585888a46ae3e27d5c66aa945bd7b",
+      "reason": "明确停止本次咨询且无继续处理要求；不把感谢或账户业务操作当会话结束。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0169",
+      "verdict": "accept",
+      "reviewed_content_sha256": "fc894bfd17cb0619a9c9a68d2ba2ef0f912b4306b4de2cf3fe6171ba26d5dba0",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0170",
+      "verdict": "accept",
+      "reviewed_content_sha256": "4090fb27059b8cee366b7c37eda7f113736385900941dd7ce5c9b8ff6a12f890",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0171",
+      "verdict": "accept",
+      "reviewed_content_sha256": "a2b282199d8e068562072fccbae210238834dd294649f9afe75a310165c7a378",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0172",
+      "verdict": "accept",
+      "reviewed_content_sha256": "6abb90856772bbb7fdcc751146c7de6be1c8c2c4d03093f601a526f6bffec239",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0173",
+      "verdict": "accept",
+      "reviewed_content_sha256": "b5f994ac8b113e0fcf1823d46206518783db631de2429034204dc113c025b277",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0174",
+      "verdict": "accept",
+      "reviewed_content_sha256": "077f7fde026d39e53811e4125d76f37fa1ac4cfc4c17a682f5a3c68967ba0835",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0175",
+      "verdict": "accept",
+      "reviewed_content_sha256": "546d93b756cfcb908b7f094bb660da46bed009815303366ee0ce014a492656d1",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0176",
+      "verdict": "accept",
+      "reviewed_content_sha256": "c439d89e9600eea3994cbce929298da9d7302183a1c48b4fdf98f04958b9179f",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0177",
+      "verdict": "accept",
+      "reviewed_content_sha256": "563f12009e4a156e3cd5f61c7ca6614526131946ec2a3e5596a9d428f0ec420d",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0178",
+      "verdict": "accept",
+      "reviewed_content_sha256": "b26dac1d9e8612295a61169cdee5f347ed00c6848cdb2d0aa2daf2d8f0915849",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0179",
+      "verdict": "accept",
+      "reviewed_content_sha256": "b80aaa37e4d589b0f417461e71ce7a0021609b7f99999b2f1266d9c8ec67d3c2",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0180",
+      "verdict": "accept",
+      "reviewed_content_sha256": "de5d5417ef77c9900ec30479f11366d64a46e88e7615f097e3eb269bfa576623",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0181",
+      "verdict": "accept",
+      "reviewed_content_sha256": "742a46a1e37dfc2132ca3b49a190ba2aa0dc0b9c63d6ccf55bc10798c433f267",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0182",
+      "verdict": "accept",
+      "reviewed_content_sha256": "1d25e49c2fc52fc487acf9aad42efaef3306caf66026c1573caa4e13bb813963",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0183",
+      "verdict": "accept",
+      "reviewed_content_sha256": "0bded09b39b414dbcb4bd5acc219725cc28d0df03fa5ff555eb242739b20370a",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0184",
+      "verdict": "accept",
+      "reviewed_content_sha256": "23e96d24365282de808df7520bc466bd744a44b9402b4b797a359e5a73a78923",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0185",
+      "verdict": "accept",
+      "reviewed_content_sha256": "6080dd476c66abd42f78fce93a5db1b4e89c335fcaa1e07bb95020a09bfbcddb",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0186",
+      "verdict": "accept",
+      "reviewed_content_sha256": "ed06feaa975fa68c06f1d361baf57fb646bd9a5d76d238b23bfcddc2d90519fa",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0187",
+      "verdict": "accept",
+      "reviewed_content_sha256": "694f4298d940e85a1b75f0071a2387d5311432db827d96c5248841f31848fb39",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0188",
+      "verdict": "accept",
+      "reviewed_content_sha256": "80e4720502556207e93f0364d1ec59750bb55f29cda03b22f2266122404711d7",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0189",
+      "verdict": "accept",
+      "reviewed_content_sha256": "d844f550e130be37706bed39764256e2e5945a98e6948213b8fa831abd161c4a",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0190",
+      "verdict": "accept",
+      "reviewed_content_sha256": "64a1a57f46d2bc92e797edbf49495f757eaf8a2837f7cd7058bb49aa8212c7b2",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0191",
+      "verdict": "accept",
+      "reviewed_content_sha256": "e91ca91166d53149bf98e008aa9b0c6aa7e8bcc0a528383f3544acfc1a3a7287",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0192",
+      "verdict": "accept",
+      "reviewed_content_sha256": "be8fac719137733cf35c9e030315f021d4dec9cb5fd917bbac146ec186d2aa06",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0193",
+      "verdict": "accept",
+      "reviewed_content_sha256": "5ecf80b2c7a37bc6554ff9576435a2aea8e1b2a98018d95a313c691e4b26c02b",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0194",
+      "verdict": "accept",
+      "reviewed_content_sha256": "2c0d4deba6c225d4c78d43dcbcf6b960ff4873da99e7090eea977ea843d4a882",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0195",
+      "verdict": "accept",
+      "reviewed_content_sha256": "f48045b91c96368c4aeaebf2b5b51a4f1a3d5daf207a6d7f2cc480d2a169dda6",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0196",
+      "verdict": "accept",
+      "reviewed_content_sha256": "d357e4d7513025961fd7ff30a7bd8e5353ec69dde6342770872bc944677be140",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0197",
+      "verdict": "accept",
+      "reviewed_content_sha256": "bd5741aba87e23171b86d9c1bcc9aa7850fde35d448392aec601f62a699b95a1",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0198",
+      "verdict": "accept",
+      "reviewed_content_sha256": "742d88f1bdc5da93a2495e2c2a2fc56b6eab1365241c4c530832ed838b3a9826",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0199",
+      "verdict": "accept",
+      "reviewed_content_sha256": "93bcd821ec7a66b58a2fc36c85ebc3ddd5b83e8f27e993618371378df83fd7c1",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0200",
+      "verdict": "accept",
+      "reviewed_content_sha256": "974a0e0da1d57e2bb1e42de607c566997eb82f6716c6ba3febbb5e6841a133fd",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0201",
+      "verdict": "accept",
+      "reviewed_content_sha256": "3853c17b843a743fb193bdc2046fc2a72133a69199e8d213d28e187afbaf4dbf",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0202",
+      "verdict": "accept",
+      "reviewed_content_sha256": "0dfe8b0c000de78b0f56aefe489162750dcc0f5688dd6d3a696a0b6437b83504",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0203",
+      "verdict": "accept",
+      "reviewed_content_sha256": "a3e9072b01298080261665f33c27d42d7cfee63a08ab1ef2357647093175c30e",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0204",
+      "verdict": "accept",
+      "reviewed_content_sha256": "1ede06a663b561005fbc999179105291ab70a269cb0b76428c1c677033927836",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0205",
+      "verdict": "accept",
+      "reviewed_content_sha256": "c9a6b19332a908f878bd418ee3bafd41a1766586fd65707a445152feb41b9268",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0206",
+      "verdict": "accept",
+      "reviewed_content_sha256": "4fcb9e26c81fc4581528e43a4368ccbedc8203fb6d23d5b10bc5341045e442ec",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0207",
+      "verdict": "accept",
+      "reviewed_content_sha256": "46dc2f24cf65842cb25dd9834a744719be21ec5f7f3248bd5af6e74994462dc3",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0208",
+      "verdict": "accept",
+      "reviewed_content_sha256": "d20c367b4bd6ee7a1fbd2b820e91379f352eaf83ff3e3096c9973265799da839",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0209",
+      "verdict": "accept",
+      "reviewed_content_sha256": "0064433e1ee5b3d5a3b7cb95896cd70655f9a1f62792a718abb9b3f66c8fd783",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0210",
+      "verdict": "accept",
+      "reviewed_content_sha256": "4348443f09c5e49e6a6d579b9bf36f18570906922767d294f7fea17a62879534",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0211",
+      "verdict": "accept",
+      "reviewed_content_sha256": "28aabc08bc781df12817a91cb6861f72d89d1b93fb26ebc7d0141a488e2277aa",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0212",
+      "verdict": "accept",
+      "reviewed_content_sha256": "d354a18423a354c5f78d1a6f23246300aa94e3f7afa002420232e128b28a239a",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0213",
+      "verdict": "accept",
+      "reviewed_content_sha256": "e35245a7bf8bea6828734bee9b9552ffc042b72edfef70d9c0e34b6976ed3423",
+      "reason": "合法域外实际请求，未误判为金融业务或禁止操作。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0214",
+      "verdict": "accept",
+      "reviewed_content_sha256": "5dba246c172f170d1d817e7790c92b127ebc20ab00ec35d3cc64a806f6a04935",
+      "reason": "合法域外实际请求，未误判为金融业务或禁止操作。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0215",
+      "verdict": "accept",
+      "reviewed_content_sha256": "b5c04f6a5a0a29309ed6cfef299fa3fa81c0c99e7106172dd28e94276a9560b9",
+      "reason": "合法域外实际请求，未误判为金融业务或禁止操作。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0216",
+      "verdict": "accept",
+      "reviewed_content_sha256": "d3a582b259d4695af4835f42a7274dc4cc55ad56b47204f329a4b1e0f6a8ca1d",
+      "reason": "明确停止本次咨询且无继续处理要求；不把感谢或账户业务操作当会话结束。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0217",
+      "verdict": "accept",
+      "reviewed_content_sha256": "ae8c38e8bfdb0bf464772ee48bca56a5ff3c647b0d1c8f6507e77dd24874802a",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0218",
+      "verdict": "accept",
+      "reviewed_content_sha256": "078e700b7ddc05d8ed804e4abc03492a976263bed463c6069f3db7051eaf3308",
+      "reason": "明确停止本次咨询且无继续处理要求；不把感谢或账户业务操作当会话结束。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0219",
+      "verdict": "accept",
+      "reviewed_content_sha256": "f96200bcb0705bee3f4b2da47a327029fea58a483c480c9a37da115d3792bfe0",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0220",
+      "verdict": "accept",
+      "reviewed_content_sha256": "3e2c395d31c49c1c5e6f923cbddfd1ed5520c3a6a8b1a8fac68f5996f12e3bb8",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0221",
+      "verdict": "accept",
+      "reviewed_content_sha256": "d55cc397652b260e144c576a0a3295c18783acb1cf758a1c9ada54d2b823e5c3",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0222",
+      "verdict": "accept",
+      "reviewed_content_sha256": "9b64ec596cb76dad684c42ffc62d6dadb5276cbadb8a40033cfe9aa3b6df24ee",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0223",
+      "verdict": "accept",
+      "reviewed_content_sha256": "21894aa7488e5749632ef63778727befe723bc48f39049f316b6311cc2db3f2e",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-CAL-0224",
+      "verdict": "accept",
+      "reviewed_content_sha256": "6b5126ea925d67e50156c519e76c8f943f84ba3418ab90b887e4488488010e6c",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0225",
+      "verdict": "accept",
+      "reviewed_content_sha256": "7ad273fe6e3c0cd920cef94e9c19bf34d9398eb0901cf3634e7ad03d4bbf9ae8",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0226",
+      "verdict": "accept",
+      "reviewed_content_sha256": "b7b8ba3427f9e276bd414839c4c8e2b6d2b82c29d02afdad36d81f704e64c0f9",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0227",
+      "verdict": "accept",
+      "reviewed_content_sha256": "aecabedd5e5554129329dd3195e8b80f072f146dd340777a7588076dab3867a0",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0228",
+      "verdict": "accept",
+      "reviewed_content_sha256": "b0b508074601be706c0c7d49746821e7bb718917e6a38c5b729209546eb0864d",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0229",
+      "verdict": "accept",
+      "reviewed_content_sha256": "78d198443c07d29ea75f69cf0d7de94fed7f36b2dca9db35f252850e266e5a33",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0230",
+      "verdict": "accept",
+      "reviewed_content_sha256": "0666ac3375b2004a9f2cdb787b0e83d65e1bae497776f8938452fc84c29ae8f0",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0231",
+      "verdict": "accept",
+      "reviewed_content_sha256": "49f292678a7fb938afd4691c112b5b351b3ed4518d6ac827f63d5ef1bdcd884a",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0232",
+      "verdict": "accept",
+      "reviewed_content_sha256": "dbe1c299e91e685c8a37a4eba2ec0eb7f807f90b82d67e4909bba197de87b6b1",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0233",
+      "verdict": "accept",
+      "reviewed_content_sha256": "0418ad9dbacdebdf2e31163e3f72b3424e4a8bb35d91b509f5da4d1252002d33",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0234",
+      "verdict": "accept",
+      "reviewed_content_sha256": "bb4a3c4a270f0491411b8d95cf228ca121bd0127b4cd54e0d5594dc032533472",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0235",
+      "verdict": "accept",
+      "reviewed_content_sha256": "53f520ca26d0f05c9cf39f391b675f86c7ef9440d973c9df5040a0aeca8d0479",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。 原输入所指对象不足，作者已补足申请编号/申请状态码语义，已重新读取完整修后输入并确认原标签成立。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0236",
+      "verdict": "accept",
+      "reviewed_content_sha256": "d799fd1f31cb2d175ef86d046c849d63b4321c56f7ea0d2e1edbf176f0726c1c",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0237",
+      "verdict": "accept",
+      "reviewed_content_sha256": "1b44584e7844ec58bb3d1b78a91f2115f1e4b9d0352a1855e48ea78266608b54",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0238",
+      "verdict": "accept",
+      "reviewed_content_sha256": "f41187ccc6e5a81bb383614c5b290c099d25519dfa11b8aefcf9fa73bece6536",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0239",
+      "verdict": "accept",
+      "reviewed_content_sha256": "951d3ce9ec3410c3cc8427aee6a32555513a992cc1d4c45f36aa5634210e40f0",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0240",
+      "verdict": "accept",
+      "reviewed_content_sha256": "63a02351f41fb85d0dcad814bb675899f5965bf4dbee564c21c7dc78a212d335",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0241",
+      "verdict": "accept",
+      "reviewed_content_sha256": "45e67e8049f50e3d9a66c0cfc9df7e66cfbd8989771c223422f5f54a4d3de45f",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。 原输入所指对象不足，作者已补足申请编号/申请状态码语义，已重新读取完整修后输入并确认原标签成立。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0242",
+      "verdict": "accept",
+      "reviewed_content_sha256": "197665bbc4a291cc6ce4099bfc4b2184228b46bf82030f910e70381b00df362f",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。 原输入所指对象不足，作者已补足申请编号/申请状态码语义，已重新读取完整修后输入并确认原标签成立。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0243",
+      "verdict": "accept",
+      "reviewed_content_sha256": "26ef96a34597a5465e4c400090f0a40653db06e758cbf9b9031752263ba54f4d",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。 原输入所指对象不足，作者已补足申请编号/申请状态码语义，已重新读取完整修后输入并确认原标签成立。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0244",
+      "verdict": "accept",
+      "reviewed_content_sha256": "f4a1c2239197edd8b6be745f2f19bc73f16d7c375b7e17422cd0d8ac67ab8ccd",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0245",
+      "verdict": "accept",
+      "reviewed_content_sha256": "484212583c860b5da6e91770f512a2131cc09438f3e1f08085ccd6efa989eb62",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0246",
+      "verdict": "accept",
+      "reviewed_content_sha256": "b3bac1970f1ebcca8062da8c51d83be8f10b07663ea15ba5ec3a7a5ac61f6897",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0247",
+      "verdict": "accept",
+      "reviewed_content_sha256": "169920f32a6111f4d465134de0544dbe77c15a3f0b4c4fbdd1d6c4b535980d44",
+      "reason": "历史保留旧申请2476，本轮可信state与明确消息都已指向新申请2479；查询详情用途字段和参数一致。初审遗漏冻结器的显式state目标一致性规则，现按真实冻结器及完整修后输入复验通过。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0248",
+      "verdict": "accept",
+      "reviewed_content_sha256": "8e8c633e6f6c4cfdef2ede613420cd2db0635d83ea8456d1a62fd8fe8d4e5168",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0249",
+      "verdict": "accept",
+      "reviewed_content_sha256": "118e6eef45384e195ac55ce413507a46b39a1fbbcac8e58ca3b5f2221dfbb85e",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0250",
+      "verdict": "accept",
+      "reviewed_content_sha256": "85878ea1027b19f68c4f210d5d0e359ee2d49688a8d47c47686098f46ad9d568",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0251",
+      "verdict": "accept",
+      "reviewed_content_sha256": "a9e444f2c746cc2f03b1cb2a40d90ad6bd512eb9a27630eb7a2e678b12bb0811",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0252",
+      "verdict": "accept",
+      "reviewed_content_sha256": "db7e4d855fde706088da85b7c1b1706fc1316e8bf1aceaf3c707e3ecb9c6379b",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0253",
+      "verdict": "accept",
+      "reviewed_content_sha256": "3853deb33fc0528692dfe64b5f726875c9e25e4c9c2d8224822ee2bab63f559a",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0254",
+      "verdict": "accept",
+      "reviewed_content_sha256": "21a0f9878e9e8473c1e481065780306d6c7698c55d9555c4f9d8dd08ba25c2f1",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0255",
+      "verdict": "accept",
+      "reviewed_content_sha256": "2b760ce95b096c03793b3131b28c647df0980717345f98fc8eddc25d3437308d",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0256",
+      "verdict": "accept",
+      "reviewed_content_sha256": "1066e816bce3622416e60e3a66b11d20428bfb3e6d143f16afe31b5096d51836",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0257",
+      "verdict": "accept",
+      "reviewed_content_sha256": "4367015abf4ab99f47397bc776dade3151679c52f9ed64eb71647457d9b7e406",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0258",
+      "verdict": "accept",
+      "reviewed_content_sha256": "a9ec762694633ab3c9b2583ff449fc146a947dfc0220698b4890b594be318340",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0259",
+      "verdict": "accept",
+      "reviewed_content_sha256": "cd1c71fb32dce3aa8dac867dd7d2365c4cf7a7dc0851dceedd22236eec647a8e",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0260",
+      "verdict": "accept",
+      "reviewed_content_sha256": "f510229bdf06bc94588cf0da917699f026339eb7cf0805ed61d7405ca6d61fa8",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0261",
+      "verdict": "accept",
+      "reviewed_content_sha256": "81a23ae833a8556b8b51a83a18ef261c877ddace7f19cefe3153c882e51f9001",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0262",
+      "verdict": "accept",
+      "reviewed_content_sha256": "39b450c7897193cb57c2d5bf393294a394d92d052214e7cab55ce09e60cb3f46",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0263",
+      "verdict": "accept",
+      "reviewed_content_sha256": "92a3113a4035757e3d65cd86caa96fc54c80464d38ec693e46654a3a0957c4e2",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0264",
+      "verdict": "accept",
+      "reviewed_content_sha256": "2e49db364186a8d0d7d468c5f215be1339db72b3ff6ff2ad42831b1f68e0320b",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0265",
+      "verdict": "accept",
+      "reviewed_content_sha256": "a4b516640e88874ab8ee1b0ec959877059eaa4972cf83d773c2d909f9b89a20f",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0266",
+      "verdict": "accept",
+      "reviewed_content_sha256": "ee43f5c110e37e0904bee63d2d1f95f3bc6917619012aae9145ad3b525412711",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0267",
+      "verdict": "accept",
+      "reviewed_content_sha256": "2124fb021ca82b09ccea8935d99ac96c015d317e931dd0d88a02c48e85faaa60",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0268",
+      "verdict": "accept",
+      "reviewed_content_sha256": "15e945803695306edb852493a889cf7ac0befdc926fb2ba2b3290d4878cb6700",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0269",
+      "verdict": "accept",
+      "reviewed_content_sha256": "83ce87b94eb51c25d2e3b5950c8553aa8e9dd9eb9204c7e4af6fc576480c3713",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0270",
+      "verdict": "accept",
+      "reviewed_content_sha256": "7176b7424e6131eab6b9ace479e71796fd8f7d812bfa9ee4041e87230b9c299d",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0271",
+      "verdict": "accept",
+      "reviewed_content_sha256": "d5498398a29be897ad372d0211d3640246c22d871d9cb8f1edc5ffb649226035",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0272",
+      "verdict": "accept",
+      "reviewed_content_sha256": "3e11fb6e657de390b08be173796bd7c1a6111b3784e2398717cbaa28b7012864",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0273",
+      "verdict": "accept",
+      "reviewed_content_sha256": "ebf0b8e7d12e36fa93886c51f5d07d9fc0257c2e223633a78ea6581f6b492ec3",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0274",
+      "verdict": "accept",
+      "reviewed_content_sha256": "30f3ac685abd2defd5ab505b864fc755dbb9a1b74ba1d7580f7b05b79b3fe6f1",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0275",
+      "verdict": "accept",
+      "reviewed_content_sha256": "950966e72924ca74398eebeb155a2a65a930648c4701e29e4c3f8207077e1a7f",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0276",
+      "verdict": "accept",
+      "reviewed_content_sha256": "b1f2e9b129d2fb075430c2f3fc05462d1247c2adaf010c9ecf18043977e901f3",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0277",
+      "verdict": "accept",
+      "reviewed_content_sha256": "08ceaa3daa56301efb94affc3ba33039003761771ccefb2b3ecb4e0910425ea2",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0278",
+      "verdict": "accept",
+      "reviewed_content_sha256": "b9789711e9d7461308c5267526c28e273c6967aec192d1cde54832c97b69da8a",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0279",
+      "verdict": "accept",
+      "reviewed_content_sha256": "9f746afe783f4e648dfff09b9cea943b2312618b2bca7e6f648ea27350f6f165",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0280",
+      "verdict": "accept",
+      "reviewed_content_sha256": "87f4f549cdc794a9030de8402a6b303263d29fa2c7bdb58128a648b1df299241",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0281",
+      "verdict": "accept",
+      "reviewed_content_sha256": "6f2b26b8314605e446a50e99622a75a4fb24381298572091b9bd614436db3e34",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0282",
+      "verdict": "accept",
+      "reviewed_content_sha256": "3922a22703f29ceace348426eb0af7c20debdd225eab69e9401ec0fb92d8a188",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0283",
+      "verdict": "accept",
+      "reviewed_content_sha256": "5705b6d5a747bd0971c671ca17fc91c28ba5414b8b45669bd8f4c1a22bb0ccd7",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0284",
+      "verdict": "accept",
+      "reviewed_content_sha256": "9968259e8d4a8ef6781167b1a24b76f394483785397207d1e570a9da7bdb116c",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0285",
+      "verdict": "accept",
+      "reviewed_content_sha256": "737a01b4c1994eac5e7dcc544b61bbc36e89c6ef4ffd1764a72058786cb7a450",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。 原输入所指对象不足，作者已补足申请编号/申请状态码语义，已重新读取完整修后输入并确认原标签成立。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0286",
+      "verdict": "accept",
+      "reviewed_content_sha256": "28650483f87237cf00038fe704dc4494f3949237070407041db2dab3524381b5",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0287",
+      "verdict": "accept",
+      "reviewed_content_sha256": "1edaa4ef50028d5ebb739fabf31bd96784ecf542f2e7e5a68c4baf8f89856a44",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。 原输入所指对象不足，作者已补足申请编号/申请状态码语义，已重新读取完整修后输入并确认原标签成立。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0288",
+      "verdict": "accept",
+      "reviewed_content_sha256": "081c62ee0b78939ab6cdb022f3122e555c9f1a0c3f89f716b8f7ddae874d4274",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0289",
+      "verdict": "accept",
+      "reviewed_content_sha256": "316c5797b8261d00fae2ff25b8a826ebaa8b98dc2b94c12396f31546cfd54a68",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0290",
+      "verdict": "accept",
+      "reviewed_content_sha256": "41352c73fb7faffd4effab8bf27fc7c19aadfaf370acd632cfbe5c4643314110",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0291",
+      "verdict": "accept",
+      "reviewed_content_sha256": "9932aa500c00f0c1d75228eaa6f5a23255cc91572d942acbac0780448070d49b",
+      "reason": "明确停止本次咨询且无继续处理要求；不把感谢或账户业务操作当会话结束。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0292",
+      "verdict": "accept",
+      "reviewed_content_sha256": "6ae8123956249f42588af3b2623979bb750e7497454804f6f57a401d824f4344",
+      "reason": "明确停止本次咨询且无继续处理要求；不把感谢或账户业务操作当会话结束。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0293",
+      "verdict": "accept",
+      "reviewed_content_sha256": "f6c8aa7ccf8fabf59ed61dd9939dbf821ce990e61d58147b056d5c182afee8cd",
+      "reason": "合法域外实际请求，未误判为金融业务或禁止操作。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0294",
+      "verdict": "accept",
+      "reviewed_content_sha256": "a091b85bfdec50e9ce67ef57de54d8f86a06613bd7dec306eb690f926139e602",
+      "reason": "合法域外实际请求，未误判为金融业务或禁止操作。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0295",
+      "verdict": "accept",
+      "reviewed_content_sha256": "1c04f9bdccf2a89bfc3b5729bfa33013060da5de9f70063eb43a857600a78cb2",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0296",
+      "verdict": "accept",
+      "reviewed_content_sha256": "4ae06e4ed6a01b6854d3d1acbf685e0318c62062d05e83e6fe9c3cdaeb0fda80",
+      "reason": "明确停止本次咨询且无继续处理要求；不把感谢或账户业务操作当会话结束。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0297",
+      "verdict": "accept",
+      "reviewed_content_sha256": "b9183dc4a4ec24cac5d99af3e3c47f358a5ec66816f2171fc81bd76fd7886416",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0298",
+      "verdict": "accept",
+      "reviewed_content_sha256": "ea8264df4ad8fba2c99eee0131e0a5d78a0d0c5740f62e2466a854987514ab06",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0299",
+      "verdict": "accept",
+      "reviewed_content_sha256": "76bc19b042d3ff80bdfedb167ba8fd04007690df2747729156bf8b5923c891ea",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0300",
+      "verdict": "accept",
+      "reviewed_content_sha256": "beaa1133bf437640a6e71c55a559e1e3a172f3e50885215e8c5a39934ecfb526",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0301",
+      "verdict": "accept",
+      "reviewed_content_sha256": "24b2c711890ddcb80d07637c4fa8405318fc9e7af885d099bb22213dc18caa1e",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0302",
+      "verdict": "accept",
+      "reviewed_content_sha256": "071886de285a1df782b1d1aeb4d7a735da67b03ba6e75b0ea9038fcaa52ad02e",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0303",
+      "verdict": "accept",
+      "reviewed_content_sha256": "fe3b0ee10525bc0d171c23f3e6c2fabb71cf2331263ac58c1066f4f2a6fafb61",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0304",
+      "verdict": "accept",
+      "reviewed_content_sha256": "a408af7e573516b89905f4c0444d11a5fa109c0426ea93435ff87d7ed713101b",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0305",
+      "verdict": "accept",
+      "reviewed_content_sha256": "688817f427dba88e743c1828edce410e80ed8323d2dbe4bcf499e239696412c8",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0306",
+      "verdict": "accept",
+      "reviewed_content_sha256": "cf0811ad7185d080cc5ffc41f9b174ba674c3e7124d46767b3d28713b03b73b8",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0307",
+      "verdict": "accept",
+      "reviewed_content_sha256": "feac015601a9e2446492546a5c6dcfa3dcc85b71e47f5d565d18b5b206e1ed00",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0308",
+      "verdict": "accept",
+      "reviewed_content_sha256": "0a2593f618d723e9a5174dc28f670a45a56a60e3dba79cf9051c61bede588672",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0309",
+      "verdict": "accept",
+      "reviewed_content_sha256": "d97f5ec8c57d2d399d752443c2b5805c60683a08d06456017077285c7025a60c",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0310",
+      "verdict": "accept",
+      "reviewed_content_sha256": "3bf30dfdff1fa9271297927ed203aa31646dec2a073be45596dbdfb3d2d07b62",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0311",
+      "verdict": "accept",
+      "reviewed_content_sha256": "c7f9efa4892ef03dfd884da7a0a210fc8e1d1b461abdcdedf4a9d73c5d511f21",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0312",
+      "verdict": "accept",
+      "reviewed_content_sha256": "e66f3f59f626b39db8aa79af5277324dac98a5fc4d30129290a2fd4677b8603e",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0313",
+      "verdict": "accept",
+      "reviewed_content_sha256": "63248af66761e082dc39e0cd87685b2408734cb904c0f43a1e79fa5f7a62778f",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0314",
+      "verdict": "accept",
+      "reviewed_content_sha256": "808fd5b5f1241553381cba2b0e2d07b953a4023c3ea82eeb40048d7890571476",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0315",
+      "verdict": "accept",
+      "reviewed_content_sha256": "bc6e4f4326a0e0b4688fd1540763e7a6d13de3526a894cffb337ce9f3a1e56ec",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0316",
+      "verdict": "accept",
+      "reviewed_content_sha256": "2bb70953eb26eabb8e221d1a56e968f327853e198ee7653dd7db889446a0998a",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0317",
+      "verdict": "accept",
+      "reviewed_content_sha256": "8deec670b393bbda0f67d6853c038a9ae0e5dc400c5a241567342cf4b4a4036b",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0318",
+      "verdict": "accept",
+      "reviewed_content_sha256": "287d7bf024e16647003c7a2900fc5bad2f0ccd8a5a4686c4814f3dd6625784d7",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0319",
+      "verdict": "accept",
+      "reviewed_content_sha256": "2ce6e049d52ea62b3375e62ae1f4b47f00179ebe9d5d34fa90396fc5c8511b7e",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0320",
+      "verdict": "accept",
+      "reviewed_content_sha256": "44dd9b206f483e44c9bf2d4963f47c35010bfd6349c9e96148837ec9bc2e0b28",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0321",
+      "verdict": "accept",
+      "reviewed_content_sha256": "3d097a27f3f6fdc6887478b4dcd99e4d1b38f80bbec51e3dc1acc2b40fd66e24",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0322",
+      "verdict": "accept",
+      "reviewed_content_sha256": "79b19c972a02ccb29fc6e39f6692bb24c47c0a2fa92a1b4434e0496b886cd623",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0323",
+      "verdict": "accept",
+      "reviewed_content_sha256": "a2bf3da93c90800d0989374c407bcbaa35bf5ddf6a40aaeba0f740611ce7df1e",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0324",
+      "verdict": "accept",
+      "reviewed_content_sha256": "ffea9317e6f34c2c58681bb8f4ab34df086c79741c673ec211dc15e2c69bcb0f",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0325",
+      "verdict": "accept",
+      "reviewed_content_sha256": "98a47080bbf5b9ae1a89b444e61b08e5c0e2882a2abffe67e9b2a4a6d1787ad5",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0326",
+      "verdict": "accept",
+      "reviewed_content_sha256": "f37f9b9bab4dedfa50791aacd97b05d0ba45d556c1eecc8292b94ed30cc90b41",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0327",
+      "verdict": "accept",
+      "reviewed_content_sha256": "277692fcab8e3320d3d78d8f9bf74d6a0eca82d538b5053f9badf67b28e28f71",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0328",
+      "verdict": "accept",
+      "reviewed_content_sha256": "d14c5e8c4725ae2867232f61bd1bf5cc7eb9fe3fdc40d3142a772df2b43e9db7",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0329",
+      "verdict": "accept",
+      "reviewed_content_sha256": "33cf6fd5e70c666845e727e4211d52b1e9dddebf89659d278ffe42b9aa5e02a1",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0330",
+      "verdict": "accept",
+      "reviewed_content_sha256": "ce17ab91e83f780624d8fb76efd6184ab2eb12eca2547b210a7d2cfa93935adb",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0331",
+      "verdict": "accept",
+      "reviewed_content_sha256": "c2d3632d2e4b1982eb781ee08e44a6605e3b3ed051472f9a2ec8b835a4dcc58c",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0332",
+      "verdict": "accept",
+      "reviewed_content_sha256": "ff3b1d6a051fdaba154f9255b88fba1d02d6929f2ad59dbbfbdef845a8b928d4",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0333",
+      "verdict": "accept",
+      "reviewed_content_sha256": "237fcb51cbcfd5f8dcc0ef6b34f51834ab36c16372f0c50cf06d1151cff577bd",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0334",
+      "verdict": "accept",
+      "reviewed_content_sha256": "f8be3543af8c5afd65d8af563a79ca3c374654d1be7bff13a725ce962640e941",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0335",
+      "verdict": "accept",
+      "reviewed_content_sha256": "c3046985287878ae8e27ca37edfa5f4a1fce86cc66e3e262864bbbd9b1b67056",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0336",
+      "verdict": "accept",
+      "reviewed_content_sha256": "cd4072a60dc3f6889d095008f15af7067e8d77ba5e3b55da37e21b5b1fbe1763",
+      "reason": "可见请求、可信认证、工具可用性与返回字段/参数逐项匹配。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0337",
+      "verdict": "accept",
+      "reviewed_content_sha256": "3f5b4eecd632db9cecc756181bbf6aa77d2f148badbec0d34b10bdddb74ec78c",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0338",
+      "verdict": "accept",
+      "reviewed_content_sha256": "2682a9d45fafc68c8b7dc9806a35c7964236640172a7fe6ea8aa5f8f87879412",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0339",
+      "verdict": "accept",
+      "reviewed_content_sha256": "375d12be90542a4a36e653c2796ca5fe9b43cf22ac427797913d5c645c52f16a",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0340",
+      "verdict": "accept",
+      "reviewed_content_sha256": "a73b91df9b878ef2ba79aae073134373db9362f2f6e2f0688ab0fd60e235e4eb",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0341",
+      "verdict": "accept",
+      "reviewed_content_sha256": "8ef020bef797ac116c13d568b1562cd3d395043ed51de646f4167381a003fa6c",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0342",
+      "verdict": "accept",
+      "reviewed_content_sha256": "94b03da34587bae4fa20637398363db599ce81e2c1375a7a438d7d128f0a74e9",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0343",
+      "verdict": "accept",
+      "reviewed_content_sha256": "776cbb396813d1edb8a3596d517d556c9c29e02401c6e5a2dbec762f8d95f530",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0344",
+      "verdict": "accept",
+      "reviewed_content_sha256": "4c9c9a1618090ff49e57f974bd10d61b46a2ee4326ca96d168cae3fefbc9d4d5",
+      "reason": "查询正式通用规则/公开渠道，目标知识集合已声明可用，不用于读取个人实时事实。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0345",
+      "verdict": "accept",
+      "reviewed_content_sha256": "c0a7287d6762c4334425713a290bd8109e78945dd4a67cc37eacfd339df8c962",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0346",
+      "verdict": "accept",
+      "reviewed_content_sha256": "b8277188f8ff0ed20f390c114eb1077982bc5ae7f33e68537766fc6882a7d37a",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0347",
+      "verdict": "accept",
+      "reviewed_content_sha256": "d743e6171cfcfa8af4506ee91fbcb6c830d0cf51bf189fad5d2ed37395705c27",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0348",
+      "verdict": "accept",
+      "reviewed_content_sha256": "d042fa36e097fe8ff09f51ba22796c4827d411bc22fbbb4a1b5df32b97ec442b",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0349",
+      "verdict": "accept",
+      "reviewed_content_sha256": "c5aa09219979b5271cc3cd6daf8bcab62614071b94268c84a765f6744cec87d5",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0350",
+      "verdict": "accept",
+      "reviewed_content_sha256": "7ef5f5817d25c8ec777a1f617a77a38f12c39039635f52c0cd734bc383e95124",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0351",
+      "verdict": "accept",
+      "reviewed_content_sha256": "efba4822103d36e69c2f6ba635d4b80017a148bd3c6d6890fa97056c680384d1",
+      "reason": "当前支持的请求缺可信认证、唯一对象/参数或意图；缺槽与可见状态相符。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0352",
+      "verdict": "accept",
+      "reviewed_content_sha256": "7d002d5de24bd22930d97f7c01cca6cb22d5301e3d5e2c35a0bce8140753cc9f",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0353",
+      "verdict": "accept",
+      "reviewed_content_sha256": "39dc5bc8762bfe7ad9b17c7beeefccef750d79f518f1cd4962bfe0f5a36d93eb",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0354",
+      "verdict": "accept",
+      "reviewed_content_sha256": "cb5c09c87cacb41ba9795d38a36ea6147bc0f72e1ee1aa874ff4329e7ea31e88",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0355",
+      "verdict": "accept",
+      "reviewed_content_sha256": "cc4ad10f174b941590c974d38969c0575ec9ec323fee59b817454a90fc74d636",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0356",
+      "verdict": "accept",
+      "reviewed_content_sha256": "070acaf89b1ed741faa22546b9586d432e7a11866c5adb895dae7c47c0ca5408",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0357",
+      "verdict": "accept",
+      "reviewed_content_sha256": "17daa8805c6cd582f08f033681fd84ae824da53b972a180b641cc5ad29beccdd",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0358",
+      "verdict": "accept",
+      "reviewed_content_sha256": "5d0670193ece85057aefa0c23c81ff8c693f1a8316c0b96ac0984b3d7612673a",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0359",
+      "verdict": "accept",
+      "reviewed_content_sha256": "dec28eca96c07d8ce589252d7f6f4de6b99301e3ebd1d7b776ce47d259a29aa7",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0360",
+      "verdict": "accept",
+      "reviewed_content_sha256": "3856c0edd82c26bda3ce0391913c228d376e1c2f41e01bf9d29e5ffb1f9f50f6",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0361",
+      "verdict": "accept",
+      "reviewed_content_sha256": "249e0a57a25f34515bb4d3d4c86955d4fcf465d9ea101be36a9124a9a4e1d754",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0362",
+      "verdict": "accept",
+      "reviewed_content_sha256": "148f4bc7d527915ce60cfa4f7b8a44e91d5c193f38becc50507414d2817ad7ce",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0363",
+      "verdict": "accept",
+      "reviewed_content_sha256": "042e49759c3e23101b0872c3e088c479d6780da36c026c24fbc015ced51ce22b",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0364",
+      "verdict": "accept",
+      "reviewed_content_sha256": "d06bb12e29e28bd4da221052232f8e8106c89ab7a7a6656ba2aec4a5c456ebd2",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0365",
+      "verdict": "accept",
+      "reviewed_content_sha256": "7e40f0db0bbb72fdb728f0188fe80cdac1c300a1250c235e58c740fb784018db",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0366",
+      "verdict": "accept",
+      "reviewed_content_sha256": "175de8bc7ecc7d3228695f561e9c1ad9bfcbc043c049d3adff5b6bcf449659af",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0367",
+      "verdict": "accept",
+      "reviewed_content_sha256": "af42a2587780f231fe5680909bc073413715f3fe7e6f0baf88f752eb79eb5712",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0368",
+      "verdict": "accept",
+      "reviewed_content_sha256": "df3f102e8fbb008ac46e495790afc0031649c9b65b0c1945d5d33fbecb1d0a4d",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0369",
+      "verdict": "accept",
+      "reviewed_content_sha256": "e62ae9d4221a23604104fe7f2d7b2022bde3f7a246c0bdd8565f565c259536be",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0370",
+      "verdict": "accept",
+      "reviewed_content_sha256": "9120edf3d670e533812ee8e81fe5a7dcd288d14d648e5e7ae9c3290b76c93c75",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0371",
+      "verdict": "accept",
+      "reviewed_content_sha256": "ae67ece07ee4bab10c55c035c6a05560e8bd6bdd68b20910cbd51d784471cfdc",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0372",
+      "verdict": "accept",
+      "reviewed_content_sha256": "55db6e3f4578755171811b0a0f9068ba45c1910311e175de6e59707b967f8222",
+      "reason": "要求实际造假、越权或禁止操作；不是仅引用、否定或请求调查。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0373",
+      "verdict": "accept",
+      "reviewed_content_sha256": "079d2bb0d88e9fd2b649e0c5588d6cee5db43caac94f4eaa35ddec6198e6db82",
+      "reason": "明确停止本次咨询且无继续处理要求；不把感谢或账户业务操作当会话结束。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0374",
+      "verdict": "accept",
+      "reviewed_content_sha256": "deea3654e551306f05a2d9819d08f68009713264f9c1bd6d719b185befe40e54",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0375",
+      "verdict": "accept",
+      "reviewed_content_sha256": "f429bd68103be153c2d77290b6517bd31e258c42f0aeefd5b3b03f81cc74af6c",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0376",
+      "verdict": "accept",
+      "reviewed_content_sha256": "fb235439921792c66d65847f81263a1f577b451fbd0fc69963cec42921f1798c",
+      "reason": "明确停止本次咨询且无继续处理要求；不把感谢或账户业务操作当会话结束。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0377",
+      "verdict": "accept",
+      "reviewed_content_sha256": "7bbc42bfe444553acbf944d9bcaee3255bd0ecd5fb728be02bcdac8386e10240",
+      "reason": "合法域外实际请求，未误判为金融业务或禁止操作。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0378",
+      "verdict": "accept",
+      "reviewed_content_sha256": "45681bd8fbfb87a103fa073a27424738f3389d22fda7a33b720e39b1387cc900",
+      "reason": "合法域外实际请求，未误判为金融业务或禁止操作。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0379",
+      "verdict": "accept",
+      "reviewed_content_sha256": "6d7208924b0d12e13734012e9a398642beee97715e37a97f7fc73dfaaae09e77",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0380",
+      "verdict": "accept",
+      "reviewed_content_sha256": "5329ee075af83cc529c9cb588d9a2825d9c7d3774d16ad52279dd8e9a20dcdda",
+      "reason": "明确停止本次咨询且无继续处理要求；不把感谢或账户业务操作当会话结束。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0381",
+      "verdict": "accept",
+      "reviewed_content_sha256": "b1d5699e6cde00907a027a3b0b76b2c17dcbbbe6246f420ab6b7adc475a27dd3",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0382",
+      "verdict": "accept",
+      "reviewed_content_sha256": "abf4b1392eebdbed92b0e977358c4629fac6dc980227c727307c7b2a456992b5",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0383",
+      "verdict": "accept",
+      "reviewed_content_sha256": "ff687f43c03ff0ad02f5c46be9abe4500bd1c81e53668f489968003bca1f8316",
+      "reason": "具体人工处理或当前能力无法完成的合法个人事项；未把转接意图等同于已受理。"
+    },
+    {
+      "id": "EVAL-FSV2-FIN-0384",
+      "verdict": "accept",
+      "reviewed_content_sha256": "c97729de696404376d3198740d286f4b76bd34573a50341a05231d0c8cfeed25",
+      "reason": "可见信息可直接解释、能力询问或无知识能力时说明限制；无未处理的明确执行请求。"
+    }
+  ]
+}

@@ -1,0 +1,757 @@
+{
+  "groups": {
+    "FSV2-G-18eba9aa5673f8459a75": [
+      {
+        "id": "FIN-R4-crosswoz-train-10775-8",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-5bfac736cc562599da6e": [
+      {
+        "id": "FIN-R4-crosswoz-train-9976-20",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-ca3d294150b170711b36": [
+      {
+        "id": "FIN-R4-crosswoz-train-3966-18",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-7d4e44666442d45adc96": [
+      {
+        "id": "FIN-R4-crosswoz-train-10192-4",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-9a2292d3476bc418d081": [
+      {
+        "id": "FIN-R4-crosswoz-train-9259-6",
+        "reason": "reviewed_channel_intent_ambiguity"
+      }
+    ],
+    "FSV2-G-105e780f767abadfaab6": [
+      {
+        "id": "FIN-R4-crosswoz-train-1887-6",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-8e0a5b43619ab791d19c": [
+      {
+        "id": "FIN-R4-crosswoz-train-11912-4",
+        "reason": "reviewed_channel_intent_ambiguity"
+      }
+    ],
+    "FSV2-G-aa3aa418c4fe4937fa80": [
+      {
+        "id": "FIN-R4-crosswoz-train-7552-18",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-a6cd4d9aa2a88d4ab8c2": [
+      {
+        "id": "FIN-R4-massive-train-1721",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-e1bbace639dfd5fdd410": [
+      {
+        "id": "FIN-R4-crosswoz-train-11785-8",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-388384979df5ca887ee2": [
+      {
+        "id": "FIN-R4-crosswoz-train-2352-14",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-d8e726a726cadaf63215": [
+      {
+        "id": "FIN-R4-crosswoz-train-372-16",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-f8a3acc76150b8aae318": [
+      {
+        "id": "FIN-R4-crosswoz-train-10921-4",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-27405ab787c89e68730c": [
+      {
+        "id": "FIN-R4-massive-train-15713",
+        "reason": "reviewed_channel_intent_ambiguity"
+      }
+    ],
+    "FSV2-G-a85e105be61d67ba759b": [
+      {
+        "id": "FIN-R4-crosswoz-train-8223-18",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-962f8fd4cef9d1728204": [
+      {
+        "id": "FIN-R4-crosswoz-train-361-16",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-74798237d149b45742b7": [
+      {
+        "id": "FIN-R4-massive-train-2766",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-24a5f1744c46405a194d": [
+      {
+        "id": "FIN-R4-crosswoz-train-11124-10",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-7eb11ee6777092310f65": [
+      {
+        "id": "FIN-R4-massive-train-2878",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-a2c35744b6a064c31259": [
+      {
+        "id": "FIN-R4-crosswoz-train-2604-8",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-346f7c80d657629620dd": [
+      {
+        "id": "FIN-R4-crosswoz-train-7653-14",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-31d337929451f4f17fd8": [
+      {
+        "id": "FIN-R4-crosswoz-train-10679-2",
+        "reason": "reviewed_channel_intent_ambiguity"
+      }
+    ],
+    "FSV2-G-2081ab5b8884ce671ffe": [
+      {
+        "id": "FIN-R4-crosswoz-train-7803-0",
+        "reason": "targeted_policy_audit_quarantine"
+      },
+      {
+        "id": "FIN-R4-crosswoz-train-7803-10",
+        "reason": "reviewed_channel_intent_ambiguity"
+      }
+    ],
+    "FSV2-G-1c4a0eb96fe188dcc7eb": [
+      {
+        "id": "FIN-R4-crosswoz-train-8687-8",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-a9b7f9f5450799f3a56f": [
+      {
+        "id": "FIN-R4-crosswoz-train-11330-6",
+        "reason": "reviewed_channel_intent_ambiguity"
+      }
+    ],
+    "FSV2-G-729a3e29b47f79c0742f": [
+      {
+        "id": "FIN-R4-massive-train-12893",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-8f4f561d53faea0af3af": [
+      {
+        "id": "FIN-R4-massive-train-1598",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-b37905f1f236d26ad0c1": [
+      {
+        "id": "FIN-R4-crosswoz-train-11855-4",
+        "reason": "reviewed_channel_intent_ambiguity"
+      },
+      {
+        "id": "FIN-R4-crosswoz-train-11855-2",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-3c826f9983d22bc0576f": [
+      {
+        "id": "FIN-R4-crosswoz-train-11433-6",
+        "reason": "reviewed_channel_intent_ambiguity"
+      }
+    ],
+    "FSV2-G-6ca99adaf298dc981654": [
+      {
+        "id": "FIN-R4-crosswoz-train-10762-12",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-736e4ac6836c0d4d16eb": [
+      {
+        "id": "FIN-R4-crosswoz-train-8647-18",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-7205ac0f5708a04984ee": [
+      {
+        "id": "FIN-R4-crosswoz-train-8989-2",
+        "reason": "reviewed_channel_intent_ambiguity"
+      }
+    ],
+    "FSV2-G-21aa308ec1b7835aa382": [
+      {
+        "id": "FIN-R4-crosswoz-train-4906-4",
+        "reason": "reviewed_channel_intent_ambiguity"
+      },
+      {
+        "id": "FIN-R4-crosswoz-train-4906-8",
+        "reason": "reviewed_channel_intent_ambiguity"
+      }
+    ],
+    "FSV2-G-30690ab730057498c341": [
+      {
+        "id": "FIN-R4-crosswoz-train-11373-14",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-833d7664260361cee299": [
+      {
+        "id": "FIN-R4-crosswoz-train-11147-10",
+        "reason": "reviewed_channel_intent_ambiguity"
+      }
+    ],
+    "FSV2-G-769b6adf87a88a24c38f": [
+      {
+        "id": "FIN-R4-crosswoz-train-8773-12",
+        "reason": "reviewed_channel_intent_ambiguity"
+      }
+    ],
+    "FSV2-G-c37439a492fb0b952ad9": [
+      {
+        "id": "FIN-R4-crosswoz-train-7358-8",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-fec84703347a3cc41448": [
+      {
+        "id": "FIN-R4-crosswoz-train-131-10",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-8f87be1b2dce42ed967a": [
+      {
+        "id": "FIN-R4-crosswoz-train-401-18",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-3482448330e6e7a16025": [
+      {
+        "id": "FIN-R4-crosswoz-train-9439-2",
+        "reason": "reviewed_channel_intent_ambiguity"
+      }
+    ],
+    "FSV2-G-7fe2c738224ae5a42403": [
+      {
+        "id": "FIN-R4-crosswoz-train-9404-26",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-1896d4cfa1c78527d79a": [
+      {
+        "id": "FIN-R4-crosswoz-train-10161-14",
+        "reason": "reviewed_channel_intent_ambiguity"
+      }
+    ],
+    "FSV2-G-1bd484a7d7c489013dd3": [
+      {
+        "id": "FIN-R4-crosswoz-train-4-12",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-bde92abfe9158ad5fd9b": [
+      {
+        "id": "FIN-R4-crosswoz-train-9816-24",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-e8bcbbe122dd9463ad59": [
+      {
+        "id": "FIN-R4-crosswoz-train-12130-10",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-91342a25394f9a37187e": [
+      {
+        "id": "FIN-R4-crosswoz-train-10395-12",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-4c9f22b9cdbdea6ea283": [
+      {
+        "id": "FIN-R4-crosswoz-train-11998-6",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-dfa88c929aac7878f189": [
+      {
+        "id": "FIN-R4-crosswoz-train-9445-18",
+        "reason": "reviewed_channel_intent_ambiguity"
+      }
+    ],
+    "FSV2-G-f1c9f746855f1690d20a": [
+      {
+        "id": "FIN-R4-crosswoz-train-1667-14",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-e3da492251b48cfbbbd2": [
+      {
+        "id": "FIN-R4-crosswoz-train-3453-14",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-41cdaa9798b7f0dc62fc": [
+      {
+        "id": "FIN-R4-crosswoz-train-10149-0",
+        "reason": "reviewed_channel_intent_ambiguity"
+      }
+    ],
+    "FSV2-G-2732ddf873dc4aa85343": [
+      {
+        "id": "FIN-R4-crosswoz-train-10858-10",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-1a0f9aadbf45f1dde13b": [
+      {
+        "id": "FIN-R4-crosswoz-train-8386-10",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-fb91cb572f9db427bda9": [
+      {
+        "id": "FIN-R4-crosswoz-train-8895-2",
+        "reason": "reviewed_channel_intent_ambiguity"
+      }
+    ],
+    "FSV2-G-02067f465976ed678a39": [
+      {
+        "id": "FIN-R4-crosswoz-train-10379-14",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-f0076471fabd0b23efc9": [
+      {
+        "id": "FIN-R4-crosswoz-train-10004-6",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-84eaf72a9401a84b1ef2": [
+      {
+        "id": "FIN-R4-crosswoz-train-7782-14",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-3ccf3a1a53d4a301dfa2": [
+      {
+        "id": "FIN-R4-crosswoz-train-9441-6",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-e05931cf9808ed9694c1": [
+      {
+        "id": "FIN-R4-crosswoz-train-9270-10",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-f03bfbfd1fb2398e1235": [
+      {
+        "id": "FIN-R4-crosswoz-train-369-2",
+        "reason": "reviewed_channel_intent_ambiguity"
+      }
+    ],
+    "FSV2-G-2824c62b7f54767fc70c": [
+      {
+        "id": "FIN-R4-massive-train-12812",
+        "reason": "reviewed_channel_intent_ambiguity"
+      }
+    ],
+    "FSV2-G-62acc16154d732e9e559": [
+      {
+        "id": "FIN-R4-crosswoz-train-11359-20",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-1d16f03517cfde07dcb4": [
+      {
+        "id": "FIN-R4-crosswoz-train-297-10",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-89121a6eed9ada0b0114": [
+      {
+        "id": "FIN-R4-crosswoz-train-8483-10",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-1b78400582222def76d2": [
+      {
+        "id": "FIN-R4-crosswoz-train-10958-4",
+        "reason": "reviewed_channel_intent_ambiguity"
+      }
+    ],
+    "FSV2-G-eda1624b446801ffa01c": [
+      {
+        "id": "FIN-R4-crosswoz-train-10135-8",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-543347e438595450992c": [
+      {
+        "id": "FIN-R4-crosswoz-train-8055-10",
+        "reason": "reviewed_channel_intent_ambiguity"
+      }
+    ],
+    "FSV2-G-0294ef6bc637e2d826a4": [
+      {
+        "id": "FIN-R4-crosswoz-train-11815-16",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-6774c3d62b127a4e756f": [
+      {
+        "id": "FIN-R4-crosswoz-train-11222-2",
+        "reason": "reviewed_channel_intent_ambiguity"
+      }
+    ],
+    "FSV2-G-a194adc9d5b983bcecaf": [
+      {
+        "id": "FIN-R4-crosswoz-train-8705-6",
+        "reason": "reviewed_channel_intent_ambiguity"
+      }
+    ],
+    "FSV2-G-e6e636e131bea9f27f44": [
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-4223-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-4223-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-33f1f576e8618a9aafec": [
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-13813-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-13813-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-9d05ee42c6b1f5bba81b": [
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-4629-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-4629-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-95ad839f3f85bcf425b5": [
+      {
+        "id": "FIN-BC1-human-FIN-TR1-R-1094-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-TR1-R-1094-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-84c6dc631f29ec9dc647": [
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-2317-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-2317-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-43a609b415ebb485fb2c": [
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-16351-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-16351-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-0bf7f4be014928f30447": [
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-16191-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-16191-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-99a96739ba51d1d8fe53": [
+      {
+        "id": "FIN-BC1-human-FIN-TR1-R-0964-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-TR1-R-0964-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-e99ef751997c85723369": [
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-7822-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-7822-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-6e7716807837b1f679ef": [
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-3888-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-3888-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-5ac66993f07f6d46e0bd": [
+      {
+        "id": "FIN-BC1-human-FIN-TR1-R-1070-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-TR1-R-1070-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-473ed8dc678772d13ce7": [
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-12487-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-12487-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-635a0f7714e200225ddb": [
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-12269-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-12269-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-f8a665e9c4427fe7a485": [
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-6054-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-6054-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-18654b853e925103013d": [
+      {
+        "id": "FIN-BC1-human-FIN-F2-T-0483-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-F2-T-0483-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-fc59e9255f4ef9c9aea4": [
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-8962-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-8962-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-cf8a699f947195fce1f2": [
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-16295-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-16295-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-d2a39500b5e21940e513": [
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-15965-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-15965-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-e6fed388958aa401267b": [
+      {
+        "id": "FIN-BC1-human-FIN-TR1-R-0995-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-TR1-R-0995-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-4a8fba605903c3c4bc7e": [
+      {
+        "id": "FIN-BC1-human-FIN-F2-T-0477-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-F2-T-0477-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-8fe0435ecbe9caa92250": [
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-12215-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-12215-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-bb34d5fca84888d13a1d": [
+      {
+        "id": "FIN-BC1-human-FIN-TR1-R-0911-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-TR1-R-0911-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-7af72067d46c42c022c9": [
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-16370-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-16370-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-de1c12314b99c880d5ca": [
+      {
+        "id": "FIN-BC1-human-FIN-TR1-R-1007-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-TR1-R-1007-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-8b47af29abdcd501e8d4": [
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-12397-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-12397-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-fac5739255d69fcd7b8d": [
+      {
+        "id": "FIN-BC1-human-FIN-TR1-R-0937-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-TR1-R-0937-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-e8ae2d6331e7ec07beca": [
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-13885-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-13885-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-40d3334d8de1f406bc7b": [
+      {
+        "id": "FIN-BC1-human-FIN-TR1-R-1079-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-TR1-R-1079-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-5f97c2c0c674b4e2b12c": [
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-12425-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-12425-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-ca5724e56772851ff3c3": [
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-16335-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-16335-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-27962b19411fd3c24ff3": [
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-4068-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-4068-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ],
+    "FSV2-G-90a38fea5e203096386a": [
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-10930-3",
+        "reason": "ambiguous_legacy_handoff_connected_true"
+      },
+      {
+        "id": "FIN-BC1-human-FIN-R4-massive-train-10930-3",
+        "reason": "targeted_policy_audit_quarantine"
+      }
+    ]
+  },
+  "excluded_rows": 479
+}

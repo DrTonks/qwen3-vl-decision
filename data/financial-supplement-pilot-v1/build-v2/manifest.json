@@ -1,0 +1,19 @@
+{
+  "version": "financial-supplement-pilot-v1",
+  "status": "draft_pending_review",
+  "source_sha256": "bfc68b5d2458320e5c7f0ba7690f940cb1af63b80df4ecaf6c245b26ecae58dd",
+  "policy_sha256": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+  "files": {
+    "node-contexts.jsonl": "5dffd05d13c97517d9f6936c1ea2e916aff5d400199262f0dbc9e6fa6a329dfd",
+    "node-projections.jsonl": "ac357bf4d0de21598b60a6025ddd5b4700d7f02504dcc16608c184170818f426",
+    "candidates.json": "01ef9736f9662571140ec88e4591071163e9698fc78e6848f584c0a202e5110d",
+    "REVIEW.md": "9aa671791984cb4ab8542d9525bdf4ec7e2d70ad16815d7aa4d651421eccbf8f",
+    "summary.json": "4d302c04712e6dbc05b1e61f3ede1f3bb8e78ef4e3b1036456adfaccb0d00b7b"
+  },
+  "code_sha256": "6d45723460d0554ac74b651ccf801c9e5258c7e39c0e87b9bb6264bc6f1e29c5",
+  "training_eligible": false,
+  "human_reviewed": false,
+  "model_weights_loaded": false,
+  "model_api_requests": 0,
+  "evaluation_text_used_for_authoring": false
+}

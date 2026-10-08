@@ -1,0 +1,74 @@
+{
+  "version": "financial-expansion-audit-v1",
+  "candidate_sha256": "f2f9d3fad35a74858b080d3afbb60acf1c36966e3ea852cf94dcc0e153610ac5",
+  "status": "structural_and_token_pass",
+  "training_eligible": false,
+  "no_truncation": true,
+  "model_weights_loaded": false,
+  "model_api_requests": 0,
+  "tokens": {
+    "action": {
+      "count": 1678,
+      "minimum": 472,
+      "maximum": 544,
+      "mean": 498.96
+    },
+    "tool": {
+      "count": 348,
+      "minimum": 521,
+      "maximum": 587,
+      "mean": 551.8
+    }
+  },
+  "message_only_numeric_duplicates": [
+    [
+      "FSP1-C06-1",
+      "FSP1-T12-1"
+    ],
+    [
+      "FSP1-T12-1",
+      "FSP1-T12-2"
+    ],
+    [
+      "FSP1-T12-2",
+      "SEA-G008-1"
+    ],
+    [
+      "SEA-G033-1",
+      "SEA-G033-2"
+    ],
+    [
+      "SEA-G043-1",
+      "SEA-G043-2"
+    ],
+    [
+      "SEA-G044-1",
+      "SEA-G044-2"
+    ],
+    [
+      "SEA-G045-1",
+      "SEA-G045-2"
+    ],
+    [
+      "SEA-G048-1",
+      "SEA-G048-2"
+    ],
+    [
+      "SEA-G088-1",
+      "SEA-G088-2"
+    ],
+    [
+      "SEA-G008-1",
+      "SEA-G090-1"
+    ],
+    [
+      "SEA-G090-1",
+      "SEB-G057-1"
+    ],
+    [
+      "SEB-G057-1",
+      "SEB-G058-1"
+    ]
+  ],
+  "independent_semantic_review": false
+}

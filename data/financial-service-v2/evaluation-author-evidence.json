@@ -1,0 +1,137 @@
+{
+  "dataset": "evaluation-author.json",
+  "policy_version": "support-financial-v2",
+  "producer": "/root/financial_v2_eval_author",
+  "origin": "synthetic",
+  "source": "independently_authored_from_business_contract",
+  "rows": 384,
+  "scene_families": 96,
+  "source_sha256": {
+    "configs/support-financial-v2.json": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+    "src/qwenlab/financial_serve_v2.py": "75c0684433213b82e12b36e9e1bf1ac923522157c34ea1b334cf58449eadb615",
+    "../uestc_Integrated_Design/后端/services/customerSupport/tools.js": "a2d756c8a883b8f62a9d281ebc89072a493fb54fce46cb8c3c361f6db01989fc"
+  },
+  "dataset_sha256": "16f1c285d20b5d550c07d6bf86420ffeec9dfb55e1c735837c71eb271352a9ce",
+  "builder_sha256": "e28515fade68b766001de0c1b5280127a497c1d69e6bf3a7d596d063ff34a05a",
+  "distribution": {
+    "development": {
+      "rows": 128,
+      "scene_families": 32,
+      "cohorts": {
+        "current-service": 64,
+        "planned-retrieval": 32,
+        "preauth-robustness": 32
+      },
+      "actions": {
+        "tool": 18,
+        "answer": 29,
+        "clarify": 14,
+        "human": 27,
+        "refuse": 18,
+        "close": 6,
+        "redirect": 4,
+        "retrieve": 12
+      },
+      "tools": {
+        "queryLoanProducts": 3,
+        "queryMyApplications": 3,
+        "queryApplicationDetail": 5,
+        "queryMyCreditScore": 4,
+        "explainApplicationStatus": 3
+      }
+    },
+    "calibration": {
+      "rows": 96,
+      "scene_families": 24,
+      "cohorts": {
+        "current-service": 48,
+        "planned-retrieval": 24,
+        "preauth-robustness": 24
+      },
+      "actions": {
+        "tool": 17,
+        "human": 25,
+        "answer": 15,
+        "clarify": 7,
+        "refuse": 14,
+        "close": 4,
+        "retrieve": 11,
+        "redirect": 3
+      },
+      "tools": {
+        "queryLoanProducts": 3,
+        "queryMyApplications": 3,
+        "queryApplicationDetail": 4,
+        "queryMyCreditScore": 4,
+        "explainApplicationStatus": 3
+      }
+    },
+    "final": {
+      "rows": 160,
+      "scene_families": 40,
+      "cohorts": {
+        "current-service": 80,
+        "planned-retrieval": 40,
+        "preauth-robustness": 40
+      },
+      "actions": {
+        "tool": 28,
+        "answer": 33,
+        "human": 37,
+        "clarify": 9,
+        "refuse": 27,
+        "close": 6,
+        "redirect": 4,
+        "retrieve": 16
+      },
+      "tools": {
+        "queryLoanProducts": 4,
+        "queryMyApplications": 5,
+        "queryApplicationDetail": 9,
+        "queryMyCreditScore": 5,
+        "explainApplicationStatus": 5
+      }
+    }
+  },
+  "validation": {
+    "input_contract": "all 384 passed exact validate_input extracted from authorized serve source",
+    "all_groups_size_four": true,
+    "group_split_overlap": 0,
+    "exact_input_duplicates": 0,
+    "preauth_tool_calls": 0,
+    "knowledge_retrieval_only_planned": true,
+    "each_split_all_eight_actions": true,
+    "each_split_all_five_tools": true,
+    "each_split_human_refuse_tool_minimum_12": true
+  },
+  "review": {
+    "status": "author_draft",
+    "human_reviewed_current_version": false,
+    "independent_review_completed": false
+  },
+  "training_eligible": false,
+  "dataset_role": "evaluation",
+  "isolation": {
+    "read_sources_only": [
+      "configs/support-financial-v2.json",
+      "src/qwenlab/financial_serve_v2.py",
+      "../uestc_Integrated_Design/后端/services/customerSupport/tools.js"
+    ],
+    "existing_training_or_evaluation_data_read": false,
+    "model_results_or_old_errors_read": false,
+    "model_or_api_called": false,
+    "training_executed": false,
+    "note": "Catalog was authored from the three allowlisted business/transport sources. Validation executes only exact_keys and validate_input from the transport source, not service runtime."
+  },
+  "authoring_method": "96 AI-authored synthetic scenario families with four contextual or capability/intent variations each; families are assigned once to a split; no number-substitution expansion and no shared family generator across splits. The record emitter only supplies common schema metadata.",
+  "limitations": [
+    "All examples are AI-authored synthetic and author-labeled; they are not real customer conversations or measured production frequencies.",
+    "The same author wrote utterances and proposed labels, so independent adjudication remains necessary; human_reviewed_current_version stays false.",
+    "Splits use distinct story families, but share the same business contract and its finite intent taxonomy, so semantic relatedness is expected and this does not establish real-world generalization.",
+    "Four variants per story are correlated; evaluation uncertainty should be computed with scene_family_id grouping.",
+    "Action and cohort quotas intentionally oversample rare, refusal, capability-boundary and pre-authentication situations; aggregate accuracy is not a production-rate estimate.",
+    "Public channel examples with no trusted contact content have no invented phone/address/email; planned knowledge examples are retrieval decisions without retrieved passages.",
+    "No trained model was run, and no score, calibration threshold, readiness, or deployment claim is made.",
+    "Status, identifiers and short histories are synthetic contextual inputs; no tool response or personal customer record was accessed."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "training_eligible": false,
+  "evaluation_opened": false,
+  "model_calls": 0,
+  "source_files": {
+    "data/financial-training-text-v1/manifest.json": "5f4d778d584b02557a67e1fe0097c17dc2eb418213a28f0ca0e137243a807773",
+    "data/financial-training-text-v1/parts/part-0001.jsonl": "0916ad37760cd3e89fbb9f09f680584da43e6f81d872efd5273ae1843d5996c4",
+    "data/financial-training-text-v1/parts/part-0002.jsonl": "19d6ed5299923a578af4f8f07c382e22dca43a1250667ac04f2a93c29a2cf686",
+    "data/financial-training-text-v1/parts/part-0003.jsonl": "a5f29c958d39ba91c8635f4f32a0030cec52f44be8e91d2cc502d30a7b318c4d",
+    "data/financial-training-text-v1/parts/part-0004.jsonl": "778ebf7a7b0d0230678c3e5d80dd5652e7080e5b40e879bbe7ff2907eb0d1e5f",
+    "data/financial-training-text-v1/parts/part-0005.jsonl": "729295ba5bc1112b231a19c9eeb6b75914a0f149db05d17ee85fee6198a5d73d",
+    "data/financial-training-text-v1/parts/part-0006.jsonl": "877b27a3b0b65930c0cdb6858e9eee9ec5dc559184758ff02d4d480ad271649c",
+    "data/financial-training-text-v1/parts/part-0007.jsonl": "e66b1eea90f8d18a2259586f29768fe1d6ecd498262792c191f80b0ba0810ef2",
+    "data/financial-training-text-v1/parts/part-0008.jsonl": "8f0760b77aa0a0f1745b4ce1afc6ad6769872a9ab3cbe0f5443c49ff844c1950",
+    "data/financial-training-text-v1/parts/part-0009.jsonl": "ec0ca7a13b316c84b623fb88b89b244ef54e04ea7be5796eeb70883bb110c1ca",
+    "data/financial-training-text-v1/parts/part-0010.jsonl": "ac2fc39c27afc4ccfa5e9de847ed03713b79cafe5694d371f70e453f4a8562d4",
+    "data/financial-training-text-v1/parts/part-0011.jsonl": "3ae481330892796ee853001ba69071b8a93176c6ca62ad2f2342d49044d4b007",
+    "data/financial-training-text-v1/parts/part-0012.jsonl": "a4200e7e05818ffb08c9aca4752450ee1cf26bf344b4c235e376691909f9ce88",
+    "data/financial-eight-actions-v2/manifest.json": "94e8454e17a2f4ae716c0f03385c18e1844d1162622cf9fe8cd3ee43796eaf30",
+    "data/financial-eight-actions-v2/train-additions.jsonl": "16c640146abd3b12307c6f63c12b35389ee9726fba89f28019ab4e0efd50cc46",
+    "data/financial-boundary-training-v1/manifest.json": "19f3f1941cf2e7a6dc44d4e18e8ed3867fcf0dac480dfd93e2f0554fdff68611",
+    "data/financial-boundary-training-v1/training.json": "e4169b754df692e90086a6e7d68f188575a03ae1b65c68c283f40b028bfb1949"
+  },
+  "code_sha256": "f6d5a27910b2884d696d0311c0d43d77e401bbe2ec77b325a27c08c9a200ce48",
+  "files": {
+    "inventory.json": "525fc13fd8e0c4636a78708c22c6938f7ac5a36e01cbd2300d7eca0674c72fa0",
+    "review-queue.json": "578dcfbfc71e89fef385d4429ff625160f048f584c9a2284f05f8d3af27d9c70"
+  },
+  "scope": "Training-only immutable inventory and heuristic review leads; zero relabeling or data release"
+}

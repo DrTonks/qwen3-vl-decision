@@ -1,0 +1,32 @@
+{
+  "version": "financial-full-coverage-execution-v1",
+  "epochs": 2,
+  "rows": 13378,
+  "batch": 8,
+  "steps_per_epoch": 1673,
+  "steps_per_arm": 3346,
+  "seed": 20261004,
+  "sampling_seed": 20261005,
+  "warmup_steps": 100,
+  "learning_rate": 5e-05,
+  "evaluation_steps": [
+    500,
+    1000,
+    1500,
+    1673,
+    2000,
+    2500,
+    3000,
+    3346
+  ],
+  "model_api_requests": 0,
+  "deployment_enabled": false,
+  "selection": "passing original gates then macro_f1, joint_tool_accuracy, earlier_step",
+  "early_stop": {
+    "minimum_complete_epochs": 1,
+    "consecutive_evaluations": 3,
+    "macro_f1_drop": 0.02,
+    "nll_increase": 0.05,
+    "require_no_boundary_improvement": true
+  }
+}

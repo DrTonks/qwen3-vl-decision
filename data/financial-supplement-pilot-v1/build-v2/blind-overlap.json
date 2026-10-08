@@ -1,0 +1,33 @@
+{
+  "version": "financial-supplement-blind-lexical-v1",
+  "candidate_sha256": "01ef9736f9662571140ec88e4591071163e9698fc78e6848f584c0a202e5110d",
+  "script_sha256": "3f4594c3b47a3f6512626b1de29dcb814c45d7721497271e1aedefefd4152c18",
+  "policy": "Flag whole candidate groups; never reveal held-out text or use hits as rewrite prompts.",
+  "scope": "financial-service-v2 train/development/calibration/final only; no model predictions",
+  "lexical_threshold": 0.85,
+  "semantic_overlap_guarantee": false,
+  "corpora": {
+    "train": {
+      "source_sha256": "e12e359809ccb162ac242b2661b3f995b0e7bc44b5e8595c94e982c68bd5f021",
+      "rows": 11756,
+      "hits": []
+    },
+    "development": {
+      "source_sha256": "56bd31ebfa75633143fefa5d6ae2dd77709a17d2bde642a583675ce638f558eb",
+      "rows": 128,
+      "hits": []
+    },
+    "calibration": {
+      "source_sha256": "94f6f579a43b9da9a9e5ca9abc8804acbb38cad904cb0aed31f0f90fbeee7158",
+      "rows": 96,
+      "hits": []
+    },
+    "final": {
+      "source_sha256": "6cfe11b034254f241639ffe4f6762521d0cb6f3c21f3ea2c818f42d3c4fba35f",
+      "rows": 160,
+      "hits": []
+    }
+  },
+  "quarantine_groups": [],
+  "training_eligible": false
+}

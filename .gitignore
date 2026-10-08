@@ -61,3 +61,9 @@ data/financial-public-rewrite-completion-v1/cases.jsonl
 data/financial-public-rewrite-completion-v1.staging-*/
 data/financial-training-text-v1.staging-*/
 data/financial-eight-actions-v2.staging-*/
+results/financial-state-pair-v1/
+results/financial-state-pair-probe-v1/
+
+# Independent complete-coverage execution; local weights and raw inference logs
+results/financial-full-coverage-v1/
+results/financial-full-coverage-probe-v1/

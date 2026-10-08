@@ -1,0 +1,38 @@
+{
+  "policy_sha256": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+  "training_eligible": false,
+  "source_files": {
+    "data/financial-training-text-v1/manifest.json": "5f4d778d584b02557a67e1fe0097c17dc2eb418213a28f0ca0e137243a807773",
+    "data/financial-training-text-v1/parts/part-0001.jsonl": "0916ad37760cd3e89fbb9f09f680584da43e6f81d872efd5273ae1843d5996c4",
+    "data/financial-training-text-v1/parts/part-0002.jsonl": "19d6ed5299923a578af4f8f07c382e22dca43a1250667ac04f2a93c29a2cf686",
+    "data/financial-training-text-v1/parts/part-0003.jsonl": "a5f29c958d39ba91c8635f4f32a0030cec52f44be8e91d2cc502d30a7b318c4d",
+    "data/financial-training-text-v1/parts/part-0004.jsonl": "778ebf7a7b0d0230678c3e5d80dd5652e7080e5b40e879bbe7ff2907eb0d1e5f",
+    "data/financial-training-text-v1/parts/part-0005.jsonl": "729295ba5bc1112b231a19c9eeb6b75914a0f149db05d17ee85fee6198a5d73d",
+    "data/financial-training-text-v1/parts/part-0006.jsonl": "877b27a3b0b65930c0cdb6858e9eee9ec5dc559184758ff02d4d480ad271649c",
+    "data/financial-training-text-v1/parts/part-0007.jsonl": "e66b1eea90f8d18a2259586f29768fe1d6ecd498262792c191f80b0ba0810ef2",
+    "data/financial-training-text-v1/parts/part-0008.jsonl": "8f0760b77aa0a0f1745b4ce1afc6ad6769872a9ab3cbe0f5443c49ff844c1950",
+    "data/financial-training-text-v1/parts/part-0009.jsonl": "ec0ca7a13b316c84b623fb88b89b244ef54e04ea7be5796eeb70883bb110c1ca",
+    "data/financial-training-text-v1/parts/part-0010.jsonl": "ac2fc39c27afc4ccfa5e9de847ed03713b79cafe5694d371f70e453f4a8562d4",
+    "data/financial-training-text-v1/parts/part-0011.jsonl": "3ae481330892796ee853001ba69071b8a93176c6ca62ad2f2342d49044d4b007",
+    "data/financial-training-text-v1/parts/part-0012.jsonl": "a4200e7e05818ffb08c9aca4752450ee1cf26bf344b4c235e376691909f9ce88",
+    "data/financial-eight-actions-v2/manifest.json": "94e8454e17a2f4ae716c0f03385c18e1844d1162622cf9fe8cd3ee43796eaf30",
+    "data/financial-eight-actions-v2/train-additions.jsonl": "16c640146abd3b12307c6f63c12b35389ee9726fba89f28019ab4e0efd50cc46",
+    "data/financial-boundary-training-v1/manifest.json": "19f3f1941cf2e7a6dc44d4e18e8ed3867fcf0dac480dfd93e2f0554fdff68611",
+    "data/financial-boundary-training-v1/training.json": "e4169b754df692e90086a6e7d68f188575a03ae1b65c68c283f40b028bfb1949",
+    "docs/evidence/financial-v2-migration-semantic-review.json": "7def0873b9a4f6feccf1cccf8f854d712dfeaef5693c8f8f2dd4e219a9f3b6f2",
+    "data/financial-contract-revision-v2/manifest.json": "4f6fe3f3f059b0923f1f86f8d4f28f8762a6183703c5ad5ed2a14c84d77a6266",
+    "data/financial-contract-revision-v2/proposals.json": "aa8ae2c9e2049a476f1a3fcc2621caccb47dbb575b8c6c3f9002734f76df2d05",
+    "configs/support-financial-v2.json": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+    "src/qwenlab/financial_prompt_v2.py": "25033aa2a7a3fadf60e51ece0eebe3fdfbbd0626cc9f04654b9641a91a4629ef",
+    "src/qwenlab/financial_serve_v2.py": "75c0684433213b82e12b36e9e1bf1ac923522157c34ea1b334cf58449eadb615",
+    "src/qwenlab/financial_contract_audit.py": "f6d5a27910b2884d696d0311c0d43d77e401bbe2ec77b325a27c08c9a200ce48",
+    "src/qwenlab/financial_contract_revision.py": "a9c731dc23f57dbb2c93e921d61008018b65ee6ef513ef4f21c72baa83b098c4"
+  },
+  "code_sha256": "fffde21c3023d7064c5e55ff7fc991624590f3c808f389403c47a47fcb55eae2",
+  "files": {
+    "excluded-groups.json": "359ce23fe1bce812bc3dbf2287dbee36653a2e3da39b97e8f5f300db45158833",
+    "migration-ledger.json": "1f2bede219e4815c73ef611436306c9af264e3df21b6bd3b8678267d84cd9094",
+    "train-summary.json": "b085f6af2ea2c7b89c1518897b6cc11b02a3b81318dba0ccbb4912fbdfeaa99d",
+    "train.json": "e12e359809ccb162ac242b2661b3f995b0e7bc44b5e8595c94e982c68bd5f021"
+  }
+}

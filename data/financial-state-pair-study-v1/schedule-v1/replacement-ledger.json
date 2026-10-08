@@ -1,0 +1,4779 @@
+[
+  {
+    "exposure_index": 22,
+    "step": 3,
+    "half": 1,
+    "kind": "old_anchor",
+    "old_row_id": "SEB-G020-1",
+    "new_row_id": "FIN-BC1-query-FIN-F2-T-0662-2",
+    "cell": [
+      "current-component",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 33,
+    "step": 5,
+    "half": 1,
+    "kind": "old_anchor",
+    "old_row_id": "SEA-G092-4",
+    "new_row_id": "FIN-F2-T-0678",
+    "cell": [
+      "current-component",
+      true,
+      false,
+      "tool",
+      "queryMyApplications"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 42,
+    "step": 6,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G024-4",
+    "new_row_id": "FIN-SP1-P07-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 60,
+    "step": 8,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G006-3",
+    "new_row_id": "FIN-SP1-S08-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "status_code",
+    "new_missing_slots": "status_code"
+  },
+  {
+    "exposure_index": 72,
+    "step": 9,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G179-4",
+    "new_row_id": "FIN-SP1-P06-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 102,
+    "step": 13,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G061-2",
+    "new_row_id": "FIN-SP1-D08-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "application_id",
+    "new_missing_slots": "application_id"
+  },
+  {
+    "exposure_index": 113,
+    "step": 15,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G078-2",
+    "new_row_id": "FIN-SP1-S01-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "explainApplicationStatus"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 116,
+    "step": 15,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G046-2",
+    "new_row_id": "FIN-SP1-C02-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 119,
+    "step": 15,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G119-3",
+    "new_row_id": "FIN-SP1-C07-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyCreditScore"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 126,
+    "step": 16,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FIN-F2-T-0741",
+    "new_row_id": "FIN-SP1-S06-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 128,
+    "step": 16,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G009-4",
+    "new_row_id": "FIN-SP1-A04-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 141,
+    "step": 18,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G117-2",
+    "new_row_id": "FIN-SP1-P04-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryLoanProducts"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 158,
+    "step": 20,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G005-2",
+    "new_row_id": "FIN-SP1-P04-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 159,
+    "step": 20,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G182-3",
+    "new_row_id": "FIN-SP1-A08-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 168,
+    "step": 21,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G187-2",
+    "new_row_id": "FIN-SP1-C06-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 198,
+    "step": 25,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G175-2",
+    "new_row_id": "FIN-SP1-S07-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 217,
+    "step": 28,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G184-2",
+    "new_row_id": "FIN-SP1-C05-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 243,
+    "step": 31,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-T04-1",
+    "new_row_id": "FIN-SP1-P08-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryLoanProducts"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 253,
+    "step": 32,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G067-1",
+    "new_row_id": "FIN-SP1-S01-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "status_code",
+    "new_missing_slots": "status_code"
+  },
+  {
+    "exposure_index": 269,
+    "step": 34,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G113-3",
+    "new_row_id": "FIN-SP1-A05-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyApplications"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 270,
+    "step": 34,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G043-3",
+    "new_row_id": "FIN-SP1-P08-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 272,
+    "step": 34,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G116-4",
+    "new_row_id": "FIN-SP1-P07-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 286,
+    "step": 36,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-T14-2",
+    "new_row_id": "FIN-SP1-C05-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyCreditScore"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 293,
+    "step": 37,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G177-2",
+    "new_row_id": "FIN-SP1-P04-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 306,
+    "step": 39,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G049-1",
+    "new_row_id": "FIN-SP1-P02-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryLoanProducts"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 329,
+    "step": 42,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G123-3",
+    "new_row_id": "FIN-SP1-P08-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 341,
+    "step": 43,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-H10-1",
+    "new_row_id": "FIN-SP1-C05-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 352,
+    "step": 44,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G013-2",
+    "new_row_id": "FIN-SP1-A01-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyApplications"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 357,
+    "step": 45,
+    "half": 1,
+    "kind": "old_anchor",
+    "old_row_id": "SEA-G068-4",
+    "new_row_id": "FIN-F2-T-0692",
+    "cell": [
+      "current-component",
+      true,
+      false,
+      "tool",
+      "queryMyCreditScore"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 374,
+    "step": 47,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FIN-F2-T-0365",
+    "new_row_id": "FIN-SP1-A05-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "error_context",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 382,
+    "step": 48,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-T06-1",
+    "new_row_id": "FIN-SP1-A08-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyApplications"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 400,
+    "step": 50,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-C11-1",
+    "new_row_id": "FIN-SP1-D05-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "application_id",
+    "new_missing_slots": "application_id"
+  },
+  {
+    "exposure_index": 422,
+    "step": 53,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-A11-2",
+    "new_row_id": "FIN-SP1-P06-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 424,
+    "step": 53,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G189-2",
+    "new_row_id": "FIN-SP1-P01-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 426,
+    "step": 54,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-T03-1",
+    "new_row_id": "FIN-SP1-P07-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryLoanProducts"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 439,
+    "step": 55,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G181-1",
+    "new_row_id": "FIN-SP1-C07-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 440,
+    "step": 55,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G009-2",
+    "new_row_id": "FIN-SP1-P01-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 442,
+    "step": 56,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-T11-1",
+    "new_row_id": "FIN-SP1-D04-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryApplicationDetail"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 454,
+    "step": 57,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G088-3",
+    "new_row_id": "FIN-SP1-D01-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryApplicationDetail"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 458,
+    "step": 58,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G055-4",
+    "new_row_id": "FIN-SP1-A06-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 471,
+    "step": 59,
+    "half": 1,
+    "kind": "old_anchor",
+    "old_row_id": "SEA-G177-3",
+    "new_row_id": "FIN-BC1-query-FIN-F2-T-0662-1",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 501,
+    "step": 63,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G180-2",
+    "new_row_id": "FIN-SP1-A07-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 503,
+    "step": 63,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G113-3",
+    "new_row_id": "FIN-SP1-S06-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "explainApplicationStatus"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 509,
+    "step": 64,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-T15-1",
+    "new_row_id": "FIN-SP1-C01-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyCreditScore"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 518,
+    "step": 65,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G028-4",
+    "new_row_id": "FIN-SP1-D07-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "application_id",
+    "new_missing_slots": "application_id"
+  },
+  {
+    "exposure_index": 542,
+    "step": 68,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G048-3",
+    "new_row_id": "FIN-SP1-C04-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 553,
+    "step": 70,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-U02-2",
+    "new_row_id": "FIN-SP1-S04-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 560,
+    "step": 70,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G134-3",
+    "new_row_id": "FIN-SP1-A02-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyApplications"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 568,
+    "step": 71,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G085-1",
+    "new_row_id": "FIN-SP1-S03-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "explainApplicationStatus"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 572,
+    "step": 72,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G179-3",
+    "new_row_id": "FIN-SP1-A03-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 614,
+    "step": 77,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-C04-2",
+    "new_row_id": "FIN-SP1-S06-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "status_code",
+    "new_missing_slots": "status_code"
+  },
+  {
+    "exposure_index": 620,
+    "step": 78,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G133-2",
+    "new_row_id": "FIN-SP1-C07-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 647,
+    "step": 81,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-T07-1",
+    "new_row_id": "FIN-SP1-A04-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyApplications"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 650,
+    "step": 82,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G128-4",
+    "new_row_id": "FIN-SP1-S05-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 655,
+    "step": 82,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G095-2",
+    "new_row_id": "FIN-SP1-S03-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 676,
+    "step": 85,
+    "half": 1,
+    "kind": "old_anchor",
+    "old_row_id": "SEA-G055-1",
+    "new_row_id": "SEA-G043-1",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyCreditScore"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 677,
+    "step": 85,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G188-2",
+    "new_row_id": "FIN-SP1-A04-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 687,
+    "step": 86,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G022-1",
+    "new_row_id": "FIN-SP1-P05-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryLoanProducts"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 707,
+    "step": 89,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-H09-1",
+    "new_row_id": "FIN-SP1-A05-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 708,
+    "step": 89,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G002-2",
+    "new_row_id": "FIN-SP1-D04-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "application_id",
+    "new_missing_slots": "application_id"
+  },
+  {
+    "exposure_index": 709,
+    "step": 89,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G174-2",
+    "new_row_id": "FIN-SP1-S08-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 710,
+    "step": 89,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G057-1",
+    "new_row_id": "FIN-SP1-D03-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "application_id",
+    "new_missing_slots": "application_id"
+  },
+  {
+    "exposure_index": 721,
+    "step": 91,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G063-3",
+    "new_row_id": "FIN-SP1-A06-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyApplications"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 722,
+    "step": 91,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G106-4",
+    "new_row_id": "FIN-SP1-D03-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 732,
+    "step": 92,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G134-2",
+    "new_row_id": "FIN-SP1-D03-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryApplicationDetail"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 749,
+    "step": 94,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-T14-1",
+    "new_row_id": "FIN-SP1-C02-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyCreditScore"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 755,
+    "step": 95,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G134-3",
+    "new_row_id": "FIN-SP1-S03-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 760,
+    "step": 95,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G013-1",
+    "new_row_id": "FIN-SP1-P03-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryLoanProducts"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 799,
+    "step": 100,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G143-1",
+    "new_row_id": "FIN-SP1-D02-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 807,
+    "step": 101,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G109-2",
+    "new_row_id": "FIN-SP1-D06-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 813,
+    "step": 102,
+    "half": 1,
+    "kind": "old_anchor",
+    "old_row_id": "SEA-G098-4",
+    "new_row_id": "FIN-BC1-query-FIN-F2-T-0692-1",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 823,
+    "step": 103,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G014-2",
+    "new_row_id": "FIN-SP1-A07-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 828,
+    "step": 104,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G063-2",
+    "new_row_id": "FIN-SP1-D05-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryApplicationDetail"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 834,
+    "step": 105,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G173-2",
+    "new_row_id": "FIN-SP1-P05-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 836,
+    "step": 105,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FIN-F2-T-0748",
+    "new_row_id": "FIN-SP1-D08-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 863,
+    "step": 108,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-U01-2",
+    "new_row_id": "FIN-SP1-D06-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 869,
+    "step": 109,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G174-1",
+    "new_row_id": "FIN-SP1-D02-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 880,
+    "step": 110,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-T06-2",
+    "new_row_id": "FIN-SP1-A07-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyApplications"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 900,
+    "step": 113,
+    "half": 1,
+    "kind": "old_anchor",
+    "old_row_id": "SEB-G130-4",
+    "new_row_id": "SEA-G088-2",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "application_id",
+    "new_missing_slots": "application_id"
+  },
+  {
+    "exposure_index": 908,
+    "step": 114,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FIN-F2-T-0406",
+    "new_row_id": "FIN-SP1-C02-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "request_details",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 911,
+    "step": 114,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G023-2",
+    "new_row_id": "FIN-SP1-S01-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 926,
+    "step": 116,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G122-4",
+    "new_row_id": "FIN-SP1-P01-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryLoanProducts"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 929,
+    "step": 117,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G049-3",
+    "new_row_id": "FIN-SP1-D04-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 931,
+    "step": 117,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G037-3",
+    "new_row_id": "FIN-SP1-A08-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 946,
+    "step": 119,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-C04-1",
+    "new_row_id": "FIN-SP1-S07-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "status_code",
+    "new_missing_slots": "status_code"
+  },
+  {
+    "exposure_index": 947,
+    "step": 119,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G075-3",
+    "new_row_id": "FIN-SP1-P05-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 972,
+    "step": 122,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G096-2",
+    "new_row_id": "FIN-SP1-S04-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "explainApplicationStatus"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 980,
+    "step": 123,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G052-1",
+    "new_row_id": "FIN-SP1-S02-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "explainApplicationStatus"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 981,
+    "step": 123,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G041-3",
+    "new_row_id": "FIN-SP1-C08-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyCreditScore"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 986,
+    "step": 124,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G021-2",
+    "new_row_id": "FIN-SP1-C06-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1004,
+    "step": 126,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G173-1",
+    "new_row_id": "FIN-SP1-C04-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 1017,
+    "step": 128,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G069-3",
+    "new_row_id": "FIN-SP1-A01-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1037,
+    "step": 130,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G139-3",
+    "new_row_id": "FIN-SP1-D02-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryApplicationDetail"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1040,
+    "step": 130,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G026-2",
+    "new_row_id": "FIN-SP1-C03-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1051,
+    "step": 132,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G095-2",
+    "new_row_id": "FIN-SP1-S06-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1063,
+    "step": 133,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G074-3",
+    "new_row_id": "FIN-SP1-P02-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1073,
+    "step": 135,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G003-1",
+    "new_row_id": "FIN-SP1-A03-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyApplications"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1100,
+    "step": 138,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-U04-2",
+    "new_row_id": "FIN-SP1-C08-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 1108,
+    "step": 139,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FIN-F2-T-0388",
+    "new_row_id": "FIN-SP1-D07-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "error_context",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 1112,
+    "step": 139,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FIN-F2-T-0410",
+    "new_row_id": "FIN-SP1-A01-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "request_details",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 1119,
+    "step": 140,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G135-3",
+    "new_row_id": "FIN-SP1-D06-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "application_id",
+    "new_missing_slots": "application_id"
+  },
+  {
+    "exposure_index": 1141,
+    "step": 143,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G082-2",
+    "new_row_id": "FIN-SP1-P03-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1146,
+    "step": 144,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-C10-1",
+    "new_row_id": "FIN-SP1-S03-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "status_code",
+    "new_missing_slots": "status_code"
+  },
+  {
+    "exposure_index": 1157,
+    "step": 145,
+    "half": 1,
+    "kind": "old_anchor",
+    "old_row_id": "SEB-G031-1",
+    "new_row_id": "FIN-F2-T-0662",
+    "cell": [
+      "current-component",
+      true,
+      false,
+      "tool",
+      "queryMyApplications"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1163,
+    "step": 146,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-H04-2",
+    "new_row_id": "FIN-SP1-A02-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1186,
+    "step": 149,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G185-3",
+    "new_row_id": "FIN-SP1-S02-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 1212,
+    "step": 152,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G020-2",
+    "new_row_id": "FIN-SP1-S08-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1234,
+    "step": 155,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G182-2",
+    "new_row_id": "FIN-SP1-C01-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 1235,
+    "step": 155,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G083-3",
+    "new_row_id": "FIN-SP1-D07-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1244,
+    "step": 156,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-T15-2",
+    "new_row_id": "FIN-SP1-C03-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyCreditScore"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1246,
+    "step": 156,
+    "half": 1,
+    "kind": "old_anchor",
+    "old_row_id": "SEA-G028-4",
+    "new_row_id": "FIN-BC1-query-FIN-F2-T-0678-2",
+    "cell": [
+      "current-component",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1253,
+    "step": 157,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G078-1",
+    "new_row_id": "FIN-SP1-S05-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "status_code",
+    "new_missing_slots": "status_code"
+  },
+  {
+    "exposure_index": 1264,
+    "step": 158,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G028-1",
+    "new_row_id": "FIN-SP1-S08-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "explainApplicationStatus"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1265,
+    "step": 159,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G008-4",
+    "new_row_id": "FIN-SP1-D08-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1273,
+    "step": 160,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G051-4",
+    "new_row_id": "FIN-SP1-S04-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "status_code",
+    "new_missing_slots": "status_code"
+  },
+  {
+    "exposure_index": 1278,
+    "step": 160,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-T13-1",
+    "new_row_id": "FIN-SP1-C06-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyCreditScore"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1281,
+    "step": 161,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G095-1",
+    "new_row_id": "FIN-SP1-P06-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryLoanProducts"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1310,
+    "step": 164,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G105-3",
+    "new_row_id": "FIN-SP1-S02-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1332,
+    "step": 167,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FIN-F2-T-0380",
+    "new_row_id": "FIN-SP1-C03-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "error_context",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 1340,
+    "step": 168,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G059-2",
+    "new_row_id": "FIN-SP1-S05-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "explainApplicationStatus"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1343,
+    "step": 168,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G062-4",
+    "new_row_id": "FIN-SP1-P02-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 1344,
+    "step": 168,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G003-2",
+    "new_row_id": "FIN-SP1-D06-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryApplicationDetail"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1367,
+    "step": 171,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G014-1",
+    "new_row_id": "FIN-SP1-S05-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1370,
+    "step": 172,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G183-1",
+    "new_row_id": "FIN-SP1-P03-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 1380,
+    "step": 173,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G073-1",
+    "new_row_id": "FIN-SP1-C04-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyCreditScore"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1385,
+    "step": 174,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G127-4",
+    "new_row_id": "FIN-SP1-D01-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "application_id",
+    "new_missing_slots": "application_id"
+  },
+  {
+    "exposure_index": 1395,
+    "step": 175,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-A11-1",
+    "new_row_id": "FIN-SP1-S04-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1419,
+    "step": 178,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-H05-2",
+    "new_row_id": "FIN-SP1-A06-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1433,
+    "step": 180,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G190-3",
+    "new_row_id": "FIN-SP1-A02-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 1450,
+    "step": 182,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-H10-2",
+    "new_row_id": "FIN-SP1-D01-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1457,
+    "step": 183,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G104-2",
+    "new_row_id": "FIN-SP1-C08-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1471,
+    "step": 184,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G100-2",
+    "new_row_id": "FIN-SP1-A03-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1477,
+    "step": 185,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-C04-2",
+    "new_row_id": "FIN-SP1-S02-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "status_code",
+    "new_missing_slots": "status_code"
+  },
+  {
+    "exposure_index": 1483,
+    "step": 186,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FIN-F2-T-0760",
+    "new_row_id": "FIN-SP1-S01-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 1503,
+    "step": 188,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-H11-2",
+    "new_row_id": "FIN-SP1-C01-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1506,
+    "step": 189,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G001-2",
+    "new_row_id": "FIN-SP1-D02-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "application_id",
+    "new_missing_slots": "application_id"
+  },
+  {
+    "exposure_index": 1512,
+    "step": 189,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FIN-F2-T-0392",
+    "new_row_id": "FIN-SP1-D04-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "request_details",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 1519,
+    "step": 190,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G120-2",
+    "new_row_id": "FIN-SP1-D08-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryApplicationDetail"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1540,
+    "step": 193,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G017-1",
+    "new_row_id": "FIN-SP1-S07-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1549,
+    "step": 194,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G052-3",
+    "new_row_id": "FIN-SP1-D05-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1554,
+    "step": 195,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FIN-F2-T-0746",
+    "new_row_id": "FIN-SP1-D03-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 1555,
+    "step": 195,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G053-2",
+    "new_row_id": "FIN-SP1-S07-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "explainApplicationStatus"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1572,
+    "step": 197,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G031-3",
+    "new_row_id": "FIN-SP1-D07-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryApplicationDetail"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1577,
+    "step": 198,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FIN-F2-T-0361",
+    "new_row_id": "FIN-SP1-D05-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "error_context",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 1596,
+    "step": 200,
+    "half": 1,
+    "kind": "new_candidate",
+    "old_row_id": "FIN-F2-T-0374",
+    "new_row_id": "FIN-SP1-D01-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "error_context",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 1607,
+    "step": 201,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G032-4",
+    "new_row_id": "FIN-SP1-D07-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "application_id",
+    "new_missing_slots": "application_id"
+  },
+  {
+    "exposure_index": 1620,
+    "step": 203,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G055-2",
+    "new_row_id": "FIN-SP1-D04-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryApplicationDetail"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1634,
+    "step": 205,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-U03-2",
+    "new_row_id": "FIN-SP1-P03-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 1642,
+    "step": 206,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FIN-F2-T-0754",
+    "new_row_id": "FIN-SP1-A02-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 1646,
+    "step": 206,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-A08-1",
+    "new_row_id": "FIN-SP1-S01-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1657,
+    "step": 208,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-T05-2",
+    "new_row_id": "FIN-SP1-A04-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyApplications"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1661,
+    "step": 208,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G021-4",
+    "new_row_id": "FIN-SP1-D02-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "application_id",
+    "new_missing_slots": "application_id"
+  },
+  {
+    "exposure_index": 1667,
+    "step": 209,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G110-2",
+    "new_row_id": "FIN-SP1-A07-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1701,
+    "step": 213,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FIN-F2-T-0759",
+    "new_row_id": "FIN-SP1-C04-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 1738,
+    "step": 218,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G142-3",
+    "new_row_id": "FIN-SP1-S02-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1749,
+    "step": 219,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G181-2",
+    "new_row_id": "FIN-SP1-P01-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 1752,
+    "step": 219,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G077-1",
+    "new_row_id": "FIN-SP1-D06-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryApplicationDetail"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1766,
+    "step": 221,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G012-3",
+    "new_row_id": "FIN-SP1-P08-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1787,
+    "step": 224,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G030-3",
+    "new_row_id": "FIN-SP1-A03-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyApplications"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1807,
+    "step": 226,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G110-2",
+    "new_row_id": "FIN-SP1-C02-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyCreditScore"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1819,
+    "step": 228,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G191-1",
+    "new_row_id": "FIN-SP1-D06-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 1836,
+    "step": 230,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G183-2",
+    "new_row_id": "FIN-SP1-C07-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 1865,
+    "step": 234,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G003-4",
+    "new_row_id": "FIN-SP1-P05-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1866,
+    "step": 234,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-U01-1",
+    "new_row_id": "FIN-SP1-C03-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 1889,
+    "step": 237,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G058-2",
+    "new_row_id": "FIN-SP1-S01-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "explainApplicationStatus"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1894,
+    "step": 237,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G047-1",
+    "new_row_id": "FIN-SP1-S02-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "explainApplicationStatus"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1897,
+    "step": 238,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-U04-1",
+    "new_row_id": "FIN-SP1-D02-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 1923,
+    "step": 241,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G082-2",
+    "new_row_id": "FIN-SP1-P06-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1925,
+    "step": 241,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G099-2",
+    "new_row_id": "FIN-SP1-A01-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1939,
+    "step": 243,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-C10-2",
+    "new_row_id": "FIN-SP1-S01-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "status_code",
+    "new_missing_slots": "status_code"
+  },
+  {
+    "exposure_index": 1951,
+    "step": 244,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G143-1",
+    "new_row_id": "FIN-SP1-C05-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 1978,
+    "step": 248,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FIN-F2-T-0752",
+    "new_row_id": "FIN-SP1-D05-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 1985,
+    "step": 249,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-C11-2",
+    "new_row_id": "FIN-SP1-D04-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "application_id",
+    "new_missing_slots": "application_id"
+  },
+  {
+    "exposure_index": 2009,
+    "step": 252,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G072-2",
+    "new_row_id": "FIN-SP1-D06-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2031,
+    "step": 254,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G131-3",
+    "new_row_id": "FIN-SP1-D07-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2053,
+    "step": 257,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G024-3",
+    "new_row_id": "FIN-SP1-A01-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyApplications"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2063,
+    "step": 258,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G001-4",
+    "new_row_id": "FIN-SP1-P02-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2094,
+    "step": 262,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G047-3",
+    "new_row_id": "FIN-SP1-A02-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2097,
+    "step": 263,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FIN-F2-T-0743",
+    "new_row_id": "FIN-SP1-P08-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2107,
+    "step": 264,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FIN-F2-T-0758",
+    "new_row_id": "FIN-SP1-S08-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2111,
+    "step": 264,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G028-3",
+    "new_row_id": "FIN-SP1-D02-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryApplicationDetail"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2141,
+    "step": 268,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-T01-2",
+    "new_row_id": "FIN-SP1-P03-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryLoanProducts"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2147,
+    "step": 269,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G096-2",
+    "new_row_id": "FIN-SP1-S06-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "explainApplicationStatus"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2154,
+    "step": 270,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G191-2",
+    "new_row_id": "FIN-SP1-S06-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2174,
+    "step": 272,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G047-2",
+    "new_row_id": "FIN-SP1-P03-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2189,
+    "step": 274,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FIN-F2-T-0744",
+    "new_row_id": "FIN-SP1-P04-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2205,
+    "step": 276,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G053-2",
+    "new_row_id": "FIN-SP1-S07-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "explainApplicationStatus"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2216,
+    "step": 277,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G037-1",
+    "new_row_id": "FIN-SP1-P06-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryLoanProducts"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2223,
+    "step": 278,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G050-4",
+    "new_row_id": "FIN-SP1-S07-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "status_code",
+    "new_missing_slots": "status_code"
+  },
+  {
+    "exposure_index": 2224,
+    "step": 278,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-T15-1",
+    "new_row_id": "FIN-SP1-C05-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyCreditScore"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2236,
+    "step": 280,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G028-3",
+    "new_row_id": "FIN-SP1-D08-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryApplicationDetail"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2250,
+    "step": 282,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-T02-2",
+    "new_row_id": "FIN-SP1-P07-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryLoanProducts"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2262,
+    "step": 283,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FIN-F2-T-0747",
+    "new_row_id": "FIN-SP1-A04-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2265,
+    "step": 284,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G032-1",
+    "new_row_id": "FIN-SP1-P05-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryLoanProducts"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2277,
+    "step": 285,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G054-3",
+    "new_row_id": "FIN-SP1-P04-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2284,
+    "step": 286,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G056-3",
+    "new_row_id": "FIN-SP1-A02-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyApplications"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2288,
+    "step": 286,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G186-3",
+    "new_row_id": "FIN-SP1-A07-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2294,
+    "step": 287,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-T07-1",
+    "new_row_id": "FIN-SP1-A05-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyApplications"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2297,
+    "step": 288,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G141-4",
+    "new_row_id": "FIN-SP1-P05-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2302,
+    "step": 288,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G058-2",
+    "new_row_id": "FIN-SP1-S03-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "explainApplicationStatus"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2303,
+    "step": 288,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G007-3",
+    "new_row_id": "FIN-SP1-A08-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyApplications"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2310,
+    "step": 289,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G084-2",
+    "new_row_id": "FIN-SP1-D01-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryApplicationDetail"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2330,
+    "step": 292,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G184-3",
+    "new_row_id": "FIN-SP1-S07-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2332,
+    "step": 292,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G185-2",
+    "new_row_id": "FIN-SP1-C01-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2345,
+    "step": 294,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G127-1",
+    "new_row_id": "FIN-SP1-A04-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2353,
+    "step": 295,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G141-3",
+    "new_row_id": "FIN-SP1-S06-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2364,
+    "step": 296,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-H08-2",
+    "new_row_id": "FIN-SP1-C01-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2368,
+    "step": 296,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FIN-F2-T-0757",
+    "new_row_id": "FIN-SP1-C06-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2373,
+    "step": 297,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G190-1",
+    "new_row_id": "FIN-SP1-S04-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2382,
+    "step": 298,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-T06-1",
+    "new_row_id": "FIN-SP1-A07-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyApplications"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2396,
+    "step": 300,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G066-4",
+    "new_row_id": "FIN-SP1-C02-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2411,
+    "step": 302,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G110-3",
+    "new_row_id": "FIN-SP1-D03-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2414,
+    "step": 302,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G082-3",
+    "new_row_id": "FIN-SP1-C07-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyCreditScore"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2416,
+    "step": 302,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G178-2",
+    "new_row_id": "FIN-SP1-C02-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2424,
+    "step": 303,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G180-1",
+    "new_row_id": "FIN-SP1-A03-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2443,
+    "step": 306,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G051-3",
+    "new_row_id": "FIN-SP1-D01-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2453,
+    "step": 307,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FIN-F2-T-0755",
+    "new_row_id": "FIN-SP1-C05-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2478,
+    "step": 310,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G175-1",
+    "new_row_id": "FIN-SP1-D08-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2479,
+    "step": 310,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G034-1",
+    "new_row_id": "FIN-SP1-S05-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2499,
+    "step": 313,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G142-3",
+    "new_row_id": "FIN-SP1-D01-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2525,
+    "step": 316,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G186-2",
+    "new_row_id": "FIN-SP1-A05-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2528,
+    "step": 316,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G113-2",
+    "new_row_id": "FIN-SP1-C04-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2537,
+    "step": 318,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G188-1",
+    "new_row_id": "FIN-SP1-S02-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2571,
+    "step": 322,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G112-3",
+    "new_row_id": "FIN-SP1-C08-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2583,
+    "step": 323,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G176-1",
+    "new_row_id": "FIN-SP1-P02-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2587,
+    "step": 324,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G085-3",
+    "new_row_id": "FIN-SP1-A08-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2594,
+    "step": 325,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-A04-2",
+    "new_row_id": "FIN-SP1-P07-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2595,
+    "step": 325,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-T03-1",
+    "new_row_id": "FIN-SP1-P01-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryLoanProducts"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2605,
+    "step": 326,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G075-2",
+    "new_row_id": "FIN-SP1-S05-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "explainApplicationStatus"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2609,
+    "step": 327,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G011-3",
+    "new_row_id": "FIN-SP1-S07-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2611,
+    "step": 327,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G131-2",
+    "new_row_id": "FIN-SP1-S03-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2637,
+    "step": 330,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G005-1",
+    "new_row_id": "FIN-SP1-P08-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryLoanProducts"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2638,
+    "step": 330,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FIN-F2-T-0742",
+    "new_row_id": "FIN-SP1-S05-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2654,
+    "step": 332,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FIN-F2-T-0413",
+    "new_row_id": "FIN-SP1-D07-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "request_details",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2680,
+    "step": 335,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G087-1",
+    "new_row_id": "FIN-SP1-P02-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryLoanProducts"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2691,
+    "step": 337,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G176-2",
+    "new_row_id": "FIN-SP1-A06-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2704,
+    "step": 338,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G078-1",
+    "new_row_id": "FIN-SP1-S08-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "status_code",
+    "new_missing_slots": "status_code"
+  },
+  {
+    "exposure_index": 2708,
+    "step": 339,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G004-4",
+    "new_row_id": "FIN-SP1-D03-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2725,
+    "step": 341,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G058-1",
+    "new_row_id": "FIN-SP1-S02-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "status_code",
+    "new_missing_slots": "status_code"
+  },
+  {
+    "exposure_index": 2739,
+    "step": 343,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G128-2",
+    "new_row_id": "FIN-SP1-C06-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyCreditScore"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2757,
+    "step": 345,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-U02-1",
+    "new_row_id": "FIN-SP1-A08-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2772,
+    "step": 347,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G054-1",
+    "new_row_id": "FIN-SP1-D03-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryApplicationDetail"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2777,
+    "step": 348,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-H11-1",
+    "new_row_id": "FIN-SP1-D02-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2783,
+    "step": 348,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G039-1",
+    "new_row_id": "FIN-SP1-S06-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "status_code",
+    "new_missing_slots": "status_code"
+  },
+  {
+    "exposure_index": 2787,
+    "step": 349,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G038-3",
+    "new_row_id": "FIN-SP1-A05-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2798,
+    "step": 350,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G126-2",
+    "new_row_id": "FIN-SP1-S08-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "explainApplicationStatus"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2802,
+    "step": 351,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-C04-2",
+    "new_row_id": "FIN-SP1-S03-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "status_code",
+    "new_missing_slots": "status_code"
+  },
+  {
+    "exposure_index": 2812,
+    "step": 352,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G026-2",
+    "new_row_id": "FIN-SP1-A06-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2815,
+    "step": 352,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FIN-F2-T-0386",
+    "new_row_id": "FIN-SP1-C08-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "error_context",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2818,
+    "step": 353,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-C10-2",
+    "new_row_id": "FIN-SP1-S04-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "status_code",
+    "new_missing_slots": "status_code"
+  },
+  {
+    "exposure_index": 2829,
+    "step": 354,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G035-4",
+    "new_row_id": "FIN-SP1-D06-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "application_id",
+    "new_missing_slots": "application_id"
+  },
+  {
+    "exposure_index": 2830,
+    "step": 354,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G072-1",
+    "new_row_id": "FIN-SP1-S01-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2844,
+    "step": 356,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G187-3",
+    "new_row_id": "FIN-SP1-A01-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 2867,
+    "step": 359,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G003-3",
+    "new_row_id": "FIN-SP1-D08-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2871,
+    "step": 359,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G053-1",
+    "new_row_id": "FIN-SP1-P04-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryLoanProducts"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2874,
+    "step": 360,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G055-3",
+    "new_row_id": "FIN-SP1-S04-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2877,
+    "step": 360,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G035-1",
+    "new_row_id": "FIN-SP1-D05-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "application_id",
+    "new_missing_slots": "application_id"
+  },
+  {
+    "exposure_index": 2909,
+    "step": 364,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G132-2",
+    "new_row_id": "FIN-SP1-C07-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2934,
+    "step": 367,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G014-4",
+    "new_row_id": "FIN-SP1-D01-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "application_id",
+    "new_missing_slots": "application_id"
+  },
+  {
+    "exposure_index": 2937,
+    "step": 368,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G062-3",
+    "new_row_id": "FIN-SP1-P01-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2967,
+    "step": 371,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G010-4",
+    "new_row_id": "FIN-SP1-D03-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "application_id",
+    "new_missing_slots": "application_id"
+  },
+  {
+    "exposure_index": 2973,
+    "step": 372,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-A04-2",
+    "new_row_id": "FIN-SP1-S08-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "answer",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 2999,
+    "step": 375,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G018-2",
+    "new_row_id": "FIN-SP1-D05-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryApplicationDetail"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 3010,
+    "step": 377,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G040-1",
+    "new_row_id": "FIN-SP1-A06-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyApplications"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 3014,
+    "step": 377,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G011-2",
+    "new_row_id": "FIN-SP1-A03-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 3027,
+    "step": 379,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G189-1",
+    "new_row_id": "FIN-SP1-P06-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 3040,
+    "step": 380,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G028-1",
+    "new_row_id": "FIN-SP1-S04-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "explainApplicationStatus"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 3051,
+    "step": 382,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G005-3",
+    "new_row_id": "FIN-SP1-D05-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 3064,
+    "step": 383,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G122-2",
+    "new_row_id": "FIN-SP1-C06-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 3087,
+    "step": 386,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G072-3",
+    "new_row_id": "FIN-SP1-D07-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryApplicationDetail"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 3090,
+    "step": 387,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-U03-1",
+    "new_row_id": "FIN-SP1-D04-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 3101,
+    "step": 388,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G032-2",
+    "new_row_id": "FIN-SP1-C01-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyCreditScore"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 3106,
+    "step": 389,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G027-1",
+    "new_row_id": "FIN-SP1-C08-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyCreditScore"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 3129,
+    "step": 392,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G136-4",
+    "new_row_id": "FIN-SP1-D08-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "application_id",
+    "new_missing_slots": "application_id"
+  },
+  {
+    "exposure_index": 3134,
+    "step": 392,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G178-1",
+    "new_row_id": "FIN-SP1-S03-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 3148,
+    "step": 394,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G017-4",
+    "new_row_id": "FIN-SP1-P07-unauthenticated",
+    "cell": [
+      "preauth",
+      false,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "authentication",
+    "new_missing_slots": "authentication"
+  },
+  {
+    "exposure_index": 3161,
+    "step": 396,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G126-2",
+    "new_row_id": "FIN-SP1-C03-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyCreditScore"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 3189,
+    "step": 399,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G006-3",
+    "new_row_id": "FIN-SP1-S05-missing",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "clarify",
+      null
+    ],
+    "old_missing_slots": "status_code",
+    "new_missing_slots": "status_code"
+  },
+  {
+    "exposure_index": 3190,
+    "step": 399,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEA-G066-3",
+    "new_row_id": "FIN-SP1-C03-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 3191,
+    "step": 399,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "FSP1-T14-1",
+    "new_row_id": "FIN-SP1-C04-ready",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "tool",
+      "queryMyCreditScore"
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  },
+  {
+    "exposure_index": 3194,
+    "step": 400,
+    "half": 2,
+    "kind": "new_candidate",
+    "old_row_id": "SEB-G027-2",
+    "new_row_id": "FIN-SP1-D04-unavailable",
+    "cell": [
+      "current-node",
+      true,
+      false,
+      "human",
+      null
+    ],
+    "old_missing_slots": "none_declared",
+    "new_missing_slots": "none_declared"
+  }
+]

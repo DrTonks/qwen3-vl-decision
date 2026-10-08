@@ -1,0 +1,27 @@
+{
+  "version": "financial-boundary-training-v1",
+  "training_eligible": true,
+  "human_reviewed": false,
+  "review_type": "independent_ai_review",
+  "accepted_rows": 336,
+  "accepted_source_groups": 112,
+  "excluded_source_groups": 12,
+  "actions": {
+    "clarify": 48,
+    "human": 176,
+    "tool": 48,
+    "refuse": 32,
+    "answer": 32
+  },
+  "source_files": {
+    "data/financial-boundary-candidates-v1/manifest.json": "2c2a73f40566764ca6a32892d63b61614fb5ec7aec47693d334410b4e64edda7",
+    "data/financial-boundary-candidates-v1/candidates.json": "b7717a190ed4fb6eb612ee7611b15cb2079b8636e94b94086ef9fa0562abed4e",
+    "docs/evidence/financial-boundary-label-review.json": "bda92b2f56ae5cd25f51815255817396574121e40be8b30461e221dcda7752c7",
+    "src/qwenlab/financial_boundary_release.py": "6a3e0302d6699503e5ac2d08f0e663cd56f9b2c78c35dd118f12293024f889db"
+  },
+  "files": {
+    "excluded-groups.json": "d66874b6bea301284c30f02797adc6b2bb9e7a6fa3abfcec46e2a541d7b4e3dd",
+    "training.json": "e4169b754df692e90086a6e7d68f188575a03ae1b65c68c283f40b028bfb1949"
+  },
+  "limitation": "Controlled synthetic contrasts, not new independent scenarios or human labels; whole ambiguous groups excluded."
+}

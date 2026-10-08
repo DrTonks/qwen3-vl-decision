@@ -1,0 +1,350 @@
+{
+  "groups": [
+    "public-source:0f4e94b02fe3aa7946a6",
+    "public-source:1efb11e3ce528d65bfaf",
+    "public-source:24a6409d11b81f92a7ac",
+    "public-source:2757020d16b4651f7da5",
+    "public-source:322a0bdd89bb7a464891",
+    "public-source:373b682d6e9a6dfb1671",
+    "public-source:3de6fcd043a71e7337dc",
+    "public-source:3f8fd29214f5d849c868",
+    "public-source:43f032195271ff770d83",
+    "public-source:473764f9dc1f2c1ad3ea",
+    "public-source:5e3e65f39fba5ddc8bce",
+    "public-source:62c5a5d53c81d112b547",
+    "public-source:653e32436af3d336de07",
+    "public-source:65bfe6e87447f61c2235",
+    "public-source:773ed930503796d3004e",
+    "public-source:9400c08d1ec3c30ec957",
+    "public-source:a21f869435766904f2fb",
+    "public-source:a35753aa29a147a2fef8",
+    "public-source:a457bc1b373349e7b2cf",
+    "public-source:b9655895ff58d8f7aa7f",
+    "public-source:d2c04b05142844381f3b",
+    "public-source:e0bc71d95f1a844fd044",
+    "public-source:f91f1a232c8759838a4a"
+  ],
+  "related_training_rows": [
+    {
+      "id": "FIN-R4-crosswoz-train-8773-8",
+      "scene_family_id": "public-source:3f8fd29214f5d849c868"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-9259-2",
+      "scene_family_id": "public-source:9400c08d1ec3c30ec957"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11433-4",
+      "scene_family_id": "public-source:1efb11e3ce528d65bfaf"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11147-0",
+      "scene_family_id": "public-source:24a6409d11b81f92a7ac"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8773-6",
+      "scene_family_id": "public-source:3f8fd29214f5d849c868"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-9259-6",
+      "scene_family_id": "public-source:9400c08d1ec3c30ec957"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11912-4",
+      "scene_family_id": "public-source:f91f1a232c8759838a4a"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10161-18",
+      "scene_family_id": "public-source:0f4e94b02fe3aa7946a6"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-4906-2",
+      "scene_family_id": "public-source:d2c04b05142844381f3b"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10679-4",
+      "scene_family_id": "public-source:3de6fcd043a71e7337dc"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11222-10",
+      "scene_family_id": "public-source:a35753aa29a147a2fef8"
+    },
+    {
+      "id": "FIN-R4-massive-train-15713",
+      "scene_family_id": "public-source:5e3e65f39fba5ddc8bce"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10958-6",
+      "scene_family_id": "public-source:b9655895ff58d8f7aa7f"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11147-6",
+      "scene_family_id": "public-source:24a6409d11b81f92a7ac"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10679-2",
+      "scene_family_id": "public-source:3de6fcd043a71e7337dc"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10149-6",
+      "scene_family_id": "public-source:653e32436af3d336de07"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-7803-2",
+      "scene_family_id": "public-source:2757020d16b4651f7da5"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-7803-0",
+      "scene_family_id": "public-source:2757020d16b4651f7da5"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11222-6",
+      "scene_family_id": "public-source:a35753aa29a147a2fef8"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11433-12",
+      "scene_family_id": "public-source:1efb11e3ce528d65bfaf"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11330-6",
+      "scene_family_id": "public-source:e0bc71d95f1a844fd044"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11433-8",
+      "scene_family_id": "public-source:1efb11e3ce528d65bfaf"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11855-4",
+      "scene_family_id": "public-source:322a0bdd89bb7a464891"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11433-6",
+      "scene_family_id": "public-source:1efb11e3ce528d65bfaf"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11433-2",
+      "scene_family_id": "public-source:1efb11e3ce528d65bfaf"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-9259-0",
+      "scene_family_id": "public-source:9400c08d1ec3c30ec957"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8989-2",
+      "scene_family_id": "public-source:43f032195271ff770d83"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-4906-4",
+      "scene_family_id": "public-source:d2c04b05142844381f3b"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11433-10",
+      "scene_family_id": "public-source:1efb11e3ce528d65bfaf"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8773-14",
+      "scene_family_id": "public-source:3f8fd29214f5d849c868"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10149-2",
+      "scene_family_id": "public-source:653e32436af3d336de07"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11147-10",
+      "scene_family_id": "public-source:24a6409d11b81f92a7ac"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8055-6",
+      "scene_family_id": "public-source:473764f9dc1f2c1ad3ea"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8055-4",
+      "scene_family_id": "public-source:473764f9dc1f2c1ad3ea"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8773-12",
+      "scene_family_id": "public-source:3f8fd29214f5d849c868"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8705-2",
+      "scene_family_id": "public-source:373b682d6e9a6dfb1671"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11912-2",
+      "scene_family_id": "public-source:f91f1a232c8759838a4a"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10161-16",
+      "scene_family_id": "public-source:0f4e94b02fe3aa7946a6"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11433-14",
+      "scene_family_id": "public-source:1efb11e3ce528d65bfaf"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-9439-2",
+      "scene_family_id": "public-source:65bfe6e87447f61c2235"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10958-2",
+      "scene_family_id": "public-source:b9655895ff58d8f7aa7f"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11330-2",
+      "scene_family_id": "public-source:e0bc71d95f1a844fd044"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10161-14",
+      "scene_family_id": "public-source:0f4e94b02fe3aa7946a6"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8989-4",
+      "scene_family_id": "public-source:43f032195271ff770d83"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8773-10",
+      "scene_family_id": "public-source:3f8fd29214f5d849c868"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11855-2",
+      "scene_family_id": "public-source:322a0bdd89bb7a464891"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10161-8",
+      "scene_family_id": "public-source:0f4e94b02fe3aa7946a6"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11147-24",
+      "scene_family_id": "public-source:24a6409d11b81f92a7ac"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8055-8",
+      "scene_family_id": "public-source:473764f9dc1f2c1ad3ea"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11147-14",
+      "scene_family_id": "public-source:24a6409d11b81f92a7ac"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-9445-18",
+      "scene_family_id": "public-source:62c5a5d53c81d112b547"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-4906-6",
+      "scene_family_id": "public-source:d2c04b05142844381f3b"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-7803-10",
+      "scene_family_id": "public-source:2757020d16b4651f7da5"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10679-8",
+      "scene_family_id": "public-source:3de6fcd043a71e7337dc"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11330-8",
+      "scene_family_id": "public-source:e0bc71d95f1a844fd044"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10149-0",
+      "scene_family_id": "public-source:653e32436af3d336de07"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10149-4",
+      "scene_family_id": "public-source:653e32436af3d336de07"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10161-22",
+      "scene_family_id": "public-source:0f4e94b02fe3aa7946a6"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10161-20",
+      "scene_family_id": "public-source:0f4e94b02fe3aa7946a6"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8895-2",
+      "scene_family_id": "public-source:a457bc1b373349e7b2cf"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10679-6",
+      "scene_family_id": "public-source:3de6fcd043a71e7337dc"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10161-10",
+      "scene_family_id": "public-source:0f4e94b02fe3aa7946a6"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11330-10",
+      "scene_family_id": "public-source:e0bc71d95f1a844fd044"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11222-4",
+      "scene_family_id": "public-source:a35753aa29a147a2fef8"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11147-22",
+      "scene_family_id": "public-source:24a6409d11b81f92a7ac"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-369-2",
+      "scene_family_id": "public-source:a21f869435766904f2fb"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10958-10",
+      "scene_family_id": "public-source:b9655895ff58d8f7aa7f"
+    },
+    {
+      "id": "FIN-R4-massive-train-12812",
+      "scene_family_id": "public-source:773ed930503796d3004e"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11147-28",
+      "scene_family_id": "public-source:24a6409d11b81f92a7ac"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8055-0",
+      "scene_family_id": "public-source:473764f9dc1f2c1ad3ea"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10958-4",
+      "scene_family_id": "public-source:b9655895ff58d8f7aa7f"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10161-12",
+      "scene_family_id": "public-source:0f4e94b02fe3aa7946a6"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-4906-8",
+      "scene_family_id": "public-source:d2c04b05142844381f3b"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11147-2",
+      "scene_family_id": "public-source:24a6409d11b81f92a7ac"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8055-10",
+      "scene_family_id": "public-source:473764f9dc1f2c1ad3ea"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8705-12",
+      "scene_family_id": "public-source:373b682d6e9a6dfb1671"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11147-18",
+      "scene_family_id": "public-source:24a6409d11b81f92a7ac"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11222-2",
+      "scene_family_id": "public-source:a35753aa29a147a2fef8"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-9445-6",
+      "scene_family_id": "public-source:62c5a5d53c81d112b547"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8705-6",
+      "scene_family_id": "public-source:373b682d6e9a6dfb1671"
+    }
+  ],
+  "note": "Do not release a related group without resolving or isolating it as a whole; this packet is not a full training release."
+}

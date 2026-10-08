@@ -1,0 +1,34 @@
+{
+  "status": "design_only_not_executable_training_release",
+  "training_enabled": false,
+  "purpose": "Distinguish added training-source contrasts from the effect of simply continuing training",
+  "initial_checkpoint": ".local/checkpoints/financial-qwen35-v1/step-2976",
+  "candidate_pack": "data/financial-boundary-candidates-v1",
+  "candidate_rows_before_independent_review": 372,
+  "base_training_rows": 11899,
+  "arms": {
+    "replay_control": "same initial adapter; original training pool, fixed shuffled replay to match sample budget",
+    "boundary_overlay": "same initial adapter; original training pool plus accepted reviewed candidates"
+  },
+  "proposed_common_budget": {
+    "effective_batch": 8,
+    "learning_rate": 0.00001,
+    "warmup_steps": 50,
+    "max_steps_if_all_candidates_accepted": 1534,
+    "checkpoint_steps_if_all_candidates_accepted": [384, 768, 1534],
+    "automatic_extension": false
+  },
+  "prompt_and_action_contract": "unchanged; retain compatibility with financial-jev-reference-v1",
+  "acceptance": "retain original development gate; compare all fixed candidates on development only; qualified fixed winner only enters calibration/final",
+  "required_before_execution": [
+    "independent label review with exact candidate content hashes",
+    "resolve any source or policy ambiguity without using evaluation questions",
+    "freeze accepted count, group membership, sampling, source hashes and budget before any training",
+    "implement and test a separate executor without mutating frozen V1",
+    "ensure both study arms share the same initialization, optimizer setup, learning-rate trajectory and step budget"
+  ],
+  "estimated_total_minutes_for_two_arms": [170, 220],
+  "estimate_basis": "V1 measured mean 3.13 seconds per optimizer step, 1534 steps per arm plus loading and evaluations; not a deadline",
+  "jev_new_requests": 0,
+  "deploy": false
+}

@@ -1,0 +1,427 @@
+{
+  "decision": "pass",
+  "reviewer": "root",
+  "mode": "full_independent_agent_review",
+  "human_review": false,
+  "reviewed_source_ids": [
+    "massive-train-2405",
+    "massive-train-2406",
+    "massive-train-2407",
+    "massive-train-2409",
+    "massive-train-2410",
+    "massive-train-2413",
+    "massive-train-2415",
+    "massive-train-2416",
+    "massive-train-2418",
+    "massive-train-2422",
+    "massive-train-2427",
+    "massive-train-2429",
+    "massive-train-2430",
+    "massive-train-2437",
+    "massive-train-2439",
+    "massive-train-2440",
+    "massive-train-2443",
+    "massive-train-2444",
+    "massive-train-2445",
+    "massive-train-2446",
+    "massive-train-2448",
+    "massive-train-2449",
+    "massive-train-2452",
+    "massive-train-2453",
+    "massive-train-2454",
+    "massive-train-2455",
+    "massive-train-2457",
+    "massive-train-2459",
+    "massive-train-2461",
+    "massive-train-2462",
+    "massive-train-2465",
+    "massive-train-2466",
+    "massive-train-2468",
+    "massive-train-2469",
+    "massive-train-2473",
+    "massive-train-2474",
+    "massive-train-2475",
+    "massive-train-2477",
+    "massive-train-2476",
+    "massive-train-2479",
+    "massive-train-2484",
+    "massive-train-2485",
+    "massive-train-2486",
+    "massive-train-2488",
+    "massive-train-2489",
+    "massive-train-2490",
+    "massive-train-2491",
+    "massive-train-2492",
+    "massive-train-2493",
+    "massive-train-2494",
+    "massive-train-2500",
+    "massive-train-2502",
+    "massive-train-2503",
+    "massive-train-2504",
+    "massive-train-2505",
+    "massive-train-2506",
+    "massive-train-2507",
+    "massive-train-2508",
+    "massive-train-2509",
+    "massive-train-2510",
+    "massive-train-2511",
+    "massive-train-2513",
+    "massive-train-2516",
+    "massive-train-2519",
+    "massive-train-2521",
+    "massive-train-2522",
+    "massive-train-2523",
+    "massive-train-2524",
+    "massive-train-4830",
+    "massive-train-2525",
+    "massive-train-2528",
+    "massive-train-2529",
+    "massive-train-2530",
+    "massive-train-2532",
+    "massive-train-2533",
+    "massive-train-2534",
+    "massive-train-2535",
+    "massive-train-2536",
+    "massive-train-2537",
+    "massive-train-2539",
+    "massive-train-2541",
+    "massive-train-2543",
+    "massive-train-2547",
+    "massive-train-2549",
+    "massive-train-2550",
+    "massive-train-2552",
+    "massive-train-2554",
+    "massive-train-2555",
+    "massive-train-2556",
+    "massive-train-8238",
+    "massive-train-2559",
+    "massive-train-2561",
+    "massive-train-2565",
+    "massive-train-2568",
+    "massive-train-2569",
+    "massive-train-2571",
+    "massive-train-2572",
+    "massive-train-2574",
+    "massive-train-2575",
+    "massive-train-2577",
+    "massive-train-2883",
+    "massive-train-4082",
+    "massive-train-2579",
+    "massive-train-2580",
+    "massive-train-2581",
+    "massive-train-2584",
+    "massive-train-2585",
+    "massive-train-2586",
+    "massive-train-2587",
+    "massive-train-2589",
+    "massive-train-2592",
+    "massive-train-2593",
+    "massive-train-5222",
+    "massive-train-2595",
+    "massive-train-2596",
+    "massive-train-2597",
+    "massive-train-2601",
+    "massive-train-2602",
+    "massive-train-2603",
+    "massive-train-2604",
+    "massive-train-4655",
+    "massive-train-5794",
+    "massive-train-2606",
+    "massive-train-2607",
+    "massive-train-2608",
+    "massive-train-2609",
+    "massive-train-2613",
+    "massive-train-2614",
+    "massive-train-2616",
+    "massive-train-2617",
+    "massive-train-2618",
+    "massive-train-2619",
+    "massive-train-2624",
+    "massive-train-2626",
+    "massive-train-2627",
+    "massive-train-2628",
+    "massive-train-2629",
+    "massive-train-2630",
+    "massive-train-2631",
+    "massive-train-2632",
+    "massive-train-2634",
+    "massive-train-2895",
+    "massive-train-2915",
+    "massive-train-2635",
+    "massive-train-2636",
+    "massive-train-2637",
+    "massive-train-2640",
+    "massive-train-2642",
+    "massive-train-2644",
+    "massive-train-2645",
+    "massive-train-2646",
+    "massive-train-2648",
+    "massive-train-2650",
+    "massive-train-2652",
+    "massive-train-2653",
+    "massive-train-2655",
+    "massive-train-2656",
+    "massive-train-2657",
+    "massive-train-2659",
+    "massive-train-2662",
+    "massive-train-2663",
+    "massive-train-2666",
+    "massive-train-2667",
+    "massive-train-2669",
+    "massive-train-2670",
+    "massive-train-2671",
+    "massive-train-2674",
+    "massive-train-2676",
+    "massive-train-2680",
+    "massive-train-2682",
+    "massive-train-2683",
+    "massive-train-2685",
+    "massive-train-2686",
+    "massive-train-2688",
+    "massive-train-2689",
+    "massive-train-2691",
+    "massive-train-2694",
+    "massive-train-2696",
+    "massive-train-2697",
+    "massive-train-2698",
+    "massive-train-2700",
+    "massive-train-2702",
+    "massive-train-2875",
+    "massive-train-2706",
+    "massive-train-2712",
+    "massive-train-2713",
+    "massive-train-2714",
+    "massive-train-2715",
+    "massive-train-2716",
+    "massive-train-2718",
+    "massive-train-2722",
+    "massive-train-2723",
+    "massive-train-2725",
+    "massive-train-2726",
+    "massive-train-2729",
+    "massive-train-2730",
+    "massive-train-2731",
+    "massive-train-2732",
+    "massive-train-2736",
+    "massive-train-2737"
+  ],
+  "validated_sha256": "8d51509a1ae56ae6f6a54802a6d5eb87c63c28859fbae0a347f918d9e02affeb",
+  "unresolved_findings": [],
+  "resolved_findings": [
+    {
+      "source_id": "massive-train-2642",
+      "issue": "Mechanical and unnatural blank-page wording",
+      "resolution": "Natural incomplete report of page region losing content; clarify error_context"
+    }
+  ],
+  "regression_source_ids": [
+    "massive-train-2642"
+  ],
+  "additional_random_seed": 202609303,
+  "additional_random_source_ids": [
+    "massive-train-2718",
+    "massive-train-2603",
+    "massive-train-2452",
+    "massive-train-2405",
+    "massive-train-2730",
+    "massive-train-2537",
+    "massive-train-2592",
+    "massive-train-2725",
+    "massive-train-2646",
+    "massive-train-2915"
+  ],
+  "selection": {
+    "seed": 20260930,
+    "random_source_ids": [
+      "massive-train-2507",
+      "massive-train-2539",
+      "massive-train-2586",
+      "massive-train-2609",
+      "massive-train-2628",
+      "massive-train-2683",
+      "massive-train-2686",
+      "massive-train-2702",
+      "massive-train-2725",
+      "massive-train-2731"
+    ],
+    "directed_source_ids": {
+      "massive-train-2409": [
+        "safety_or_close_boundary",
+        "scope_or_reference",
+        "stratum_coverage"
+      ],
+      "massive-train-2415": [
+        "safety_or_close_boundary",
+        "scope_or_reference"
+      ],
+      "massive-train-2439": [
+        "safety_or_close_boundary"
+      ],
+      "massive-train-2440": [
+        "safety_or_close_boundary"
+      ],
+      "massive-train-2454": [
+        "safety_or_close_boundary",
+        "scope_or_reference"
+      ],
+      "massive-train-2455": [
+        "grounded_parameter",
+        "stratum_coverage"
+      ],
+      "massive-train-2465": [
+        "safety_or_close_boundary",
+        "stratum_coverage"
+      ],
+      "massive-train-2473": [
+        "scope_or_reference"
+      ],
+      "massive-train-2494": [
+        "scope_or_reference"
+      ],
+      "massive-train-2500": [
+        "scope_or_reference"
+      ],
+      "massive-train-2503": [
+        "safety_or_close_boundary",
+        "scope_or_reference"
+      ],
+      "massive-train-2511": [
+        "safety_or_close_boundary"
+      ],
+      "massive-train-2539": [
+        "safety_or_close_boundary"
+      ],
+      "massive-train-2556": [
+        "safety_or_close_boundary"
+      ],
+      "massive-train-2572": [
+        "scope_or_reference"
+      ],
+      "massive-train-2577": [
+        "safety_or_close_boundary",
+        "stratum_coverage"
+      ],
+      "massive-train-2608": [
+        "grounded_parameter"
+      ],
+      "massive-train-2609": [
+        "grounded_parameter"
+      ],
+      "massive-train-2613": [
+        "safety_or_close_boundary"
+      ],
+      "massive-train-2616": [
+        "safety_or_close_boundary"
+      ],
+      "massive-train-2671": [
+        "scope_or_reference"
+      ],
+      "massive-train-2685": [
+        "scope_or_reference"
+      ],
+      "massive-train-2689": [
+        "grounded_parameter"
+      ],
+      "massive-train-2691": [
+        "scope_or_reference"
+      ],
+      "massive-train-2730": [
+        "scope_or_reference"
+      ],
+      "massive-train-2736": [
+        "grounded_parameter"
+      ],
+      "massive-train-5794": [
+        "safety_or_close_boundary"
+      ],
+      "massive-train-8238": [
+        "scope_or_reference"
+      ],
+      "massive-train-2405": [
+        "stratum_coverage"
+      ],
+      "massive-train-2406": [
+        "stratum_coverage"
+      ],
+      "massive-train-2407": [
+        "stratum_coverage"
+      ],
+      "massive-train-2410": [
+        "stratum_coverage"
+      ],
+      "massive-train-2429": [
+        "stratum_coverage"
+      ],
+      "massive-train-2430": [
+        "stratum_coverage"
+      ],
+      "massive-train-2445": [
+        "stratum_coverage"
+      ],
+      "massive-train-2452": [
+        "stratum_coverage"
+      ],
+      "massive-train-2466": [
+        "stratum_coverage"
+      ],
+      "massive-train-2489": [
+        "stratum_coverage"
+      ]
+    },
+    "required_source_ids": [
+      "massive-train-2405",
+      "massive-train-2406",
+      "massive-train-2407",
+      "massive-train-2409",
+      "massive-train-2410",
+      "massive-train-2415",
+      "massive-train-2429",
+      "massive-train-2430",
+      "massive-train-2439",
+      "massive-train-2440",
+      "massive-train-2445",
+      "massive-train-2452",
+      "massive-train-2454",
+      "massive-train-2455",
+      "massive-train-2465",
+      "massive-train-2466",
+      "massive-train-2473",
+      "massive-train-2489",
+      "massive-train-2494",
+      "massive-train-2500",
+      "massive-train-2503",
+      "massive-train-2507",
+      "massive-train-2511",
+      "massive-train-2539",
+      "massive-train-2556",
+      "massive-train-2572",
+      "massive-train-2577",
+      "massive-train-2586",
+      "massive-train-2608",
+      "massive-train-2609",
+      "massive-train-2613",
+      "massive-train-2616",
+      "massive-train-2628",
+      "massive-train-2671",
+      "massive-train-2683",
+      "massive-train-2685",
+      "massive-train-2686",
+      "massive-train-2689",
+      "massive-train-2691",
+      "massive-train-2702",
+      "massive-train-2725",
+      "massive-train-2730",
+      "massive-train-2731",
+      "massive-train-2736",
+      "massive-train-5794",
+      "massive-train-8238"
+    ]
+  },
+  "limitations": [
+    "List sorting is a next query step only. Downstream must honor complete=false and cannot imply entire account ranking beyond returned records.",
+    "Product feature and policy questions do not establish that those features exist."
+  ],
+  "findings_sha256": "e437885394108ac555d11df37fb21e67389c771ebccd390487da023712e331ee",
+  "audit_sha256": "781dc2f677f6a3902fa02a5b3d4f683b1259c056993e39242c0c049a6ddcb397",
+  "source_sha256": "81c6d26647f9b5e16450e9da40637840b536d8d6ac328541087e4022c637b2e8"
+}

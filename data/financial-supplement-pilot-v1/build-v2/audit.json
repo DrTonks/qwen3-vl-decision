@@ -1,0 +1,27 @@
+{
+  "status": "pass",
+  "scope": "structure_and_internal_lexical_duplicates",
+  "independent_semantic_review": false,
+  "external_overlap_review": "pending",
+  "candidate_sha256": "01ef9736f9662571140ec88e4591071163e9698fc78e6848f584c0a202e5110d",
+  "numeric_normalized_duplicates": [],
+  "model_weights_loaded": false,
+  "model_api_requests": 0,
+  "heldout_files_read": false,
+  "training_eligible": false,
+  "tokens": {
+    "action": {
+      "count": 160,
+      "maximum": 525,
+      "minimum": 485,
+      "mean": 496.04
+    },
+    "tool": {
+      "count": 38,
+      "maximum": 566,
+      "minimum": 540,
+      "mean": 545.03
+    }
+  },
+  "no_truncation": true
+}

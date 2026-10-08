@@ -1,0 +1,2649 @@
+{
+  "version": "financial-supplement-heldout-index-v1",
+  "corpora": [
+    {
+      "path": "data/business_zh.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "calibration",
+          "dev",
+          "test"
+        ]
+      },
+      "sha256": "565280522960a6b707d1d5f993c136597f9f9846fc3be63addfb60b1f5b0b418",
+      "file_rows": 192,
+      "selected_rows": 192,
+      "evidence": {
+        "path": "data/business_manifest.json",
+        "sha256": "ef5d90215ab2bde8ac3e4c9fdc3bad0a9c2f9e0044e3e970ff7df6635dd8cf39"
+      }
+    },
+    {
+      "path": "data/massive_zh_test.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "test"
+        ]
+      },
+      "sha256": "aee730f80c0663936a58f4d5895d5aa8accba211bc558472ad64efadcc522e65",
+      "file_rows": 117,
+      "selected_rows": 117,
+      "evidence": {
+        "path": "data/massive_manifest.json",
+        "sha256": "d2ff7d5d1877bcd4968a917b5fb8a63ad69c35c130837ecd6806558c4345011b"
+      }
+    },
+    {
+      "path": "data/processed/support-v6/business-dev.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "development"
+        ]
+      },
+      "sha256": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+      "file_rows": 120,
+      "selected_rows": 120,
+      "evidence": {
+        "path": "data/processed/support-v6/manifest.json",
+        "sha256": "3f0062d85f3bfeaf0dfa3825a2531ed8a246c017abf38ae2713dfd4f30bce5ab"
+      }
+    },
+    {
+      "path": "data/processed/support-v6/business-train.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "523655b142dc49ca86f66763a891efa279350a59c384a60719bf7b2e55d9fa5e",
+      "file_rows": 3901,
+      "selected_rows": 3901,
+      "evidence": {
+        "path": "data/processed/support-v6/manifest.json",
+        "sha256": "3f0062d85f3bfeaf0dfa3825a2531ed8a246c017abf38ae2713dfd4f30bce5ab"
+      }
+    },
+    {
+      "path": "data/processed/support-v6/crosswoz-dev.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "dev"
+        ]
+      },
+      "sha256": "6f7e2f48f3e9e27357e156abc203c53a99229fd8a289841c5702f7c18d069a0a",
+      "file_rows": 150,
+      "selected_rows": 150,
+      "evidence": {
+        "path": "data/processed/support-v6/manifest.json",
+        "sha256": "3f0062d85f3bfeaf0dfa3825a2531ed8a246c017abf38ae2713dfd4f30bce5ab"
+      }
+    },
+    {
+      "path": "data/processed/support-v6/crosswoz-train.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "dbf341f4178a2993a374b8ec42a0fbb34c37bfe5f9af70c1be148314b8db69fd",
+      "file_rows": 300,
+      "selected_rows": 300,
+      "evidence": {
+        "path": "data/processed/support-v6/manifest.json",
+        "sha256": "3f0062d85f3bfeaf0dfa3825a2531ed8a246c017abf38ae2713dfd4f30bce5ab"
+      }
+    },
+    {
+      "path": "data/processed/support-v6/legacy-dev.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "dev"
+        ]
+      },
+      "sha256": "246ba99eab0d0ccc638d08d978d87598230dc41c9a145e963c6e968a03625e10",
+      "file_rows": 402,
+      "selected_rows": 402,
+      "evidence": {
+        "path": "data/processed/support-v6/manifest.json",
+        "sha256": "3f0062d85f3bfeaf0dfa3825a2531ed8a246c017abf38ae2713dfd4f30bce5ab"
+      }
+    },
+    {
+      "path": "data/processed/support-v6/massive-dev.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "dev"
+        ]
+      },
+      "sha256": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+      "file_rows": 273,
+      "selected_rows": 273,
+      "evidence": {
+        "path": "data/processed/support-v6/manifest.json",
+        "sha256": "3f0062d85f3bfeaf0dfa3825a2531ed8a246c017abf38ae2713dfd4f30bce5ab"
+      }
+    },
+    {
+      "path": "data/processed/support-v6/massive-train.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "a085813e51324ed2bd5921f6dcbb40bfc04c6ea625bf2e77dbc2a22eee738bc5",
+      "file_rows": 1200,
+      "selected_rows": 1200,
+      "evidence": {
+        "path": "data/processed/support-v6/manifest.json",
+        "sha256": "3f0062d85f3bfeaf0dfa3825a2531ed8a246c017abf38ae2713dfd4f30bce5ab"
+      }
+    },
+    {
+      "path": "data/processed/support-v7/business-dev.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "development"
+        ]
+      },
+      "sha256": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+      "file_rows": 120,
+      "selected_rows": 120,
+      "evidence": {
+        "path": "data/processed/support-v7/manifest.json",
+        "sha256": "796e88b134c7abf356b58035126a5079a82156c4fa290cfbf9a6a92e32da535f"
+      }
+    },
+    {
+      "path": "data/processed/support-v7/business-train.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "03a95d8d8006c38d5a33bf1f627d31fd24afd19fe27da8e9f4c7e7b8a81657e8",
+      "file_rows": 5901,
+      "selected_rows": 5901,
+      "evidence": {
+        "path": "data/processed/support-v7/manifest.json",
+        "sha256": "796e88b134c7abf356b58035126a5079a82156c4fa290cfbf9a6a92e32da535f"
+      }
+    },
+    {
+      "path": "data/processed/support-v7/crosswoz-dev.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "dev"
+        ]
+      },
+      "sha256": "6f7e2f48f3e9e27357e156abc203c53a99229fd8a289841c5702f7c18d069a0a",
+      "file_rows": 150,
+      "selected_rows": 150,
+      "evidence": {
+        "path": "data/processed/support-v7/manifest.json",
+        "sha256": "796e88b134c7abf356b58035126a5079a82156c4fa290cfbf9a6a92e32da535f"
+      }
+    },
+    {
+      "path": "data/processed/support-v7/crosswoz-train.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "dbf341f4178a2993a374b8ec42a0fbb34c37bfe5f9af70c1be148314b8db69fd",
+      "file_rows": 300,
+      "selected_rows": 300,
+      "evidence": {
+        "path": "data/processed/support-v7/manifest.json",
+        "sha256": "796e88b134c7abf356b58035126a5079a82156c4fa290cfbf9a6a92e32da535f"
+      }
+    },
+    {
+      "path": "data/processed/support-v7/legacy-dev.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "dev"
+        ]
+      },
+      "sha256": "246ba99eab0d0ccc638d08d978d87598230dc41c9a145e963c6e968a03625e10",
+      "file_rows": 402,
+      "selected_rows": 402,
+      "evidence": {
+        "path": "data/processed/support-v7/manifest.json",
+        "sha256": "796e88b134c7abf356b58035126a5079a82156c4fa290cfbf9a6a92e32da535f"
+      }
+    },
+    {
+      "path": "data/processed/support-v7/massive-dev.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "dev"
+        ]
+      },
+      "sha256": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+      "file_rows": 273,
+      "selected_rows": 273,
+      "evidence": {
+        "path": "data/processed/support-v7/manifest.json",
+        "sha256": "796e88b134c7abf356b58035126a5079a82156c4fa290cfbf9a6a92e32da535f"
+      }
+    },
+    {
+      "path": "data/processed/support-v7/massive-train.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "a085813e51324ed2bd5921f6dcbb40bfc04c6ea625bf2e77dbc2a22eee738bc5",
+      "file_rows": 1200,
+      "selected_rows": 1200,
+      "evidence": {
+        "path": "data/processed/support-v7/manifest.json",
+        "sha256": "796e88b134c7abf356b58035126a5079a82156c4fa290cfbf9a6a92e32da535f"
+      }
+    },
+    {
+      "path": "data/processed/support-v8/business-dev.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "development"
+        ]
+      },
+      "sha256": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+      "file_rows": 120,
+      "selected_rows": 120,
+      "evidence": {
+        "path": "data/processed/support-v8/manifest.json",
+        "sha256": "796e88b134c7abf356b58035126a5079a82156c4fa290cfbf9a6a92e32da535f"
+      }
+    },
+    {
+      "path": "data/processed/support-v8/business-train.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "03a95d8d8006c38d5a33bf1f627d31fd24afd19fe27da8e9f4c7e7b8a81657e8",
+      "file_rows": 5901,
+      "selected_rows": 5901,
+      "evidence": {
+        "path": "data/processed/support-v8/manifest.json",
+        "sha256": "796e88b134c7abf356b58035126a5079a82156c4fa290cfbf9a6a92e32da535f"
+      }
+    },
+    {
+      "path": "data/processed/support-v8/crosswoz-dev.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "dev"
+        ]
+      },
+      "sha256": "6f7e2f48f3e9e27357e156abc203c53a99229fd8a289841c5702f7c18d069a0a",
+      "file_rows": 150,
+      "selected_rows": 150,
+      "evidence": {
+        "path": "data/processed/support-v8/manifest.json",
+        "sha256": "796e88b134c7abf356b58035126a5079a82156c4fa290cfbf9a6a92e32da535f"
+      }
+    },
+    {
+      "path": "data/processed/support-v8/crosswoz-train.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "dbf341f4178a2993a374b8ec42a0fbb34c37bfe5f9af70c1be148314b8db69fd",
+      "file_rows": 300,
+      "selected_rows": 300,
+      "evidence": {
+        "path": "data/processed/support-v8/manifest.json",
+        "sha256": "796e88b134c7abf356b58035126a5079a82156c4fa290cfbf9a6a92e32da535f"
+      }
+    },
+    {
+      "path": "data/processed/support-v8/legacy-dev.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "dev"
+        ]
+      },
+      "sha256": "246ba99eab0d0ccc638d08d978d87598230dc41c9a145e963c6e968a03625e10",
+      "file_rows": 402,
+      "selected_rows": 402,
+      "evidence": {
+        "path": "data/processed/support-v8/manifest.json",
+        "sha256": "796e88b134c7abf356b58035126a5079a82156c4fa290cfbf9a6a92e32da535f"
+      }
+    },
+    {
+      "path": "data/processed/support-v8/massive-dev.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "dev"
+        ]
+      },
+      "sha256": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+      "file_rows": 273,
+      "selected_rows": 273,
+      "evidence": {
+        "path": "data/processed/support-v8/manifest.json",
+        "sha256": "796e88b134c7abf356b58035126a5079a82156c4fa290cfbf9a6a92e32da535f"
+      }
+    },
+    {
+      "path": "data/processed/support-v8/massive-train.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "a085813e51324ed2bd5921f6dcbb40bfc04c6ea625bf2e77dbc2a22eee738bc5",
+      "file_rows": 1200,
+      "selected_rows": 1200,
+      "evidence": {
+        "path": "data/processed/support-v8/manifest.json",
+        "sha256": "796e88b134c7abf356b58035126a5079a82156c4fa290cfbf9a6a92e32da535f"
+      }
+    },
+    {
+      "path": "data/processed/v2/business-calibration.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "calibration"
+        ]
+      },
+      "sha256": "52a370d58aa5609d655276ee316ef466b9e4989f7dee0a97495baa9faaa04862",
+      "file_rows": 56,
+      "selected_rows": 56,
+      "evidence": {
+        "path": "data/processed/v2/manifest.json",
+        "sha256": "05f9a80b44a152ff97583424a22baa75b09896a1f712053f09df405d39875599"
+      }
+    },
+    {
+      "path": "data/processed/v2/business-dev.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "dev"
+        ]
+      },
+      "sha256": "dd71581d8aacf297e8dc1ca60270fdd2cdb7c4a930293c16fd89573de61face7",
+      "file_rows": 64,
+      "selected_rows": 64,
+      "evidence": {
+        "path": "data/processed/v2/manifest.json",
+        "sha256": "05f9a80b44a152ff97583424a22baa75b09896a1f712053f09df405d39875599"
+      }
+    },
+    {
+      "path": "data/processed/v2/business-test.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "test"
+        ]
+      },
+      "sha256": "6e0e9eaa663c1cdb6cae9abee349eae85279b3fe905693cab7d8ab9d60fd3f8d",
+      "file_rows": 72,
+      "selected_rows": 72,
+      "evidence": {
+        "path": "data/processed/v2/manifest.json",
+        "sha256": "05f9a80b44a152ff97583424a22baa75b09896a1f712053f09df405d39875599"
+      }
+    },
+    {
+      "path": "data/processed/v2/crosswoz-test.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "test"
+        ]
+      },
+      "sha256": "431918d072a75a39e4572e3b373dd286ed0259f085ac7f2e95bbf76fba1c359e",
+      "file_rows": 200,
+      "selected_rows": 200,
+      "evidence": {
+        "path": "data/processed/v2/manifest.json",
+        "sha256": "05f9a80b44a152ff97583424a22baa75b09896a1f712053f09df405d39875599"
+      }
+    },
+    {
+      "path": "data/processed/v2/massive-calibration.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "calibration"
+        ]
+      },
+      "sha256": "59404c8f4337ee100347a18f0f0b43e29690b4b2f884607ac5c379e9ec8a6cd6",
+      "file_rows": 313,
+      "selected_rows": 313,
+      "evidence": {
+        "path": "data/processed/v2/manifest.json",
+        "sha256": "05f9a80b44a152ff97583424a22baa75b09896a1f712053f09df405d39875599"
+      }
+    },
+    {
+      "path": "data/processed/v2/massive-dev.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "dev"
+        ]
+      },
+      "sha256": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+      "file_rows": 273,
+      "selected_rows": 273,
+      "evidence": {
+        "path": "data/processed/v2/manifest.json",
+        "sha256": "05f9a80b44a152ff97583424a22baa75b09896a1f712053f09df405d39875599"
+      }
+    },
+    {
+      "path": "data/processed/v2/massive-test.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "test"
+        ]
+      },
+      "sha256": "f6835bfc538e57675b47d0affc73a4535e314562e36082f4ed564bb96a60afbb",
+      "file_rows": 2974,
+      "selected_rows": 2974,
+      "evidence": {
+        "path": "data/processed/v2/manifest.json",
+        "sha256": "05f9a80b44a152ff97583424a22baa75b09896a1f712053f09df405d39875599"
+      }
+    },
+    {
+      "path": "data/processed/v2/massive-train.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "fa446cee7ce04196b170173f322f9cf410f29f42e7df4132e43baccd6b2647cb",
+      "file_rows": 1715,
+      "selected_rows": 1715,
+      "evidence": {
+        "path": "data/processed/v2/manifest.json",
+        "sha256": "05f9a80b44a152ff97583424a22baa75b09896a1f712053f09df405d39875599"
+      }
+    },
+    {
+      "path": "data/processed/v4/business-calibration.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "calibration"
+        ]
+      },
+      "sha256": "70548d58094784591ac6eea541cd3bc3553c381c9bbf5b9e85943ba1e0d4a11a",
+      "file_rows": 90,
+      "selected_rows": 90,
+      "evidence": {
+        "path": "data/processed/v4/manifest.json",
+        "sha256": "ba02a3506062cd2c82cfa317fa2c4195205fe6e2359a04c858e3873870aed135"
+      }
+    },
+    {
+      "path": "data/processed/v4/business-dev.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "dev"
+        ]
+      },
+      "sha256": "fa5b46918e449e38ac3d88a1216a762ee17461a4edbbd25ba80b8b45dcd001fd",
+      "file_rows": 90,
+      "selected_rows": 90,
+      "evidence": {
+        "path": "data/processed/v4/manifest.json",
+        "sha256": "ba02a3506062cd2c82cfa317fa2c4195205fe6e2359a04c858e3873870aed135"
+      }
+    },
+    {
+      "path": "data/processed/v4/business-test.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "test"
+        ]
+      },
+      "sha256": "ed42f720dd24901f1603c8cba96096296e7b48339f2ff9649c6c6e4ba20d7260",
+      "file_rows": 180,
+      "selected_rows": 180,
+      "evidence": {
+        "path": "data/processed/v4/manifest.json",
+        "sha256": "ba02a3506062cd2c82cfa317fa2c4195205fe6e2359a04c858e3873870aed135"
+      }
+    },
+    {
+      "path": "data/processed/v4/business-train.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "105fa6d1151c47a16c32663e073b03c854450212ceddd2b01c731f515deb89c7",
+      "file_rows": 2048,
+      "selected_rows": 2048,
+      "evidence": {
+        "path": "data/processed/v4/manifest.json",
+        "sha256": "ba02a3506062cd2c82cfa317fa2c4195205fe6e2359a04c858e3873870aed135"
+      }
+    },
+    {
+      "path": "data/processed/v4/massive-calibration.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "calibration"
+        ]
+      },
+      "sha256": "59404c8f4337ee100347a18f0f0b43e29690b4b2f884607ac5c379e9ec8a6cd6",
+      "file_rows": 313,
+      "selected_rows": 313,
+      "evidence": {
+        "path": "data/processed/v4/manifest.json",
+        "sha256": "ba02a3506062cd2c82cfa317fa2c4195205fe6e2359a04c858e3873870aed135"
+      }
+    },
+    {
+      "path": "data/processed/v4/massive-dev.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "dev"
+        ]
+      },
+      "sha256": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+      "file_rows": 273,
+      "selected_rows": 273,
+      "evidence": {
+        "path": "data/processed/v4/manifest.json",
+        "sha256": "ba02a3506062cd2c82cfa317fa2c4195205fe6e2359a04c858e3873870aed135"
+      }
+    },
+    {
+      "path": "data/processed/v4/massive-test.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "test"
+        ]
+      },
+      "sha256": "f6835bfc538e57675b47d0affc73a4535e314562e36082f4ed564bb96a60afbb",
+      "file_rows": 2974,
+      "selected_rows": 2974,
+      "evidence": {
+        "path": "data/processed/v4/manifest.json",
+        "sha256": "ba02a3506062cd2c82cfa317fa2c4195205fe6e2359a04c858e3873870aed135"
+      }
+    },
+    {
+      "path": "data/processed/v4/massive-train.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "3385d841339741936619be2426427541abbbb2a68840b4f4e53c9549f78a3cfb",
+      "file_rows": 10725,
+      "selected_rows": 10725,
+      "evidence": {
+        "path": "data/processed/v4/manifest.json",
+        "sha256": "ba02a3506062cd2c82cfa317fa2c4195205fe6e2359a04c858e3873870aed135"
+      }
+    },
+    {
+      "path": "data/processed/v5/business-calibration.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "calibration"
+        ]
+      },
+      "sha256": "f9f8fc66ec1c6d3c5cd1b06d51801d272b25ad243986626211a178a336a4b927",
+      "file_rows": 402,
+      "selected_rows": 402,
+      "evidence": {
+        "path": "data/processed/v5/manifest.json",
+        "sha256": "38628f223f9824264196cc11dfc12ec72891b3d6029bc12b7b39a2a8a7efcb92"
+      }
+    },
+    {
+      "path": "data/processed/v5/business-dev.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "dev"
+        ]
+      },
+      "sha256": "246ba99eab0d0ccc638d08d978d87598230dc41c9a145e963c6e968a03625e10",
+      "file_rows": 402,
+      "selected_rows": 402,
+      "evidence": {
+        "path": "data/processed/v5/manifest.json",
+        "sha256": "38628f223f9824264196cc11dfc12ec72891b3d6029bc12b7b39a2a8a7efcb92"
+      }
+    },
+    {
+      "path": "data/processed/v5/business-test.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "test"
+        ]
+      },
+      "sha256": "1b0e3fd2f0de07d94e44f783e7d026c267b9071bd592eb05f5e1efa82dd33c9d",
+      "file_rows": 402,
+      "selected_rows": 402,
+      "evidence": {
+        "path": "data/processed/v5/manifest.json",
+        "sha256": "38628f223f9824264196cc11dfc12ec72891b3d6029bc12b7b39a2a8a7efcb92"
+      }
+    },
+    {
+      "path": "data/processed/v5/business-train.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "58dd7a7e6670f5b9f5a0456f4d7ab0e9a4ac5d96ca14fcdc3c30069138fdd8b1",
+      "file_rows": 4904,
+      "selected_rows": 4904,
+      "evidence": {
+        "path": "data/processed/v5/manifest.json",
+        "sha256": "38628f223f9824264196cc11dfc12ec72891b3d6029bc12b7b39a2a8a7efcb92"
+      }
+    },
+    {
+      "path": "data/processed/v5/crosswoz-calibration.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "calibration"
+        ]
+      },
+      "sha256": "3e707473c3f689a4e831fe309acfe6d5dd31f595d6470f07c052500b50e43ce4",
+      "file_rows": 150,
+      "selected_rows": 150,
+      "evidence": {
+        "path": "data/processed/v5/manifest.json",
+        "sha256": "38628f223f9824264196cc11dfc12ec72891b3d6029bc12b7b39a2a8a7efcb92"
+      }
+    },
+    {
+      "path": "data/processed/v5/crosswoz-dev.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "dev"
+        ]
+      },
+      "sha256": "6f7e2f48f3e9e27357e156abc203c53a99229fd8a289841c5702f7c18d069a0a",
+      "file_rows": 150,
+      "selected_rows": 150,
+      "evidence": {
+        "path": "data/processed/v5/manifest.json",
+        "sha256": "38628f223f9824264196cc11dfc12ec72891b3d6029bc12b7b39a2a8a7efcb92"
+      }
+    },
+    {
+      "path": "data/processed/v5/crosswoz-test.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "test"
+        ]
+      },
+      "sha256": "431918d072a75a39e4572e3b373dd286ed0259f085ac7f2e95bbf76fba1c359e",
+      "file_rows": 200,
+      "selected_rows": 200,
+      "evidence": {
+        "path": "data/processed/v5/manifest.json",
+        "sha256": "38628f223f9824264196cc11dfc12ec72891b3d6029bc12b7b39a2a8a7efcb92"
+      }
+    },
+    {
+      "path": "data/processed/v5/crosswoz-train.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "3dcf83b76c26ee26a1489d50f22b2fca7b25f79fb182af1cc0e52c52e9ab3b9c",
+      "file_rows": 3000,
+      "selected_rows": 3000,
+      "evidence": {
+        "path": "data/processed/v5/manifest.json",
+        "sha256": "38628f223f9824264196cc11dfc12ec72891b3d6029bc12b7b39a2a8a7efcb92"
+      }
+    },
+    {
+      "path": "data/processed/v5/massive-calibration.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "calibration"
+        ]
+      },
+      "sha256": "59404c8f4337ee100347a18f0f0b43e29690b4b2f884607ac5c379e9ec8a6cd6",
+      "file_rows": 313,
+      "selected_rows": 313,
+      "evidence": {
+        "path": "data/processed/v5/manifest.json",
+        "sha256": "38628f223f9824264196cc11dfc12ec72891b3d6029bc12b7b39a2a8a7efcb92"
+      }
+    },
+    {
+      "path": "data/processed/v5/massive-dev.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "dev"
+        ]
+      },
+      "sha256": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+      "file_rows": 273,
+      "selected_rows": 273,
+      "evidence": {
+        "path": "data/processed/v5/manifest.json",
+        "sha256": "38628f223f9824264196cc11dfc12ec72891b3d6029bc12b7b39a2a8a7efcb92"
+      }
+    },
+    {
+      "path": "data/processed/v5/massive-test.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "test"
+        ]
+      },
+      "sha256": "f6835bfc538e57675b47d0affc73a4535e314562e36082f4ed564bb96a60afbb",
+      "file_rows": 2974,
+      "selected_rows": 2974,
+      "evidence": {
+        "path": "data/processed/v5/manifest.json",
+        "sha256": "38628f223f9824264196cc11dfc12ec72891b3d6029bc12b7b39a2a8a7efcb92"
+      }
+    },
+    {
+      "path": "data/processed/v5/massive-train.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "3385d841339741936619be2426427541abbbb2a68840b4f4e53c9549f78a3cfb",
+      "file_rows": 10725,
+      "selected_rows": 10725,
+      "evidence": {
+        "path": "data/processed/v5/manifest.json",
+        "sha256": "38628f223f9824264196cc11dfc12ec72891b3d6029bc12b7b39a2a8a7efcb92"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v1/development-cases.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "development"
+        ]
+      },
+      "sha256": "af03d4405df40d620e3d7e68ed5c7139abbf6eef6b3f743d1c939376a945a97a",
+      "file_rows": 120,
+      "selected_rows": 120,
+      "evidence": {
+        "path": "data/support-curriculum-v1/manifest.json",
+        "sha256": "ce524c72b2bb8c03dd6eb0aeb54eab999adf1ef0ba2069321902483a9126beca"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v1/development-candidates.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "development"
+        ]
+      },
+      "sha256": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+      "file_rows": 120,
+      "selected_rows": 120,
+      "evidence": {
+        "path": "data/support-curriculum-v1/manifest.json",
+        "sha256": "ce524c72b2bb8c03dd6eb0aeb54eab999adf1ef0ba2069321902483a9126beca"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v1/calibration-cases.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "calibration"
+        ]
+      },
+      "sha256": "7381e70f2e2a9a566f73f1bfa4fb2414b700c6ee5ad7fd17131e453924d12080",
+      "file_rows": 120,
+      "selected_rows": 120,
+      "evidence": {
+        "path": "data/support-curriculum-v1/manifest.json",
+        "sha256": "ce524c72b2bb8c03dd6eb0aeb54eab999adf1ef0ba2069321902483a9126beca"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v1/calibration-candidates.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "calibration"
+        ]
+      },
+      "sha256": "aee2f3cb4a1c60c6818c017338b703e6e256a3780b7d0e0b1c91bb3ac9218e5e",
+      "file_rows": 110,
+      "selected_rows": 110,
+      "evidence": {
+        "path": "data/support-curriculum-v1/manifest.json",
+        "sha256": "ce524c72b2bb8c03dd6eb0aeb54eab999adf1ef0ba2069321902483a9126beca"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v1/challenge-cases.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "challenge"
+        ]
+      },
+      "sha256": "9115860368b78e57e9f9978fe115b3f7c406950c9db459349b0ab1b36806b0ff",
+      "file_rows": 90,
+      "selected_rows": 90,
+      "evidence": {
+        "path": "data/support-curriculum-v1/manifest.json",
+        "sha256": "ce524c72b2bb8c03dd6eb0aeb54eab999adf1ef0ba2069321902483a9126beca"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v1/challenge-model-candidates.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "challenge"
+        ]
+      },
+      "sha256": "d81c333afd3e7c378597ede8339d6a8af3b48c9d72fa04297deeb3dd3fe773c8",
+      "file_rows": 79,
+      "selected_rows": 79,
+      "evidence": {
+        "path": "data/support-curriculum-v1/manifest.json",
+        "sha256": "ce524c72b2bb8c03dd6eb0aeb54eab999adf1ef0ba2069321902483a9126beca"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v1/train-cases.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "32f3e1531b400d7bb8dbfd9ab6a61600943a6f43009bf1ed957ebcda9acf4c54",
+      "file_rows": 360,
+      "selected_rows": 360,
+      "evidence": {
+        "path": "data/support-curriculum-v1/manifest.json",
+        "sha256": "ce524c72b2bb8c03dd6eb0aeb54eab999adf1ef0ba2069321902483a9126beca"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v1/train-candidates.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "8f2daeb4e00bf7581c62955d5ffbda929e9275210905f5e83d26c065e84a88c0",
+      "file_rows": 298,
+      "selected_rows": 298,
+      "evidence": {
+        "path": "data/support-curriculum-v1/manifest.json",
+        "sha256": "ce524c72b2bb8c03dd6eb0aeb54eab999adf1ef0ba2069321902483a9126beca"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v2/development-cases.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "development"
+        ]
+      },
+      "sha256": "af03d4405df40d620e3d7e68ed5c7139abbf6eef6b3f743d1c939376a945a97a",
+      "file_rows": 120,
+      "selected_rows": 120,
+      "evidence": {
+        "path": "data/support-curriculum-v2/manifest.json",
+        "sha256": "27c33a605b712bd02db4f3fcb5803403111b36f8beb2a34fd28f0464841a4b2d"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v2/development-candidates.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "development"
+        ]
+      },
+      "sha256": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+      "file_rows": 120,
+      "selected_rows": 120,
+      "evidence": {
+        "path": "data/support-curriculum-v2/manifest.json",
+        "sha256": "27c33a605b712bd02db4f3fcb5803403111b36f8beb2a34fd28f0464841a4b2d"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v2/calibration-cases.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "calibration"
+        ]
+      },
+      "sha256": "7381e70f2e2a9a566f73f1bfa4fb2414b700c6ee5ad7fd17131e453924d12080",
+      "file_rows": 120,
+      "selected_rows": 120,
+      "evidence": {
+        "path": "data/support-curriculum-v2/manifest.json",
+        "sha256": "27c33a605b712bd02db4f3fcb5803403111b36f8beb2a34fd28f0464841a4b2d"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v2/calibration-candidates.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "calibration"
+        ]
+      },
+      "sha256": "aee2f3cb4a1c60c6818c017338b703e6e256a3780b7d0e0b1c91bb3ac9218e5e",
+      "file_rows": 110,
+      "selected_rows": 110,
+      "evidence": {
+        "path": "data/support-curriculum-v2/manifest.json",
+        "sha256": "27c33a605b712bd02db4f3fcb5803403111b36f8beb2a34fd28f0464841a4b2d"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v2/challenge-cases.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "challenge"
+        ]
+      },
+      "sha256": "9115860368b78e57e9f9978fe115b3f7c406950c9db459349b0ab1b36806b0ff",
+      "file_rows": 90,
+      "selected_rows": 90,
+      "evidence": {
+        "path": "data/support-curriculum-v2/manifest.json",
+        "sha256": "27c33a605b712bd02db4f3fcb5803403111b36f8beb2a34fd28f0464841a4b2d"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v2/challenge-model-candidates.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "challenge"
+        ]
+      },
+      "sha256": "d81c333afd3e7c378597ede8339d6a8af3b48c9d72fa04297deeb3dd3fe773c8",
+      "file_rows": 79,
+      "selected_rows": 79,
+      "evidence": {
+        "path": "data/support-curriculum-v2/manifest.json",
+        "sha256": "27c33a605b712bd02db4f3fcb5803403111b36f8beb2a34fd28f0464841a4b2d"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v2/train-candidates.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "d736fbebe787c77ccba4c2a8ff898e36582f972bb41896c3164b67d20fdfd4ba",
+      "file_rows": 3922,
+      "selected_rows": 3922,
+      "evidence": {
+        "path": "data/support-curriculum-v2/manifest.json",
+        "sha256": "27c33a605b712bd02db4f3fcb5803403111b36f8beb2a34fd28f0464841a4b2d"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v2/train-reviewed-only.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": null,
+        "include_splits": []
+      },
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "file_rows": 0,
+      "selected_rows": 0,
+      "evidence": {
+        "path": "data/support-curriculum-v2/manifest.json",
+        "sha256": "27c33a605b712bd02db4f3fcb5803403111b36f8beb2a34fd28f0464841a4b2d"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v2/cases.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "02a833e9003a38bf484598b72a914ecde915ab246a18da4136cf0136345fbde2",
+      "file_rows": 3946,
+      "selected_rows": 3946,
+      "evidence": {
+        "path": "data/support-curriculum-v2/manifest.json",
+        "sha256": "27c33a605b712bd02db4f3fcb5803403111b36f8beb2a34fd28f0464841a4b2d"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v2-reviewed-01/development-cases.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "development"
+        ]
+      },
+      "sha256": "af03d4405df40d620e3d7e68ed5c7139abbf6eef6b3f743d1c939376a945a97a",
+      "file_rows": 120,
+      "selected_rows": 120,
+      "evidence": {
+        "path": "data/support-curriculum-v2-reviewed-01/manifest.json",
+        "sha256": "3b4d28aaeef76a5fd03ab9cda5fe1ab8bdacdde0919c2c0e2f9199f0dcf86063"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v2-reviewed-01/development-candidates.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "development"
+        ]
+      },
+      "sha256": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+      "file_rows": 120,
+      "selected_rows": 120,
+      "evidence": {
+        "path": "data/support-curriculum-v2-reviewed-01/manifest.json",
+        "sha256": "3b4d28aaeef76a5fd03ab9cda5fe1ab8bdacdde0919c2c0e2f9199f0dcf86063"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v2-reviewed-01/calibration-cases.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "calibration"
+        ]
+      },
+      "sha256": "7381e70f2e2a9a566f73f1bfa4fb2414b700c6ee5ad7fd17131e453924d12080",
+      "file_rows": 120,
+      "selected_rows": 120,
+      "evidence": {
+        "path": "data/support-curriculum-v2-reviewed-01/manifest.json",
+        "sha256": "3b4d28aaeef76a5fd03ab9cda5fe1ab8bdacdde0919c2c0e2f9199f0dcf86063"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v2-reviewed-01/calibration-candidates.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "calibration"
+        ]
+      },
+      "sha256": "aee2f3cb4a1c60c6818c017338b703e6e256a3780b7d0e0b1c91bb3ac9218e5e",
+      "file_rows": 110,
+      "selected_rows": 110,
+      "evidence": {
+        "path": "data/support-curriculum-v2-reviewed-01/manifest.json",
+        "sha256": "3b4d28aaeef76a5fd03ab9cda5fe1ab8bdacdde0919c2c0e2f9199f0dcf86063"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v2-reviewed-01/challenge-cases.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "challenge"
+        ]
+      },
+      "sha256": "9115860368b78e57e9f9978fe115b3f7c406950c9db459349b0ab1b36806b0ff",
+      "file_rows": 90,
+      "selected_rows": 90,
+      "evidence": {
+        "path": "data/support-curriculum-v2-reviewed-01/manifest.json",
+        "sha256": "3b4d28aaeef76a5fd03ab9cda5fe1ab8bdacdde0919c2c0e2f9199f0dcf86063"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v2-reviewed-01/challenge-model-candidates.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "challenge"
+        ]
+      },
+      "sha256": "d81c333afd3e7c378597ede8339d6a8af3b48c9d72fa04297deeb3dd3fe773c8",
+      "file_rows": 79,
+      "selected_rows": 79,
+      "evidence": {
+        "path": "data/support-curriculum-v2-reviewed-01/manifest.json",
+        "sha256": "3b4d28aaeef76a5fd03ab9cda5fe1ab8bdacdde0919c2c0e2f9199f0dcf86063"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v2-reviewed-01/train-candidates.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "523655b142dc49ca86f66763a891efa279350a59c384a60719bf7b2e55d9fa5e",
+      "file_rows": 3901,
+      "selected_rows": 3901,
+      "evidence": {
+        "path": "data/support-curriculum-v2-reviewed-01/manifest.json",
+        "sha256": "3b4d28aaeef76a5fd03ab9cda5fe1ab8bdacdde0919c2c0e2f9199f0dcf86063"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v2-reviewed-01/train-reviewed-only.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "523655b142dc49ca86f66763a891efa279350a59c384a60719bf7b2e55d9fa5e",
+      "file_rows": 3901,
+      "selected_rows": 3901,
+      "evidence": {
+        "path": "data/support-curriculum-v2-reviewed-01/manifest.json",
+        "sha256": "3b4d28aaeef76a5fd03ab9cda5fe1ab8bdacdde0919c2c0e2f9199f0dcf86063"
+      }
+    },
+    {
+      "path": "data/support-curriculum-v2-reviewed-01/cases.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "92b0dffd6f7c06ad84e340c82e899dca95dfa9d3041c8b601d1d961f77738c6c",
+      "file_rows": 3946,
+      "selected_rows": 3946,
+      "evidence": {
+        "path": "data/support-curriculum-v2-reviewed-01/manifest.json",
+        "sha256": "3b4d28aaeef76a5fd03ab9cda5fe1ab8bdacdde0919c2c0e2f9199f0dcf86063"
+      }
+    },
+    {
+      "path": "data/support-runtime-v1/cases.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": null,
+        "include_splits": []
+      },
+      "sha256": "f6c67a9af3cbea4c2ec49e1a58fd8294e4edfb8ad8417317a48c760d4530c1d4",
+      "file_rows": 139,
+      "selected_rows": 139,
+      "evidence": {
+        "path": "data/support-runtime-v1/manifest.json",
+        "sha256": "44a46bf58754c12ae7b9e244bd955433182d7e6d88b9e0acba68b23f9c31c5ae"
+      }
+    },
+    {
+      "path": "data/support-runtime-v1/deferred-cases.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": null,
+        "include_splits": []
+      },
+      "sha256": "aa5cc19d1d2cead4b28e8c949aa5adc8bbcf89cf8a6d08cfdf055ba45140bc0b",
+      "file_rows": 9,
+      "selected_rows": 9,
+      "evidence": {
+        "path": "data/support-runtime-v1/manifest.json",
+        "sha256": "44a46bf58754c12ae7b9e244bd955433182d7e6d88b9e0acba68b23f9c31c5ae"
+      }
+    },
+    {
+      "path": "data/support-fresh-holdout-v1/cases.jsonl",
+      "format": "jsonl",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "message"
+        ],
+        "history_path": [
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "fresh_evaluation"
+        ]
+      },
+      "sha256": "1df9d0d1c0a2d2f04cc4b22d3667fb315d11a63601a0c5279b06b57ddeffa3be",
+      "file_rows": 128,
+      "selected_rows": 128,
+      "evidence": {
+        "path": "data/support-fresh-holdout-v1/manifest.json",
+        "sha256": "b1b303d763510b16649b8931c9a72b350083ff89401a67fadd81aa6b29459290"
+      }
+    },
+    {
+      "path": "data/financial-eight-actions-v2/evaluation/development.json",
+      "format": "json_array",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "input",
+          "message"
+        ],
+        "history_path": [
+          "input",
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "development"
+        ]
+      },
+      "sha256": "fdce2ab94a32ae72b8a032bb529fb7a47117f6c0497c54d6dbde07720f1da6eb",
+      "file_rows": 384,
+      "selected_rows": 384,
+      "evidence": {
+        "path": "data/financial-eight-actions-v2/manifest.json",
+        "sha256": "94e8454e17a2f4ae716c0f03385c18e1844d1162622cf9fe8cd3ee43796eaf30"
+      }
+    },
+    {
+      "path": "data/financial-service-v2/development.json",
+      "format": "json_array",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "input",
+          "message"
+        ],
+        "history_path": [
+          "input",
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "development"
+        ]
+      },
+      "sha256": "56bd31ebfa75633143fefa5d6ae2dd77709a17d2bde642a583675ce638f558eb",
+      "file_rows": 128,
+      "selected_rows": 128,
+      "evidence": {
+        "path": "data/financial-service-v2/evaluation-manifest.json",
+        "sha256": "592ef937ce71a860d56c78f23afcdf7d2f4f5cf71621b5bf4b342e766f2e912f"
+      }
+    },
+    {
+      "path": "data/financial-eight-actions-v2/evaluation/calibration.json",
+      "format": "json_array",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "input",
+          "message"
+        ],
+        "history_path": [
+          "input",
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "calibration"
+        ]
+      },
+      "sha256": "773af48da01a07fb533628cc0308626952a0dd5315beaa540b52d87a59500534",
+      "file_rows": 256,
+      "selected_rows": 256,
+      "evidence": {
+        "path": "data/financial-eight-actions-v2/manifest.json",
+        "sha256": "94e8454e17a2f4ae716c0f03385c18e1844d1162622cf9fe8cd3ee43796eaf30"
+      }
+    },
+    {
+      "path": "data/financial-service-v2/calibration.json",
+      "format": "json_array",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "input",
+          "message"
+        ],
+        "history_path": [
+          "input",
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "calibration"
+        ]
+      },
+      "sha256": "94f6f579a43b9da9a9e5ca9abc8804acbb38cad904cb0aed31f0f90fbeee7158",
+      "file_rows": 96,
+      "selected_rows": 96,
+      "evidence": {
+        "path": "data/financial-service-v2/evaluation-manifest.json",
+        "sha256": "592ef937ce71a860d56c78f23afcdf7d2f4f5cf71621b5bf4b342e766f2e912f"
+      }
+    },
+    {
+      "path": "data/financial-eight-actions-v2/evaluation/final.json",
+      "format": "json_array",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "input",
+          "message"
+        ],
+        "history_path": [
+          "input",
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "final"
+        ]
+      },
+      "sha256": "62c393b1462cdb40ca3d1141beda87d7f1769fa379df0c869772d0c1848abf17",
+      "file_rows": 512,
+      "selected_rows": 512,
+      "evidence": {
+        "path": "data/financial-eight-actions-v2/manifest.json",
+        "sha256": "94e8454e17a2f4ae716c0f03385c18e1844d1162622cf9fe8cd3ee43796eaf30"
+      }
+    },
+    {
+      "path": "data/financial-service-v2/final.json",
+      "format": "json_array",
+      "role": "heldout",
+      "reader": {
+        "message_path": [
+          "input",
+          "message"
+        ],
+        "history_path": [
+          "input",
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "final"
+        ]
+      },
+      "sha256": "6cfe11b034254f241639ffe4f6762521d0cb6f3c21f3ea2c818f42d3c4fba35f",
+      "file_rows": 160,
+      "selected_rows": 160,
+      "evidence": {
+        "path": "data/financial-service-v2/evaluation-manifest.json",
+        "sha256": "592ef937ce71a860d56c78f23afcdf7d2f4f5cf71621b5bf4b342e766f2e912f"
+      }
+    },
+    {
+      "path": "data/financial-eight-actions-v2/train-additions.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "input",
+          "message"
+        ],
+        "history_path": [
+          "input",
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "16c640146abd3b12307c6f63c12b35389ee9726fba89f28019ab4e0efd50cc46",
+      "file_rows": 850,
+      "selected_rows": 850,
+      "evidence": {
+        "path": "data/financial-eight-actions-v2/manifest.json",
+        "sha256": "94e8454e17a2f4ae716c0f03385c18e1844d1162622cf9fe8cd3ee43796eaf30"
+      }
+    },
+    {
+      "path": "data/financial-service-v2/train.json",
+      "format": "json_array",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "input",
+          "message"
+        ],
+        "history_path": [
+          "input",
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "e12e359809ccb162ac242b2661b3f995b0e7bc44b5e8595c94e982c68bd5f021",
+      "file_rows": 11756,
+      "selected_rows": 11756,
+      "evidence": {
+        "path": "data/financial-service-v2/train-manifest.json",
+        "sha256": "197d8b63331cf568356ece3e10184bf9457fbd8f64c339bfc5ebc7025c650e63"
+      }
+    },
+    {
+      "path": "data/financial-boundary-training-v1/training.json",
+      "format": "json_array",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "input",
+          "message"
+        ],
+        "history_path": [
+          "input",
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "e4169b754df692e90086a6e7d68f188575a03ae1b65c68c283f40b028bfb1949",
+      "file_rows": 336,
+      "selected_rows": 336,
+      "evidence": {
+        "path": "data/financial-boundary-training-v1/manifest.json",
+        "sha256": "19f3f1941cf2e7a6dc44d4e18e8ed3867fcf0dac480dfd93e2f0554fdff68611"
+      }
+    },
+    {
+      "path": "data/financial-training-text-v1/parts/part-0001.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "input",
+          "message"
+        ],
+        "history_path": [
+          "input",
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "0916ad37760cd3e89fbb9f09f680584da43e6f81d872efd5273ae1843d5996c4",
+      "file_rows": 1000,
+      "selected_rows": 1000,
+      "evidence": {
+        "path": "data/financial-training-text-v1/manifest.json",
+        "sha256": "5f4d778d584b02557a67e1fe0097c17dc2eb418213a28f0ca0e137243a807773"
+      }
+    },
+    {
+      "path": "data/financial-training-text-v1/parts/part-0002.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "input",
+          "message"
+        ],
+        "history_path": [
+          "input",
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "19d6ed5299923a578af4f8f07c382e22dca43a1250667ac04f2a93c29a2cf686",
+      "file_rows": 1000,
+      "selected_rows": 1000,
+      "evidence": {
+        "path": "data/financial-training-text-v1/manifest.json",
+        "sha256": "5f4d778d584b02557a67e1fe0097c17dc2eb418213a28f0ca0e137243a807773"
+      }
+    },
+    {
+      "path": "data/financial-training-text-v1/parts/part-0003.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "input",
+          "message"
+        ],
+        "history_path": [
+          "input",
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "a5f29c958d39ba91c8635f4f32a0030cec52f44be8e91d2cc502d30a7b318c4d",
+      "file_rows": 1000,
+      "selected_rows": 1000,
+      "evidence": {
+        "path": "data/financial-training-text-v1/manifest.json",
+        "sha256": "5f4d778d584b02557a67e1fe0097c17dc2eb418213a28f0ca0e137243a807773"
+      }
+    },
+    {
+      "path": "data/financial-training-text-v1/parts/part-0004.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "input",
+          "message"
+        ],
+        "history_path": [
+          "input",
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "778ebf7a7b0d0230678c3e5d80dd5652e7080e5b40e879bbe7ff2907eb0d1e5f",
+      "file_rows": 1000,
+      "selected_rows": 1000,
+      "evidence": {
+        "path": "data/financial-training-text-v1/manifest.json",
+        "sha256": "5f4d778d584b02557a67e1fe0097c17dc2eb418213a28f0ca0e137243a807773"
+      }
+    },
+    {
+      "path": "data/financial-training-text-v1/parts/part-0005.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "input",
+          "message"
+        ],
+        "history_path": [
+          "input",
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "729295ba5bc1112b231a19c9eeb6b75914a0f149db05d17ee85fee6198a5d73d",
+      "file_rows": 1000,
+      "selected_rows": 1000,
+      "evidence": {
+        "path": "data/financial-training-text-v1/manifest.json",
+        "sha256": "5f4d778d584b02557a67e1fe0097c17dc2eb418213a28f0ca0e137243a807773"
+      }
+    },
+    {
+      "path": "data/financial-training-text-v1/parts/part-0006.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "input",
+          "message"
+        ],
+        "history_path": [
+          "input",
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "877b27a3b0b65930c0cdb6858e9eee9ec5dc559184758ff02d4d480ad271649c",
+      "file_rows": 1000,
+      "selected_rows": 1000,
+      "evidence": {
+        "path": "data/financial-training-text-v1/manifest.json",
+        "sha256": "5f4d778d584b02557a67e1fe0097c17dc2eb418213a28f0ca0e137243a807773"
+      }
+    },
+    {
+      "path": "data/financial-training-text-v1/parts/part-0007.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "input",
+          "message"
+        ],
+        "history_path": [
+          "input",
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "e66b1eea90f8d18a2259586f29768fe1d6ecd498262792c191f80b0ba0810ef2",
+      "file_rows": 1000,
+      "selected_rows": 1000,
+      "evidence": {
+        "path": "data/financial-training-text-v1/manifest.json",
+        "sha256": "5f4d778d584b02557a67e1fe0097c17dc2eb418213a28f0ca0e137243a807773"
+      }
+    },
+    {
+      "path": "data/financial-training-text-v1/parts/part-0008.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "input",
+          "message"
+        ],
+        "history_path": [
+          "input",
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "8f0760b77aa0a0f1745b4ce1afc6ad6769872a9ab3cbe0f5443c49ff844c1950",
+      "file_rows": 1000,
+      "selected_rows": 1000,
+      "evidence": {
+        "path": "data/financial-training-text-v1/manifest.json",
+        "sha256": "5f4d778d584b02557a67e1fe0097c17dc2eb418213a28f0ca0e137243a807773"
+      }
+    },
+    {
+      "path": "data/financial-training-text-v1/parts/part-0009.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "input",
+          "message"
+        ],
+        "history_path": [
+          "input",
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "ec0ca7a13b316c84b623fb88b89b244ef54e04ea7be5796eeb70883bb110c1ca",
+      "file_rows": 1000,
+      "selected_rows": 1000,
+      "evidence": {
+        "path": "data/financial-training-text-v1/manifest.json",
+        "sha256": "5f4d778d584b02557a67e1fe0097c17dc2eb418213a28f0ca0e137243a807773"
+      }
+    },
+    {
+      "path": "data/financial-training-text-v1/parts/part-0010.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "input",
+          "message"
+        ],
+        "history_path": [
+          "input",
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "ac2fc39c27afc4ccfa5e9de847ed03713b79cafe5694d371f70e453f4a8562d4",
+      "file_rows": 1000,
+      "selected_rows": 1000,
+      "evidence": {
+        "path": "data/financial-training-text-v1/manifest.json",
+        "sha256": "5f4d778d584b02557a67e1fe0097c17dc2eb418213a28f0ca0e137243a807773"
+      }
+    },
+    {
+      "path": "data/financial-training-text-v1/parts/part-0011.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "input",
+          "message"
+        ],
+        "history_path": [
+          "input",
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "3ae481330892796ee853001ba69071b8a93176c6ca62ad2f2342d49044d4b007",
+      "file_rows": 1000,
+      "selected_rows": 1000,
+      "evidence": {
+        "path": "data/financial-training-text-v1/manifest.json",
+        "sha256": "5f4d778d584b02557a67e1fe0097c17dc2eb418213a28f0ca0e137243a807773"
+      }
+    },
+    {
+      "path": "data/financial-training-text-v1/parts/part-0012.jsonl",
+      "format": "jsonl",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "input",
+          "message"
+        ],
+        "history_path": [
+          "input",
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "a4200e7e05818ffb08c9aca4752450ee1cf26bf344b4c235e376691909f9ce88",
+      "file_rows": 49,
+      "selected_rows": 49,
+      "evidence": {
+        "path": "data/financial-training-text-v1/manifest.json",
+        "sha256": "5f4d778d584b02557a67e1fe0097c17dc2eb418213a28f0ca0e137243a807773"
+      }
+    },
+    {
+      "path": "data/financial-sampling-study-v1/pool-v1/train.json",
+      "format": "json_array",
+      "role": "training_pool",
+      "reader": {
+        "message_path": [
+          "input",
+          "message"
+        ],
+        "history_path": [
+          "input",
+          "history"
+        ],
+        "missing_history": "empty",
+        "split_field": "split",
+        "include_splits": [
+          "train"
+        ]
+      },
+      "sha256": "8b524ae86533d7b55e1add23e4b0b44591c68b615ecf767f34ec4a0d5a166f72",
+      "file_rows": 13242,
+      "selected_rows": 13242,
+      "evidence": {
+        "path": "data/financial-sampling-study-v1/pool-v1/manifest.json",
+        "sha256": "56bee2bdaa144351ade5f120a65899093369b576fa9934a74ebf40761cde004d"
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "path": "configs/support-v8.json",
+      "sha256": "36d6f9f458fe92b642ac179138da654cdc1b969bceef5538863eaf454357899c"
+    },
+    {
+      "path": "configs/financial-eight-actions-pilot-v2.json",
+      "sha256": "1c72a03bab3458d3ad3d81d9847d96e2fbcf86ec122387b86e411a6dc5036c78"
+    },
+    {
+      "path": "configs/financial-service-v2-study.json",
+      "sha256": "31b7b3b8fa47f1c0f9924cf9531e3cddc2e854c21e2a7c57a7df01f13a97a7ef"
+    },
+    {
+      "path": "results/joint-v5/data-manifest.json",
+      "sha256": "38628f223f9824264196cc11dfc12ec72891b3d6029bc12b7b39a2a8a7efcb92"
+    },
+    {
+      "path": "results/phase2/data-manifest.json",
+      "sha256": "05f9a80b44a152ff97583424a22baa75b09896a1f712053f09df405d39875599"
+    },
+    {
+      "path": "results/support-v6/data-manifest.json",
+      "sha256": "3f0062d85f3bfeaf0dfa3825a2531ed8a246c017abf38ae2713dfd4f30bce5ab"
+    },
+    {
+      "path": "results/support-v7/data-manifest.json",
+      "sha256": "796e88b134c7abf356b58035126a5079a82156c4fa290cfbf9a6a92e32da535f"
+    },
+    {
+      "path": "results/support-v8/data-manifest.json",
+      "sha256": "796e88b134c7abf356b58035126a5079a82156c4fa290cfbf9a6a92e32da535f"
+    },
+    {
+      "path": "results/support-v8-setup-failure-01/data-manifest.json",
+      "sha256": "796e88b134c7abf356b58035126a5079a82156c4fa290cfbf9a6a92e32da535f"
+    },
+    {
+      "path": "configs/financial-supplement-heldout-index-v1.json",
+      "sha256": "766fe0a801bd2d750f8960379448674d0e7f2457c7530cc2da267897b64f375c"
+    }
+  ],
+  "counts": {
+    "heldout": {
+      "entries": 63,
+      "selected_rows_with_snapshot_repetition": 20011,
+      "unique_file_sha256": 32
+    },
+    "training_pool": {
+      "entries": 39,
+      "selected_rows_with_snapshot_repetition": 110827,
+      "unique_file_sha256": 31
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "rows": 11756,
+  "groups": 5647,
+  "actions": {
+    "clarify": 1390,
+    "retrieve": 2483,
+    "tool": 2205,
+    "human": 1376,
+    "answer": 2066,
+    "refuse": 992,
+    "close": 634,
+    "redirect": 610
+  },
+  "cohorts": {
+    "preauth-robustness": 4322,
+    "planned-retrieval": 6860,
+    "current-service": 574
+  },
+  "cohort_actions": {
+    "current-service": {
+      "answer": 66,
+      "tool": 323,
+      "clarify": 55,
+      "human": 44,
+      "redirect": 30,
+      "refuse": 31,
+      "close": 25
+    },
+    "planned-retrieval": {
+      "retrieve": 1220,
+      "tool": 1882,
+      "answer": 962,
+      "clarify": 645,
+      "close": 321,
+      "human": 958,
+      "refuse": 597,
+      "redirect": 275
+    },
+    "preauth-robustness": {
+      "clarify": 690,
+      "retrieve": 1263,
+      "human": 374,
+      "refuse": 364,
+      "redirect": 305,
+      "answer": 1038,
+      "close": 288
+    }
+  },
+  "profiles": {
+    "planned-kb": 10951,
+    "current-node-no-kb": 805
+  },
+  "source_rows": 12235,
+  "excluded_rows": 479,
+  "excluded_groups": 102,
+  "explicit_revisions_applied": 10,
+  "full_new_policy_semantic_review": false,
+  "training_eligible": false
+}

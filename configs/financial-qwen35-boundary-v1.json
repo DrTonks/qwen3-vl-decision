@@ -1,0 +1,56 @@
+{
+  "version": "financial-qwen35-boundary-v1",
+  "initial_run": "financial-qwen35-v1",
+  "initial_step": 2976,
+  "train_rows": 12235,
+  "original_rows": 11899,
+  "added_rows": 336,
+  "micro_batch": 2,
+  "effective_batch": 8,
+  "max_steps": 1530,
+  "seed": 20261002,
+  "learning_rate": 1e-05,
+  "warmup_steps": 50,
+  "checkpoint_steps": [
+    384,
+    768,
+    1530
+  ],
+  "save_every_steps": 100,
+  "model_api_requests": 0,
+  "development_gate": {
+    "minimum_macro_f1_gain_over_same_prompt_base": 0.01,
+    "minimum_per_action_recall": 0.8,
+    "minimum_human_recall": 0.95,
+    "maximum_extra_human_misses_over_base": 0,
+    "maximum_extra_false_refusals_on_non_refuse_over_base": 0,
+    "maximum_unavailable_knowledge_retrievals": 0,
+    "minimum_joint_action_tool_accuracy_on_true_tool": 0.9,
+    "minimum_status_tool_accuracy": 0.9
+  },
+  "calibration": {
+    "temperatures": [
+      0.25,
+      0.5,
+      0.75,
+      1,
+      1.5,
+      2,
+      3,
+      4
+    ],
+    "thresholds": [
+      0,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.98
+    ],
+    "usage": "after passing development only; action NLL temperature then largest accepted coverage with >=95% observed accuracy and zero human misses, false refusals, unavailable retrieval; defer unexecuted",
+    "never_train": true
+  }
+}

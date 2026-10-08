@@ -1,0 +1,148 @@
+{
+  "development": {
+    "rows": 128,
+    "groups": 32,
+    "actions": {
+      "tool": 18,
+      "answer": 29,
+      "clarify": 14,
+      "human": 27,
+      "refuse": 18,
+      "close": 6,
+      "redirect": 4,
+      "retrieve": 12
+    },
+    "cohorts": {
+      "current-service": 64,
+      "planned-retrieval": 32,
+      "preauth-robustness": 32
+    },
+    "cohort_actions": {
+      "current-service": {
+        "tool": 16,
+        "answer": 16,
+        "clarify": 4,
+        "human": 14,
+        "refuse": 9,
+        "close": 3,
+        "redirect": 2
+      },
+      "planned-retrieval": {
+        "retrieve": 12,
+        "human": 9,
+        "answer": 5,
+        "refuse": 4,
+        "tool": 2
+      },
+      "preauth-robustness": {
+        "clarify": 10,
+        "answer": 8,
+        "refuse": 5,
+        "human": 4,
+        "close": 3,
+        "redirect": 2
+      }
+    },
+    "profiles": {
+      "current-node-no-kb": 96,
+      "planned-kb": 32
+    }
+  },
+  "calibration": {
+    "rows": 96,
+    "groups": 24,
+    "actions": {
+      "tool": 17,
+      "human": 25,
+      "answer": 15,
+      "clarify": 7,
+      "refuse": 14,
+      "close": 4,
+      "retrieve": 11,
+      "redirect": 3
+    },
+    "cohorts": {
+      "current-service": 48,
+      "planned-retrieval": 24,
+      "preauth-robustness": 24
+    },
+    "cohort_actions": {
+      "current-service": {
+        "tool": 17,
+        "human": 13,
+        "answer": 7,
+        "clarify": 3,
+        "refuse": 6,
+        "close": 2
+      },
+      "planned-retrieval": {
+        "retrieve": 11,
+        "human": 7,
+        "answer": 2,
+        "refuse": 4
+      },
+      "preauth-robustness": {
+        "clarify": 4,
+        "answer": 6,
+        "refuse": 4,
+        "human": 5,
+        "redirect": 3,
+        "close": 2
+      }
+    },
+    "profiles": {
+      "current-node-no-kb": 72,
+      "planned-kb": 24
+    }
+  },
+  "final": {
+    "rows": 160,
+    "groups": 40,
+    "actions": {
+      "tool": 28,
+      "answer": 33,
+      "human": 37,
+      "clarify": 9,
+      "refuse": 27,
+      "close": 6,
+      "redirect": 4,
+      "retrieve": 16
+    },
+    "cohorts": {
+      "current-service": 80,
+      "planned-retrieval": 40,
+      "preauth-robustness": 40
+    },
+    "cohort_actions": {
+      "current-service": {
+        "tool": 24,
+        "answer": 19,
+        "human": 17,
+        "clarify": 2,
+        "refuse": 13,
+        "close": 3,
+        "redirect": 2
+      },
+      "planned-retrieval": {
+        "retrieve": 16,
+        "human": 10,
+        "answer": 4,
+        "refuse": 5,
+        "tool": 4,
+        "clarify": 1
+      },
+      "preauth-robustness": {
+        "clarify": 6,
+        "answer": 10,
+        "human": 10,
+        "refuse": 9,
+        "close": 3,
+        "redirect": 2
+      }
+    },
+    "profiles": {
+      "current-node-no-kb": 120,
+      "planned-kb": 40
+    }
+  }
+}

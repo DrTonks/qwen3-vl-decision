@@ -1,0 +1,505 @@
+{
+  "decision": "pass",
+  "reviewer": "root",
+  "mode": "full_independent_agent_review",
+  "human_review": false,
+  "reviewed_source_ids": [
+    "massive-train-1762",
+    "massive-train-1764",
+    "massive-train-1765",
+    "massive-train-1766",
+    "massive-train-1767",
+    "massive-train-1768",
+    "massive-train-1772",
+    "massive-train-1773",
+    "massive-train-1775",
+    "massive-train-1779",
+    "massive-train-1780",
+    "massive-train-1781",
+    "massive-train-1782",
+    "massive-train-1783",
+    "massive-train-1785",
+    "massive-train-1788",
+    "massive-train-1789",
+    "massive-train-1790",
+    "massive-train-1792",
+    "massive-train-1795",
+    "massive-train-2182",
+    "massive-train-2677",
+    "massive-train-4151",
+    "massive-train-1797",
+    "massive-train-1798",
+    "massive-train-1799",
+    "massive-train-1800",
+    "massive-train-1802",
+    "massive-train-1806",
+    "massive-train-1809",
+    "massive-train-1810",
+    "massive-train-1813",
+    "massive-train-1814",
+    "massive-train-1815",
+    "massive-train-1816",
+    "massive-train-1817",
+    "massive-train-1819",
+    "massive-train-1821",
+    "massive-train-1824",
+    "massive-train-1825",
+    "massive-train-1826",
+    "massive-train-1828",
+    "massive-train-1829",
+    "massive-train-1835",
+    "massive-train-1836",
+    "massive-train-1837",
+    "massive-train-1838",
+    "massive-train-1841",
+    "massive-train-1842",
+    "massive-train-1843",
+    "massive-train-1844",
+    "massive-train-1846",
+    "massive-train-1847",
+    "massive-train-1848",
+    "massive-train-1849",
+    "massive-train-1850",
+    "massive-train-1851",
+    "massive-train-1852",
+    "massive-train-1853",
+    "massive-train-1856",
+    "massive-train-1857",
+    "massive-train-1859",
+    "massive-train-1860",
+    "massive-train-1861",
+    "massive-train-1863",
+    "massive-train-1864",
+    "massive-train-1865",
+    "massive-train-1867",
+    "massive-train-1868",
+    "massive-train-1869",
+    "massive-train-1873",
+    "massive-train-1876",
+    "massive-train-1878",
+    "massive-train-1879",
+    "massive-train-1882",
+    "massive-train-1883",
+    "massive-train-1884",
+    "massive-train-1885",
+    "massive-train-1886",
+    "massive-train-1887",
+    "massive-train-1889",
+    "massive-train-1890",
+    "massive-train-1892",
+    "massive-train-1893",
+    "massive-train-1895",
+    "massive-train-1896",
+    "massive-train-5559",
+    "massive-train-1898",
+    "massive-train-1899",
+    "massive-train-1900",
+    "massive-train-1903",
+    "massive-train-1905",
+    "massive-train-1907",
+    "massive-train-1908",
+    "massive-train-1909",
+    "massive-train-1912",
+    "massive-train-1916",
+    "massive-train-1918",
+    "massive-train-1919",
+    "massive-train-2063",
+    "massive-train-1920",
+    "massive-train-1921",
+    "massive-train-1922",
+    "massive-train-1923",
+    "massive-train-1926",
+    "massive-train-1927",
+    "massive-train-1929",
+    "massive-train-1930",
+    "massive-train-1931",
+    "massive-train-1932",
+    "massive-train-1935",
+    "massive-train-1936",
+    "massive-train-1937",
+    "massive-train-1938",
+    "massive-train-1939",
+    "massive-train-1949",
+    "massive-train-1950",
+    "massive-train-1951",
+    "massive-train-4581",
+    "massive-train-1952",
+    "massive-train-1954",
+    "massive-train-1955",
+    "massive-train-1956",
+    "massive-train-1957",
+    "massive-train-1958",
+    "massive-train-1959",
+    "massive-train-1961",
+    "massive-train-1963",
+    "massive-train-1964",
+    "massive-train-1965",
+    "massive-train-1966",
+    "massive-train-1967",
+    "massive-train-1970",
+    "massive-train-1972",
+    "massive-train-1973",
+    "massive-train-1975",
+    "massive-train-1976",
+    "massive-train-1977",
+    "massive-train-1978",
+    "massive-train-1979",
+    "massive-train-1980",
+    "massive-train-1981",
+    "massive-train-1983",
+    "massive-train-1984",
+    "massive-train-1985",
+    "massive-train-1986",
+    "massive-train-1989",
+    "massive-train-1990",
+    "massive-train-1992",
+    "massive-train-1996",
+    "massive-train-1997",
+    "massive-train-1998",
+    "massive-train-1999",
+    "massive-train-2000",
+    "massive-train-2001",
+    "massive-train-2002",
+    "massive-train-2004",
+    "massive-train-3594",
+    "massive-train-2005",
+    "massive-train-2008",
+    "massive-train-2010",
+    "massive-train-2011",
+    "massive-train-4805",
+    "massive-train-2012",
+    "massive-train-2013",
+    "massive-train-2014",
+    "massive-train-3078",
+    "massive-train-2015",
+    "massive-train-2018",
+    "massive-train-2019",
+    "massive-train-2020",
+    "massive-train-2021",
+    "massive-train-2022",
+    "massive-train-2023",
+    "massive-train-2024",
+    "massive-train-2025",
+    "massive-train-2027",
+    "massive-train-2028",
+    "massive-train-2029",
+    "massive-train-2031",
+    "massive-train-2032",
+    "massive-train-2033",
+    "massive-train-2036",
+    "massive-train-2037",
+    "massive-train-3776",
+    "massive-train-2038",
+    "massive-train-2039",
+    "massive-train-2041",
+    "massive-train-2043",
+    "massive-train-2044",
+    "massive-train-2045",
+    "massive-train-2046",
+    "massive-train-2049",
+    "massive-train-2050",
+    "massive-train-2051",
+    "massive-train-2053",
+    "massive-train-2054",
+    "massive-train-2055",
+    "massive-train-2059",
+    "massive-train-2060"
+  ],
+  "validated_sha256": "06b8f7855478ca3e9ccb8e197da7d3c48b84d8d34c9c21dc1afe8ec5db052664",
+  "unresolved_findings": [],
+  "resolved_findings": [
+    {
+      "source_id": "massive-train-1806",
+      "issue": "Financial context absent",
+      "resolution": "Specified repayment reminder; arithmetic remains based only on stated times"
+    },
+    {
+      "source_id": "massive-train-1861",
+      "issue": "Unnatural word substitution",
+      "resolution": "Natural incomplete report of value changing after submission"
+    },
+    {
+      "source_id": "massive-train-1887",
+      "issue": "Authentication missing from necessary slots",
+      "resolution": "Both ID and authentication requested"
+    },
+    {
+      "source_id": "massive-train-1986",
+      "issue": "Nonsensical loan-device average",
+      "resolution": "Natural but underspecified monthly repayment preference"
+    }
+  ],
+  "regression_source_ids": [
+    "massive-train-1806",
+    "massive-train-1861",
+    "massive-train-1887",
+    "massive-train-1986"
+  ],
+  "additional_random_seed": 202609302,
+  "additional_random_source_ids": [
+    "massive-train-1876",
+    "massive-train-1935",
+    "massive-train-2031",
+    "massive-train-2002",
+    "massive-train-1885",
+    "massive-train-1930",
+    "massive-train-2012",
+    "massive-train-1829",
+    "massive-train-1908",
+    "massive-train-1860"
+  ],
+  "selection": {
+    "seed": 20260930,
+    "random_source_ids": [
+      "massive-train-1856",
+      "massive-train-1890",
+      "massive-train-1931",
+      "massive-train-1958",
+      "massive-train-1973",
+      "massive-train-2020",
+      "massive-train-2022",
+      "massive-train-2033",
+      "massive-train-2049",
+      "massive-train-2054"
+    ],
+    "directed_source_ids": {
+      "massive-train-1766": [
+        "safety_or_close_boundary",
+        "stratum_coverage"
+      ],
+      "massive-train-1781": [
+        "scope_or_reference",
+        "stratum_coverage"
+      ],
+      "massive-train-1795": [
+        "safety_or_close_boundary"
+      ],
+      "massive-train-1809": [
+        "safety_or_close_boundary"
+      ],
+      "massive-train-1816": [
+        "safety_or_close_boundary",
+        "stratum_coverage"
+      ],
+      "massive-train-1828": [
+        "safety_or_close_boundary",
+        "scope_or_reference",
+        "stratum_coverage"
+      ],
+      "massive-train-1836": [
+        "grounded_parameter",
+        "stratum_coverage"
+      ],
+      "massive-train-1841": [
+        "scope_or_reference"
+      ],
+      "massive-train-1846": [
+        "safety_or_close_boundary",
+        "scope_or_reference"
+      ],
+      "massive-train-1849": [
+        "scope_or_reference"
+      ],
+      "massive-train-1867": [
+        "grounded_parameter"
+      ],
+      "massive-train-1868": [
+        "scope_or_reference"
+      ],
+      "massive-train-1886": [
+        "safety_or_close_boundary",
+        "scope_or_reference"
+      ],
+      "massive-train-1887": [
+        "scope_or_reference"
+      ],
+      "massive-train-1896": [
+        "safety_or_close_boundary",
+        "stratum_coverage"
+      ],
+      "massive-train-1898": [
+        "safety_or_close_boundary",
+        "scope_or_reference",
+        "stratum_coverage"
+      ],
+      "massive-train-1899": [
+        "scope_or_reference"
+      ],
+      "massive-train-1905": [
+        "safety_or_close_boundary"
+      ],
+      "massive-train-1908": [
+        "grounded_parameter"
+      ],
+      "massive-train-1932": [
+        "scope_or_reference"
+      ],
+      "massive-train-1949": [
+        "grounded_parameter"
+      ],
+      "massive-train-1950": [
+        "safety_or_close_boundary",
+        "scope_or_reference"
+      ],
+      "massive-train-1957": [
+        "safety_or_close_boundary"
+      ],
+      "massive-train-1966": [
+        "safety_or_close_boundary",
+        "scope_or_reference"
+      ],
+      "massive-train-1972": [
+        "safety_or_close_boundary",
+        "stratum_coverage"
+      ],
+      "massive-train-1985": [
+        "safety_or_close_boundary"
+      ],
+      "massive-train-2002": [
+        "safety_or_close_boundary",
+        "scope_or_reference"
+      ],
+      "massive-train-2004": [
+        "safety_or_close_boundary"
+      ],
+      "massive-train-2008": [
+        "safety_or_close_boundary"
+      ],
+      "massive-train-2018": [
+        "safety_or_close_boundary"
+      ],
+      "massive-train-2023": [
+        "safety_or_close_boundary"
+      ],
+      "massive-train-2028": [
+        "grounded_parameter",
+        "stratum_coverage"
+      ],
+      "massive-train-2031": [
+        "grounded_parameter"
+      ],
+      "massive-train-2032": [
+        "scope_or_reference"
+      ],
+      "massive-train-2033": [
+        "grounded_parameter"
+      ],
+      "massive-train-2036": [
+        "safety_or_close_boundary"
+      ],
+      "massive-train-2043": [
+        "safety_or_close_boundary"
+      ],
+      "massive-train-2053": [
+        "scope_or_reference"
+      ],
+      "massive-train-2054": [
+        "safety_or_close_boundary"
+      ],
+      "massive-train-3776": [
+        "safety_or_close_boundary"
+      ],
+      "massive-train-1762": [
+        "stratum_coverage"
+      ],
+      "massive-train-1765": [
+        "stratum_coverage"
+      ],
+      "massive-train-1767": [
+        "stratum_coverage"
+      ],
+      "massive-train-1768": [
+        "stratum_coverage"
+      ],
+      "massive-train-1772": [
+        "stratum_coverage"
+      ],
+      "massive-train-1779": [
+        "stratum_coverage"
+      ],
+      "massive-train-1798": [
+        "stratum_coverage"
+      ],
+      "massive-train-1802": [
+        "stratum_coverage"
+      ],
+      "massive-train-1865": [
+        "stratum_coverage"
+      ],
+      "massive-train-1963": [
+        "stratum_coverage"
+      ],
+      "massive-train-1979": [
+        "stratum_coverage"
+      ]
+    },
+    "required_source_ids": [
+      "massive-train-1762",
+      "massive-train-1765",
+      "massive-train-1766",
+      "massive-train-1767",
+      "massive-train-1768",
+      "massive-train-1772",
+      "massive-train-1779",
+      "massive-train-1781",
+      "massive-train-1795",
+      "massive-train-1798",
+      "massive-train-1802",
+      "massive-train-1809",
+      "massive-train-1816",
+      "massive-train-1828",
+      "massive-train-1836",
+      "massive-train-1841",
+      "massive-train-1846",
+      "massive-train-1849",
+      "massive-train-1856",
+      "massive-train-1865",
+      "massive-train-1867",
+      "massive-train-1868",
+      "massive-train-1886",
+      "massive-train-1887",
+      "massive-train-1890",
+      "massive-train-1896",
+      "massive-train-1898",
+      "massive-train-1899",
+      "massive-train-1905",
+      "massive-train-1908",
+      "massive-train-1931",
+      "massive-train-1932",
+      "massive-train-1949",
+      "massive-train-1950",
+      "massive-train-1957",
+      "massive-train-1958",
+      "massive-train-1963",
+      "massive-train-1966",
+      "massive-train-1972",
+      "massive-train-1973",
+      "massive-train-1979",
+      "massive-train-1985",
+      "massive-train-2002",
+      "massive-train-2004",
+      "massive-train-2008",
+      "massive-train-2018",
+      "massive-train-2020",
+      "massive-train-2022",
+      "massive-train-2023",
+      "massive-train-2028",
+      "massive-train-2031",
+      "massive-train-2032",
+      "massive-train-2033",
+      "massive-train-2036",
+      "massive-train-2043",
+      "massive-train-2049",
+      "massive-train-2053",
+      "massive-train-2054",
+      "massive-train-3776"
+    ]
+  },
+  "limitations": [
+    "Retrieval label assumes future document access, not proof of implemented feature.",
+    "Seven refusal scenarios are synthetic additions; original requests were not inherently improper."
+  ],
+  "findings_sha256": "137b06cf4c20d7496673bb7eebcda388f6ac4297368b990f5e0670a37015d572",
+  "audit_sha256": "fe698cdc300b941e0ab4bb648f6bd394e698f437cd955f26a748ae34570495f4",
+  "source_sha256": "697cd66aa0b3cc3a088fecc1e51daeb18d24fe076e3119747ca85a27140fd31d"
+}

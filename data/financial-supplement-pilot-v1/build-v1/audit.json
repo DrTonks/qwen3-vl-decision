@@ -1,0 +1,32 @@
+{
+  "status": "needs_review",
+  "scope": "structure_and_internal_lexical_duplicates",
+  "independent_semantic_review": false,
+  "external_overlap_review": "pending",
+  "candidate_sha256": "74a76e142365009cc55d01262c1472a9d270229fdb75b98e70ee425d9712e768",
+  "numeric_normalized_duplicates": [
+    [
+      "FSP1-C06-1",
+      "FSP1-C06-2"
+    ]
+  ],
+  "model_weights_loaded": false,
+  "model_api_requests": 0,
+  "heldout_files_read": false,
+  "training_eligible": false,
+  "tokens": {
+    "action": {
+      "count": 160,
+      "maximum": 525,
+      "minimum": 485,
+      "mean": 495.86
+    },
+    "tool": {
+      "count": 38,
+      "maximum": 566,
+      "minimum": 540,
+      "mean": 545.03
+    }
+  },
+  "no_truncation": true
+}

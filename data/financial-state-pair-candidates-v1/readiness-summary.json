@@ -1,0 +1,12 @@
+{
+  "version": "financial-state-pair-candidate-readiness-v1",
+  "accepted_candidates": 136,
+  "accepted_groups": 40,
+  "quarantine_candidates": 0,
+  "status": "ready_for_sampling_design_only",
+  "training_eligible": false,
+  "human_reviewed": false,
+  "training_executed": false,
+  "model_api_requests": 0,
+  "weights_loaded": false
+}

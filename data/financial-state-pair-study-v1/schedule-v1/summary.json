@@ -1,0 +1,190 @@
+{
+  "version": "financial-state-pair-schedule-summary-v1",
+  "training_enabled": false,
+  "training_eligible": false,
+  "model_weights_loaded": false,
+  "model_api_requests": 0,
+  "evaluation_examples_read": false,
+  "base_pool_rows": 13242,
+  "candidate_rows": 136,
+  "combined_design_rows": 13378,
+  "total_positions": 3200,
+  "changed_positions": 281,
+  "unchanged_positions": 2919,
+  "new_candidate_exposures": 272,
+  "old_anchor_insertions": 9,
+  "old_unique_rows_completely_displaced": 91,
+  "base": {
+    "actions": {
+      "answer": 668,
+      "clarify": 530,
+      "close": 113,
+      "human": 584,
+      "redirect": 130,
+      "refuse": 199,
+      "retrieve": 223,
+      "tool": 753
+    },
+    "tools": {
+      "explainApplicationStatus": 72,
+      "queryApplicationDetail": 306,
+      "queryLoanProducts": 161,
+      "queryMyApplications": 117,
+      "queryMyCreditScore": 97
+    },
+    "layers": {
+      "current-component": 480,
+      "current-node": 1440,
+      "planned": 800,
+      "preauth": 480
+    },
+    "unique_rows": 2498,
+    "unique_groups": 1375,
+    "max_row_exposure": 4,
+    "max_group_exposure": 8,
+    "preauth_positions": 480,
+    "preauth_unique_rows": 480
+  },
+  "candidate": {
+    "actions": {
+      "answer": 668,
+      "clarify": 530,
+      "close": 113,
+      "human": 584,
+      "redirect": 130,
+      "refuse": 199,
+      "retrieve": 223,
+      "tool": 753
+    },
+    "tools": {
+      "explainApplicationStatus": 72,
+      "queryApplicationDetail": 306,
+      "queryLoanProducts": 161,
+      "queryMyApplications": 117,
+      "queryMyCreditScore": 97
+    },
+    "layers": {
+      "current-component": 480,
+      "current-node": 1440,
+      "planned": 800,
+      "preauth": 480
+    },
+    "unique_rows": 2547,
+    "unique_groups": 1409,
+    "max_row_exposure": 4,
+    "max_group_exposure": 8,
+    "preauth_positions": 480,
+    "preauth_unique_rows": 438
+  },
+  "base_prefix_200": {
+    "actions": {
+      "answer": 341,
+      "clarify": 280,
+      "close": 53,
+      "human": 290,
+      "redirect": 66,
+      "refuse": 101,
+      "retrieve": 109,
+      "tool": 360
+    },
+    "tools": {
+      "explainApplicationStatus": 36,
+      "queryApplicationDetail": 146,
+      "queryLoanProducts": 74,
+      "queryMyApplications": 54,
+      "queryMyCreditScore": 50
+    },
+    "layers": {
+      "current-component": 240,
+      "current-node": 720,
+      "planned": 400,
+      "preauth": 240
+    },
+    "unique_rows": 1581,
+    "unique_groups": 886,
+    "max_row_exposure": 3,
+    "max_group_exposure": 6,
+    "preauth_positions": 240,
+    "preauth_unique_rows": 240
+  },
+  "candidate_prefix_200": {
+    "actions": {
+      "answer": 341,
+      "clarify": 280,
+      "close": 53,
+      "human": 290,
+      "redirect": 66,
+      "refuse": 101,
+      "retrieve": 109,
+      "tool": 360
+    },
+    "tools": {
+      "explainApplicationStatus": 36,
+      "queryApplicationDetail": 146,
+      "queryLoanProducts": 74,
+      "queryMyApplications": 54,
+      "queryMyCreditScore": 50
+    },
+    "layers": {
+      "current-component": 240,
+      "current-node": 720,
+      "planned": 400,
+      "preauth": 240
+    },
+    "unique_rows": 1589,
+    "unique_groups": 915,
+    "max_row_exposure": 3,
+    "max_group_exposure": 6,
+    "preauth_positions": 240,
+    "preauth_unique_rows": 240
+  },
+  "all_position_cells_preserved": true,
+  "all_original_fine_buckets_preserved": true,
+  "missing_slot_replacements": {
+    "application_id -> application_id": 17,
+    "authentication -> authentication": 72,
+    "error_context -> authentication": 6,
+    "none_declared -> none_declared": 166,
+    "request_details -> authentication": 4,
+    "status_code -> status_code": 16
+  },
+  "tokens": {
+    "base": {
+      "unpadded_action": 1611312,
+      "unpadded_tool": 417699,
+      "total": 2029011,
+      "padded_action": 1635754,
+      "padded_tool": 419191,
+      "padded_total": 2054945
+    },
+    "candidate": {
+      "unpadded_action": 1611545,
+      "unpadded_tool": 417882,
+      "total": 2029427,
+      "padded_action": 1635566,
+      "padded_tool": 419358,
+      "padded_total": 2054924
+    },
+    "equal_flops_claim": false
+  },
+  "pair_coverage": {
+    "new": {
+      "pairs": 96,
+      "strict": 88,
+      "complete_by_200": 96,
+      "complete_by_400": 96,
+      "baseline_complete_by_200": 0,
+      "baseline_complete_by_400": 0
+    },
+    "old": {
+      "pairs": 10,
+      "strict": 10,
+      "complete_by_200": 10,
+      "complete_by_400": 10,
+      "baseline_complete_by_200": 2,
+      "baseline_complete_by_400": 5
+    }
+  },
+  "interpretation": "joint effect of new state-contrast stories, guaranteed exposure and replacement; not isolated data quantity, pure paired loss, or equal FLOPs",
+  "historical_result_reused": false
+}

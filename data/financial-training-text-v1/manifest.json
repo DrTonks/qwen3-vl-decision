@@ -1,0 +1,1270 @@
+{
+  "version": "financial-training-text-v1",
+  "purpose": "training_only",
+  "independent_evaluation_ready": false,
+  "human_review": false,
+  "synthetic": true,
+  "source_total_accepted": 23173,
+  "policy_version": "loan-eight-actions-pilot-1",
+  "targets": {
+    "retrieve": 2500,
+    "answer": 2000,
+    "tool": 2200,
+    "clarify": 1600,
+    "human": 1500,
+    "close": 600,
+    "refuse": 900,
+    "redirect": 550
+  },
+  "stats": {
+    "rows": 11049,
+    "actions": {
+      "clarify": 1239,
+      "retrieve": 2500,
+      "tool": 1894,
+      "human": 1366,
+      "answer": 2000,
+      "refuse": 900,
+      "close": 600,
+      "redirect": 550
+    },
+    "original_families": 5669,
+    "partition_groups": 5669,
+    "with_history": 4361,
+    "authentication_by_action": {
+      "clarify": {
+        "false": 592,
+        "true": 647
+      },
+      "retrieve": {
+        "false": 1268,
+        "true": 1232
+      },
+      "tool": {
+        "true": 1894
+      },
+      "answer": {
+        "true": 1002,
+        "false": 998
+      },
+      "human": {
+        "false": 371,
+        "true": 995
+      },
+      "redirect": {
+        "false": 275,
+        "true": 275
+      },
+      "refuse": {
+        "false": 315,
+        "true": 585
+      },
+      "close": {
+        "true": 325,
+        "false": 275
+      }
+    }
+  },
+  "addition_stats": {
+    "rows": 2497,
+    "actions": {
+      "clarify": 162,
+      "answer": 102,
+      "tool": 64,
+      "retrieve": 66,
+      "human": 364,
+      "refuse": 801,
+      "close": 350,
+      "redirect": 588
+    },
+    "original_families": 316,
+    "partition_groups": 316,
+    "with_history": 305,
+    "authentication_by_action": {
+      "clarify": {
+        "false": 81,
+        "true": 81
+      },
+      "retrieve": {
+        "false": 27,
+        "true": 39
+      },
+      "tool": {
+        "true": 64
+      },
+      "answer": {
+        "false": 44,
+        "true": 58
+      },
+      "human": {
+        "true": 246,
+        "false": 118
+      },
+      "redirect": {
+        "true": 294,
+        "false": 294
+      },
+      "refuse": {
+        "true": 535,
+        "false": 266
+      },
+      "close": {
+        "true": 192,
+        "false": 158
+      }
+    }
+  },
+  "source_bindings": {
+    ".local/financial-rewrite-completion/jobs/0001/source.jsonl": "75ee3d0015f6e3fc38e218237d78e6589d00fea7764b03dd5b8388ae0ae9b782",
+    ".local/financial-rewrite-completion/jobs/0001/drafts.jsonl": "99e559afd8425ef656fb50ba8e690fe04ca5f936caae40fa96d688a7c4c2de58",
+    ".local/financial-rewrite-completion/jobs/0001/validated.jsonl": "520a85c23c808366ebfcd47e4575d772961707ab9c8ac7c28b0951fa9a78fba6",
+    ".local/financial-rewrite-completion/jobs/0001/structural-audit.json": "5fbdb7f1dc934705ffabc847da0bf33d5158adb4e45b212184f40e4d442fba92",
+    ".local/financial-rewrite-completion/jobs/0001/review.json": "0f085e8d48d42c8054bce8585e42630a9251f1c496a3e6397e129f90dd9f6605",
+    ".local/financial-rewrite-completion/jobs/0001/review-findings.json": "94c94dd74c87f89ae72b37270bf88d28a6ffea4e8cea226523ebb2379ba2e38a",
+    ".local/financial-rewrite-completion/jobs/0002/source.jsonl": "10cc696d09a0453b1fc379b85d34094cee2e019d7d023693e2dc9d7e8a7308e0",
+    ".local/financial-rewrite-completion/jobs/0002/drafts.jsonl": "1ea8431cdec9c0768354ff80218579e68160b89f9890319e66b9b8723e93df91",
+    ".local/financial-rewrite-completion/jobs/0002/validated.jsonl": "362fb0ba5f6c306cae72ff6c5e48a17eea7a54533efe97504a3956158c803543",
+    ".local/financial-rewrite-completion/jobs/0002/structural-audit.json": "fb30b94a71a59b55fb9775941cf90416aac3bccf6f3bb3ded058be8eedecdc7e",
+    ".local/financial-rewrite-completion/jobs/0002/review.json": "c981b145216ca80e422a8e94b7696eba309e2776f55865769cf8b27868151340",
+    ".local/financial-rewrite-completion/jobs/0002/review-findings.json": "19aaaa36aabb66269fd925fd4613f5e30553a0f66040c8e1683710a2806b80a1",
+    ".local/financial-rewrite-completion/jobs/0003/source.jsonl": "c61b304df083495cabca3b2de4caf107abed20f8093166adf49618d414f22669",
+    ".local/financial-rewrite-completion/jobs/0003/drafts.jsonl": "22f81cdff758f7517f65998b8c9a93331e02c13ecd57da928a6591b235bf3de8",
+    ".local/financial-rewrite-completion/jobs/0003/validated.jsonl": "60a83a3cc687d9e1f1145f30c74444b955806c49e2c2ca144e9b3bac68e47618",
+    ".local/financial-rewrite-completion/jobs/0003/structural-audit.json": "23f6912a382c50fd5009ebb2f8fba7e69b12dd8a5067072787c96b0244366988",
+    ".local/financial-rewrite-completion/jobs/0003/review.json": "3ed94231b8c0fd9a15c9aef86787d36fd4dd20ae5e31c5ba8808381014ba6f05",
+    ".local/financial-rewrite-completion/jobs/0003/review-findings.json": "3636f6fa1fc52a86f0e50b0bb8ded3cd7791f818da07bfb33865b1fa94ae3cc9",
+    ".local/financial-rewrite-completion/jobs/0004/source.jsonl": "7a63c59a2e36ee4c78a6fb66e7c5d8e7e722e6b144bac572f9772e297167fbab",
+    ".local/financial-rewrite-completion/jobs/0004/drafts.jsonl": "5e705c88872fbf394a33b7f9c2640f1f206986bc6db01ca735503def383d6b12",
+    ".local/financial-rewrite-completion/jobs/0004/validated.jsonl": "b4dae92e15469d4eb4159258417a3af0a71a8947503fafc80f323b8c00afdf6e",
+    ".local/financial-rewrite-completion/jobs/0004/structural-audit.json": "a702ff192b72df89ba7dcc310a4daeb95be3f720df8a211c4cab8600d6f075fc",
+    ".local/financial-rewrite-completion/jobs/0004/review.json": "85a294c653874ce4161cbb89f6bc0468d55a45f113b439c93238b19acaea3336",
+    ".local/financial-rewrite-completion/jobs/0004/review-findings.json": "dfa92d4b280aa093b3113eb9988719f8a4b28dc7a918c2f5ba29b33cb061cd3e",
+    ".local/financial-rewrite-completion/jobs/0005/source.jsonl": "701bf0084232e01b339c3eca520c2871132e726360f1016c2ab6752e385c03db",
+    ".local/financial-rewrite-completion/jobs/0005/drafts.jsonl": "eda852bb596736b29689035eac86b9f8b2c567696da9116fb19e66e12e6233e8",
+    ".local/financial-rewrite-completion/jobs/0005/validated.jsonl": "25a1c65f857c78c79df94d6589e197b6b7bc11e61f821af06da66447dc9cd1fa",
+    ".local/financial-rewrite-completion/jobs/0005/structural-audit.json": "1cb7c904d5b4713e49f9f0df3be35d21780b50a739f4c7ca738c9f4a17d42e43",
+    ".local/financial-rewrite-completion/jobs/0005/review.json": "431d7f16890904d07d7087fe488679c64b3f43fcd8eb3a9b9fa76a39429c3c8c",
+    ".local/financial-rewrite-completion/jobs/0005/review-findings.json": "75c981ca99d176b98e34d5b0876503dad83b5e9c1d6fb841b79351860bbaee0c",
+    ".local/financial-rewrite-completion/jobs/0006/source.jsonl": "697cd66aa0b3cc3a088fecc1e51daeb18d24fe076e3119747ca85a27140fd31d",
+    ".local/financial-rewrite-completion/jobs/0006/drafts.jsonl": "6be4dd5d8bb5ff6cbc256357935b402afa8d448c448831832c54bab9fb20f7f0",
+    ".local/financial-rewrite-completion/jobs/0006/validated.jsonl": "06b8f7855478ca3e9ccb8e197da7d3c48b84d8d34c9c21dc1afe8ec5db052664",
+    ".local/financial-rewrite-completion/jobs/0006/structural-audit.json": "fe698cdc300b941e0ab4bb648f6bd394e698f437cd955f26a748ae34570495f4",
+    ".local/financial-rewrite-completion/jobs/0006/review.json": "457e71b3b9fa68f5632e80a25e2fd5232d9c6ffde9a7f3fb53581fa3dafd3545",
+    ".local/financial-rewrite-completion/jobs/0006/review-findings.json": "137b06cf4c20d7496673bb7eebcda388f6ac4297368b990f5e0670a37015d572",
+    ".local/financial-rewrite-completion/jobs/0007/source.jsonl": "3bd6dc90d8a804deaa7c44d944576d7c54cd323ca87e97f1d4e0b67607b62946",
+    ".local/financial-rewrite-completion/jobs/0007/drafts.jsonl": "5e99f34b3cdc67474c27bcb74285e9b1e605ebda325c2b2795f153ab3052e724",
+    ".local/financial-rewrite-completion/jobs/0007/validated.jsonl": "f72add20f808b21f107aab7b75a343ebe058f704d5299e51f4203bbb069528fc",
+    ".local/financial-rewrite-completion/jobs/0007/structural-audit.json": "f0c7dad32007a750940d15f7276a8e4d45421f7f0c89a3adf182b3e21e455e86",
+    ".local/financial-rewrite-completion/jobs/0007/review.json": "b737b2eb385c999752766b543bab672ee8870f032ea9acdf05b44aec9bef9c0e",
+    ".local/financial-rewrite-completion/jobs/0007/review-findings.json": "8baf632a67ab1987b6d5ab70b143c7f44eede75996a5ba56b0058d1c39e336e3",
+    ".local/financial-rewrite-completion/jobs/0008/source.jsonl": "81c6d26647f9b5e16450e9da40637840b536d8d6ac328541087e4022c637b2e8",
+    ".local/financial-rewrite-completion/jobs/0008/drafts.jsonl": "622991a268ed158a6faf3e0b787d127e8985278ab90e6bbd18ed6f9723e1a438",
+    ".local/financial-rewrite-completion/jobs/0008/validated.jsonl": "8d51509a1ae56ae6f6a54802a6d5eb87c63c28859fbae0a347f918d9e02affeb",
+    ".local/financial-rewrite-completion/jobs/0008/structural-audit.json": "781dc2f677f6a3902fa02a5b3d4f683b1259c056993e39242c0c049a6ddcb397",
+    ".local/financial-rewrite-completion/jobs/0008/review.json": "a7afa5990206a4cccc0d046913fda20bd73f320d4292c452fc0eea7aaf6e1083",
+    ".local/financial-rewrite-completion/jobs/0008/review-findings.json": "e437885394108ac555d11df37fb21e67389c771ebccd390487da023712e331ee",
+    ".local/financial-rewrite-completion/jobs/0009/source.jsonl": "1e112a2b0567160f868f7a87f4a051fc3f5d982f0dd7addaf19f47882055611d",
+    ".local/financial-rewrite-completion/jobs/0009/drafts.jsonl": "970e7fd41f24fbd691a4d3415202749a1712e42f4f146cb3ee6c0b3306fd8349",
+    ".local/financial-rewrite-completion/jobs/0009/validated.jsonl": "d0e259a18137bbcee628f64a9d3a0cc4c906281eb04aeab3fe9cc1638a7ca514",
+    ".local/financial-rewrite-completion/jobs/0009/structural-audit.json": "d88dec50c548aa095d6ae744e5e1b689caa6f8139441d933e9cf01401b283654",
+    ".local/financial-rewrite-completion/jobs/0009/review.json": "7c4acd2a5f4bfb52418c130af99639297f8b4b765c31cb818ec3596ec3974eeb",
+    ".local/financial-rewrite-completion/jobs/0009/review-findings.json": "47cc4ed4c227e9413bfe56ad0af7fdfc706266b13616c16c99722eb0172d1488",
+    ".local/financial-rewrite-completion/jobs/0010/source.jsonl": "48e7a2aeaa326758b303c0c3e69dae0bcec6cdf806a11cf8a9448f5fd669c1c9",
+    ".local/financial-rewrite-completion/jobs/0010/drafts.jsonl": "9e360784bb4a4ab7179c5012efbe584e8381355355ea95c0e4bf81d2281c1467",
+    ".local/financial-rewrite-completion/jobs/0010/validated.jsonl": "0fe2e89ed93b25ac3979d8742b4f3e499b6e1137c7cdea3689cd3ab14996a604",
+    ".local/financial-rewrite-completion/jobs/0010/structural-audit.json": "173d3613f0ac14df239722286692a62f65762da7a2a146a2947364edc878e624",
+    ".local/financial-rewrite-completion/jobs/0010/review.json": "f026c7397bbaea161d789c4094911b8f04f1971fe769847ed1674f0892d80037",
+    ".local/financial-rewrite-completion/jobs/0010/review-findings.json": "5c7bde10816e32b7fb2e072087068a65f3b5fc7923f852d9615643b19a46a05f",
+    ".local/financial-rewrite-completion/jobs/0011/source.jsonl": "cb94cda50406fa6297ad4f6ad3b6dc95741316849e39215a191d59c0f411c124",
+    ".local/financial-rewrite-completion/jobs/0011/drafts.jsonl": "dce176628646f65406d610f339eb1a2347d3310d5278d7b7a196a53c5a9b858b",
+    ".local/financial-rewrite-completion/jobs/0011/validated.jsonl": "cab79a960fb330c1a05c52002c71665dcad3f59695d0d5b314d7edca2fec52c3",
+    ".local/financial-rewrite-completion/jobs/0011/structural-audit.json": "c3f179233a74a978d093feb58c3e9a0b53c008d42dab2a5cd1832089a818fb88",
+    ".local/financial-rewrite-completion/jobs/0011/review.json": "7cc5db21afe7f336edc9bc88f776c7ad7d460b015d9a9df9aca2cd5492c5ce3b",
+    ".local/financial-rewrite-completion/jobs/0011/review-findings.json": "582c27b0445fc5efdac50f1cbf58dba320abfaf53cb376f81a21c0c048d751c9",
+    ".local/financial-rewrite-completion/jobs/0012/source.jsonl": "6a4fd8db476e79576dfefb8d2413b36a947f70f405e6a3af17711ee77d8ec77a",
+    ".local/financial-rewrite-completion/jobs/0012/drafts.jsonl": "53b6826c8941b622ddd3ed2a4f5293c287aaa33827d16bc94d82efdc1d3ec9d1",
+    ".local/financial-rewrite-completion/jobs/0012/validated.jsonl": "08ddf953fc6c0a3d3fa6a4e77bb1c3710d7f314d6b692a83140bd5e677c1242b",
+    ".local/financial-rewrite-completion/jobs/0012/structural-audit.json": "80012af77370fd72413d9d9731dd72f8148af45f26c2eb70793d5ee9c3d1dfd9",
+    ".local/financial-rewrite-completion/jobs/0012/review.json": "8a25d3337418a04a82c6ff3eeff80e8bcba674f0de0f1b0cf01db6cbc7fa9772",
+    ".local/financial-rewrite-completion/jobs/0012/review-findings.json": "52ab4a5d187f65f9aa95907b4174218f6adf77ebabac8cd2c41f304da1a29d72",
+    ".local/financial-rewrite-completion/jobs/0013/source.jsonl": "ba1d683b36ba03d9d7c2a3e098f865523e1a581c45e4bc592eb5c2547b6a10b0",
+    ".local/financial-rewrite-completion/jobs/0013/drafts.jsonl": "6ca252c53321533d05aadbcb37fd9fbea178290df6fa64d36d6cd70cef0e28ea",
+    ".local/financial-rewrite-completion/jobs/0013/validated.jsonl": "02c43dcb7d51dbb6e1936979793033ce580eec560cbb99f61c397fc083c96012",
+    ".local/financial-rewrite-completion/jobs/0013/structural-audit.json": "8ab4544abed83cc87bbb8f7a6c382c323c5c47cdc9907aed6d55ffd47cfad585",
+    ".local/financial-rewrite-completion/jobs/0013/review.json": "693ab09444e6794eede3e34bc51c368c0d13f34c5d90f3dfb050833853045d6f",
+    ".local/financial-rewrite-completion/jobs/0013/review-findings.json": "2c7d7d0bff57143412b4abbf014279df2a76ed45e69352886cb5077ef07be7f7",
+    ".local/financial-rewrite-completion/jobs/0014/source.jsonl": "af9552d5b867a62075e79a713df3900e1d9a63e3c99dbc4b8449a637fc4e8d26",
+    ".local/financial-rewrite-completion/jobs/0014/drafts.jsonl": "2f8c8aa8f981ba48517317185883bf508d9876ef7d1f1e4b4233d9a4e85088e7",
+    ".local/financial-rewrite-completion/jobs/0014/validated.jsonl": "718c46e3437237b3bc3430d1f1eb3df92e24ed18faa63aba7ed8799df44271e5",
+    ".local/financial-rewrite-completion/jobs/0014/structural-audit.json": "a97bd10ecf64dd0a5f4a21ea6b857ae0499b488c34b85e42a8d0ce4e50858851",
+    ".local/financial-rewrite-completion/jobs/0014/review.json": "12a864e7499f99c6276e5ec0b5f33f9cc679cd8e8ba39703ccab423d97b492eb",
+    ".local/financial-rewrite-completion/jobs/0014/review-findings.json": "915622b97d720424c632c301a092a9ca412297ad4cc60393898466ef2a37d842",
+    ".local/financial-rewrite-completion/jobs/0015/source.jsonl": "56c295f3303159e5e392955db54b4e66a2c33efb021b35ac81bb950b89094122",
+    ".local/financial-rewrite-completion/jobs/0015/drafts.jsonl": "26ae970e587de5c3115f65b5398da80babf6a22dd45b9b71b4729b7b35c72fd8",
+    ".local/financial-rewrite-completion/jobs/0015/validated.jsonl": "fdd2458faaa8658c6b2c8c0fb647562fb1348f9924b6c5063d59e01712e337c7",
+    ".local/financial-rewrite-completion/jobs/0015/structural-audit.json": "bfafc1b71fb10a79de4f697faa2f4408c45bbaa8c311754c29993b8823475e5d",
+    ".local/financial-rewrite-completion/jobs/0015/review.json": "f773eb7927b8fd60bf00eabeb7b0e431ad5eaca8cf04994a3d17ad79dcc487a7",
+    ".local/financial-rewrite-completion/jobs/0015/review-findings.json": "1938b424fb11065241b8f96f45cbe3438503dbbc5e0d748cab4ebb9bb742098c",
+    ".local/financial-rewrite-completion/jobs/0016/source.jsonl": "f8b5f093adf880e7031c965982870820d00119fa7239c5d009f1437189d38d58",
+    ".local/financial-rewrite-completion/jobs/0016/drafts.jsonl": "37a48ddcf286ee9cdbb7817edfa8adac98b0e9af27d1edb5d2988c7f45f45497",
+    ".local/financial-rewrite-completion/jobs/0016/validated.jsonl": "bebfb69bc447b10c80dc01f72c7ea1dc9d81ea9eb35e2b587f053c7e82eee948",
+    ".local/financial-rewrite-completion/jobs/0016/structural-audit.json": "4c377d0a16cd503d4b71686cc058c6e71158d93707ed1bd0dcd3fe47663185d6",
+    ".local/financial-rewrite-completion/jobs/0016/review.json": "8c3e94e2b7a4b18bede299e4dc2527947f7baf46289bd83a2edcfd3fbb8873f7",
+    ".local/financial-rewrite-completion/jobs/0016/review-findings.json": "4f678f3a6954f49dd661f4e5325156362acd1bde60f771b9ea96a98331e9270a",
+    ".local/financial-rewrite-completion/jobs/0017/source.jsonl": "412247742916eaa1fb1d90d65245ae89fb6a91a7daab510ef97c66b1913dc094",
+    ".local/financial-rewrite-completion/jobs/0017/drafts.jsonl": "1a405e39af0cf9508a92abe9403c6a26903c5589c2fd31e87a0fed91ce2db8de",
+    ".local/financial-rewrite-completion/jobs/0017/validated.jsonl": "1acdcb967284531c815672eb548cab08dc6b70a7ce986be006ae42c9307167f8",
+    ".local/financial-rewrite-completion/jobs/0017/structural-audit.json": "03d91ee39668c473e267e18d6f0b1b8fa78d2eb7df8901d0d56f27d42de27e7b",
+    ".local/financial-rewrite-completion/jobs/0017/review.json": "bf1d71f07ea2cc8a8ac93c80e2119070e29b5e64125fa1a1c6c27eaea103eb48",
+    ".local/financial-rewrite-completion/jobs/0017/review-findings.json": "a7b83938b83f77ebe506c9937c6b0b0ca62e3e0715a22bf96a2b7ff5b4a80b30",
+    ".local/financial-rewrite-completion/jobs/0018/source.jsonl": "8c556760e9335800c42999d371922f06cc7a6731e1c2eda9a4441cdb2712b5b3",
+    ".local/financial-rewrite-completion/jobs/0018/drafts.jsonl": "a35491d8285ebf96ce04eb7ab2c3a46a50f75d2cfdd8658ad6f7892f17b9af72",
+    ".local/financial-rewrite-completion/jobs/0018/validated.jsonl": "820283e550832b00cdc1b47f9622d526e0dd8be6b3b1de2ae0411c380228303d",
+    ".local/financial-rewrite-completion/jobs/0018/structural-audit.json": "6733feb5d92e598be817c6031c6c9838a1ce687a05841c74a06ee7971d866163",
+    ".local/financial-rewrite-completion/jobs/0018/review.json": "c0a6bae7feb8d2b7b8f09b5fc20194b1df161085e2702b1a0539b5c1d12a8d9d",
+    ".local/financial-rewrite-completion/jobs/0018/review-findings.json": "8ba29bde3773cc278048f5242c27fcadc438c05c96d1ff55a88c869865007306",
+    ".local/financial-rewrite-completion/jobs/0019/source.jsonl": "945c9948c556a95b2c4e750e55d9b7e0744983b46f04a2b386f0dce0b02773fe",
+    ".local/financial-rewrite-completion/jobs/0019/drafts.jsonl": "64909e0055b9ea7be84a5afb5fe80ec16cfa5f39660fce35aa58a3774d5e3107",
+    ".local/financial-rewrite-completion/jobs/0019/validated.jsonl": "d1256c2d78217765a0395277c8cc8e70d04792770ed2c72fe9f644967f144271",
+    ".local/financial-rewrite-completion/jobs/0019/structural-audit.json": "86139740cca25b2443ea6af4577d93c6861a021230b5d6397b7ebc9a01cdc427",
+    ".local/financial-rewrite-completion/jobs/0019/review.json": "43e634556fb225e69fd81ca9bab939da86b044481f882a2a205767cf4f842a4b",
+    ".local/financial-rewrite-completion/jobs/0019/review-findings.json": "af78f331670bfea57521de674a93a1bf96f0b237499d216d50aa4f6a4d49ea54",
+    ".local/financial-rewrite-completion/jobs/0020/source.jsonl": "31572f53709153a6cf3ca3a513910f73f1dfe1e059becdaecc700476d8bdf6be",
+    ".local/financial-rewrite-completion/jobs/0020/drafts.jsonl": "1a99c1bd1c88cdc3a094d3478680ae38acb3202742de1a089e9f901ad9922037",
+    ".local/financial-rewrite-completion/jobs/0020/validated.jsonl": "b78cc6cf05870b93e24f0be756901103e9292f7445535df984cb597a2b6a38e8",
+    ".local/financial-rewrite-completion/jobs/0020/structural-audit.json": "b408a0b297c54d8879716ade03209e43288c7d8a0be68d1faed8237280d9aa00",
+    ".local/financial-rewrite-completion/jobs/0020/review.json": "ed61517816040302ffe7f7a5064640d472d56284d4c6c4e7c533fc8a8066e2a4",
+    ".local/financial-rewrite-completion/jobs/0020/review-findings.json": "16d65dc6df8e78a94d88477c3451563579a11be33fd303f0afa2713faba63ec2",
+    ".local/financial-rewrite-completion/jobs/0021/source.jsonl": "58988e0dd486641eb0026594fc4b57fde585e78267b8c720b7f1b4bce648a30f",
+    ".local/financial-rewrite-completion/jobs/0021/drafts.jsonl": "8f9e286cb7630ce9b07b5c951de983f649f15b0f044a1d82cc0a3ee6a72ff507",
+    ".local/financial-rewrite-completion/jobs/0021/validated.jsonl": "429165084aa0fb9faaff21d8f54b9d76e4a153ba8f8819999721927995f02c2f",
+    ".local/financial-rewrite-completion/jobs/0021/structural-audit.json": "4c4f56e9e7fbdbdf3082508c3c000f89fb20d4361c33048dbda52b17f32819c6",
+    ".local/financial-rewrite-completion/jobs/0021/review.json": "a1bfe2bf75753f9c47000ff6d7f04b32729afd0850ff729423aa2da0d552330f",
+    ".local/financial-rewrite-completion/jobs/0021/review-findings.json": "6b7c2512e26a2c352d99fdfa6e5c8bf58bf43a03856a637473b292d55041bf6d",
+    ".local/financial-rewrite-completion/jobs/0022/source.jsonl": "7a7a46ab172d4bc37b685df285b231128fbefeb9118f099e7927d974aa4faba6",
+    ".local/financial-rewrite-completion/jobs/0022/drafts.jsonl": "4e7472083d04dab0b35c82ebaf30a987e378ef263a3bf358cd13b90aabb2a9c1",
+    ".local/financial-rewrite-completion/jobs/0022/validated.jsonl": "d1a00a037ef328e128d879f4744a0d0dde1456a25886d785790ecbda4bd7ab9b",
+    ".local/financial-rewrite-completion/jobs/0022/structural-audit.json": "fbb254ccfcbd1f1641de594c02b4c475353edb8b7b5cc447ab888f08943b6557",
+    ".local/financial-rewrite-completion/jobs/0022/review.json": "ede14a83a1b0026ee1bf321a06e90c92d4733e22ed1c59a4a0ae5dea019a11c3",
+    ".local/financial-rewrite-completion/jobs/0022/review-findings.json": "707035f270166ac9c56c1303adde4c72b359eb7b442d2c3d18d6b8426e06a3a4",
+    ".local/financial-rewrite-completion/jobs/0023/source.jsonl": "e7d7ed3aa2287f3920535f76f383b2142aa51a855243073207e113013f913ee5",
+    ".local/financial-rewrite-completion/jobs/0023/drafts.jsonl": "06ad2da24b5742702ce4bba2cf9f78b1cf45b3de3ac5c6b518bb627e868c6604",
+    ".local/financial-rewrite-completion/jobs/0023/validated.jsonl": "7f00ed970e8b1eb66bb06887b2441da53b8062af86e3502fd8a454db83ed8576",
+    ".local/financial-rewrite-completion/jobs/0023/structural-audit.json": "ce18250d9033fb9178054de4914441056de8218befd32413fca8caed82e81db6",
+    ".local/financial-rewrite-completion/jobs/0023/review.json": "9c60a771f9fe1dd1ff8c8ffbc72c742b862b28e9e652e70cdb386e46a25713f3",
+    ".local/financial-rewrite-completion/jobs/0023/review-findings.json": "a747faa9a439128a81dd8c34b20998f1bbf4ef0ad974b33a033355cce499ae1b",
+    ".local/financial-rewrite-completion/jobs/0024/source.jsonl": "ff1378c0178bbd7b0adfa81d4e356abc4fd95020ce35b547b1c26eb3d00fa003",
+    ".local/financial-rewrite-completion/jobs/0024/drafts.jsonl": "db4b0e52c7f125446359c62fc2391edd7c97512d7df8bcd3664b7dac1b558766",
+    ".local/financial-rewrite-completion/jobs/0024/validated.jsonl": "7a9190b4803d8f3eb6673d21a75541a8969d0084f55886d9beb08189440bf24e",
+    ".local/financial-rewrite-completion/jobs/0024/structural-audit.json": "ffa3efccecde568aa1a6b2377543427e5a903cb55e855ddbec53e8d83a7fbdbe",
+    ".local/financial-rewrite-completion/jobs/0024/review.json": "0f77f7cb627a6ac29b9fa5ee2b2adaf7bdc90fa42f9d9ef4c51316e780ea5875",
+    ".local/financial-rewrite-completion/jobs/0024/review-findings.json": "0bee2b77b08231f2f8694e3c9230e7a82265ab93b48137b9fe62960609753efd",
+    ".local/financial-rewrite-completion/jobs/0025/source.jsonl": "8573260f50976405580340eb29ec49e4e658f119212d056a373a36f05f46692c",
+    ".local/financial-rewrite-completion/jobs/0025/drafts.jsonl": "a93a417e3b3b00ec5bcceab4ab019517ef51ab735c7af3508527c53845912cc4",
+    ".local/financial-rewrite-completion/jobs/0025/validated.jsonl": "b93313f133832b210eb313fbd49a0ee93c108bfd55e6ba5996210d6b73700c5f",
+    ".local/financial-rewrite-completion/jobs/0025/structural-audit.json": "68be029836fcd1d0f64078d5b18f89310b813b7b1aace7045acf24188beb5c49",
+    ".local/financial-rewrite-completion/jobs/0025/review.json": "f97a2141c292a9850c32dfb1e8eaf0eb5aef801c93cf6a114c9aec3279688299",
+    ".local/financial-rewrite-completion/jobs/0025/review-findings.json": "5413207ab4ced983f4d8ad6fdf000f401f7354557fdbd633a7d2d9b75ddfe6ea",
+    ".local/financial-rewrite-completion/jobs/0026/source.jsonl": "92b2bf38cdb19637ee49d63cbc9714c93f2f7f195f9fb8631478abfb0cbd1956",
+    ".local/financial-rewrite-completion/jobs/0026/drafts.jsonl": "23897159d58b46f6eac35a5ad9042f2d2fbd122c9dd4855b94c7c648548f1e98",
+    ".local/financial-rewrite-completion/jobs/0026/validated.jsonl": "2c798871bb5fc7c79293c6b0787150f04ff95dff35c3b8f04d1a74089c606e27",
+    ".local/financial-rewrite-completion/jobs/0026/structural-audit.json": "a2478b2ae05777896a540698f5e90bb7994dfa448670299289f20226b1a43dd7",
+    ".local/financial-rewrite-completion/jobs/0026/review.json": "f3d8d1f7ec5fbfa98cdcb4eef0021322a128e620e103197574b521541be40dd1",
+    ".local/financial-rewrite-completion/jobs/0026/review-findings.json": "11192a7b56a833eb8842a2c3fe66a92ecb8ca773995e28eb05bd9f2ba062d480",
+    ".local/financial-rewrite-completion/jobs/0027/source.jsonl": "01c72709c6924ce6b3da788756dd5a6c7590d703896b56d7f4ed0dcadf880e7f",
+    ".local/financial-rewrite-completion/jobs/0027/drafts.jsonl": "37b792dd23c9d60fc41144581cbb02e816aab9abdea22ad6bff19c2712ea131a",
+    ".local/financial-rewrite-completion/jobs/0027/validated.jsonl": "a8d21d7bbfdd7ab692d25eb714d94e23774b54654d9739ac2363a8d230d0b7f6",
+    ".local/financial-rewrite-completion/jobs/0027/structural-audit.json": "e2f09e63907978c77936c88283718bc07ee755c79872c335233aeaa8d02071f3",
+    ".local/financial-rewrite-completion/jobs/0027/review.json": "f44b45bc884fbde5c46cf7fe32e409d45e4105b4729cbbb0f8db2f3015397bfd",
+    ".local/financial-rewrite-completion/jobs/0027/review-findings.json": "db2b5c86184b22cf68419d05330775cdb75ddd1debb9a055be49ab5406c233cf",
+    ".local/financial-rewrite-completion/jobs/0028/source.jsonl": "70beb2d4f810fcff545d13e1c5f955e71c15bd7304870294ef7b0b20079e1ba3",
+    ".local/financial-rewrite-completion/jobs/0028/drafts.jsonl": "91206c3bad2fb26f4df0e6536683d350fd32ec940cf91a9fc3fdc201f04f5930",
+    ".local/financial-rewrite-completion/jobs/0028/validated.jsonl": "525f07c06df1952080aab01831b4a15c85f5b25d46ddca0a7b048a2337ec4725",
+    ".local/financial-rewrite-completion/jobs/0028/structural-audit.json": "ab37d35c11ed2cfcbeafd9888bf31a1f8e2ead5fc61870d8307e50e390959cba",
+    ".local/financial-rewrite-completion/jobs/0028/review.json": "c5a69ac4463f3cf4c4130d9187bc8bd37c3f557a884167a0bb512ab840446fb7",
+    ".local/financial-rewrite-completion/jobs/0028/review-findings.json": "6e6b060ddf352a258ac992867cb0e78a995d1a4f8ae3275b1f54810823b6cc1d",
+    ".local/financial-rewrite-completion/jobs/0029/source.jsonl": "81fbdc3b7831a143304466785cfd348285da83d27e4e46339b365b35bbd71050",
+    ".local/financial-rewrite-completion/jobs/0029/drafts.jsonl": "b0ac4ce254a578121a3786966ce7e65f117e27a54808b0d776a91bb177407e41",
+    ".local/financial-rewrite-completion/jobs/0029/validated.jsonl": "500b83a85e2cd35ce18db6485452eb7bd4caa8a31d3e0219934e8ecfb2160154",
+    ".local/financial-rewrite-completion/jobs/0029/structural-audit.json": "492a5e98eea5619544b27965d29e23cdebfdef2c7276cf620b57219ef9777c09",
+    ".local/financial-rewrite-completion/jobs/0029/review.json": "4e3ddcc80230abd7b1a1f175b7cf8e0766c9186ed6af6e1debd28ef1724abb53",
+    ".local/financial-rewrite-completion/jobs/0029/review-findings.json": "c86bdc87290090c3a550cf3f445ede2c112a28e0b035538438fe97ff92c61507",
+    ".local/financial-rewrite-completion/jobs/0030/source.jsonl": "ed98f61e63bc79bd02e114564ec07c66baf4a517e4ea6cb158da5def015af3ca",
+    ".local/financial-rewrite-completion/jobs/0030/drafts.jsonl": "b3a75693a6f06dc72b314611a74a5c3e59ddc802c03a91ad868f5feb30c618a8",
+    ".local/financial-rewrite-completion/jobs/0030/validated.jsonl": "6690d3bc8cf778aeeb1bcbf4115d31442fb4a61ecaf929eaac6fc67671186f3c",
+    ".local/financial-rewrite-completion/jobs/0030/structural-audit.json": "ed4e19ef490b5a4cc081a576ab5dc4541a083baadbd6fd6a94c51da1264c018b",
+    ".local/financial-rewrite-completion/jobs/0030/review.json": "c8cf0e70fbd94cd2aeafae9e7ad2e5927499dcefa03a45e94653f7cc70b1df0d",
+    ".local/financial-rewrite-completion/jobs/0030/review-findings.json": "19007eaf15da4038e5cb9f7720c37f3c609d7d7b6f8721d78342410c29b646f0",
+    ".local/financial-rewrite-completion/jobs/0031/source.jsonl": "072c41ec1acc5feef7b3b08ed817761f27e54604574b1c3533270a0abc379fc6",
+    ".local/financial-rewrite-completion/jobs/0031/drafts.jsonl": "30f925ccbac5411c94650fc6c1c31cca6baaff27d19b5dd809a14f655b7c3cf2",
+    ".local/financial-rewrite-completion/jobs/0031/validated.jsonl": "a0c9622b113d0b723e06a86bb4c375ac4d30e037d3e9b81806dc229aa52dc6fe",
+    ".local/financial-rewrite-completion/jobs/0031/structural-audit.json": "4b924d6d549676ab83b7cd364e75ba918e995de098ddb216487cb995c48c97eb",
+    ".local/financial-rewrite-completion/jobs/0031/review.json": "ed8baa5062eaa4e6a31b5f1799eb70071076c47738f7af5cb32bb4a7c5e5aa84",
+    ".local/financial-rewrite-completion/jobs/0031/review-findings.json": "2bd4677fe329baf4b6db265f6ee825ebe32982ba70b6140542ea550f99b28bea",
+    ".local/financial-rewrite-completion/jobs/0032/source.jsonl": "444bafa504aba8f455f4b7df1d3243d057bda65899a2550b56515dea7651c697",
+    ".local/financial-rewrite-completion/jobs/0032/drafts.jsonl": "41a433387b6c3c01863c400fe099ebbae13d15cab674406bb6a51ab9fb65b2b8",
+    ".local/financial-rewrite-completion/jobs/0032/validated.jsonl": "8d77f4110e34b5c3e48cd4b5355d54664ef6cbc130d574d6a268592c89ead37d",
+    ".local/financial-rewrite-completion/jobs/0032/structural-audit.json": "68a944bb7f81da6cb4d23f3145a164392ef222b9d48120f89d5caa3444a3de14",
+    ".local/financial-rewrite-completion/jobs/0032/review.json": "74bf51d30fad524bd46bd79896d16e7b92d10ffa91c34dedeef4c76715eb2f2f",
+    ".local/financial-rewrite-completion/jobs/0032/review-findings.json": "4b9e046d0db837eb051400e0367f8122219d6e64a5c3be2d829ee0c2740ef778",
+    ".local/financial-rewrite-completion/jobs/0033/source.jsonl": "2e5c110d6a801bec7dc53ad0ff856d86ee30a2068ffcafe2fb996342d8f63b74",
+    ".local/financial-rewrite-completion/jobs/0033/drafts.jsonl": "bc0835c7a94f447deff94c8fc951e519aa2fe57272ff64d769e5bba6a9274a23",
+    ".local/financial-rewrite-completion/jobs/0033/validated.jsonl": "4b7f3ff8d4afcbf28f62476c657b201cd1aeae5c8ec7902eba83c477f6dddc44",
+    ".local/financial-rewrite-completion/jobs/0033/structural-audit.json": "b8d7a9bd672f34c1212458895c25fa421bb429d4a7c27acf19150f0de32b963b",
+    ".local/financial-rewrite-completion/jobs/0033/review.json": "3ef4d653b01428ae94a62a71cb867965bd66c46632fe54d52d099dda13136661",
+    ".local/financial-rewrite-completion/jobs/0033/review-findings.json": "eee2071b3eb872cee03709301e332b81eebbf9d74a1f334e0b8eae27261c1629",
+    ".local/financial-rewrite-completion/jobs/0034/source.jsonl": "349d4d95fdca76977969307b84e60e8ee757846c9daaabcdd4e1413e24eef899",
+    ".local/financial-rewrite-completion/jobs/0034/drafts.jsonl": "c5cd8b668fc6e27084dcf9808f0c7cc581e9e624fdd48108a9583cafe8a08da6",
+    ".local/financial-rewrite-completion/jobs/0034/validated.jsonl": "55953081c203588222b9294fe79319bae10fa1f051b2c639ba1376a77a04a029",
+    ".local/financial-rewrite-completion/jobs/0034/structural-audit.json": "7076ceb27f8fda0656a839011ec94c5c85d83ad47beecd58dbe68402c2ac0f22",
+    ".local/financial-rewrite-completion/jobs/0034/review.json": "3cc8bbe05f85654e108d10be6095953c7b6e9edad17368d2454a4213468c226d",
+    ".local/financial-rewrite-completion/jobs/0034/review-findings.json": "3de940acab04423d566758e51f7642f366a357e0cd5dee2b1100d92eb10eb7c3",
+    ".local/financial-rewrite-completion/jobs/0035/source.jsonl": "909dd96a7b85417f52f88258e91aeed1ad60f93f70a24befd0614660ef1381ce",
+    ".local/financial-rewrite-completion/jobs/0035/drafts.jsonl": "4a0996b111c4342b0d91c0765523eaaf6ce2da277b3f7e5e4139892202d5d1d3",
+    ".local/financial-rewrite-completion/jobs/0035/validated.jsonl": "3ee628fde4ce46a07772471fc89070f8aad3bded3750afb3c80c86ddcb5dd408",
+    ".local/financial-rewrite-completion/jobs/0035/structural-audit.json": "e27bec9a0f1d5542f36701217a8146308929b92e3dfd12fa958a86e72037fffb",
+    ".local/financial-rewrite-completion/jobs/0035/review.json": "75d70fef61e9447b1f970e9ebb53cfd45fde16b8667302c9f92b951031e8dc8d",
+    ".local/financial-rewrite-completion/jobs/0035/review-findings.json": "c4098c8672e827987c21f6d1d1ada57efc0d69e889f850b1391ec4e2cd721508",
+    ".local/financial-rewrite-completion/jobs/0036/source.jsonl": "ed63c361991a453b7d5dd79d22738140f811455f69acef3ad934ade9f93c3cc8",
+    ".local/financial-rewrite-completion/jobs/0036/drafts.jsonl": "3ad3d38c03b69ae523d97b88a4bcd72eec126ee473e7895ef608c0d6f59f2b3f",
+    ".local/financial-rewrite-completion/jobs/0036/validated.jsonl": "418d6fdb9a0ad1939245a73817a44efc383d42dd45165e919fccbee6f27de81e",
+    ".local/financial-rewrite-completion/jobs/0036/structural-audit.json": "b79971a38e1057e227d9b7c5ef4b829ae40842240177d58a885c29c40ff1e68e",
+    ".local/financial-rewrite-completion/jobs/0036/review.json": "62f6dede070e16dfddef8cde47f970ce5c68eb09bf2fa91022038135173c1be7",
+    ".local/financial-rewrite-completion/jobs/0036/review-findings.json": "5f938c67647eb7014f80d4351227c1f1c6e08a18b7df1077afe800ae32ba0c0a",
+    ".local/financial-rewrite-completion/jobs/0037/source.jsonl": "e9d085067dff392d2a6ec850fc461d14dc29d989e2611510c25a8102fcd2c600",
+    ".local/financial-rewrite-completion/jobs/0037/drafts.jsonl": "65d9ec613dcc644f3871ae5055220271e4f21e2f30970dde01b0faba00668df2",
+    ".local/financial-rewrite-completion/jobs/0037/validated.jsonl": "2d9c8270ad16942c802dca928cdc269b4871ae7fe4aca68c2e989a4117f7c81e",
+    ".local/financial-rewrite-completion/jobs/0037/structural-audit.json": "73b0cd3976ae7e8917b1a92494cae090de1f8a0b0119e13de7f0e98e7752cfac",
+    ".local/financial-rewrite-completion/jobs/0037/review.json": "37ed49096eace2cdbca115da00721c221d8cd4be9602c394b185f5b634b892d6",
+    ".local/financial-rewrite-completion/jobs/0037/review-findings.json": "76023d6909d591dd492d1a2b6dbfc63945b30d81595a395a88107d700af237bf",
+    ".local/financial-rewrite-completion/jobs/0038/source.jsonl": "1f0bfc2bff7411cea84b95c4da404f1fdab8b75cf4d973fe7a66b0df645e0e43",
+    ".local/financial-rewrite-completion/jobs/0038/drafts.jsonl": "bddc634046f99c61430a9dbc090b9e9222b6f035cf13282cbd9659f686ef1afa",
+    ".local/financial-rewrite-completion/jobs/0038/validated.jsonl": "741d5bf7946c8b1717611750f1a9034d111183b93ec52d3b1d7e56a8ddfa53fc",
+    ".local/financial-rewrite-completion/jobs/0038/structural-audit.json": "94746ed379cf31ea3bb0eb63269a98f6f471750224bcebca44998b17dc805fa3",
+    ".local/financial-rewrite-completion/jobs/0038/review.json": "abc6171a9ff46b6b1470c06bd696b5bc7ba46642a7d4d93fb7a4d37a848ec281",
+    ".local/financial-rewrite-completion/jobs/0038/review-findings.json": "d94b86485cf92d05b2a985eefed751a5a7b2eb33a50855f9f64e96423930d982",
+    ".local/financial-rewrite-completion/jobs/0039/source.jsonl": "3fb8e3534a2b133ae4a55576b4945184ce4f0966787d0ba8d05508872b9c0548",
+    ".local/financial-rewrite-completion/jobs/0039/drafts.jsonl": "f928bca8c624965167c07459b6af006d40df51e4f6443c209b2cc0b20bfe5501",
+    ".local/financial-rewrite-completion/jobs/0039/validated.jsonl": "a986ddd14edf8b8237b68f1c59e46ffcb9b5e3a23198f1a7d6b4e4ff47e19c18",
+    ".local/financial-rewrite-completion/jobs/0039/structural-audit.json": "5a8d4dfdc976dfa1c1b99ccfd1491808f4cdf6876af05e2df2ea8f9581aaa512",
+    ".local/financial-rewrite-completion/jobs/0039/review.json": "9fb0f52224148558d44882a5051a4c034801383b067161815e233155962344d0",
+    ".local/financial-rewrite-completion/jobs/0039/review-findings.json": "77c834c481c7f90c49aea64b2cc1e3f311dfb5d5f6910fd82dedab7e3c31e611",
+    ".local/financial-rewrite-completion/jobs/0040/source.jsonl": "5243b44a9a29b6702a4ba07d3fb3a60b7b38a1d12eb3f8ad299a85f82e2be759",
+    ".local/financial-rewrite-completion/jobs/0040/drafts.jsonl": "f99c2cf493f8863088c97108b8871997baa9f1fc7b2ce03b9c79d4f78573d5f2",
+    ".local/financial-rewrite-completion/jobs/0040/validated.jsonl": "cab945e687b828c0e666455f8db65098b8e0b8fbd51c6f95e6335523579c46c2",
+    ".local/financial-rewrite-completion/jobs/0040/structural-audit.json": "7ecb2d3bbd0dda9c59bcbac96c41d72c15ebf39653516c08bfa94020dbad917a",
+    ".local/financial-rewrite-completion/jobs/0040/review.json": "4670818d54d7947a79af7b37ef13e94ed88e4e1dc5c4f50449563f043560d263",
+    ".local/financial-rewrite-completion/jobs/0040/review-findings.json": "bfd9316638d871bce52b0779cb52a00a5c75c997836b22c632b05226cbd992c8",
+    ".local/financial-rewrite-completion/jobs/0041/source.jsonl": "6463ca6855fc51e9a7d6355ebb9a4b17a66e58bf66177e2527d5eb4f84c31b4f",
+    ".local/financial-rewrite-completion/jobs/0041/drafts.jsonl": "3bfe807816c944d34b832ce2996d0ff95fc9ef6b6f673fc01351a604abeac579",
+    ".local/financial-rewrite-completion/jobs/0041/validated.jsonl": "22c846e861dddb22b6b8a5523d91a8a5c24cbc75ba24024d4954413fb157c7e2",
+    ".local/financial-rewrite-completion/jobs/0041/structural-audit.json": "77bedd4afc3a86ee4c64f68b9565c7a8b356d5e21f46fbb8b141457fc245e784",
+    ".local/financial-rewrite-completion/jobs/0041/review.json": "3eab35f1d3e1a8027f820345242a2995e1e77a5d814a9bdc596a3c45aa436cbb",
+    ".local/financial-rewrite-completion/jobs/0041/review-findings.json": "8af6dfd8d6e300786bfe9e1f93558399957d7f5b90796647bd8709addc8f438a",
+    ".local/financial-rewrite-completion/jobs/0042/source.jsonl": "c7c00db2c16a699b0e84427b471957f11de6553c7776d68dcb9340e4a4e6153e",
+    ".local/financial-rewrite-completion/jobs/0042/drafts.jsonl": "d502cd9955e8dca61451523bea324f3af1bf013ef901fc5f3406739a7c16ce3f",
+    ".local/financial-rewrite-completion/jobs/0042/validated.jsonl": "f17a43e8aaab42c0f17775b29f533622db11c2e16972d53df3d90715dd8ab96e",
+    ".local/financial-rewrite-completion/jobs/0042/structural-audit.json": "0dea56f3c97255fba7ae7ef1b343f667fff9c1c07dc77f2fca7d1dca8c8aba59",
+    ".local/financial-rewrite-completion/jobs/0042/review.json": "10a15e2dd9c61483b158dad020c7cb81e60c853699ba7daf53b6ae7e32d63c7a",
+    ".local/financial-rewrite-completion/jobs/0042/review-findings.json": "dc55df26e4303e02318f79acf2d88fc28cf628394af7decee2ed9f0a377e5ef3",
+    ".local/financial-rewrite-completion/jobs/0043/source.jsonl": "b6709eb5b755e45f5fc0596a80c5a94fab7a71b20c2178125d366e4682f9d8d7",
+    ".local/financial-rewrite-completion/jobs/0043/drafts.jsonl": "a1944d14a0500e1be135cfbac2af2e15830cea3f62970488a4225cbd72e38f9e",
+    ".local/financial-rewrite-completion/jobs/0043/validated.jsonl": "35f02598051c8d056b60d3d4fee5ef8bc37b25cdbcbe1d1d64b4dc69e62cfddc",
+    ".local/financial-rewrite-completion/jobs/0043/structural-audit.json": "4724be500c7b18778b94b655bee5ca1c1bfbd7876d5a49ede9fe3116726049bc",
+    ".local/financial-rewrite-completion/jobs/0043/review.json": "c30e404aca558ce67fe46d3cd2a01bcc1380b39475617271942b8a53caa3931a",
+    ".local/financial-rewrite-completion/jobs/0043/review-findings.json": "52d09876a15e803f24ff79a8fc9e08b3b1838f927025a2699644feccb7f31dab",
+    ".local/financial-rewrite-completion/jobs/0044/source.jsonl": "2d76501e0a138ad404862be53a67aded029ab62b3fdc5e88651a16ef0a1fdceb",
+    ".local/financial-rewrite-completion/jobs/0044/drafts.jsonl": "be429cfd8d61d6ec44033cc3df8de0351d65b741b1c93d4638509ddc27c33f12",
+    ".local/financial-rewrite-completion/jobs/0044/validated.jsonl": "f8922590b6d3e5866603e65775a2ccb55b6b07eac02da5371fa3e28efad641a9",
+    ".local/financial-rewrite-completion/jobs/0044/structural-audit.json": "a372e3e7b5078dcca219c203191ec8dd6a48b30c380c2d282741c654cd4eaa57",
+    ".local/financial-rewrite-completion/jobs/0044/review.json": "d90e758b9c6b75b606ffd485eb32c20f5b1c9140a23798febe4fdd2d1df81732",
+    ".local/financial-rewrite-completion/jobs/0044/review-findings.json": "4b1edf86050842500cc505fbc5a4c37483b9cf2287556e04f7b9ee92e8ed8089",
+    ".local/financial-rewrite-completion/jobs/0045/source.jsonl": "861df9ffdd493425fb5f468cf179878a522e05ac670338b2e03f00b1da11de11",
+    ".local/financial-rewrite-completion/jobs/0045/drafts.jsonl": "6b7a4e8cd21b85b08956bf69c217033d7aa8730c29e03063261bd2ab565e9184",
+    ".local/financial-rewrite-completion/jobs/0045/validated.jsonl": "bef592a56f6674eea141dd5aa42b767d5cd57e9375d2814db47206fa981c75bc",
+    ".local/financial-rewrite-completion/jobs/0045/structural-audit.json": "e0ff62a3ab32f9219143901459ce8702bd6eea1a96231ee1a5859e72a8025e73",
+    ".local/financial-rewrite-completion/jobs/0045/review.json": "8ddba3698e91166f492ca2d98c3b4bd2efa3e51020d367534f16a3bd5ce3d88a",
+    ".local/financial-rewrite-completion/jobs/0045/review-findings.json": "a5a7d46ff537534190fc9ccde2b1f87c6c4e757cc4f387b5a42c424df04f8246",
+    ".local/financial-rewrite-completion/jobs/0046/source.jsonl": "3ffe2cc1a7d20487b7b876fdecf62bb38ec29a4f70893fa94f6a70087285021b",
+    ".local/financial-rewrite-completion/jobs/0046/drafts.jsonl": "1e4ab81d7875dee53b3918048b960f16edd619f7f577a2263a78fac59b94352a",
+    ".local/financial-rewrite-completion/jobs/0046/validated.jsonl": "39c43ef8986608a0bab3887f4a96105ab17c55592f2625f05c419cba45f108e8",
+    ".local/financial-rewrite-completion/jobs/0046/structural-audit.json": "366d15c3500bfe57c9cdd7f5653459be133666c3478d7ae66a233f893b22af45",
+    ".local/financial-rewrite-completion/jobs/0046/review.json": "8012e070372bd9e21f99c03cb4522b1aa39fe4e76baf6a191067d4f58bc6d01a",
+    ".local/financial-rewrite-completion/jobs/0046/review-findings.json": "76e2b82f0f6fe71c2ea5110d8f30d93ff85f817a5d89cbc364be915a586f61eb",
+    ".local/financial-rewrite-completion/jobs/0047/source.jsonl": "65abd3c3b3e6180c6f09e60f1bd03e1b46f643344f1a76c372ec406e54432094",
+    ".local/financial-rewrite-completion/jobs/0047/drafts.jsonl": "0d1f13205892f6d96a720743f3bfbe081e84d27b12af86818363a820d43adce8",
+    ".local/financial-rewrite-completion/jobs/0047/validated.jsonl": "8d13616d031e97c487dc5e3134724387f75b4e3001cc36e0d1e1033bb62cdb20",
+    ".local/financial-rewrite-completion/jobs/0047/structural-audit.json": "f02437b6de34e84ef5290cf3bf6668b45084f6ae8256b09632933e717f512702",
+    ".local/financial-rewrite-completion/jobs/0047/review.json": "9eed3e4f548dae586e5860f815b82c45150ce610038656ccd192a1b693b4a6a4",
+    ".local/financial-rewrite-completion/jobs/0047/review-findings.json": "2da3dd4f60bf22d2ed108083396a1884e51b86338a007c683433fb56fa2d5e52",
+    ".local/financial-rewrite-completion/jobs/0048/source.jsonl": "dd96b840bd8d9e937e3704846a06a510ccb3e5b0089464973d983430afa532ea",
+    ".local/financial-rewrite-completion/jobs/0048/drafts.jsonl": "e3d5149910ecfd85d7ce51ed81ffb499c07ed0d140a6541da78f17c32c28bba4",
+    ".local/financial-rewrite-completion/jobs/0048/validated.jsonl": "ea6d9c463d230119571ae40c0240562c7129d2f74b29e0e3921fa199fc119c86",
+    ".local/financial-rewrite-completion/jobs/0048/structural-audit.json": "f4aa7fc0be8a6a7579de10b22008491f476ce400030ec41dc70be81c389202b4",
+    ".local/financial-rewrite-completion/jobs/0048/review.json": "f5ba9cc1d008594b6aec841147869df04cbbf1ee002c7d4274c1752d7796c959",
+    ".local/financial-rewrite-completion/jobs/0048/review-findings.json": "964b73e60ece466d97161ba276511abb8db1b08df9f5719da42b85cfea0bed96",
+    ".local/financial-rewrite-completion/jobs/0049/source.jsonl": "ece73814b82462ba545a1c80190c1089cb781afecc32413044425794c3bb8e57",
+    ".local/financial-rewrite-completion/jobs/0049/drafts.jsonl": "183be40c39a00ef0656bce2166e5e24f583f7f27baac3c929e277a7d21b8eb1f",
+    ".local/financial-rewrite-completion/jobs/0049/validated.jsonl": "610dcfefcb0e552dee2b74e904c6b6e5a2a98aefc79021b306a1e40b0c6156fc",
+    ".local/financial-rewrite-completion/jobs/0049/structural-audit.json": "cfb7bf9781b6d7d658066bec27b82da466cd1bda636ccf084244b5e1d141c208",
+    ".local/financial-rewrite-completion/jobs/0049/review.json": "0a914b19b248819579069e730808f4962bc8c1de0e85b29a29996b239a1de078",
+    ".local/financial-rewrite-completion/jobs/0049/review-findings.json": "79f035deef4ebe28e13b36003555bef9b04f3109a2a795cda0111f874f13830f",
+    ".local/financial-rewrite-completion/jobs/0050/source.jsonl": "ff5b29d05cdde54e6c87a2ff6ceb9006c329aa3ec13917488c4988932eb1d455",
+    ".local/financial-rewrite-completion/jobs/0050/drafts.jsonl": "bc4827121995b5fc177cc64f5cd564af0a378ded8e9f7e31b882d434c2080a97",
+    ".local/financial-rewrite-completion/jobs/0050/validated.jsonl": "44e1d31f1d60d4d6322228b536214bde05f23afefb2f645b5f00777761a75a62",
+    ".local/financial-rewrite-completion/jobs/0050/structural-audit.json": "29d3ec3d57570630c1a6aaa58d6410e671bb69f675c53c1fbbe12ebde7b6ad14",
+    ".local/financial-rewrite-completion/jobs/0050/review.json": "7a7bac25d77d4845704dcfb5d60e1b4ac7cc87e5bcdb91c5e1703259b10443e5",
+    ".local/financial-rewrite-completion/jobs/0050/review-findings.json": "f2c94438cca39e790413f109316555582c7f12ec2a2c613b34066665cad1f20f",
+    ".local/financial-rewrite-completion/jobs/0051/source.jsonl": "47685791bebc7b35a0c83ef0f263500e2818e8691009088af44f7142864d4934",
+    ".local/financial-rewrite-completion/jobs/0051/drafts.jsonl": "12dcad664841e444074f180ba554e506212d2a6a977a1db0b8a761924e75024a",
+    ".local/financial-rewrite-completion/jobs/0051/validated.jsonl": "bb3cb453a073ee5bd7370b84081efe00c9a95d0e16d9a277487bd41e4acd53a0",
+    ".local/financial-rewrite-completion/jobs/0051/structural-audit.json": "a8178d47b30cd0d1307e5fffa4646391fccb45b66df995b40e9ca8c7b55538fc",
+    ".local/financial-rewrite-completion/jobs/0051/review.json": "bb86d6dbe1034c77fdf50fd3dd8636c2101a5406237706a3cfab2dc4d43740e7",
+    ".local/financial-rewrite-completion/jobs/0051/review-findings.json": "860f79cffecee4fc9dced4a0992ed853a762feea57d829c0887a177cea023259",
+    ".local/financial-rewrite-completion/jobs/0052/source.jsonl": "0aa3743ef5d5cb3931c3cc8376c0db30a9d78302a029104dc3d24e9a1c070255",
+    ".local/financial-rewrite-completion/jobs/0052/drafts.jsonl": "71021c684c7ecbeda721e6acb1841d07d19776b6a527055109d77dfdd07f9446",
+    ".local/financial-rewrite-completion/jobs/0052/validated.jsonl": "42c3bc03afd84b4c9f2df5d09de034bfb12434f9e3114320d68c93fb6c8d0d67",
+    ".local/financial-rewrite-completion/jobs/0052/structural-audit.json": "a8b5bd65678b9468fab53f684f821c557214300434080c05a6d545e6df6c0616",
+    ".local/financial-rewrite-completion/jobs/0052/review.json": "ff0df12cda9874b5d28c42aa16e707fdb7f6a7ae414f7f60e7fe63c91d922c5a",
+    ".local/financial-rewrite-completion/jobs/0052/review-findings.json": "7fadeaa09181123129a2935d9695f78d4d48f79068c413e57808ad8643aef860",
+    ".local/financial-rewrite-completion/jobs/0053/source.jsonl": "c3cf2ec5243cc658a152f01fcf4388d378ef380e1d64c297550caae8b26606c8",
+    ".local/financial-rewrite-completion/jobs/0053/drafts.jsonl": "795b581755975ef9b5d7ae13e5bff3a91108dc9b87073c13c77fdd912d7d836c",
+    ".local/financial-rewrite-completion/jobs/0053/validated.jsonl": "db483ddaa086e422dd8bba4a2e321370ef26ac62875344001d59e3d96782efe0",
+    ".local/financial-rewrite-completion/jobs/0053/structural-audit.json": "b10e0ed9f135bb2015c6f50ea8b251d9ec0fe67b79ed7891da61c01b3cbd2f95",
+    ".local/financial-rewrite-completion/jobs/0053/review.json": "57985e6b18d4fb91cb4e3a4ee09ff48f456c7e05628a7458f4b5ce07653cff37",
+    ".local/financial-rewrite-completion/jobs/0053/review-findings.json": "9a854bcf7d37b729a6f6ebf5d3714496431a5fe378bef64495f56d1b9fa19bd0",
+    ".local/financial-rewrite-completion/jobs/0054/source.jsonl": "8082388c06131ce450ef5fa220c9ba1a604dadbadcf8ef110c721579c8414721",
+    ".local/financial-rewrite-completion/jobs/0054/drafts.jsonl": "5551f68c89b757a139510e836513638f54fcea30f062c277fcf58f9099b7da31",
+    ".local/financial-rewrite-completion/jobs/0054/validated.jsonl": "0086a64882fa8508f45ba40bff74ba024465be9297c89a72e06f8dd14b515e37",
+    ".local/financial-rewrite-completion/jobs/0054/structural-audit.json": "f3e9fd967ad417052d09bb54422f15995de4e1de452ff7e47ebaf478f82e2c0a",
+    ".local/financial-rewrite-completion/jobs/0054/review.json": "8415b2126118f5e976630b8d955696a22102c5bd215e6c3bf52d6900fd2ae5ce",
+    ".local/financial-rewrite-completion/jobs/0054/review-findings.json": "d96bfa769bc5357c9a7cd43271c8eadcb6b4b80b88c7fe775805db12f714e556",
+    ".local/financial-rewrite-completion/jobs/0055/source.jsonl": "08b6368da7aa1ddfdada84c63d34ffa3bcc771e4146237dc39b25f2343f20d58",
+    ".local/financial-rewrite-completion/jobs/0055/drafts.jsonl": "7f5113c98bf7ccbbb0b30901d4c65dbec5970735f5f51a9d351409fad43673da",
+    ".local/financial-rewrite-completion/jobs/0055/validated.jsonl": "96c89a79ae7247235c01453df80c1d2a4e8cf7793bb00148f6e6d8968b6b721e",
+    ".local/financial-rewrite-completion/jobs/0055/structural-audit.json": "e4fd0dee6e09adff906f91fe69329a4ab2a0364f781d5e464f369fdb6f9b8629",
+    ".local/financial-rewrite-completion/jobs/0055/review.json": "b0c491f75faa0449658f2f6edff6e0b0f5726e5315239b02d5a3072bde6bd8fe",
+    ".local/financial-rewrite-completion/jobs/0055/review-findings.json": "26e1036c3016fd9881c8514bcb78a1f8eee6e2e6e022088e1c12e1fb813cc6c9",
+    ".local/financial-rewrite-completion/jobs/0056/source.jsonl": "372eb2a3a855a3f0cafd179a83aed3a51b26b532748a27698db4886186baf8e3",
+    ".local/financial-rewrite-completion/jobs/0056/drafts.jsonl": "b3a19c82e03d0d6ac5241c4948145495cf236025a4672307f761ea7980f66761",
+    ".local/financial-rewrite-completion/jobs/0056/validated.jsonl": "a0cfbb7fc3411c0343fdb31650f1e48fc16c41131e8b19cce0f201d25a76fe5f",
+    ".local/financial-rewrite-completion/jobs/0056/structural-audit.json": "9a3928b63146c36cfe60c16d9e24adfee3554caf43e2229be6b7a21d4b370559",
+    ".local/financial-rewrite-completion/jobs/0056/review.json": "c35e6cd2cc11b13f55d4ed4b5ea87ba502b7f44e18323927cbd305f7f39f6616",
+    ".local/financial-rewrite-completion/jobs/0056/review-findings.json": "081d0bfbe2091fe8043f9f68aff998b87f1dc284dd0217a3b5f720a9bbbd63fa",
+    ".local/financial-rewrite-completion/jobs/0057/source.jsonl": "548733521e30ecede0e4b615a59d722a6f3cecbcbf6b057120a25fda5cce34c5",
+    ".local/financial-rewrite-completion/jobs/0057/drafts.jsonl": "205cce9daf1201549a4b4e83466d33768c968dfdc1c5856e69cfd1b62964f065",
+    ".local/financial-rewrite-completion/jobs/0057/validated.jsonl": "c99ac48ac7ab8441609cf8bcdaee019ab47ed25464c5ab9e0da2f5edc07f8b63",
+    ".local/financial-rewrite-completion/jobs/0057/structural-audit.json": "218edf3fb8264f5866b8543d807f7c61a356430cda32957673612cf186ace05f",
+    ".local/financial-rewrite-completion/jobs/0057/review.json": "45fa63c4941fce06ac4b4083778c8fd32d4d84d853abd7bf477b854a36b26482",
+    ".local/financial-rewrite-completion/jobs/0057/review-findings.json": "2128e40c62c622f7228b96491100df5ba37ea39ee893ff903efa8b91891f4b67",
+    ".local/financial-rewrite-completion/jobs/0058/source.jsonl": "a1a743f969b7a2540a963fc3abd952f144251b27911e132bf09eb6af05a139d3",
+    ".local/financial-rewrite-completion/jobs/0058/drafts.jsonl": "70d1a38147d7ad3011058a9b75a32683e16ad2d6a8a424d9bae780e0e0473460",
+    ".local/financial-rewrite-completion/jobs/0058/validated.jsonl": "0db50a53e742a73ec90e62a6300f96013180a5207ef2a3dd8f8fb19fc7558c2f",
+    ".local/financial-rewrite-completion/jobs/0058/structural-audit.json": "53950ff9119541994564ca6b1d8e875c97016390ad63ee66130a362705fc39f5",
+    ".local/financial-rewrite-completion/jobs/0058/review.json": "10c359c79ce0dd73a818445232c666278b3b7210a92606e19889c08a53a45d33",
+    ".local/financial-rewrite-completion/jobs/0058/review-findings.json": "1446e6ecf26faae8e41e4193ef9373939be34d552335913448be72e39fa00807",
+    ".local/financial-rewrite-completion/jobs/0059/source.jsonl": "152cb682a7fb8322ebfe0330fb813819ae85cc135ed7c9e3d7d69a6814a22be1",
+    ".local/financial-rewrite-completion/jobs/0059/drafts.jsonl": "77361d4385e6a11968d251cdc4efb6102445feb96a7da4cbd4947eef086b8e51",
+    ".local/financial-rewrite-completion/jobs/0059/validated.jsonl": "304092014bec35ac71cdb5d33c711812ca8a2cf4bfa55a85a4ef9c2e54b7d651",
+    ".local/financial-rewrite-completion/jobs/0059/structural-audit.json": "05226c18d38e68145a90e8487e11427fb32932c541b60750bd36fe74ecfdc04d",
+    ".local/financial-rewrite-completion/jobs/0059/review.json": "13b2a3997779a7abea0df2f17e75af49607b1b03153f05c4e025c7ff4e5d1f14",
+    ".local/financial-rewrite-completion/jobs/0059/review-findings.json": "e83064e91a14259ca2bf17c051bb849c116b42e6f42bd479bdd3017c37bcb923",
+    ".local/financial-rewrite-completion/jobs/0060/source.jsonl": "96588c245765b77b9c81ff76cf6593bc307d032208b4c5f6ead24849eee80fd4",
+    ".local/financial-rewrite-completion/jobs/0060/drafts.jsonl": "18313020ef6ab4e2e500cffc2236a0c65ad1ae3a3e6cfa9562336e043efc6c35",
+    ".local/financial-rewrite-completion/jobs/0060/validated.jsonl": "fcec8c417f879a1f0ccce22548551400fc87676f23cd7ed92e57c565367d8a56",
+    ".local/financial-rewrite-completion/jobs/0060/structural-audit.json": "878e1f9a848dad84d6924932288daafb6ad8107ac66f3d61a4fea0fe04501dd1",
+    ".local/financial-rewrite-completion/jobs/0060/review.json": "a220d835f4cba9ead547e916194e2837681b3c852ac60aa0d7c1f0f4001ace5f",
+    ".local/financial-rewrite-completion/jobs/0060/review-findings.json": "35c778c7d06ae6a37fa5276a1467e9f531f96201272c5373fa3248813c530654",
+    ".local/financial-rewrite-completion/jobs/0061/source.jsonl": "7cc479e69957ce6d5a80bf0738002b66418d0facbaf1e0c246f1cc2b6858e675",
+    ".local/financial-rewrite-completion/jobs/0061/drafts.jsonl": "b35894de66cc01c2709e1e766befdbe59f3f35d24089ab00302b7f8a75a9c73f",
+    ".local/financial-rewrite-completion/jobs/0061/validated.jsonl": "da99c67515f83d35e5d68f08575b4afd19ee465c6712f16a82033f5cd72abf92",
+    ".local/financial-rewrite-completion/jobs/0061/structural-audit.json": "7e66843c824dbbbc8100fbfd493665efe09d92c1dde77c29dfd05df247c9f154",
+    ".local/financial-rewrite-completion/jobs/0061/review.json": "19dbd948ce94311ffe242849f0ed29deeea314ae286faa067b41562bcf9dd803",
+    ".local/financial-rewrite-completion/jobs/0061/review-findings.json": "03517a61215f61b1c345aab4c61261dd762030c364c5e53185dc4597463926fb",
+    ".local/financial-rewrite-completion/jobs/0062/source.jsonl": "520655c76678fa1cd4efb7c1c71ba8a7ff8668e0845d51bce2d60810009fbf08",
+    ".local/financial-rewrite-completion/jobs/0062/drafts.jsonl": "edce00351c735b392909ffd5cf9fb06fefe8f85af9276cd2357b4f5ef01f8117",
+    ".local/financial-rewrite-completion/jobs/0062/validated.jsonl": "664e117d02e26f5f3838957ef9d80e6972ce79fd192647d851f9f8225d8c7120",
+    ".local/financial-rewrite-completion/jobs/0062/structural-audit.json": "163162c38b6cdfa673c6310a4f63a4b19cd5f3d41923b1f25b5daf51cb4c6866",
+    ".local/financial-rewrite-completion/jobs/0062/review.json": "22b1f145a8db209d159eb20b25b2534b8890f3cd2ed274ab5369d9ccfb443515",
+    ".local/financial-rewrite-completion/jobs/0062/review-findings.json": "b376a1e91d83d4208020be79476c2d98bbefaf2218ec6e38d312de9b50e5bfb6",
+    ".local/financial-rewrite-completion/jobs/0063/source.jsonl": "29ce4e6a155f02914bbd72b1f689c91dd5349d7f3d4f6e130a535e4405930cfc",
+    ".local/financial-rewrite-completion/jobs/0063/drafts.jsonl": "54d2dc0550fc5f36792d403e1e708cf638546b1f2abb2f845a7d444967eacb50",
+    ".local/financial-rewrite-completion/jobs/0063/validated.jsonl": "f0180c18c443ec1208016c5388475c3c0716aeb676fe307a392f051dd2f7f6bc",
+    ".local/financial-rewrite-completion/jobs/0063/structural-audit.json": "83044854b9558cd7b93c1f0be555ffb5734c9d8d95be3d866a221ca52b0478d0",
+    ".local/financial-rewrite-completion/jobs/0063/review.json": "0331d81ae3046be03720fa658b58a1bb227efb9679560074b38fd9ce0e65be5d",
+    ".local/financial-rewrite-completion/jobs/0063/review-findings.json": "29f4ef67dcdf3c4585db684d4783525789853cc3592a14a60db473a2ec1bdf26",
+    ".local/financial-rewrite-completion/jobs/0064/source.jsonl": "2417aee3d23b16033af6b2302106cb09ed970edb846c0638963835e117ecd155",
+    ".local/financial-rewrite-completion/jobs/0064/drafts.jsonl": "fb9ffed17c628b4117e5d0e2390bdc634d37d986fd3d227d7bd8dbe703065fa1",
+    ".local/financial-rewrite-completion/jobs/0064/validated.jsonl": "649efd1bfdd8d9d064b9a9524c71ca1bcd840fb77296c89e71f841bd263b0796",
+    ".local/financial-rewrite-completion/jobs/0064/structural-audit.json": "9e30e1abf65d53df1b9f96ecb51eafc2c2aa72205108abc426f5f2fb2cc25911",
+    ".local/financial-rewrite-completion/jobs/0064/review.json": "576c78eeb7cc5dea1bbfd612c13034012fd43e3d876378ab67d3147e0c6afa81",
+    ".local/financial-rewrite-completion/jobs/0064/review-findings.json": "33cee1eb4d85b514fb76e1e7368cb92e97d24e36383b6020e2811320f0165f1a",
+    ".local/financial-rewrite-completion/jobs/0065/source.jsonl": "90b143c63a1c26f640bb97003cc024cf44d86966ca6ca822660d0c8c84445142",
+    ".local/financial-rewrite-completion/jobs/0065/drafts.jsonl": "fab6b7dd3fe9dab38d796c26eb3792a4952333d55ee060777e7336784611afdc",
+    ".local/financial-rewrite-completion/jobs/0065/validated.jsonl": "7d16f09fe91ba296da3a9ba41773df4f6159cc3de8f0326a92f93ca959d4ea3c",
+    ".local/financial-rewrite-completion/jobs/0065/structural-audit.json": "7ea9e76ae59b11697f0ba853bf6b636bc4e7388933f82cc0322f49c4542548fe",
+    ".local/financial-rewrite-completion/jobs/0065/review.json": "f62d1738298a1ed21b8922a92290f3ccbb77739b997970f8123752ff0314f77a",
+    ".local/financial-rewrite-completion/jobs/0065/review-findings.json": "ec01cf3023508c54e50e2ce5fac7ff2e314b589cb77f7eca7e6882f0ab866530",
+    ".local/financial-rewrite-completion/jobs/0066/source.jsonl": "b3f91e1820e24ae51f884404d106dc0271915706b50c145b1e0d1d52a273acf8",
+    ".local/financial-rewrite-completion/jobs/0066/drafts.jsonl": "312edcdbcb9ff407a43b0d2fac2e955cce574c74eeb74b3b90cbfdf3ead27835",
+    ".local/financial-rewrite-completion/jobs/0066/validated.jsonl": "02734bccaf26f501439439c0f23e2c3755b155d55b7111e4b8c63962cd269cab",
+    ".local/financial-rewrite-completion/jobs/0066/structural-audit.json": "94ab419aaff0a6232fe9ee53d1a523828eda37518ea060421ad35df562f5a31b",
+    ".local/financial-rewrite-completion/jobs/0066/review.json": "f841b7ccbfc2b75de596187ed235cabde5a4bd7f6db27052dd568d43d61be168",
+    ".local/financial-rewrite-completion/jobs/0066/review-findings.json": "bd27fa377c66b031e1ea39cb79b8dc35fe42a3a07d8ab5ea80a4d583556b6967",
+    ".local/financial-rewrite-completion/jobs/0067/source.jsonl": "e202f3b93f379e9e5cda90e43ad6e1505d73c128eaba02ff7d969857991cd1e5",
+    ".local/financial-rewrite-completion/jobs/0067/drafts.jsonl": "49bdb14c2bb927af3c5121b2cd0b420b64b395527c3302017e95f14b9833a842",
+    ".local/financial-rewrite-completion/jobs/0067/validated.jsonl": "540555ffb12a8f49dcb9dc579caa13f84a85e47ed2314731faa8ab5140b99d00",
+    ".local/financial-rewrite-completion/jobs/0067/structural-audit.json": "fb596fd8cea5f8c439b77d25637ae084f920be0f6535019ac5e8d41baa10a410",
+    ".local/financial-rewrite-completion/jobs/0067/review.json": "125a6d433d6ad62e79616fd538cf7b0ba22fd3358f8c4a1982752cf91cb885d8",
+    ".local/financial-rewrite-completion/jobs/0067/review-findings.json": "0fe498be8fafefd4b0d43fc59bdf3190c60933df504236b48063c3c12167c85e",
+    ".local/financial-rewrite-completion/jobs/0068/source.jsonl": "d5f21e833236e539268485941cfbaf006528f1fbefc156d3c1b3c882fe2e4871",
+    ".local/financial-rewrite-completion/jobs/0068/drafts.jsonl": "20f62b6fd1bbced0ddc9e9b00e39f21b09f1b0ddd6d841e66f685147aa05732a",
+    ".local/financial-rewrite-completion/jobs/0068/validated.jsonl": "a3abd6cde0470d13a2bbd49ac6521334c9b18b58abc02c652937277f0136487d",
+    ".local/financial-rewrite-completion/jobs/0068/structural-audit.json": "1c3ebf233fb8a6b2ef47a3d5b61b0bb244bf2edcc3934e95163203f85b7de5f2",
+    ".local/financial-rewrite-completion/jobs/0068/review.json": "6650e91ef1cd4dccb0b8a35cfa54094fe2d14717b64cbeca3d73c21069a1b78e",
+    ".local/financial-rewrite-completion/jobs/0068/review-findings.json": "25b1f8a9a2d8c657b3169d4483b3c848cfc96d2143589181f2bbed9a31641b59",
+    ".local/financial-rewrite-completion/jobs/0069/source.jsonl": "109ab1faa4caaced2890b628027e2004609baf0373faf80b14f4c8f46bbcc70a",
+    ".local/financial-rewrite-completion/jobs/0069/drafts.jsonl": "1087202b69fdf9d20d44a2b1d43168122135daea5bb3427ebe39f7e93a9e153a",
+    ".local/financial-rewrite-completion/jobs/0069/validated.jsonl": "f34cdcf2969ada221f12ab1367366359ae2be01de539982f1fcde86c59ffbda0",
+    ".local/financial-rewrite-completion/jobs/0069/structural-audit.json": "0249c196e976c21b605d0371e6c2959940b641ba81e0d616b8f63470b7e00585",
+    ".local/financial-rewrite-completion/jobs/0069/review.json": "56fc5c8cb2aaec7f898d8e3c938adbc926b2e215a933470dff111f6b79fb251a",
+    ".local/financial-rewrite-completion/jobs/0069/review-findings.json": "9a22864443364b8bb6f10f4c0a79cecf54b8b0abb03b5e3921bd553e35598f49",
+    ".local/financial-rewrite-completion/jobs/0070/source.jsonl": "a67ca9f1ae21781f624d3eceb1d874b763e577a81c888c51fe9056df602a7a99",
+    ".local/financial-rewrite-completion/jobs/0070/drafts.jsonl": "ef5ab597feb01ca9d179315dca7d041d945abae50584c172053db78d169a5d4c",
+    ".local/financial-rewrite-completion/jobs/0070/validated.jsonl": "ac760fcbb3cb09da601bf5b5debdb81fabe725ca74ee5f2f6be84ada9ff56f01",
+    ".local/financial-rewrite-completion/jobs/0070/structural-audit.json": "b9e64939074ad97ce63ffffb7c84b80d214b7fc199878043c66d293e785d3eeb",
+    ".local/financial-rewrite-completion/jobs/0070/review.json": "b6870619151a816652cea90e7284626fbb19d73b40e3ecbb4bf4e7488c8fd79b",
+    ".local/financial-rewrite-completion/jobs/0070/review-findings.json": "7a874d3f0012ee712d9f7d38785da3d61df9599b02182ea035e34e6884d73151",
+    ".local/financial-rewrite-completion/jobs/0071/source.jsonl": "49f76d66dde73f4805236c112a65cea6fb7b78613db648240a8883adf761b264",
+    ".local/financial-rewrite-completion/jobs/0071/drafts.jsonl": "cf6ef53f1a0c85b004e14b87f6d7d6d062ccf41cd73dfc00f24dd41711a8b3a5",
+    ".local/financial-rewrite-completion/jobs/0071/validated.jsonl": "46155e52278c31b5245a73bb6c4e907c1a8cd0b8228c3ea4852a55e6a7827124",
+    ".local/financial-rewrite-completion/jobs/0071/structural-audit.json": "f7af74296d277ee0375e46775e6e5b9e6b2e4f39e67f8efd4d90439574550286",
+    ".local/financial-rewrite-completion/jobs/0071/review.json": "7c768033c2cb50ea722d7bbbbdc926cbc5a75de937b8f566049c4281fcae833f",
+    ".local/financial-rewrite-completion/jobs/0071/review-findings.json": "7157cd39a6428dc4c7195ce1b19039d7e5a825bdf4f75d298fd92832815ad03e",
+    ".local/financial-rewrite-completion/jobs/0072/source.jsonl": "6294aad54ef0ca7a221c3e134b19c6dd6d57ca35f92809816a248d0d737e6339",
+    ".local/financial-rewrite-completion/jobs/0072/drafts.jsonl": "93036cfcb03f15b51563f9e94eac65ef21ebbe20961c8b2644ed76e64dcbc58c",
+    ".local/financial-rewrite-completion/jobs/0072/validated.jsonl": "001c8e93b39742219e33836b4989b73905e792e465e3ea41f80ed5b58dc69723",
+    ".local/financial-rewrite-completion/jobs/0072/structural-audit.json": "11cdee00ecfcc6da14dcadb14a17c5a23bffda0200e60cbb933f617037b95f5b",
+    ".local/financial-rewrite-completion/jobs/0072/review.json": "fb1cefaba9d70cc0fa87445c6ed73795c1c3bc144a398ac272c6f1f9c4700861",
+    ".local/financial-rewrite-completion/jobs/0072/review-findings.json": "b246dbc92cb0909b58c65d9f9d843b9d35371d191404fb44410435a4ce0e6698",
+    ".local/financial-rewrite-completion/jobs/0073/source.jsonl": "599c2341d8b69c8cec166ddba54030e300efa37e2df0fdec949127d50ce95d32",
+    ".local/financial-rewrite-completion/jobs/0073/drafts.jsonl": "271877cd86ef3b93b621434c8dc2e9f1d495e7d9592e907ad1746109a527f5a6",
+    ".local/financial-rewrite-completion/jobs/0073/validated.jsonl": "a0e30a434c841e03aafd8baff256d464a405d30caca385f4026aa36a1c9309bf",
+    ".local/financial-rewrite-completion/jobs/0073/structural-audit.json": "66df6fffa3caf41ce49c2325b886cfd3874b60b04b31fdc4a782ba8278ccdb6c",
+    ".local/financial-rewrite-completion/jobs/0073/review.json": "0021a68aa3a4e8f454edd99420159968522988ffc27d1873e4bfdaaf8f0afbbb",
+    ".local/financial-rewrite-completion/jobs/0073/review-findings.json": "f5d790679ff58d7adb77770f6181e8adf1a7781f9fc2f027c75dee23bc5b7bd2",
+    ".local/financial-rewrite-completion/jobs/0074/source.jsonl": "b9b177a6f49de1c5266da5f35d662ad04c688f7563634350f25c087cf0989ead",
+    ".local/financial-rewrite-completion/jobs/0074/drafts.jsonl": "1ddf8daa8758b91b527128beccaa678b92fe2aff457a367373006342e54427df",
+    ".local/financial-rewrite-completion/jobs/0074/validated.jsonl": "4f69e54c3bd994cbd8acd129e0df9cf1432f9c6dbcc64af3026bdd00e863f23e",
+    ".local/financial-rewrite-completion/jobs/0074/structural-audit.json": "bb03b00299dd763f8b9b19332619a8b5dba1a0ae73508758e6ff69b800c40336",
+    ".local/financial-rewrite-completion/jobs/0074/review.json": "d0f5b5f7e013b9d48982fe4d1dbf2b554d1c1364e75565b0b756aadda96d4591",
+    ".local/financial-rewrite-completion/jobs/0074/review-findings.json": "e9b4696d72c6968ba3180def6f9b1569f944212dca43e75a50e6a04650c7032c",
+    ".local/financial-rewrite-completion/jobs/0075/source.jsonl": "99cb8d598ed7a1319e4494228369ec10b49f17cffae95cbd7cbcb1f74d422eeb",
+    ".local/financial-rewrite-completion/jobs/0075/drafts.jsonl": "b657fed4c8f783486f29300b29baf5ca9e634d8ed0ccc7ed436486cbf03ac5b1",
+    ".local/financial-rewrite-completion/jobs/0075/validated.jsonl": "937ac29ef8b67833b70431fad42ec31b10aefc83f243d8bbfe65c7ffe579d955",
+    ".local/financial-rewrite-completion/jobs/0075/structural-audit.json": "f9a0e9611489fc2fb37559ef93a8dd7a32be9dce3ddc19e342afac590a773233",
+    ".local/financial-rewrite-completion/jobs/0075/review.json": "b36e34b6719ebd2ba882c6489a7d62000c65be7f3207f41ec63efc47d2461c43",
+    ".local/financial-rewrite-completion/jobs/0075/review-findings.json": "41bbb6a2384bff3a4618475a8439930d3b00800e82fa1dffb5fc4fa8905a46db",
+    ".local/financial-rewrite-completion/jobs/0076/source.jsonl": "40b8033b8ce007ee6e6dd2dd3dcdc1ad5d3c66190aaab68a3bef8f2df2d094cf",
+    ".local/financial-rewrite-completion/jobs/0076/drafts.jsonl": "ace506fc3cd79e0ce1fbf4b53833500205635c5422c4136896d1d0dea1c6bf15",
+    ".local/financial-rewrite-completion/jobs/0076/validated.jsonl": "f888f085aecb7f1cc44e362aabe7de1defcfe95feb3c18a6024dd7a6b666eaf5",
+    ".local/financial-rewrite-completion/jobs/0076/structural-audit.json": "cea2fbc2f154f0f01eb749e0efac073f6de4160e314617882264c59c4067851d",
+    ".local/financial-rewrite-completion/jobs/0076/review.json": "db42aa1841c9d69eac110df017650bde3ca99dd0cb3deb91719a3f524e1567f1",
+    ".local/financial-rewrite-completion/jobs/0076/review-findings.json": "32a34f4390a5c5bfb4ab2949236c698f37bf4fff7044663c37a584057136e298",
+    ".local/financial-rewrite-completion/jobs/0077/source.jsonl": "7a02b40d11318afae7c6bbde0eab990275ae5f216fcfcd5593be94fbcf224c10",
+    ".local/financial-rewrite-completion/jobs/0077/drafts.jsonl": "4ac519a58346e4d105c668ee9d9012fdebd625021a2ed1fd5ed77cdd55ba7fc7",
+    ".local/financial-rewrite-completion/jobs/0077/validated.jsonl": "51b6336a1a0c5dc133c707a86a10859834835819d91572402a3559a0da0c9ec3",
+    ".local/financial-rewrite-completion/jobs/0077/structural-audit.json": "9978c4e82c93c5c508e25ad99e288a4aa37c21ab18739e77cd28ac23aa8ca0a0",
+    ".local/financial-rewrite-completion/jobs/0077/review.json": "d01f74b708925674c6c46ad71554e39114cd893e7a4255deaa23a2e0d06bb9eb",
+    ".local/financial-rewrite-completion/jobs/0077/review-findings.json": "49aa5bcbf3ca4bc9749ca3bf3f3c759e58f3cf4bc6ba0e2a1298afe606516231",
+    ".local/financial-rewrite-completion/jobs/0078/source.jsonl": "5bb669d0f9b3bb90ebd1554e5d0b39a83fb50e87f8dbb39e01b7c2a937d83b31",
+    ".local/financial-rewrite-completion/jobs/0078/drafts.jsonl": "e44bb49d32e4867ab4c68447b36d9c45c50ae4e4bc578f8467943a4e0f1cec72",
+    ".local/financial-rewrite-completion/jobs/0078/validated.jsonl": "41fd91c14be97bbf5cdd3924779fd5c6fa0094e538e656791334dfb0010ff62e",
+    ".local/financial-rewrite-completion/jobs/0078/structural-audit.json": "8ab060d5cdeff48bd7ee2928334b1998994964d0046619fb6d73523295e7d851",
+    ".local/financial-rewrite-completion/jobs/0078/review.json": "8a0ec0e168c32d6d684708ca90ab5f765dbb8336729c6bb8b63d396872ed30e1",
+    ".local/financial-rewrite-completion/jobs/0078/review-findings.json": "43040fa0e43b71e35d19429865c7c9654fd2752716359d6b53206641d33fcb34",
+    ".local/financial-rewrite-completion/jobs/0079/source.jsonl": "57722e10eb8c0bdf25fa9512653a8232d7c51cb57db1729405c0f663b07df08d",
+    ".local/financial-rewrite-completion/jobs/0079/drafts.jsonl": "9bb24af764eb6f1ed09479ee58d753e5810879ae972f9f074f8d3b4daece2118",
+    ".local/financial-rewrite-completion/jobs/0079/validated.jsonl": "94c1f5bdf1539bd29fc272a3e06e952c48b2716af4c330d0057d8159e2517d6b",
+    ".local/financial-rewrite-completion/jobs/0079/structural-audit.json": "6de2f06207a1eb27402edd8f4ad7d3b2945f43675b538e56719b9044a351802f",
+    ".local/financial-rewrite-completion/jobs/0079/review.json": "295d9d272632a8aa8bdc7f135ab9dd4a60f6b92964bc09a539858663ff11e2ff",
+    ".local/financial-rewrite-completion/jobs/0079/review-findings.json": "6008356e83e50b68fa6cd87c297c6720fdce2dd86a9edb213374812300afc6ab",
+    ".local/financial-rewrite-completion/jobs/0080/source.jsonl": "664e939ac212137b696fa31dc98679a35ac3b7249624f75efb41856bcc06ca3e",
+    ".local/financial-rewrite-completion/jobs/0080/drafts.jsonl": "f43405c6e0d1773a65e0dfbaa9cb064db6e98e250e2f627a0faaf02a38853699",
+    ".local/financial-rewrite-completion/jobs/0080/validated.jsonl": "ef2f3e4fdf82a12afbadb7443958a0874ab29c86a6cf073084fcac41d0f3f4c3",
+    ".local/financial-rewrite-completion/jobs/0080/structural-audit.json": "d5fd96420eef53abc30a24958a31058438883243e7342888bb80cba1a0c60000",
+    ".local/financial-rewrite-completion/jobs/0080/review.json": "d5cf2b5f57b22dd0d4f77e38713106ad30f17c4e6ca57f1d35c81665bfec9121",
+    ".local/financial-rewrite-completion/jobs/0080/review-findings.json": "8e49b0879fb9248cc3ba70591ed49a5fffb94154555c048253ff873e390570e0",
+    ".local/financial-rewrite-completion/jobs/0081/source.jsonl": "f83ca3378f2b1837290e719d3eff8d91b562818576a6a3b839c3e575eeb43c7d",
+    ".local/financial-rewrite-completion/jobs/0081/drafts.jsonl": "68b91c7d810ffa99be65b698bcfd7e4af01650f3986a9301c55bf872fdfbef54",
+    ".local/financial-rewrite-completion/jobs/0081/validated.jsonl": "2bd1da1e680196f173f3c488ec1aec7a0d652b72565af58dc72e6a6a40fc5e63",
+    ".local/financial-rewrite-completion/jobs/0081/structural-audit.json": "122a9d9246850f7251b9a2d6e7cf515f55360cd883c2b8e405bc3393348800bd",
+    ".local/financial-rewrite-completion/jobs/0081/review.json": "296f5c15efd410eb5a83cb26daa379803ef8ebf8b3d36173ec1c0e8cd8a84635",
+    ".local/financial-rewrite-completion/jobs/0081/review-findings.json": "fd6d687870cc1cf5f6623df395ceb84a6f4af3cd23625f871dd0cd636f81f45c",
+    ".local/financial-rewrite-completion/jobs/0082/source.jsonl": "7aaa784db4363986bdd36eea5ae8cab131c4a907e0334f1ecc083e752be2ebec",
+    ".local/financial-rewrite-completion/jobs/0082/drafts.jsonl": "5eff5f291124179c3a6890cf3c7f6f5c6d573b23373d825a0945c4cabf854a45",
+    ".local/financial-rewrite-completion/jobs/0082/validated.jsonl": "4938b90bea3555b65e32852af3b96a7788c63368244d43b107447cd04e5a104d",
+    ".local/financial-rewrite-completion/jobs/0082/structural-audit.json": "678a15628998b768f32c68dc336ffa37bb9dc494e58bc0fe80f3d8f3bd76f634",
+    ".local/financial-rewrite-completion/jobs/0082/review.json": "9a44be06f1ccd7a5605aac6d2ef49b652bf6f9ce33b93d9036c26bfc29a6f455",
+    ".local/financial-rewrite-completion/jobs/0082/review-findings.json": "dc8042b0ba79ce5de8f1902ed5a3db075197e3cc007427520bae6106956bda5a",
+    ".local/financial-rewrite-completion/jobs/0083/source.jsonl": "a44862b550107747971ac30d0ddb0dfa309c042b651b1ff274ab027ca7f65182",
+    ".local/financial-rewrite-completion/jobs/0083/drafts.jsonl": "82ddffdef5c77af0adf650b6e12df0694ca87d1c5a4672162aea83ce0700e643",
+    ".local/financial-rewrite-completion/jobs/0083/validated.jsonl": "fda5c8d4edef29631be53f28242b0ae1c6731814805db197ed3d04baf9a7670d",
+    ".local/financial-rewrite-completion/jobs/0083/structural-audit.json": "ed97453ec80b0df65d301b62e72e5d8753f2ecf14aa8501a484da1a5ae1a93a6",
+    ".local/financial-rewrite-completion/jobs/0083/review.json": "2930232b732a456ca1d2968e107da949a51e1a2d33743e0a97b1de125f6ec4e3",
+    ".local/financial-rewrite-completion/jobs/0083/review-findings.json": "fbb71ff499712d16353441af4be490af7fc6a380906aaad27ccc15a1c42e7a94",
+    ".local/financial-rewrite-completion/jobs/0084/source.jsonl": "54dbb47295c99c318a5607fdbb68ebbe9e4e9261927b72aaff15808c95c84953",
+    ".local/financial-rewrite-completion/jobs/0084/drafts.jsonl": "c154aa089a0265df003c2c7700ff6d3ee2b1968e5145cb9691a96887f02917ee",
+    ".local/financial-rewrite-completion/jobs/0084/validated.jsonl": "9a2e72510916c9fec23be0cdd492705553f8139e621de5b35b892e1b70be6349",
+    ".local/financial-rewrite-completion/jobs/0084/structural-audit.json": "1c7635a1a7b2725e6a6632cba44243be3e567e576e4778f8142e1f304d00d3ee",
+    ".local/financial-rewrite-completion/jobs/0084/review.json": "00ec38db0833e502a3d40723ab369565da20c295eb2b1241610386a322f2a2d2",
+    ".local/financial-rewrite-completion/jobs/0084/review-findings.json": "26f25c3d573e7dad2e6a8a3ecadf9b24482d3bd5c5bfdf91ef67830703ddaa84",
+    ".local/financial-rewrite-completion/jobs/0085/source.jsonl": "9939ef4f8b03dedf0081c5bc539aa69615edd321a9f82d64f034076fa31629b8",
+    ".local/financial-rewrite-completion/jobs/0085/drafts.jsonl": "59d4255ddbe9e213f6e5bcaca3d459e8e9a6e33fc1241f9d2360b3b13ee8a9cd",
+    ".local/financial-rewrite-completion/jobs/0085/validated.jsonl": "099f64934caff921e8e0132598e21d863a301f771cb84f4f766346115badad3f",
+    ".local/financial-rewrite-completion/jobs/0085/structural-audit.json": "1ef2166c513b499345927f304f9af48e5693a8fc762d465824b6e7d74494d9e0",
+    ".local/financial-rewrite-completion/jobs/0085/review.json": "b7b70b8dbc627934c2264cb36c139c2d0dce3bce443504008ce9262c1cc555df",
+    ".local/financial-rewrite-completion/jobs/0085/review-findings.json": "6d0fc78fd77bd6d5b96ed44c77957fef0b991bc3a3b20826aec0471698b5918d",
+    ".local/financial-rewrite-completion/jobs/0086/source.jsonl": "1497c36a3fe6cfc1ed96adf6bbe8dc1ae257957af09d187a081ee15c72894ab4",
+    ".local/financial-rewrite-completion/jobs/0086/drafts.jsonl": "b1036868cecb2fe0f99648a8c2a88b3be0323d3190678218eeac593ab9f60952",
+    ".local/financial-rewrite-completion/jobs/0086/validated.jsonl": "c595ba46da90f23b9716449791b48adf10d74460aba25f5ba73781716e7f8ea0",
+    ".local/financial-rewrite-completion/jobs/0086/structural-audit.json": "d05bc2d2f204f6b0f23bcef6717c59de1c8d4f6750a9f73a3a874b9d9061a836",
+    ".local/financial-rewrite-completion/jobs/0086/review.json": "dc1d5edace667223d9b36cb180c289d969afaf5bcc0e4ac26afa1d9aca166278",
+    ".local/financial-rewrite-completion/jobs/0086/review-findings.json": "104532828652565db643bf60ae357fe2808e45833c9b1cf058a7c727c038a021",
+    ".local/financial-rewrite-completion/jobs/0087/source.jsonl": "f68438571405a67b7941e8f301d53ed13dbcaf99b9f1b9d3a01630db87a3ff8e",
+    ".local/financial-rewrite-completion/jobs/0087/drafts.jsonl": "0b126bb178b09e2485446f90eba9d3ae7b1cbaac87e828e454d23f7c9138463f",
+    ".local/financial-rewrite-completion/jobs/0087/validated.jsonl": "c3644c339708c8f01d6e9f38b5d844f58b4b94ade47f603701d6967098da62f1",
+    ".local/financial-rewrite-completion/jobs/0087/structural-audit.json": "32d72b334cd4bbbf5b0836cbd7b88f41ce00d7ed782814901b6600e26a00a771",
+    ".local/financial-rewrite-completion/jobs/0087/review.json": "abb813282cbbab2d24b05b403f330c59bfce8fa8f4f29c9b27e042b6b62ca9d4",
+    ".local/financial-rewrite-completion/jobs/0087/review-findings.json": "7c9d002ee51574beca700625d281c13de23619952baea999c3ecae97c63bb97f",
+    ".local/financial-rewrite-completion/jobs/0088/source.jsonl": "b193e61508081d498ce3fc09a25a4af432dcb8ac60a8df14901676523a4edf40",
+    ".local/financial-rewrite-completion/jobs/0088/drafts.jsonl": "463a58ea7c0bbc2f408e179a5db741b62da0ebed43646c8963a14a75955ac64e",
+    ".local/financial-rewrite-completion/jobs/0088/validated.jsonl": "7540428ed3f61de7d4f3c7848189652cffbb464a941a434aab7fb4656514e7aa",
+    ".local/financial-rewrite-completion/jobs/0088/structural-audit.json": "171d5a32eb2b2e2eea1b953d02e4b3f2359c2554e33652f428ef524583ec4602",
+    ".local/financial-rewrite-completion/jobs/0088/review.json": "008140f5f6f18d0d64165248dbdd15877167b5f49ba08cdd881cddfd83a01a71",
+    ".local/financial-rewrite-completion/jobs/0088/review-findings.json": "57022583234ee9dc320126b8f42a6a258b033b359301c206aa984e0a06d27c3a",
+    ".local/financial-rewrite-completion/jobs/0089/source.jsonl": "02b65f17323396a0ea218d09527931b1bd84fb5ba0409aba527b981386111e4a",
+    ".local/financial-rewrite-completion/jobs/0089/drafts.jsonl": "9fe71ba138386bdec161131ada7fec3d5c4396b4b24a7b0bc6aecb30c1aef6e2",
+    ".local/financial-rewrite-completion/jobs/0089/validated.jsonl": "88153bba8212666b3525633faa9ae4aaaa9c517a7f6cf5aee857ca7a885b0bfd",
+    ".local/financial-rewrite-completion/jobs/0089/structural-audit.json": "15c2c58c54c0ca91cea129309a1e5d36c54faed4a4a27d98971a2ffbac5575ba",
+    ".local/financial-rewrite-completion/jobs/0089/review.json": "69372703ea4c185019b178a8b71271f6e2e9ae4a49d97a38bff2377b93344e22",
+    ".local/financial-rewrite-completion/jobs/0089/review-findings.json": "c2158ae4515b983c4144514133012e7a30117b7ac40dd974bc2bbac99e4c20e6",
+    ".local/financial-rewrite-completion/jobs/0090/source.jsonl": "e042203c88325f12bfe1dd4a5b8a74fb2a07c3158e46f0e9841e6ba6d6bb7242",
+    ".local/financial-rewrite-completion/jobs/0090/drafts.jsonl": "01bb32bc82b6ac6f25408c7663e5773732022725bbc2d05a313a8091c474b3ce",
+    ".local/financial-rewrite-completion/jobs/0090/validated.jsonl": "b653e7005982b3887eefa835ce6c1983b497c47d667b05574ef93cea3b96b8c7",
+    ".local/financial-rewrite-completion/jobs/0090/structural-audit.json": "973452fa71a374929ffe40948e278069f8933ef563b9ea8cb8f033123cf617b5",
+    ".local/financial-rewrite-completion/jobs/0090/review.json": "39fe93c283ec4caa5fab10b9620b2cfd4b24d915b5ab5bf90cec4cc2f76c4237",
+    ".local/financial-rewrite-completion/jobs/0090/review-findings.json": "660b71662fb9004cf858f826bd37f45a272ed00f60555dcde1026c58bf271b2d",
+    ".local/financial-rewrite-completion/jobs/0091/source.jsonl": "ee2170629d18ed1058c8380127d8e7c64a28f8661d7f9c85abfee41389e0e74b",
+    ".local/financial-rewrite-completion/jobs/0091/drafts.jsonl": "f1ba7567bd4990f752e4bcb9f1e43ff220aa1ae6eb169b21e7a9cf91dee4d9fc",
+    ".local/financial-rewrite-completion/jobs/0091/validated.jsonl": "257441b1eaf287a5e886c37e451fcad7dc496729b218468acde61936fdf7591d",
+    ".local/financial-rewrite-completion/jobs/0091/structural-audit.json": "80651321eca2cd59320c3370dc4d9dcc75f5238a29de882f354cab0c09f3c405",
+    ".local/financial-rewrite-completion/jobs/0091/review.json": "187f46829acd2fbc4b9404046becdcad7eabe591dd092d2f77f7b4d5e10e43fc",
+    ".local/financial-rewrite-completion/jobs/0091/review-findings.json": "b8ae0616afee09e861ada6aa24f401376ac16793eb84cf801c7df724324f3fac",
+    ".local/financial-rewrite-completion/jobs/0092/source.jsonl": "029385ac42e6809df47c43a0ec48ad7338a448d7d78d031b242f9909d3483298",
+    ".local/financial-rewrite-completion/jobs/0092/drafts.jsonl": "dae77de4861b6fb2d9b7701d0d9ae1c5aa2d9c81a43a3230f299e5d4f7ce6c8b",
+    ".local/financial-rewrite-completion/jobs/0092/validated.jsonl": "2090565380157b3b4474af0ad1dfd017fc70eb19727ba3df5321bf15f3e031ec",
+    ".local/financial-rewrite-completion/jobs/0092/structural-audit.json": "367bac0bc9970611fbb684a47d883c665bb33899f41e7457cf2fb125a35f95d7",
+    ".local/financial-rewrite-completion/jobs/0092/review.json": "bee2e61f135178d4ab6cda0bb6d5745c3cb6ed2ce8cdf9b6f9ec1f415a8475a4",
+    ".local/financial-rewrite-completion/jobs/0092/review-findings.json": "339ded77ffba99555aa7513e735acd64fc618dcf5f1f3d5d7112c1bbc459b0d5",
+    ".local/financial-rewrite-completion/jobs/0093/source.jsonl": "51af8e18428cf5693b9e50a107f0f4d91fdac6600e8d47e935789241db473063",
+    ".local/financial-rewrite-completion/jobs/0093/drafts.jsonl": "b072675ce08dfe210f30c3530cc98b6db829a1708176952140c4280a2776ed55",
+    ".local/financial-rewrite-completion/jobs/0093/validated.jsonl": "5f1855e33ddc57c140f751c105e52704c8df74d551f24f377d8c50229ab1bba4",
+    ".local/financial-rewrite-completion/jobs/0093/structural-audit.json": "fc31be8848c95482a870a82c89a1ddbe2a5a3126e8e67b90311b5b52cb4dcc93",
+    ".local/financial-rewrite-completion/jobs/0093/review.json": "e865fce7771878dab93c70c8565d46196005e51d3aa0b9819ca4f5fcd934b815",
+    ".local/financial-rewrite-completion/jobs/0093/review-findings.json": "f977f073424443a0b2138ad1747ec0a7525cc6e68f85d5a9f30ff559aa9f0435",
+    ".local/financial-rewrite-completion/jobs/0094/source.jsonl": "f82a4ab92fe221741e94670c40dd1c09d48d7db73476cf37263c9c8b2116b1af",
+    ".local/financial-rewrite-completion/jobs/0094/drafts.jsonl": "ba4ccd47e0154abcdd668c4bc8e4675ec6a819d8f1f0abaa23884404e1981a93",
+    ".local/financial-rewrite-completion/jobs/0094/validated.jsonl": "0ede447de3e9650d970c045cf28efb83b4e5d5323dfe8b1e918d7b2bd55bf986",
+    ".local/financial-rewrite-completion/jobs/0094/structural-audit.json": "44839f8c107ba09930ab7b6fec8001aaf70945139a2ec12d371c3bfae6d9ac16",
+    ".local/financial-rewrite-completion/jobs/0094/review.json": "fec06f49dc0f4a0920b61309aa7f74b9a407519c45bd5914ad227c940efdfddd",
+    ".local/financial-rewrite-completion/jobs/0094/review-findings.json": "cd34cbe7627eeadd7edb01c68cc4612842ce94cc4115ef82978711b187029547",
+    ".local/financial-rewrite-completion/jobs/0095/source.jsonl": "58bf47a837fe75746e57bd358474050cdc2fb0bcb774c900ede46e3abc4e26c8",
+    ".local/financial-rewrite-completion/jobs/0095/drafts.jsonl": "dd32530761a4c83be0ef57cc9eef20e4e1d6a5b19ad46e652cf49b358bba3bca",
+    ".local/financial-rewrite-completion/jobs/0095/validated.jsonl": "fb2be6049c555a486ef08b91dfe21a2a2ccec37c37ba6b6e5bbff342fa704268",
+    ".local/financial-rewrite-completion/jobs/0095/structural-audit.json": "a43420561a2984da012e754d825e37ba5b5d7ddc533c92ff6e7045d07e601651",
+    ".local/financial-rewrite-completion/jobs/0095/review.json": "7816fd95b6a224f7dbe408097a1e3c6928d86229c6f5ec5450007cd8cefe3cb6",
+    ".local/financial-rewrite-completion/jobs/0095/review-findings.json": "82813dc66aad4815b9f94e04d4924490de2d5b18aef493de6a5f33a2da0e82ae",
+    ".local/financial-rewrite-completion/jobs/0101/source.jsonl": "4b1dd433a3384e52625adddb5eefc58b288c40395405ee54dd58ac6195894dec",
+    ".local/financial-rewrite-completion/jobs/0101/drafts.jsonl": "8b7d6577d60c187f6c5b029200f63e4972d32f2952b5f6ea8676b3b6865cf314",
+    ".local/financial-rewrite-completion/jobs/0101/validated.jsonl": "a8dfd746283bf12a919124f8ab12d75eb88911b0ab4c6570d9c267c4dbe1bbc5",
+    ".local/financial-rewrite-completion/jobs/0101/structural-audit.json": "5f579082881dc646f7c8072b44aeef4fd94413a8088c3e33ff2a98b5ac63dda3",
+    ".local/financial-rewrite-completion/jobs/0101/review.json": "244468431d463330822a13fdf2561cb11a7294ec62696deec6fa018c2d8cec04",
+    ".local/financial-rewrite-completion/jobs/0101/review-findings.json": "8d227f5c94cc0187ec3d636c8cb1c446c6127967055cce99bafd981faea43b4f",
+    ".local/financial-rewrite-completion/jobs/0102/source.jsonl": "ac82bcb99aafae6e87544383b2870fa772e81e5632a73c8a149def445beceda8",
+    ".local/financial-rewrite-completion/jobs/0102/drafts.jsonl": "394814f2f2d004d82290d60009d8ff91ed0f884e362a9be9f872eb6318108283",
+    ".local/financial-rewrite-completion/jobs/0102/validated.jsonl": "e0f0ad8ceda1331cec8f4960fb9e46548ae185c35f310e763b33c184e1468728",
+    ".local/financial-rewrite-completion/jobs/0102/structural-audit.json": "a79887a823d90811a554b32ed5eb751904d980652d6ac4ddd07f89e4b44ecbb5",
+    ".local/financial-rewrite-completion/jobs/0102/review.json": "0da806355c8fcea48f151ab198f94517630798b63dc9ede3eda8a36bb6e2f50c",
+    ".local/financial-rewrite-completion/jobs/0102/review-findings.json": "0fa3a6476284ea2e5bc4fb3efe35b54f19f9e65ede85215752731fdab8036367",
+    ".local/financial-rewrite-completion/jobs/0103/source.jsonl": "edf8460c30544930e7fd81074519e98851a57ee38e46e914bec0d7657e7af127",
+    ".local/financial-rewrite-completion/jobs/0103/drafts.jsonl": "c3b60b0a03040aee48af7cabfa706b0140f20e3a60f7ad39a45a095030a9908a",
+    ".local/financial-rewrite-completion/jobs/0103/validated.jsonl": "72123bc312e5b67c118c7cb7192d9a4db93d8acf8b33534a18e80119921c81a1",
+    ".local/financial-rewrite-completion/jobs/0103/structural-audit.json": "8cbedddb9d7598436ecac736e6d538cbe22b3f1a7bf451e75482e83dbc67c51d",
+    ".local/financial-rewrite-completion/jobs/0103/review.json": "aea4369d4f9d62290efb60040782581e8f70c9eb77624a9d082ab996abab010d",
+    ".local/financial-rewrite-completion/jobs/0103/review-findings.json": "1b5d3fb87c931994bb0d59e09199fb3a49ff24e0508cc5567ed1fbe61f87b674",
+    ".local/financial-rewrite-completion/jobs/0104/source.jsonl": "12a8c80c99687c5acf6db29775982b26662b8a83d6efde242775df3d62073b62",
+    ".local/financial-rewrite-completion/jobs/0104/drafts.jsonl": "558203c504625203a8e351ff867f54d33ea0ac4e004b4bcf8e714b52052ee045",
+    ".local/financial-rewrite-completion/jobs/0104/validated.jsonl": "1f51df587cbfef21ddb8f0fd31180aaf012e307cc7d236eac699cea72cf552ab",
+    ".local/financial-rewrite-completion/jobs/0104/structural-audit.json": "cb8a67c440919dd4d9e3ece4dcb59dc9d53132ed61755fddac1c9df41d8a4fb5",
+    ".local/financial-rewrite-completion/jobs/0104/review.json": "a5e54042d877608fc627c577de7ae5e906b78e180da009fffcf1c794bd41b0dc",
+    ".local/financial-rewrite-completion/jobs/0104/review-findings.json": "f762a302d0f51afad36c7eca952c0ed5998bfa1dee095dd9bf9e45ab41376efa",
+    ".local/financial-rewrite-completion/jobs/0105/source.jsonl": "82a52a71a7bb78ab5f9e2b3ac6f3db44049d2a62bb766d603ad13f4a868b9bd7",
+    ".local/financial-rewrite-completion/jobs/0105/drafts.jsonl": "226e181937da9da9e77f548cc5fca6844d095aeee1e48c23ec4b5f8a6bd42742",
+    ".local/financial-rewrite-completion/jobs/0105/validated.jsonl": "d5cacf0dd59ad113753e225c7ee0d0fa29791299be58f470cb3f0cc44cff8a7f",
+    ".local/financial-rewrite-completion/jobs/0105/structural-audit.json": "9fd4ec19385689e63e064683a0c1fce79266cfa0eee5a1cea306ee2455c87027",
+    ".local/financial-rewrite-completion/jobs/0105/review.json": "ec67d72ecbe59e377b9731f5f8040af9da7955904ad0f3026a3387c06b077f75",
+    ".local/financial-rewrite-completion/jobs/0105/review-findings.json": "56a8ed670425891b53e98ae7b7210f2eef4f297f5e7b846bdd0f9e722eb33882",
+    ".local/financial-rewrite-completion/jobs/0111/source.jsonl": "932ac2f41b15bac164fcb0c48e0cd96156ad070800d63696e5cdf02c36e5e16f",
+    ".local/financial-rewrite-completion/jobs/0111/drafts.jsonl": "07d561a561f8ac7bd6d91bdbc849890a1f1e4f5d16dba7227211957a4fda2f2b",
+    ".local/financial-rewrite-completion/jobs/0111/validated.jsonl": "fea42b1234f044c047083d33167519bc7302c616ebb2de78af10e68d98a6d0cf",
+    ".local/financial-rewrite-completion/jobs/0111/structural-audit.json": "cbb4a77cbbc002377c6e999e334ad190b49a4437ba8948be26f1819dca3491ac",
+    ".local/financial-rewrite-completion/jobs/0111/review.json": "09ac82f42741e86a76850cc56f272d6ee51316f88dbffff9775fba30186a7a41",
+    ".local/financial-rewrite-completion/jobs/0111/review-findings.json": "3237bb8a51addc10a6e3193f47aade1097fa463b8108460e84e7935eced44ddf",
+    ".local/financial-rewrite-completion/jobs/0112/source.jsonl": "d91133697e8be9ee1285a87bcb859aee3dee740a297d249e3fe87712d57bcc38",
+    ".local/financial-rewrite-completion/jobs/0112/drafts.jsonl": "f5f3e8bf389f503de8c79df7441862d2613fe6747163584edec47daabf1eafde",
+    ".local/financial-rewrite-completion/jobs/0112/validated.jsonl": "e5382345b47a6a4415da86854a3e027c0518d8d2aaf5041817d35266a0dbee30",
+    ".local/financial-rewrite-completion/jobs/0112/structural-audit.json": "a93626e093de9c8ca4ecbfb18ade6fb63d1a770b29adfeee5448e422f8bd604f",
+    ".local/financial-rewrite-completion/jobs/0112/review.json": "c3be27b3e6fec004134c21ad5755edfc978e9d37b63e82bbbf46216ad5187821",
+    ".local/financial-rewrite-completion/jobs/0112/review-findings.json": "16cfdf9cbc83f7b8471c812ee56307f4c483186b05d54f968b02fc3e3571afe6",
+    ".local/financial-rewrite-completion/jobs/0113/source.jsonl": "1a8bce1ce45fae1a7a1895c6cf85449f514bbd43d0fb6e0e9ebbfbf7803840d7",
+    ".local/financial-rewrite-completion/jobs/0113/drafts.jsonl": "1eb0b575dc559e36e72b991bfb441b464eaa236c604c66febfa88b20d502e0cb",
+    ".local/financial-rewrite-completion/jobs/0113/validated.jsonl": "227c34c53b83f270829aad466ea114ffb451bdb85c74c55714b99327dfd40358",
+    ".local/financial-rewrite-completion/jobs/0113/structural-audit.json": "832b2c674c7be7fed0d17a6024266b4ceee8682d6a984ef98f6e44d1f9cbef73",
+    ".local/financial-rewrite-completion/jobs/0113/review.json": "41f1ff2d38337d791bd76e218aec106428a18c177b3911ab46ad3a8a785bdd13",
+    ".local/financial-rewrite-completion/jobs/0113/review-findings.json": "aab80b84cc207a5cfba9a6043af8a37029074bc26ef0d1895dbde1114fc38175",
+    ".local/financial-rewrite-completion/jobs/0114/source.jsonl": "7fac7294ebc2f537e8a09b231b747fac15379898b88c59bd24298e5311204830",
+    ".local/financial-rewrite-completion/jobs/0114/drafts.jsonl": "0a0219759a6346209b6fc44e522c7191cd7979665efb90ebc506168ada4f6aa8",
+    ".local/financial-rewrite-completion/jobs/0114/validated.jsonl": "a4e0ea38e84b77d96aae8913b819a947fa42280f70779651becbe10577a3f7d1",
+    ".local/financial-rewrite-completion/jobs/0114/structural-audit.json": "7d591a993cb88f0cc3a027a490fdd5349b91c064bf8bc15ae08512ba573d6da8",
+    ".local/financial-rewrite-completion/jobs/0114/review.json": "87809ba3df06e5920a30cb84bfd8eea63a218afc17663c3faae374c3d5ae08fa",
+    ".local/financial-rewrite-completion/jobs/0114/review-findings.json": "f30275031489e8867719d9e1cda38d612715e542b1db7abd0b6fc675b970bdde",
+    ".local/financial-rewrite-completion/jobs/0115/source.jsonl": "1335cccf89583b8c0ceeea33f402b76c471f69c3285470b0e36badb384948e19",
+    ".local/financial-rewrite-completion/jobs/0115/drafts.jsonl": "8a13770a31072ff98fd883cf040a1034191380e0e137753077b1ab73c99c1ed4",
+    ".local/financial-rewrite-completion/jobs/0115/validated.jsonl": "66e4590b3907c5f9556c6bb7f2f2b34549c85feb0a71a318882e4c3439126919",
+    ".local/financial-rewrite-completion/jobs/0115/structural-audit.json": "3946552feafb8b7e83f144b388f7af5bf0dc6858c0ce2c0c1051ef3bb7daf342",
+    ".local/financial-rewrite-completion/jobs/0115/review.json": "1f91da883940f441cd0596aeaf56348edb21a5a4221bb984cb0e63c30e88d5cc",
+    ".local/financial-rewrite-completion/jobs/0115/review-findings.json": "d90877bb7c38aac04041080671eb3c1097805c8d258402d01d71a9c99ebaafe1",
+    ".local/financial-rewrite-completion/jobs/0116/source.jsonl": "a16156e732694f0b1c72458c1542662be3549b03fff3db4a4727baf1239804db",
+    ".local/financial-rewrite-completion/jobs/0116/drafts.jsonl": "c9c6a7e7d03046ec39064094ab25044688566d1d28f9220632d6fbd8a6a79e96",
+    ".local/financial-rewrite-completion/jobs/0116/validated.jsonl": "9676af5229026b8de2819bdc48bfd5fc419edd52cdb2d519abcff8ebf8bd6a91",
+    ".local/financial-rewrite-completion/jobs/0116/structural-audit.json": "5128f4f92706f10f4ad7812947196edf0360aab95239c5cdfab3391dbb3c5fff",
+    ".local/financial-rewrite-completion/jobs/0116/review.json": "8eaa4fa689276ce7f820eae440a2b97583944f298bd4f85538a1d5843cb15b04",
+    ".local/financial-rewrite-completion/jobs/0116/review-findings.json": "3eb857dd67b366ebebef4bd071dc56c0f18413a78d68656a3a77bd069eeee2df",
+    ".local/financial-rewrite-completion/jobs/0117/source.jsonl": "4704ec164eb539ea13de412831f4ee7296eb8980a92ffdfd6cc1a6b63639796e",
+    ".local/financial-rewrite-completion/jobs/0117/drafts.jsonl": "8ccc1162297323b022bfc0f4521476d8562e028fbac8d3b39e53ffd267f1d8e4",
+    ".local/financial-rewrite-completion/jobs/0117/validated.jsonl": "c0a4fd9f54c91e87c80138f1408c40e518a8029b31d353b14bd69418a9d32330",
+    ".local/financial-rewrite-completion/jobs/0117/structural-audit.json": "b5cd16303e9ab797d780383fbae7426915274d1057ba163b9fa687efdeb4ce2f",
+    ".local/financial-rewrite-completion/jobs/0117/review.json": "3e3c1b43398dede8ccebdae690cfc409a350ad1c493fe228cf8675a7028c374a",
+    ".local/financial-rewrite-completion/jobs/0117/review-findings.json": "74fd9b031b8935dcbed7970177b2c04e095399e73f76d14f5fd35b5b13b367d2",
+    ".local/financial-rewrite-completion/jobs/0118/source.jsonl": "57001e1046ff1a2b3b451d1405eaf44de22a14bd16f0769786893dced11fcdfe",
+    ".local/financial-rewrite-completion/jobs/0118/drafts.jsonl": "9f067eaabf7e9c20debd6bf465edb2812b8555826bd98f359a884e44c357f34a",
+    ".local/financial-rewrite-completion/jobs/0118/validated.jsonl": "57ad9490bea0977574334932883e2d722a3f08f92f381db1102ad9810b007851",
+    ".local/financial-rewrite-completion/jobs/0118/structural-audit.json": "7a7733a182ee82ff116bb8cc021ac2cf22b6a998dd01fbef27aea637468986a4",
+    ".local/financial-rewrite-completion/jobs/0118/review.json": "ecd3b21183cdabdb9df83e2fbf0ed85520344f9fbbc398f14804d14ec5926cbf",
+    ".local/financial-rewrite-completion/jobs/0118/review-findings.json": "a23613d1d0f985d48dcd9811b9d85984431b79b609336cd6badaa0f9e806068c",
+    ".local/financial-rewrite-completion/jobs/0119/source.jsonl": "afe912522e75aa5b626c06b2a53ac2b18b1259e6216a6e6c9ae2143326ed36a7",
+    ".local/financial-rewrite-completion/jobs/0119/drafts.jsonl": "9054e366ff5d0d3456bf048e3b681369ce27e9ea443683787c363269d832cbe7",
+    ".local/financial-rewrite-completion/jobs/0119/validated.jsonl": "9d4e8dc3116dd0511013b6431d520377bede641e6859647b4cd697c8ec5f6c56",
+    ".local/financial-rewrite-completion/jobs/0119/structural-audit.json": "4ed767a7d2454eae36829259eee8f373490cdc13c9ad2e86723204c5316e815c",
+    ".local/financial-rewrite-completion/jobs/0119/review.json": "df4c0ba451c1c63b43a44d667f53a94115e838737b4effd81f1702a4f9d68bce",
+    ".local/financial-rewrite-completion/jobs/0119/review-findings.json": "86616e289c782baa47864ad557d666051d72cadc520efea70b85663aeda960cb",
+    ".local/financial-rewrite-completion/jobs/0120/source.jsonl": "6d09ec269d8956b2e39c7f750e9e7fd33505cc91bb48e58d2b1f741d444b8210",
+    ".local/financial-rewrite-completion/jobs/0120/drafts.jsonl": "88f102702e998aac25905e87f11e7f1888196c1c315af4299611d19727dda0d7",
+    ".local/financial-rewrite-completion/jobs/0120/validated.jsonl": "38da06efc5e82fb7b98928886fc85ac5c3c1dd20e447f8bb3a09d0e51eadc978",
+    ".local/financial-rewrite-completion/jobs/0120/structural-audit.json": "5fe0ba9078d1ba614a00e54f28dd3ca474ea92b0245df302fbe4a9ffe9af76aa",
+    ".local/financial-rewrite-completion/jobs/0120/review.json": "884e1a66f7da255e00513ef7d5cedd6a3ffef014649f4b5a417b2c2133272fb5",
+    ".local/financial-rewrite-completion/jobs/0120/review-findings.json": "67df0c09a90d23527c501d8772a25ae11bc82c4f2d1ba0893d659cab9a25dd98",
+    ".local/financial-rewrite-completion/jobs/0121/source.jsonl": "e9c4a4264d290ae01a5170d43c0521d1a9298e51a3c4642a5100d23aed1a8020",
+    ".local/financial-rewrite-completion/jobs/0121/drafts.jsonl": "dc4a307556d439765a18ee3077932cca720e71f8e012e9c37e5ce4a9e6a1eff0",
+    ".local/financial-rewrite-completion/jobs/0121/validated.jsonl": "2feafdc7544586b16b4db3287823d5a491a11378f9503e76364a0208849e1a0f",
+    ".local/financial-rewrite-completion/jobs/0121/structural-audit.json": "64da330d318906f1225cdcf886966ace9734ff4cf8df22cce360a954bbe5dfbc",
+    ".local/financial-rewrite-completion/jobs/0121/review.json": "f31dc507bc98addec0c1845134505fe6d684317d213143e8910cc1a528370d5e",
+    ".local/financial-rewrite-completion/jobs/0121/review-findings.json": "5e1d0a8101fbcbd9405ebd282663254912da3c152d6ff688a9a4ed27cf5e8ffe",
+    ".local/financial-rewrite-completion/jobs/0122/source.jsonl": "dfd5c9d4d21565ea503511fb49a326a9b6a4048360499ce471f913f8d68f8f52",
+    ".local/financial-rewrite-completion/jobs/0122/drafts.jsonl": "d4d91e991bc86091d29454ef1efa992ca2a7d7e7f89baabc4799b8b3d522e9f2",
+    ".local/financial-rewrite-completion/jobs/0122/validated.jsonl": "40194fc5dd1a543237c18da1f12122203a1421a3323cfb271e6bef76ebc44b27",
+    ".local/financial-rewrite-completion/jobs/0122/structural-audit.json": "d74d39493e5a723159cc0ae88b289dacdbb527b5dca809d7c0f060cbf35df30f",
+    ".local/financial-rewrite-completion/jobs/0122/review.json": "0e69cad82e351e99aab692a359a9b90262abaa8a8a93582a5167115f13be58c0",
+    ".local/financial-rewrite-completion/jobs/0122/review-findings.json": "c570fbccff238494598b5bcda79a872418ed23b76a41ac83da5b738fc0b9eb4b",
+    ".local/financial-rewrite-completion/jobs/0123/source.jsonl": "debd00ea4adb3f8bbf16cc2e19a0649b754e20470e9dd1dd44e19ee93c1f0b98",
+    ".local/financial-rewrite-completion/jobs/0123/drafts.jsonl": "927d0eaccac1e31ef6871c98c5afae5d662f0ab1e423ac40322c2b59fec02417",
+    ".local/financial-rewrite-completion/jobs/0123/validated.jsonl": "15cb3b82609d955289bddd39d2f8cbf67ade5d25aa4ac89f3784c484f4463197",
+    ".local/financial-rewrite-completion/jobs/0123/structural-audit.json": "ba0a066e17e1fbc707e23a3bce9e9850ac578d55182d4655372e70e117d61311",
+    ".local/financial-rewrite-completion/jobs/0123/review.json": "7dca6e814841e962bd4091bd36956d85032f2060f1bd3365f4bdad7381a6354a",
+    ".local/financial-rewrite-completion/jobs/0123/review-findings.json": "ab328d1f910389b960d83d9e0a65c5c13a221b8eee5207041075ca92c52b3d96",
+    ".local/financial-rewrite-completion/jobs/0124/source.jsonl": "35fc98baa8039b863b156705a07d5fe60c472ffcba22f9b8481a285726108659",
+    ".local/financial-rewrite-completion/jobs/0124/drafts.jsonl": "01caea4a2ea0e82134e9dc6ba32452b3d788fa79462515cc110cad4ad99635e7",
+    ".local/financial-rewrite-completion/jobs/0124/validated.jsonl": "22fa112853a57cd5c690581e273b8b012edfb0ea92e2b60e0231689660faa72d",
+    ".local/financial-rewrite-completion/jobs/0124/structural-audit.json": "d5b40844257b779d94521e2e48a39e8aa848f125fbb10783db01930f3cb532c9",
+    ".local/financial-rewrite-completion/jobs/0124/review.json": "affe5677ef241eb31c4f230f349c5406bb716062cbfd35dde2177ba920702c83",
+    ".local/financial-rewrite-completion/jobs/0124/review-findings.json": "db086613a7262ef26717b2238ba03b0f4e124b025ea252816acf5c0ace6ef7d0",
+    ".local/financial-rewrite-completion/jobs/0125/source.jsonl": "24a78f47e29e8d53fcc10bb07bac5e63d3170c870bb7b4218cafd59a5c0c93ed",
+    ".local/financial-rewrite-completion/jobs/0125/drafts.jsonl": "b4c853648739da872c085e440b2ae2756c192911f60bd303388829d1dc3fe8eb",
+    ".local/financial-rewrite-completion/jobs/0125/validated.jsonl": "27701e526a954da27d97a52662ab71d62ed23931504c487c8302fb13edff5fa7",
+    ".local/financial-rewrite-completion/jobs/0125/structural-audit.json": "a22b524a55744f4224c298a56e71d552a6b5ae68cc97b99e3b3fa27f2379e387",
+    ".local/financial-rewrite-completion/jobs/0125/review.json": "cfa9e45686e05d2ee391984b2b60c556c1a18e6a6c753b0a9ad4a4554b2451de",
+    ".local/financial-rewrite-completion/jobs/0125/review-findings.json": "d1a04d2e9983e14f44ade0060c4efbe1cbe97ff125d055dfbc3f49ebb608e639",
+    ".local/financial-rewrite-completion/jobs/0126/source.jsonl": "d1e6207212bb89004b800c9dc420b103541c48e5d69dc7371e29444c0073c914",
+    ".local/financial-rewrite-completion/jobs/0126/drafts.jsonl": "8bc81dbde591fcd37bf8b14bbb264af395e90f7e98e66a813eb9efba5e9697f7",
+    ".local/financial-rewrite-completion/jobs/0126/validated.jsonl": "864b0c9e579314bec9cc0ba401457a338113368968f5fb950f17b1d84342b860",
+    ".local/financial-rewrite-completion/jobs/0126/structural-audit.json": "53f89fe4f391813a85f11616434bf199d9b4a9a9f2fae1a9ed0b3b12825f29f1",
+    ".local/financial-rewrite-completion/jobs/0126/review.json": "50c5190430fbb2dd0b75c76758b53cfad8090cce889b16aad8330c5cf4ef4b6d",
+    ".local/financial-rewrite-completion/jobs/0126/review-findings.json": "742b2b68a1ca683960b23b7fee29315fd688a96cee4d9114ee8d47a1203f4949",
+    ".local/financial-rewrite-completion/jobs/0127/source.jsonl": "01392d0a51d9fea0e3c8443301098b8dea9ed755bc9257c2e9e92f6ca708b82c",
+    ".local/financial-rewrite-completion/jobs/0127/drafts.jsonl": "7b2570984704b7b08824e5f4a8f7d808c96a7aabf00a454474a272e625ccd860",
+    ".local/financial-rewrite-completion/jobs/0127/validated.jsonl": "a4f02ae4d3012d8dedbd66f7b919faf0a33263ff23f84d7269274be81cdcd3d9",
+    ".local/financial-rewrite-completion/jobs/0127/structural-audit.json": "0fe57541fb8c89971120b1dc331d77a8d0e604d4528a1db976fbbe56724bfcf8",
+    ".local/financial-rewrite-completion/jobs/0127/review.json": "1c99aafb42e0fd1175da30ee2192e18cca3963e59645336d17fe07df66b3c6d1",
+    ".local/financial-rewrite-completion/jobs/0127/review-findings.json": "d86a250e6381d9336faaf645d70d8d44253d13c85c0e7ab41cb3dd849f7d0673",
+    ".local/financial-rewrite-completion/legacy-score-scale-findings.json": "c1954ac5625980b5ca68d8dd5382b2eed92dc04d810644fe5a11ab9fd00c5287",
+    ".local/financial-training-release-v1/review/core-review.json": "6ae36587815c9c37faa37f1cb72608a85640feed71f7fe14d3932a62042a39e3",
+    ".local/financial-training-release-v1/additions/core.jsonl": "9683b149594794f6cf4543f1749a5d10e8f77f51ca23276adb1a8cb087a36a2a",
+    ".local/financial-training-release-v1/review/safety-review.json": "0f1cadb4b25dd30d386a49197dd0e7fae3f942f70adb190b5dc58b32aca5bc35",
+    ".local/financial-training-release-v1/additions/safety.jsonl": "eab07df1e516903c6bd9ef0e1ae1fca617e8a3ccf69e0b9600dc3b93bc59e37c",
+    ".local/financial-training-release-v1/review/scope-review.json": "3609b64ae0ce62e464f29bd5bd9e50daaa6db92f698c0f3ed836d371c39763d9",
+    ".local/financial-training-release-v1/additions/scope.jsonl": "81366f5323818dc3736f05555f6cf55e6c13a92a9dc028d19a6dfb024c93297d",
+    "data/financial-public-rewrite-v1/NOTICE.md": "2645ad1b7d607781280b91ff99cf8aa43426ce53d094d8763434775fccd9c09f",
+    "data/financial-public-rewrite-v1/licenses/CrossWOZ-LICENSE.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "src/qwenlab/financial_release.py": "820defcdd6363226225ae380735a06500bb27ce46eb06fff9a47aefe05689eeb",
+    "src/qwenlab/financial_release_core.py": "7f6ab2d2df84f4d275459b2eefd14db903145f65540c362d5cc7a4c07b2b4d1b"
+  },
+  "files": {
+    "parts/part-0001.jsonl": {
+      "rows": 1000,
+      "sha256": "0916ad37760cd3e89fbb9f09f680584da43e6f81d872efd5273ae1843d5996c4"
+    },
+    "parts/part-0002.jsonl": {
+      "rows": 1000,
+      "sha256": "19d6ed5299923a578af4f8f07c382e22dca43a1250667ac04f2a93c29a2cf686"
+    },
+    "parts/part-0003.jsonl": {
+      "rows": 1000,
+      "sha256": "a5f29c958d39ba91c8635f4f32a0030cec52f44be8e91d2cc502d30a7b318c4d"
+    },
+    "parts/part-0004.jsonl": {
+      "rows": 1000,
+      "sha256": "778ebf7a7b0d0230678c3e5d80dd5652e7080e5b40e879bbe7ff2907eb0d1e5f"
+    },
+    "parts/part-0005.jsonl": {
+      "rows": 1000,
+      "sha256": "729295ba5bc1112b231a19c9eeb6b75914a0f149db05d17ee85fee6198a5d73d"
+    },
+    "parts/part-0006.jsonl": {
+      "rows": 1000,
+      "sha256": "877b27a3b0b65930c0cdb6858e9eee9ec5dc559184758ff02d4d480ad271649c"
+    },
+    "parts/part-0007.jsonl": {
+      "rows": 1000,
+      "sha256": "e66b1eea90f8d18a2259586f29768fe1d6ecd498262792c191f80b0ba0810ef2"
+    },
+    "parts/part-0008.jsonl": {
+      "rows": 1000,
+      "sha256": "8f0760b77aa0a0f1745b4ce1afc6ad6769872a9ab3cbe0f5443c49ff844c1950"
+    },
+    "parts/part-0009.jsonl": {
+      "rows": 1000,
+      "sha256": "ec0ca7a13b316c84b623fb88b89b244ef54e04ea7be5796eeb70883bb110c1ca"
+    },
+    "parts/part-0010.jsonl": {
+      "rows": 1000,
+      "sha256": "ac2fc39c27afc4ccfa5e9de847ed03713b79cafe5694d371f70e453f4a8562d4"
+    },
+    "parts/part-0011.jsonl": {
+      "rows": 1000,
+      "sha256": "3ae481330892796ee853001ba69071b8a93176c6ca62ad2f2342d49044d4b007"
+    },
+    "parts/part-0012.jsonl": {
+      "rows": 49,
+      "sha256": "a4200e7e05818ffb08c9aca4752450ee1cf26bf344b4c235e376691909f9ce88"
+    },
+    "selection-ledger.jsonl": {
+      "rows": 14621,
+      "sha256": "c5900a76ce3fc822f56885be6a3e6e1f5aeb98dc34faea3ebd78008bc4c9ccd2"
+    },
+    "groups.json": {
+      "sha256": "eae76c4e3e472d89ce916a3abcbd7bc246f8ef8d93c33c1e1d344fc1b8e004d3"
+    },
+    "reviews/core-review.json": {
+      "sha256": "6ae36587815c9c37faa37f1cb72608a85640feed71f7fe14d3932a62042a39e3"
+    },
+    "reviews/legacy-0003.json": {
+      "sha256": "3ed94231b8c0fd9a15c9aef86787d36fd4dd20ae5e31c5ba8808381014ba6f05"
+    },
+    "reviews/legacy-0094.json": {
+      "sha256": "fec06f49dc0f4a0920b61309aa7f74b9a407519c45bd5914ad227c940efdfddd"
+    },
+    "reviews/legacy-0105.json": {
+      "sha256": "ec67d72ecbe59e377b9731f5f8040af9da7955904ad0f3026a3387c06b077f75"
+    },
+    "reviews/legacy-0051.json": {
+      "sha256": "bb86d6dbe1034c77fdf50fd3dd8636c2101a5406237706a3cfab2dc4d43740e7"
+    },
+    "reviews/safety-review.json": {
+      "sha256": "0f1cadb4b25dd30d386a49197dd0e7fae3f942f70adb190b5dc58b32aca5bc35"
+    },
+    "reviews/legacy-0121.json": {
+      "sha256": "f31dc507bc98addec0c1845134505fe6d684317d213143e8910cc1a528370d5e"
+    },
+    "reviews/legacy-0045.json": {
+      "sha256": "8ddba3698e91166f492ca2d98c3b4bd2efa3e51020d367534f16a3bd5ce3d88a"
+    },
+    "reviews/legacy-0066.json": {
+      "sha256": "f841b7ccbfc2b75de596187ed235cabde5a4bd7f6db27052dd568d43d61be168"
+    },
+    "reviews/legacy-0012.json": {
+      "sha256": "8a25d3337418a04a82c6ff3eeff80e8bcba674f0de0f1b0cf01db6cbc7fa9772"
+    },
+    "reviews/legacy-0117.json": {
+      "sha256": "3e3c1b43398dede8ccebdae690cfc409a350ad1c493fe228cf8675a7028c374a"
+    },
+    "reviews/scope-review.json": {
+      "sha256": "3609b64ae0ce62e464f29bd5bd9e50daaa6db92f698c0f3ed836d371c39763d9"
+    },
+    "reviews/legacy-0015.json": {
+      "sha256": "f773eb7927b8fd60bf00eabeb7b0e431ad5eaca8cf04994a3d17ad79dcc487a7"
+    },
+    "reviews/legacy-0005.json": {
+      "sha256": "431d7f16890904d07d7087fe488679c64b3f43fcd8eb3a9b9fa76a39429c3c8c"
+    },
+    "reviews/legacy-0116.json": {
+      "sha256": "8eaa4fa689276ce7f820eae440a2b97583944f298bd4f85538a1d5843cb15b04"
+    },
+    "reviews/legacy-0034.json": {
+      "sha256": "3cc8bbe05f85654e108d10be6095953c7b6e9edad17368d2454a4213468c226d"
+    },
+    "reviews/legacy-0002.json": {
+      "sha256": "c981b145216ca80e422a8e94b7696eba309e2776f55865769cf8b27868151340"
+    },
+    "reviews/legacy-0036.json": {
+      "sha256": "62f6dede070e16dfddef8cde47f970ce5c68eb09bf2fa91022038135173c1be7"
+    },
+    "reviews/legacy-0112.json": {
+      "sha256": "c3be27b3e6fec004134c21ad5755edfc978e9d37b63e82bbbf46216ad5187821"
+    },
+    "reviews/legacy-0124.json": {
+      "sha256": "affe5677ef241eb31c4f230f349c5406bb716062cbfd35dde2177ba920702c83"
+    },
+    "reviews/legacy-0030.json": {
+      "sha256": "c8cf0e70fbd94cd2aeafae9e7ad2e5927499dcefa03a45e94653f7cc70b1df0d"
+    },
+    "reviews/legacy-0039.json": {
+      "sha256": "9fb0f52224148558d44882a5051a4c034801383b067161815e233155962344d0"
+    },
+    "reviews/legacy-0006.json": {
+      "sha256": "457e71b3b9fa68f5632e80a25e2fd5232d9c6ffde9a7f3fb53581fa3dafd3545"
+    },
+    "reviews/legacy-0009.json": {
+      "sha256": "7c4acd2a5f4bfb52418c130af99639297f8b4b765c31cb818ec3596ec3974eeb"
+    },
+    "reviews/legacy-0054.json": {
+      "sha256": "8415b2126118f5e976630b8d955696a22102c5bd215e6c3bf52d6900fd2ae5ce"
+    },
+    "reviews/legacy-0102.json": {
+      "sha256": "0da806355c8fcea48f151ab198f94517630798b63dc9ede3eda8a36bb6e2f50c"
+    },
+    "reviews/legacy-0014.json": {
+      "sha256": "12a864e7499f99c6276e5ec0b5f33f9cc679cd8e8ba39703ccab423d97b492eb"
+    },
+    "reviews/legacy-0021.json": {
+      "sha256": "a1bfe2bf75753f9c47000ff6d7f04b32729afd0850ff729423aa2da0d552330f"
+    },
+    "reviews/legacy-0035.json": {
+      "sha256": "75d70fef61e9447b1f970e9ebb53cfd45fde16b8667302c9f92b951031e8dc8d"
+    },
+    "reviews/legacy-0074.json": {
+      "sha256": "d0f5b5f7e013b9d48982fe4d1dbf2b554d1c1364e75565b0b756aadda96d4591"
+    },
+    "reviews/legacy-0025.json": {
+      "sha256": "f97a2141c292a9850c32dfb1e8eaf0eb5aef801c93cf6a114c9aec3279688299"
+    },
+    "reviews/legacy-0028.json": {
+      "sha256": "c5a69ac4463f3cf4c4130d9187bc8bd37c3f557a884167a0bb512ab840446fb7"
+    },
+    "reviews/legacy-0077.json": {
+      "sha256": "d01f74b708925674c6c46ad71554e39114cd893e7a4255deaa23a2e0d06bb9eb"
+    },
+    "reviews/legacy-0041.json": {
+      "sha256": "3eab35f1d3e1a8027f820345242a2995e1e77a5d814a9bdc596a3c45aa436cbb"
+    },
+    "reviews/legacy-0078.json": {
+      "sha256": "8a0ec0e168c32d6d684708ca90ab5f765dbb8336729c6bb8b63d396872ed30e1"
+    },
+    "reviews/legacy-0010.json": {
+      "sha256": "f026c7397bbaea161d789c4094911b8f04f1971fe769847ed1674f0892d80037"
+    },
+    "reviews/legacy-0120.json": {
+      "sha256": "884e1a66f7da255e00513ef7d5cedd6a3ffef014649f4b5a417b2c2133272fb5"
+    },
+    "reviews/legacy-0087.json": {
+      "sha256": "abb813282cbbab2d24b05b403f330c59bfce8fa8f4f29c9b27e042b6b62ca9d4"
+    },
+    "reviews/legacy-0004.json": {
+      "sha256": "85a294c653874ce4161cbb89f6bc0468d55a45f113b439c93238b19acaea3336"
+    },
+    "reviews/legacy-0088.json": {
+      "sha256": "008140f5f6f18d0d64165248dbdd15877167b5f49ba08cdd881cddfd83a01a71"
+    },
+    "reviews/legacy-0083.json": {
+      "sha256": "2930232b732a456ca1d2968e107da949a51e1a2d33743e0a97b1de125f6ec4e3"
+    },
+    "reviews/legacy-0020.json": {
+      "sha256": "ed61517816040302ffe7f7a5064640d472d56284d4c6c4e7c533fc8a8066e2a4"
+    },
+    "reviews/legacy-0061.json": {
+      "sha256": "19dbd948ce94311ffe242849f0ed29deeea314ae286faa067b41562bcf9dd803"
+    },
+    "reviews/legacy-0029.json": {
+      "sha256": "4e3ddcc80230abd7b1a1f175b7cf8e0766c9186ed6af6e1debd28ef1724abb53"
+    },
+    "reviews/legacy-0122.json": {
+      "sha256": "0e69cad82e351e99aab692a359a9b90262abaa8a8a93582a5167115f13be58c0"
+    },
+    "reviews/legacy-0019.json": {
+      "sha256": "43e634556fb225e69fd81ca9bab939da86b044481f882a2a205767cf4f842a4b"
+    },
+    "reviews/legacy-0033.json": {
+      "sha256": "3ef4d653b01428ae94a62a71cb867965bd66c46632fe54d52d099dda13136661"
+    },
+    "reviews/legacy-0008.json": {
+      "sha256": "a7afa5990206a4cccc0d046913fda20bd73f320d4292c452fc0eea7aaf6e1083"
+    },
+    "reviews/legacy-0053.json": {
+      "sha256": "57985e6b18d4fb91cb4e3a4ee09ff48f456c7e05628a7458f4b5ce07653cff37"
+    },
+    "reviews/legacy-0013.json": {
+      "sha256": "693ab09444e6794eede3e34bc51c368c0d13f34c5d90f3dfb050833853045d6f"
+    },
+    "reviews/legacy-0118.json": {
+      "sha256": "ecd3b21183cdabdb9df83e2fbf0ed85520344f9fbbc398f14804d14ec5926cbf"
+    },
+    "reviews/legacy-0123.json": {
+      "sha256": "7dca6e814841e962bd4091bd36956d85032f2060f1bd3365f4bdad7381a6354a"
+    },
+    "reviews/legacy-0079.json": {
+      "sha256": "295d9d272632a8aa8bdc7f135ab9dd4a60f6b92964bc09a539858663ff11e2ff"
+    },
+    "reviews/legacy-0090.json": {
+      "sha256": "39fe93c283ec4caa5fab10b9620b2cfd4b24d915b5ab5bf90cec4cc2f76c4237"
+    },
+    "reviews/legacy-0095.json": {
+      "sha256": "7816fd95b6a224f7dbe408097a1e3c6928d86229c6f5ec5450007cd8cefe3cb6"
+    },
+    "reviews/legacy-0071.json": {
+      "sha256": "7c768033c2cb50ea722d7bbbbdc926cbc5a75de937b8f566049c4281fcae833f"
+    },
+    "reviews/legacy-0115.json": {
+      "sha256": "1f91da883940f441cd0596aeaf56348edb21a5a4221bb984cb0e63c30e88d5cc"
+    },
+    "reviews/legacy-0022.json": {
+      "sha256": "ede14a83a1b0026ee1bf321a06e90c92d4733e22ed1c59a4a0ae5dea019a11c3"
+    },
+    "reviews/legacy-0075.json": {
+      "sha256": "b36e34b6719ebd2ba882c6489a7d62000c65be7f3207f41ec63efc47d2461c43"
+    },
+    "reviews/legacy-0073.json": {
+      "sha256": "0021a68aa3a4e8f454edd99420159968522988ffc27d1873e4bfdaaf8f0afbbb"
+    },
+    "reviews/legacy-0018.json": {
+      "sha256": "c0a6bae7feb8d2b7b8f09b5fc20194b1df161085e2702b1a0539b5c1d12a8d9d"
+    },
+    "reviews/legacy-0001.json": {
+      "sha256": "0f085e8d48d42c8054bce8585e42630a9251f1c496a3e6397e129f90dd9f6605"
+    },
+    "reviews/legacy-0049.json": {
+      "sha256": "0a914b19b248819579069e730808f4962bc8c1de0e85b29a29996b239a1de078"
+    },
+    "reviews/legacy-0127.json": {
+      "sha256": "1c99aafb42e0fd1175da30ee2192e18cca3963e59645336d17fe07df66b3c6d1"
+    },
+    "reviews/legacy-0016.json": {
+      "sha256": "8c3e94e2b7a4b18bede299e4dc2527947f7baf46289bd83a2edcfd3fbb8873f7"
+    },
+    "reviews/legacy-0126.json": {
+      "sha256": "50c5190430fbb2dd0b75c76758b53cfad8090cce889b16aad8330c5cf4ef4b6d"
+    },
+    "reviews/legacy-0011.json": {
+      "sha256": "7cc5db21afe7f336edc9bc88f776c7ad7d460b015d9a9df9aca2cd5492c5ce3b"
+    },
+    "reviews/legacy-0093.json": {
+      "sha256": "e865fce7771878dab93c70c8565d46196005e51d3aa0b9819ca4f5fcd934b815"
+    },
+    "reviews/legacy-0072.json": {
+      "sha256": "fb1cefaba9d70cc0fa87445c6ed73795c1c3bc144a398ac272c6f1f9c4700861"
+    },
+    "reviews/legacy-0042.json": {
+      "sha256": "10a15e2dd9c61483b158dad020c7cb81e60c853699ba7daf53b6ae7e32d63c7a"
+    },
+    "reviews/legacy-0027.json": {
+      "sha256": "f44b45bc884fbde5c46cf7fe32e409d45e4105b4729cbbb0f8db2f3015397bfd"
+    },
+    "reviews/legacy-0024.json": {
+      "sha256": "0f77f7cb627a6ac29b9fa5ee2b2adaf7bdc90fa42f9d9ef4c51316e780ea5875"
+    },
+    "reviews/legacy-0089.json": {
+      "sha256": "69372703ea4c185019b178a8b71271f6e2e9ae4a49d97a38bff2377b93344e22"
+    },
+    "reviews/legacy-0119.json": {
+      "sha256": "df4c0ba451c1c63b43a44d667f53a94115e838737b4effd81f1702a4f9d68bce"
+    },
+    "reviews/legacy-0047.json": {
+      "sha256": "9eed3e4f548dae586e5860f815b82c45150ce610038656ccd192a1b693b4a6a4"
+    },
+    "reviews/legacy-0046.json": {
+      "sha256": "8012e070372bd9e21f99c03cb4522b1aa39fe4e76baf6a191067d4f58bc6d01a"
+    },
+    "reviews/legacy-0103.json": {
+      "sha256": "aea4369d4f9d62290efb60040782581e8f70c9eb77624a9d082ab996abab010d"
+    },
+    "reviews/legacy-0086.json": {
+      "sha256": "dc1d5edace667223d9b36cb180c289d969afaf5bcc0e4ac26afa1d9aca166278"
+    },
+    "reviews/legacy-0023.json": {
+      "sha256": "9c60a771f9fe1dd1ff8c8ffbc72c742b862b28e9e652e70cdb386e46a25713f3"
+    },
+    "reviews/legacy-0031.json": {
+      "sha256": "ed8baa5062eaa4e6a31b5f1799eb70071076c47738f7af5cb32bb4a7c5e5aa84"
+    },
+    "reviews/legacy-0026.json": {
+      "sha256": "f3d8d1f7ec5fbfa98cdcb4eef0021322a128e620e103197574b521541be40dd1"
+    },
+    "reviews/legacy-0007.json": {
+      "sha256": "b737b2eb385c999752766b543bab672ee8870f032ea9acdf05b44aec9bef9c0e"
+    },
+    "reviews/legacy-0082.json": {
+      "sha256": "9a44be06f1ccd7a5605aac6d2ef49b652bf6f9ce33b93d9036c26bfc29a6f455"
+    },
+    "reviews/legacy-0063.json": {
+      "sha256": "0331d81ae3046be03720fa658b58a1bb227efb9679560074b38fd9ce0e65be5d"
+    },
+    "reviews/legacy-0114.json": {
+      "sha256": "87809ba3df06e5920a30cb84bfd8eea63a218afc17663c3faae374c3d5ae08fa"
+    },
+    "reviews/legacy-0043.json": {
+      "sha256": "c30e404aca558ce67fe46d3cd2a01bcc1380b39475617271942b8a53caa3931a"
+    },
+    "reviews/legacy-0050.json": {
+      "sha256": "7a7bac25d77d4845704dcfb5d60e1b4ac7cc87e5bcdb91c5e1703259b10443e5"
+    },
+    "reviews/legacy-0057.json": {
+      "sha256": "45fa63c4941fce06ac4b4083778c8fd32d4d84d853abd7bf477b854a36b26482"
+    },
+    "reviews/legacy-0081.json": {
+      "sha256": "296f5c15efd410eb5a83cb26daa379803ef8ebf8b3d36173ec1c0e8cd8a84635"
+    },
+    "reviews/legacy-0084.json": {
+      "sha256": "00ec38db0833e502a3d40723ab369565da20c295eb2b1241610386a322f2a2d2"
+    },
+    "reviews/legacy-0058.json": {
+      "sha256": "10c359c79ce0dd73a818445232c666278b3b7210a92606e19889c08a53a45d33"
+    },
+    "reviews/legacy-0062.json": {
+      "sha256": "22b1f145a8db209d159eb20b25b2534b8890f3cd2ed274ab5369d9ccfb443515"
+    },
+    "reviews/legacy-0092.json": {
+      "sha256": "bee2e61f135178d4ab6cda0bb6d5745c3cb6ed2ce8cdf9b6f9ec1f415a8475a4"
+    },
+    "reviews/legacy-0111.json": {
+      "sha256": "09ac82f42741e86a76850cc56f272d6ee51316f88dbffff9775fba30186a7a41"
+    },
+    "reviews/legacy-0104.json": {
+      "sha256": "a5e54042d877608fc627c577de7ae5e906b78e180da009fffcf1c794bd41b0dc"
+    },
+    "reviews/legacy-0040.json": {
+      "sha256": "4670818d54d7947a79af7b37ef13e94ed88e4e1dc5c4f50449563f043560d263"
+    },
+    "reviews/legacy-0101.json": {
+      "sha256": "244468431d463330822a13fdf2561cb11a7294ec62696deec6fa018c2d8cec04"
+    },
+    "reviews/legacy-0080.json": {
+      "sha256": "d5cf2b5f57b22dd0d4f77e38713106ad30f17c4e6ca57f1d35c81665bfec9121"
+    },
+    "reviews/legacy-0017.json": {
+      "sha256": "bf1d71f07ea2cc8a8ac93c80e2119070e29b5e64125fa1a1c6c27eaea103eb48"
+    },
+    "reviews/legacy-0032.json": {
+      "sha256": "74bf51d30fad524bd46bd79896d16e7b92d10ffa91c34dedeef4c76715eb2f2f"
+    },
+    "reviews/legacy-0055.json": {
+      "sha256": "b0c491f75faa0449658f2f6edff6e0b0f5726e5315239b02d5a3072bde6bd8fe"
+    },
+    "reviews/legacy-0052.json": {
+      "sha256": "ff0df12cda9874b5d28c42aa16e707fdb7f6a7ae414f7f60e7fe63c91d922c5a"
+    },
+    "reviews/legacy-0076.json": {
+      "sha256": "db42aa1841c9d69eac110df017650bde3ca99dd0cb3deb91719a3f524e1567f1"
+    },
+    "reviews/legacy-0125.json": {
+      "sha256": "cfa9e45686e05d2ee391984b2b60c556c1a18e6a6c753b0a9ad4a4554b2451de"
+    },
+    "reviews/legacy-0085.json": {
+      "sha256": "b7b70b8dbc627934c2264cb36c139c2d0dce3bce443504008ce9262c1cc555df"
+    },
+    "reviews/legacy-0038.json": {
+      "sha256": "abc6171a9ff46b6b1470c06bd696b5bc7ba46642a7d4d93fb7a4d37a848ec281"
+    },
+    "reviews/legacy-0113.json": {
+      "sha256": "41f1ff2d38337d791bd76e218aec106428a18c177b3911ab46ad3a8a785bdd13"
+    },
+    "reviews/legacy-0060.json": {
+      "sha256": "a220d835f4cba9ead547e916194e2837681b3c852ac60aa0d7c1f0f4001ace5f"
+    },
+    "reviews/legacy-0091.json": {
+      "sha256": "187f46829acd2fbc4b9404046becdcad7eabe591dd092d2f77f7b4d5e10e43fc"
+    },
+    "reviews/legacy-0069.json": {
+      "sha256": "56fc5c8cb2aaec7f898d8e3c938adbc926b2e215a933470dff111f6b79fb251a"
+    },
+    "reviews/legacy-0037.json": {
+      "sha256": "37ed49096eace2cdbca115da00721c221d8cd4be9602c394b185f5b634b892d6"
+    },
+    "reviews/legacy-0044.json": {
+      "sha256": "d90e758b9c6b75b606ffd485eb32c20f5b1c9140a23798febe4fdd2d1df81732"
+    },
+    "reviews/legacy-0048.json": {
+      "sha256": "f5ba9cc1d008594b6aec841147869df04cbbf1ee002c7d4274c1752d7796c959"
+    },
+    "reviews/legacy-0056.json": {
+      "sha256": "c35e6cd2cc11b13f55d4ed4b5ea87ba502b7f44e18323927cbd305f7f39f6616"
+    },
+    "reviews/legacy-0068.json": {
+      "sha256": "6650e91ef1cd4dccb0b8a35cfa54094fe2d14717b64cbeca3d73c21069a1b78e"
+    },
+    "reviews/legacy-0067.json": {
+      "sha256": "125a6d433d6ad62e79616fd538cf7b0ba22fd3358f8c4a1982752cf91cb885d8"
+    },
+    "reviews/legacy-0070.json": {
+      "sha256": "b6870619151a816652cea90e7284626fbb19d73b40e3ecbb4bf4e7488c8fd79b"
+    },
+    "reviews/legacy-0064.json": {
+      "sha256": "576c78eeb7cc5dea1bbfd612c13034012fd43e3d876378ab67d3147e0c6afa81"
+    },
+    "reviews/legacy-0059.json": {
+      "sha256": "13b2a3997779a7abea0df2f17e75af49607b1b03153f05c4e025c7ff4e5d1f14"
+    },
+    "reviews/legacy-0065.json": {
+      "sha256": "f62d1738298a1ed21b8922a92290f3ccbb77739b997970f8123752ff0314f77a"
+    },
+    "review-evidence.jsonl": {
+      "rows": 11049,
+      "sha256": "02a074983a59249dd3916d7731475bd6b44b7a55e4b701f8fb386e970a43cc48"
+    },
+    "NOTICE.md": {
+      "sha256": "3db86ce25ff6802b473d50ca5ddc8528000d15b927b82f5b8873ec32f971e43b"
+    },
+    "licenses/CrossWOZ-LICENSE.txt": {
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    }
+  },
+  "action_tokens": {
+    "clarify": "A",
+    "retrieve": "B",
+    "tool": "C",
+    "answer": "D",
+    "human": "E",
+    "redirect": "F",
+    "refuse": "G",
+    "close": "H"
+  },
+  "release_note": "All selected IDs independently read. Lexical dedup is not complete semantic dedup. Planned knowledge retrieval is simulated. New eight-action evaluation must be frozen separately."
+}

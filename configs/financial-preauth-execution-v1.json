@@ -1,0 +1,21 @@
+{
+  "version": "financial-preauth-execution-design-v1",
+  "base_design_config": "configs/financial-sampling-study-v1.json",
+  "candidate_schedule_config": "configs/financial-preauth-schedule-v1.json",
+  "arms": [
+    "preauth"
+  ],
+  "steps_per_arm": 400,
+  "probe_steps": 25,
+  "probe_pause_step": 12,
+  "initialize": "fresh_official_same_seed",
+  "diagnostic_steps": [
+    200
+  ],
+  "selection_steps": [
+    400
+  ],
+  "model_api_requests": 0,
+  "deployment_enabled": false,
+  "historical_reference": "results/financial-sampling-v1"
+}

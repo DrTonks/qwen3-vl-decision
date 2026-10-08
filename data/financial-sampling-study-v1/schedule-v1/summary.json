@@ -1,0 +1,230 @@
+{
+  "version": "financial-sampling-accounting-v1",
+  "training_enabled": false,
+  "training_eligible": false,
+  "model_weights_loaded": false,
+  "model_api_requests": 0,
+  "pool_rows": 13242,
+  "pool_groups": 6059,
+  "pool_max_input_tokens": {
+    "action": 634,
+    "tool": 682
+  },
+  "token_accounting": "input tokens only; action and true-tool prompts padded separately to their maximum within each original two-row microbatch; no cross-microbatch tool repacking",
+  "supervision_formula": "N + T tasks; N + 0.75*T weight; N original row exposures, T true-tool exposures",
+  "interpretation": "joint layer allocation, source-group weighting and repetition; not equal FLOPs or isolated quota effect",
+  "arms": {
+    "uniform": {
+      "prefix_200": {
+        "steps": 200,
+        "original_row_exposures": 1600,
+        "true_tool_exposures": 308,
+        "supervised_tasks": 1908,
+        "supervised_weight": 1831.0,
+        "unique_rows": 1600,
+        "unique_groups": 1279,
+        "repeated_row_exposures": 0,
+        "rows_seen_more_than_once": 0,
+        "max_row_exposure": 1,
+        "max_group_exposure": 8,
+        "layer_counts": {
+          "current-component": 122,
+          "current-node": 107,
+          "planned": 822,
+          "preauth": 549
+        },
+        "action_counts": {
+          "answer": 286,
+          "clarify": 205,
+          "close": 79,
+          "human": 204,
+          "redirect": 99,
+          "refuse": 137,
+          "retrieve": 282,
+          "tool": 308
+        },
+        "tool_counts": {
+          "explainApplicationStatus": 50,
+          "queryApplicationDetail": 65,
+          "queryLoanProducts": 114,
+          "queryMyApplications": 45,
+          "queryMyCreditScore": 34
+        },
+        "action_microbatches": 800,
+        "nonempty_tool_microbatches": 277,
+        "raw_input_tokens": {
+          "action": 824675,
+          "tool": 175521,
+          "total": 1000196
+        },
+        "padded_input_tokens": {
+          "action": 846842,
+          "tool": 176741,
+          "total": 1023583
+        },
+        "max_input_tokens": {
+          "action": 609,
+          "tool": 653
+        }
+      },
+      "full_400": {
+        "steps": 400,
+        "original_row_exposures": 3200,
+        "true_tool_exposures": 618,
+        "supervised_tasks": 3818,
+        "supervised_weight": 3663.5,
+        "unique_rows": 3200,
+        "unique_groups": 2225,
+        "repeated_row_exposures": 0,
+        "rows_seen_more_than_once": 0,
+        "max_row_exposure": 1,
+        "max_group_exposure": 10,
+        "layer_counts": {
+          "current-component": 227,
+          "current-node": 218,
+          "planned": 1654,
+          "preauth": 1101
+        },
+        "action_counts": {
+          "answer": 562,
+          "clarify": 407,
+          "close": 169,
+          "human": 391,
+          "redirect": 175,
+          "refuse": 259,
+          "retrieve": 619,
+          "tool": 618
+        },
+        "tool_counts": {
+          "explainApplicationStatus": 86,
+          "queryApplicationDetail": 144,
+          "queryLoanProducts": 223,
+          "queryMyApplications": 106,
+          "queryMyCreditScore": 59
+        },
+        "action_microbatches": 1600,
+        "nonempty_tool_microbatches": 561,
+        "raw_input_tokens": {
+          "action": 1650070,
+          "tool": 351494,
+          "total": 2001564
+        },
+        "padded_input_tokens": {
+          "action": 1695624,
+          "tool": 353492,
+          "total": 2049116
+        },
+        "max_input_tokens": {
+          "action": 609,
+          "tool": 653
+        }
+      }
+    },
+    "stratified": {
+      "prefix_200": {
+        "steps": 200,
+        "original_row_exposures": 1600,
+        "true_tool_exposures": 360,
+        "supervised_tasks": 1960,
+        "supervised_weight": 1870.0,
+        "unique_rows": 1581,
+        "unique_groups": 990,
+        "repeated_row_exposures": 19,
+        "rows_seen_more_than_once": 18,
+        "max_row_exposure": 3,
+        "max_group_exposure": 4,
+        "layer_counts": {
+          "current-component": 240,
+          "current-node": 720,
+          "planned": 400,
+          "preauth": 240
+        },
+        "action_counts": {
+          "answer": 334,
+          "clarify": 263,
+          "close": 53,
+          "human": 295,
+          "redirect": 53,
+          "refuse": 85,
+          "retrieve": 157,
+          "tool": 360
+        },
+        "tool_counts": {
+          "explainApplicationStatus": 36,
+          "queryApplicationDetail": 146,
+          "queryLoanProducts": 74,
+          "queryMyApplications": 54,
+          "queryMyCreditScore": 50
+        },
+        "action_microbatches": 800,
+        "nonempty_tool_microbatches": 316,
+        "raw_input_tokens": {
+          "action": 807979,
+          "tool": 199986,
+          "total": 1007965
+        },
+        "padded_input_tokens": {
+          "action": 821088,
+          "tool": 200733,
+          "total": 1021821
+        },
+        "max_input_tokens": {
+          "action": 606,
+          "tool": 642
+        }
+      },
+      "full_400": {
+        "steps": 400,
+        "original_row_exposures": 3200,
+        "true_tool_exposures": 753,
+        "supervised_tasks": 3953,
+        "supervised_weight": 3764.75,
+        "unique_rows": 2498,
+        "unique_groups": 1630,
+        "repeated_row_exposures": 702,
+        "rows_seen_more_than_once": 663,
+        "max_row_exposure": 4,
+        "max_group_exposure": 7,
+        "layer_counts": {
+          "current-component": 480,
+          "current-node": 1440,
+          "planned": 800,
+          "preauth": 480
+        },
+        "action_counts": {
+          "answer": 666,
+          "clarify": 493,
+          "close": 106,
+          "human": 587,
+          "redirect": 105,
+          "refuse": 165,
+          "retrieve": 325,
+          "tool": 753
+        },
+        "tool_counts": {
+          "explainApplicationStatus": 72,
+          "queryApplicationDetail": 306,
+          "queryLoanProducts": 161,
+          "queryMyApplications": 117,
+          "queryMyCreditScore": 97
+        },
+        "action_microbatches": 1600,
+        "nonempty_tool_microbatches": 663,
+        "raw_input_tokens": {
+          "action": 1616925,
+          "tool": 417699,
+          "total": 2034624
+        },
+        "padded_input_tokens": {
+          "action": 1644396,
+          "tool": 419191,
+          "total": 2063587
+        },
+        "max_input_tokens": {
+          "action": 606,
+          "tool": 651
+        }
+      }
+    }
+  }
+}

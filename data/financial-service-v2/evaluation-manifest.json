@@ -1,0 +1,16 @@
+{
+  "policy_sha256": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+  "train_sha256": "e12e359809ccb162ac242b2661b3f995b0e7bc44b5e8595c94e982c68bd5f021",
+  "training_eligible": false,
+  "code_sha256": "fffde21c3023d7064c5e55ff7fc991624590f3c808f389403c47a47fcb55eae2",
+  "files": {
+    "development.json": "56bd31ebfa75633143fefa5d6ae2dd77709a17d2bde642a583675ce638f558eb",
+    "calibration.json": "94f6f579a43b9da9a9e5ca9abc8804acbb38cad904cb0aed31f0f90fbeee7158",
+    "final.json": "6cfe11b034254f241639ffe4f6762521d0cb6f3c21f3ea2c818f42d3c4fba35f",
+    "evaluation-review.json": "75316c950594d068b2725ea2fc5cdf5ac2892425d411836a33e0124d5f2e3e97",
+    "overlap-audit.json": "5790ac5a845b01ec0313dd33a5125184fc5c31a22cd6a1e2f3d437d6debfe697",
+    "evaluation-author-evidence.json": "e130b98f0f5afc3f7f61fd20b012883fc91b0aaf1516614d8797e44cdbced9ab",
+    "evaluation-summary.json": "81874e8158e17c0a4d27616e2098ad6ef9afcc3c8201f3fd6c0c67759525aafc"
+  },
+  "limitation": "Independently authored synthetic evaluation, not real traffic; no model outputs used for authoring/review."
+}

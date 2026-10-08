@@ -1,0 +1,22 @@
+{
+  "queue_rows": 184,
+  "decisions": {
+    "retain": 149,
+    "revise": 11,
+    "quarantine": 24
+  },
+  "candidate_rows": 160,
+  "actions": {
+    "answer": 14,
+    "retrieve": 37,
+    "close": 8,
+    "human": 100,
+    "tool": 1
+  },
+  "quarantined_groups": 23,
+  "related_rows": 80,
+  "training_eligible": false,
+  "input_migrated": false,
+  "evaluation_opened": false,
+  "model_calls": 0
+}

@@ -1,0 +1,55 @@
+{
+  "version": "financial-support-contract-draft-v2",
+  "status": "proposal_not_runtime_protocol",
+  "training_enabled": false,
+  "deployable": false,
+  "purpose": "Resolve training-label boundaries against the repository-declared Node backend before a new data release.",
+  "actions": ["clarify", "retrieve", "tool", "answer", "human", "redirect", "refuse", "close"],
+  "profiles": {
+    "current-node-no-kb": {
+      "knowledge_collections": [],
+      "handoff_available": false,
+      "endpoint_requires_authentication": true,
+      "note": "Eight actions are the proposed semantic taxonomy; the current Node executor accepts only six. This profile does not implement the missing adapter."
+    },
+    "planned-kb": {
+      "knowledge_collections": "Explicit server-supplied allowlist after retrieval implementation",
+      "handoff_available": "Explicit server-supplied availability, never inferred from the user",
+      "note": "Future capability coverage must be reported separately from current deployment coverage."
+    }
+  },
+  "proposed_state_fields": {
+    "authenticated": "Server-authenticated identity; no user-text override",
+    "handoff_available": "A connector can actually accept a request",
+    "handoff_status": ["none", "requested", "queued", "connected", "failed"],
+    "tool_results": "Tool name, arguments, fields, observed_at, completeness and owner scope; no fabricated results",
+    "failure_state": "Verified execution error and bounded retry count; not inferred from conversation wording"
+  },
+  "boundaries": [
+    {"id": "human-intent", "rule": "An explicit request for a person to handle this case selects human even if the handoff connector is unavailable. The executor must truthfully report unavailability, never claim acceptance."},
+    {"id": "contact-information", "rule": "A pure request for public contact information selects answer if verified information is present, retrieve if an appropriate official collection is available, otherwise answer with the limitation. A request for an actual handoff selects human."},
+    {"id": "unavailable-personal-service", "rule": "A legal personal transaction that cannot be completed by the tools selects human; a question about whether the assistant has such a capability selects answer. Missing capability does not imply prohibited conduct."},
+    {"id": "forbidden-versus-quoted", "rule": "Refuse a requested prohibited operation, not merely a quotation, negation or report of one. Risk explanation selects answer; an explicit request for human investigation selects human."},
+    {"id": "auth-versus-capability", "rule": "For a supported personal query, missing authentication selects clarify. If the required capability does not exist, do not demand authentication as if it would enable the operation; apply the unavailable-service rule."},
+    {"id": "tool-substitution", "rule": "Known applicationId and available detail tool prefer detail. A list may answer status or amount only for a matching returned item; the latest-50 list cannot prove absence of an older application. Missing fields cannot be invented or supplied from a different-language implementation."},
+    {"id": "close", "rule": "Close only on an explicit end of consultation with no outstanding substantive request. Ordinary thanks, cancellation of an application, and account deletion are not close."},
+    {"id": "redirect", "rule": "A lawful request outside the loan-service scope selects redirect; it is not a refusal merely because it is outside the domain."},
+    {"id": "mixed-intents", "rule": "A clear prohibited execution request takes refuse; otherwise explicit human handling takes human. Interpret quoted text first. Other unresolved incompatible requests require clarification or quarantine during labeling, not keyword precedence."}
+  ],
+  "tools": {
+    "queryLoanProducts": {"fields": ["id", "name", "maxAmount", "acceptScore", "tags"], "limit": 50, "scope": "On-sale products; no personal approved limit, live interest rate or contract terms"},
+    "queryMyApplications": {"fields": ["applicationId", "productId", "amount", "status", "statusText"], "limit": 50, "scope": "Authenticated owner's latest applications; no paging/filter argument, productName or applyTime"},
+    "queryApplicationDetail": {"fields": ["applicationId", "productName", "amount", "months", "status", "statusText", "usage"], "required_arguments": ["applicationId"], "scope": "Positive id and authenticated owner; no rejection reason, contract terms or repayment schedule"},
+    "queryMyCreditScore": {"fields": ["score", "band", "recommendedLimit"], "scope": "Stored score, not a new calculation or approval; recommendedLimit may be null"},
+    "explainApplicationStatus": {"supported_codes": [0, 1, 2], "scope": "Static explanation, not a live application-status query"}
+  },
+  "release_requirements": [
+    "Version the eight-action adapter separately from support-classifier-v1; do not silently map to the old four-route result.",
+    "Review the 184 training-only leads against the full input and new policy; retain, revise or quarantine with provenance and independent review.",
+    "Do not re-label frozen evaluation data or use its mistakes for training. A changed policy requires separately versioned compatible evaluation.",
+    "Report current-service, future-retrieval and pre-authentication robustness cohorts separately; do not infer equal action counts are optimal.",
+    "Keep old Jev cache as historical evidence if the prompt, input, options or policy changes; new API use needs a separately authorized budget.",
+    "Measure model decision, backend guard/grounding and final executed outcome separately.",
+    "Freeze a new training protocol only after dataset and contract review; no automatic training from this draft."
+  ]
+}

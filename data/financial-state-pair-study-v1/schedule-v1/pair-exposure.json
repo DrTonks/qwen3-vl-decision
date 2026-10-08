@@ -1,0 +1,2432 @@
+[
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-P01-ready",
+      "FIN-SP1-P01-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-P01-ready": [
+        116,
+        325
+      ],
+      "FIN-SP1-P01-unauthenticated": [
+        53,
+        219
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-P01-ready",
+      "FIN-SP1-P01-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-P01-ready": [
+        116,
+        325
+      ],
+      "FIN-SP1-P01-unavailable": [
+        55,
+        368
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-P02-ready",
+      "FIN-SP1-P02-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-P02-ready": [
+        39,
+        335
+      ],
+      "FIN-SP1-P02-unauthenticated": [
+        168,
+        323
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-P02-ready",
+      "FIN-SP1-P02-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-P02-ready": [
+        39,
+        335
+      ],
+      "FIN-SP1-P02-unavailable": [
+        133,
+        258
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-P03-ready",
+      "FIN-SP1-P03-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-P03-ready": [
+        95,
+        268
+      ],
+      "FIN-SP1-P03-unauthenticated": [
+        172,
+        205
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-P03-ready",
+      "FIN-SP1-P03-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-P03-ready": [
+        95,
+        268
+      ],
+      "FIN-SP1-P03-unavailable": [
+        143,
+        272
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-P04-ready",
+      "FIN-SP1-P04-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-P04-ready": [
+        18,
+        359
+      ],
+      "FIN-SP1-P04-unauthenticated": [
+        37,
+        274
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-P04-ready",
+      "FIN-SP1-P04-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-P04-ready": [
+        18,
+        359
+      ],
+      "FIN-SP1-P04-unavailable": [
+        20,
+        285
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-P05-ready",
+      "FIN-SP1-P05-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-P05-ready": [
+        86,
+        284
+      ],
+      "FIN-SP1-P05-unauthenticated": [
+        105,
+        288
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-P05-ready",
+      "FIN-SP1-P05-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-P05-ready": [
+        86,
+        284
+      ],
+      "FIN-SP1-P05-unavailable": [
+        119,
+        234
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-P06-ready",
+      "FIN-SP1-P06-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-P06-ready": [
+        161,
+        277
+      ],
+      "FIN-SP1-P06-unauthenticated": [
+        9,
+        379
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-P06-ready",
+      "FIN-SP1-P06-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-P06-ready": [
+        161,
+        277
+      ],
+      "FIN-SP1-P06-unavailable": [
+        53,
+        241
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-P07-ready",
+      "FIN-SP1-P07-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-P07-ready": [
+        54,
+        282
+      ],
+      "FIN-SP1-P07-unauthenticated": [
+        34,
+        394
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-P07-ready",
+      "FIN-SP1-P07-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-P07-ready": [
+        54,
+        282
+      ],
+      "FIN-SP1-P07-unavailable": [
+        6,
+        325
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-P08-ready",
+      "FIN-SP1-P08-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-P08-ready": [
+        31,
+        330
+      ],
+      "FIN-SP1-P08-unauthenticated": [
+        42,
+        263
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-P08-ready",
+      "FIN-SP1-P08-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-P08-ready": [
+        31,
+        330
+      ],
+      "FIN-SP1-P08-unavailable": [
+        34,
+        221
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-A01-ready",
+      "FIN-SP1-A01-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-A01-ready": [
+        44,
+        257
+      ],
+      "FIN-SP1-A01-unauthenticated": [
+        139,
+        356
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-A01-ready",
+      "FIN-SP1-A01-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-A01-ready": [
+        44,
+        257
+      ],
+      "FIN-SP1-A01-unavailable": [
+        128,
+        241
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-A02-ready",
+      "FIN-SP1-A02-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-A02-ready": [
+        70,
+        286
+      ],
+      "FIN-SP1-A02-unauthenticated": [
+        180,
+        206
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-A02-ready",
+      "FIN-SP1-A02-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-A02-ready": [
+        70,
+        286
+      ],
+      "FIN-SP1-A02-unavailable": [
+        146,
+        262
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-A03-ready",
+      "FIN-SP1-A03-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-A03-ready": [
+        135,
+        224
+      ],
+      "FIN-SP1-A03-unauthenticated": [
+        72,
+        303
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-A03-ready",
+      "FIN-SP1-A03-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-A03-ready": [
+        135,
+        224
+      ],
+      "FIN-SP1-A03-unavailable": [
+        184,
+        377
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-A04-ready",
+      "FIN-SP1-A04-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-A04-ready": [
+        81,
+        208
+      ],
+      "FIN-SP1-A04-unauthenticated": [
+        85,
+        283
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-A04-ready",
+      "FIN-SP1-A04-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-A04-ready": [
+        81,
+        208
+      ],
+      "FIN-SP1-A04-unavailable": [
+        16,
+        294
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-A05-ready",
+      "FIN-SP1-A05-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-A05-ready": [
+        34,
+        287
+      ],
+      "FIN-SP1-A05-unauthenticated": [
+        47,
+        316
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-A05-ready",
+      "FIN-SP1-A05-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-A05-ready": [
+        34,
+        287
+      ],
+      "FIN-SP1-A05-unavailable": [
+        89,
+        349
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-A06-ready",
+      "FIN-SP1-A06-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-A06-ready": [
+        91,
+        377
+      ],
+      "FIN-SP1-A06-unauthenticated": [
+        58,
+        337
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-A06-ready",
+      "FIN-SP1-A06-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-A06-ready": [
+        91,
+        377
+      ],
+      "FIN-SP1-A06-unavailable": [
+        178,
+        352
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-A07-ready",
+      "FIN-SP1-A07-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-A07-ready": [
+        110,
+        298
+      ],
+      "FIN-SP1-A07-unauthenticated": [
+        63,
+        286
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-A07-ready",
+      "FIN-SP1-A07-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-A07-ready": [
+        110,
+        298
+      ],
+      "FIN-SP1-A07-unavailable": [
+        103,
+        209
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-A08-ready",
+      "FIN-SP1-A08-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-A08-ready": [
+        48,
+        288
+      ],
+      "FIN-SP1-A08-unauthenticated": [
+        20,
+        345
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-A08-ready",
+      "FIN-SP1-A08-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-A08-ready": [
+        48,
+        288
+      ],
+      "FIN-SP1-A08-unavailable": [
+        117,
+        324
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-D01-ready",
+      "FIN-SP1-D01-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-D01-ready": [
+        57,
+        289
+      ],
+      "FIN-SP1-D01-unauthenticated": [
+        200,
+        313
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-D01-ready",
+      "FIN-SP1-D01-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-D01-ready": [
+        57,
+        289
+      ],
+      "FIN-SP1-D01-unavailable": [
+        182,
+        306
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-D01-ready",
+      "FIN-SP1-D01-missing"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-D01-ready": [
+        57,
+        289
+      ],
+      "FIN-SP1-D01-missing": [
+        174,
+        367
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-D02-ready",
+      "FIN-SP1-D02-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-D02-ready": [
+        130,
+        264
+      ],
+      "FIN-SP1-D02-unauthenticated": [
+        109,
+        238
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-D02-ready",
+      "FIN-SP1-D02-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-D02-ready": [
+        130,
+        264
+      ],
+      "FIN-SP1-D02-unavailable": [
+        100,
+        348
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-D02-ready",
+      "FIN-SP1-D02-missing"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-D02-ready": [
+        130,
+        264
+      ],
+      "FIN-SP1-D02-missing": [
+        189,
+        208
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-D03-ready",
+      "FIN-SP1-D03-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-D03-ready": [
+        92,
+        347
+      ],
+      "FIN-SP1-D03-unauthenticated": [
+        195,
+        339
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-D03-ready",
+      "FIN-SP1-D03-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-D03-ready": [
+        92,
+        347
+      ],
+      "FIN-SP1-D03-unavailable": [
+        91,
+        302
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-D03-ready",
+      "FIN-SP1-D03-missing"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-D03-ready": [
+        92,
+        347
+      ],
+      "FIN-SP1-D03-missing": [
+        89,
+        371
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-D04-ready",
+      "FIN-SP1-D04-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-D04-ready": [
+        56,
+        203
+      ],
+      "FIN-SP1-D04-unauthenticated": [
+        189,
+        387
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-D04-ready",
+      "FIN-SP1-D04-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-D04-ready": [
+        56,
+        203
+      ],
+      "FIN-SP1-D04-unavailable": [
+        117,
+        400
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-D04-ready",
+      "FIN-SP1-D04-missing"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-D04-ready": [
+        56,
+        203
+      ],
+      "FIN-SP1-D04-missing": [
+        89,
+        249
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-D05-ready",
+      "FIN-SP1-D05-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-D05-ready": [
+        104,
+        375
+      ],
+      "FIN-SP1-D05-unauthenticated": [
+        198,
+        248
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-D05-ready",
+      "FIN-SP1-D05-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-D05-ready": [
+        104,
+        375
+      ],
+      "FIN-SP1-D05-unavailable": [
+        194,
+        382
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-D05-ready",
+      "FIN-SP1-D05-missing"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-D05-ready": [
+        104,
+        375
+      ],
+      "FIN-SP1-D05-missing": [
+        50,
+        360
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-D06-ready",
+      "FIN-SP1-D06-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-D06-ready": [
+        168,
+        219
+      ],
+      "FIN-SP1-D06-unauthenticated": [
+        108,
+        228
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-D06-ready",
+      "FIN-SP1-D06-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-D06-ready": [
+        168,
+        219
+      ],
+      "FIN-SP1-D06-unavailable": [
+        101,
+        252
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-D06-ready",
+      "FIN-SP1-D06-missing"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-D06-ready": [
+        168,
+        219
+      ],
+      "FIN-SP1-D06-missing": [
+        140,
+        354
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-D07-ready",
+      "FIN-SP1-D07-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-D07-ready": [
+        197,
+        386
+      ],
+      "FIN-SP1-D07-unauthenticated": [
+        139,
+        332
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-D07-ready",
+      "FIN-SP1-D07-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-D07-ready": [
+        197,
+        386
+      ],
+      "FIN-SP1-D07-unavailable": [
+        155,
+        254
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-D07-ready",
+      "FIN-SP1-D07-missing"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-D07-ready": [
+        197,
+        386
+      ],
+      "FIN-SP1-D07-missing": [
+        65,
+        201
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-D08-ready",
+      "FIN-SP1-D08-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-D08-ready": [
+        190,
+        280
+      ],
+      "FIN-SP1-D08-unauthenticated": [
+        105,
+        310
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-D08-ready",
+      "FIN-SP1-D08-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-D08-ready": [
+        190,
+        280
+      ],
+      "FIN-SP1-D08-unavailable": [
+        159,
+        359
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-D08-ready",
+      "FIN-SP1-D08-missing"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-D08-ready": [
+        190,
+        280
+      ],
+      "FIN-SP1-D08-missing": [
+        13,
+        392
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-C01-ready",
+      "FIN-SP1-C01-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-C01-ready": [
+        64,
+        388
+      ],
+      "FIN-SP1-C01-unauthenticated": [
+        155,
+        292
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-C01-ready",
+      "FIN-SP1-C01-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-C01-ready": [
+        64,
+        388
+      ],
+      "FIN-SP1-C01-unavailable": [
+        188,
+        296
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-C02-ready",
+      "FIN-SP1-C02-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-C02-ready": [
+        94,
+        226
+      ],
+      "FIN-SP1-C02-unauthenticated": [
+        114,
+        302
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-C02-ready",
+      "FIN-SP1-C02-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-C02-ready": [
+        94,
+        226
+      ],
+      "FIN-SP1-C02-unavailable": [
+        15,
+        300
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-C03-ready",
+      "FIN-SP1-C03-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-C03-ready": [
+        156,
+        396
+      ],
+      "FIN-SP1-C03-unauthenticated": [
+        167,
+        234
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-C03-ready",
+      "FIN-SP1-C03-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-C03-ready": [
+        156,
+        396
+      ],
+      "FIN-SP1-C03-unavailable": [
+        130,
+        399
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-C04-ready",
+      "FIN-SP1-C04-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-C04-ready": [
+        173,
+        399
+      ],
+      "FIN-SP1-C04-unauthenticated": [
+        126,
+        213
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-C04-ready",
+      "FIN-SP1-C04-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-C04-ready": [
+        173,
+        399
+      ],
+      "FIN-SP1-C04-unavailable": [
+        68,
+        316
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-C05-ready",
+      "FIN-SP1-C05-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-C05-ready": [
+        36,
+        278
+      ],
+      "FIN-SP1-C05-unauthenticated": [
+        28,
+        307
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-C05-ready",
+      "FIN-SP1-C05-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-C05-ready": [
+        36,
+        278
+      ],
+      "FIN-SP1-C05-unavailable": [
+        43,
+        244
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-C06-ready",
+      "FIN-SP1-C06-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-C06-ready": [
+        160,
+        343
+      ],
+      "FIN-SP1-C06-unauthenticated": [
+        21,
+        296
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-C06-ready",
+      "FIN-SP1-C06-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-C06-ready": [
+        160,
+        343
+      ],
+      "FIN-SP1-C06-unavailable": [
+        124,
+        383
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-C07-ready",
+      "FIN-SP1-C07-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-C07-ready": [
+        15,
+        302
+      ],
+      "FIN-SP1-C07-unauthenticated": [
+        55,
+        230
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-C07-ready",
+      "FIN-SP1-C07-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-C07-ready": [
+        15,
+        302
+      ],
+      "FIN-SP1-C07-unavailable": [
+        78,
+        364
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-C08-ready",
+      "FIN-SP1-C08-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-C08-ready": [
+        123,
+        389
+      ],
+      "FIN-SP1-C08-unauthenticated": [
+        138,
+        352
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-C08-ready",
+      "FIN-SP1-C08-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-C08-ready": [
+        123,
+        389
+      ],
+      "FIN-SP1-C08-unavailable": [
+        183,
+        322
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-S01-ready",
+      "FIN-SP1-S01-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-S01-ready": [
+        15,
+        237
+      ],
+      "FIN-SP1-S01-unauthenticated": [
+        186,
+        354
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-S01-ready",
+      "FIN-SP1-S01-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-S01-ready": [
+        15,
+        237
+      ],
+      "FIN-SP1-S01-unavailable": [
+        114,
+        206
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-S01-ready",
+      "FIN-SP1-S01-missing"
+    ],
+    "strict": false,
+    "steps": {
+      "FIN-SP1-S01-ready": [
+        15,
+        237
+      ],
+      "FIN-SP1-S01-missing": [
+        32,
+        243
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-S02-ready",
+      "FIN-SP1-S02-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-S02-ready": [
+        123,
+        237
+      ],
+      "FIN-SP1-S02-unauthenticated": [
+        149,
+        318
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-S02-ready",
+      "FIN-SP1-S02-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-S02-ready": [
+        123,
+        237
+      ],
+      "FIN-SP1-S02-unavailable": [
+        164,
+        218
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-S02-ready",
+      "FIN-SP1-S02-missing"
+    ],
+    "strict": false,
+    "steps": {
+      "FIN-SP1-S02-ready": [
+        123,
+        237
+      ],
+      "FIN-SP1-S02-missing": [
+        185,
+        341
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-S03-ready",
+      "FIN-SP1-S03-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-S03-ready": [
+        71,
+        288
+      ],
+      "FIN-SP1-S03-unauthenticated": [
+        82,
+        392
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-S03-ready",
+      "FIN-SP1-S03-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-S03-ready": [
+        71,
+        288
+      ],
+      "FIN-SP1-S03-unavailable": [
+        95,
+        327
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-S03-ready",
+      "FIN-SP1-S03-missing"
+    ],
+    "strict": false,
+    "steps": {
+      "FIN-SP1-S03-ready": [
+        71,
+        288
+      ],
+      "FIN-SP1-S03-missing": [
+        144,
+        351
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-S04-ready",
+      "FIN-SP1-S04-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-S04-ready": [
+        122,
+        380
+      ],
+      "FIN-SP1-S04-unauthenticated": [
+        70,
+        297
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-S04-ready",
+      "FIN-SP1-S04-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-S04-ready": [
+        122,
+        380
+      ],
+      "FIN-SP1-S04-unavailable": [
+        175,
+        360
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-S04-ready",
+      "FIN-SP1-S04-missing"
+    ],
+    "strict": false,
+    "steps": {
+      "FIN-SP1-S04-ready": [
+        122,
+        380
+      ],
+      "FIN-SP1-S04-missing": [
+        160,
+        353
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-S05-ready",
+      "FIN-SP1-S05-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-S05-ready": [
+        168,
+        326
+      ],
+      "FIN-SP1-S05-unauthenticated": [
+        82,
+        330
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-S05-ready",
+      "FIN-SP1-S05-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-S05-ready": [
+        168,
+        326
+      ],
+      "FIN-SP1-S05-unavailable": [
+        171,
+        310
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-S05-ready",
+      "FIN-SP1-S05-missing"
+    ],
+    "strict": false,
+    "steps": {
+      "FIN-SP1-S05-ready": [
+        168,
+        326
+      ],
+      "FIN-SP1-S05-missing": [
+        157,
+        399
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-S06-ready",
+      "FIN-SP1-S06-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-S06-ready": [
+        63,
+        269
+      ],
+      "FIN-SP1-S06-unauthenticated": [
+        16,
+        270
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-S06-ready",
+      "FIN-SP1-S06-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-S06-ready": [
+        63,
+        269
+      ],
+      "FIN-SP1-S06-unavailable": [
+        132,
+        295
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-S06-ready",
+      "FIN-SP1-S06-missing"
+    ],
+    "strict": false,
+    "steps": {
+      "FIN-SP1-S06-ready": [
+        63,
+        269
+      ],
+      "FIN-SP1-S06-missing": [
+        77,
+        348
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-S07-ready",
+      "FIN-SP1-S07-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-S07-ready": [
+        195,
+        276
+      ],
+      "FIN-SP1-S07-unauthenticated": [
+        25,
+        292
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-S07-ready",
+      "FIN-SP1-S07-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-S07-ready": [
+        195,
+        276
+      ],
+      "FIN-SP1-S07-unavailable": [
+        193,
+        327
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-S07-ready",
+      "FIN-SP1-S07-missing"
+    ],
+    "strict": false,
+    "steps": {
+      "FIN-SP1-S07-ready": [
+        195,
+        276
+      ],
+      "FIN-SP1-S07-missing": [
+        119,
+        278
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-S08-ready",
+      "FIN-SP1-S08-unauthenticated"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-S08-ready": [
+        158,
+        350
+      ],
+      "FIN-SP1-S08-unauthenticated": [
+        89,
+        264
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-S08-ready",
+      "FIN-SP1-S08-unavailable"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-SP1-S08-ready": [
+        158,
+        350
+      ],
+      "FIN-SP1-S08-unavailable": [
+        152,
+        372
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "new",
+    "ids": [
+      "FIN-SP1-S08-ready",
+      "FIN-SP1-S08-missing"
+    ],
+    "strict": false,
+    "steps": {
+      "FIN-SP1-S08-ready": [
+        158,
+        350
+      ],
+      "FIN-SP1-S08-missing": [
+        8,
+        338
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "old",
+    "ids": [
+      "FIN-BC1-query-FIN-F2-T-0662-1",
+      "FIN-F2-T-0662"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-BC1-query-FIN-F2-T-0662-1": [
+        59,
+        266
+      ],
+      "FIN-F2-T-0662": [
+        145
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": false,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "old",
+    "ids": [
+      "FIN-BC1-query-FIN-F2-T-0662-2",
+      "FIN-F2-T-0662"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-BC1-query-FIN-F2-T-0662-2": [
+        3
+      ],
+      "FIN-F2-T-0662": [
+        145
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": false,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "old",
+    "ids": [
+      "FIN-BC1-query-FIN-F2-T-0678-1",
+      "FIN-F2-T-0678"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-BC1-query-FIN-F2-T-0678-1": [
+        120
+      ],
+      "FIN-F2-T-0678": [
+        5,
+        248
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": false,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": true
+  },
+  {
+    "origin": "old",
+    "ids": [
+      "FIN-BC1-query-FIN-F2-T-0678-2",
+      "FIN-F2-T-0678"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-BC1-query-FIN-F2-T-0678-2": [
+        156
+      ],
+      "FIN-F2-T-0678": [
+        5,
+        248
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": false,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "old",
+    "ids": [
+      "FIN-BC1-query-FIN-F2-T-0692-1",
+      "FIN-F2-T-0692"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-BC1-query-FIN-F2-T-0692-1": [
+        102,
+        259
+      ],
+      "FIN-F2-T-0692": [
+        45
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": false,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "old",
+    "ids": [
+      "FIN-BC1-query-FIN-F2-T-0692-2",
+      "FIN-F2-T-0692"
+    ],
+    "strict": true,
+    "steps": {
+      "FIN-BC1-query-FIN-F2-T-0692-2": [
+        179
+      ],
+      "FIN-F2-T-0692": [
+        45
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": false,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": false
+  },
+  {
+    "origin": "old",
+    "ids": [
+      "SEA-G043-1",
+      "SEA-G043-2"
+    ],
+    "strict": true,
+    "steps": {
+      "SEA-G043-1": [
+        85,
+        217
+      ],
+      "SEA-G043-2": [
+        82,
+        319
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": true
+  },
+  {
+    "origin": "old",
+    "ids": [
+      "SEA-G044-1",
+      "SEA-G044-2"
+    ],
+    "strict": true,
+    "steps": {
+      "SEA-G044-1": [
+        69,
+        291
+      ],
+      "SEA-G044-2": [
+        84
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": false,
+    "complete_by_400": true,
+    "baseline_complete_by_200": true,
+    "baseline_complete_by_400": true
+  },
+  {
+    "origin": "old",
+    "ids": [
+      "SEA-G048-1",
+      "SEA-G048-2"
+    ],
+    "strict": true,
+    "steps": {
+      "SEA-G048-1": [
+        60,
+        167,
+        186,
+        318
+      ],
+      "SEA-G048-2": [
+        178
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": false,
+    "complete_by_400": true,
+    "baseline_complete_by_200": true,
+    "baseline_complete_by_400": true
+  },
+  {
+    "origin": "old",
+    "ids": [
+      "SEA-G088-1",
+      "SEA-G088-2"
+    ],
+    "strict": true,
+    "steps": {
+      "SEA-G088-1": [
+        95,
+        374
+      ],
+      "SEA-G088-2": [
+        113,
+        226
+      ]
+    },
+    "complete_by_200": true,
+    "complete_in_second_half": true,
+    "complete_by_400": true,
+    "baseline_complete_by_200": false,
+    "baseline_complete_by_400": true
+  }
+]

@@ -1,0 +1,186 @@
+{
+  "version": "financial-sampling-study-v1",
+  "status": "design_cpu_preflight_only",
+  "training_enabled": false,
+  "pool": "data/financial-sampling-study-v1/pool-v1",
+  "schedule_directory": "data/financial-sampling-study-v1/schedule-v1",
+  "model": "Qwen/Qwen3.5-0.8B",
+  "initial_adapter": null,
+  "seed": 20261004,
+  "sampling_seed": 20261004,
+  "seed_scope": "independent Python Random for offline sampling; reset torch/CUDA/numpy/python seeds identically before each fresh adapter; require identical initial adapter tensors SHA",
+  "arms": [
+    "uniform",
+    "stratified"
+  ],
+  "execution_order": [
+    "uniform",
+    "stratified"
+  ],
+  "steps_per_arm": 400,
+  "effective_batch": 8,
+  "micro_batch": 2,
+  "gradient_accumulation": 4,
+  "learning_rate": 5e-05,
+  "warmup_steps": 100,
+  "scheduler": {
+    "type": "linear_warmup_then_linear_decay",
+    "total_steps": 400,
+    "formula": "lr(s)=5e-5*min(s/100,(400-s+1)/300), s=1..400",
+    "step_200": 3.35e-05,
+    "step_400": 1.6666666666666665e-07,
+    "warmup_fraction": 0.25
+  },
+  "optimizer": {
+    "name": "torch.optim.AdamW",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.01,
+    "amsgrad": false,
+    "foreach": false,
+    "fused": false,
+    "maximize": false,
+    "capturable": false,
+    "differentiable": false,
+    "zero_grad_set_to_none": true
+  },
+  "gradient_clipping": {
+    "max_norm": 1.0,
+    "norm_type": 2.0,
+    "nonfinite": "stop_and_report"
+  },
+  "precision": "bf16 frozen base / fp32 language-only LoRA; no NF4",
+  "lora": {
+    "r": 8,
+    "alpha": 16,
+    "dropout": 0.05,
+    "language_only_targets": [
+      "q_proj",
+      "v_proj",
+      "in_proj_qkv",
+      "in_proj_z"
+    ]
+  },
+  "attention": "sdpa",
+  "gradient_checkpointing": {
+    "enabled": true,
+    "use_reentrant": false
+  },
+  "model_use_cache": false,
+  "torch_cpu_threads": 6,
+  "loss": {
+    "action_weight": 1.0,
+    "tool_weight": 0.75,
+    "formula": "sum_i(CE_action_i + 0.75 * I(true_action_i == tool) * CE_tool_i) / B",
+    "B": "actual number of original business rows in the effective batch, including the last partial batch",
+    "tool_supervision": "true tool rows only; denominator is all original rows, not only tool rows; do not divide each tool row by 1.75",
+    "weighting_note": "matches previous loss convention; tool rows intentionally carry an extra supervised objective, so equal row exposure does not imply equal total loss weight"
+  },
+  "max_input_tokens": 2048,
+  "truncate": false,
+  "padding_side": "left",
+  "sampling": {
+    "uniform": "one shuffle of all sorted-by-ID rows, take first3200 without replacement; any cap conflict fails, never skip or change seed",
+    "stratified": "shuffle each 20-position layer block then layer group-round-robin with per-group row shuffles; shared global group cap",
+    "quotas_per_20": {
+      "current-node": 9,
+      "current-component": 3,
+      "planned": 5,
+      "preauth": 3
+    },
+    "max_row_exposure": 4,
+    "max_group_exposure": 16,
+    "interpretation": "joint effect of layer allocation, story-group weighting and repetition; not isolated quota effect or equal FLOPs"
+  },
+  "diagnostic_steps": [
+    200
+  ],
+  "selection_steps": [
+    400
+  ],
+  "selection_order": [
+    "passing original gates only",
+    "highest macro_f1",
+    "highest joint_action_tool_accuracy",
+    "uniform on exact tie"
+  ],
+  "checkpoint_save_interval": 50,
+  "probe": {
+    "required_before_main": true,
+    "steps_per_arm": 25,
+    "total_steps": 50,
+    "train_only": true,
+    "discard_adapters": true,
+    "schedule": "first25 steps of each frozen arm; same400-step LR schedule; main starts fresh"
+  },
+  "pause_resume_requirements": [
+    "checkpoint at completed optimizer step",
+    "persist step cursor, optimizer, RNG and protocol/schedule hashes atomically",
+    "no reshuffle on resume",
+    "single GPU owner",
+    "actual save/pause/resume smoke before full run"
+  ],
+  "evaluation": {
+    "development": "existing128 synthetic cases for development/regression; already inspected, not blind",
+    "base": "fresh same-prompt/preparation base required; do not reuse mismatched old timings",
+    "calibration": "only selected passing arm; use original temperature/threshold grid; no training",
+    "final": "selected candidate + base once after calibration policy freeze; no selecting or retraining from errors",
+    "uncertainty": "denominators, group paired bootstrap, one training seed only; no production claim",
+    "input_scope": "frozen component inputs; current-service cohort is not automatically actual Node end-to-end"
+  },
+  "calibration": {
+    "temperatures": [
+      0.25,
+      0.5,
+      0.75,
+      1,
+      1.5,
+      2,
+      3,
+      4
+    ],
+    "thresholds": [
+      0,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.98
+    ],
+    "usage": "after development selection only; action NLL temperature, then largest accepted coverage with >=95% observed accuracy and zero human misses/false refusals/unavailable retrieval; defer unexecuted; zero accepted rows is not success",
+    "never_train": true
+  },
+  "stop_policy": "200 diagnostic never selects or changes the experiment; finish both400 unless user pause/nonfinite/hard runtime failure; no automatic extension; both failing stops before calibration/final",
+  "model_api_requests": 0,
+  "deployment_enabled": false,
+  "executor_status": "not_implemented_for_this_version; old fixed-epoch runner must not load these schedules",
+  "development_gate": {
+    "minimum_macro_f1_gain_over_same_prompt_base": 0.01,
+    "minimum_per_action_recall": 0.8,
+    "minimum_human_recall": 0.95,
+    "maximum_extra_human_misses_over_base": 0,
+    "maximum_extra_false_refusals_on_non_refuse_over_base": 0,
+    "maximum_unavailable_knowledge_retrievals": 0,
+    "minimum_joint_action_tool_accuracy_on_true_tool": 0.9,
+    "minimum_status_tool_accuracy": 0.9
+  },
+  "current_service_additional_gate": {
+    "minimum_human_recall": 0.95,
+    "maximum_extra_human_misses_over_base": 0,
+    "maximum_extra_false_refusals_on_non_refuse_over_base": 0,
+    "maximum_unavailable_knowledge_retrievals": 0,
+    "minimum_joint_action_tool_accuracy_on_true_tool": 0.9
+  },
+  "preauth_additional_gate": {
+    "maximum_tool_actions": 0
+  },
+  "capability_additional_gate": {
+    "maximum_unavailable_tool_choices": 0
+  }
+}

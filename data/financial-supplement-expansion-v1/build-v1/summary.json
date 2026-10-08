@@ -1,0 +1,66 @@
+{
+  "rows": 1678,
+  "groups": 461,
+  "cohorts": {
+    "current-service": 1240,
+    "planned-retrieval": 252,
+    "preauth-robustness": 186
+  },
+  "actions": {
+    "clarify": 294,
+    "tool": 348,
+    "answer": 348,
+    "human": 315,
+    "redirect": 48,
+    "refuse": 103,
+    "close": 52,
+    "retrieve": 170
+  },
+  "cohort_actions": {
+    "current-service": {
+      "clarify": 201,
+      "tool": 346,
+      "answer": 277,
+      "human": 256,
+      "redirect": 40,
+      "refuse": 78,
+      "close": 42
+    },
+    "planned-retrieval": {
+      "clarify": 4,
+      "retrieve": 170,
+      "tool": 2,
+      "answer": 27,
+      "human": 34,
+      "refuse": 11,
+      "close": 2,
+      "redirect": 2
+    },
+    "preauth-robustness": {
+      "clarify": 89,
+      "answer": 44,
+      "human": 25,
+      "redirect": 6,
+      "refuse": 14,
+      "close": 8
+    }
+  },
+  "layers": {
+    "component-message-only": 304,
+    "node-projection": 936,
+    "planned-capability-component": 252,
+    "preauth-component": 186
+  },
+  "tools": {
+    "queryLoanProducts": 42,
+    "queryMyApplications": 50,
+    "queryApplicationDetail": 176,
+    "queryMyCreditScore": 44,
+    "explainApplicationStatus": 36
+  },
+  "training_eligible_rows": 0,
+  "inherited_rows": 158,
+  "new_rows": 1520,
+  "new_groups": 382,
+  "multi_action_new_groups": 381
+}

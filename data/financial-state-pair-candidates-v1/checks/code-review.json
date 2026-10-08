@@ -1,0 +1,56 @@
+{
+  "schema_version": "financial-state-pair-code-review-v1",
+  "reviewer": "independent-agent/state_pair_code_review",
+  "review_kind": "read_only_code_and_evidence_review",
+  "source_sha256": {
+    "src/qwenlab/financial_state_pair_candidates.py": "f03f1da1788cc80e3db8f8c9604bf4cf0317a12cbdb83cd4f21b3c0d62a4afcd",
+    "scripts/replay-state-pair-decisions.cjs": "57ad2d492d01f349f5a774d23ee739315085b614a592ab40614552cdfacdd08c",
+    "scripts/screen-state-pair-candidates.py": "87beca93d2be28e691bafc6a7cac383c0ba29b3475eb9babc059683c1be5673f",
+    "tests/test_financial_state_pair_candidates.py": "b7f67ca26d205cc7d3b5c4da232b14ea45fe377c5902ee55e82ae45e70ca459a"
+  },
+  "conclusion": "No blocking defects found in the reviewed candidate build, Node decision replay, freeze verification, and whole-group blind-screen integration.",
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "file": "scripts/screen-state-pair-candidates.py",
+      "line": 38,
+      "issue": "The fixed coverage-index.json is created exclusively before the scan. If scanning subsequently fails, rerunning the wrapper stops because the index already exists.",
+      "recommendation": "In a later version, permit recovery only after byte-for-byte validation of the existing index, or accept a new checks output directory. Keep the present successful run and frozen artifacts unchanged.",
+      "affects_current_successful_evidence": false
+    }
+  ],
+  "verification": {
+    "node_replay_rows": 136,
+    "node_replay_passed": true,
+    "semantic_guard_action_difference_rows": 16,
+    "frozen_artifact_hashes_match": true,
+    "generator_and_replay_source_hashes_match": true,
+    "backend_source_hashes_match": true,
+    "screen_candidate_hash_matches": true,
+    "screen_index_hash_matches": true,
+    "screen_engine_hash_matches": true,
+    "candidate_rows": 136,
+    "candidate_groups": 40,
+    "strict_pairs": 88,
+    "supplemental_text_pairs": 8,
+    "whole_group_quarantine_logic_reviewed": true,
+    "reported_heldout_hits": 0,
+    "reported_training_pool_hits": 0,
+    "training_eligible": false
+  },
+  "limitations": [
+    "The Node replay verifies offline adapter and guard behavior, not authentication, database ownership, or end-to-end execution.",
+    "The code review is not an independent semantic annotation of all stories.",
+    "Zero lexical-screen matches are not proof of semantic independence."
+  ],
+  "activity": {
+    "heldout_content_read": false,
+    "predictions_read": false,
+    "training_run": false,
+    "model_api_requests": 0,
+    "model_weights_loaded": false,
+    "code_files_modified": false,
+    "frozen_outputs_modified": false,
+    "evidence_write_only": "data/financial-state-pair-candidates-v1/checks/code-review.json"
+  }
+}

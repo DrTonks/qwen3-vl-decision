@@ -1,0 +1,922 @@
+[
+  {
+    "queue_index": 0,
+    "action": "answer",
+    "reason": "本轮接受提交时间需人工核实的说明并致谢，没有新办理请求或结束指令。"
+  },
+  {
+    "queue_index": 1,
+    "action": "retrieve",
+    "reason": "询问利率咨询的公开服务时间，历史没有具体时段，loan_service_docs可用。"
+  },
+  {
+    "queue_index": 2,
+    "action": "retrieve",
+    "reason": "当前只索取正式咨询渠道以便以后核实费用，未要求本轮转接或处理具体扣费个案；检索公开渠道。"
+  },
+  {
+    "queue_index": 3,
+    "action": "retrieve",
+    "reason": "接受不能保证审批后只要正规联系方式，未要求人工处理已存在的申请问题。"
+  },
+  {
+    "queue_index": 4,
+    "action": "close",
+    "reason": "历史为纯接通能力问答，本轮明确今天结束，无未完成办理诉求。"
+  },
+  {
+    "queue_index": 5,
+    "action": "human",
+    "reason": "明确不再接受自动回复并要求人工接替，渠道用语服务于升级意图。"
+  },
+  {
+    "queue_index": 6,
+    "action": "answer",
+    "reason": "根据历史灰色按钮现象起草给人工的简短描述，不要求代发送或转接。"
+  },
+  {
+    "queue_index": 7,
+    "action": "retrieve",
+    "reason": "问人工费用咨询几点结束，属公开时段且文档可用。"
+  },
+  {
+    "queue_index": 8,
+    "action": "retrieve",
+    "reason": "明确自己联系，仅查询官方咨询方式，文档可用。"
+  },
+  {
+    "queue_index": 9,
+    "action": "human",
+    "reason": "具体重复扣款需要人工核实，处理期限只是期待，不能承诺按时受理。"
+  },
+  {
+    "queue_index": 10,
+    "action": "retrieve",
+    "reason": "查询下一轮公开接待时段，不涉及本人排队或预约记录。"
+  },
+  {
+    "queue_index": 11,
+    "action": "human",
+    "reason": "自助流程已卡住并请求人工支持，属于具体业务失败后的接手意图。"
+  },
+  {
+    "queue_index": 12,
+    "action": "retrieve",
+    "reason": "只问客服一般开始和结束时段，历史也提示先查公开时间。"
+  },
+  {
+    "queue_index": 13,
+    "action": "retrieve",
+    "reason": "查询公开人工接待时段，未登录不影响公开文档检索。"
+  },
+  {
+    "queue_index": 14,
+    "action": "human",
+    "reason": "要求人工核实自身贷款扣款并说明情况，渠道服务于具体个人账务处理。"
+  },
+  {
+    "queue_index": 15,
+    "action": null,
+    "reason": "收入证明及借款金额构成咨询主题，但当前怎么联系既可能只查公开入口，也可能请求人工接手；未明确办理个案或转接，隔离。"
+  },
+  {
+    "queue_index": 16,
+    "action": null,
+    "reason": "计划后天与朋友研究用途限制且问怎么联系，历史也混合泛化人工咨询与联系方式，实际转接意图不明确，隔离。"
+  },
+  {
+    "queue_index": 17,
+    "action": "human",
+    "reason": "明确想直接咨询人工处理工薪贷当前疑问，当前渠道请求承载人工接替意图。"
+  },
+  {
+    "queue_index": 18,
+    "action": "answer",
+    "reason": "明确只问能力以及建议和已转接的区别，不要求实际转接。"
+  },
+  {
+    "queue_index": 19,
+    "action": "human",
+    "reason": "要求人工核对本人扣款通知发送时间，属于工具未覆盖的具体记录。"
+  },
+  {
+    "queue_index": 20,
+    "action": "retrieve",
+    "reason": "历史已建议人工渠道，本轮专门问地址和联系方式从哪核验；先检索公开核验资料。"
+  },
+  {
+    "queue_index": 21,
+    "action": "human",
+    "reason": "核对本人今日回访预约记录并明确人工处理，五个只读工具不含预约。"
+  },
+  {
+    "queue_index": 22,
+    "action": "human",
+    "reason": "受委托律师请求人工说明此笔借款的授权核验，不能根据自述直接放行数据。"
+  },
+  {
+    "queue_index": 23,
+    "action": "human",
+    "reason": "历史涉及本人材料与代提交，本轮明确想跟人工确认材料，保留人工接手。"
+  },
+  {
+    "queue_index": 24,
+    "action": "retrieve",
+    "reason": "仅索取人工电话或渠道，历史只是一般贷款介绍；有官方集合，检索公开联系信息。"
+  },
+  {
+    "queue_index": 25,
+    "action": "retrieve",
+    "reason": "按平台文档询问人工复审申请办法，不是提交本人复审请求。"
+  },
+  {
+    "queue_index": 26,
+    "action": "human",
+    "reason": "需要人工确认顾问是否真实发送拒绝说明，具体发送记录超出工具字段。"
+  },
+  {
+    "queue_index": 27,
+    "action": "answer",
+    "reason": "区分建议找人工和已受理两个概念，未要求发起业务处理。"
+  },
+  {
+    "queue_index": 28,
+    "action": "human",
+    "reason": "存在争议并明确要与贷款人工通话，不应降为公共电话查询。"
+  },
+  {
+    "queue_index": 29,
+    "action": "human",
+    "reason": "实际费用与电话承诺冲突，要求人工核对录音，是具体收费争议。"
+  },
+  {
+    "queue_index": 30,
+    "action": null,
+    "reason": "我想给人工打电话缺少实际转接、索取号码或具体个案的区分；不能仅凭人工一词选human，隔离。"
+  },
+  {
+    "queue_index": 31,
+    "action": "answer",
+    "reason": "历史明确尚未接通，本轮确认已有状态，不重复发起人工请求。"
+  },
+  {
+    "queue_index": 32,
+    "action": "answer",
+    "reason": "询问咨询前通用信息整理建议，无特定平台强制要求，能直接说明。"
+  },
+  {
+    "queue_index": 33,
+    "action": "retrieve",
+    "reason": "请求平台产品条件与人工服务时间的正式信息，公开文档可用。"
+  },
+  {
+    "queue_index": 34,
+    "action": "answer",
+    "reason": "接受指引并表示将自行通过人工渠道确认信用分，只致谢没有新执行请求。"
+  },
+  {
+    "queue_index": 35,
+    "action": "human",
+    "reason": "要求人工查询过去一小时本人通知发送记录，现有工具不能查。"
+  },
+  {
+    "queue_index": 36,
+    "action": "human",
+    "reason": "历史有实际收费争议，本轮明确想与人工谈此案，联系渠道是处理方式。"
+  },
+  {
+    "queue_index": 37,
+    "action": "human",
+    "reason": "需要人工核实某日本人历史预约，属于具体个人服务记录。"
+  },
+  {
+    "queue_index": 38,
+    "action": "retrieve",
+    "reason": "只扩展询问除电话外的公开咨询渠道，历史同为服务信息。"
+  },
+  {
+    "queue_index": 39,
+    "action": "retrieve",
+    "reason": "询问杭州客服公开接待时间发布位置，未要求实际接待。"
+  },
+  {
+    "queue_index": 40,
+    "action": "human",
+    "reason": "明确要求人工受理反馈，渠道是升级入口，不等于纯联系方式检索。"
+  },
+  {
+    "queue_index": 41,
+    "action": "human",
+    "reason": "本人贷款申请联系电话填错，明确希望人工纠正，属于合法不可执行写操作。"
+  },
+  {
+    "queue_index": 42,
+    "action": "human",
+    "reason": "已拒绝推广却仍收到消息，要求人工跟进实际退订异常。"
+  },
+  {
+    "queue_index": 43,
+    "action": "retrieve",
+    "reason": "本轮只索取结清证明的正式咨询渠道以了解资料，历史均为一般办理说明，没有要求人工处理已提交个案。"
+  },
+  {
+    "queue_index": 44,
+    "action": "human",
+    "reason": "扣款卡实际被冻结，人工核实替代还款方式是具体个人异常处理。"
+  },
+  {
+    "queue_index": 45,
+    "action": "retrieve",
+    "reason": "问官方服务工作时间的时区口径，属于公开规则而非个人处理。"
+  },
+  {
+    "queue_index": 46,
+    "action": "retrieve",
+    "reason": "接受自行联系人工后改问平台退款凭证保留要求，检索正式业务指南。"
+  },
+  {
+    "queue_index": 47,
+    "action": null,
+    "reason": "同学偏好直接问人工但仅索取申请条件咨询渠道，没有当前转接或个案办理信息，公共渠道与升级意图两可，隔离。"
+  },
+  {
+    "queue_index": 48,
+    "action": "retrieve",
+    "reason": "明确当前只要正规咨询渠道，历史未给实际扣费争议，先检索经营贷官方联系信息。"
+  },
+  {
+    "queue_index": 49,
+    "action": "human",
+    "reason": "具体异常扣款需核清，索取人工渠道用于该个人账务问题，不能承诺六点前完成。"
+  },
+  {
+    "queue_index": 50,
+    "action": "human",
+    "reason": "催收骚扰与实际费用争议同时存在，要求人工处理而非公共联系方式查询。"
+  },
+  {
+    "queue_index": 51,
+    "action": null,
+    "reason": "历史有家庭情况希望详细说，但本轮转问一般用途限制和渠道；是否继续个案人工诉求不明确，隔离。"
+  },
+  {
+    "queue_index": 52,
+    "action": "answer",
+    "reason": "用户接受等待人工核实且自行核对其余信息，只需回应并避免把历史可以发起说成已受理。"
+  },
+  {
+    "queue_index": 53,
+    "action": "human",
+    "reason": "希望提交真实材料申请人工复审，属于本人实际复审服务，工具不能代办。"
+  },
+  {
+    "queue_index": 54,
+    "action": "human",
+    "reason": "明确请求人工协助预约本人贷款咨询电话，不能自动生成预约号。"
+  },
+  {
+    "queue_index": 55,
+    "action": "retrieve",
+    "reason": "公开合同咨询结束时段未知，官方集合可用，检索即可。"
+  },
+  {
+    "queue_index": 56,
+    "action": "human",
+    "reason": "查询本人审批通知实际发送记录并请求人工，现有工具不含通知日志。"
+  },
+  {
+    "queue_index": 57,
+    "action": "human",
+    "reason": "历史表明本人费用适用项不明确，本轮要求人工讲解实际费用，属于具体个案。"
+  },
+  {
+    "queue_index": 58,
+    "action": "retrieve",
+    "reason": "只询问客服晚上结束时间，费用是联系原因而非当前个案办理请求。"
+  },
+  {
+    "queue_index": 59,
+    "action": "human",
+    "reason": "明确有经营用途的实际情况需人工听取，渠道为本人具体咨询服务。"
+  },
+  {
+    "queue_index": 60,
+    "action": "retrieve",
+    "reason": "用户明确自行找人工，本轮切换为一般材料补交流程，应跟随最新请求检索。"
+  },
+  {
+    "queue_index": 61,
+    "action": "human",
+    "reason": "人工电话长时间未接导致服务失败，用户再次明确要求人工协助。"
+  },
+  {
+    "queue_index": 62,
+    "action": "human",
+    "reason": "从一般学习转为想与人工谈自己的情况，明确个人咨询方向，不能因未登录取消意图。"
+  },
+  {
+    "queue_index": 63,
+    "action": "answer",
+    "reason": "确认将自己联系人工并以后继续提问，没有要求新转接或明确关闭。"
+  },
+  {
+    "queue_index": 64,
+    "action": null,
+    "reason": "只说产品有问题想问人工并要渠道，未给具体个案或明确当前转接；公共联系信息与人工升级混合，隔离。"
+  },
+  {
+    "queue_index": 65,
+    "action": null,
+    "reason": "草稿能力尚待说明，用户说想问人工确认并索取渠道；可能纯入口查询也可能要求接手，未明确个人保存失败，隔离。"
+  },
+  {
+    "queue_index": 66,
+    "action": "human",
+    "reason": "暴雨已造成家庭收入与本月还款困难，要求人工了解协商是实际个案处理。"
+  },
+  {
+    "queue_index": 67,
+    "action": "human",
+    "reason": "请求人工重新核对本人预约时间，工具不提供预约记录。"
+  },
+  {
+    "queue_index": 68,
+    "action": "human",
+    "reason": "明确要向人工投诉刚才发生的问题，虽然未提供细节，升级意图足以确定。"
+  },
+  {
+    "queue_index": 69,
+    "action": "human",
+    "reason": "人工核对本人催收邮件发送记录，属于具体日志查询。"
+  },
+  {
+    "queue_index": 70,
+    "action": "human",
+    "reason": "明确请人工针对本人借款金额分析申请条件，实际个人咨询而非仅查电话号码。"
+  },
+  {
+    "queue_index": 71,
+    "action": null,
+    "reason": "一至三天周转可能是本人特殊需求，也可能仅问正式期限和公共渠道；没有明确当前人工办理意图，隔离。"
+  },
+  {
+    "queue_index": 72,
+    "action": "human",
+    "reason": "本人贷款材料整理有困难，明确想与人工详细聊，保留人工处理。"
+  },
+  {
+    "queue_index": 73,
+    "action": "close",
+    "reason": "历史仅纯能力问答，本轮明确无需人工请求并关闭，没有其他待办诉求。"
+  },
+  {
+    "queue_index": 74,
+    "action": "human",
+    "reason": "请求人工核实本人签约邀请是否发送，现有工具缺该记录。"
+  },
+  {
+    "queue_index": 75,
+    "action": null,
+    "reason": "一些申请问题未明确个案，只问有没有渠道；无法唯一判公共信息还是当前人工接替，隔离。"
+  },
+  {
+    "queue_index": 76,
+    "action": "retrieve",
+    "reason": "历史已建议自行通过人工核实，本轮专门查询入口位置，文档可用，不重复创建请求。"
+  },
+  {
+    "queue_index": 77,
+    "action": "human",
+    "reason": "要求直接联系负责本人贷款的具名专员，是人工沟通诉求，不索取私人联系方式。"
+  },
+  {
+    "queue_index": 78,
+    "action": "human",
+    "reason": "对同事遭数十次催收骚扰要求人工受理，具体投诉应人工处理。"
+  },
+  {
+    "queue_index": 79,
+    "action": "retrieve",
+    "reason": "当前转问人工之外的自助条款帮助入口，检索公开官方资料。"
+  },
+  {
+    "queue_index": 80,
+    "action": "retrieve",
+    "reason": "指定教育贷的周末人工接待时间，属于官方公开服务规则。"
+  },
+  {
+    "queue_index": 81,
+    "action": null,
+    "reason": "历史关于收入证明形式，本轮问正规人工渠道以了解核实方法；个人补件与一般规则交织，未明确实际人工受理，隔离。"
+  },
+  {
+    "queue_index": 82,
+    "action": "retrieve",
+    "reason": "替朋友索取公开正式渠道以便朋友以后亲自咨询，不代办隐私查询或转接。"
+  },
+  {
+    "queue_index": 83,
+    "action": "human",
+    "reason": "核对本人下次面签预约时间并明确人工查询，工具未覆盖预约。"
+  },
+  {
+    "queue_index": 84,
+    "action": "human",
+    "reason": "明确从算例转向自己的实际合同费用，请人工解释，个案条款超出工具。"
+  },
+  {
+    "queue_index": 85,
+    "action": null,
+    "reason": "本轮说资料问题要当面说，但历史明确只问一般补件规则；既可为预约人工也可为公共入口信息，隔离。"
+  },
+  {
+    "queue_index": 86,
+    "action": "retrieve",
+    "reason": "同时查询工薪贷公开服务时段和入口，已有资料未提供答案，需检索。"
+  },
+  {
+    "queue_index": 87,
+    "action": "retrieve",
+    "reason": "当前是一般审核时长与联系方式的公开信息查询，未给具体申请或要求立即转接。"
+  },
+  {
+    "queue_index": 88,
+    "action": "human",
+    "reason": "请求工作人员核对本人借款扣款，电话渠道为实际账务核查服务。"
+  },
+  {
+    "queue_index": 89,
+    "action": "human",
+    "reason": "阅读资料后明确改为与人工说明自己的情况，保留实际个人咨询意图。"
+  },
+  {
+    "queue_index": 90,
+    "action": "retrieve",
+    "reason": "只询问人工电话或入口以便解决阅读疑惑，未要求本轮实际转接，有官方集合。"
+  },
+  {
+    "queue_index": 91,
+    "action": "human",
+    "reason": "需要人工确认公司寄送的本人收入证明是否收到，是个案收件记录。"
+  },
+  {
+    "queue_index": 92,
+    "action": "retrieve",
+    "reason": "只查询预算咨询一般开放时间，历史没有可信具体时段，需官方集合。"
+  },
+  {
+    "queue_index": 93,
+    "action": "human",
+    "reason": "预约反复取消失败且担心病历泄露，明确人工处理实际服务异常。"
+  },
+  {
+    "queue_index": 94,
+    "action": null,
+    "reason": "明日与亲戚准备借款并想请人工解释材料，但本轮怎么联系可仅索取公共渠道，尚未明确实际预约或当前个案，隔离。"
+  },
+  {
+    "queue_index": 95,
+    "action": "retrieve",
+    "reason": "仅索取贷款费用公开人工咨询渠道，历史未给可信地址或具体收费个案。"
+  },
+  {
+    "queue_index": 96,
+    "action": "human",
+    "reason": "最新请求已放弃伪造证明，转为按真实欠款情况找人工咨询；不因历史违规继续refuse。"
+  },
+  {
+    "queue_index": 97,
+    "action": "human",
+    "reason": "明确有自身家庭情况要详细向人工说明，是个性化贷款咨询。"
+  },
+  {
+    "queue_index": 98,
+    "action": null,
+    "reason": "费用以披露为准后索取正规渠道并称想详细问一次，未明确个人费用个案还是公开入口，隔离。"
+  },
+  {
+    "queue_index": 99,
+    "action": "human",
+    "reason": "本人预约出现十二点和四点两个候选时间，要求人工核实真实记录。"
+  },
+  {
+    "queue_index": 100,
+    "action": "human",
+    "reason": "核实本周与具名顾问的本人预约日期，属于不可自动查询的个人事项。"
+  },
+  {
+    "queue_index": 101,
+    "action": "retrieve",
+    "reason": "只问官方人工咨询联系方式从哪找，贷款风险说明是背景，文档可用。"
+  },
+  {
+    "queue_index": 102,
+    "action": "human",
+    "reason": "核查本人昨晚起的扣款提醒发送记录，明确人工处理。"
+  },
+  {
+    "queue_index": 103,
+    "action": "retrieve",
+    "reason": "只询问公开开始接待时间，准备自行发送问题，不要求助手代发。"
+  },
+  {
+    "queue_index": 104,
+    "action": "human",
+    "reason": "当前工薪贷标签看不懂并明确希望人工讲解，是已提出的业务问题升级。"
+  },
+  {
+    "queue_index": 105,
+    "action": "human",
+    "reason": "要提交本人这次服务投诉的证据，渠道服务于具体投诉受理。"
+  },
+  {
+    "queue_index": 106,
+    "action": "human",
+    "reason": "历史已说明本人还款压力，本轮明确改找真人聊实际贷款困难。"
+  },
+  {
+    "queue_index": 107,
+    "action": "human",
+    "reason": "历史说明无代发能力，但最新仍请求将已写好的咨询发送给人工；这是合法具体代发送操作，应人工方向而非仅按能否问句标能力回答。"
+  },
+  {
+    "queue_index": 108,
+    "action": "answer",
+    "reason": "用户接受说明并准备自行寻找入口，只表达感谢和后续安排，无新转接或结束要求。"
+  },
+  {
+    "queue_index": 109,
+    "action": "human",
+    "reason": "请求人工检查本人预算是否漏了合同实际费用，工具不能核实个案费用。"
+  },
+  {
+    "queue_index": 110,
+    "action": "human",
+    "reason": "人工核对本人审批通知发送记录，不能用申请状态替代通知日志。"
+  },
+  {
+    "queue_index": 111,
+    "action": null,
+    "reason": "一些情况未说明且本轮只要人工渠道，无法判断公共信息还是具体人工接手，隔离。"
+  },
+  {
+    "queue_index": 112,
+    "action": "retrieve",
+    "reason": "条件式询问一般预约渠道，不要求替自己创建预约；官方业务资料可检索。"
+  },
+  {
+    "queue_index": 113,
+    "action": "human",
+    "reason": "页面已发送与实际未收到冲突，要求人工核查通知异常。"
+  },
+  {
+    "queue_index": 114,
+    "action": "close",
+    "reason": "用户明确报告重复扣款已处理且无遗留问题并要求结束；只关闭咨询，不据此写入退款事实。"
+  },
+  {
+    "queue_index": 115,
+    "action": "close",
+    "reason": "用户报告冒名贷款事件已处理且安全恢复并明确关闭，当前无额外业务请求。"
+  },
+  {
+    "queue_index": 116,
+    "action": "human",
+    "reason": "本人无法完成页面操作并明确需要人工支持，保留服务接手。"
+  },
+  {
+    "queue_index": 117,
+    "action": "close",
+    "reason": "纯能力咨询结束且明确没有后续问题，感谢不影响明确结束指令。"
+  },
+  {
+    "queue_index": 118,
+    "action": "human",
+    "reason": "文字交互不便，明确希望电话人工处理贷款咨询，属于辅助服务诉求。"
+  },
+  {
+    "queue_index": 119,
+    "action": null,
+    "reason": "工薪贷门槛是一般规则，想找人工讲讲并只要联系方式未明确当前转接或本人资格个案，隔离。"
+  },
+  {
+    "queue_index": 120,
+    "action": null,
+    "reason": "想核实某贷款条款但只问正规渠道，未说明是实际合同个案或公开一般资料，human/retrieve不足以唯一确定，隔离。"
+  },
+  {
+    "queue_index": 121,
+    "action": "human",
+    "reason": "本人今日面签预约清单需要人工确认，工具不含预约。"
+  },
+  {
+    "queue_index": 122,
+    "action": "retrieve",
+    "reason": "历史人工建议后，当前明确先自己找渠道并问咨询途径；检索公开信息，不重复发起请求。"
+  },
+  {
+    "queue_index": 123,
+    "action": "answer",
+    "reason": "历史明确尚未接通，本轮确认当前请求是否已有人接，回答已知未接通限制而不造受理状态。"
+  },
+  {
+    "queue_index": 124,
+    "action": "human",
+    "reason": "未同意商业电话却持续来电，要求人工受理真实营销骚扰。"
+  },
+  {
+    "queue_index": 125,
+    "action": "close",
+    "reason": "用户说对账已完成且贷款正常入账，明确结束本次咨询；不代替系统确认财务结果。"
+  },
+  {
+    "queue_index": 126,
+    "action": "human",
+    "reason": "需要人工查本人完整通知发送日志，现有工具不提供。"
+  },
+  {
+    "queue_index": 127,
+    "action": "retrieve",
+    "reason": "当前询问App里的人工入口位置，历史可以发起不等于已发起，先检索入口资料。"
+  },
+  {
+    "queue_index": 128,
+    "action": "human",
+    "reason": "本人面签预约错误，要求人工核对确认邮件，是实际记录争议。"
+  },
+  {
+    "queue_index": 129,
+    "action": "human",
+    "reason": "查询本人一月三日历史预约并明确人工核实。"
+  },
+  {
+    "queue_index": 130,
+    "action": null,
+    "reason": "虽称有具体问题但未描述，也未明确请当前系统转接，仅索取渠道；公共信息和升级意图无法唯一判定，隔离。"
+  },
+  {
+    "queue_index": 131,
+    "action": "human",
+    "reason": "历史已在整理本人收入证明，当前要求人工解释跨境收入材料，属于具体材料个案。"
+  },
+  {
+    "queue_index": 132,
+    "action": "answer",
+    "reason": "确认理解材料及人工两条途径并致谢，无新请求或明确关闭。"
+  },
+  {
+    "queue_index": 133,
+    "action": "human",
+    "reason": "人工查本人最近两小时结清通知发送记录，不能凭结清话题调用其他工具编造。"
+  },
+  {
+    "queue_index": 134,
+    "action": "human",
+    "reason": "本人资料遭冒用的实际安全事件，渠道用于人工核实，不是普通联系方式查询。"
+  },
+  {
+    "queue_index": 135,
+    "action": "human",
+    "reason": "具体费用清单未收到与顾问承诺冲突，人工需查发送失败原因。"
+  },
+  {
+    "queue_index": 136,
+    "action": "human",
+    "reason": "本人核验预约发生重复扣费，未登录不取消账务争议与人工意图。"
+  },
+  {
+    "queue_index": 137,
+    "action": "human",
+    "reason": "本人经营收入与工资混合难解释，明确请求人工核对实际收入材料。"
+  },
+  {
+    "queue_index": 138,
+    "action": "close",
+    "reason": "明示没有需人工处理个案且结束能力咨询，历史也无遗留办理。"
+  },
+  {
+    "queue_index": 139,
+    "action": "human",
+    "reason": "要求人工核实顾问发送本人额度解释的事实，工具只读信用不等于发送日志。"
+  },
+  {
+    "queue_index": 140,
+    "action": null,
+    "reason": "有个具体情况但未描述，当前只要人工渠道，未区分实际接手与查公开联系资料，隔离。"
+  },
+  {
+    "queue_index": 141,
+    "action": "human",
+    "reason": "历史涉及本人已有评分，最新明确要人工说明个人评分疑问，是实际个人咨询。"
+  },
+  {
+    "queue_index": 142,
+    "action": "human",
+    "reason": "历史给出本人借款金额及十二至三十六期需求，最新要人工具体核实适用分期。"
+  },
+  {
+    "queue_index": 143,
+    "action": null,
+    "reason": "想和公司人工聊一下但只问渠道，没有业务对象或明确立即转接，公共信息与处理意图不确定，隔离。"
+  },
+  {
+    "queue_index": 144,
+    "action": "human",
+    "reason": "明确准备向人工说明本人一天周转的实际用途，属于特殊个案核实。"
+  },
+  {
+    "queue_index": 145,
+    "action": "human",
+    "reason": "本人明日预约是否存在需人工核实，未认证不消除人工路由意图。"
+  },
+  {
+    "queue_index": 146,
+    "action": "retrieve",
+    "reason": "只询问极速贷人工咨询时间及晚上是否接待，属于公开时段检索。"
+  },
+  {
+    "queue_index": 147,
+    "action": "human",
+    "reason": "明确本人不再继续这笔贷款，要求真人说明正规撤回，是个人撤回诉求，不是close。"
+  },
+  {
+    "queue_index": 148,
+    "action": null,
+    "reason": "合同示范文本与具体本人合同未区分，本轮索取渠道又说有几处详细问，人工接手还是公开信息两可，隔离。"
+  },
+  {
+    "queue_index": 149,
+    "action": "retrieve",
+    "reason": "询问咨询录音和隐私政策，privacy_policy集合可用，应检索该集合。"
+  },
+  {
+    "queue_index": 150,
+    "action": "human",
+    "reason": "要求人工核实收到的贷款通知发送方和主题真实性，涉及个人安全判断。"
+  },
+  {
+    "queue_index": 151,
+    "action": null,
+    "reason": "想让人工讲工薪贷参考条件但当前只给联系方式，历史并无本人资格个案，升级与公开入口意图未清，隔离。"
+  },
+  {
+    "queue_index": 152,
+    "action": null,
+    "reason": "两至三年期限及其他期限是一般产品规则，当前索取人工渠道但未明确接手个案，隔离而不关键词标human。"
+  },
+  {
+    "queue_index": 153,
+    "action": "human",
+    "reason": "明确要求替本人创建优享贷人工咨询预约并返回编号；合法但无执行工具，转人工方向且不虚报预约成功。"
+  },
+  {
+    "queue_index": 154,
+    "action": "human",
+    "reason": "有人推销的贷款是否属于平台需要真人核实具体安全疑问，不能仅给公共联系方式了事。"
+  },
+  {
+    "queue_index": 155,
+    "action": "human",
+    "reason": "已发生与顾问服务纠纷，要求人工指引正规集体投诉，合法实际投诉应human。"
+  },
+  {
+    "queue_index": 156,
+    "action": "human",
+    "reason": "核实本人今日面签预约是否成功，现有工具不能查预约。"
+  },
+  {
+    "queue_index": 157,
+    "action": "human",
+    "reason": "本人今晚还款时限与可用渠道需人工核实，属于具体还款安排而非一般公布规则。"
+  },
+  {
+    "queue_index": 158,
+    "action": "human",
+    "reason": "顾问发送次数与实际收到不一致，要求人工查通知记录处理个案异常。"
+  },
+  {
+    "queue_index": 159,
+    "action": null,
+    "reason": "母亲对借款担忧且想先问人工，本轮要联系方式，未明确具体办理或当前转接，保守隔离。"
+  },
+  {
+    "queue_index": 160,
+    "action": "human",
+    "reason": "要求人工查上一小时本人合同发送记录，合同内容工具不能替代发送日志。"
+  },
+  {
+    "queue_index": 161,
+    "action": "human",
+    "reason": "历史明确费用条款是否适用于本人，本轮要求人工核实具体合同，应保留human。"
+  },
+  {
+    "queue_index": 162,
+    "action": null,
+    "reason": "晚点咨询的计划与仅索取渠道并存，没有具体当前处理事项或明确转接，隔离。"
+  },
+  {
+    "queue_index": 163,
+    "action": "answer",
+    "reason": "确认不能保证办理且尚未接通，感谢后自行准备真实用途材料，没有新增处理请求。"
+  },
+  {
+    "queue_index": 164,
+    "action": "tool",
+    "reason": "明确排除人工追进度，只解释可信状态码2；已认证且explainApplicationStatus可用。"
+  },
+  {
+    "queue_index": 165,
+    "action": "answer",
+    "reason": "只查询公开人工复审条件，但当前无知识集合或可信规则，回答信息限制而非假装检索或申请复审。"
+  },
+  {
+    "queue_index": 166,
+    "action": "human",
+    "reason": "明确希望真人核实这笔申请，编号不足不应先覆盖人工意图；实际接手后再补参数。"
+  },
+  {
+    "queue_index": 167,
+    "action": "close",
+    "reason": "明确不需要人工请求并结束会话，既不创建工单也不撤销业务。"
+  },
+  {
+    "queue_index": 168,
+    "action": "human",
+    "reason": "本人实时状态需核实，可信available_tools为空且明确要求人工，应如实说明接手能力。"
+  },
+  {
+    "queue_index": 169,
+    "action": "human",
+    "reason": "未登录但明确要人工核实本人额度说明是否发送，缺认证不能覆盖人工意图。"
+  },
+  {
+    "queue_index": 170,
+    "action": "human",
+    "reason": "全部自动工具不可用，人工核实额度解释发送的诉求仍成立。"
+  },
+  {
+    "queue_index": 171,
+    "action": "human",
+    "reason": "人工能力布尔值为true也不改变发送记录核实意图；不能据此推断该请求已受理或创建重复工单。"
+  },
+  {
+    "queue_index": 172,
+    "action": "human",
+    "reason": "未登录仍可表达对刚才问题的人工投诉意图，后续实际受理仍需身份核验。"
+  },
+  {
+    "queue_index": 173,
+    "action": "human",
+    "reason": "无自动工具不取消当前投诉求助，人工方向保留，不能虚称受理。"
+  },
+  {
+    "queue_index": 174,
+    "action": "human",
+    "reason": "投诉当前问题的意图明确；旧handoff_connected=true不视作具体工单已接通证明。"
+  },
+  {
+    "queue_index": 175,
+    "action": "human",
+    "reason": "未登录且请求人工核对本人面签预约，预约能力不存在，不用登录追问掩盖人工诉求。"
+  },
+  {
+    "queue_index": 176,
+    "action": "human",
+    "reason": "自动工具为空，仍应将本人面签预约核实交人工方向处理。"
+  },
+  {
+    "queue_index": 177,
+    "action": "human",
+    "reason": "本人预约需人工确认，人工能力标记变化不提供预约事实或受理状态。"
+  },
+  {
+    "queue_index": 178,
+    "action": "human",
+    "reason": "未登录但明确要求人工核查某日本人历史预约，保留人工意图。"
+  },
+  {
+    "queue_index": 179,
+    "action": "human",
+    "reason": "无自动工具时历史预约记录仍需人工核实，不编造记录。"
+  },
+  {
+    "queue_index": 180,
+    "action": "human",
+    "reason": "人工能力为true并不等于旧预约已核实，仍是人工处理决策。"
+  },
+  {
+    "queue_index": 181,
+    "action": "human",
+    "reason": "未登录并明确人工核对本人审批通知发送日志，先保留人工处理意图。"
+  },
+  {
+    "queue_index": 182,
+    "action": "human",
+    "reason": "无自动工具且请求核实审批通知是否发送，应人工方向，不用审批状态替代。"
+  },
+  {
+    "queue_index": 183,
+    "action": "human",
+    "reason": "人工能力标记为true不证明发送记录或请求已受理，保留人工核查动作。"
+  }
+]

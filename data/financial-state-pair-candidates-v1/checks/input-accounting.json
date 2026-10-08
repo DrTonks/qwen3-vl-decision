@@ -1,0 +1,698 @@
+{
+  "version": "state-pair-input-accounting-v1",
+  "candidate_sha256": "6ed1079704daa80824aaeeb175cf2ed54c93dcf97265b65976d24125591ada72",
+  "script_sha256": "60c4204ca1472e945e2650ae0ed3934bb2215f0ccaa3c06435e4e7075a680821",
+  "prompt_sha256": "25033aa2a7a3fadf60e51ece0eebe3fdfbbd0626cc9f04654b9641a91a4629ef",
+  "tokenizer_sha256": {
+    "models/Qwen3.5-0.8B/chat_template.jinja": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+    "models/Qwen3.5-0.8B/config.json": "b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204",
+    "models/Qwen3.5-0.8B/merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+    "models/Qwen3.5-0.8B/tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+    "models/Qwen3.5-0.8B/tokenizer_config.json": "49e2b6e395f959f077f1e992b338919c0d4a9732fc6e613995e06557f843500c",
+    "models/Qwen3.5-0.8B/vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+  },
+  "rows": [
+    {
+      "id": "FIN-SP1-P01-ready",
+      "action": 499,
+      "tool": 547
+    },
+    {
+      "id": "FIN-SP1-P01-unauthenticated",
+      "action": 499
+    },
+    {
+      "id": "FIN-SP1-P01-unavailable",
+      "action": 495
+    },
+    {
+      "id": "FIN-SP1-P02-ready",
+      "action": 499,
+      "tool": 547
+    },
+    {
+      "id": "FIN-SP1-P02-unauthenticated",
+      "action": 499
+    },
+    {
+      "id": "FIN-SP1-P02-unavailable",
+      "action": 495
+    },
+    {
+      "id": "FIN-SP1-P03-ready",
+      "action": 499,
+      "tool": 547
+    },
+    {
+      "id": "FIN-SP1-P03-unauthenticated",
+      "action": 499
+    },
+    {
+      "id": "FIN-SP1-P03-unavailable",
+      "action": 495
+    },
+    {
+      "id": "FIN-SP1-P04-ready",
+      "action": 499,
+      "tool": 547
+    },
+    {
+      "id": "FIN-SP1-P04-unauthenticated",
+      "action": 499
+    },
+    {
+      "id": "FIN-SP1-P04-unavailable",
+      "action": 495
+    },
+    {
+      "id": "FIN-SP1-P05-ready",
+      "action": 502,
+      "tool": 550
+    },
+    {
+      "id": "FIN-SP1-P05-unauthenticated",
+      "action": 502
+    },
+    {
+      "id": "FIN-SP1-P05-unavailable",
+      "action": 498
+    },
+    {
+      "id": "FIN-SP1-P06-ready",
+      "action": 497,
+      "tool": 545
+    },
+    {
+      "id": "FIN-SP1-P06-unauthenticated",
+      "action": 497
+    },
+    {
+      "id": "FIN-SP1-P06-unavailable",
+      "action": 493
+    },
+    {
+      "id": "FIN-SP1-P07-ready",
+      "action": 501,
+      "tool": 549
+    },
+    {
+      "id": "FIN-SP1-P07-unauthenticated",
+      "action": 501
+    },
+    {
+      "id": "FIN-SP1-P07-unavailable",
+      "action": 497
+    },
+    {
+      "id": "FIN-SP1-P08-ready",
+      "action": 498,
+      "tool": 546
+    },
+    {
+      "id": "FIN-SP1-P08-unauthenticated",
+      "action": 498
+    },
+    {
+      "id": "FIN-SP1-P08-unavailable",
+      "action": 494
+    },
+    {
+      "id": "FIN-SP1-A01-ready",
+      "action": 499,
+      "tool": 547
+    },
+    {
+      "id": "FIN-SP1-A01-unauthenticated",
+      "action": 499
+    },
+    {
+      "id": "FIN-SP1-A01-unavailable",
+      "action": 495
+    },
+    {
+      "id": "FIN-SP1-A02-ready",
+      "action": 500,
+      "tool": 548
+    },
+    {
+      "id": "FIN-SP1-A02-unauthenticated",
+      "action": 500
+    },
+    {
+      "id": "FIN-SP1-A02-unavailable",
+      "action": 496
+    },
+    {
+      "id": "FIN-SP1-A03-ready",
+      "action": 498,
+      "tool": 546
+    },
+    {
+      "id": "FIN-SP1-A03-unauthenticated",
+      "action": 498
+    },
+    {
+      "id": "FIN-SP1-A03-unavailable",
+      "action": 494
+    },
+    {
+      "id": "FIN-SP1-A04-ready",
+      "action": 498,
+      "tool": 546
+    },
+    {
+      "id": "FIN-SP1-A04-unauthenticated",
+      "action": 498
+    },
+    {
+      "id": "FIN-SP1-A04-unavailable",
+      "action": 494
+    },
+    {
+      "id": "FIN-SP1-A05-ready",
+      "action": 500,
+      "tool": 548
+    },
+    {
+      "id": "FIN-SP1-A05-unauthenticated",
+      "action": 500
+    },
+    {
+      "id": "FIN-SP1-A05-unavailable",
+      "action": 496
+    },
+    {
+      "id": "FIN-SP1-A06-ready",
+      "action": 499,
+      "tool": 547
+    },
+    {
+      "id": "FIN-SP1-A06-unauthenticated",
+      "action": 499
+    },
+    {
+      "id": "FIN-SP1-A06-unavailable",
+      "action": 495
+    },
+    {
+      "id": "FIN-SP1-A07-ready",
+      "action": 500,
+      "tool": 548
+    },
+    {
+      "id": "FIN-SP1-A07-unauthenticated",
+      "action": 500
+    },
+    {
+      "id": "FIN-SP1-A07-unavailable",
+      "action": 496
+    },
+    {
+      "id": "FIN-SP1-A08-ready",
+      "action": 499,
+      "tool": 547
+    },
+    {
+      "id": "FIN-SP1-A08-unauthenticated",
+      "action": 499
+    },
+    {
+      "id": "FIN-SP1-A08-unavailable",
+      "action": 495
+    },
+    {
+      "id": "FIN-SP1-D01-ready",
+      "action": 504,
+      "tool": 552
+    },
+    {
+      "id": "FIN-SP1-D01-unauthenticated",
+      "action": 504
+    },
+    {
+      "id": "FIN-SP1-D01-unavailable",
+      "action": 500
+    },
+    {
+      "id": "FIN-SP1-D01-missing",
+      "action": 496
+    },
+    {
+      "id": "FIN-SP1-D02-ready",
+      "action": 503,
+      "tool": 551
+    },
+    {
+      "id": "FIN-SP1-D02-unauthenticated",
+      "action": 503
+    },
+    {
+      "id": "FIN-SP1-D02-unavailable",
+      "action": 499
+    },
+    {
+      "id": "FIN-SP1-D02-missing",
+      "action": 495
+    },
+    {
+      "id": "FIN-SP1-D03-ready",
+      "action": 505,
+      "tool": 553
+    },
+    {
+      "id": "FIN-SP1-D03-unauthenticated",
+      "action": 505
+    },
+    {
+      "id": "FIN-SP1-D03-unavailable",
+      "action": 501
+    },
+    {
+      "id": "FIN-SP1-D03-missing",
+      "action": 497
+    },
+    {
+      "id": "FIN-SP1-D04-ready",
+      "action": 506,
+      "tool": 554
+    },
+    {
+      "id": "FIN-SP1-D04-unauthenticated",
+      "action": 506
+    },
+    {
+      "id": "FIN-SP1-D04-unavailable",
+      "action": 502
+    },
+    {
+      "id": "FIN-SP1-D04-missing",
+      "action": 498
+    },
+    {
+      "id": "FIN-SP1-D05-ready",
+      "action": 507,
+      "tool": 555
+    },
+    {
+      "id": "FIN-SP1-D05-unauthenticated",
+      "action": 507
+    },
+    {
+      "id": "FIN-SP1-D05-unavailable",
+      "action": 503
+    },
+    {
+      "id": "FIN-SP1-D05-missing",
+      "action": 499
+    },
+    {
+      "id": "FIN-SP1-D06-ready",
+      "action": 508,
+      "tool": 556
+    },
+    {
+      "id": "FIN-SP1-D06-unauthenticated",
+      "action": 508
+    },
+    {
+      "id": "FIN-SP1-D06-unavailable",
+      "action": 504
+    },
+    {
+      "id": "FIN-SP1-D06-missing",
+      "action": 500
+    },
+    {
+      "id": "FIN-SP1-D07-ready",
+      "action": 509,
+      "tool": 557
+    },
+    {
+      "id": "FIN-SP1-D07-unauthenticated",
+      "action": 509
+    },
+    {
+      "id": "FIN-SP1-D07-unavailable",
+      "action": 505
+    },
+    {
+      "id": "FIN-SP1-D07-missing",
+      "action": 501
+    },
+    {
+      "id": "FIN-SP1-D08-ready",
+      "action": 507,
+      "tool": 555
+    },
+    {
+      "id": "FIN-SP1-D08-unauthenticated",
+      "action": 507
+    },
+    {
+      "id": "FIN-SP1-D08-unavailable",
+      "action": 503
+    },
+    {
+      "id": "FIN-SP1-D08-missing",
+      "action": 499
+    },
+    {
+      "id": "FIN-SP1-C01-ready",
+      "action": 499,
+      "tool": 547
+    },
+    {
+      "id": "FIN-SP1-C01-unauthenticated",
+      "action": 499
+    },
+    {
+      "id": "FIN-SP1-C01-unavailable",
+      "action": 494
+    },
+    {
+      "id": "FIN-SP1-C02-ready",
+      "action": 499,
+      "tool": 547
+    },
+    {
+      "id": "FIN-SP1-C02-unauthenticated",
+      "action": 499
+    },
+    {
+      "id": "FIN-SP1-C02-unavailable",
+      "action": 494
+    },
+    {
+      "id": "FIN-SP1-C03-ready",
+      "action": 497,
+      "tool": 545
+    },
+    {
+      "id": "FIN-SP1-C03-unauthenticated",
+      "action": 497
+    },
+    {
+      "id": "FIN-SP1-C03-unavailable",
+      "action": 492
+    },
+    {
+      "id": "FIN-SP1-C04-ready",
+      "action": 499,
+      "tool": 547
+    },
+    {
+      "id": "FIN-SP1-C04-unauthenticated",
+      "action": 499
+    },
+    {
+      "id": "FIN-SP1-C04-unavailable",
+      "action": 494
+    },
+    {
+      "id": "FIN-SP1-C05-ready",
+      "action": 497,
+      "tool": 545
+    },
+    {
+      "id": "FIN-SP1-C05-unauthenticated",
+      "action": 497
+    },
+    {
+      "id": "FIN-SP1-C05-unavailable",
+      "action": 492
+    },
+    {
+      "id": "FIN-SP1-C06-ready",
+      "action": 497,
+      "tool": 545
+    },
+    {
+      "id": "FIN-SP1-C06-unauthenticated",
+      "action": 497
+    },
+    {
+      "id": "FIN-SP1-C06-unavailable",
+      "action": 492
+    },
+    {
+      "id": "FIN-SP1-C07-ready",
+      "action": 500,
+      "tool": 548
+    },
+    {
+      "id": "FIN-SP1-C07-unauthenticated",
+      "action": 500
+    },
+    {
+      "id": "FIN-SP1-C07-unavailable",
+      "action": 495
+    },
+    {
+      "id": "FIN-SP1-C08-ready",
+      "action": 499,
+      "tool": 547
+    },
+    {
+      "id": "FIN-SP1-C08-unauthenticated",
+      "action": 499
+    },
+    {
+      "id": "FIN-SP1-C08-unavailable",
+      "action": 494
+    },
+    {
+      "id": "FIN-SP1-S01-ready",
+      "action": 505,
+      "tool": 553
+    },
+    {
+      "id": "FIN-SP1-S01-unauthenticated",
+      "action": 505
+    },
+    {
+      "id": "FIN-SP1-S01-unavailable",
+      "action": 501
+    },
+    {
+      "id": "FIN-SP1-S01-missing",
+      "action": 506
+    },
+    {
+      "id": "FIN-SP1-S02-ready",
+      "action": 503,
+      "tool": 551
+    },
+    {
+      "id": "FIN-SP1-S02-unauthenticated",
+      "action": 503
+    },
+    {
+      "id": "FIN-SP1-S02-unavailable",
+      "action": 499
+    },
+    {
+      "id": "FIN-SP1-S02-missing",
+      "action": 504
+    },
+    {
+      "id": "FIN-SP1-S03-ready",
+      "action": 506,
+      "tool": 554
+    },
+    {
+      "id": "FIN-SP1-S03-unauthenticated",
+      "action": 506
+    },
+    {
+      "id": "FIN-SP1-S03-unavailable",
+      "action": 502
+    },
+    {
+      "id": "FIN-SP1-S03-missing",
+      "action": 506
+    },
+    {
+      "id": "FIN-SP1-S04-ready",
+      "action": 503,
+      "tool": 551
+    },
+    {
+      "id": "FIN-SP1-S04-unauthenticated",
+      "action": 503
+    },
+    {
+      "id": "FIN-SP1-S04-unavailable",
+      "action": 499
+    },
+    {
+      "id": "FIN-SP1-S04-missing",
+      "action": 504
+    },
+    {
+      "id": "FIN-SP1-S05-ready",
+      "action": 504,
+      "tool": 552
+    },
+    {
+      "id": "FIN-SP1-S05-unauthenticated",
+      "action": 504
+    },
+    {
+      "id": "FIN-SP1-S05-unavailable",
+      "action": 500
+    },
+    {
+      "id": "FIN-SP1-S05-missing",
+      "action": 505
+    },
+    {
+      "id": "FIN-SP1-S06-ready",
+      "action": 505,
+      "tool": 553
+    },
+    {
+      "id": "FIN-SP1-S06-unauthenticated",
+      "action": 505
+    },
+    {
+      "id": "FIN-SP1-S06-unavailable",
+      "action": 501
+    },
+    {
+      "id": "FIN-SP1-S06-missing",
+      "action": 505
+    },
+    {
+      "id": "FIN-SP1-S07-ready",
+      "action": 505,
+      "tool": 553
+    },
+    {
+      "id": "FIN-SP1-S07-unauthenticated",
+      "action": 505
+    },
+    {
+      "id": "FIN-SP1-S07-unavailable",
+      "action": 501
+    },
+    {
+      "id": "FIN-SP1-S07-missing",
+      "action": 504
+    },
+    {
+      "id": "FIN-SP1-S08-ready",
+      "action": 502,
+      "tool": 550
+    },
+    {
+      "id": "FIN-SP1-S08-unauthenticated",
+      "action": 502
+    },
+    {
+      "id": "FIN-SP1-S08-unavailable",
+      "action": 498
+    },
+    {
+      "id": "FIN-SP1-S08-missing",
+      "action": 500
+    }
+  ],
+  "length_summary": {
+    "action": {
+      "count": 136,
+      "minimum": 492,
+      "maximum": 509
+    },
+    "tool": {
+      "count": 40,
+      "minimum": 545,
+      "maximum": 557
+    }
+  },
+  "max_input_tokens": 2048,
+  "truncated": false,
+  "model_weights_loaded": false,
+  "model_api_requests": 0,
+  "old_training": {
+    "audit_sha256": "ecdaf53a85ef5fdf31061fc8694c2afa48cd87c023ca259e24e66c163f8ce195",
+    "pool_sha256": "8b524ae86533d7b55e1add23e4b0b44591c68b615ecf767f34ec4a0d5a166f72",
+    "pairs": 10,
+    "rows": 17,
+    "reconstructed_contexts_sha256": "3b864601d895d6d15c6b045b9725ec68b9b15a913a9347b78f33e1498fea1c0b",
+    "node_projections_sha256": "baab39cceeda36882d41552ffc672c22a80f87538b30e7a233888819ed4deb07",
+    "note": "Reconstructed from train-only inputs; not captured real sessions, not new semantic approval.",
+    "projection_matches": 17,
+    "details": [
+      {
+        "id": "FIN-BC1-query-FIN-F2-T-0662-1",
+        "changed_fields": []
+      },
+      {
+        "id": "FIN-BC1-query-FIN-F2-T-0662-2",
+        "changed_fields": []
+      },
+      {
+        "id": "FIN-BC1-query-FIN-F2-T-0678-1",
+        "changed_fields": []
+      },
+      {
+        "id": "FIN-BC1-query-FIN-F2-T-0678-2",
+        "changed_fields": []
+      },
+      {
+        "id": "FIN-BC1-query-FIN-F2-T-0692-1",
+        "changed_fields": []
+      },
+      {
+        "id": "FIN-BC1-query-FIN-F2-T-0692-2",
+        "changed_fields": []
+      },
+      {
+        "id": "FIN-F2-T-0662",
+        "changed_fields": []
+      },
+      {
+        "id": "FIN-F2-T-0678",
+        "changed_fields": []
+      },
+      {
+        "id": "FIN-F2-T-0692",
+        "changed_fields": []
+      },
+      {
+        "id": "SEA-G043-1",
+        "changed_fields": []
+      },
+      {
+        "id": "SEA-G043-2",
+        "changed_fields": []
+      },
+      {
+        "id": "SEA-G044-1",
+        "changed_fields": []
+      },
+      {
+        "id": "SEA-G044-2",
+        "changed_fields": []
+      },
+      {
+        "id": "SEA-G048-1",
+        "changed_fields": []
+      },
+      {
+        "id": "SEA-G048-2",
+        "changed_fields": []
+      },
+      {
+        "id": "SEA-G088-1",
+        "changed_fields": []
+      },
+      {
+        "id": "SEA-G088-2",
+        "changed_fields": []
+      }
+    ]
+  },
+  "training_eligible": false,
+  "human_reviewed": false
+}

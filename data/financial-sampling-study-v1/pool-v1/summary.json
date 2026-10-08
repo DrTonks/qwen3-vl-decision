@@ -1,0 +1,88 @@
+{
+  "input_rows": 13242,
+  "accepted": {
+    "rows": 13242,
+    "groups": 6059,
+    "cohorts": {
+      "preauth-robustness": 4435,
+      "planned-retrieval": 7108,
+      "current-service": 1699
+    },
+    "actions": {
+      "clarify": 1627,
+      "retrieve": 2651,
+      "tool": 2518,
+      "human": 1656,
+      "answer": 2371,
+      "refuse": 1085,
+      "close": 678,
+      "redirect": 656
+    },
+    "cohort_actions": {
+      "current-service": {
+        "answer": 321,
+        "tool": 634,
+        "clarify": 229,
+        "human": 278,
+        "redirect": 69,
+        "refuse": 106,
+        "close": 62
+      },
+      "planned-retrieval": {
+        "retrieve": 1388,
+        "tool": 1884,
+        "answer": 988,
+        "clarify": 649,
+        "close": 323,
+        "human": 991,
+        "refuse": 608,
+        "redirect": 277
+      },
+      "preauth-robustness": {
+        "clarify": 749,
+        "retrieve": 1263,
+        "human": 387,
+        "refuse": 371,
+        "redirect": 310,
+        "answer": 1062,
+        "close": 293
+      }
+    },
+    "layers": {
+      "preauth-component": 4435,
+      "planned-capability-component": 7108,
+      "component-message-only": 851,
+      "node-projection": 848
+    },
+    "tools": {
+      "queryLoanProducts": 948,
+      "queryApplicationDetail": 626,
+      "queryMyCreditScore": 251,
+      "queryMyApplications": 409,
+      "explainApplicationStatus": 284
+    },
+    "training_eligible_rows": 0
+  },
+  "quarantined": {
+    "rows": 0,
+    "groups": 0,
+    "cohorts": {},
+    "actions": {},
+    "cohort_actions": {
+      "current-service": {},
+      "planned-retrieval": {},
+      "preauth-robustness": {}
+    },
+    "layers": {},
+    "tools": {},
+    "training_eligible_rows": 0
+  },
+  "accepted_origins": {
+    "legacy": 11756,
+    "supplement": 1486
+  },
+  "exclusion_reasons": {},
+  "training_eligible": false,
+  "model_weights_loaded": false,
+  "model_api_requests": 0
+}

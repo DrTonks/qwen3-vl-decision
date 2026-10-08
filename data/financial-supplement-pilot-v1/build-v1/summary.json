@@ -1,0 +1,59 @@
+{
+  "rows": 160,
+  "groups": 80,
+  "cohorts": {
+    "current-service": 120,
+    "planned-retrieval": 24,
+    "preauth-robustness": 16
+  },
+  "actions": {
+    "clarify": 32,
+    "tool": 38,
+    "answer": 30,
+    "human": 25,
+    "redirect": 7,
+    "refuse": 8,
+    "close": 4,
+    "retrieve": 16
+  },
+  "cohort_actions": {
+    "current-service": {
+      "clarify": 22,
+      "tool": 36,
+      "answer": 24,
+      "human": 22,
+      "redirect": 6,
+      "refuse": 6,
+      "close": 4
+    },
+    "planned-retrieval": {
+      "clarify": 2,
+      "retrieve": 16,
+      "tool": 2,
+      "answer": 2,
+      "human": 1,
+      "refuse": 1
+    },
+    "preauth-robustness": {
+      "clarify": 8,
+      "answer": 4,
+      "human": 2,
+      "redirect": 1,
+      "refuse": 1
+    }
+  },
+  "layers": {
+    "component-message-only": 30,
+    "node-projection": 90,
+    "planned-capability-component": 24,
+    "preauth-component": 16
+  },
+  "tools": {
+    "queryLoanProducts": 10,
+    "queryMyApplications": 6,
+    "queryApplicationDetail": 10,
+    "queryMyCreditScore": 6,
+    "explainApplicationStatus": 6
+  },
+  "training_eligible_rows": 0
+}

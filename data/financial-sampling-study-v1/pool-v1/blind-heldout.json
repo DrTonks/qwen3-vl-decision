@@ -1,0 +1,480 @@
+{
+  "hits": {
+    "heldout": [],
+    "training_pool": []
+  },
+  "hit_candidate_counts": {
+    "heldout": 0,
+    "training_pool": 0
+  },
+  "quarantine_groups_by_reason": {
+    "heldout": [],
+    "training_pool": []
+  },
+  "quarantine_groups": [],
+  "quarantine_candidate_ids": [],
+  "candidate_count": 13242,
+  "candidate_group_count": 6059,
+  "scope": "heldout_only_for_combined_training_pool",
+  "index_sha256": "766fe0a801bd2d750f8960379448674d0e7f2457c7530cc2da267897b64f375c",
+  "screener_sha256": "b62bcac008cb3430253d86f9efbfcff9eff959106ae2e53b25434acf267f0263",
+  "validated_corpus_counts": {
+    "heldout": {
+      "entries": 63,
+      "selected_rows_with_snapshot_repetition": 20011,
+      "unique_file_sha256": 32
+    },
+    "training_pool": {
+      "entries": 38,
+      "selected_rows_with_snapshot_repetition": 97585,
+      "unique_file_sha256": 30
+    }
+  },
+  "compared_corpora": [
+    {
+      "path": "data/business_zh.jsonl",
+      "role": "heldout",
+      "sha256": "565280522960a6b707d1d5f993c136597f9f9846fc3be63addfb60b1f5b0b418",
+      "file_rows": 192,
+      "selected_rows": 192
+    },
+    {
+      "path": "data/massive_zh_test.jsonl",
+      "role": "heldout",
+      "sha256": "aee730f80c0663936a58f4d5895d5aa8accba211bc558472ad64efadcc522e65",
+      "file_rows": 117,
+      "selected_rows": 117
+    },
+    {
+      "path": "data/processed/support-v6/business-dev.jsonl",
+      "role": "heldout",
+      "sha256": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+      "file_rows": 120,
+      "selected_rows": 120
+    },
+    {
+      "path": "data/processed/support-v6/crosswoz-dev.jsonl",
+      "role": "heldout",
+      "sha256": "6f7e2f48f3e9e27357e156abc203c53a99229fd8a289841c5702f7c18d069a0a",
+      "file_rows": 150,
+      "selected_rows": 150
+    },
+    {
+      "path": "data/processed/support-v6/legacy-dev.jsonl",
+      "role": "heldout",
+      "sha256": "246ba99eab0d0ccc638d08d978d87598230dc41c9a145e963c6e968a03625e10",
+      "file_rows": 402,
+      "selected_rows": 402
+    },
+    {
+      "path": "data/processed/support-v6/massive-dev.jsonl",
+      "role": "heldout",
+      "sha256": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+      "file_rows": 273,
+      "selected_rows": 273
+    },
+    {
+      "path": "data/processed/support-v7/business-dev.jsonl",
+      "role": "heldout",
+      "sha256": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+      "file_rows": 120,
+      "selected_rows": 120
+    },
+    {
+      "path": "data/processed/support-v7/crosswoz-dev.jsonl",
+      "role": "heldout",
+      "sha256": "6f7e2f48f3e9e27357e156abc203c53a99229fd8a289841c5702f7c18d069a0a",
+      "file_rows": 150,
+      "selected_rows": 150
+    },
+    {
+      "path": "data/processed/support-v7/legacy-dev.jsonl",
+      "role": "heldout",
+      "sha256": "246ba99eab0d0ccc638d08d978d87598230dc41c9a145e963c6e968a03625e10",
+      "file_rows": 402,
+      "selected_rows": 402
+    },
+    {
+      "path": "data/processed/support-v7/massive-dev.jsonl",
+      "role": "heldout",
+      "sha256": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+      "file_rows": 273,
+      "selected_rows": 273
+    },
+    {
+      "path": "data/processed/support-v8/business-dev.jsonl",
+      "role": "heldout",
+      "sha256": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+      "file_rows": 120,
+      "selected_rows": 120
+    },
+    {
+      "path": "data/processed/support-v8/crosswoz-dev.jsonl",
+      "role": "heldout",
+      "sha256": "6f7e2f48f3e9e27357e156abc203c53a99229fd8a289841c5702f7c18d069a0a",
+      "file_rows": 150,
+      "selected_rows": 150
+    },
+    {
+      "path": "data/processed/support-v8/legacy-dev.jsonl",
+      "role": "heldout",
+      "sha256": "246ba99eab0d0ccc638d08d978d87598230dc41c9a145e963c6e968a03625e10",
+      "file_rows": 402,
+      "selected_rows": 402
+    },
+    {
+      "path": "data/processed/support-v8/massive-dev.jsonl",
+      "role": "heldout",
+      "sha256": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+      "file_rows": 273,
+      "selected_rows": 273
+    },
+    {
+      "path": "data/processed/v2/business-calibration.jsonl",
+      "role": "heldout",
+      "sha256": "52a370d58aa5609d655276ee316ef466b9e4989f7dee0a97495baa9faaa04862",
+      "file_rows": 56,
+      "selected_rows": 56
+    },
+    {
+      "path": "data/processed/v2/business-dev.jsonl",
+      "role": "heldout",
+      "sha256": "dd71581d8aacf297e8dc1ca60270fdd2cdb7c4a930293c16fd89573de61face7",
+      "file_rows": 64,
+      "selected_rows": 64
+    },
+    {
+      "path": "data/processed/v2/business-test.jsonl",
+      "role": "heldout",
+      "sha256": "6e0e9eaa663c1cdb6cae9abee349eae85279b3fe905693cab7d8ab9d60fd3f8d",
+      "file_rows": 72,
+      "selected_rows": 72
+    },
+    {
+      "path": "data/processed/v2/crosswoz-test.jsonl",
+      "role": "heldout",
+      "sha256": "431918d072a75a39e4572e3b373dd286ed0259f085ac7f2e95bbf76fba1c359e",
+      "file_rows": 200,
+      "selected_rows": 200
+    },
+    {
+      "path": "data/processed/v2/massive-calibration.jsonl",
+      "role": "heldout",
+      "sha256": "59404c8f4337ee100347a18f0f0b43e29690b4b2f884607ac5c379e9ec8a6cd6",
+      "file_rows": 313,
+      "selected_rows": 313
+    },
+    {
+      "path": "data/processed/v2/massive-dev.jsonl",
+      "role": "heldout",
+      "sha256": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+      "file_rows": 273,
+      "selected_rows": 273
+    },
+    {
+      "path": "data/processed/v2/massive-test.jsonl",
+      "role": "heldout",
+      "sha256": "f6835bfc538e57675b47d0affc73a4535e314562e36082f4ed564bb96a60afbb",
+      "file_rows": 2974,
+      "selected_rows": 2974
+    },
+    {
+      "path": "data/processed/v4/business-calibration.jsonl",
+      "role": "heldout",
+      "sha256": "70548d58094784591ac6eea541cd3bc3553c381c9bbf5b9e85943ba1e0d4a11a",
+      "file_rows": 90,
+      "selected_rows": 90
+    },
+    {
+      "path": "data/processed/v4/business-dev.jsonl",
+      "role": "heldout",
+      "sha256": "fa5b46918e449e38ac3d88a1216a762ee17461a4edbbd25ba80b8b45dcd001fd",
+      "file_rows": 90,
+      "selected_rows": 90
+    },
+    {
+      "path": "data/processed/v4/business-test.jsonl",
+      "role": "heldout",
+      "sha256": "ed42f720dd24901f1603c8cba96096296e7b48339f2ff9649c6c6e4ba20d7260",
+      "file_rows": 180,
+      "selected_rows": 180
+    },
+    {
+      "path": "data/processed/v4/massive-calibration.jsonl",
+      "role": "heldout",
+      "sha256": "59404c8f4337ee100347a18f0f0b43e29690b4b2f884607ac5c379e9ec8a6cd6",
+      "file_rows": 313,
+      "selected_rows": 313
+    },
+    {
+      "path": "data/processed/v4/massive-dev.jsonl",
+      "role": "heldout",
+      "sha256": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+      "file_rows": 273,
+      "selected_rows": 273
+    },
+    {
+      "path": "data/processed/v4/massive-test.jsonl",
+      "role": "heldout",
+      "sha256": "f6835bfc538e57675b47d0affc73a4535e314562e36082f4ed564bb96a60afbb",
+      "file_rows": 2974,
+      "selected_rows": 2974
+    },
+    {
+      "path": "data/processed/v5/business-calibration.jsonl",
+      "role": "heldout",
+      "sha256": "f9f8fc66ec1c6d3c5cd1b06d51801d272b25ad243986626211a178a336a4b927",
+      "file_rows": 402,
+      "selected_rows": 402
+    },
+    {
+      "path": "data/processed/v5/business-dev.jsonl",
+      "role": "heldout",
+      "sha256": "246ba99eab0d0ccc638d08d978d87598230dc41c9a145e963c6e968a03625e10",
+      "file_rows": 402,
+      "selected_rows": 402
+    },
+    {
+      "path": "data/processed/v5/business-test.jsonl",
+      "role": "heldout",
+      "sha256": "1b0e3fd2f0de07d94e44f783e7d026c267b9071bd592eb05f5e1efa82dd33c9d",
+      "file_rows": 402,
+      "selected_rows": 402
+    },
+    {
+      "path": "data/processed/v5/crosswoz-calibration.jsonl",
+      "role": "heldout",
+      "sha256": "3e707473c3f689a4e831fe309acfe6d5dd31f595d6470f07c052500b50e43ce4",
+      "file_rows": 150,
+      "selected_rows": 150
+    },
+    {
+      "path": "data/processed/v5/crosswoz-dev.jsonl",
+      "role": "heldout",
+      "sha256": "6f7e2f48f3e9e27357e156abc203c53a99229fd8a289841c5702f7c18d069a0a",
+      "file_rows": 150,
+      "selected_rows": 150
+    },
+    {
+      "path": "data/processed/v5/crosswoz-test.jsonl",
+      "role": "heldout",
+      "sha256": "431918d072a75a39e4572e3b373dd286ed0259f085ac7f2e95bbf76fba1c359e",
+      "file_rows": 200,
+      "selected_rows": 200
+    },
+    {
+      "path": "data/processed/v5/massive-calibration.jsonl",
+      "role": "heldout",
+      "sha256": "59404c8f4337ee100347a18f0f0b43e29690b4b2f884607ac5c379e9ec8a6cd6",
+      "file_rows": 313,
+      "selected_rows": 313
+    },
+    {
+      "path": "data/processed/v5/massive-dev.jsonl",
+      "role": "heldout",
+      "sha256": "0da49b397359b148fca0e86bd0a2aa3c11cf331409afd7297c9dc9dd802ceeb2",
+      "file_rows": 273,
+      "selected_rows": 273
+    },
+    {
+      "path": "data/processed/v5/massive-test.jsonl",
+      "role": "heldout",
+      "sha256": "f6835bfc538e57675b47d0affc73a4535e314562e36082f4ed564bb96a60afbb",
+      "file_rows": 2974,
+      "selected_rows": 2974
+    },
+    {
+      "path": "data/support-curriculum-v1/development-cases.jsonl",
+      "role": "heldout",
+      "sha256": "af03d4405df40d620e3d7e68ed5c7139abbf6eef6b3f743d1c939376a945a97a",
+      "file_rows": 120,
+      "selected_rows": 120
+    },
+    {
+      "path": "data/support-curriculum-v1/development-candidates.jsonl",
+      "role": "heldout",
+      "sha256": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+      "file_rows": 120,
+      "selected_rows": 120
+    },
+    {
+      "path": "data/support-curriculum-v1/calibration-cases.jsonl",
+      "role": "heldout",
+      "sha256": "7381e70f2e2a9a566f73f1bfa4fb2414b700c6ee5ad7fd17131e453924d12080",
+      "file_rows": 120,
+      "selected_rows": 120
+    },
+    {
+      "path": "data/support-curriculum-v1/calibration-candidates.jsonl",
+      "role": "heldout",
+      "sha256": "aee2f3cb4a1c60c6818c017338b703e6e256a3780b7d0e0b1c91bb3ac9218e5e",
+      "file_rows": 110,
+      "selected_rows": 110
+    },
+    {
+      "path": "data/support-curriculum-v1/challenge-cases.jsonl",
+      "role": "heldout",
+      "sha256": "9115860368b78e57e9f9978fe115b3f7c406950c9db459349b0ab1b36806b0ff",
+      "file_rows": 90,
+      "selected_rows": 90
+    },
+    {
+      "path": "data/support-curriculum-v1/challenge-model-candidates.jsonl",
+      "role": "heldout",
+      "sha256": "d81c333afd3e7c378597ede8339d6a8af3b48c9d72fa04297deeb3dd3fe773c8",
+      "file_rows": 79,
+      "selected_rows": 79
+    },
+    {
+      "path": "data/support-curriculum-v2/development-cases.jsonl",
+      "role": "heldout",
+      "sha256": "af03d4405df40d620e3d7e68ed5c7139abbf6eef6b3f743d1c939376a945a97a",
+      "file_rows": 120,
+      "selected_rows": 120
+    },
+    {
+      "path": "data/support-curriculum-v2/development-candidates.jsonl",
+      "role": "heldout",
+      "sha256": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+      "file_rows": 120,
+      "selected_rows": 120
+    },
+    {
+      "path": "data/support-curriculum-v2/calibration-cases.jsonl",
+      "role": "heldout",
+      "sha256": "7381e70f2e2a9a566f73f1bfa4fb2414b700c6ee5ad7fd17131e453924d12080",
+      "file_rows": 120,
+      "selected_rows": 120
+    },
+    {
+      "path": "data/support-curriculum-v2/calibration-candidates.jsonl",
+      "role": "heldout",
+      "sha256": "aee2f3cb4a1c60c6818c017338b703e6e256a3780b7d0e0b1c91bb3ac9218e5e",
+      "file_rows": 110,
+      "selected_rows": 110
+    },
+    {
+      "path": "data/support-curriculum-v2/challenge-cases.jsonl",
+      "role": "heldout",
+      "sha256": "9115860368b78e57e9f9978fe115b3f7c406950c9db459349b0ab1b36806b0ff",
+      "file_rows": 90,
+      "selected_rows": 90
+    },
+    {
+      "path": "data/support-curriculum-v2/challenge-model-candidates.jsonl",
+      "role": "heldout",
+      "sha256": "d81c333afd3e7c378597ede8339d6a8af3b48c9d72fa04297deeb3dd3fe773c8",
+      "file_rows": 79,
+      "selected_rows": 79
+    },
+    {
+      "path": "data/support-curriculum-v2-reviewed-01/development-cases.jsonl",
+      "role": "heldout",
+      "sha256": "af03d4405df40d620e3d7e68ed5c7139abbf6eef6b3f743d1c939376a945a97a",
+      "file_rows": 120,
+      "selected_rows": 120
+    },
+    {
+      "path": "data/support-curriculum-v2-reviewed-01/development-candidates.jsonl",
+      "role": "heldout",
+      "sha256": "9128eb1717dd4aaf4c34fd58a3db29a45c746bb0441239f4602423d7c588d29b",
+      "file_rows": 120,
+      "selected_rows": 120
+    },
+    {
+      "path": "data/support-curriculum-v2-reviewed-01/calibration-cases.jsonl",
+      "role": "heldout",
+      "sha256": "7381e70f2e2a9a566f73f1bfa4fb2414b700c6ee5ad7fd17131e453924d12080",
+      "file_rows": 120,
+      "selected_rows": 120
+    },
+    {
+      "path": "data/support-curriculum-v2-reviewed-01/calibration-candidates.jsonl",
+      "role": "heldout",
+      "sha256": "aee2f3cb4a1c60c6818c017338b703e6e256a3780b7d0e0b1c91bb3ac9218e5e",
+      "file_rows": 110,
+      "selected_rows": 110
+    },
+    {
+      "path": "data/support-curriculum-v2-reviewed-01/challenge-cases.jsonl",
+      "role": "heldout",
+      "sha256": "9115860368b78e57e9f9978fe115b3f7c406950c9db459349b0ab1b36806b0ff",
+      "file_rows": 90,
+      "selected_rows": 90
+    },
+    {
+      "path": "data/support-curriculum-v2-reviewed-01/challenge-model-candidates.jsonl",
+      "role": "heldout",
+      "sha256": "d81c333afd3e7c378597ede8339d6a8af3b48c9d72fa04297deeb3dd3fe773c8",
+      "file_rows": 79,
+      "selected_rows": 79
+    },
+    {
+      "path": "data/support-runtime-v1/cases.jsonl",
+      "role": "heldout",
+      "sha256": "f6c67a9af3cbea4c2ec49e1a58fd8294e4edfb8ad8417317a48c760d4530c1d4",
+      "file_rows": 139,
+      "selected_rows": 139
+    },
+    {
+      "path": "data/support-runtime-v1/deferred-cases.jsonl",
+      "role": "heldout",
+      "sha256": "aa5cc19d1d2cead4b28e8c949aa5adc8bbcf89cf8a6d08cfdf055ba45140bc0b",
+      "file_rows": 9,
+      "selected_rows": 9
+    },
+    {
+      "path": "data/support-fresh-holdout-v1/cases.jsonl",
+      "role": "heldout",
+      "sha256": "1df9d0d1c0a2d2f04cc4b22d3667fb315d11a63601a0c5279b06b57ddeffa3be",
+      "file_rows": 128,
+      "selected_rows": 128
+    },
+    {
+      "path": "data/financial-eight-actions-v2/evaluation/development.json",
+      "role": "heldout",
+      "sha256": "fdce2ab94a32ae72b8a032bb529fb7a47117f6c0497c54d6dbde07720f1da6eb",
+      "file_rows": 384,
+      "selected_rows": 384
+    },
+    {
+      "path": "data/financial-service-v2/development.json",
+      "role": "heldout",
+      "sha256": "56bd31ebfa75633143fefa5d6ae2dd77709a17d2bde642a583675ce638f558eb",
+      "file_rows": 128,
+      "selected_rows": 128
+    },
+    {
+      "path": "data/financial-eight-actions-v2/evaluation/calibration.json",
+      "role": "heldout",
+      "sha256": "773af48da01a07fb533628cc0308626952a0dd5315beaa540b52d87a59500534",
+      "file_rows": 256,
+      "selected_rows": 256
+    },
+    {
+      "path": "data/financial-service-v2/calibration.json",
+      "role": "heldout",
+      "sha256": "94f6f579a43b9da9a9e5ca9abc8804acbb38cad904cb0aed31f0f90fbeee7158",
+      "file_rows": 96,
+      "selected_rows": 96
+    },
+    {
+      "path": "data/financial-eight-actions-v2/evaluation/final.json",
+      "role": "heldout",
+      "sha256": "62c393b1462cdb40ca3d1141beda87d7f1769fa379df0c869772d0c1848abf17",
+      "file_rows": 512,
+      "selected_rows": 512
+    },
+    {
+      "path": "data/financial-service-v2/final.json",
+      "role": "heldout",
+      "sha256": "6cfe11b034254f241639ffe4f6762521d0cb6f3c21f3ea2c818f42d3c4fba35f",
+      "file_rows": 160,
+      "selected_rows": 160
+    }
+  ],
+  "training_pool_match_disabled": true,
+  "threshold": 0.85,
+  "semantic_independence_proven": false,
+  "training_eligible": false
+}

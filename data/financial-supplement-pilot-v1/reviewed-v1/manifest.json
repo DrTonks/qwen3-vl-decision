@@ -1,0 +1,85 @@
+{
+  "version": "financial-supplement-pilot-reviewed-v1",
+  "training_eligible": false,
+  "human_reviewed": false,
+  "status": "independent_ai_review_complete_not_a_training_release",
+  "accepted": {
+    "rows": 158,
+    "groups": 79,
+    "cohorts": {
+      "current-service": 118,
+      "planned-retrieval": 24,
+      "preauth-robustness": 16
+    },
+    "actions": {
+      "clarify": 30,
+      "tool": 38,
+      "answer": 30,
+      "human": 25,
+      "redirect": 7,
+      "refuse": 8,
+      "close": 4,
+      "retrieve": 16
+    },
+    "cohort_actions": {
+      "current-service": {
+        "clarify": 20,
+        "tool": 36,
+        "answer": 24,
+        "human": 22,
+        "redirect": 6,
+        "refuse": 6,
+        "close": 4
+      },
+      "planned-retrieval": {
+        "clarify": 2,
+        "retrieve": 16,
+        "tool": 2,
+        "answer": 2,
+        "human": 1,
+        "refuse": 1
+      },
+      "preauth-robustness": {
+        "clarify": 8,
+        "answer": 4,
+        "human": 2,
+        "redirect": 1,
+        "refuse": 1
+      }
+    },
+    "layers": {
+      "component-message-only": 30,
+      "node-projection": 88,
+      "planned-capability-component": 24,
+      "preauth-component": 16
+    },
+    "tools": {
+      "queryLoanProducts": 10,
+      "queryMyApplications": 6,
+      "queryApplicationDetail": 10,
+      "queryMyCreditScore": 6,
+      "explainApplicationStatus": 6
+    },
+    "training_eligible_rows": 0
+  },
+  "quarantined_ids": [
+    "FSP1-C08-1",
+    "FSP1-C08-2"
+  ],
+  "quarantined_groups": [
+    "FSP1-G-C08"
+  ],
+  "sources": {
+    "data/financial-supplement-pilot-v1/build-v2/manifest.json": "c75bfc6dbca8cb3997db8d947cb8b78faefba8c7d58c0273af2356c1ade64622",
+    "data/financial-supplement-pilot-v1/build-v2/candidates.json": "01ef9736f9662571140ec88e4591071163e9698fc78e6848f584c0a202e5110d",
+    "data/financial-supplement-pilot-v1/build-v2/audit.json": "c334b7968390999009d5a2f161f56877b0c23302f918c557167edafe14969e13",
+    "data/financial-supplement-pilot-v1/build-v2/blind-overlap.json": "ffaed7d4b6ba86389e87f18d58702a305f90717c914e9bf857f73a25ec8bc657",
+    "docs/evidence/financial-supplement-pilot-label-review-v2.json": "6b16581bbea1702e6d51f9b2afcca1f5818cda77ecb2e02eb290c87c4388f03f",
+    "docs/evidence/financial-supplement-pilot-code-review-v2.json": "1d7ab0421f4c325567f1548131b0ca95d14364c377d6d2c200b8e7c8193c3869",
+    "scripts/finalize-financial-supplement-review.py": "d7727195aa061c9b7408798705715b931778d93de1c08f7dadb3ffb8949d2cc6"
+  },
+  "files": {
+    "accepted.json": "2af3fb104ac90e92727c2285df3a52f0a339a30ec8f5059d81a420decc528a6f",
+    "quarantine.json": "c5f368adef42864e4c3781abb4152faf6a18693c34aff4ad0fe4d663b5e05fac"
+  }
+}

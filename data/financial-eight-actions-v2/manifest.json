@@ -1,0 +1,138 @@
+{
+  "version": "financial-eight-actions-v2",
+  "purpose": "train_and_evaluation",
+  "human_review": false,
+  "synthetic": true,
+  "independent_authoring": true,
+  "true_user_generalization_proven": false,
+  "base_release": "data/financial-training-text-v1",
+  "base_manifest_sha256": "5f4d778d584b02557a67e1fe0097c17dc2eb418213a28f0ca0e137243a807773",
+  "files": {
+    "train-additions.jsonl": {
+      "sha256": "16c640146abd3b12307c6f63c12b35389ee9726fba89f28019ab4e0efd50cc46"
+    },
+    "evaluation/development.json": {
+      "sha256": "fdce2ab94a32ae72b8a032bb529fb7a47117f6c0497c54d6dbde07720f1da6eb"
+    },
+    "evaluation/calibration.json": {
+      "sha256": "773af48da01a07fb533628cc0308626952a0dd5315beaa540b52d87a59500534"
+    },
+    "evaluation/final.json": {
+      "sha256": "62c393b1462cdb40ca3d1141beda87d7f1769fa379df0c869772d0c1848abf17"
+    },
+    "groups.json": {
+      "sha256": "750dca42aed6c23f68c758b22377ae624f225c30804445275737e5623595481f"
+    },
+    "overlap-audit.json": {
+      "sha256": "0ce133754f36a7f98c61583e055e0d59933eb4be41da7a725e4792f29e4f7a83"
+    },
+    "evaluation/catalog.json": {
+      "sha256": "df311c3c744efaaa70cf4b53badac15b534e2522f16cc0d3438211c4a229a759"
+    },
+    "protocol.json": {
+      "sha256": "1c72a03bab3458d3ad3d81d9847d96e2fbcf86ec122387b86e411a6dc5036c78"
+    },
+    "reviews/overlap-review.json": {
+      "sha256": "e713d562e4a6f8851684bad4d465f4cc5e7886ac44d586a1f8ddac4b6fd51105"
+    },
+    "reviews/train-additions-review.json": {
+      "sha256": "4bd288c13f9dad98edba71d13cb8557ca4183d4bae8d7eeef5d4a10cebed3367"
+    },
+    "reviews/evaluation-review.json": {
+      "sha256": "6d7ada85a979c8fe52209fcc6c22a372179d31b9892f0ed1373c72c87b882b3b"
+    }
+  },
+  "source_bindings": {
+    ".local/financial-eight-actions-v2/candidates/evaluation-catalog-v2.json": "df311c3c744efaaa70cf4b53badac15b534e2522f16cc0d3438211c4a229a759",
+    "configs/financial-eight-actions-pilot-v2.json": "1c72a03bab3458d3ad3d81d9847d96e2fbcf86ec122387b86e411a6dc5036c78",
+    ".local/financial-eight-actions-v2/review/overlap-review.json": "e713d562e4a6f8851684bad4d465f4cc5e7886ac44d586a1f8ddac4b6fd51105",
+    ".local/financial-eight-actions-v2/candidates/train-additions.jsonl": "862567b72dda37b9856589f17aa961a54d9fcd12905ba014d61af3c1de23233c",
+    ".local/financial-eight-actions-v2/review/train-additions-review.json": "4bd288c13f9dad98edba71d13cb8557ca4183d4bae8d7eeef5d4a10cebed3367",
+    ".local/financial-eight-actions-v2/candidates/evaluation.jsonl": "f79c7db24a8454ebf3eb16d3b8e03ac89edde96855701c7751a71b7aa921c4ae",
+    ".local/financial-eight-actions-v2/review/evaluation-review.json": "6d7ada85a979c8fe52209fcc6c22a372179d31b9892f0ed1373c72c87b882b3b",
+    "src/qwenlab/financial_ready.py": "450683f8f1ccc7a88e7df447b2ab61f496b88181055656532ac22ac9b2263085",
+    "src/qwenlab/financial_actions_prompt.py": "817bd6578c99ee0dce3d5e1d784830ce1d70cd85a9ff54f6cdf8ec34515f2b36",
+    "src/qwenlab/financial_actions_metrics.py": "3d4f63967b1748116ea820d2dfdd0ab368926c16f8ee5863d4fbcf9903022a73",
+    ".local/financial-rewrite-completion/protection.json": "de75ef48acea122bd117778ffe2b549b7fa3d25697b3f601612065c58f9a4923"
+  },
+  "stats": {
+    "base_train": 11049,
+    "new_train": 850,
+    "train_total": 11899,
+    "new_train_actions": {
+      "tool": 320,
+      "answer": 120,
+      "clarify": 110,
+      "human": 90,
+      "redirect": 60,
+      "refuse": 60,
+      "close": 40,
+      "retrieve": 50
+    },
+    "new_train_status_tools": 240,
+    "new_train_no_kb": 800,
+    "evaluation": {
+      "development": {
+        "rows": 384,
+        "actions": {
+          "clarify": 64,
+          "tool": 64,
+          "human": 64,
+          "answer": 48,
+          "retrieve": 48,
+          "close": 24,
+          "refuse": 48,
+          "redirect": 24
+        },
+        "families": 32,
+        "macro_stories": 8,
+        "no_kb": 166
+      },
+      "calibration": {
+        "rows": 256,
+        "actions": {
+          "clarify": 32,
+          "tool": 32,
+          "human": 32,
+          "answer": 32,
+          "retrieve": 32,
+          "close": 32,
+          "refuse": 32,
+          "redirect": 32
+        },
+        "families": 32,
+        "macro_stories": 8,
+        "no_kb": 115
+      },
+      "final": {
+        "rows": 512,
+        "actions": {
+          "clarify": 80,
+          "tool": 80,
+          "human": 96,
+          "answer": 64,
+          "retrieve": 64,
+          "close": 32,
+          "refuse": 64,
+          "redirect": 32
+        },
+        "families": 32,
+        "macro_stories": 8,
+        "no_kb": 231
+      }
+    }
+  },
+  "action_tokens": {
+    "clarify": "A",
+    "retrieve": "B",
+    "tool": "C",
+    "answer": "D",
+    "human": "E",
+    "redirect": "F",
+    "refuse": "G",
+    "close": "H"
+  },
+  "evaluations_are_standard_json_arrays": true,
+  "final_selection_usage": "never train or select with final",
+  "note": "Macro stories are correlated clusters; authored dataset counts do not establish real-world accuracy."
+}

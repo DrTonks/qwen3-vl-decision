@@ -1,0 +1,147 @@
+[
+  {
+    "id": "FSP1-C08-1",
+    "scene_family_id": "FSP1-G-C08",
+    "split": "candidate",
+    "cohort": "current-service",
+    "input_layer": "node-projection",
+    "input": {
+      "message": "说的不是刚才那笔，另外那笔的借款金额帮我查查。",
+      "history": [],
+      "state": {
+        "authenticated": true,
+        "application_id": 48351,
+        "handoff_status": "none"
+      },
+      "service_scope": "loan_platform",
+      "capability_profile": "current-node-no-kb",
+      "capabilities": {
+        "knowledge_collections": [],
+        "handoff_available": false
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "queryMyCreditScore",
+        "explainApplicationStatus"
+      ],
+      "images": []
+    },
+    "annotation": {
+      "action": "clarify",
+      "tool_name": null,
+      "tool_arguments": {},
+      "missing_slots": [
+        "applicationId"
+      ],
+      "retrieval_collection": null,
+      "reason": "已有选中项不代表能把新的不明数字或对象绑定到该项。",
+      "evidence_paths": [
+        "input.message",
+        "input.state",
+        "input.capabilities",
+        "input.history"
+      ],
+      "policy_version": "support-financial-v2"
+    },
+    "provenance": {
+      "origin": "ai_synthetic",
+      "source_id": "FSP1-C08-1",
+      "source_group": "FSP1-G-C08",
+      "source_document": "authoring.json",
+      "licence_or_permission": "Original synthetic text authored for this user-requested project; no third-party dataset copied.",
+      "basis": [
+        "configs/support-financial-v2.json",
+        "repo:uestc_Integrated_Design/后端/services/customerSupport/tools.js"
+      ],
+      "source_row_sha256": "8c827983a3326e98564a12a29c1f173da04828a93ee5e3f6b7c6c1221ab48fd9"
+    },
+    "projection": {
+      "input_adapter_version": "financial-node-input-v1.1",
+      "node_input_sha256": "c840f007b8590c0f2fa54884ce8ae47aed04b86c71bcc6a76f2945a49bee9d01",
+      "transformations": []
+    },
+    "review_status": "quarantined_by_source_group",
+    "human_reviewed": false,
+    "training_eligible": false,
+    "review": {
+      "type": "independent_ai",
+      "decision": "quarantine",
+      "reason": "用户明确排除原选中申请，clarify意图标签保持正确；Node仍投影旧application_id=48351，存在已知误导state。本批按场景组隔离，不能为通过标注而改成查询旧记录。",
+      "human_reviewed": false
+    }
+  },
+  {
+    "id": "FSP1-C08-2",
+    "scene_family_id": "FSP1-G-C08",
+    "split": "candidate",
+    "cohort": "current-service",
+    "input_layer": "node-projection",
+    "input": {
+      "message": "换另一张单看期数，编号我还没告诉你。",
+      "history": [],
+      "state": {
+        "authenticated": true,
+        "handoff_status": "none"
+      },
+      "service_scope": "loan_platform",
+      "capability_profile": "current-node-no-kb",
+      "capabilities": {
+        "knowledge_collections": [],
+        "handoff_available": false
+      },
+      "available_tools": [
+        "queryLoanProducts",
+        "queryMyApplications",
+        "queryApplicationDetail",
+        "queryMyCreditScore",
+        "explainApplicationStatus"
+      ],
+      "images": []
+    },
+    "annotation": {
+      "action": "clarify",
+      "tool_name": null,
+      "tool_arguments": {},
+      "missing_slots": [
+        "applicationId"
+      ],
+      "retrieval_collection": null,
+      "reason": "当前只说换另一张单，模型可见输入中没有目标编号，应追问当前申请号；不依赖不可见的旧选择。",
+      "evidence_paths": [
+        "input.message",
+        "input.state",
+        "input.capabilities",
+        "input.history"
+      ],
+      "policy_version": "support-financial-v2"
+    },
+    "provenance": {
+      "origin": "ai_synthetic",
+      "source_id": "FSP1-C08-2",
+      "source_group": "FSP1-G-C08",
+      "source_document": "authoring.json",
+      "licence_or_permission": "Original synthetic text authored for this user-requested project; no third-party dataset copied.",
+      "basis": [
+        "configs/support-financial-v2.json",
+        "repo:uestc_Integrated_Design/后端/services/customerSupport/tools.js"
+      ],
+      "source_row_sha256": "8fe22778ff9df9d3e63dd7e24d916161ff22860ae1eaf65e652ffc464e46fbe5"
+    },
+    "projection": {
+      "input_adapter_version": "financial-node-input-v1.1",
+      "node_input_sha256": "efdae7ffbbdb0cd536a4b8c5f8cdeaa238b43328670798f3c6cb0cf70ecd7f31",
+      "transformations": []
+    },
+    "review_status": "quarantined_by_source_group",
+    "human_reviewed": false,
+    "training_eligible": false,
+    "review": {
+      "type": "independent_ai",
+      "decision": "quarantine",
+      "reason": "修订理由已只依据可见输入缺少当前目标编号，clarify及applicationId语义通过；因与C08-1同属FSP1-G-C08，本批整组隔离，不把语义通过解释为投影缺陷修复。",
+      "human_reviewed": false
+    }
+  }
+]

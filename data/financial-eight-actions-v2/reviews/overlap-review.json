@@ -1,0 +1,26 @@
+{
+  "decision": "pass",
+  "reviewer": "release_review",
+  "human_review": false,
+  "unresolved_findings": [],
+  "pairs_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "reviewed_pairs": [],
+  "evaluation_data_sha256": "f79c7db24a8454ebf3eb16d3b8e03ac89edde96855701c7751a71b7aa921c4ae",
+  "train_data_sha256": "862567b72dda37b9856589f17aa961a54d9fcd12905ba014d61af3c1de23233c",
+  "resolved_findings": [
+    {
+      "ids": [
+        "FIN-F2-E-0586",
+        "FIN-F2-E-0985"
+      ],
+      "before": "Same budget-minus-two-expenses template crossed calibration/final; blocked despite individually valid labels.",
+      "after": "Author revised only final E0985 to hypothetical equal-principal division. Full revised input/annotation actually reread and other 1151 JSON records unchanged; re-audit has zero lexical candidates."
+    }
+  ],
+  "limitations": [
+    "Masked current-message trigram retrieval with limited candidates/cutoff is not complete semantic dedup or a proof of independent real-user generalization.",
+    "Zero screened near pairs means zero candidates under this heuristic, not zero possible semantic overlap.",
+    "No model results were used; no evaluation originals were sent to the training author."
+  ],
+  "approval_scope": "Overlap screen adjudication only; does not authorize training/deployment"
+}

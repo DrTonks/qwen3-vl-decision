@@ -1,0 +1,38 @@
+{
+  "version": "financial-contract-revision-v2-author-evidence",
+  "authored_at_utc": "2026-10-03T03:39:49.310281+00:00",
+  "status": "author_proposal_pending_independent_review",
+  "training_eligible": false,
+  "human_reviewed": false,
+  "reviewer_type": "ai_author",
+  "reviewer": "/root/boundary_labels_review",
+  "policy_version": "financial-support-contract-draft-v2",
+  "read_scope": "All184 complete inputs were displayed and read sequentially in four batches0-45,46-91,92-137,138-183; no evaluation or results read. Each action and rationale individually authored; packaging derives retain/revise from target equality only.",
+  "source_binding": {
+    "data/financial-contract-audit-v1/review-queue.json": "578dcfbfc71e89fef385d4429ff625160f048f584c9a2284f05f8d3af27d9c70",
+    "configs/financial-support-contract-draft-v2.json": "948163b2d5edab8627d2ae57637253bc4fd67e5b1b0291d2590e0b155c49a95a"
+  },
+  "source_rows_verified": 184,
+  "proposals_sha256": "aa8ae2c9e2049a476f1a3fcc2621caccb47dbb575b8c6c3f9002734f76df2d05",
+  "counts": {
+    "retain": 149,
+    "revise": 11,
+    "quarantine": 24
+  },
+  "action_counts_excluding_quarantine": {
+    "answer": 14,
+    "retrieve": 37,
+    "close": 8,
+    "human": 100,
+    "tool": 1
+  },
+  "quarantine_semantics": "Full proposed_annotation object is retained with action=null; it is intentionally not a valid training label. Do not substitute the old label or train these rows.",
+  "unresolved": "Generic future human consultation plus contact-information requests can be genuinely ambiguous without changing input; quarantine rather than force either route.",
+  "constraints": [
+    "No inputs or old frozen source rows edited.",
+    "All184 are proposals, not independent approvals or training release.",
+    "Historical assistant statements may guide intent but may not establish an execution completed.",
+    "handoff_connected does not prove per-request handoff completion.",
+    "No API, inference, evaluation or training run."
+  ]
+}

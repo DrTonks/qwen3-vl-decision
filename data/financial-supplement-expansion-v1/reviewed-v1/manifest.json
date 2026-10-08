@@ -1,0 +1,191 @@
+{
+  "version": "financial-supplement-expansion-reviewed-v1",
+  "training_eligible": false,
+  "human_reviewed": false,
+  "status": "independent_ai_review_complete_not_training_release",
+  "accepted": {
+    "rows": 1486,
+    "groups": 412,
+    "cohorts": {
+      "current-service": 1125,
+      "planned-retrieval": 248,
+      "preauth-robustness": 113
+    },
+    "actions": {
+      "clarify": 237,
+      "tool": 313,
+      "answer": 305,
+      "human": 280,
+      "redirect": 46,
+      "refuse": 93,
+      "close": 44,
+      "retrieve": 168
+    },
+    "cohort_actions": {
+      "current-service": {
+        "clarify": 174,
+        "tool": 311,
+        "answer": 255,
+        "human": 234,
+        "redirect": 39,
+        "refuse": 75,
+        "close": 37
+      },
+      "planned-retrieval": {
+        "clarify": 4,
+        "retrieve": 168,
+        "tool": 2,
+        "answer": 26,
+        "human": 33,
+        "refuse": 11,
+        "close": 2,
+        "redirect": 2
+      },
+      "preauth-robustness": {
+        "clarify": 59,
+        "answer": 24,
+        "human": 13,
+        "redirect": 5,
+        "refuse": 7,
+        "close": 5
+      }
+    },
+    "layers": {
+      "component-message-only": 277,
+      "node-projection": 848,
+      "planned-capability-component": 248,
+      "preauth-component": 113
+    },
+    "tools": {
+      "queryLoanProducts": 40,
+      "queryMyApplications": 47,
+      "queryApplicationDetail": 154,
+      "queryMyCreditScore": 44,
+      "explainApplicationStatus": 28
+    },
+    "training_eligible_rows": 0
+  },
+  "quarantined": {
+    "rows": 192,
+    "groups": 49,
+    "cohorts": {
+      "current-service": 115,
+      "preauth-robustness": 73,
+      "planned-retrieval": 4
+    },
+    "actions": {
+      "clarify": 57,
+      "tool": 35,
+      "answer": 43,
+      "human": 35,
+      "close": 8,
+      "refuse": 10,
+      "redirect": 2,
+      "retrieve": 2
+    },
+    "cohort_actions": {
+      "current-service": {
+        "clarify": 27,
+        "tool": 35,
+        "answer": 22,
+        "human": 22,
+        "close": 5,
+        "refuse": 3,
+        "redirect": 1
+      },
+      "planned-retrieval": {
+        "retrieve": 2,
+        "answer": 1,
+        "human": 1
+      },
+      "preauth-robustness": {
+        "clarify": 30,
+        "answer": 20,
+        "human": 12,
+        "refuse": 7,
+        "redirect": 1,
+        "close": 3
+      }
+    },
+    "layers": {
+      "node-projection": 88,
+      "component-message-only": 27,
+      "preauth-component": 73,
+      "planned-capability-component": 4
+    },
+    "tools": {
+      "queryApplicationDetail": 22,
+      "queryLoanProducts": 2,
+      "explainApplicationStatus": 8,
+      "queryMyApplications": 3
+    },
+    "training_eligible_rows": 0
+  },
+  "quarantined_groups": [
+    "FSP1-G-C06",
+    "FSP1-G-T12",
+    "SEA-G008",
+    "SEA-G015",
+    "SEA-G024",
+    "SEA-G033",
+    "SEA-G042",
+    "SEA-G045",
+    "SEA-G090",
+    "SEB-G040",
+    "SEB-G049",
+    "SEB-G052",
+    "SEB-G054",
+    "SEB-G056",
+    "SEB-G057",
+    "SEB-G058",
+    "SEB-G060",
+    "SEB-G065",
+    "SEB-G067",
+    "SEB-G068",
+    "SEB-G078",
+    "SEB-G079",
+    "SEB-G081",
+    "SEB-G088",
+    "SEB-G096",
+    "SEB-G099",
+    "SEB-G114",
+    "SEB-G117",
+    "SEB-G120",
+    "SEB-G133",
+    "SEB-G164",
+    "SEB-G173",
+    "SEB-G174",
+    "SEB-G175",
+    "SEB-G176",
+    "SEB-G177",
+    "SEB-G178",
+    "SEB-G179",
+    "SEB-G180",
+    "SEB-G181",
+    "SEB-G183",
+    "SEB-G184",
+    "SEB-G185",
+    "SEB-G186",
+    "SEB-G187",
+    "SEB-G188",
+    "SEB-G189",
+    "SEB-G190",
+    "SEB-G191"
+  ],
+  "files": {
+    "accepted.json": "d587d892b9267aae594328de1b34e5a654803e56bad0dba9abfc764489ee513e",
+    "quarantine.json": "0d79ad2d5698875d3b599204a83303cc4d5c0c1ead020467560d187c9b6c38cd"
+  },
+  "sources": {
+    "data/financial-supplement-expansion-v1/build-v1/manifest.json": "a23d1cab92d0f1d46d584348ee0249f78eec71f7c7da1234ab8671aeb41cfcb6",
+    "data/financial-supplement-expansion-v1/build-v1/candidates.json": "f2f9d3fad35a74858b080d3afbb60acf1c36966e3ea852cf94dcc0e153610ac5",
+    "data/financial-supplement-expansion-v1/build-v1/audit.json": "84d7b8b5e292725ae2310cfaa5ab8a2084451f0428c46a829f2fa3b9b64ade15",
+    "data/financial-supplement-expansion-v1/build-v1/blind-overlap.json": "8265cfb9754a7fd9fce47f7333a03619da4bf7aaaaae5a5d40040261b7e8ba81",
+    "configs/financial-supplement-heldout-index-v1.json": "766fe0a801bd2d750f8960379448674d0e7f2457c7530cc2da267897b64f375c",
+    "scripts/screen-financial-expansion-overlap.py": "b62bcac008cb3430253d86f9efbfcff9eff959106ae2e53b25434acf267f0263",
+    "docs/evidence/financial-supplement-expansion-code-review.json": "1de964eecbf9616b5d3d6e164d627ad71bd212d7d959509773b7943d87df0d75",
+    "docs/evidence/financial-supplement-expansion-label-review-a.json": "af2af3aad0d84e3deff5add3a37b981fc2661f815ed1001eaa32422048d0849f",
+    "docs/evidence/financial-supplement-expansion-label-review-b.json": "ddf6737cdaa24813fecde87dd4601cfa4404a823737918e67addf984bf143746",
+    "scripts/finalize-financial-expansion.py": "057e00c63005a33c7d17ea90fa68a5e5415e74f0228e1ec87ff3a745ca42db84"
+  }
+}

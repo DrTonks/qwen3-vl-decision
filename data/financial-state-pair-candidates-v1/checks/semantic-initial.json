@@ -1,0 +1,1437 @@
+{
+  "schema_version": "state-pair-independent-label-review-v1",
+  "reviewed_at_utc": "2026-10-05T00:59:13.613Z",
+  "reviewer": "independent_ai_agent_state_pair_label_review",
+  "source_sha_binding": [
+    {
+      "path": "qwen/data/financial-state-pair-candidates-v1/stories.json",
+      "sha256": "eae4fb14b7711111c1802ca958c54906c7ad956693ff725e436c8d212d6f24d6"
+    },
+    {
+      "path": "qwen/configs/support-financial-v2.json",
+      "sha256": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91"
+    },
+    {
+      "path": "uestc_Integrated_Design/后端/services/customerSupport/financialContract.js",
+      "sha256": "e579e1674c3b55f78b6b578ad02b169e88ee088b4aba0179d287a62d4c0b4a9d"
+    },
+    {
+      "path": "uestc_Integrated_Design/后端/services/customerSupport/parameters.js",
+      "sha256": "7f2372eee24930107556c5ce7b290af2cf189d0c85f6f16487aa6075d8209779"
+    },
+    {
+      "path": "uestc_Integrated_Design/后端/services/customerSupport/tools.js",
+      "sha256": "a2d756c8a883b8f62a9d281ebc89072a493fb54fce46cb8c3c361f6db01989fc"
+    }
+  ],
+  "scope": {
+    "read_only_sources": [
+      "qwen/data/financial-state-pair-candidates-v1/stories.json",
+      "qwen/configs/support-financial-v2.json",
+      "uestc_Integrated_Design/后端/services/customerSupport/financialContract.js",
+      "uestc_Integrated_Design/后端/services/customerSupport/parameters.js",
+      "uestc_Integrated_Design/后端/services/customerSupport/tools.js"
+    ],
+    "source_files_modified": false,
+    "heldout_or_predictions_read": false,
+    "training_executed": false,
+    "api_called": false,
+    "all_data_ai_synthetic": true,
+    "human_reviewed": false,
+    "training_eligible": false
+  },
+  "method": "逐故事依据声明政策与实际工具字段人工式语义审查；仅执行parameters.js纯参数解析作确定性验证，未调用模型或业务工具。",
+  "policy_findings": [
+    {
+      "finding": "认证门槛对全部五工具生效，包括公开目录和静态状态。",
+      "evidence": [
+        "support-financial-v2.policy: 工具仅限可用白名单且需要认证",
+        "financialContract.toDecision/groundDecision: authentication guard precedes tool grounding",
+        "tools.createTools.execute: owner guard precedes all branches"
+      ]
+    },
+    {
+      "finding": "缺工具→human明确适用于无法完成的个人业务。公开产品与静态状态不宜从执行兜底推导唯一human动作标签。",
+      "evidence": [
+        "support-financial-v2.policy: 合法但现有能力无法完成的个人业务选human",
+        "support-financial-v2.questions.action.criteria.answer: 解释已知信息或如实说明能力",
+        "financialContract.toDecision: action already tool then unavailable fallback"
+      ]
+    },
+    {
+      "finding": "无实际人工连接器，human表示人工请求路由意图，不能声称接通或受理。",
+      "evidence": [
+        "financialContract.modelInput: handoff_status none / handoff_available false",
+        "support-financial-v2.policy: 尚未接通人工不能声称已受理"
+      ]
+    },
+    {
+      "finding": "运行时financialContract读取相邻policies/support-financial-v2.json；该文件不在本次授权源清单，未读取或验证与qwen配置一致。",
+      "evidence": [
+        "financialContract.js fs.readFileSync path"
+      ]
+    }
+  ],
+  "counts": {
+    "stories": 40,
+    "keep": 24,
+    "quarantine": 16
+  },
+  "expected_retained_variants": 80,
+  "quarantine_ids": [
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "P05",
+    "P06",
+    "P07",
+    "P08",
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07",
+    "S08"
+  ],
+  "reviews": [
+    {
+      "id": "P01",
+      "verdict": "quarantine",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryLoanProducts",
+      "capability_check": "pass",
+      "semantic_evidence": "名称与各自额度上限对应 name/maxAmount；请求当前目录，不能凭通用知识回答实际产品数据。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "not_established",
+        "recommended_action": "answer_or_policy_review",
+        "reason": "请求当前公开目录数据，不是明确的个人业务；全局政策仅对无法完成的个人业务指向human。缺目标工具时可如实说明查询能力限制，未证明human为唯一下一步。"
+      },
+      "final_reason": "整故事隔离：工具缺失版本的human标签不唯一或未获政策支持，不单独保留其余版本以凑样本。"
+    },
+    {
+      "id": "P02",
+      "verdict": "quarantine",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryLoanProducts",
+      "capability_check": "pass",
+      "semantic_evidence": "产品编号与名称对应 id/name；没有要求申请个人业务或查账户资料。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "not_established",
+        "recommended_action": "answer_or_policy_review",
+        "reason": "请求当前公开目录数据，不是明确的个人业务；全局政策仅对无法完成的个人业务指向human。缺目标工具时可如实说明查询能力限制，未证明human为唯一下一步。"
+      },
+      "final_reason": "整故事隔离：工具缺失版本的human标签不唯一或未获政策支持，不单独保留其余版本以凑样本。"
+    },
+    {
+      "id": "P03",
+      "verdict": "quarantine",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryLoanProducts",
+      "capability_check": "pass",
+      "semantic_evidence": "已上架产品参考信用分对应 acceptScore；明确暂不借款，仍为目录读取。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "not_established",
+        "recommended_action": "answer_or_policy_review",
+        "reason": "请求当前公开目录数据，不是明确的个人业务；全局政策仅对无法完成的个人业务指向human。缺目标工具时可如实说明查询能力限制，未证明human为唯一下一步。"
+      },
+      "final_reason": "整故事隔离：工具缺失版本的human标签不唯一或未获政策支持，不单独保留其余版本以凑样本。"
+    },
+    {
+      "id": "P04",
+      "verdict": "quarantine",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryLoanProducts",
+      "capability_check": "pass",
+      "semantic_evidence": "产品标签及最高金额对应 tags/maxAmount；工具能返回这些字段。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "not_established",
+        "recommended_action": "answer_or_policy_review",
+        "reason": "请求当前公开目录数据，不是明确的个人业务；全局政策仅对无法完成的个人业务指向human。缺目标工具时可如实说明查询能力限制，未证明human为唯一下一步。"
+      },
+      "final_reason": "整故事隔离：工具缺失版本的human标签不唯一或未获政策支持，不单独保留其余版本以凑样本。"
+    },
+    {
+      "id": "P05",
+      "verdict": "quarantine",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryLoanProducts",
+      "capability_check": "pass",
+      "semantic_evidence": "当前可选贷款名称对应 name；明确排除推荐和申请，不能当作缺失个人业务能力。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "not_established",
+        "recommended_action": "answer_or_policy_review",
+        "reason": "请求当前公开目录数据，不是明确的个人业务；全局政策仅对无法完成的个人业务指向human。缺目标工具时可如实说明查询能力限制，未证明human为唯一下一步。"
+      },
+      "final_reason": "整故事隔离：工具缺失版本的human标签不唯一或未获政策支持，不单独保留其余版本以凑样本。"
+    },
+    {
+      "id": "P06",
+      "verdict": "quarantine",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryLoanProducts",
+      "capability_check": "pass",
+      "semantic_evidence": "发布目录及编号对应 isRelease 筛选与 id；最多50项，后续应保留截断信息。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "not_established",
+        "recommended_action": "answer_or_policy_review",
+        "reason": "请求当前公开目录数据，不是明确的个人业务；全局政策仅对无法完成的个人业务指向human。缺目标工具时可如实说明查询能力限制，未证明human为唯一下一步。"
+      },
+      "final_reason": "整故事隔离：工具缺失版本的human标签不唯一或未获政策支持，不单独保留其余版本以凑样本。"
+    },
+    {
+      "id": "P07",
+      "verdict": "quarantine",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryLoanProducts",
+      "capability_check": "pass",
+      "semantic_evidence": "名称、标签及额度上限对应 name/tags/maxAmount；与家人商量不把目录变成个人业务。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "not_established",
+        "recommended_action": "answer_or_policy_review",
+        "reason": "请求当前公开目录数据，不是明确的个人业务；全局政策仅对无法完成的个人业务指向human。缺目标工具时可如实说明查询能力限制，未证明human为唯一下一步。"
+      },
+      "final_reason": "整故事隔离：工具缺失版本的human标签不唯一或未获政策支持，不单独保留其余版本以凑样本。"
+    },
+    {
+      "id": "P08",
+      "verdict": "quarantine",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryLoanProducts",
+      "capability_check": "pass",
+      "semantic_evidence": "参考信用分及产品名称对应 acceptScore/name；自己筛选无需评分或推荐能力。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "not_established",
+        "recommended_action": "answer_or_policy_review",
+        "reason": "请求当前公开目录数据，不是明确的个人业务；全局政策仅对无法完成的个人业务指向human。缺目标工具时可如实说明查询能力限制，未证明human为唯一下一步。"
+      },
+      "final_reason": "整故事隔离：工具缺失版本的human标签不唯一或未获政策支持，不单独保留其余版本以凑样本。"
+    },
+    {
+      "id": "A01",
+      "verdict": "keep",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryMyApplications",
+      "capability_check": "pass",
+      "semantic_evidence": "账户近期申请编号及金额对应 applicationId/amount，最近50项列表可直接满足读取请求。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "supported",
+        "recommended_action": "human",
+        "reason": "明确请求读取个人业务数据且当前目标工具缺失；其他工具不能完整完成所请求数据，符合合法但现有能力无法完成的个人业务选human。"
+      },
+      "final_reason": "保留为AI复核通过候选；尚未经人审，禁止直接训练。"
+    },
+    {
+      "id": "A02",
+      "verdict": "keep",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryMyApplications",
+      "capability_check": "pass",
+      "semantic_evidence": "明确先不查单笔；近期申请及审批状态对应列表 status/statusText，不要求审批理由。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "supported",
+        "recommended_action": "human",
+        "reason": "明确请求读取个人业务数据且当前目标工具缺失；其他工具不能完整完成所请求数据，符合合法但现有能力无法完成的个人业务选human。"
+      },
+      "final_reason": "保留为AI复核通过候选；尚未经人审，禁止直接训练。"
+    },
+    {
+      "id": "A03",
+      "verdict": "keep",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryMyApplications",
+      "capability_check": "pass",
+      "semantic_evidence": "近期申请的产品编号与申请金额对应 productId/amount，不要求列表没有的产品名或日期。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "supported",
+        "recommended_action": "human",
+        "reason": "明确请求读取个人业务数据且当前目标工具缺失；其他工具不能完整完成所请求数据，符合合法但现有能力无法完成的个人业务选human。"
+      },
+      "final_reason": "保留为AI复核通过候选；尚未经人审，禁止直接训练。"
+    },
+    {
+      "id": "A04",
+      "verdict": "keep",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryMyApplications",
+      "capability_check": "pass",
+      "semantic_evidence": "为选择申请先认编号，列表 applicationId 可满足；没有给出待查的单笔编号。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "supported",
+        "recommended_action": "human",
+        "reason": "明确请求读取个人业务数据且当前目标工具缺失；其他工具不能完整完成所请求数据，符合合法但现有能力无法完成的个人业务选human。"
+      },
+      "final_reason": "保留为AI复核通过候选；尚未经人审，禁止直接训练。"
+    },
+    {
+      "id": "A05",
+      "verdict": "keep",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryMyApplications",
+      "capability_check": "pass",
+      "semantic_evidence": "近期申请编号、产品编号、状态均为列表实际字段；切回账户的说法不能替代服务端认证。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "supported",
+        "recommended_action": "human",
+        "reason": "明确请求读取个人业务数据且当前目标工具缺失；其他工具不能完整完成所请求数据，符合合法但现有能力无法完成的个人业务选human。"
+      },
+      "final_reason": "保留为AI复核通过候选；尚未经人审，禁止直接训练。"
+    },
+    {
+      "id": "A06",
+      "verdict": "keep",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryMyApplications",
+      "capability_check": "pass",
+      "semantic_evidence": "明确读取本人近期申请中的保存金额，对应 amount；排除审批规则解释。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "supported",
+        "recommended_action": "human",
+        "reason": "明确请求读取个人业务数据且当前目标工具缺失；其他工具不能完整完成所请求数据，符合合法但现有能力无法完成的个人业务选human。"
+      },
+      "final_reason": "保留为AI复核通过候选；尚未经人审，禁止直接训练。"
+    },
+    {
+      "id": "A07",
+      "verdict": "keep",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryMyApplications",
+      "capability_check": "pass",
+      "semantic_evidence": "只要求系统能返回的最近几笔，符合最近50项范围；不要求完整历史或分页。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "supported",
+        "recommended_action": "human",
+        "reason": "明确请求读取个人业务数据且当前目标工具缺失；其他工具不能完整完成所请求数据，符合合法但现有能力无法完成的个人业务选human。"
+      },
+      "final_reason": "保留为AI复核通过候选；尚未经人审，禁止直接训练。"
+    },
+    {
+      "id": "A08",
+      "verdict": "keep",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryMyApplications",
+      "capability_check": "pass",
+      "semantic_evidence": "尚未决定单笔，读取本人近期编号及审核状态，应选列表而非追问单笔编号。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "supported",
+        "recommended_action": "human",
+        "reason": "明确请求读取个人业务数据且当前目标工具缺失；其他工具不能完整完成所请求数据，符合合法但现有能力无法完成的个人业务选human。"
+      },
+      "final_reason": "保留为AI复核通过候选；尚未经人审，禁止直接训练。"
+    },
+    {
+      "id": "D01",
+      "verdict": "keep",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryApplicationDetail",
+      "capability_check": "pass",
+      "semantic_evidence": "已保存借款用途对应 usage；“这笔”可用服务端 selectedApplicationId 绑定，去掉该状态后无编号。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "supported",
+        "recommended_action": "human",
+        "reason": "明确请求读取个人业务数据且当前目标工具缺失；其他工具不能完整完成所请求数据，符合合法但现有能力无法完成的个人业务选human。"
+      },
+      "parameter_probe": {
+        "selected_application_id": 8421,
+        "grounded_with_selection": 8421,
+        "grounded_without_selection": null
+      },
+      "missing_parameter_pair": {
+        "proposed": "clarify",
+        "reason_code": "missing_application_id",
+        "assessment": "supported",
+        "changed_fields": [
+          "server.state.selectedApplicationId"
+        ],
+        "derived_model_field": "state.application_id"
+      },
+      "final_reason": "保留为AI复核通过候选；尚未经人审，禁止直接训练。"
+    },
+    {
+      "id": "D02",
+      "verdict": "keep",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryApplicationDetail",
+      "capability_check": "pass",
+      "semantic_evidence": "产品名称与申请期限对应 productName/months；“这单”绑定有效选中编号，列表不能给出全部字段。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "supported",
+        "recommended_action": "human",
+        "reason": "明确请求读取个人业务数据且当前目标工具缺失；其他工具不能完整完成所请求数据，符合合法但现有能力无法完成的个人业务选human。"
+      },
+      "parameter_probe": {
+        "selected_application_id": 8422,
+        "grounded_with_selection": 8422,
+        "grounded_without_selection": null
+      },
+      "missing_parameter_pair": {
+        "proposed": "clarify",
+        "reason_code": "missing_application_id",
+        "assessment": "supported",
+        "changed_fields": [
+          "server.state.selectedApplicationId"
+        ],
+        "derived_model_field": "state.application_id"
+      },
+      "final_reason": "保留为AI复核通过候选；尚未经人审，禁止直接训练。"
+    },
+    {
+      "id": "D03",
+      "verdict": "keep",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryApplicationDetail",
+      "capability_check": "pass",
+      "semantic_evidence": "详细记录的金额和用途对应 amount/usage；“那笔”绑定有效选中编号，去掉后无法定位。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "supported",
+        "recommended_action": "human",
+        "reason": "明确请求读取个人业务数据且当前目标工具缺失；其他工具不能完整完成所请求数据，符合合法但现有能力无法完成的个人业务选human。"
+      },
+      "parameter_probe": {
+        "selected_application_id": 8423,
+        "grounded_with_selection": 8423,
+        "grounded_without_selection": null
+      },
+      "missing_parameter_pair": {
+        "proposed": "clarify",
+        "reason_code": "missing_application_id",
+        "assessment": "supported",
+        "changed_fields": [
+          "server.state.selectedApplicationId"
+        ],
+        "derived_model_field": "state.application_id"
+      },
+      "final_reason": "保留为AI复核通过候选；尚未经人审，禁止直接训练。"
+    },
+    {
+      "id": "D04",
+      "verdict": "keep",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryApplicationDetail",
+      "capability_check": "pass",
+      "semantic_evidence": "保存的期数对应 months（策略称期数）；“这笔”绑定选中编号，无退款/还款计划要求。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "supported",
+        "recommended_action": "human",
+        "reason": "明确请求读取个人业务数据且当前目标工具缺失；其他工具不能完整完成所请求数据，符合合法但现有能力无法完成的个人业务选human。"
+      },
+      "parameter_probe": {
+        "selected_application_id": 8424,
+        "grounded_with_selection": 8424,
+        "grounded_without_selection": null
+      },
+      "missing_parameter_pair": {
+        "proposed": "clarify",
+        "reason_code": "missing_application_id",
+        "assessment": "supported",
+        "changed_fields": [
+          "server.state.selectedApplicationId"
+        ],
+        "derived_model_field": "state.application_id"
+      },
+      "final_reason": "保留为AI复核通过候选；尚未经人审，禁止直接训练。"
+    },
+    {
+      "id": "D05",
+      "verdict": "keep",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryApplicationDetail",
+      "capability_check": "pass",
+      "semantic_evidence": "产品名称与用途对应 productName/usage；明确详情且不问审批规则，“这单”可绑定选中编号。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "supported",
+        "recommended_action": "human",
+        "reason": "明确请求读取个人业务数据且当前目标工具缺失；其他工具不能完整完成所请求数据，符合合法但现有能力无法完成的个人业务选human。"
+      },
+      "parameter_probe": {
+        "selected_application_id": 8425,
+        "grounded_with_selection": 8425,
+        "grounded_without_selection": null
+      },
+      "missing_parameter_pair": {
+        "proposed": "clarify",
+        "reason_code": "missing_application_id",
+        "assessment": "supported",
+        "changed_fields": [
+          "server.state.selectedApplicationId"
+        ],
+        "derived_model_field": "state.application_id"
+      },
+      "final_reason": "保留为AI复核通过候选；尚未经人审，禁止直接训练。"
+    },
+    {
+      "id": "D06",
+      "verdict": "keep",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryApplicationDetail",
+      "capability_check": "pass",
+      "semantic_evidence": "存档金额及期限对应 amount/months；金额与记忆不符是查询背景，不是要求修改金额。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "supported",
+        "recommended_action": "human",
+        "reason": "明确请求读取个人业务数据且当前目标工具缺失；其他工具不能完整完成所请求数据，符合合法但现有能力无法完成的个人业务选human。"
+      },
+      "parameter_probe": {
+        "selected_application_id": 8426,
+        "grounded_with_selection": 8426,
+        "grounded_without_selection": null
+      },
+      "missing_parameter_pair": {
+        "proposed": "clarify",
+        "reason_code": "missing_application_id",
+        "assessment": "supported",
+        "changed_fields": [
+          "server.state.selectedApplicationId"
+        ],
+        "derived_model_field": "state.application_id"
+      },
+      "final_reason": "保留为AI复核通过候选；尚未经人审，禁止直接训练。"
+    },
+    {
+      "id": "D07",
+      "verdict": "keep",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryApplicationDetail",
+      "capability_check": "pass",
+      "semantic_evidence": "产品名、借款金额、用途对应 productName/amount/usage；“这笔”绑定选中编号。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "supported",
+        "recommended_action": "human",
+        "reason": "明确请求读取个人业务数据且当前目标工具缺失；其他工具不能完整完成所请求数据，符合合法但现有能力无法完成的个人业务选human。"
+      },
+      "parameter_probe": {
+        "selected_application_id": 8427,
+        "grounded_with_selection": 8427,
+        "grounded_without_selection": null
+      },
+      "missing_parameter_pair": {
+        "proposed": "clarify",
+        "reason_code": "missing_application_id",
+        "assessment": "supported",
+        "changed_fields": [
+          "server.state.selectedApplicationId"
+        ],
+        "derived_model_field": "state.application_id"
+      },
+      "final_reason": "保留为AI复核通过候选；尚未经人审，禁止直接训练。"
+    },
+    {
+      "id": "D08",
+      "verdict": "keep",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryApplicationDetail",
+      "capability_check": "pass",
+      "semantic_evidence": "产品、期限及审批状态对应 productName/months/status；“那笔”绑定选中编号，不要求解释审批原因。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "supported",
+        "recommended_action": "human",
+        "reason": "明确请求读取个人业务数据且当前目标工具缺失；其他工具不能完整完成所请求数据，符合合法但现有能力无法完成的个人业务选human。"
+      },
+      "parameter_probe": {
+        "selected_application_id": 8428,
+        "grounded_with_selection": 8428,
+        "grounded_without_selection": null
+      },
+      "missing_parameter_pair": {
+        "proposed": "clarify",
+        "reason_code": "missing_application_id",
+        "assessment": "supported",
+        "changed_fields": [
+          "server.state.selectedApplicationId"
+        ],
+        "derived_model_field": "state.application_id"
+      },
+      "final_reason": "保留为AI复核通过候选；尚未经人审，禁止直接训练。"
+    },
+    {
+      "id": "C01",
+      "verdict": "keep",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryMyCreditScore",
+      "capability_check": "pass",
+      "semantic_evidence": "已有信用档位和信用分对应 band/score；无重新评估或修改信用要求。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "supported",
+        "recommended_action": "human",
+        "reason": "明确请求读取个人业务数据且当前目标工具缺失；其他工具不能完整完成所请求数据，符合合法但现有能力无法完成的个人业务选human。"
+      },
+      "final_reason": "保留为AI复核通过候选；尚未经人审，禁止直接训练。"
+    },
+    {
+      "id": "C02",
+      "verdict": "keep",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryMyCreditScore",
+      "capability_check": "pass",
+      "semantic_evidence": "当前已存评分及建议额度对应 score/recommendedLimit；没有请求实际审批承诺。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "supported",
+        "recommended_action": "human",
+        "reason": "明确请求读取个人业务数据且当前目标工具缺失；其他工具不能完整完成所请求数据，符合合法但现有能力无法完成的个人业务选human。"
+      },
+      "final_reason": "保留为AI复核通过候选；尚未经人审，禁止直接训练。"
+    },
+    {
+      "id": "C03",
+      "verdict": "keep",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryMyCreditScore",
+      "capability_check": "pass",
+      "semantic_evidence": "明确不重新评分，分数和档位对应现有 score/band。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "supported",
+        "recommended_action": "human",
+        "reason": "明确请求读取个人业务数据且当前目标工具缺失；其他工具不能完整完成所请求数据，符合合法但现有能力无法完成的个人业务选human。"
+      },
+      "final_reason": "保留为AI复核通过候选；尚未经人审，禁止直接训练。"
+    },
+    {
+      "id": "C04",
+      "verdict": "keep",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryMyCreditScore",
+      "capability_check": "pass",
+      "semantic_evidence": "最近已保存结果对应当前用户已存 score/recommendedLimit；不是索要历史序列或评估日期。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "supported",
+        "recommended_action": "human",
+        "reason": "明确请求读取个人业务数据且当前目标工具缺失；其他工具不能完整完成所请求数据，符合合法但现有能力无法完成的个人业务选human。"
+      },
+      "final_reason": "保留为AI复核通过候选；尚未经人审，禁止直接训练。"
+    },
+    {
+      "id": "C05",
+      "verdict": "keep",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryMyCreditScore",
+      "capability_check": "pass",
+      "semantic_evidence": "现有信用档位与建议上限对应 band/recommendedLimit；排除发起借款。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "supported",
+        "recommended_action": "human",
+        "reason": "明确请求读取个人业务数据且当前目标工具缺失；其他工具不能完整完成所请求数据，符合合法但现有能力无法完成的个人业务选human。"
+      },
+      "final_reason": "保留为AI复核通过候选；尚未经人审，禁止直接训练。"
+    },
+    {
+      "id": "C06",
+      "verdict": "keep",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryMyCreditScore",
+      "capability_check": "pass",
+      "semantic_evidence": "已有评估结果的分数与档位对应 score/band；“记录”不指历史明细列表。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "supported",
+        "recommended_action": "human",
+        "reason": "明确请求读取个人业务数据且当前目标工具缺失；其他工具不能完整完成所请求数据，符合合法但现有能力无法完成的个人业务选human。"
+      },
+      "final_reason": "保留为AI复核通过候选；尚未经人审，禁止直接训练。"
+    },
+    {
+      "id": "C07",
+      "verdict": "keep",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryMyCreditScore",
+      "capability_check": "pass",
+      "semantic_evidence": "当前已存评分和建议额度对应 score/recommendedLimit；没有要求重新运行评分。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "supported",
+        "recommended_action": "human",
+        "reason": "明确请求读取个人业务数据且当前目标工具缺失；其他工具不能完整完成所请求数据，符合合法但现有能力无法完成的个人业务选human。"
+      },
+      "final_reason": "保留为AI复核通过候选；尚未经人审，禁止直接训练。"
+    },
+    {
+      "id": "C08",
+      "verdict": "keep",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "queryMyCreditScore",
+      "capability_check": "pass",
+      "semantic_evidence": "当前信用分数、档位、额度上限对应 score/band/recommendedLimit；依上文信用记录语境解释额度。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "supported",
+        "recommended_action": "human",
+        "reason": "明确请求读取个人业务数据且当前目标工具缺失；其他工具不能完整完成所请求数据，符合合法但现有能力无法完成的个人业务选human。"
+      },
+      "final_reason": "保留为AI复核通过候选；尚未经人审，禁止直接训练。"
+    },
+    {
+      "id": "S01",
+      "verdict": "quarantine",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "explainApplicationStatus",
+      "capability_check": "pass",
+      "semantic_evidence": "仅状态码0定义且明确不查个人申请；可用工具能解释，但缺工具不是个人业务不能完成。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "not_established",
+        "recommended_action": "answer_or_policy_review",
+        "reason": "请求静态字段释义，不是个人实时查询；已知定义可answer，否则没有正式知识集合时说明限制。toDecision(tool, unavailable)的human仅为已选择tool后的兜底，不能证明应把上游action标为human。"
+      },
+      "parameter_probe": {
+        "declared_status": 0,
+        "grounded_from_message": [
+          0
+        ],
+        "grounded_from_missing_message": []
+      },
+      "missing_parameter_pair": {
+        "proposed": "clarify",
+        "reason_code": "invalid_status",
+        "assessment": "supported",
+        "changed_fields": [
+          "message",
+          "state.status_code"
+        ],
+        "single_field_counterfactual": false,
+        "reason": "原message明确包含数字，只删除状态字段不能消除参数；必须换成missing_message并移除派生status_code。"
+      },
+      "final_reason": "整故事隔离：工具缺失版本的human标签不唯一或未获政策支持，不单独保留其余版本以凑样本。"
+    },
+    {
+      "id": "S02",
+      "verdict": "quarantine",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "explainApplicationStatus",
+      "capability_check": "pass",
+      "semantic_evidence": "状态码1标准说明用于界面备忘，是静态字段定义，不是审批进度查询。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "not_established",
+        "recommended_action": "answer_or_policy_review",
+        "reason": "请求静态字段释义，不是个人实时查询；已知定义可answer，否则没有正式知识集合时说明限制。toDecision(tool, unavailable)的human仅为已选择tool后的兜底，不能证明应把上游action标为human。"
+      },
+      "parameter_probe": {
+        "declared_status": 1,
+        "grounded_from_message": [
+          1
+        ],
+        "grounded_from_missing_message": []
+      },
+      "missing_parameter_pair": {
+        "proposed": "clarify",
+        "reason_code": "invalid_status",
+        "assessment": "supported",
+        "changed_fields": [
+          "message",
+          "state.status_code"
+        ],
+        "single_field_counterfactual": false,
+        "reason": "原message明确包含数字，只删除状态字段不能消除参数；必须换成missing_message并移除派生status_code。"
+      },
+      "final_reason": "整故事隔离：工具缺失版本的human标签不唯一或未获政策支持，不单独保留其余版本以凑样本。"
+    },
+    {
+      "id": "S03",
+      "verdict": "quarantine",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "explainApplicationStatus",
+      "capability_check": "pass",
+      "semantic_evidence": "明确状态码2固定含义且不是本人申请，静态解释不需要个人记录。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "not_established",
+        "recommended_action": "answer_or_policy_review",
+        "reason": "请求静态字段释义，不是个人实时查询；已知定义可answer，否则没有正式知识集合时说明限制。toDecision(tool, unavailable)的human仅为已选择tool后的兜底，不能证明应把上游action标为human。"
+      },
+      "parameter_probe": {
+        "declared_status": 2,
+        "grounded_from_message": [
+          2
+        ],
+        "grounded_from_missing_message": []
+      },
+      "missing_parameter_pair": {
+        "proposed": "clarify",
+        "reason_code": "invalid_status",
+        "assessment": "supported",
+        "changed_fields": [
+          "message",
+          "state.status_code"
+        ],
+        "single_field_counterfactual": false,
+        "reason": "原message明确包含数字，只删除状态字段不能消除参数；必须换成missing_message并移除派生status_code。"
+      },
+      "final_reason": "整故事隔离：工具缺失版本的human标签不唯一或未获政策支持，不单独保留其余版本以凑样本。"
+    },
+    {
+      "id": "S04",
+      "verdict": "quarantine",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "explainApplicationStatus",
+      "capability_check": "pass",
+      "semantic_evidence": "状态码0标准解释用于操作笔记，没有个人业务执行请求。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "not_established",
+        "recommended_action": "answer_or_policy_review",
+        "reason": "请求静态字段释义，不是个人实时查询；已知定义可answer，否则没有正式知识集合时说明限制。toDecision(tool, unavailable)的human仅为已选择tool后的兜底，不能证明应把上游action标为human。"
+      },
+      "parameter_probe": {
+        "declared_status": 0,
+        "grounded_from_message": [
+          0
+        ],
+        "grounded_from_missing_message": []
+      },
+      "missing_parameter_pair": {
+        "proposed": "clarify",
+        "reason_code": "invalid_status",
+        "assessment": "supported",
+        "changed_fields": [
+          "message",
+          "state.status_code"
+        ],
+        "single_field_counterfactual": false,
+        "reason": "原message明确包含数字，只删除状态字段不能消除参数；必须换成missing_message并移除派生status_code。"
+      },
+      "final_reason": "整故事隔离：工具缺失版本的human标签不唯一或未获政策支持，不单独保留其余版本以凑样本。"
+    },
+    {
+      "id": "S05",
+      "verdict": "quarantine",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "explainApplicationStatus",
+      "capability_check": "pass",
+      "semantic_evidence": "状态码2字段词典定义且明确不是审批进度，工具缺失不能自动视为人工事项。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "not_established",
+        "recommended_action": "answer_or_policy_review",
+        "reason": "请求静态字段释义，不是个人实时查询；已知定义可answer，否则没有正式知识集合时说明限制。toDecision(tool, unavailable)的human仅为已选择tool后的兜底，不能证明应把上游action标为human。"
+      },
+      "parameter_probe": {
+        "declared_status": 2,
+        "grounded_from_message": [
+          2
+        ],
+        "grounded_from_missing_message": []
+      },
+      "missing_parameter_pair": {
+        "proposed": "clarify",
+        "reason_code": "invalid_status",
+        "assessment": "supported",
+        "changed_fields": [
+          "message",
+          "state.status_code"
+        ],
+        "single_field_counterfactual": false,
+        "reason": "原message明确包含数字，只删除状态字段不能消除参数；必须换成missing_message并移除派生status_code。"
+      },
+      "final_reason": "整故事隔离：工具缺失版本的human标签不唯一或未获政策支持，不单独保留其余版本以凑样本。"
+    },
+    {
+      "id": "S06",
+      "verdict": "quarantine",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "explainApplicationStatus",
+      "capability_check": "pass",
+      "semantic_evidence": "状态码1固定释义且要求别读个人记录，工具缺失的人工标签依据不足。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "not_established",
+        "recommended_action": "answer_or_policy_review",
+        "reason": "请求静态字段释义，不是个人实时查询；已知定义可answer，否则没有正式知识集合时说明限制。toDecision(tool, unavailable)的human仅为已选择tool后的兜底，不能证明应把上游action标为human。"
+      },
+      "parameter_probe": {
+        "declared_status": 1,
+        "grounded_from_message": [
+          1
+        ],
+        "grounded_from_missing_message": []
+      },
+      "missing_parameter_pair": {
+        "proposed": "clarify",
+        "reason_code": "invalid_status",
+        "assessment": "supported",
+        "changed_fields": [
+          "message",
+          "state.status_code"
+        ],
+        "single_field_counterfactual": false,
+        "reason": "原message明确包含数字，只删除状态字段不能消除参数；必须换成missing_message并移除派生status_code。"
+      },
+      "final_reason": "整故事隔离：工具缺失版本的human标签不唯一或未获政策支持，不单独保留其余版本以凑样本。"
+    },
+    {
+      "id": "S07",
+      "verdict": "quarantine",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "explainApplicationStatus",
+      "capability_check": "pass",
+      "semantic_evidence": "状态码0标准状态且不问某笔贷款，静态解释属于知识/已知信息路径。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "not_established",
+        "recommended_action": "answer_or_policy_review",
+        "reason": "请求静态字段释义，不是个人实时查询；已知定义可answer，否则没有正式知识集合时说明限制。toDecision(tool, unavailable)的human仅为已选择tool后的兜底，不能证明应把上游action标为human。"
+      },
+      "parameter_probe": {
+        "declared_status": 0,
+        "grounded_from_message": [
+          0
+        ],
+        "grounded_from_missing_message": []
+      },
+      "missing_parameter_pair": {
+        "proposed": "clarify",
+        "reason_code": "invalid_status",
+        "assessment": "supported",
+        "changed_fields": [
+          "message",
+          "state.status_code"
+        ],
+        "single_field_counterfactual": false,
+        "reason": "原message明确包含数字，只删除状态字段不能消除参数；必须换成missing_message并移除派生status_code。"
+      },
+      "final_reason": "整故事隔离：工具缺失版本的human标签不唯一或未获政策支持，不单独保留其余版本以凑样本。"
+    },
+    {
+      "id": "S08",
+      "verdict": "quarantine",
+      "human_reviewed": false,
+      "training_eligible": false,
+      "declared_tool": "explainApplicationStatus",
+      "capability_check": "pass",
+      "semantic_evidence": "明确请求状态说明工具查询码2，可用时工具最明确；工具缺失时应说明能力限制，不能只凭指定工具推出必须人工。",
+      "baseline": {
+        "proposed": "tool",
+        "assessment": "supported",
+        "reason": "认证为true、目标工具可用，所请求字段在能力范围内；D/S参数另核验。"
+      },
+      "authentication_pair": {
+        "proposed": "clarify",
+        "reason_code": "authentication_required",
+        "assessment": "supported",
+        "reason": "工具仅限可用白名单且需要认证；execute在所有工具分支之前检查owner，包含产品目录和静态状态。"
+      },
+      "unavailable_tool_pair": {
+        "proposed": "human",
+        "assessment": "not_established",
+        "recommended_action": "answer_or_policy_review",
+        "reason": "请求静态字段释义，不是个人实时查询；已知定义可answer，否则没有正式知识集合时说明限制。toDecision(tool, unavailable)的human仅为已选择tool后的兜底，不能证明应把上游action标为human。"
+      },
+      "parameter_probe": {
+        "declared_status": 2,
+        "grounded_from_message": [
+          2
+        ],
+        "grounded_from_missing_message": []
+      },
+      "missing_parameter_pair": {
+        "proposed": "clarify",
+        "reason_code": "invalid_status",
+        "assessment": "supported",
+        "changed_fields": [
+          "message",
+          "state.status_code"
+        ],
+        "single_field_counterfactual": false,
+        "reason": "原message明确包含数字，只删除状态字段不能消除参数；必须换成missing_message并移除派生status_code。"
+      },
+      "final_reason": "整故事隔离：工具缺失版本的human标签不唯一或未获政策支持，不单独保留其余版本以凑样本。"
+    }
+  ]
+}

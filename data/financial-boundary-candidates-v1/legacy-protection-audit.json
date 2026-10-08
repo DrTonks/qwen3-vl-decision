@@ -1,0 +1,7 @@
+{
+  "legacy_protection_sha256": "de75ef48acea122bd117778ffe2b549b7fa3d25697b3f601612065c58f9a4923",
+  "legacy_protected_messages": 13014,
+  "candidate_sha256": "b7717a190ed4fb6eb612ee7611b15cb2079b8636e94b94086ef9fa0562abed4e",
+  "exact_matches": [],
+  "limitation": "Legacy public/evaluation normalized exact matching; .86 near matching is separately limited to frozen financial/current and selected legacy business evaluations."
+}

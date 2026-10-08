@@ -1,0 +1,42 @@
+{
+  "version": "financial-boundary-candidates-v1",
+  "status": "candidate_not_training_release",
+  "seed": "boundary-training-sources-20261002-v1",
+  "source_files": {
+    "data/financial-training-text-v1/parts/part-0001.jsonl": "0916ad37760cd3e89fbb9f09f680584da43e6f81d872efd5273ae1843d5996c4",
+    "data/financial-training-text-v1/parts/part-0002.jsonl": "19d6ed5299923a578af4f8f07c382e22dca43a1250667ac04f2a93c29a2cf686",
+    "data/financial-training-text-v1/parts/part-0003.jsonl": "a5f29c958d39ba91c8635f4f32a0030cec52f44be8e91d2cc502d30a7b318c4d",
+    "data/financial-training-text-v1/parts/part-0004.jsonl": "778ebf7a7b0d0230678c3e5d80dd5652e7080e5b40e879bbe7ff2907eb0d1e5f",
+    "data/financial-training-text-v1/parts/part-0005.jsonl": "729295ba5bc1112b231a19c9eeb6b75914a0f149db05d17ee85fee6198a5d73d",
+    "data/financial-training-text-v1/parts/part-0006.jsonl": "877b27a3b0b65930c0cdb6858e9eee9ec5dc559184758ff02d4d480ad271649c",
+    "data/financial-training-text-v1/parts/part-0007.jsonl": "e66b1eea90f8d18a2259586f29768fe1d6ecd498262792c191f80b0ba0810ef2",
+    "data/financial-training-text-v1/parts/part-0008.jsonl": "8f0760b77aa0a0f1745b4ce1afc6ad6769872a9ab3cbe0f5443c49ff844c1950",
+    "data/financial-training-text-v1/parts/part-0009.jsonl": "ec0ca7a13b316c84b623fb88b89b244ef54e04ea7be5796eeb70883bb110c1ca",
+    "data/financial-training-text-v1/parts/part-0010.jsonl": "ac2fc39c27afc4ccfa5e9de847ed03713b79cafe5694d371f70e453f4a8562d4",
+    "data/financial-training-text-v1/parts/part-0011.jsonl": "3ae481330892796ee853001ba69071b8a93176c6ca62ad2f2342d49044d4b007",
+    "data/financial-training-text-v1/parts/part-0012.jsonl": "a4200e7e05818ffb08c9aca4752450ee1cf26bf344b4c235e376691909f9ce88",
+    "data/financial-eight-actions-v2/train-additions.jsonl": "16c640146abd3b12307c6f63c12b35389ee9726fba89f28019ab4e0efd50cc46"
+  },
+  "protected_files": {
+    "data/financial-eight-actions-v2/evaluation/development.json": "fdce2ab94a32ae72b8a032bb529fb7a47117f6c0497c54d6dbde07720f1da6eb",
+    "data/financial-eight-actions-v2/evaluation/calibration.json": "773af48da01a07fb533628cc0308626952a0dd5315beaa540b52d87a59500534",
+    "data/financial-eight-actions-v2/evaluation/final.json": "62c393b1462cdb40ca3d1141beda87d7f1769fa379df0c869772d0c1848abf17",
+    "data/support-fresh-holdout-v1/cases.jsonl": "1df9d0d1c0a2d2f04cc4b22d3667fb315d11a63601a0c5279b06b57ddeffa3be",
+    "data/processed/v5/business-test.jsonl": "1b0e3fd2f0de07d94e44f783e7d026c267b9071bd592eb05f5e1efa82dd33c9d",
+    "data/processed/v5/business-calibration.jsonl": "f9f8fc66ec1c6d3c5cd1b06d51801d272b25ad243986626211a178a336a4b927"
+  },
+  "files": {
+    "audit.json": "2f500a9b46dcf615719aeab92a5ad862791778e352c15395ba6c1dca1e6977db",
+    "candidates.json": "b7717a190ed4fb6eb612ee7611b15cb2079b8636e94b94086ef9fa0562abed4e",
+    "review.md": "ffb43ec427b4521a2c9da212d2417c71078eb6158c58cea6e2ce6313ab2ff14f",
+    "training-source-snapshot.json": "4a229ae0c8f32a3e4ea3ed475c4bc346e51120e2b380e4fcb420d0c9b86a2ff8",
+    "legacy-protection-audit.json": "c9a89fd3d93ac64d6a80144082aeebb53559556b77888e458a4fd8a3d9d7d87a"
+  },
+  "author": "assistant",
+  "human_review": false,
+  "independent_label_review": false,
+  "model_calls": 0,
+  "frozen_training_protocol_changed": false,
+  "training_eligible": false,
+  "generator_sha256": "4d9d922bb436950b814a17f3b09078f0cd82b6c924137000ecb477dfec8d77fb"
+}

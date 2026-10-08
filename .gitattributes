@@ -106,3 +106,47 @@ src/qwenlab/financial_rewrite_massive.py -text
 src/qwenlab/financial_rewrite_crosswoz.py -text
 src/qwenlab/financial_completion.py -text
 data/financial-public-rewrite-v1/** -text whitespace=cr-at-eol
+src/qwenlab/financial_state_pair_audit.py -text
+tests/test_financial_state_pair_audit.py -text
+docs/evidence/financial-state-pair-audit-v1/** -text
+
+# State-pair candidate package: preserve bytes used by manifests and reviews.
+/data/financial-state-pair-candidates-v1/** -text
+/src/qwenlab/financial_state_pair_candidates.py -text
+/scripts/replay-state-pair-decisions.cjs -text
+/scripts/screen-state-pair-candidates.py -text
+/scripts/check-state-pair-inputs.py -text
+/scripts/finalize-state-pair-candidates.py -text
+/tests/test_financial_state_pair_candidates.py -text
+/tests/test_state_pair_readiness.py -text
+
+# Frozen state-pair sampling design and independent review.
+/configs/financial-state-pair-schedule-v1.json -text
+/src/qwenlab/financial_state_pair_schedule.py -text
+/tests/test_financial_state_pair_schedule.py -text
+/data/financial-state-pair-study-v1/** -text
+/docs/evidence/financial-state-pair-schedule-review.json -text
+
+# State-pair bounded execution sources (immutable once protocol is frozen).
+/src/qwenlab/financial_state_pair_cycle.py -text
+/tests/test_financial_state_pair_cycle.py -text
+/configs/financial-state-pair-execution-v1.json -text
+/scripts/start-financial-state-pair.ps1 -text
+/scripts/pause-financial-state-pair.ps1 -text
+/scripts/resume-financial-state-pair.ps1 -text
+/docs/evidence/financial-state-pair-executor-review.json -text
+
+# Preserve frozen complete-coverage protocol bytes
+src/qwenlab/financial_full_coverage_cycle.py -text
+tests/test_financial_full_coverage_cycle.py -text
+scripts/start-financial-full-coverage.ps1 -text
+scripts/pause-financial-full-coverage.ps1 -text
+scripts/resume-financial-full-coverage.ps1 -text
+src/qwenlab/financial_full_coverage_schedule.py -text
+configs/financial-full-coverage-execution-v1.json -text
+docs/evidence/financial-full-coverage-executor-review.json -text
+data/financial-full-coverage-study-v1/** -text
+
+# Preserve the remaining bound model/config metadata.
+configs/financial-qwen35-boundary-v1.json -text
+configs/qwen35-model-source.json -text

@@ -1,0 +1,18 @@
+{
+  "rows": 13378,
+  "epochs": 2,
+  "sample_positions": 26756,
+  "optimizer_steps": 3346,
+  "actions_per_epoch": {
+    "clarify": 1683,
+    "retrieve": 2651,
+    "tool": 2558,
+    "human": 1680,
+    "answer": 2387,
+    "refuse": 1085,
+    "close": 678,
+    "redirect": 656
+  },
+  "training_enabled": false,
+  "note": "Design bytes only; user execution permission recorded separately."
+}

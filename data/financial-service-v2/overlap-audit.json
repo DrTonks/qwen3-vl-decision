@@ -1,0 +1,9 @@
+{
+  "exact_context": [],
+  "identical_message": [],
+  "near_message": [],
+  "cross_split": [],
+  "method": "All exact normalized message/context checks; top20 trigram candidates per eval message for0.86 SequenceMatcher. Not semantic independence proof.",
+  "train_sha256": "e12e359809ccb162ac242b2661b3f995b0e7bc44b5e8595c94e982c68bd5f021",
+  "evaluation_sha256": "16f1c285d20b5d550c07d6bf86420ffeec9dfb55e1c735837c71eb271352a9ce"
+}

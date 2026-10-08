@@ -1,0 +1,31 @@
+{
+  "version": "financial-supplement-expansion-v1",
+  "training_eligible": false,
+  "human_reviewed": false,
+  "status": "pending_independent_review",
+  "policy_sha256": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+  "authoring_files": [
+    "data/financial-supplement-expansion-v1/batch-a.authoring.json",
+    "data/financial-supplement-expansion-v1/batch-b.authoring.json"
+  ],
+  "source_sha256": {
+    "data/financial-supplement-expansion-v1/batch-a.authoring.json": "bf34edbfb68076ec44b70ceb55d3ba501e279a06d2e0457356ba4ced44a54d10",
+    "data/financial-supplement-expansion-v1/batch-b.authoring.json": "ec01b44236abfc7eaa6287693dc4544365d7fd02064fb64c0d4efe38dee86320",
+    "data/financial-supplement-pilot-v1/reviewed-v1/manifest.json": "63f1dd1bec5c817bcdc6df2f708ed14b13104d4741d5e53da9be11ed8a90b71a",
+    "data/financial-supplement-pilot-v1/reviewed-v1/accepted.json": "2af3fb104ac90e92727c2285df3a52f0a339a30ec8f5059d81a420decc528a6f",
+    "src/qwenlab/financial_supplement_expansion.py": "85482cc6146c1545a4fd15b4200a172f745736277a0f939e9a87c11505c6e6f0",
+    "src/qwenlab/financial_supplement_pilot.py": "6d45723460d0554ac74b651ccf801c9e5258c7e39c0e87b9bb6264bc6f1e29c5",
+    "src/qwenlab/financial_service_v2_data.py": "fffde21c3023d7064c5e55ff7fc991624590f3c808f389403c47a47fcb55eae2",
+    "src/qwenlab/financial_serve_v2.py": "75c0684433213b82e12b36e9e1bf1ac923522157c34ea1b334cf58449eadb615",
+    "src/qwenlab/financial_prompt_v2.py": "25033aa2a7a3fadf60e51ece0eebe3fdfbbd0626cc9f04654b9641a91a4629ef",
+    "configs/support-financial-v2.json": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91"
+  },
+  "files": {
+    "authoring-new.json": "33c44f342c7040271aa19b8b688214ec9899490637e183b2069833551c05c380",
+    "node-contexts.jsonl": "4b40b21e66f7550e650587663d6ddb7d8a2178fd461a6ead0cd0c7e92766de40",
+    "node-projections.jsonl": "f9da71dd481786937e35c4d6386fe72b3fa6e5caa049847510401d715fa5206e",
+    "candidates.json": "f2f9d3fad35a74858b080d3afbb60acf1c36966e3ea852cf94dcc0e153610ac5",
+    "summary.json": "6fde3b4167806336a12ea4725dfabbaa05795a8a61e1a2f5fe2d16a12a2a3a4f",
+    "REVIEW-new.md": "7d617b5c6f73391f9368575051b972269e646bc581709d57ad92fccec0f2dfba"
+  }
+}
