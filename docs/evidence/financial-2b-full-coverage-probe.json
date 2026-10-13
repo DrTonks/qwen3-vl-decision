@@ -1,0 +1,29 @@
+{
+  "status": "complete",
+  "steps_per_arm": 25,
+  "total_optimizer_steps": 25,
+  "common_binding_sha256": "0c0e81e15ed638fe4ba34da9619ea8c87af74ea67b15b630eb53cd5483127d73",
+  "protocol_sha256": "aaf921ad2045cef0baa53c4d8f95dd1831bb0879376dc90668e221e453fca780",
+  "initial_parameter_sha256": "a086559e9584c41a917c023dbe20d9ea1ba4ff4a28a3386feb401e75def03f14",
+  "median_step_s": 4.260902150000106,
+  "main_training_minutes_estimate": 237.61630989833927,
+  "evaluation_rows_used": 0,
+  "probe_adapter_used_for_main": false,
+  "adapters_discarded_from_training_use": true,
+  "artifacts_retained_for_audit": true,
+  "real_pause_resume_verified": true,
+  "model_api_requests": 0,
+  "artifacts": {
+    "results/financial-2b-full-coverage-probe-v1/protocol.json": "aaf921ad2045cef0baa53c4d8f95dd1831bb0879376dc90668e221e453fca780",
+    "results/financial-2b-full-coverage-probe-v1/pause-resume-evidence.json": "0399e47cd87d8404a31ceaa80569c820290362a41ae18f362ea35cbcac901058",
+    "results/financial-2b-full-coverage-probe-v1/arms/full2b/initialization.json": "ac0eed6942347fd97682258e684ca0daae02408816bece5ce1fdc52fe9b94d28",
+    "results/financial-2b-full-coverage-probe-v1/arms/full2b/train.jsonl": "57d84d5c1f3c932139621ec435cb48e7b52997315ef637ff00c2eb6172434ff5",
+    "results/financial-2b-full-coverage-probe-v1/arms/full2b/training-summary.json": "494271bcc7662f91e8d3f88bd767d38e9ec9b4317a56855e3ae23c6488aed7eb",
+    "results/financial-2b-full-coverage-probe-v1/arms/full2b/arm-complete.json": "9fe2b26569cbede52a0a37bcc657bd63849708c72534819ac1dc8d1957fdce29",
+    "results/financial-2b-full-coverage-probe-v1/arms/full2b/projection-check.json": "410361bc81f7ca2cdcd9306bb433c721eb6b852ffbe72a071994937c98be96d9",
+    ".local/checkpoints/financial-2b-full-coverage-probe-v1/full2b/step-0/checkpoint.json": "ad75aeacc9dab83853e8958a630f0be3444bb2d3852c5a51eced248851b71a0c",
+    ".local/checkpoints/financial-2b-full-coverage-probe-v1/full2b/step-12/checkpoint.json": "3f1b7f601dc3b0fc8e9b428b291193e79911221fdbf53ee540d619cdc9832071",
+    ".local/checkpoints/financial-2b-full-coverage-probe-v1/full2b/step-25/checkpoint.json": "e7a808c21e4b9cac2243d505fd39d1d12d3e94ebb62079d9ce6fb7ad7659ba5f"
+  },
+  "estimate_scope": "training only; excludes loading, evaluation, saving and hardware changes"
+}

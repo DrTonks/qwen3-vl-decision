@@ -1,0 +1,61 @@
+{
+  "repo_id": "Qwen/Qwen3-VL-2B-Instruct",
+  "source": "Qwen official ModelScope",
+  "files": [
+    {
+      "Path": "README.md",
+      "Sha256": "5fc5be1ca9a3910399bd6239ee5086ab5d82a2a59c5d2b00e887a8835cc110e4",
+      "Size": 7136
+    },
+    {
+      "Path": "chat_template.json",
+      "Sha256": "6f8a6a55027e3da5160105556cda5dd69f6423f1c32645f6730d32de7773d0c4",
+      "Size": 5502
+    },
+    {
+      "Path": "config.json",
+      "Sha256": "bec4b3d446efa05807365c9e1cec03ac590836879d02f3a6da879971154bdd3b",
+      "Size": 1505
+    },
+    {
+      "Path": "generation_config.json",
+      "Sha256": "1e241830b48b397cb0900101421df5450baddc7adf01e5fc86b5615865f3bae4",
+      "Size": 269
+    },
+    {
+      "Path": "merges.txt",
+      "Sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "Size": 1671839
+    },
+    {
+      "Path": "model.safetensors",
+      "Sha256": "7de1838c87a5349b016c26a1c3f7d2bc400a3d485f95ef39a7059ffd734977a0",
+      "Size": 4255140312
+    },
+    {
+      "Path": "preprocessor_config.json",
+      "Sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+      "Size": 390
+    },
+    {
+      "Path": "tokenizer.json",
+      "Sha256": "a5d85b6dcc535e6b93115a9ef287e6132fdbf30270da6218194ba742261173c7",
+      "Size": 7032403
+    },
+    {
+      "Path": "tokenizer_config.json",
+      "Sha256": "c2da771801886ad9ae98181793ffd3dfb7f1af30f6f7c6a4e15d7dbba52e2399",
+      "Size": 10868
+    },
+    {
+      "Path": "video_preprocessor_config.json",
+      "Sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+      "Size": 385
+    },
+    {
+      "Path": "vocab.json",
+      "Sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "Size": 2776833
+    }
+  ]
+}

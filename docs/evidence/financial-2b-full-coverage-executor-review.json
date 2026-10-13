@@ -1,0 +1,28 @@
+{
+  "version": "financial-2b-full-coverage-cpu-verification-v1",
+  "status": "pass",
+  "independent": false,
+  "reviewer": "primary-agent/CPU-verification",
+  "human_reviewed": false,
+  "open_findings": [],
+  "model_api_requests": 0,
+  "evaluation_examples_read": false,
+  "predictions_read": false,
+  "gpu_used": false,
+  "tests_passed": 16,
+  "powershell_scripts_parsed": 3,
+  "actual_pool_rows": 13378,
+  "same_row_order_as_08b": true,
+  "files": {
+    "src/qwenlab/financial_2b_full_coverage_cycle.py": "4af3278d6d2923d9fdcb79fd9e799ccb292075794741568dc54254f8ebb5852b",
+    "tests/test_financial_2b_full_coverage_cycle.py": "ade9118f788001666a536c28ef7c07037e00b7e8209c5533a16786ceb71c4b79",
+    "scripts/start-financial-2b-full-coverage.ps1": "63317df030aedcf8888a7cb2978edd73bb66ce16d6a73552962a7f934d8a7b43",
+    "scripts/pause-financial-2b-full-coverage.ps1": "1f274f6fa05e25be9125f0c12ba52c80143197573a11a49a3d4bd41b3a9460e3",
+    "scripts/resume-financial-2b-full-coverage.ps1": "169727744d04cfd77e6a8b8e46318969d5074f5a4d55902bc38a56ecdc607f6c",
+    "src/qwenlab/financial_2b_model.py": "ab780ecca03784e7bceed5b2267fab257f77e572675a26ecab211dcb25d31b07",
+    "src/qwenlab/financial_2b_prompt.py": "e7fc7e20ab9ed1e61f3beee09510d4aef427368b16fcafb63fd38346ec0c15aa"
+  },
+  "config_sha256": "d70966edc3aef8a24c36823db4daff0f85dac524863aeac58a97c8dbd588a659",
+  "schedule_manifest_sha256": "4d90cbe8a3a76749294834d4e6ac2a72f2b6094cd234218c809022c73af80658",
+  "token_lengths_sha256": "92e90b9e6e6ddf17b52868bb5d2ec52052d49cb38dd540361d12c3d4e66e078c"
+}

@@ -1,0 +1,44 @@
+{
+  "version": "financial-current-weight-proposal-v1",
+  "status": "design_only_not_executable",
+  "training_enabled": false,
+  "baseline": "financial-2b-full-coverage-v1",
+  "model": "Qwen/Qwen3-VL-2B-Instruct",
+  "fresh_adapter": true,
+  "single_intervention": "multiply current-node and current-component per-row joint action/tool loss by 3, then divide all row weights by the pool-wide mean",
+  "raw_weights": {
+    "current-node": 3,
+    "current-component": 3,
+    "planned": 1,
+    "preauth": 1
+  },
+  "pool_mean_raw_weight": 1.2683510240693676,
+  "normalized_current_weight": 2.3652758132956153,
+  "normalized_other_weight": 0.7884252710985384,
+  "objective": "batch loss = sum(normalized_row_weight * existing_joint_row_loss) / actual_batch_size; preserve tool multiplier and partial-batch handling",
+  "unchanged": [
+    "all row text and labels",
+    "3346-step order, each row twice",
+    "fresh model and LoRA initialization seed",
+    "NF4/microbatch/gradient accumulation",
+    "learning rate and warmup",
+    "prompt and policy",
+    "gates, predeclared evaluation checkpoints and early stop"
+  ],
+  "constraints": [
+    "No per-batch weight renormalization",
+    "No simultaneous resampling or learning-rate change",
+    "No sweep of weight factors against the reused development set",
+    "No use of development examples as training templates",
+    "No calibration/final evaluation for a failing candidate"
+  ],
+  "note": "One hypothesis only. Raising loss weight can amplify label/template errors; this draft does not authorize or launch a new run.",
+  "training_sources": {
+    "data/financial-sampling-study-v1/pool-v1/train.json": "8b524ae86533d7b55e1add23e4b0b44591c68b615ecf767f34ec4a0d5a166f72",
+    "data/financial-state-pair-study-v1/schedule-v1/additions.json": "f5e78f3984f5dde66509160bebe2d4dc66f4b45c909790bf75b27f5331c14312",
+    "data/financial-full-coverage-study-v1/schedule-v1/plan.json": "cd39ae825e6e41de598459f7f378fc73023641052949423d9f6c8f0cb8fc5d8e",
+    "configs/support-financial-v2.json": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91"
+  },
+  "inference_requests": 0,
+  "model_api_requests": 0
+}

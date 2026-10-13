@@ -1,0 +1,551 @@
+{
+  "version": "training-text-screening-v1",
+  "reviewer": "primary_assistant",
+  "independent_review": false,
+  "human_reviewed": false,
+  "scope": "108 deterministic train-only candidates: message, history and labeling reason screened; whole input structurally checked. Not a complete semantic audit of all training rows.",
+  "training_eligible": false,
+  "source_audit_sha256": "2ddd45988316e5e0bb29fca9ddf54e5600908772f9f42e710053bf4c67deaaa2",
+  "findings": [
+    {
+      "id": "FIN-R4-massive-train-4294",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-TR1-R-1148",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-7707-8",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-7813-0",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-TR1-R-1291",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-350-8",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-massive-train-3556",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-TR1-R-1130",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-6046-8",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-TR1-R-0929",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-TR1-C-0096",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-massive-train-7236",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-TR1-R-1213",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-11270-20",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-massive-train-8471",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-massive-train-4961",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-massive-train-4677",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-massive-train-648",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-TR1-R-1211",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-5907-0",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-massive-train-15288",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-massive-train-1026",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-7949-4",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-TR1-R-1108",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-TR1-R-1040",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-massive-train-8420",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10638-0",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-TR1-R-1139",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-TR1-R-1179",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-4404-0",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-TR1-R-1131",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-TR1-R-0887",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-massive-train-7721",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-massive-train-5983",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-massive-train-667",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-283-0",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-2068-0",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-8946-0",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-9256-0",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-massive-train-11786",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-9748-6",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-massive-train-3047",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-7651-0",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-TR1-R-0098",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-massive-train-6318",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-massive-train-10460",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-7119-0",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-10056-10",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-TR1-R-1013",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-massive-train-653",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-massive-train-9080",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-massive-train-12907",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-TR1-R-1218",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-TR1-R-1117",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-massive-train-556",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-massive-train-12359",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-2085-12",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-R4-crosswoz-train-9256-2",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-TR1-R-1031",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-TR1-R-0837",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-F2-T-0439",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-F2-T-0456",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-F2-T-0464",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-F2-T-0470",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-F2-T-0567",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-F2-T-0656",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0576-1",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0576-2",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0576-3",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-F2-T-0610-1",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-F2-T-0610-2",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-F2-T-0610-3",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-F2-T-0616-1",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-F2-T-0616-2",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-F2-T-0616-3",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0721-1",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0721-2",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0721-3",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0135-1",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0135-2",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0135-3",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0352-1",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0352-2",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0352-3",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0675-1",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0675-2",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FIN-BC1-quoted_request-FIN-TR1-R-0675-3",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "FSP1-T04-2",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "SEA-G036-4",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "SEA-G068-3",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "SEA-G105-4",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "SEA-G106-4",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "SEA-G119-4",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "SEA-G125-3",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "SEA-G127-4",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "SEA-G130-4",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "SEA-G141-1",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "SEA-G185-1",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "SEA-G185-4",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "SEA-G187-4",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "SEB-G062-3",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "SEB-G080-4",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "SEB-G091-4",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "SEB-G092-1",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "SEB-G123-1",
+      "status": "needs_intent_clarification",
+      "reasoning": "“我在举报”可能是实际提交举报，也可能仅陈述收到的话；当前没有明确要解释风险或要人工处理，建议新版本明确请求目的后再定标。"
+    },
+    {
+      "id": "SEB-G125-1",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "SEB-G126-3",
+      "status": "no_obvious_text_label_conflict_in_screening",
+      "reasoning": "在本次消息、历史和理由筛查范围内，未发现明显冲突；不代表完整质量认证。"
+    },
+    {
+      "id": "SEB-G182-2",
+      "status": "needs_intent_clarification",
+      "reasoning": "“只是报告”未明确期待解释还是实际受理；不因敏感词改为refuse，但answer/human边界值得新版本澄清。"
+    }
+  ]
+}

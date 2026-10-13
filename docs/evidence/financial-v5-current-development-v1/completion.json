@@ -1,0 +1,15 @@
+{
+  "status": "complete",
+  "protocol_sha256": "452aeac2395124cb7aa91e8934d90a9c02960ecbbddbedcb22dab54c89ac12f0",
+  "artifacts": {
+    "native-predictions.jsonl": "901830ab247859048bca32e90370ea8c997c0f28eb8f82aa2f179b7bf1811c70",
+    "native-summary.json": "0e437a234061c9b800875f427e263ab53a5eff10577ba7a65fa0d3266b2ac717",
+    "protocol.json": "452aeac2395124cb7aa91e8934d90a9c02960ecbbddbedcb22dab54c89ac12f0",
+    "transfer-metrics.json": "772dc5bbe85a05a3bbe5de4ce1616c3db63b8f070e8c916b7e9479aec3a21709",
+    "transfer-predictions.jsonl": "037be01a516dbf1aeece26c54e9a4bbe8b6d0a150b35074c5c2f9063a374417c",
+    "transfer-timing.json": "7a257f04d85c9ba5606d8e5128a5b40d12e938cb8a53f001a865f420642a4f42"
+  },
+  "completed_at": "2026-10-13T12:16:19.939795+00:00",
+  "training_steps": 0,
+  "model_api_requests": 0
+}

@@ -162,3 +162,29 @@ docs/evidence/financial-state-pair-probe-v1.json -text
 docs/evidence/qwen35-cycle-code-review.json -text
 scripts/audit-financial-full-coverage.py -text
 scripts/audit-financial-state-pair.py -text
+
+# Frozen2B full-coverage experiment bytes
+src/qwenlab/financial_2b_full_coverage_cycle.py -text
+tests/test_financial_2b_full_coverage_cycle.py -text
+scripts/start-financial-2b-full-coverage.ps1 -text
+scripts/pause-financial-2b-full-coverage.ps1 -text
+scripts/resume-financial-2b-full-coverage.ps1 -text
+src/qwenlab/financial_2b_model.py -text
+src/qwenlab/financial_2b_prompt.py -text
+configs/financial-2b-*.json -text
+data/financial-2b-full-coverage-study-v1/** -text
+docs/evidence/financial-2b-full-coverage-*.json -text
+
+# Preserve published audit and V5 transfer evidence source hashes on checkout.
+src/qwenlab/financial_training_boundary_audit.py -text
+tests/test_financial_training_boundary_audit.py -text
+configs/financial-current-weight-proposal-v1.json -text
+docs/evidence/financial-training-boundary-audit-v1/** -text
+src/qwenlab/financial_v5_current_eval.py -text
+tests/test_financial_v5_current_eval.py -text
+scripts/audit-financial-v5-current.py -text
+docs/evidence/financial-v5-current-development-v1/** -text
+
+scripts/audit-financial-2b-full-coverage.py -text
+docs/evidence/financial-2b-full-coverage-results-audit-v1/** -text
+docs/evidence/financial-2b-full-coverage-probe.json -text

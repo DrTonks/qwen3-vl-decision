@@ -67,3 +67,7 @@ results/financial-state-pair-probe-v1/
 # Independent complete-coverage execution; local weights and raw inference logs
 results/financial-full-coverage-v1/
 results/financial-full-coverage-probe-v1/
+
+# Independent2B full coverage local experiment
+results/financial-2b-full-coverage-v1/
+results/financial-2b-full-coverage-probe-v1/

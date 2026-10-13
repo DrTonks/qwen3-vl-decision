@@ -1,0 +1,48 @@
+{
+  "version": "financial-v5-current-development-v1",
+  "sources": {
+    "data/financial-service-v2/development.json": "56bd31ebfa75633143fefa5d6ae2dd77709a17d2bde642a583675ce638f558eb",
+    ".local/checkpoints/joint-v5/step-7110/adapter_model.safetensors": "875b96e198cf7e65cadc27d7e93a8ca9a6111afae37420c4b287a56451d905d7",
+    ".local/checkpoints/joint-v5/step-7110/adapter_config.json": "84585c045afbf25038d9a72ae605131f553ea94bb99910b9aadf1917244238f7",
+    "results/joint-v5/selection.json": "f71492470fa6325b0040c3fd91ac7ff1c935edc49a418fd43c48b4903355eed6",
+    "configs/support-financial-v2.json": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+    "configs/decision-v5.json": "ba4ca13ed1da614864a37c533fd9c23b6dd1a34b2afc1141fc1129020a8faa4d",
+    "src/qwenlab/financial_v5_current_eval.py": "4c2d52b32b68decc876d49de8bd9879ea4ce9ecdd61bb9d7ce13390eb774f800",
+    "tests/test_financial_v5_current_eval.py": "56d249186c41954e96dd4c279106a5e2c1973b99a23243fc987a70450ae091fe",
+    "src/qwenlab/financial_2b_model.py": "ab780ecca03784e7bceed5b2267fab257f77e572675a26ecab211dcb25d31b07",
+    "src/qwenlab/financial_2b_prompt.py": "e7fc7e20ab9ed1e61f3beee09510d4aef427368b16fcafb63fd38346ec0c15aa",
+    "src/qwenlab/financial_prompt_v2.py": "25033aa2a7a3fadf60e51ece0eebe3fdfbbd0626cc9f04654b9641a91a4629ef",
+    "src/qwenlab/financial_2b_full_coverage_cycle.py": "4af3278d6d2923d9fdcb79fd9e799ccb292075794741568dc54254f8ebb5852b",
+    "src/qwenlab/financial_train.py": "1d6cc12c18531f01d1ab21aae1d7ae19f8e439e916bd87fd2152ed6ceb49c917",
+    "src/qwenlab/financial_service_v2_metrics.py": "b5af29223c5f55bb39e560cb7cc09ab8387c8d52ce095d88b3d31168a93c40dd",
+    "src/qwenlab/serve.py": "41728a570bd3596930ef91f9efe3d075dd23db8d05e956993ae72951d94c9a3b",
+    "src/qwenlab/joint_v5.py": "80190210f3c07578768e27120dd48b97192b01a90b6f8b97f32bcc7c44f15ed7",
+    "src/qwenlab/modeling.py": "fbcac24e76e3afee2804e09669a52786cf2d603bbcb9c95ccd423d2673d2264e",
+    "src/qwenlab/candidate_inference.py": "ba00fe89818d4549b2b124ecb549e1c0dff8c5513434427d8495b32656bed547"
+  },
+  "checkpoint": "joint-v5/step-7110",
+  "checkpoint_selected_by": "historical V5 development, not this set",
+  "evaluation_scope": "development only; 128 synthetic rows; no calibration/final inputs",
+  "modes": [
+    "current eight-action prompt transfer, no retraining",
+    "original V5 service, authenticated inputs only"
+  ],
+  "native_mapping": {
+    "llm": "answer",
+    "tool": "tool",
+    "clarify": "clarify",
+    "human": "human"
+  },
+  "omitted_native_fields": [
+    "state.handoff_status",
+    "capabilities",
+    "capability_profile",
+    "service_scope",
+    "images(empty)"
+  ],
+  "native_rule": "No capability or authentication invented; rejected preauth cases reported, not inferred.",
+  "current_loader": "same NF4 prepared-base loader as new 2B; native uses original serve.QwenEngine",
+  "training_enabled": false,
+  "model_api_requests": 0,
+  "deployable": false
+}

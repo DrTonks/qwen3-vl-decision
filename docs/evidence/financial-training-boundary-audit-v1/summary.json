@@ -1,0 +1,255 @@
+{
+  "rows": 13378,
+  "stories": 6099,
+  "actions": {
+    "clarify": 1683,
+    "retrieve": 2651,
+    "tool": 2558,
+    "human": 1680,
+    "answer": 2387,
+    "refuse": 1085,
+    "close": 678,
+    "redirect": 656
+  },
+  "layers": {
+    "preauth": {
+      "clarify": 789,
+      "retrieve": 1263,
+      "human": 387,
+      "refuse": 371,
+      "redirect": 310,
+      "answer": 1062,
+      "close": 293
+    },
+    "planned": {
+      "retrieve": 1388,
+      "tool": 1884,
+      "answer": 988,
+      "clarify": 649,
+      "close": 323,
+      "human": 991,
+      "refuse": 608,
+      "redirect": 277
+    },
+    "current-component": {
+      "answer": 132,
+      "tool": 406,
+      "clarify": 90,
+      "human": 97,
+      "redirect": 35,
+      "refuse": 43,
+      "close": 48
+    },
+    "current-node": {
+      "clarify": 155,
+      "tool": 268,
+      "answer": 205,
+      "human": 205,
+      "redirect": 34,
+      "refuse": 63,
+      "close": 14
+    }
+  },
+  "tool_cells": {
+    "[\"planned\",\"queryLoanProducts\"]": 890,
+    "[\"planned\",\"queryApplicationDetail\"]": 452,
+    "[\"planned\",\"queryMyCreditScore\"]": 186,
+    "[\"planned\",\"queryMyApplications\"]": 340,
+    "[\"planned\",\"explainApplicationStatus\"]": 16,
+    "[\"current-component\",\"explainApplicationStatus\"]": 250,
+    "[\"current-component\",\"queryMyApplications\"]": 36,
+    "[\"current-component\",\"queryMyCreditScore\"]": 30,
+    "[\"current-component\",\"queryLoanProducts\"]": 33,
+    "[\"current-component\",\"queryApplicationDetail\"]": 57,
+    "[\"current-node\",\"queryLoanProducts\"]": 33,
+    "[\"current-node\",\"queryMyApplications\"]": 41,
+    "[\"current-node\",\"queryApplicationDetail\"]": 125,
+    "[\"current-node\",\"queryMyCreditScore\"]": 43,
+    "[\"current-node\",\"explainApplicationStatus\"]": 26
+  },
+  "unique_visible_inputs": 13378,
+  "unique_message_history": 13101,
+  "duplicate_groups": 0,
+  "duplicate_extra_rows": 0,
+  "conflicting_trained_target_groups": 0,
+  "invariant_violations": 0,
+  "exposure_histogram": {
+    "2": 13378
+  },
+  "lexical_signals": {
+    "cancellation_words": {
+      "rows": 279,
+      "actions": {
+        "refuse": 14,
+        "answer": 34,
+        "retrieve": 115,
+        "human": 66,
+        "clarify": 12,
+        "redirect": 17,
+        "close": 13,
+        "tool": 8
+      },
+      "stories": 197
+    },
+    "conversation_end_words": {
+      "rows": 635,
+      "actions": {
+        "retrieve": 34,
+        "close": 550,
+        "human": 10,
+        "refuse": 4,
+        "tool": 8,
+        "redirect": 12,
+        "answer": 12,
+        "clarify": 5
+      },
+      "stories": 298
+    },
+    "prohibited_topic_words": {
+      "rows": 426,
+      "actions": {
+        "refuse": 299,
+        "retrieve": 16,
+        "human": 67,
+        "answer": 32,
+        "close": 4,
+        "tool": 6,
+        "clarify": 2
+      },
+      "stories": 190
+    },
+    "quotation_or_negation_words": {
+      "rows": 1125,
+      "actions": {
+        "retrieve": 108,
+        "answer": 482,
+        "redirect": 54,
+        "human": 219,
+        "refuse": 65,
+        "clarify": 45,
+        "tool": 137,
+        "close": 15
+      },
+      "stories": 864
+    },
+    "capability_question_words": {
+      "rows": 299,
+      "actions": {
+        "answer": 98,
+        "retrieve": 132,
+        "tool": 21,
+        "human": 15,
+        "redirect": 7,
+        "clarify": 20,
+        "close": 2,
+        "refuse": 4
+      },
+      "stories": 280
+    }
+  },
+  "quoted_or_negated_topic_candidates": {
+    "rows": 60,
+    "actions": {
+      "human": 29,
+      "answer": 19,
+      "retrieve": 1,
+      "refuse": 11
+    }
+  },
+  "strict_pair_summary": {
+    "pool_rows": 13378,
+    "same_surface_story_groups": 182,
+    "strict_single_field_pairs": 221,
+    "strict_story_groups": 126,
+    "non_single_target_pairs": 159,
+    "coupled_field_counts": {
+      "available_tools+state.authenticated": 87,
+      "state.application_id+state.authenticated": 8,
+      "available_tools+state.application_id": 8,
+      "capabilities.knowledge_collections+capability_profile": 56
+    },
+    "dimensions": {
+      "application_id": {
+        "pairs": 9,
+        "story_groups": 9,
+        "knowledge_profile_counts": {
+          "no-kb/no-kb": 9
+        },
+        "matches_expected_boundary": 9,
+        "action_transitions": {
+          "clarify / tool": 9
+        },
+        "coverage": {
+          "full_two_epochs": {
+            "both": 9,
+            "neither": 0,
+            "one_side": 0
+          }
+        }
+      },
+      "authentication": {
+        "pairs": 113,
+        "story_groups": 113,
+        "knowledge_profile_counts": {
+          "no-kb/no-kb": 44,
+          "kb/kb": 69
+        },
+        "matches_expected_boundary": 113,
+        "action_transitions": {
+          "clarify / tool": 113
+        },
+        "coverage": {
+          "full_two_epochs": {
+            "both": 113,
+            "neither": 0,
+            "one_side": 0
+          }
+        }
+      },
+      "tool_availability": {
+        "pairs": 99,
+        "story_groups": 99,
+        "knowledge_profile_counts": {
+          "no-kb/no-kb": 45,
+          "kb/kb": 54
+        },
+        "matches_expected_boundary": 83,
+        "action_transitions": {
+          "human / tool": 83,
+          "answer / tool": 16
+        },
+        "coverage": {
+          "full_two_epochs": {
+            "both": 99,
+            "neither": 0,
+            "one_side": 0
+          }
+        }
+      }
+    }
+  },
+  "strict_pair_check_error": null,
+  "strict_pair_tool_cells": {
+    "[\"authentication\",\"no-kb/no-kb\",\"queryMyApplications\"]": 10,
+    "[\"tool_availability\",\"no-kb/no-kb\",\"queryMyApplications\"]": 10,
+    "[\"authentication\",\"no-kb/no-kb\",\"queryMyCreditScore\"]": 9,
+    "[\"tool_availability\",\"no-kb/no-kb\",\"queryMyCreditScore\"]": 10,
+    "[\"application_id\",\"no-kb/no-kb\",\"queryApplicationDetail\"]": 9,
+    "[\"authentication\",\"no-kb/no-kb\",\"queryApplicationDetail\"]": 9,
+    "[\"tool_availability\",\"no-kb/no-kb\",\"queryApplicationDetail\"]": 9,
+    "[\"authentication\",\"no-kb/no-kb\",\"queryLoanProducts\"]": 8,
+    "[\"authentication\",\"no-kb/no-kb\",\"explainApplicationStatus\"]": 8,
+    "[\"authentication\",\"kb/kb\",\"queryLoanProducts\"]": 10,
+    "[\"tool_availability\",\"kb/kb\",\"queryMyApplications\"]": 39,
+    "[\"authentication\",\"kb/kb\",\"queryMyCreditScore\"]": 13,
+    "[\"tool_availability\",\"kb/kb\",\"queryMyCreditScore\"]": 11,
+    "[\"authentication\",\"kb/kb\",\"queryMyApplications\"]": 42,
+    "[\"authentication\",\"kb/kb\",\"queryApplicationDetail\"]": 4,
+    "[\"tool_availability\",\"kb/kb\",\"queryApplicationDetail\"]": 4
+  },
+  "limitations": [
+    "Lexical hits are retrieval hints, not exhaustive semantic annotation or proof of an error.",
+    "Single-field pairs are structural evidence, not independent human-reviewed examples.",
+    "This audit cannot establish a causal explanation for model errors."
+  ]
+}

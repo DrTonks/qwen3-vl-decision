@@ -1,0 +1,2440 @@
+{
+  "version": "financial-2b-full-coverage-results-audit-v1",
+  "status": "verified",
+  "training_eligible": false,
+  "protocol_sha256": "4adc0e3a08aee6171c54e028b57352909c7c69ff0c07e4b8d1022cbf6d6ba0ba",
+  "audit_script_sha256": "66015f87b479cefb1406309bab98fd8ffcc3ca67808042d66a66af420706e7e6",
+  "audit_helper_sha256": "1f8e3eadbfcb08d8801a1dafe007cb9a770cdfca7cf29923af2c9d97cd75cf37",
+  "artifact_sha256": {
+    "results/financial-2b-full-coverage-v1/development/base/binding.json": "a1b5b4a765cbba1c95aba298cfab85e21e7da8833e693d9cc1c854f0c1079fa6",
+    "results/financial-2b-full-coverage-v1/development/base/metrics.json": "be3207f312c55d8fcd9b915d71457275a91aa4e1f1210c668d94ccc1bdd73a38",
+    "results/financial-2b-full-coverage-v1/development/base/predictions.jsonl": "84a00f41df685de37996f88f69bb834babaab16c05ff156d56211f724035cf5d",
+    "results/financial-2b-full-coverage-v1/development/base/timing.json": "33ff827a6a21dddd568561c10082078249fbba064309321827c3772c70484b01",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-500/binding.json": "dab856d4e3daf297b97e821ce79cb7344ebd3bdc1bcdcee0cfeefaed1fe9ec0c",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-500/metrics.json": "09ed049ef9c29c050e432e260929e8768a48a5ac915aa2f81a7a7979104ba1a4",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-500/predictions.jsonl": "5147d1eb955738626bf3b573862900f0e7f245790f5befabbf4eeb78edde882c",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-500/timing.json": "ffc348aad97878b29687ebdab2d94f9986a2c97ab53cd10c1618f0e7c0f4280a",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-1000/binding.json": "5f93d13dba0a0d9f411208aaa9b657cf748d4b88bed7eb4b34909ac39ce6a099",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-1000/metrics.json": "5a7511d1a351c524a6a73e3be0b6f03ba2030a591fec846680ea8af521734689",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-1000/predictions.jsonl": "5c689f5a2e40a5acf1e02f564298665bbf297c12905ef330327a3daff896da71",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-1000/timing.json": "65c5d438c8d65107ea03e21954376429d0ecc721cef2b62cf9f2af32e3433392",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-1500/binding.json": "4499947dc10f4f836db237d5a7323f7149aa53990cc0ffc709d85ff1bc05162a",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-1500/metrics.json": "f4427929bfc7c98f7d509ea34ab084cc56fb7b0b3d5d20d192cb5bcaaf4db406",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-1500/predictions.jsonl": "8081f28bbfa29fd50883fd6ac717b22091dcb6df77d31c7870359400856ce9a7",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-1500/timing.json": "2b4533f1fe48916ea7bbf30f69bde291d8321a56a027fcbd1ceae0b4d6684980",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-1673/binding.json": "c2c14a6de5e2eba058c7d6d396a30d69d74b5dd1aa4a795278b58e8dc9ce3812",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-1673/metrics.json": "223b4e06e53cc783ab3fa630aa3998af7e7bbce0295ec3e96992191b5b276e77",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-1673/predictions.jsonl": "b93674597a29d8284a723dd0bc7b992cc298f9c925769531b1f941cd96a2c7f6",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-1673/timing.json": "9dc7613c77a318436d80cda27eda0c233579d3090868393000e457bca68875e3",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-2000/binding.json": "f98fbb6b28ecb3716f338654a4b710fc51bd57391b5a63914d95981478467245",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-2000/metrics.json": "44e1c8e2a4d4c2777950f31ddd582c19704389307e02b8dd164a13d520b89854",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-2000/predictions.jsonl": "98d2dfa1cf77d87016572cb81ebc22bd692f89bd722644f43489d4512256873f",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-2000/timing.json": "e18402c8cdfc71acfe5160d1414169dc6271539ae1e77680018fd72b226e1803",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-2500/binding.json": "7da349880f77fa8c428b61baa02d888a3fd2ab41a9b6c351c523cd5565a72ecf",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-2500/metrics.json": "b895692a4c3650c27d395bbb7158297fa50e4ba9fa2b055e60b95aebf539b99d",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-2500/predictions.jsonl": "878b01c11c2212ea1f67b53d8908015864ffaed224c85ab7405da6ae9ca6b647",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-2500/timing.json": "0c25d8c81c2b1b5b268fd74b32cae313a441c3d1d7fe20fa4badaa8390f58c9c",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-3000/binding.json": "e61fb27f87698b6d3f66c6239d1e33e1fbd517afc5b6dff8397e50a4d3ddc622",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-3000/metrics.json": "91b6966e3decc016db15b770219a88f62854872505a5fc9712da26c7fe39a177",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-3000/predictions.jsonl": "de97b5d3fc794109553f83b61aa9a7fc68f41f022fc9e66cd219ba9f5bc30488",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-3000/timing.json": "9ff8b79cf8863d9a2f1ef5150a0069092e113c218971a99709226f8aa55020f9",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-3346/binding.json": "e115914dedee1e89587f007a6588b4ec17c30aba04330f9ccafdfa0a34547c03",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-3346/metrics.json": "d0753e06bbf2570e8359bc23d265313546a7af5aa1110113afcee7a15ba67198",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-3346/predictions.jsonl": "8f3b4d446af074d1c6efc6c94c9bdb861e1bca95c02d2a8d7f64997eb46705d4",
+    "results/financial-2b-full-coverage-v1/development/full2b-step-3346/timing.json": "c724f0ab40ca5631ed5a631fcaf118e06530383630c9f13a91cd2adacbaa3856",
+    "results/financial-full-coverage-v1/development/base/binding.json": "7f29b9eedea42c3895186acecb5d568dfbe19e0ba5885a2f1ff6a5ca38693806",
+    "results/financial-full-coverage-v1/development/base/metrics.json": "72378f50af497ea21e8f0d7c66ad6dac67e5d71a02444f5e8cf04bea348c8b04",
+    "results/financial-full-coverage-v1/development/base/predictions.jsonl": "ead93b69759d72da703f28ea1c3a6db3897ea832b96fb7d05a5d460f5a7ec2cd",
+    "results/financial-full-coverage-v1/development/base/timing.json": "84e50321a0abfe88ab49697b69d36a0796d0b2a525c5b8e35db2d9529ed2d363",
+    "results/financial-full-coverage-v1/development/fullcover-step-1673/binding.json": "3fbb53c5f242f7a53e76ba5f6373786546db0857c805e1a329a3ed2ccd474efd",
+    "results/financial-full-coverage-v1/development/fullcover-step-1673/metrics.json": "3b5e343c4c5843d78f3866a68128f57476bd6685d7a8cc6b68fc216052de2e79",
+    "results/financial-full-coverage-v1/development/fullcover-step-1673/predictions.jsonl": "af6d4a65c997ce3497cf931d50e95fc866a335ec2f9ae460d11dcc2046b5f17c",
+    "results/financial-full-coverage-v1/development/fullcover-step-1673/timing.json": "d48a2f95c31e809e88f0304e8772ef7eaacd90d1e3d556ee4b3149822479b6fb",
+    "results/financial-full-coverage-v1/development/fullcover-step-3000/binding.json": "f0aae792a7841272a69902afde2b8af4aa2d2b353a0664899ddc2127d1ce2e51",
+    "results/financial-full-coverage-v1/development/fullcover-step-3000/metrics.json": "785e494307c971484b8936ccdbfc003d3719ca4bcb81de4cf99a0db7437d7238",
+    "results/financial-full-coverage-v1/development/fullcover-step-3000/predictions.jsonl": "f6e09a170f3f17bf3a6a1e4c995acb6b253b82339256c5a168a51398d0bbf495",
+    "results/financial-full-coverage-v1/development/fullcover-step-3000/timing.json": "5b6a5234e7c81023fe740ff93f6f825d714b7a57a25d66cf2aed2dc81ec42555",
+    "results/financial-full-coverage-v1/development/fullcover-step-3346/binding.json": "3d73b0fff378aa5ad625291bce14a1205da56003e919129fcc11ed18168bc138",
+    "results/financial-full-coverage-v1/development/fullcover-step-3346/metrics.json": "58f6801d7a3ef930251aa0100e6063fe51790a055b96192329500b61827e209b",
+    "results/financial-full-coverage-v1/development/fullcover-step-3346/predictions.jsonl": "033486f61895a99e5e00f516e94efd841ca6f7e29f606259d317db2f43be5250",
+    "results/financial-full-coverage-v1/development/fullcover-step-3346/timing.json": "e892ac17016ca045c49432cfa6130f8c9f2a12309bbe2689ed52fd8f91ca9859",
+    "results/financial-2b-full-coverage-v1/base-parameter-dtypes.json": "d37848d1ee7ccca13e4837a9319f6a79fd7a392902e686fa51c103b609f48162",
+    "results/financial-2b-full-coverage-v1/comparison.json": "339d77c45e4f22b12a7dd513c420976ccea0d3908a35deba5a499f33f8eef43c",
+    "results/financial-2b-full-coverage-v1/completion.json": "05505bebef7350412d8b054d6eab12612a50af1d4146fa097adba7d31cdea210",
+    "results/financial-2b-full-coverage-v1/hardware.json": "ac092993f7148449bcd1e5a0061dbbff4072d783690e8de9ec05779856c71eec",
+    "results/financial-2b-full-coverage-v1/historical-comparison.json": "d8442fcd2d216e3b4f2b0ad4504fa240b3b9a00e0b921db13c8163993b67bef0",
+    "results/financial-2b-full-coverage-v1/protocol.json": "4adc0e3a08aee6171c54e028b57352909c7c69ff0c07e4b8d1022cbf6d6ba0ba",
+    "results/financial-2b-full-coverage-v1/selection.json": "98a2b753f5520f1c90529957abe308e031ed809d1b0187f419b1b3eef8023b76",
+    "results/financial-2b-full-coverage-v1/status.json": "bc52e2ad67a9ae214888e5f38f69d7d0ad8d7c8ebf1d06bcc996be0cc91f7d1f",
+    "results/financial-2b-full-coverage-v1/arms/full2b/arm-complete.json": "5f9c2f8e66fe7ebf97dc41d5794fa498364eaabcb9bcd97fa016b63dbce4dda5",
+    "results/financial-2b-full-coverage-v1/arms/full2b/initialization.json": "f6096a8a70c1de254ad120fe970d9de97c464e8f227981ca69f47639a86e930e",
+    "results/financial-2b-full-coverage-v1/arms/full2b/latest-checkpoint.json": "944eabe28e59976970ef3e85f6b180beccaf138627ce2e9ab0a8c68b2fc98fea",
+    "results/financial-2b-full-coverage-v1/arms/full2b/preflight.json": "43aea3ef6eba85f57b352ca8c981d6f1f8d579a127f9ad265b73a457691c6a06",
+    "results/financial-2b-full-coverage-v1/arms/full2b/train.jsonl": "6b6cb0393a72d8ccd99e0c041b4a4bc0543b72563d3ef9e2a368932c6074be99",
+    "results/financial-2b-full-coverage-v1/arms/full2b/training-summary.json": "70ac5e92eb688df93b344b84019f15395c78e5c3bd6b9523a6995e7cf50e34c6"
+  },
+  "started_at": "2026-10-08T09:52:05.657904+08:00",
+  "completed_at": "2026-10-08T06:15:33.919556+00:00",
+  "wall_minutes": 263.4710275333333,
+  "training": {
+    "steps": 3346,
+    "pure_train_minutes": 255.8148921783327,
+    "peak_allocated_gib": 2.436389923095703,
+    "unique_rows": 13378,
+    "first200_mean_loss": 1.47355658834432,
+    "last200_mean_loss": 0.17678512019455114,
+    "first50_mean_loss": 2.7616152474654787,
+    "last50_mean_loss": 0.11766819313235598,
+    "epoch1_mean_loss": 0.4893076194345582,
+    "epoch2_mean_loss": 0.18697617105798614,
+    "sample_positions": 26756,
+    "every_row_exposure": 2
+  },
+  "development": {
+    "base": {
+      "correct": 39,
+      "rows": 128,
+      "action_accuracy": 0.3046875,
+      "macro_f1": 0.30839101792402357,
+      "per_action": {
+        "clarify": {
+          "support": 14,
+          "precision": 0.12,
+          "recall": 0.6428571428571429,
+          "f1": 0.20224719101123598
+        },
+        "retrieve": {
+          "support": 12,
+          "precision": 0.75,
+          "recall": 0.25,
+          "f1": 0.375
+        },
+        "tool": {
+          "support": 18,
+          "precision": 0.5,
+          "recall": 0.3888888888888889,
+          "f1": 0.43750000000000006
+        },
+        "answer": {
+          "support": 29,
+          "precision": 0.21052631578947367,
+          "recall": 0.13793103448275862,
+          "f1": 0.16666666666666666
+        },
+        "human": {
+          "support": 27,
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "f1": 0.5
+        },
+        "redirect": {
+          "support": 4,
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0
+        },
+        "refuse": {
+          "support": 18,
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "f1": 0.5
+        },
+        "close": {
+          "support": 6,
+          "precision": 1.0,
+          "recall": 0.16666666666666666,
+          "f1": 0.2857142857142857
+        }
+      },
+      "tool_correct": 5,
+      "tool_support": 18,
+      "failures": {
+        "human_misses": 18,
+        "false_refusals": 0,
+        "unauthenticated_tool_actions": 1,
+        "unavailable_knowledge_retrievals": 0,
+        "unavailable_tool_choices": 0
+      },
+      "cohorts": {
+        "current-service": {
+          "correct": 19,
+          "rows": 64,
+          "human_misses": 9,
+          "false_refusals": 0
+        },
+        "planned-retrieval": {
+          "correct": 11,
+          "rows": 32,
+          "human_misses": 5,
+          "false_refusals": 0
+        },
+        "preauth-robustness": {
+          "correct": 9,
+          "rows": 32,
+          "human_misses": 4,
+          "false_refusals": 0
+        }
+      },
+      "probability": {
+        "action_nll": 3.6689414354060887,
+        "brier": 1.189807235159055,
+        "wrong_with_confidence_at_least_95": 48
+      },
+      "timing": {
+        "action_p50_s": 0.13288975000000391,
+        "request_p50_s": 0.13708645000008346,
+        "request_p95_s": 0.2764467099999819,
+        "total_measured_s": 19.34357020000084,
+        "conditional_tool_requests": 14,
+        "scope": "same local serial action+predicted-tool path including tokenization/transfers; excludes load/warmup; no backend"
+      }
+    },
+    "full2b-step-500": {
+      "correct": 101,
+      "rows": 128,
+      "action_accuracy": 0.7890625,
+      "macro_f1": 0.8152176916453169,
+      "per_action": {
+        "clarify": {
+          "support": 14,
+          "precision": 0.5882352941176471,
+          "recall": 0.7142857142857143,
+          "f1": 0.6451612903225806
+        },
+        "retrieve": {
+          "support": 12,
+          "precision": 0.9166666666666666,
+          "recall": 0.9166666666666666,
+          "f1": 0.9166666666666666
+        },
+        "tool": {
+          "support": 18,
+          "precision": 0.625,
+          "recall": 0.5555555555555556,
+          "f1": 0.5882352941176471
+        },
+        "answer": {
+          "support": 29,
+          "precision": 0.7777777777777778,
+          "recall": 0.7241379310344828,
+          "f1": 0.75
+        },
+        "human": {
+          "support": 27,
+          "precision": 0.8846153846153846,
+          "recall": 0.8518518518518519,
+          "f1": 0.8679245283018868
+        },
+        "redirect": {
+          "support": 4,
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.888888888888889
+        },
+        "refuse": {
+          "support": 18,
+          "precision": 0.8421052631578947,
+          "recall": 0.8888888888888888,
+          "f1": 0.8648648648648649
+        },
+        "close": {
+          "support": 6,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "tool_correct": 10,
+      "tool_support": 18,
+      "failures": {
+        "human_misses": 4,
+        "false_refusals": 3,
+        "unauthenticated_tool_actions": 1,
+        "unavailable_knowledge_retrievals": 1,
+        "unavailable_tool_choices": 1
+      },
+      "cohorts": {
+        "current-service": {
+          "correct": 47,
+          "rows": 64,
+          "human_misses": 1,
+          "false_refusals": 1
+        },
+        "planned-retrieval": {
+          "correct": 28,
+          "rows": 32,
+          "human_misses": 2,
+          "false_refusals": 1
+        },
+        "preauth-robustness": {
+          "correct": 26,
+          "rows": 32,
+          "human_misses": 1,
+          "false_refusals": 1
+        }
+      },
+      "probability": {
+        "action_nll": 0.5041498964244729,
+        "brier": 0.266145191981704,
+        "wrong_with_confidence_at_least_95": 2
+      },
+      "timing": {
+        "action_p50_s": 0.12692225000023427,
+        "request_p50_s": 0.13515229999984513,
+        "request_p95_s": 0.2822287749996348,
+        "total_measured_s": 19.348245099997257,
+        "conditional_tool_requests": 16,
+        "scope": "same local serial action+predicted-tool path including tokenization/transfers; excludes load/warmup; no backend"
+      }
+    },
+    "full2b-step-1000": {
+      "correct": 108,
+      "rows": 128,
+      "action_accuracy": 0.84375,
+      "macro_f1": 0.86377119002119,
+      "per_action": {
+        "clarify": {
+          "support": 14,
+          "precision": 0.7272727272727273,
+          "recall": 0.5714285714285714,
+          "f1": 0.64
+        },
+        "retrieve": {
+          "support": 12,
+          "precision": 0.75,
+          "recall": 1.0,
+          "f1": 0.8571428571428571
+        },
+        "tool": {
+          "support": 18,
+          "precision": 0.6923076923076923,
+          "recall": 1.0,
+          "f1": 0.8181818181818181
+        },
+        "answer": {
+          "support": 29,
+          "precision": 0.9473684210526315,
+          "recall": 0.6206896551724138,
+          "f1": 0.75
+        },
+        "human": {
+          "support": 27,
+          "precision": 0.9259259259259259,
+          "recall": 0.9259259259259259,
+          "f1": 0.9259259259259259
+        },
+        "redirect": {
+          "support": 4,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "refuse": {
+          "support": 18,
+          "precision": 0.8947368421052632,
+          "recall": 0.9444444444444444,
+          "f1": 0.918918918918919
+        },
+        "close": {
+          "support": 6,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "tool_correct": 18,
+      "tool_support": 18,
+      "failures": {
+        "human_misses": 2,
+        "false_refusals": 2,
+        "unauthenticated_tool_actions": 2,
+        "unavailable_knowledge_retrievals": 1,
+        "unavailable_tool_choices": 1
+      },
+      "cohorts": {
+        "current-service": {
+          "correct": 54,
+          "rows": 64,
+          "human_misses": 0,
+          "false_refusals": 1
+        },
+        "planned-retrieval": {
+          "correct": 27,
+          "rows": 32,
+          "human_misses": 2,
+          "false_refusals": 1
+        },
+        "preauth-robustness": {
+          "correct": 27,
+          "rows": 32,
+          "human_misses": 0,
+          "false_refusals": 0
+        }
+      },
+      "probability": {
+        "action_nll": 0.49738386625304293,
+        "brier": 0.22589298709603478,
+        "wrong_with_confidence_at_least_95": 5
+      },
+      "timing": {
+        "action_p50_s": 0.12992510000003676,
+        "request_p50_s": 0.13999799999965035,
+        "request_p95_s": 0.29615116499999206,
+        "total_measured_s": 21.072790699990946,
+        "conditional_tool_requests": 26,
+        "scope": "same local serial action+predicted-tool path including tokenization/transfers; excludes load/warmup; no backend"
+      }
+    },
+    "full2b-step-1500": {
+      "correct": 110,
+      "rows": 128,
+      "action_accuracy": 0.859375,
+      "macro_f1": 0.8677889179983217,
+      "per_action": {
+        "clarify": {
+          "support": 14,
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8
+        },
+        "retrieve": {
+          "support": 12,
+          "precision": 1.0,
+          "recall": 0.9166666666666666,
+          "f1": 0.9565217391304348
+        },
+        "tool": {
+          "support": 18,
+          "precision": 0.8,
+          "recall": 0.6666666666666666,
+          "f1": 0.7272727272727272
+        },
+        "answer": {
+          "support": 29,
+          "precision": 1.0,
+          "recall": 0.8275862068965517,
+          "f1": 0.9056603773584906
+        },
+        "human": {
+          "support": 27,
+          "precision": 0.88,
+          "recall": 0.8148148148148148,
+          "f1": 0.8461538461538461
+        },
+        "redirect": {
+          "support": 4,
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.888888888888889
+        },
+        "refuse": {
+          "support": 18,
+          "precision": 0.85,
+          "recall": 0.9444444444444444,
+          "f1": 0.8947368421052632
+        },
+        "close": {
+          "support": 6,
+          "precision": 0.8571428571428571,
+          "recall": 1.0,
+          "f1": 0.923076923076923
+        }
+      },
+      "tool_correct": 12,
+      "tool_support": 18,
+      "failures": {
+        "human_misses": 5,
+        "false_refusals": 3,
+        "unauthenticated_tool_actions": 0,
+        "unavailable_knowledge_retrievals": 0,
+        "unavailable_tool_choices": 1
+      },
+      "cohorts": {
+        "current-service": {
+          "correct": 51,
+          "rows": 64,
+          "human_misses": 3,
+          "false_refusals": 2
+        },
+        "planned-retrieval": {
+          "correct": 28,
+          "rows": 32,
+          "human_misses": 2,
+          "false_refusals": 1
+        },
+        "preauth-robustness": {
+          "correct": 31,
+          "rows": 32,
+          "human_misses": 0,
+          "false_refusals": 0
+        }
+      },
+      "probability": {
+        "action_nll": 0.5167156549357815,
+        "brier": 0.21758742972273432,
+        "wrong_with_confidence_at_least_95": 5
+      },
+      "timing": {
+        "action_p50_s": 0.1278341500001261,
+        "request_p50_s": 0.13090200000078767,
+        "request_p95_s": 0.2774986400003399,
+        "total_measured_s": 19.310575500001505,
+        "conditional_tool_requests": 15,
+        "scope": "same local serial action+predicted-tool path including tokenization/transfers; excludes load/warmup; no backend"
+      }
+    },
+    "full2b-step-1673": {
+      "correct": 117,
+      "rows": 128,
+      "action_accuracy": 0.9140625,
+      "macro_f1": 0.9237689023515683,
+      "per_action": {
+        "clarify": {
+          "support": 14,
+          "precision": 0.7777777777777778,
+          "recall": 1.0,
+          "f1": 0.8750000000000001
+        },
+        "retrieve": {
+          "support": 12,
+          "precision": 1.0,
+          "recall": 0.9166666666666666,
+          "f1": 0.9565217391304348
+        },
+        "tool": {
+          "support": 18,
+          "precision": 0.8,
+          "recall": 0.8888888888888888,
+          "f1": 0.8421052631578948
+        },
+        "answer": {
+          "support": 29,
+          "precision": 1.0,
+          "recall": 0.8620689655172413,
+          "f1": 0.9259259259259259
+        },
+        "human": {
+          "support": 27,
+          "precision": 0.96,
+          "recall": 0.8888888888888888,
+          "f1": 0.923076923076923
+        },
+        "redirect": {
+          "support": 4,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "refuse": {
+          "support": 18,
+          "precision": 0.9444444444444444,
+          "recall": 0.9444444444444444,
+          "f1": 0.9444444444444444
+        },
+        "close": {
+          "support": 6,
+          "precision": 0.8571428571428571,
+          "recall": 1.0,
+          "f1": 0.923076923076923
+        }
+      },
+      "tool_correct": 16,
+      "tool_support": 18,
+      "failures": {
+        "human_misses": 3,
+        "false_refusals": 1,
+        "unauthenticated_tool_actions": 0,
+        "unavailable_knowledge_retrievals": 0,
+        "unavailable_tool_choices": 1
+      },
+      "cohorts": {
+        "current-service": {
+          "correct": 57,
+          "rows": 64,
+          "human_misses": 1,
+          "false_refusals": 0
+        },
+        "planned-retrieval": {
+          "correct": 29,
+          "rows": 32,
+          "human_misses": 2,
+          "false_refusals": 1
+        },
+        "preauth-robustness": {
+          "correct": 31,
+          "rows": 32,
+          "human_misses": 0,
+          "false_refusals": 0
+        }
+      },
+      "probability": {
+        "action_nll": 0.36314821186367185,
+        "brier": 0.15728726708355303,
+        "wrong_with_confidence_at_least_95": 4
+      },
+      "timing": {
+        "action_p50_s": 0.12742434999927355,
+        "request_p50_s": 0.13166625000030763,
+        "request_p95_s": 0.2946057849995668,
+        "total_measured_s": 20.075053400007164,
+        "conditional_tool_requests": 20,
+        "scope": "same local serial action+predicted-tool path including tokenization/transfers; excludes load/warmup; no backend"
+      }
+    },
+    "full2b-step-2000": {
+      "correct": 110,
+      "rows": 128,
+      "action_accuracy": 0.859375,
+      "macro_f1": 0.872465669686918,
+      "per_action": {
+        "clarify": {
+          "support": 14,
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8
+        },
+        "retrieve": {
+          "support": 12,
+          "precision": 1.0,
+          "recall": 0.9166666666666666,
+          "f1": 0.9565217391304348
+        },
+        "tool": {
+          "support": 18,
+          "precision": 0.7692307692307693,
+          "recall": 0.5555555555555556,
+          "f1": 0.6451612903225806
+        },
+        "answer": {
+          "support": 29,
+          "precision": 0.92,
+          "recall": 0.7931034482758621,
+          "f1": 0.851851851851852
+        },
+        "human": {
+          "support": 27,
+          "precision": 0.8620689655172413,
+          "recall": 0.9259259259259259,
+          "f1": 0.8928571428571429
+        },
+        "redirect": {
+          "support": 4,
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.888888888888889
+        },
+        "refuse": {
+          "support": 18,
+          "precision": 0.9444444444444444,
+          "recall": 0.9444444444444444,
+          "f1": 0.9444444444444444
+        },
+        "close": {
+          "support": 6,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "tool_correct": 10,
+      "tool_support": 18,
+      "failures": {
+        "human_misses": 2,
+        "false_refusals": 1,
+        "unauthenticated_tool_actions": 0,
+        "unavailable_knowledge_retrievals": 0,
+        "unavailable_tool_choices": 1
+      },
+      "cohorts": {
+        "current-service": {
+          "correct": 51,
+          "rows": 64,
+          "human_misses": 1,
+          "false_refusals": 1
+        },
+        "planned-retrieval": {
+          "correct": 29,
+          "rows": 32,
+          "human_misses": 1,
+          "false_refusals": 0
+        },
+        "preauth-robustness": {
+          "correct": 30,
+          "rows": 32,
+          "human_misses": 0,
+          "false_refusals": 0
+        }
+      },
+      "probability": {
+        "action_nll": 0.48277625254121653,
+        "brier": 0.20364378241960834,
+        "wrong_with_confidence_at_least_95": 5
+      },
+      "timing": {
+        "action_p50_s": 0.12751639999896724,
+        "request_p50_s": 0.12904679999974178,
+        "request_p95_s": 0.27912709999927754,
+        "total_measured_s": 19.02177100001245,
+        "conditional_tool_requests": 13,
+        "scope": "same local serial action+predicted-tool path including tokenization/transfers; excludes load/warmup; no backend"
+      }
+    },
+    "full2b-step-2500": {
+      "correct": 111,
+      "rows": 128,
+      "action_accuracy": 0.8671875,
+      "macro_f1": 0.8820401603702493,
+      "per_action": {
+        "clarify": {
+          "support": 14,
+          "precision": 0.7647058823529411,
+          "recall": 0.9285714285714286,
+          "f1": 0.8387096774193549
+        },
+        "retrieve": {
+          "support": 12,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "tool": {
+          "support": 18,
+          "precision": 0.8181818181818182,
+          "recall": 0.5,
+          "f1": 0.6206896551724137
+        },
+        "answer": {
+          "support": 29,
+          "precision": 0.8620689655172413,
+          "recall": 0.8620689655172413,
+          "f1": 0.8620689655172413
+        },
+        "human": {
+          "support": 27,
+          "precision": 0.8620689655172413,
+          "recall": 0.9259259259259259,
+          "f1": 0.8928571428571429
+        },
+        "redirect": {
+          "support": 4,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "refuse": {
+          "support": 18,
+          "precision": 0.8947368421052632,
+          "recall": 0.9444444444444444,
+          "f1": 0.918918918918919
+        },
+        "close": {
+          "support": 6,
+          "precision": 0.8571428571428571,
+          "recall": 1.0,
+          "f1": 0.923076923076923
+        }
+      },
+      "tool_correct": 9,
+      "tool_support": 18,
+      "failures": {
+        "human_misses": 2,
+        "false_refusals": 2,
+        "unauthenticated_tool_actions": 0,
+        "unavailable_knowledge_retrievals": 0,
+        "unavailable_tool_choices": 0
+      },
+      "cohorts": {
+        "current-service": {
+          "correct": 50,
+          "rows": 64,
+          "human_misses": 1,
+          "false_refusals": 1
+        },
+        "planned-retrieval": {
+          "correct": 30,
+          "rows": 32,
+          "human_misses": 1,
+          "false_refusals": 1
+        },
+        "preauth-robustness": {
+          "correct": 31,
+          "rows": 32,
+          "human_misses": 0,
+          "false_refusals": 0
+        }
+      },
+      "probability": {
+        "action_nll": 0.550209254239332,
+        "brier": 0.2142650573085887,
+        "wrong_with_confidence_at_least_95": 5
+      },
+      "timing": {
+        "action_p50_s": 0.14747915000043577,
+        "request_p50_s": 0.15102879999994911,
+        "request_p95_s": 0.31251633000074436,
+        "total_measured_s": 21.590441299989834,
+        "conditional_tool_requests": 11,
+        "scope": "same local serial action+predicted-tool path including tokenization/transfers; excludes load/warmup; no backend"
+      }
+    },
+    "full2b-step-3000": {
+      "correct": 113,
+      "rows": 128,
+      "action_accuracy": 0.8828125,
+      "macro_f1": 0.8914849941485424,
+      "per_action": {
+        "clarify": {
+          "support": 14,
+          "precision": 0.9285714285714286,
+          "recall": 0.9285714285714286,
+          "f1": 0.9285714285714286
+        },
+        "retrieve": {
+          "support": 12,
+          "precision": 1.0,
+          "recall": 0.9166666666666666,
+          "f1": 0.9565217391304348
+        },
+        "tool": {
+          "support": 18,
+          "precision": 0.8125,
+          "recall": 0.7222222222222222,
+          "f1": 0.7647058823529411
+        },
+        "answer": {
+          "support": 29,
+          "precision": 0.8571428571428571,
+          "recall": 0.8275862068965517,
+          "f1": 0.8421052631578947
+        },
+        "human": {
+          "support": 27,
+          "precision": 0.8928571428571429,
+          "recall": 0.9259259259259259,
+          "f1": 0.9090909090909091
+        },
+        "redirect": {
+          "support": 4,
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.888888888888889
+        },
+        "refuse": {
+          "support": 18,
+          "precision": 0.8947368421052632,
+          "recall": 0.9444444444444444,
+          "f1": 0.918918918918919
+        },
+        "close": {
+          "support": 6,
+          "precision": 0.8571428571428571,
+          "recall": 1.0,
+          "f1": 0.923076923076923
+        }
+      },
+      "tool_correct": 13,
+      "tool_support": 18,
+      "failures": {
+        "human_misses": 2,
+        "false_refusals": 2,
+        "unauthenticated_tool_actions": 0,
+        "unavailable_knowledge_retrievals": 0,
+        "unavailable_tool_choices": 1
+      },
+      "cohorts": {
+        "current-service": {
+          "correct": 54,
+          "rows": 64,
+          "human_misses": 1,
+          "false_refusals": 1
+        },
+        "planned-retrieval": {
+          "correct": 29,
+          "rows": 32,
+          "human_misses": 1,
+          "false_refusals": 0
+        },
+        "preauth-robustness": {
+          "correct": 30,
+          "rows": 32,
+          "human_misses": 0,
+          "false_refusals": 1
+        }
+      },
+      "probability": {
+        "action_nll": 0.4430900896151265,
+        "brier": 0.18686406879289827,
+        "wrong_with_confidence_at_least_95": 6
+      },
+      "timing": {
+        "action_p50_s": 0.15334454999992886,
+        "request_p50_s": 0.15704900000037014,
+        "request_p95_s": 0.3431442100000822,
+        "total_measured_s": 23.084951499986346,
+        "conditional_tool_requests": 16,
+        "scope": "same local serial action+predicted-tool path including tokenization/transfers; excludes load/warmup; no backend"
+      }
+    },
+    "full2b-step-3346": {
+      "correct": 114,
+      "rows": 128,
+      "action_accuracy": 0.890625,
+      "macro_f1": 0.8939113845683538,
+      "per_action": {
+        "clarify": {
+          "support": 14,
+          "precision": 0.7777777777777778,
+          "recall": 1.0,
+          "f1": 0.8750000000000001
+        },
+        "retrieve": {
+          "support": 12,
+          "precision": 1.0,
+          "recall": 0.9166666666666666,
+          "f1": 0.9565217391304348
+        },
+        "tool": {
+          "support": 18,
+          "precision": 0.8125,
+          "recall": 0.7222222222222222,
+          "f1": 0.7647058823529411
+        },
+        "answer": {
+          "support": 29,
+          "precision": 0.9230769230769231,
+          "recall": 0.8275862068965517,
+          "f1": 0.8727272727272727
+        },
+        "human": {
+          "support": 27,
+          "precision": 0.9259259259259259,
+          "recall": 0.9259259259259259,
+          "f1": 0.9259259259259259
+        },
+        "redirect": {
+          "support": 4,
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.888888888888889
+        },
+        "refuse": {
+          "support": 18,
+          "precision": 0.9444444444444444,
+          "recall": 0.9444444444444444,
+          "f1": 0.9444444444444444
+        },
+        "close": {
+          "support": 6,
+          "precision": 0.8571428571428571,
+          "recall": 1.0,
+          "f1": 0.923076923076923
+        }
+      },
+      "tool_correct": 13,
+      "tool_support": 18,
+      "failures": {
+        "human_misses": 2,
+        "false_refusals": 1,
+        "unauthenticated_tool_actions": 0,
+        "unavailable_knowledge_retrievals": 0,
+        "unavailable_tool_choices": 1
+      },
+      "cohorts": {
+        "current-service": {
+          "correct": 54,
+          "rows": 64,
+          "human_misses": 1,
+          "false_refusals": 1
+        },
+        "planned-retrieval": {
+          "correct": 29,
+          "rows": 32,
+          "human_misses": 1,
+          "false_refusals": 0
+        },
+        "preauth-robustness": {
+          "correct": 31,
+          "rows": 32,
+          "human_misses": 0,
+          "false_refusals": 0
+        }
+      },
+      "probability": {
+        "action_nll": 0.4280709901635425,
+        "brier": 0.17315309707449342,
+        "wrong_with_confidence_at_least_95": 5
+      },
+      "timing": {
+        "action_p50_s": 0.15010590000019874,
+        "request_p50_s": 0.1551939000000857,
+        "request_p95_s": 0.3423845350002011,
+        "total_measured_s": 22.865648200000578,
+        "conditional_tool_requests": 16,
+        "scope": "same local serial action+predicted-tool path including tokenization/transfers; excludes load/warmup; no backend"
+      }
+    },
+    "qwen08-base": {
+      "correct": 48,
+      "rows": 128,
+      "action_accuracy": 0.375,
+      "macro_f1": 0.22374328569980745,
+      "per_action": {
+        "clarify": {
+          "support": 14,
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0
+        },
+        "retrieve": {
+          "support": 12,
+          "precision": 1.0,
+          "recall": 0.08333333333333333,
+          "f1": 0.15384615384615385
+        },
+        "tool": {
+          "support": 18,
+          "precision": 0.2222222222222222,
+          "recall": 1.0,
+          "f1": 0.3636363636363636
+        },
+        "answer": {
+          "support": 29,
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0
+        },
+        "human": {
+          "support": 27,
+          "precision": 0.8947368421052632,
+          "recall": 0.6296296296296297,
+          "f1": 0.7391304347826088
+        },
+        "redirect": {
+          "support": 4,
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0
+        },
+        "refuse": {
+          "support": 18,
+          "precision": 0.4444444444444444,
+          "recall": 0.6666666666666666,
+          "f1": 0.5333333333333333
+        },
+        "close": {
+          "support": 6,
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0
+        }
+      },
+      "tool_correct": 8,
+      "tool_support": 18,
+      "failures": {
+        "human_misses": 10,
+        "false_refusals": 15,
+        "unauthenticated_tool_actions": 17,
+        "unavailable_knowledge_retrievals": 0,
+        "unavailable_tool_choices": 1
+      },
+      "cohorts": {
+        "current-service": {
+          "correct": 29,
+          "rows": 64,
+          "human_misses": 5,
+          "false_refusals": 4
+        },
+        "planned-retrieval": {
+          "correct": 13,
+          "rows": 32,
+          "human_misses": 3,
+          "false_refusals": 4
+        },
+        "preauth-robustness": {
+          "correct": 6,
+          "rows": 32,
+          "human_misses": 2,
+          "false_refusals": 7
+        }
+      },
+      "probability": {
+        "action_nll": 1.7109465372798167,
+        "brier": 0.7477905392092471,
+        "wrong_with_confidence_at_least_95": 0
+      },
+      "timing": {
+        "action_p50_s": 0.08834865000244463,
+        "request_p50_s": 0.17566635000002861,
+        "request_p95_s": 0.26508173499951226,
+        "total_measured_s": 20.90830490001099,
+        "conditional_tool_requests": 81,
+        "scope": "same local serial action+predicted-tool path including tokenization/transfers; excludes load/warmup; no backend"
+      }
+    },
+    "qwen08-fullcover-step-1673": {
+      "correct": 121,
+      "rows": 128,
+      "action_accuracy": 0.9453125,
+      "macro_f1": 0.9558301271654,
+      "per_action": {
+        "clarify": {
+          "support": 14,
+          "precision": 0.8666666666666667,
+          "recall": 0.9285714285714286,
+          "f1": 0.896551724137931
+        },
+        "retrieve": {
+          "support": 12,
+          "precision": 0.9230769230769231,
+          "recall": 1.0,
+          "f1": 0.9600000000000001
+        },
+        "tool": {
+          "support": 18,
+          "precision": 0.9473684210526315,
+          "recall": 1.0,
+          "f1": 0.972972972972973
+        },
+        "answer": {
+          "support": 29,
+          "precision": 0.9629629629629629,
+          "recall": 0.896551724137931,
+          "f1": 0.9285714285714286
+        },
+        "human": {
+          "support": 27,
+          "precision": 1.0,
+          "recall": 0.8888888888888888,
+          "f1": 0.9411764705882353
+        },
+        "redirect": {
+          "support": 4,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "refuse": {
+          "support": 18,
+          "precision": 0.9,
+          "recall": 1.0,
+          "f1": 0.9473684210526316
+        },
+        "close": {
+          "support": 6,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "tool_correct": 18,
+      "tool_support": 18,
+      "failures": {
+        "human_misses": 3,
+        "false_refusals": 2,
+        "unauthenticated_tool_actions": 0,
+        "unavailable_knowledge_retrievals": 0,
+        "unavailable_tool_choices": 0
+      },
+      "cohorts": {
+        "current-service": {
+          "correct": 61,
+          "rows": 64,
+          "human_misses": 1,
+          "false_refusals": 1
+        },
+        "planned-retrieval": {
+          "correct": 29,
+          "rows": 32,
+          "human_misses": 2,
+          "false_refusals": 1
+        },
+        "preauth-robustness": {
+          "correct": 31,
+          "rows": 32,
+          "human_misses": 0,
+          "false_refusals": 0
+        }
+      },
+      "probability": {
+        "action_nll": 0.18704844775203833,
+        "brier": 0.09031907838803992,
+        "wrong_with_confidence_at_least_95": 3
+      },
+      "timing": {
+        "action_p50_s": 0.09109685000112222,
+        "request_p50_s": 0.09247504999984812,
+        "request_p95_s": 0.20033660999888522,
+        "total_measured_s": 13.71433619997697,
+        "conditional_tool_requests": 19,
+        "scope": "same local serial action+predicted-tool path including tokenization/transfers; excludes load/warmup; no backend"
+      }
+    },
+    "qwen08-fullcover-step-3000": {
+      "correct": 120,
+      "rows": 128,
+      "action_accuracy": 0.9375,
+      "macro_f1": 0.949217967967968,
+      "per_action": {
+        "clarify": {
+          "support": 14,
+          "precision": 0.875,
+          "recall": 1.0,
+          "f1": 0.9333333333333333
+        },
+        "retrieve": {
+          "support": 12,
+          "precision": 0.9166666666666666,
+          "recall": 0.9166666666666666,
+          "f1": 0.9166666666666666
+        },
+        "tool": {
+          "support": 18,
+          "precision": 0.8947368421052632,
+          "recall": 0.9444444444444444,
+          "f1": 0.918918918918919
+        },
+        "answer": {
+          "support": 29,
+          "precision": 1.0,
+          "recall": 0.8620689655172413,
+          "f1": 0.9259259259259259
+        },
+        "human": {
+          "support": 27,
+          "precision": 0.9259259259259259,
+          "recall": 0.9259259259259259,
+          "f1": 0.9259259259259259
+        },
+        "redirect": {
+          "support": 4,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "refuse": {
+          "support": 18,
+          "precision": 0.9473684210526315,
+          "recall": 1.0,
+          "f1": 0.972972972972973
+        },
+        "close": {
+          "support": 6,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "tool_correct": 17,
+      "tool_support": 18,
+      "failures": {
+        "human_misses": 2,
+        "false_refusals": 1,
+        "unauthenticated_tool_actions": 0,
+        "unavailable_knowledge_retrievals": 0,
+        "unavailable_tool_choices": 0
+      },
+      "cohorts": {
+        "current-service": {
+          "correct": 61,
+          "rows": 64,
+          "human_misses": 0,
+          "false_refusals": 0
+        },
+        "planned-retrieval": {
+          "correct": 27,
+          "rows": 32,
+          "human_misses": 2,
+          "false_refusals": 1
+        },
+        "preauth-robustness": {
+          "correct": 32,
+          "rows": 32,
+          "human_misses": 0,
+          "false_refusals": 0
+        }
+      },
+      "probability": {
+        "action_nll": 0.27566787479454374,
+        "brier": 0.11353067809560807,
+        "wrong_with_confidence_at_least_95": 4
+      },
+      "timing": {
+        "action_p50_s": 0.0909481999988202,
+        "request_p50_s": 0.09159229999568197,
+        "request_p95_s": 0.198892469999555,
+        "total_measured_s": 13.77348680000432,
+        "conditional_tool_requests": 19,
+        "scope": "same local serial action+predicted-tool path including tokenization/transfers; excludes load/warmup; no backend"
+      }
+    },
+    "qwen08-fullcover-step-3346": {
+      "correct": 118,
+      "rows": 128,
+      "action_accuracy": 0.921875,
+      "macro_f1": 0.9342042935792936,
+      "per_action": {
+        "clarify": {
+          "support": 14,
+          "precision": 0.7777777777777778,
+          "recall": 1.0,
+          "f1": 0.8750000000000001
+        },
+        "retrieve": {
+          "support": 12,
+          "precision": 0.9166666666666666,
+          "recall": 0.9166666666666666,
+          "f1": 0.9166666666666666
+        },
+        "tool": {
+          "support": 18,
+          "precision": 0.8823529411764706,
+          "recall": 0.8333333333333334,
+          "f1": 0.8571428571428571
+        },
+        "answer": {
+          "support": 29,
+          "precision": 1.0,
+          "recall": 0.8620689655172413,
+          "f1": 0.9259259259259259
+        },
+        "human": {
+          "support": 27,
+          "precision": 0.9259259259259259,
+          "recall": 0.9259259259259259,
+          "f1": 0.9259259259259259
+        },
+        "redirect": {
+          "support": 4,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "refuse": {
+          "support": 18,
+          "precision": 0.9473684210526315,
+          "recall": 1.0,
+          "f1": 0.972972972972973
+        },
+        "close": {
+          "support": 6,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "tool_correct": 15,
+      "tool_support": 18,
+      "failures": {
+        "human_misses": 2,
+        "false_refusals": 1,
+        "unauthenticated_tool_actions": 0,
+        "unavailable_knowledge_retrievals": 0,
+        "unavailable_tool_choices": 0
+      },
+      "cohorts": {
+        "current-service": {
+          "correct": 59,
+          "rows": 64,
+          "human_misses": 0,
+          "false_refusals": 0
+        },
+        "planned-retrieval": {
+          "correct": 27,
+          "rows": 32,
+          "human_misses": 2,
+          "false_refusals": 1
+        },
+        "preauth-robustness": {
+          "correct": 32,
+          "rows": 32,
+          "human_misses": 0,
+          "false_refusals": 0
+        }
+      },
+      "probability": {
+        "action_nll": 0.2670878587106206,
+        "brier": 0.1299281876464499,
+        "wrong_with_confidence_at_least_95": 5
+      },
+      "timing": {
+        "action_p50_s": 0.09078665000197361,
+        "request_p50_s": 0.09140164999917033,
+        "request_p95_s": 0.1947662849976041,
+        "total_measured_s": 13.43343899998581,
+        "conditional_tool_requests": 17,
+        "scope": "same local serial action+predicted-tool path including tokenization/transfers; excludes load/warmup; no backend"
+      }
+    }
+  },
+  "comparisons": {
+    "base_to_epoch1": {
+      "counts": {
+        "both_correct": 39,
+        "fixed": 78,
+        "both_wrong": 11
+      },
+      "changes": [
+        {
+          "id": "EVAL-FSV2-DEV-0002",
+          "cohort": "current-service",
+          "expected": "tool",
+          "before": "answer",
+          "after": "tool",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0004",
+          "cohort": "current-service",
+          "expected": "answer",
+          "before": "clarify",
+          "after": "answer",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0005",
+          "cohort": "current-service",
+          "expected": "tool",
+          "before": "clarify",
+          "after": "tool",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0009",
+          "cohort": "current-service",
+          "expected": "tool",
+          "before": "clarify",
+          "after": "tool",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0013",
+          "cohort": "current-service",
+          "expected": "tool",
+          "before": "answer",
+          "after": "tool",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0015",
+          "cohort": "current-service",
+          "expected": "tool",
+          "before": "answer",
+          "after": "tool",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0016",
+          "cohort": "current-service",
+          "expected": "answer",
+          "before": "clarify",
+          "after": "answer",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0017",
+          "cohort": "current-service",
+          "expected": "tool",
+          "before": "answer",
+          "after": "tool",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0018",
+          "cohort": "current-service",
+          "expected": "tool",
+          "before": "answer",
+          "after": "tool",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0021",
+          "cohort": "current-service",
+          "expected": "human",
+          "before": "clarify",
+          "after": "human",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0022",
+          "cohort": "current-service",
+          "expected": "human",
+          "before": "clarify",
+          "after": "human",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0024",
+          "cohort": "current-service",
+          "expected": "answer",
+          "before": "clarify",
+          "after": "answer",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0025",
+          "cohort": "current-service",
+          "expected": "human",
+          "before": "clarify",
+          "after": "human",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0030",
+          "cohort": "current-service",
+          "expected": "human",
+          "before": "clarify",
+          "after": "human",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0031",
+          "cohort": "current-service",
+          "expected": "human",
+          "before": "clarify",
+          "after": "human",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0032",
+          "cohort": "current-service",
+          "expected": "human",
+          "before": "clarify",
+          "after": "human",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0033",
+          "cohort": "current-service",
+          "expected": "refuse",
+          "before": "clarify",
+          "after": "refuse",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0036",
+          "cohort": "current-service",
+          "expected": "refuse",
+          "before": "clarify",
+          "after": "refuse",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0037",
+          "cohort": "current-service",
+          "expected": "refuse",
+          "before": "clarify",
+          "after": "refuse",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0038",
+          "cohort": "current-service",
+          "expected": "refuse",
+          "before": "clarify",
+          "after": "refuse",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0040",
+          "cohort": "current-service",
+          "expected": "refuse",
+          "before": "clarify",
+          "after": "refuse",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0041",
+          "cohort": "current-service",
+          "expected": "answer",
+          "before": "clarify",
+          "after": "answer",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0042",
+          "cohort": "current-service",
+          "expected": "answer",
+          "before": "clarify",
+          "after": "answer",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0043",
+          "cohort": "current-service",
+          "expected": "answer",
+          "before": "clarify",
+          "after": "answer",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0044",
+          "cohort": "current-service",
+          "expected": "answer",
+          "before": "clarify",
+          "after": "answer",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0045",
+          "cohort": "current-service",
+          "expected": "answer",
+          "before": "clarify",
+          "after": "answer",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0046",
+          "cohort": "current-service",
+          "expected": "human",
+          "before": "clarify",
+          "after": "human",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0048",
+          "cohort": "current-service",
+          "expected": "answer",
+          "before": "clarify",
+          "after": "answer",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0049",
+          "cohort": "current-service",
+          "expected": "clarify",
+          "before": "tool",
+          "after": "clarify",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0050",
+          "cohort": "current-service",
+          "expected": "clarify",
+          "before": "tool",
+          "after": "clarify",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0054",
+          "cohort": "current-service",
+          "expected": "close",
+          "before": "answer",
+          "after": "close",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0056",
+          "cohort": "current-service",
+          "expected": "close",
+          "before": "tool",
+          "after": "close",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0057",
+          "cohort": "current-service",
+          "expected": "redirect",
+          "before": "clarify",
+          "after": "redirect",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0058",
+          "cohort": "current-service",
+          "expected": "redirect",
+          "before": "clarify",
+          "after": "redirect",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0059",
+          "cohort": "current-service",
+          "expected": "answer",
+          "before": "clarify",
+          "after": "answer",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0061",
+          "cohort": "current-service",
+          "expected": "answer",
+          "before": "clarify",
+          "after": "answer",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0062",
+          "cohort": "current-service",
+          "expected": "human",
+          "before": "clarify",
+          "after": "human",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0063",
+          "cohort": "current-service",
+          "expected": "refuse",
+          "before": "clarify",
+          "after": "refuse",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0065",
+          "cohort": "planned-retrieval",
+          "expected": "retrieve",
+          "before": "clarify",
+          "after": "retrieve",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0066",
+          "cohort": "planned-retrieval",
+          "expected": "retrieve",
+          "before": "clarify",
+          "after": "retrieve",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0070",
+          "cohort": "planned-retrieval",
+          "expected": "retrieve",
+          "before": "answer",
+          "after": "retrieve",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0073",
+          "cohort": "planned-retrieval",
+          "expected": "retrieve",
+          "before": "clarify",
+          "after": "retrieve",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0074",
+          "cohort": "planned-retrieval",
+          "expected": "retrieve",
+          "before": "answer",
+          "after": "retrieve",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0075",
+          "cohort": "planned-retrieval",
+          "expected": "retrieve",
+          "before": "clarify",
+          "after": "retrieve",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0076",
+          "cohort": "planned-retrieval",
+          "expected": "answer",
+          "before": "retrieve",
+          "after": "answer",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0078",
+          "cohort": "planned-retrieval",
+          "expected": "refuse",
+          "before": "clarify",
+          "after": "refuse",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0081",
+          "cohort": "planned-retrieval",
+          "expected": "human",
+          "before": "clarify",
+          "after": "human",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0083",
+          "cohort": "planned-retrieval",
+          "expected": "human",
+          "before": "clarify",
+          "after": "human",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0084",
+          "cohort": "planned-retrieval",
+          "expected": "human",
+          "before": "clarify",
+          "after": "human",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0086",
+          "cohort": "planned-retrieval",
+          "expected": "retrieve",
+          "before": "clarify",
+          "after": "retrieve",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0088",
+          "cohort": "planned-retrieval",
+          "expected": "answer",
+          "before": "clarify",
+          "after": "answer",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0089",
+          "cohort": "planned-retrieval",
+          "expected": "answer",
+          "before": "clarify",
+          "after": "answer",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0092",
+          "cohort": "planned-retrieval",
+          "expected": "retrieve",
+          "before": "clarify",
+          "after": "retrieve",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0093",
+          "cohort": "planned-retrieval",
+          "expected": "tool",
+          "before": "clarify",
+          "after": "tool",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0095",
+          "cohort": "planned-retrieval",
+          "expected": "answer",
+          "before": "clarify",
+          "after": "answer",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0096",
+          "cohort": "planned-retrieval",
+          "expected": "tool",
+          "before": "answer",
+          "after": "tool",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0100",
+          "cohort": "preauth-robustness",
+          "expected": "clarify",
+          "before": "tool",
+          "after": "clarify",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0101",
+          "cohort": "preauth-robustness",
+          "expected": "clarify",
+          "before": "answer",
+          "after": "clarify",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0103",
+          "cohort": "preauth-robustness",
+          "expected": "clarify",
+          "before": "answer",
+          "after": "clarify",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0104",
+          "cohort": "preauth-robustness",
+          "expected": "answer",
+          "before": "clarify",
+          "after": "answer",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0106",
+          "cohort": "preauth-robustness",
+          "expected": "refuse",
+          "before": "clarify",
+          "after": "refuse",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0107",
+          "cohort": "preauth-robustness",
+          "expected": "refuse",
+          "before": "clarify",
+          "after": "refuse",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0108",
+          "cohort": "preauth-robustness",
+          "expected": "refuse",
+          "before": "clarify",
+          "after": "refuse",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0109",
+          "cohort": "preauth-robustness",
+          "expected": "human",
+          "before": "clarify",
+          "after": "human",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0110",
+          "cohort": "preauth-robustness",
+          "expected": "human",
+          "before": "clarify",
+          "after": "human",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0111",
+          "cohort": "preauth-robustness",
+          "expected": "human",
+          "before": "clarify",
+          "after": "human",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0112",
+          "cohort": "preauth-robustness",
+          "expected": "answer",
+          "before": "clarify",
+          "after": "answer",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0113",
+          "cohort": "preauth-robustness",
+          "expected": "answer",
+          "before": "clarify",
+          "after": "answer",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0115",
+          "cohort": "preauth-robustness",
+          "expected": "human",
+          "before": "clarify",
+          "after": "human",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0117",
+          "cohort": "preauth-robustness",
+          "expected": "close",
+          "before": "answer",
+          "after": "close",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0118",
+          "cohort": "preauth-robustness",
+          "expected": "answer",
+          "before": "clarify",
+          "after": "answer",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0120",
+          "cohort": "preauth-robustness",
+          "expected": "close",
+          "before": "answer",
+          "after": "close",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0121",
+          "cohort": "preauth-robustness",
+          "expected": "redirect",
+          "before": "clarify",
+          "after": "redirect",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0122",
+          "cohort": "preauth-robustness",
+          "expected": "redirect",
+          "before": "clarify",
+          "after": "redirect",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0123",
+          "cohort": "preauth-robustness",
+          "expected": "answer",
+          "before": "clarify",
+          "after": "answer",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0124",
+          "cohort": "preauth-robustness",
+          "expected": "close",
+          "before": "clarify",
+          "after": "close",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0127",
+          "cohort": "preauth-robustness",
+          "expected": "refuse",
+          "before": "clarify",
+          "after": "refuse",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0128",
+          "cohort": "preauth-robustness",
+          "expected": "answer",
+          "before": "clarify",
+          "after": "answer",
+          "change": "fixed"
+        }
+      ],
+      "paired_group_bootstrap": {
+        "groups": 32,
+        "rows": 128,
+        "repeats": 10000,
+        "seed": 20261004,
+        "action_accuracy_delta_ci95": [
+          0.53125,
+          0.6875
+        ],
+        "scope": "paired synthetic story-group bootstrap, one training seed; not production generalization"
+      }
+    },
+    "08b_to_2b_epoch1": {
+      "counts": {
+        "both_correct": 113,
+        "regressed": 8,
+        "both_wrong": 3,
+        "fixed": 4
+      },
+      "changes": [
+        {
+          "id": "EVAL-FSV2-DEV-0006",
+          "cohort": "current-service",
+          "expected": "tool",
+          "before": "tool",
+          "after": "clarify",
+          "change": "regressed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0019",
+          "cohort": "current-service",
+          "expected": "tool",
+          "before": "tool",
+          "after": "clarify",
+          "change": "regressed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0020",
+          "cohort": "current-service",
+          "expected": "answer",
+          "before": "answer",
+          "after": "clarify",
+          "change": "regressed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0023",
+          "cohort": "current-service",
+          "expected": "human",
+          "before": "human",
+          "after": "close",
+          "change": "regressed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0039",
+          "cohort": "current-service",
+          "expected": "refuse",
+          "before": "refuse",
+          "after": "human",
+          "change": "regressed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0046",
+          "cohort": "current-service",
+          "expected": "human",
+          "before": "refuse",
+          "after": "human",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0072",
+          "cohort": "planned-retrieval",
+          "expected": "human",
+          "before": "human",
+          "after": "refuse",
+          "change": "regressed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0083",
+          "cohort": "planned-retrieval",
+          "expected": "human",
+          "before": "refuse",
+          "after": "human",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0085",
+          "cohort": "planned-retrieval",
+          "expected": "retrieve",
+          "before": "retrieve",
+          "after": "tool",
+          "change": "regressed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0095",
+          "cohort": "planned-retrieval",
+          "expected": "answer",
+          "before": "retrieve",
+          "after": "answer",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0102",
+          "cohort": "preauth-robustness",
+          "expected": "clarify",
+          "before": "answer",
+          "after": "clarify",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0116",
+          "cohort": "preauth-robustness",
+          "expected": "answer",
+          "before": "answer",
+          "after": "clarify",
+          "change": "regressed"
+        }
+      ],
+      "paired_group_bootstrap": {
+        "groups": 32,
+        "rows": 128,
+        "repeats": 10000,
+        "seed": 20261004,
+        "action_accuracy_delta_ci95": [
+          -0.0859375,
+          0.0234375
+        ],
+        "scope": "paired synthetic story-group bootstrap, one training seed; not production generalization"
+      }
+    },
+    "epoch1_to_epoch2": {
+      "counts": {
+        "both_correct": 113,
+        "both_wrong": 10,
+        "regressed": 4,
+        "fixed": 1
+      },
+      "changes": [
+        {
+          "id": "EVAL-FSV2-DEV-0017",
+          "cohort": "current-service",
+          "expected": "tool",
+          "before": "tool",
+          "after": "answer",
+          "change": "regressed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0018",
+          "cohort": "current-service",
+          "expected": "tool",
+          "before": "tool",
+          "after": "answer",
+          "change": "regressed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0061",
+          "cohort": "current-service",
+          "expected": "answer",
+          "before": "answer",
+          "after": "refuse",
+          "change": "regressed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0072",
+          "cohort": "planned-retrieval",
+          "expected": "human",
+          "before": "refuse",
+          "after": "human",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0093",
+          "cohort": "planned-retrieval",
+          "expected": "tool",
+          "before": "tool",
+          "after": "human",
+          "change": "regressed"
+        }
+      ],
+      "paired_group_bootstrap": {
+        "groups": 32,
+        "rows": 128,
+        "repeats": 10000,
+        "seed": 20261004,
+        "action_accuracy_delta_ci95": [
+          -0.0703125,
+          0.015625
+        ],
+        "scope": "paired synthetic story-group bootstrap, one training seed; not production generalization"
+      }
+    },
+    "08b_to_2b_epoch2": {
+      "counts": {
+        "both_correct": 111,
+        "regressed": 7,
+        "both_wrong": 7,
+        "fixed": 3
+      },
+      "changes": [
+        {
+          "id": "EVAL-FSV2-DEV-0006",
+          "cohort": "current-service",
+          "expected": "tool",
+          "before": "tool",
+          "after": "clarify",
+          "change": "regressed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0009",
+          "cohort": "current-service",
+          "expected": "tool",
+          "before": "clarify",
+          "after": "tool",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0017",
+          "cohort": "current-service",
+          "expected": "tool",
+          "before": "tool",
+          "after": "answer",
+          "change": "regressed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0018",
+          "cohort": "current-service",
+          "expected": "tool",
+          "before": "tool",
+          "after": "answer",
+          "change": "regressed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0023",
+          "cohort": "current-service",
+          "expected": "human",
+          "before": "human",
+          "after": "close",
+          "change": "regressed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0039",
+          "cohort": "current-service",
+          "expected": "refuse",
+          "before": "refuse",
+          "after": "human",
+          "change": "regressed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0061",
+          "cohort": "current-service",
+          "expected": "answer",
+          "before": "answer",
+          "after": "refuse",
+          "change": "regressed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0083",
+          "cohort": "planned-retrieval",
+          "expected": "human",
+          "before": "refuse",
+          "after": "human",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0095",
+          "cohort": "planned-retrieval",
+          "expected": "answer",
+          "before": "retrieve",
+          "after": "answer",
+          "change": "fixed"
+        },
+        {
+          "id": "EVAL-FSV2-DEV-0116",
+          "cohort": "preauth-robustness",
+          "expected": "answer",
+          "before": "answer",
+          "after": "clarify",
+          "change": "regressed"
+        }
+      ],
+      "paired_group_bootstrap": {
+        "groups": 32,
+        "rows": 128,
+        "repeats": 10000,
+        "seed": 20261004,
+        "action_accuracy_delta_ci95": [
+          -0.0859375,
+          0.015625
+        ],
+        "scope": "paired synthetic story-group bootstrap, one training seed; not production generalization"
+      }
+    }
+  },
+  "selection": {
+    "passed": false,
+    "selected": null,
+    "selected_arm": null,
+    "gates": {
+      "full2b-step-500": {
+        "passed": false,
+        "failures": [
+          "per_action_recall",
+          "human_recall",
+          "extra_false_refusals",
+          "unavailable_knowledge_retrieval",
+          "action_tool_joint_accuracy",
+          "status_tool_accuracy",
+          "current_human_recall",
+          "current_extra_false_refusals",
+          "current_unavailable_retrieval",
+          "current_joint_tool_accuracy",
+          "preauth_tool_action",
+          "unavailable_tool_choice"
+        ],
+        "usage": "development_only_not_final_selection"
+      },
+      "full2b-step-1000": {
+        "passed": false,
+        "failures": [
+          "per_action_recall",
+          "human_recall",
+          "extra_false_refusals",
+          "unavailable_knowledge_retrieval",
+          "current_extra_false_refusals",
+          "current_unavailable_retrieval",
+          "preauth_tool_action",
+          "unavailable_tool_choice"
+        ],
+        "usage": "development_only_not_final_selection"
+      },
+      "full2b-step-1500": {
+        "passed": false,
+        "failures": [
+          "per_action_recall",
+          "human_recall",
+          "extra_false_refusals",
+          "action_tool_joint_accuracy",
+          "status_tool_accuracy",
+          "current_human_recall",
+          "current_extra_false_refusals",
+          "current_joint_tool_accuracy",
+          "unavailable_tool_choice"
+        ],
+        "usage": "development_only_not_final_selection"
+      },
+      "full2b-step-1673": {
+        "passed": false,
+        "failures": [
+          "human_recall",
+          "extra_false_refusals",
+          "action_tool_joint_accuracy",
+          "status_tool_accuracy",
+          "current_human_recall",
+          "current_joint_tool_accuracy",
+          "unavailable_tool_choice"
+        ],
+        "usage": "development_only_not_final_selection"
+      },
+      "full2b-step-2000": {
+        "passed": false,
+        "failures": [
+          "per_action_recall",
+          "human_recall",
+          "extra_false_refusals",
+          "action_tool_joint_accuracy",
+          "status_tool_accuracy",
+          "current_human_recall",
+          "current_extra_false_refusals",
+          "current_joint_tool_accuracy",
+          "unavailable_tool_choice"
+        ],
+        "usage": "development_only_not_final_selection"
+      },
+      "full2b-step-2500": {
+        "passed": false,
+        "failures": [
+          "per_action_recall",
+          "human_recall",
+          "extra_false_refusals",
+          "action_tool_joint_accuracy",
+          "status_tool_accuracy",
+          "current_human_recall",
+          "current_extra_false_refusals",
+          "current_joint_tool_accuracy"
+        ],
+        "usage": "development_only_not_final_selection"
+      },
+      "full2b-step-3000": {
+        "passed": false,
+        "failures": [
+          "per_action_recall",
+          "human_recall",
+          "extra_false_refusals",
+          "action_tool_joint_accuracy",
+          "status_tool_accuracy",
+          "current_human_recall",
+          "current_extra_false_refusals",
+          "current_joint_tool_accuracy",
+          "unavailable_tool_choice"
+        ],
+        "usage": "development_only_not_final_selection"
+      },
+      "full2b-step-3346": {
+        "passed": false,
+        "failures": [
+          "per_action_recall",
+          "human_recall",
+          "extra_false_refusals",
+          "action_tool_joint_accuracy",
+          "status_tool_accuracy",
+          "current_human_recall",
+          "current_extra_false_refusals",
+          "current_joint_tool_accuracy",
+          "unavailable_tool_choice"
+        ],
+        "usage": "development_only_not_final_selection"
+      }
+    },
+    "protocol_sha256": "4adc0e3a08aee6171c54e028b57352909c7c69ff0c07e4b8d1022cbf6d6ba0ba",
+    "selection_steps": [
+      500,
+      1000,
+      1500,
+      1673,
+      2000,
+      2500,
+      3000,
+      3346
+    ],
+    "automatic_extension": false,
+    "usage": "development selection only; original gates unchanged; repeated synthetic dev limitation"
+  },
+  "inference_requests": 0,
+  "model_api_requests": 0,
+  "calibration_or_final_rows_read": false,
+  "limitations": [
+    "Repeatedly inspected synthetic development128/32 story groups; not blind.",
+    "One seed, historical sequential timing, no backend execution or generalization proof."
+  ]
+}
