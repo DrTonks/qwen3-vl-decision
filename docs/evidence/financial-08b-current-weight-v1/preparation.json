@@ -1,0 +1,64 @@
+{
+  "version": "financial-08b-current-weight-v1",
+  "status": "prepared_not_training_ready",
+  "config_sha256": "4d4bb4ed9bbdc8ede52457dff387528fc405b80bfc83901fcd33820d3acd115d",
+  "baseline_protocol_sha256": "f7b1b6e85c809bb7adb55823eef75adfd88b31cede78ba5c603f0457de5952d8",
+  "recipe_sha256": "83a8da3c9e7647d5a9b24a41ddd5ce3b3b5c7785bd776ccad02a621347c2910c",
+  "source_sha256": {
+    "data/financial-sampling-study-v1/pool-v1/train.json": "8b524ae86533d7b55e1add23e4b0b44591c68b615ecf767f34ec4a0d5a166f72",
+    "data/financial-state-pair-study-v1/schedule-v1/additions.json": "f5e78f3984f5dde66509160bebe2d4dc66f4b45c909790bf75b27f5331c14312",
+    "data/financial-full-coverage-study-v1/schedule-v1/plan.json": "cd39ae825e6e41de598459f7f378fc73023641052949423d9f6c8f0cb8fc5d8e",
+    "configs/support-financial-v2.json": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+    "configs/financial-full-coverage-execution-v1.json": "d279f2395264f2e94df8f00761445412e7e83ead6d5453bafd0c147b8551077e",
+    "configs/financial-sampling-study-v1.json": "74c03b1f48b603fb9c916e993a4b4e80d6e38f9307fae591d31086537c23fe36",
+    "configs/qwen35-model-source.json": "d133981b764cbfdbf9b2758e84f0d1bcba906801d2c0921d9e4bdd42d08fef11",
+    "src/qwenlab/financial_train.py": "1d6cc12c18531f01d1ab21aae1d7ae19f8e439e916bd87fd2152ed6ceb49c917",
+    "src/qwenlab/financial_full_coverage_cycle.py": "71dcb24b91e346eb23b52f6cd275499faa6edba5af208689e0990e4749f77a06",
+    "src/qwenlab/financial_sampling_plan.py": "b599e6f3cb67f829c7eae18ebb45dd47f2406cea3277955defdf6de526eabb98"
+  },
+  "weighting": {
+    "rows": 13378,
+    "steps": 3346,
+    "layer_counts": {
+      "preauth": 4475,
+      "planned": 7108,
+      "current-component": 851,
+      "current-node": 944
+    },
+    "raw_weights": {
+      "current-node": 3,
+      "current-component": 3,
+      "planned": 1,
+      "preauth": 1
+    },
+    "pool_mean_raw_weight": 1.2683510240693676,
+    "normalized_layer_weights": {
+      "current-node": 2.3652758132956153,
+      "current-component": 2.3652758132956153,
+      "planned": 0.7884252710985384,
+      "preauth": 0.7884252710985384
+    },
+    "objective_mass_share": {
+      "current-node": 0.1669024045261669,
+      "current-component": 0.15045968882602545,
+      "planned": 0.4189061763319189,
+      "preauth": 0.26373173031588876
+    },
+    "weighted_rows_sha256": "f9b32b5024da0bb325e3e6cb7944f7f05e33009889f50fae1bfbcd0b91d36cb8",
+    "step_rows_sha256": "183573e182afb3604757571c49e952709339eb9e4717dea6d73704c99e02f39d",
+    "row_layers_sha256": "cba0ba2f83ce2c106228a1d3d7386b15fc14ea508abdc2121491d436fd80d22e",
+    "epochs": 2
+  },
+  "implementation_sha256": "cf06e18610723fc49530b14fd7777773f66638390a4fb686693829bf6d1997a6",
+  "tests_sha256": "de80dbf04841a53186574e843110b275332981c76c9ce394e92d6bca67204de9",
+  "loss": "sum_i(w_i * (CE_action_i + 0.75 * I_tool_i * CE_tool_i)) / actual_batch_rows",
+  "weight_normalization": "fixed pool mean; never normalize by a microbatch or tool count",
+  "pending_before_main": [
+    "integrate independent cycle executor and bind this weighting manifest into checkpoints",
+    "25-step real GPU probe with cross-process pause/resume",
+    "record executor verification and freeze full execution protocol"
+  ],
+  "evaluation_examples_read": false,
+  "model_api_requests": 0,
+  "model_training_steps": 0
+}

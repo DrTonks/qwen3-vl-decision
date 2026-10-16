@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "independent_review": false,
+  "tests_passed": 14,
+  "command": ".venv-qwen35/Scripts/python.exe -m unittest discover -s tests -p test_financial_current_weight.py -v",
+  "files": {
+    "src/qwenlab/financial_current_weight.py": "cf06e18610723fc49530b14fd7777773f66638390a4fb686693829bf6d1997a6",
+    "tests/test_financial_current_weight.py": "de80dbf04841a53186574e843110b275332981c76c9ce394e92d6bca67204de9",
+    "configs/financial-08b-current-weight-v1.json": "4d4bb4ed9bbdc8ede52457dff387528fc405b80bfc83901fcd33820d3acd115d"
+  },
+  "preparation_sha256": "1700613606aabfe74703077dff0ffcc3d1521b318c422824f040f6dcf41c56e5",
+  "gradient_reference_tolerance": {
+    "rtol": 1e-12,
+    "atol": 1e-12
+  },
+  "cpu_separate_process_resume": "exact_parameters_optimizer_tensors_rng_after_two_further_updates",
+  "real_qwen_gpu_probe_completed": false,
+  "formal_training_started": false,
+  "model_api_requests": 0,
+  "limitation": "CPU toy model checks do not verify full Qwen checkpoint integration or GPU restoration."
+}

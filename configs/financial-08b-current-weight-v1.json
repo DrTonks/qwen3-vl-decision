@@ -1,0 +1,246 @@
+{
+  "version": "financial-08b-current-weight-v1",
+  "status": "preparation_only",
+  "training_enabled": false,
+  "model": "Qwen/Qwen3.5-0.8B",
+  "baseline_run": "financial-full-coverage-v1",
+  "baseline_protocol_sha256": "f7b1b6e85c809bb7adb55823eef75adfd88b31cede78ba5c603f0457de5952d8",
+  "intervention": "fixed per-row layer weight, normalized by training-pool mean",
+  "raw_weights": {
+    "current-node": 3,
+    "current-component": 3,
+    "planned": 1,
+    "preauth": 1
+  },
+  "sources": {
+    "data/financial-sampling-study-v1/pool-v1/train.json": "8b524ae86533d7b55e1add23e4b0b44591c68b615ecf767f34ec4a0d5a166f72",
+    "data/financial-state-pair-study-v1/schedule-v1/additions.json": "f5e78f3984f5dde66509160bebe2d4dc66f4b45c909790bf75b27f5331c14312",
+    "data/financial-full-coverage-study-v1/schedule-v1/plan.json": "cd39ae825e6e41de598459f7f378fc73023641052949423d9f6c8f0cb8fc5d8e",
+    "configs/support-financial-v2.json": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+    "configs/financial-full-coverage-execution-v1.json": "d279f2395264f2e94df8f00761445412e7e83ead6d5453bafd0c147b8551077e",
+    "configs/financial-sampling-study-v1.json": "74c03b1f48b603fb9c916e993a4b4e80d6e38f9307fae591d31086537c23fe36",
+    "configs/qwen35-model-source.json": "d133981b764cbfdbf9b2758e84f0d1bcba906801d2c0921d9e4bdd42d08fef11",
+    "src/qwenlab/financial_train.py": "1d6cc12c18531f01d1ab21aae1d7ae19f8e439e916bd87fd2152ed6ceb49c917",
+    "src/qwenlab/financial_full_coverage_cycle.py": "71dcb24b91e346eb23b52f6cd275499faa6edba5af208689e0990e4749f77a06",
+    "src/qwenlab/financial_sampling_plan.py": "b599e6f3cb67f829c7eae18ebb45dd47f2406cea3277955defdf6de526eabb98"
+  },
+  "baseline_recipe": {
+    "version": "financial-sampling-study-v1",
+    "status": "design_cpu_preflight_only",
+    "training_enabled": false,
+    "pool": "data/financial-sampling-study-v1/pool-v1",
+    "schedule_directory": "data/financial-full-coverage-study-v1/schedule-v1",
+    "model": "Qwen/Qwen3.5-0.8B",
+    "initial_adapter": null,
+    "seed": 20261004,
+    "sampling_seed": 20261004,
+    "seed_scope": "independent Python Random for offline sampling; reset torch/CUDA/numpy/python seeds identically before each fresh adapter; require identical initial adapter tensors SHA",
+    "arms": [
+      "fullcover"
+    ],
+    "execution_order": [
+      "fullcover"
+    ],
+    "steps_per_arm": 3346,
+    "effective_batch": 8,
+    "micro_batch": 2,
+    "gradient_accumulation": 4,
+    "learning_rate": 5e-05,
+    "warmup_steps": 100,
+    "scheduler": {
+      "type": "linear_warmup_then_linear_decay",
+      "total_steps": 3346,
+      "formula": "lr(s)=5e-5*min(s/100,(3346-s+1)/3246)"
+    },
+    "optimizer": {
+      "name": "torch.optim.AdamW",
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.01,
+      "amsgrad": false,
+      "foreach": false,
+      "fused": false,
+      "maximize": false,
+      "capturable": false,
+      "differentiable": false,
+      "zero_grad_set_to_none": true
+    },
+    "gradient_clipping": {
+      "max_norm": 1.0,
+      "norm_type": 2.0,
+      "nonfinite": "stop_and_report"
+    },
+    "precision": "bf16 frozen base / fp32 language-only LoRA; no NF4",
+    "lora": {
+      "r": 8,
+      "alpha": 16,
+      "dropout": 0.05,
+      "language_only_targets": [
+        "q_proj",
+        "v_proj",
+        "in_proj_qkv",
+        "in_proj_z"
+      ]
+    },
+    "attention": "sdpa",
+    "gradient_checkpointing": {
+      "enabled": true,
+      "use_reentrant": false
+    },
+    "model_use_cache": false,
+    "torch_cpu_threads": 6,
+    "loss": {
+      "action_weight": 1.0,
+      "tool_weight": 0.75,
+      "formula": "sum_i(CE_action_i + 0.75 * I(true_action_i == tool) * CE_tool_i) / B",
+      "B": "actual number of original business rows in the effective batch, including the last partial batch",
+      "tool_supervision": "true tool rows only; denominator is all original rows, not only tool rows; do not divide each tool row by 1.75",
+      "weighting_note": "matches previous loss convention; tool rows intentionally carry an extra supervised objective, so equal row exposure does not imply equal total loss weight"
+    },
+    "max_input_tokens": 2048,
+    "truncate": false,
+    "padding_side": "left",
+    "sampling": {
+      "version": "financial-full-coverage-execution-v1",
+      "epochs": 2,
+      "rows": 13378,
+      "batch": 8,
+      "steps_per_epoch": 1673,
+      "steps_per_arm": 3346,
+      "seed": 20261004,
+      "sampling_seed": 20261005,
+      "warmup_steps": 100,
+      "learning_rate": 5e-05,
+      "evaluation_steps": [
+        500,
+        1000,
+        1500,
+        1673,
+        2000,
+        2500,
+        3000,
+        3346
+      ],
+      "model_api_requests": 0,
+      "deployment_enabled": false,
+      "selection": "passing original gates then macro_f1, joint_tool_accuracy, earlier_step",
+      "early_stop": {
+        "minimum_complete_epochs": 1,
+        "consecutive_evaluations": 3,
+        "macro_f1_drop": 0.02,
+        "nll_increase": 0.05,
+        "require_no_boundary_improvement": true
+      }
+    },
+    "diagnostic_steps": [
+      500,
+      1000,
+      1500,
+      1673,
+      2000,
+      2500,
+      3000,
+      3346
+    ],
+    "selection_steps": [
+      500,
+      1000,
+      1500,
+      1673,
+      2000,
+      2500,
+      3000,
+      3346
+    ],
+    "selection_order": [
+      "original gates; macro_f1; joint_tool_accuracy; earlier_step"
+    ],
+    "checkpoint_save_interval": 50,
+    "probe": {
+      "required_before_main": true,
+      "steps_per_arm": 25,
+      "total_steps": 25,
+      "train_only": true,
+      "discard_adapters": true,
+      "schedule": "first25; full3346-stepLR"
+    },
+    "pause_resume_requirements": [
+      "checkpoint at completed optimizer step",
+      "persist step cursor, optimizer, RNG and protocol/schedule hashes atomically",
+      "no reshuffle on resume",
+      "single GPU owner",
+      "actual save/pause/resume smoke before full run"
+    ],
+    "evaluation": {
+      "development": "existing128 synthetic cases for development/regression; already inspected, not blind",
+      "base": "fresh same-prompt/preparation base required; do not reuse mismatched old timings",
+      "calibration": "only selected passing arm; use original temperature/threshold grid; no training",
+      "final": "selected candidate + base once after calibration policy freeze; no selecting or retraining from errors",
+      "uncertainty": "denominators, group paired bootstrap, one training seed only; no production claim",
+      "input_scope": "frozen component inputs; current-service cohort is not automatically actual Node end-to-end"
+    },
+    "calibration": {
+      "temperatures": [
+        0.25,
+        0.5,
+        0.75,
+        1,
+        1.5,
+        2,
+        3,
+        4
+      ],
+      "thresholds": [
+        0,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.85,
+        0.9,
+        0.95,
+        0.98
+      ],
+      "usage": "after development selection only; action NLL temperature, then largest accepted coverage with >=95% observed accuracy and zero human misses/false refusals/unavailable retrieval; defer unexecuted; zero accepted rows is not success",
+      "never_train": true
+    },
+    "stop_policy": "maximum2 complete epochs; early stop only three persistent joint deteriorations after epoch1",
+    "model_api_requests": 0,
+    "deployment_enabled": false,
+    "executor_status": "complete-coverage execution; CPU self verification explicitly recorded",
+    "development_gate": {
+      "minimum_macro_f1_gain_over_same_prompt_base": 0.01,
+      "minimum_per_action_recall": 0.8,
+      "minimum_human_recall": 0.95,
+      "maximum_extra_human_misses_over_base": 0,
+      "maximum_extra_false_refusals_on_non_refuse_over_base": 0,
+      "maximum_unavailable_knowledge_retrievals": 0,
+      "minimum_joint_action_tool_accuracy_on_true_tool": 0.9,
+      "minimum_status_tool_accuracy": 0.9
+    },
+    "current_service_additional_gate": {
+      "minimum_human_recall": 0.95,
+      "maximum_extra_human_misses_over_base": 0,
+      "maximum_extra_false_refusals_on_non_refuse_over_base": 0,
+      "maximum_unavailable_knowledge_retrievals": 0,
+      "minimum_joint_action_tool_accuracy_on_true_tool": 0.9
+    },
+    "preauth_additional_gate": {
+      "maximum_tool_actions": 0
+    },
+    "capability_additional_gate": {
+      "maximum_unavailable_tool_choices": 0
+    }
+  },
+  "no_calibration_or_final_rows_read": true,
+  "model_api_requests": 0,
+  "deployment_enabled": false,
+  "pending_before_main": [
+    "integrate independent cycle executor and bind this weighting manifest into checkpoints",
+    "25-step real GPU probe with cross-process pause/resume",
+    "record executor verification and freeze full execution protocol"
+  ]
+}

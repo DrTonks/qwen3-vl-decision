@@ -188,3 +188,39 @@ docs/evidence/financial-v5-current-development-v1/** -text
 scripts/audit-financial-2b-full-coverage.py -text
 docs/evidence/financial-2b-full-coverage-results-audit-v1/** -text
 docs/evidence/financial-2b-full-coverage-probe.json -text
+
+# Independent 0.8B current-business weighting preparation.
+configs/financial-08b-current-weight-v1.json -text
+src/qwenlab/financial_current_weight.py -text
+tests/test_financial_current_weight.py -text
+docs/evidence/financial-08b-current-weight-v1/** -text
+
+src/qwenlab/financial_jev_current.py -text
+tests/test_financial_jev_current.py -text
+docs/evidence/financial-jev-current-v1/** -text
+
+src/qwenlab/financial_jev_current_proxy.py -text
+tests/test_financial_jev_current_proxy.py -text
+docs/evidence/financial-jev-current-proxy-v1/** -text
+
+src/qwenlab/financial_jev_current_session.py -text
+src/qwenlab/financial_jev_proxy_recovery.py -text
+src/qwenlab/financial_jev_session_recovery.py -text
+docs/evidence/financial-jev-current-session-v1/** -text
+
+src/qwenlab/financial_jev_current_session_v2.py -text
+src/qwenlab/financial_jev_session_recovery_v2.py -text
+docs/evidence/financial-jev-current-session-v2/** -text
+src/qwenlab/financial_jev_current_audit.py -text
+tests/test_financial_jev_session_recovery_v2.py -text
+
+# Reproducible five-model percentage tables and exported observations.
+src/qwenlab/financial_comparison_tables.py -text
+docs/evidence/financial-five-model-comparison-v1/** -text
+
+tests/test_financial_jev_cache.py -text
+tests/test_financial_jev_current_session.py -text
+tests/test_financial_jev_current_session_v2.py -text
+tests/test_financial_jev_proxy_recovery.py -text
+tests/test_financial_jev_reference.py -text
+tests/test_financial_jev_session_recovery.py -text
