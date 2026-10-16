@@ -1,0 +1,22 @@
+{
+  "status": "blocked_http_451",
+  "authorization": "User explicitly answered 允许 to third-attempt, one-synthetic-sample, stop-on-failure scope.",
+  "total_attempted_requests": 3,
+  "successful_responses": 0,
+  "automatic_retries": 0,
+  "user_authorized_retries": 2,
+  "request": {
+    "state": "failed_or_uncertain",
+    "id": "EVAL-FSV2-DEV-0001",
+    "task": "action",
+    "request_sha256": "fded0ed54ee843c62b1728c726f5c778ba4cc04afec6cdb87117310f88755de3",
+    "started_at": "2026-10-16T08:59:38.008894+00:00",
+    "attempts": 3,
+    "prior_attempt_sha256": "520aaf867f8c9f280af2a1dbc6b9e4abf6d9a55e5f4afc935e0b07c0effc504a",
+    "explicit_user_retry": true,
+    "error": "HTTPError",
+    "http_status": 451,
+    "elapsed_s": 0.43175499999779277,
+    "response_detail": "{\"title\":\"Typesafe is not available in your region.\",\"status\":451}"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "files": {
+    "protocol.json": "8a15ada2c0c9d037d1ead4f342e7692042680800ccfadc79c46bbcb51556ff97",
+    "predictions.json": "6025fe3f6b0072dbcbf6dcc5693b20812a4a90e9f50bfe84a6ca36447f28a22b",
+    "metrics.json": "b715651851841773180e23eae53ce11c26fbc4f508e1b835ec10ecf8a8bbe904",
+    "completion.json": "335fd071e8774329e486698a5edad61dad2db6283075ca612f20289f8901cfe2"
+  },
+  "training_allowed": false,
+  "scope": "current development only; raw credential-free vendor responses kept locally"
+}

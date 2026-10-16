@@ -1,0 +1,3930 @@
+[
+  {
+    "id": "EVAL-FSV2-DEV-0001",
+    "split": "development",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "action_prediction": {
+      "choice": "tool",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.95,
+        "answer": 0.05,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.94,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": {
+      "choice": "queryLoanProducts",
+      "probabilities": {
+        "queryLoanProducts": 1.0,
+        "queryMyApplications": 0.0,
+        "queryApplicationDetail": 0.0,
+        "queryMyCreditScore": 0.0,
+        "explainApplicationStatus": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 1.6294089999937569,
+    "input_tokens": 2365,
+    "request_sha256": [
+      "fded0ed54ee843c62b1728c726f5c778ba4cc04afec6cdb87117310f88755de3",
+      "94ca4c95bde31777f0cd7264df3511192c10eb4af3b6e0343fe62aea9555c0c3"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0002",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.03,
+        "retrieve": 0.0,
+        "tool": 0.49,
+        "answer": 0.48,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.42,
+      "choice_probability_consistent": false
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 1.083354499998677,
+    "input_tokens": 1148,
+    "request_sha256": [
+      "59b3f2f98bfa8de77b53f310869400cfd852308479d603e7075a5512ef2f353c"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0003",
+    "split": "development",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "action_prediction": {
+      "choice": "tool",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.9400000000000001,
+        "answer": 0.06,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.93,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": {
+      "choice": "queryLoanProducts",
+      "probabilities": {
+        "queryLoanProducts": 1.0,
+        "queryMyApplications": 0.0,
+        "queryApplicationDetail": 0.0,
+        "queryMyCreditScore": 0.0,
+        "explainApplicationStatus": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 2.161942500002624,
+    "input_tokens": 2275,
+    "request_sha256": [
+      "404604d6e8f9dbaef5e676f6f20a92590f4c0012bac369faf42220751e8a2471",
+      "967f7ac4a231d3142d552e0fa5a0d2986f410ad871f9633af21acb6c098e676e"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0004",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.01,
+        "answer": 0.98,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.01,
+        "close": 0.0
+      },
+      "provider_confidence": 0.98,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3061624000038137,
+    "input_tokens": 1153,
+    "request_sha256": [
+      "042f42dd8db7c8767f39d105339c3365188f1f35d247687806df51d693d19907"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0005",
+    "split": "development",
+    "action": "tool",
+    "tool_name": "queryMyApplications",
+    "action_prediction": {
+      "choice": "tool",
+      "probabilities": {
+        "clarify": 0.01,
+        "retrieve": 0.0,
+        "tool": 0.99,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.99,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": {
+      "choice": "queryMyApplications",
+      "probabilities": {
+        "queryLoanProducts": 0.0,
+        "queryMyApplications": 1.0,
+        "queryApplicationDetail": 0.0,
+        "queryMyCreditScore": 0.0,
+        "explainApplicationStatus": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 1.7949272000041674,
+    "input_tokens": 2359,
+    "request_sha256": [
+      "4cbab76320f5564f2dd6d8ad3e128360a9897dc76fca0f923afb39010c48d7ed",
+      "2736e36d61783486dcbf64bc5b1fffb070dc63639bb3aba388dc62a86eb922be"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0006",
+    "split": "development",
+    "action": "tool",
+    "tool_name": "queryMyApplications",
+    "action_prediction": {
+      "choice": "tool",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 1.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": {
+      "choice": "queryMyApplications",
+      "probabilities": {
+        "queryLoanProducts": 0.0,
+        "queryMyApplications": 1.0,
+        "queryApplicationDetail": 0.0,
+        "queryMyCreditScore": 0.0,
+        "explainApplicationStatus": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 1.3840591000043787,
+    "input_tokens": 2355,
+    "request_sha256": [
+      "193481027dd16018d32a2079b2b9b9878b8faf4fc14ce4efc8855e0aa468db71",
+      "4511176979d2ad9838d53542010a23c5026acdfed24faa50536f4e929b1ce4c5"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0007",
+    "split": "development",
+    "action": "tool",
+    "tool_name": "queryMyApplications",
+    "action_prediction": {
+      "choice": "tool",
+      "probabilities": {
+        "clarify": 0.01,
+        "retrieve": 0.0,
+        "tool": 0.98,
+        "answer": 0.01,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.98,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": {
+      "choice": "queryMyApplications",
+      "probabilities": {
+        "queryLoanProducts": 0.01,
+        "queryMyApplications": 0.99,
+        "queryApplicationDetail": 0.0,
+        "queryMyCreditScore": 0.0,
+        "explainApplicationStatus": 0.0
+      },
+      "provider_confidence": 0.99,
+      "choice_probability_consistent": true
+    },
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.6304429000010714,
+    "input_tokens": 2347,
+    "request_sha256": [
+      "4497b51fcaacbb92e3713a4f27bb77704ab95810655bcd4ae7611f2792dba04f",
+      "60a305a209e82e369e2f52a3b9b66db00014b89d15bd7d717c1f25b30675e53f"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0008",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.09,
+        "answer": 0.9,
+        "human": 0.01,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.89,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3383006000003661,
+    "input_tokens": 1149,
+    "request_sha256": [
+      "a94a58a98dade095add8b935a8627160eb531a1cc895faf1818e08b5ca3de4aa"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0009",
+    "split": "development",
+    "action": "tool",
+    "tool_name": "queryApplicationDetail",
+    "action_prediction": {
+      "choice": "tool",
+      "probabilities": {
+        "clarify": 0.01,
+        "retrieve": 0.0,
+        "tool": 0.97,
+        "answer": 0.01,
+        "human": 0.01,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.97,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": {
+      "choice": "queryApplicationDetail",
+      "probabilities": {
+        "queryLoanProducts": 0.0,
+        "queryMyApplications": 0.0,
+        "queryApplicationDetail": 1.0,
+        "queryMyCreditScore": 0.0,
+        "explainApplicationStatus": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.6038725000034901,
+    "input_tokens": 2353,
+    "request_sha256": [
+      "169b367ab204ab26438c74a53131679d90d800a0d7d2cd6e4e0af1e418ace6e6",
+      "fb989b4a28afbe2119b7588e5a9f8dbdb5aee3499c0689c4c06b9192be0d3cf6"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0010",
+    "split": "development",
+    "action": "tool",
+    "tool_name": "queryApplicationDetail",
+    "action_prediction": {
+      "choice": "tool",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.97,
+        "answer": 0.02,
+        "human": 0.01,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.97,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": {
+      "choice": "queryApplicationDetail",
+      "probabilities": {
+        "queryLoanProducts": 0.0,
+        "queryMyApplications": 0.0,
+        "queryApplicationDetail": 1.0,
+        "queryMyCreditScore": 0.0,
+        "explainApplicationStatus": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.6298905000003288,
+    "input_tokens": 2357,
+    "request_sha256": [
+      "5ea5f29bced9944aa6b718fc61bdff5d1b0bd8cc64d06f924d7e3ddc1d277f64",
+      "840110435f8c5e23c59cb32880bfa439bc57ead940f9bd7eadb2f46a222154d5"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0011",
+    "split": "development",
+    "action": "tool",
+    "tool_name": "queryApplicationDetail",
+    "action_prediction": {
+      "choice": "tool",
+      "probabilities": {
+        "clarify": 0.01,
+        "retrieve": 0.0,
+        "tool": 0.98,
+        "answer": 0.01,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.98,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": {
+      "choice": "queryApplicationDetail",
+      "probabilities": {
+        "queryLoanProducts": 0.0,
+        "queryMyApplications": 0.01,
+        "queryApplicationDetail": 0.94,
+        "queryMyCreditScore": 0.0,
+        "explainApplicationStatus": 0.05
+      },
+      "provider_confidence": 0.92,
+      "choice_probability_consistent": true
+    },
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.6332240999981877,
+    "input_tokens": 2495,
+    "request_sha256": [
+      "c3d1d5b2660b076632532f1a3ed5c05e3ef91c30e146a46d69afc4a2bdafb869",
+      "8898422f48e62de12c5c54a5af8c934795cad3536b265a08114bd11d6e2f7e0b"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0012",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.23,
+        "retrieve": 0.0,
+        "tool": 0.06,
+        "answer": 0.67,
+        "human": 0.03,
+        "redirect": 0.0,
+        "refuse": 0.01,
+        "close": 0.0
+      },
+      "provider_confidence": 0.62,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 1.293288399996527,
+    "input_tokens": 1155,
+    "request_sha256": [
+      "2a76a32eb1dd9e137c8739551b8e40e8f28bdba56744f98af92263074b2041ed"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0013",
+    "split": "development",
+    "action": "tool",
+    "tool_name": "queryMyCreditScore",
+    "action_prediction": {
+      "choice": "tool",
+      "probabilities": {
+        "clarify": 0.01,
+        "retrieve": 0.0,
+        "tool": 0.98,
+        "answer": 0.01,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.98,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": {
+      "choice": "queryMyCreditScore",
+      "probabilities": {
+        "queryLoanProducts": 0.0,
+        "queryMyApplications": 0.0,
+        "queryApplicationDetail": 0.0,
+        "queryMyCreditScore": 1.0,
+        "explainApplicationStatus": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.6295062999997754,
+    "input_tokens": 2351,
+    "request_sha256": [
+      "8d8aee5caf2d407d68dca5beff002fcced77d1460e12ffacbb57fd4cc8228dad",
+      "ffc09b5d0e44bddb31554170a97d556dad976f112177345bbc3ec407398d027f"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0014",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.04,
+        "retrieve": 0.0,
+        "tool": 0.22,
+        "answer": 0.66,
+        "human": 0.05,
+        "redirect": 0.0,
+        "refuse": 0.03,
+        "close": 0.0
+      },
+      "provider_confidence": 0.61,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.5312563000043156,
+    "input_tokens": 1146,
+    "request_sha256": [
+      "17260471d54d47d59ea586e4c9d2f1ca9fd428220c4b1519f0e732da2aaec355"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0015",
+    "split": "development",
+    "action": "tool",
+    "tool_name": "queryMyCreditScore",
+    "action_prediction": {
+      "choice": "tool",
+      "probabilities": {
+        "clarify": 0.01,
+        "retrieve": 0.0,
+        "tool": 0.98,
+        "answer": 0.01,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.98,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": {
+      "choice": "queryMyCreditScore",
+      "probabilities": {
+        "queryLoanProducts": 0.0,
+        "queryMyApplications": 0.0,
+        "queryApplicationDetail": 0.0,
+        "queryMyCreditScore": 1.0,
+        "explainApplicationStatus": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.617970699997386,
+    "input_tokens": 2339,
+    "request_sha256": [
+      "891ce5211a6a8f7645a4b22cb0b6a9100f55f08a39fc0871893684dde4c012f1",
+      "6f38af5d91dacf15bbb5517a5fcc7dc2f55dd135d477fbfa3def015ce817e895"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0016",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 1.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.30932589999429183,
+    "input_tokens": 1148,
+    "request_sha256": [
+      "0230fd9246b152a6045d50a4f0572515a6baa5df412a023d6ffa4328ef5bbb1a"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0017",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.1,
+        "answer": 0.9,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.89,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.31892969999898924,
+    "input_tokens": 1148,
+    "request_sha256": [
+      "3f053287e75514aeb70781aae8cb041ba73cd4d187d826315087d2e549480a4e"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0018",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.01,
+        "retrieve": 0.0,
+        "tool": 0.26,
+        "answer": 0.61,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.12,
+        "close": 0.0
+      },
+      "provider_confidence": 0.55,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.2902459999968414,
+    "input_tokens": 1160,
+    "request_sha256": [
+      "6d6f6772d8985616422720340fb6a0b5f277216059f107d0a581bbcad675409c"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0019",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.35,
+        "answer": 0.65,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.6,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 1.090787299996009,
+    "input_tokens": 1149,
+    "request_sha256": [
+      "d1c9836f16d4f74e523991c9d69ec90570d72ffd6ae44756f80a896637db158d"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0020",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.21,
+        "retrieve": 0.0,
+        "tool": 0.08,
+        "answer": 0.66,
+        "human": 0.01,
+        "redirect": 0.0,
+        "refuse": 0.04,
+        "close": 0.0
+      },
+      "provider_confidence": 0.61,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.474814500004868,
+    "input_tokens": 1150,
+    "request_sha256": [
+      "b6754c6bf2c4b741d5ff68f15cf44518c854f82fccc9bf24adfabebaacc4c711"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0021",
+    "split": "development",
+    "action": "human",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "human",
+      "probabilities": {
+        "clarify": 0.12,
+        "retrieve": 0.0,
+        "tool": 0.33,
+        "answer": 0.05,
+        "human": 0.45,
+        "redirect": 0.0,
+        "refuse": 0.05,
+        "close": 0.0
+      },
+      "provider_confidence": 0.37,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.2921261000010418,
+    "input_tokens": 1149,
+    "request_sha256": [
+      "93f1ca7ab51b95faaadee2549ce7f72c6e4ec0fa4e372a5d3cb5d03ab40f10a7"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0022",
+    "split": "development",
+    "action": "human",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "human",
+      "probabilities": {
+        "clarify": 0.03,
+        "retrieve": 0.0,
+        "tool": 0.01,
+        "answer": 0.05,
+        "human": 0.89,
+        "redirect": 0.0,
+        "refuse": 0.02,
+        "close": 0.0
+      },
+      "provider_confidence": 0.87,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.5433478000049945,
+    "input_tokens": 1150,
+    "request_sha256": [
+      "9110c36e187484225db9ccd85ad849a48e926f1d7fe61d0c64c3562646d28445"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0023",
+    "split": "development",
+    "action": "human",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "human",
+      "probabilities": {
+        "clarify": 0.08,
+        "retrieve": 0.0,
+        "tool": 0.03,
+        "answer": 0.07,
+        "human": 0.8,
+        "redirect": 0.0,
+        "refuse": 0.02,
+        "close": 0.0
+      },
+      "provider_confidence": 0.77,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.341665699997975,
+    "input_tokens": 1151,
+    "request_sha256": [
+      "b36a8bd91652a3180fb748a56e15bce5356a9505af3ee0813341cf313afba7e2"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0024",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.97,
+        "human": 0.02,
+        "redirect": 0.0,
+        "refuse": 0.01,
+        "close": 0.0
+      },
+      "provider_confidence": 0.97,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.760090499999933,
+    "input_tokens": 1143,
+    "request_sha256": [
+      "48638ece391dbc0fd0282ee6d39ea7ce7b769c997d00dc6bf3f9a9ec0dcf028b"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0025",
+    "split": "development",
+    "action": "human",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "human",
+      "probabilities": {
+        "clarify": 0.13,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.04,
+        "human": 0.81,
+        "redirect": 0.0,
+        "refuse": 0.01,
+        "close": 0.0
+      },
+      "provider_confidence": 0.78,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3032948000036413,
+    "input_tokens": 1149,
+    "request_sha256": [
+      "c57fc3ad3dddc747022abd5eea8f71903064ed03bc65a67e02c3c1bc2cb11e14"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0026",
+    "split": "development",
+    "action": "human",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "human",
+      "probabilities": {
+        "clarify": 0.01,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.13,
+        "human": 0.85,
+        "redirect": 0.0,
+        "refuse": 0.01,
+        "close": 0.0
+      },
+      "provider_confidence": 0.83,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3126842999990913,
+    "input_tokens": 1148,
+    "request_sha256": [
+      "3dece1b36574fe2f4f2304b54d99617dff0836115a7fcc2ddb7d77e1af152c7c"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0027",
+    "split": "development",
+    "action": "human",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "human",
+      "probabilities": {
+        "clarify": 0.02,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.41,
+        "human": 0.53,
+        "redirect": 0.0,
+        "refuse": 0.04,
+        "close": 0.0
+      },
+      "provider_confidence": 0.46,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.2972594000020763,
+    "input_tokens": 1152,
+    "request_sha256": [
+      "7519c413e39c7b8c97dd01cb5fdb13d736942a096fea0b802a31776881c5ea8d"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0028",
+    "split": "development",
+    "action": "human",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "human",
+      "probabilities": {
+        "clarify": 0.02,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.16,
+        "human": 0.81,
+        "redirect": 0.0,
+        "refuse": 0.01,
+        "close": 0.0
+      },
+      "provider_confidence": 0.78,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.28954300000623334,
+    "input_tokens": 1152,
+    "request_sha256": [
+      "d679556ff2b30e91c88a86be3e83979e85a99f192cf1cdf9a79af42aba3f94e7"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0029",
+    "split": "development",
+    "action": "human",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "human",
+      "probabilities": {
+        "clarify": 0.04,
+        "retrieve": 0.0,
+        "tool": 0.02,
+        "answer": 0.07,
+        "human": 0.83,
+        "redirect": 0.0,
+        "refuse": 0.04,
+        "close": 0.0
+      },
+      "provider_confidence": 0.81,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.8189185000010184,
+    "input_tokens": 1152,
+    "request_sha256": [
+      "b7b1876e3766d0a92d6374bba2881ae5dcfab20e776c7a0b948a5e9b65495ca9"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0030",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.04,
+        "retrieve": 0.0,
+        "tool": 0.02,
+        "answer": 0.74,
+        "human": 0.04,
+        "redirect": 0.0,
+        "refuse": 0.16,
+        "close": 0.0
+      },
+      "provider_confidence": 0.7,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.5572819999943022,
+    "input_tokens": 1143,
+    "request_sha256": [
+      "8397c8d72cfe6cad8cf44ba161128d070b7cf0c5ea53589390f8bce57164a7fe"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0031",
+    "split": "development",
+    "action": "human",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "human",
+      "probabilities": {
+        "clarify": 0.04,
+        "retrieve": 0.0,
+        "tool": 0.01,
+        "answer": 0.03,
+        "human": 0.91,
+        "redirect": 0.0,
+        "refuse": 0.01,
+        "close": 0.0
+      },
+      "provider_confidence": 0.9,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.29531169999972917,
+    "input_tokens": 1150,
+    "request_sha256": [
+      "b33887b2edea58e2fd7b1fee8f34b7926f86e719af27bfc271e53e7c9a073a8b"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0032",
+    "split": "development",
+    "action": "human",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "human",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.07,
+        "human": 0.92,
+        "redirect": 0.0,
+        "refuse": 0.01,
+        "close": 0.0
+      },
+      "provider_confidence": 0.91,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.31677070000296226,
+    "input_tokens": 1153,
+    "request_sha256": [
+      "c07bdb36a2baf5a76273f746f5f22bfdc01d5b5cc385ec8699ff8c921ef15942"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0033",
+    "split": "development",
+    "action": "refuse",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "refuse",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 1.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.29929870000341907,
+    "input_tokens": 1152,
+    "request_sha256": [
+      "bcd20b63699c2be10489c1a7d14299490c8420047cc8d8a818f6de58fef758d6"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0034",
+    "split": "development",
+    "action": "refuse",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "refuse",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 1.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3171566000019084,
+    "input_tokens": 1151,
+    "request_sha256": [
+      "a50bba06203a950509708fc9a4813230e165690c3979643ab75eab1a242a01c8"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0035",
+    "split": "development",
+    "action": "refuse",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "refuse",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 1.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.31193119999807095,
+    "input_tokens": 1144,
+    "request_sha256": [
+      "c71223903a8f3e119af0439f79aa79c593582140ef2cf0b049e3806611629cd7"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0036",
+    "split": "development",
+    "action": "refuse",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "refuse",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 1.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.2942018999965512,
+    "input_tokens": 1152,
+    "request_sha256": [
+      "c73b4e700a425111964a580b9a1f6b19efacaa34ad7d566ea6e4a5aef07e258b"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0037",
+    "split": "development",
+    "action": "refuse",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "refuse",
+      "probabilities": {
+        "clarify": 0.01,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.99,
+        "close": 0.0
+      },
+      "provider_confidence": 0.99,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.2947617000027094,
+    "input_tokens": 1150,
+    "request_sha256": [
+      "aa9c590a9847630f9a787bb6ac69f9004954f21c175ad17a22d785193f207cb2"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0038",
+    "split": "development",
+    "action": "refuse",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "refuse",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 1.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.2920860000012908,
+    "input_tokens": 1151,
+    "request_sha256": [
+      "15609b03e605d0a93e07d1bfdc2044afee1afed51399136f66b512855c38947c"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0039",
+    "split": "development",
+    "action": "refuse",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "refuse",
+      "probabilities": {
+        "clarify": 0.01,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.99,
+        "close": 0.0
+      },
+      "provider_confidence": 0.99,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.31119739999849116,
+    "input_tokens": 1151,
+    "request_sha256": [
+      "026cc1be7c1ccb0e14653d48c1be99ecc2b8faa3cfcdf6d35b9c23ce3b6470e2"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0040",
+    "split": "development",
+    "action": "refuse",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "refuse",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 1.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3109361999959219,
+    "input_tokens": 1152,
+    "request_sha256": [
+      "6f85ffd1e93a605435555bbc108d8279fa4741f1b82a6bbd9b927038c778d382"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0041",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.04,
+        "answer": 0.95,
+        "human": 0.01,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.94,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.8305070999995223,
+    "input_tokens": 1147,
+    "request_sha256": [
+      "04b6523f15976640d3633e794b54da8535a936db29c904bf8bd675b5fe56f32d"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0042",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.99,
+        "human": 0.01,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.99,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3241162999984226,
+    "input_tokens": 1154,
+    "request_sha256": [
+      "48267455c913e393a2836f39b73110af1548fd3e66c456853b888deb349cb8f7"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0043",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 1.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.2970108000008622,
+    "input_tokens": 1152,
+    "request_sha256": [
+      "a762ddcd4cd8f0389ed1bb7033a358ac150ac9182f67e4311d6ccae50acf6577"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0044",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 1.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3051991000029375,
+    "input_tokens": 1161,
+    "request_sha256": [
+      "67cab0f8739e84b63169467cda5e4f9e6f8cb0a1ab365c70d04e70dd08c0a4e4"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0045",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.01,
+        "answer": 0.99,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.99,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3023638000013307,
+    "input_tokens": 1156,
+    "request_sha256": [
+      "062be29eed64dbd703877918ee9950b03be9fe6530ef805b448ffd87bb741aa8"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0046",
+    "split": "development",
+    "action": "human",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "human",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.01,
+        "answer": 0.43,
+        "human": 0.53,
+        "redirect": 0.0,
+        "refuse": 0.03,
+        "close": 0.0
+      },
+      "provider_confidence": 0.46,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 1.0536932999966666,
+    "input_tokens": 1152,
+    "request_sha256": [
+      "de02b4935238e33de318359990d18a7690fad0e7daa595b7e40d78bde72c078d"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0047",
+    "split": "development",
+    "action": "tool",
+    "tool_name": "queryMyApplications",
+    "action_prediction": {
+      "choice": "tool",
+      "probabilities": {
+        "clarify": 0.01,
+        "retrieve": 0.0,
+        "tool": 0.64,
+        "answer": 0.35,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.59,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": {
+      "choice": "queryMyApplications",
+      "probabilities": {
+        "queryLoanProducts": 0.01,
+        "queryMyApplications": 0.86,
+        "queryApplicationDetail": 0.13,
+        "queryMyCreditScore": 0.0,
+        "explainApplicationStatus": 0.0
+      },
+      "provider_confidence": 0.82,
+      "choice_probability_consistent": true
+    },
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.6078119999947376,
+    "input_tokens": 2349,
+    "request_sha256": [
+      "500e052dbd1e186676cf177571a6714fe67571bc0bc8766629deb68d2813cdbe",
+      "4134c6f123f5a5ec0f6b0dabd27bc4fc8972e3d000d8ec17e6665dbf8a6742cb"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0048",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 1.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.29660010000225157,
+    "input_tokens": 1152,
+    "request_sha256": [
+      "d355777f000b84ea3a1bbde01b32d649160473fcdd8ac58fe85c32ce89183c90"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0049",
+    "split": "development",
+    "action": "clarify",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "clarify",
+      "probabilities": {
+        "clarify": 0.57,
+        "retrieve": 0.0,
+        "tool": 0.4,
+        "answer": 0.02,
+        "human": 0.01,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.51,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.2921788000021479,
+    "input_tokens": 1141,
+    "request_sha256": [
+      "276e904764923062d08251e61838099bc62395aabc45f10668e0442e8588cc6b"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0050",
+    "split": "development",
+    "action": "tool",
+    "tool_name": "queryMyApplications",
+    "action_prediction": {
+      "choice": "tool",
+      "probabilities": {
+        "clarify": 0.3,
+        "retrieve": 0.0,
+        "tool": 0.6799999999999999,
+        "answer": 0.01,
+        "human": 0.01,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.63,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": {
+      "choice": "queryMyApplications",
+      "probabilities": {
+        "queryLoanProducts": 0.0,
+        "queryMyApplications": 0.99,
+        "queryApplicationDetail": 0.01,
+        "queryMyCreditScore": 0.0,
+        "explainApplicationStatus": 0.0
+      },
+      "provider_confidence": 0.99,
+      "choice_probability_consistent": true
+    },
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 1.9021340999970562,
+    "input_tokens": 2347,
+    "request_sha256": [
+      "5964c501e3f7a4ecfc2ce7bb61904bbc498930c10c181fa70e2068d27210c304",
+      "5533a16647e58eb8a0507985bb50be9115f2dc40e4981491797402d6534df389"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0051",
+    "split": "development",
+    "action": "clarify",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "clarify",
+      "probabilities": {
+        "clarify": 0.55,
+        "retrieve": 0.0,
+        "tool": 0.31,
+        "answer": 0.11,
+        "human": 0.03,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.49,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.7975010000009206,
+    "input_tokens": 1143,
+    "request_sha256": [
+      "e14db6f69ac93f5fbab7ef0f5a255ad19acabf0fc2d34b5298e61fb26a62f327"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0052",
+    "split": "development",
+    "action": "tool",
+    "tool_name": "queryApplicationDetail",
+    "action_prediction": {
+      "choice": "tool",
+      "probabilities": {
+        "clarify": 0.02,
+        "retrieve": 0.0,
+        "tool": 0.97,
+        "answer": 0.01,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.97,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": {
+      "choice": "queryApplicationDetail",
+      "probabilities": {
+        "queryLoanProducts": 0.0,
+        "queryMyApplications": 0.0,
+        "queryApplicationDetail": 1.0,
+        "queryMyCreditScore": 0.0,
+        "explainApplicationStatus": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 1.0681907000034698,
+    "input_tokens": 2475,
+    "request_sha256": [
+      "f4db96b7ce42b7728409ac844a0913d70e1e30a7baa8b0a7ae1b77e346083c79",
+      "d449d73eeb9a8b5135ea82ff1c855386fd8dbeab7c1c731770edc853741126c2"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0053",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.01,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.88,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.11
+      },
+      "provider_confidence": 0.86,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.31682980000186944,
+    "input_tokens": 1136,
+    "request_sha256": [
+      "51b5ecb6b330d2cad665c081ab167e122c65ca5d1dcb0b179b5941b004fba547"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0054",
+    "split": "development",
+    "action": "close",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "close",
+      "probabilities": {
+        "clarify": 0.05,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.15,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.01,
+        "close": 0.79
+      },
+      "provider_confidence": 0.76,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.290113899995049,
+    "input_tokens": 1153,
+    "request_sha256": [
+      "548dee228f28cdcb82f70c8d01f0a4ceb8412f95f369dee1dc1ba2b781cae16b"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0055",
+    "split": "development",
+    "action": "human",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "human",
+      "probabilities": {
+        "clarify": 0.01,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.04,
+        "human": 0.95,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.94,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.31316659999720287,
+    "input_tokens": 1148,
+    "request_sha256": [
+      "e3362880730f291d215f031cfe3a014a75c45990d944848361d80bfd3712c5f9"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0056",
+    "split": "development",
+    "action": "close",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "close",
+      "probabilities": {
+        "clarify": 0.02,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.38,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.01,
+        "close": 0.59
+      },
+      "provider_confidence": 0.53,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.5079039999982342,
+    "input_tokens": 1145,
+    "request_sha256": [
+      "ba70fc87a0241e050cfe3f5eaa45de9af3769ad9dc2d224163c809f6b8b5eaf2"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0057",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.78,
+        "human": 0.01,
+        "redirect": 0.16,
+        "refuse": 0.05,
+        "close": 0.0
+      },
+      "provider_confidence": 0.75,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3282709999984945,
+    "input_tokens": 1149,
+    "request_sha256": [
+      "acd8db46b515da486b4109f8192869d4cce2e241282820cbf33afe8ba016a30a"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0058",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.72,
+        "human": 0.01,
+        "redirect": 0.17,
+        "refuse": 0.1,
+        "close": 0.0
+      },
+      "provider_confidence": 0.68,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.30559070000163047,
+    "input_tokens": 1142,
+    "request_sha256": [
+      "71681ad7996a4fca93af09a67e0272c840f4ec77ffab5aa1de25b1803b082684"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0059",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.98,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.02,
+        "close": 0.0
+      },
+      "provider_confidence": 0.98,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.2916200000036042,
+    "input_tokens": 1152,
+    "request_sha256": [
+      "03552bbf1c11a1f4a8597899e4e44d91e46a953a550351cebec772045bf0c263"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0060",
+    "split": "development",
+    "action": "close",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "close",
+      "probabilities": {
+        "clarify": 0.1,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.33,
+        "human": 0.01,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.56
+      },
+      "provider_confidence": 0.5,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.4978031999999075,
+    "input_tokens": 1149,
+    "request_sha256": [
+      "74ba433abbc6e5ff314838c794378ef8b0bdb6d9efdcdf123d4c54209bcd5caa"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0061",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 1.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.31205490000138525,
+    "input_tokens": 1153,
+    "request_sha256": [
+      "c5686cce859af3a9ed59ff0ca8077c537d620d2c33d3bfee396b0b6f7e112327"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0062",
+    "split": "development",
+    "action": "human",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "human",
+      "probabilities": {
+        "clarify": 0.01,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.05,
+        "human": 0.92,
+        "redirect": 0.01,
+        "refuse": 0.01,
+        "close": 0.0
+      },
+      "provider_confidence": 0.91,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.30984889999672305,
+    "input_tokens": 1150,
+    "request_sha256": [
+      "554a0afd131ce825daad66aa31bf63bbbda7d04bb2e14a9dab769c3d24c41097"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0063",
+    "split": "development",
+    "action": "refuse",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "refuse",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 1.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.8124479999969481,
+    "input_tokens": 1146,
+    "request_sha256": [
+      "4abe7d04ff376faade35ec5d4873b11c96f3d5fefedfac32c2ca467a487f2c77"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0064",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.99,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.01,
+        "close": 0.0
+      },
+      "provider_confidence": 0.99,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.8548902000038652,
+    "input_tokens": 1152,
+    "request_sha256": [
+      "20b60c4b2b991f61d637eac1daecd744dcb06f5c01c3f9d41624d53f50a5eb6f"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0065",
+    "split": "development",
+    "action": "retrieve",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "retrieve",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 1.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.30296020000241697,
+    "input_tokens": 1161,
+    "request_sha256": [
+      "87ee7f35df6bdda96e4bade77ebb1f8a9595aca63e80da18ff0e1621cce39e69"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0066",
+    "split": "development",
+    "action": "retrieve",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "retrieve",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.99,
+        "tool": 0.0,
+        "answer": 0.01,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.99,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 1.7030272000047262,
+    "input_tokens": 1160,
+    "request_sha256": [
+      "0a7e386e192c2044a8abd11efca43ee4b2e355b019ec8f86fdc6a4bd3b1e97f9"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0067",
+    "split": "development",
+    "action": "retrieve",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "retrieve",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 1.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.29976370000076713,
+    "input_tokens": 1162,
+    "request_sha256": [
+      "7ee190b938b1e9dbb654ac55d2b493b902f435a548d9cc1bade7a69353459473"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0068",
+    "split": "development",
+    "action": "human",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "human",
+      "probabilities": {
+        "clarify": 0.01,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.32,
+        "human": 0.63,
+        "redirect": 0.0,
+        "refuse": 0.04,
+        "close": 0.0
+      },
+      "provider_confidence": 0.58,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 1.046109399998386,
+    "input_tokens": 1166,
+    "request_sha256": [
+      "9616404276b2930529fa2535d5c32109f63e384fbb9da98012985584b03f64e0"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0069",
+    "split": "development",
+    "action": "retrieve",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "retrieve",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 1.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.34991769999760436,
+    "input_tokens": 1161,
+    "request_sha256": [
+      "88fb0f54f0ceb9bf2f5f852bac84d15c1b737d353e019568be1ca240cea637b9"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0070",
+    "split": "development",
+    "action": "retrieve",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "retrieve",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.99,
+        "tool": 0.0,
+        "answer": 0.01,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.99,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3276197000013781,
+    "input_tokens": 1157,
+    "request_sha256": [
+      "fa03412c4def73d25696a11ff8b9fb60dc05ab8af39bef3d61156295e449040c"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0071",
+    "split": "development",
+    "action": "retrieve",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "retrieve",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 1.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3182613000026322,
+    "input_tokens": 1157,
+    "request_sha256": [
+      "c8685dced74f4e92ec3f55e0985ead1c22f926e79d4be2f6676262b07c7ac763"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0072",
+    "split": "development",
+    "action": "human",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "human",
+      "probabilities": {
+        "clarify": 0.07,
+        "retrieve": 0.1,
+        "tool": 0.0,
+        "answer": 0.11,
+        "human": 0.61,
+        "redirect": 0.0,
+        "refuse": 0.11,
+        "close": 0.0
+      },
+      "provider_confidence": 0.55,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.31299910000234377,
+    "input_tokens": 1160,
+    "request_sha256": [
+      "677da46a6cef35cdd6a952180783c4710188caf1f6ada09b0d32869635bae131"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0073",
+    "split": "development",
+    "action": "retrieve",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "retrieve",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 1.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3234974000006332,
+    "input_tokens": 1159,
+    "request_sha256": [
+      "165d1ce369bd4326b46585d29c553b364971f5a878d871c17289c2e61a6e3ead"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0074",
+    "split": "development",
+    "action": "retrieve",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "retrieve",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 1.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.40413490000355523,
+    "input_tokens": 1155,
+    "request_sha256": [
+      "916e65108ed84b6f2edfb9d20ce051c099cb6f9244cfddcbbb024c2597183028"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0075",
+    "split": "development",
+    "action": "retrieve",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "retrieve",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 1.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.5138322999991942,
+    "input_tokens": 1156,
+    "request_sha256": [
+      "71dc484d7049cb8e83bc05c93be2bc5bed8ad53330e340120e4dc9f1e583b601"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0076",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.03,
+        "tool": 0.0,
+        "answer": 0.97,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.97,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3155040999990888,
+    "input_tokens": 1164,
+    "request_sha256": [
+      "d1aa76b1e2abb98b310cbd59372aa2c6c8133bcb05568b0a5ae9578adcb28f90"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0077",
+    "split": "development",
+    "action": "refuse",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "refuse",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 1.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 1.4296818000002531,
+    "input_tokens": 1161,
+    "request_sha256": [
+      "ed54ed7a561a27cd1440a1333ce8b2140dc5a522ff97da5cb76db4a38917a916"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0078",
+    "split": "development",
+    "action": "refuse",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "refuse",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 1.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.2952506000001449,
+    "input_tokens": 1156,
+    "request_sha256": [
+      "f61b00ad2887d018da9791d4d20908ee99cfb232b7d68b27e8249667b057ab3b"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0079",
+    "split": "development",
+    "action": "refuse",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "refuse",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 1.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.32682719999866094,
+    "input_tokens": 1158,
+    "request_sha256": [
+      "a56180641847822398e9d65afad08b84e6eab3cd3b9a1e80183e0fbd44ea86fa"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0080",
+    "split": "development",
+    "action": "refuse",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "refuse",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 1.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 1.200097700006154,
+    "input_tokens": 1161,
+    "request_sha256": [
+      "68cbed5ab67d2072d540f6b672f61199c49ce513e79ce3c2469ca6e2e118d2ab"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0081",
+    "split": "development",
+    "action": "human",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "human",
+      "probabilities": {
+        "clarify": 0.17,
+        "retrieve": 0.08,
+        "tool": 0.02,
+        "answer": 0.06,
+        "human": 0.65,
+        "redirect": 0.0,
+        "refuse": 0.02,
+        "close": 0.0
+      },
+      "provider_confidence": 0.6,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3411539000007906,
+    "input_tokens": 1159,
+    "request_sha256": [
+      "829a4f88b6f3a05858d7a83dc2f055bf5d0231275c35a048325121955615cdce"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0082",
+    "split": "development",
+    "action": "human",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "human",
+      "probabilities": {
+        "clarify": 0.06,
+        "retrieve": 0.01,
+        "tool": 0.0,
+        "answer": 0.18,
+        "human": 0.72,
+        "redirect": 0.0,
+        "refuse": 0.03,
+        "close": 0.0
+      },
+      "provider_confidence": 0.68,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.7840151999989757,
+    "input_tokens": 1153,
+    "request_sha256": [
+      "db5b6d33f2ac4fbf57c72e3663a79ea77682859f7bcbcba1885a90fb4780ec07"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0083",
+    "split": "development",
+    "action": "retrieve",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "retrieve",
+      "probabilities": {
+        "clarify": 0.16,
+        "retrieve": 0.38,
+        "tool": 0.01,
+        "answer": 0.11,
+        "human": 0.33,
+        "redirect": 0.0,
+        "refuse": 0.01,
+        "close": 0.0
+      },
+      "provider_confidence": 0.29,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3236821000027703,
+    "input_tokens": 1160,
+    "request_sha256": [
+      "297c1a40ffd0b902da5a6088d20700fecc1989071796e1eefde49a8fdf3fcbc3"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0084",
+    "split": "development",
+    "action": "human",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "human",
+      "probabilities": {
+        "clarify": 0.02,
+        "retrieve": 0.01,
+        "tool": 0.01,
+        "answer": 0.06,
+        "human": 0.88,
+        "redirect": 0.0,
+        "refuse": 0.02,
+        "close": 0.0
+      },
+      "provider_confidence": 0.86,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.32434099999954924,
+    "input_tokens": 1159,
+    "request_sha256": [
+      "37b3ac600f8409eea891888617aa643ad21e90a8ad8dde3b7ae72937a61f1f85"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0085",
+    "split": "development",
+    "action": "retrieve",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "retrieve",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.8,
+        "tool": 0.0,
+        "answer": 0.2,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.77,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 1.3665370999951847,
+    "input_tokens": 1155,
+    "request_sha256": [
+      "488f87345cd5966b19b2c92bd6ec9dd499777f0a0c80ec99bfa0f241c27672a9"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0086",
+    "split": "development",
+    "action": "retrieve",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "retrieve",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.83,
+        "tool": 0.0,
+        "answer": 0.17,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.81,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.34609959999943385,
+    "input_tokens": 1161,
+    "request_sha256": [
+      "f76ee05f66f78ba9edcdbd1b1018f2294545891f396e9078752635a5845a82f7"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0087",
+    "split": "development",
+    "action": "human",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "human",
+      "probabilities": {
+        "clarify": 0.01,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.19,
+        "human": 0.77,
+        "redirect": 0.0,
+        "refuse": 0.03,
+        "close": 0.0
+      },
+      "provider_confidence": 0.74,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3128435999969952,
+    "input_tokens": 1158,
+    "request_sha256": [
+      "e6b1dfcdb39fb24ed64d49ff7a55e7af3b1ae03ececcec99f931c009f697ac79"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0088",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.01,
+        "tool": 0.0,
+        "answer": 0.99,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.99,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3051785999996355,
+    "input_tokens": 1164,
+    "request_sha256": [
+      "e6a29bda0ccb34c5d84c4d40940a2f5264689e34c6f9dc87e68993fbd821bc50"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0089",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.06,
+        "tool": 0.0,
+        "answer": 0.9400000000000001,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.93,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3125620999999228,
+    "input_tokens": 1166,
+    "request_sha256": [
+      "679188b8d8af499d924b1f25a97435a252a43e22d44af6cf4562368612f54735"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0090",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.13,
+        "tool": 0.0,
+        "answer": 0.87,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.85,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3019168999962858,
+    "input_tokens": 1164,
+    "request_sha256": [
+      "0940dd9ea662f0bf9e5fa4bc4deafeecb8865e45c2b3158225252605f7965c40"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0091",
+    "split": "development",
+    "action": "human",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "human",
+      "probabilities": {
+        "clarify": 0.01,
+        "retrieve": 0.02,
+        "tool": 0.0,
+        "answer": 0.05,
+        "human": 0.91,
+        "redirect": 0.01,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.9,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.30358240000350634,
+    "input_tokens": 1162,
+    "request_sha256": [
+      "979d7dd07398a7f1f7f2eca81d5b2c0571dc12cc057824336128361dfb60cd3e"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0092",
+    "split": "development",
+    "action": "retrieve",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "retrieve",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.98,
+        "tool": 0.0,
+        "answer": 0.02,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.98,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.5490448999989894,
+    "input_tokens": 1162,
+    "request_sha256": [
+      "1cb83228562e37ece5a249f2ac011c1d6d8bd3cc554e073ac7bf199901f76afc"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0093",
+    "split": "development",
+    "action": "tool",
+    "tool_name": "queryApplicationDetail",
+    "action_prediction": {
+      "choice": "tool",
+      "probabilities": {
+        "clarify": 0.01,
+        "retrieve": 0.01,
+        "tool": 0.95,
+        "answer": 0.02,
+        "human": 0.01,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.94,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": {
+      "choice": "queryApplicationDetail",
+      "probabilities": {
+        "queryLoanProducts": 0.0,
+        "queryMyApplications": 0.0,
+        "queryApplicationDetail": 1.0,
+        "queryMyCreditScore": 0.0,
+        "explainApplicationStatus": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.6592129999917233,
+    "input_tokens": 2375,
+    "request_sha256": [
+      "dd1523a9f6ceb4758f120ae453f53e7e68089c90608f294f3da24b4e79dc81b3",
+      "c672db076bb9a597813b70ba5a52b5ea645fd2758dc65e2e474c6c02a84b09d5"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0094",
+    "split": "development",
+    "action": "tool",
+    "tool_name": "queryMyApplications",
+    "action_prediction": {
+      "choice": "tool",
+      "probabilities": {
+        "clarify": 0.11,
+        "retrieve": 0.02,
+        "tool": 0.39999999999999997,
+        "answer": 0.3,
+        "human": 0.15,
+        "redirect": 0.0,
+        "refuse": 0.02,
+        "close": 0.0
+      },
+      "provider_confidence": 0.31,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": {
+      "choice": "queryMyApplications",
+      "probabilities": {
+        "queryLoanProducts": 0.0,
+        "queryMyApplications": 0.54,
+        "queryApplicationDetail": 0.44,
+        "queryMyCreditScore": 0.0,
+        "explainApplicationStatus": 0.02
+      },
+      "provider_confidence": 0.42,
+      "choice_probability_consistent": true
+    },
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 1.1385470000022906,
+    "input_tokens": 2349,
+    "request_sha256": [
+      "1bf3848ba560ba83008cadff935c79a4f894e88fc2a745b52efd7509c6349dd2",
+      "fa81d32e9623bd256e39ade3a165588316cc11211895076d82654c83f66af184"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0095",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.01,
+        "retrieve": 0.35,
+        "tool": 0.01,
+        "answer": 0.62,
+        "human": 0.01,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.57,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.29254329999821493,
+    "input_tokens": 1166,
+    "request_sha256": [
+      "d69ff60531ad84c1f4651b8e65256e7c9f2ae4863a8f90aad2946ddd5488c32b"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0096",
+    "split": "development",
+    "action": "tool",
+    "tool_name": "queryMyCreditScore",
+    "action_prediction": {
+      "choice": "tool",
+      "probabilities": {
+        "clarify": 0.02,
+        "retrieve": 0.01,
+        "tool": 0.95,
+        "answer": 0.02,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.94,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": {
+      "choice": "queryMyCreditScore",
+      "probabilities": {
+        "queryLoanProducts": 0.0,
+        "queryMyApplications": 0.0,
+        "queryApplicationDetail": 0.0,
+        "queryMyCreditScore": 1.0,
+        "explainApplicationStatus": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 1.375967899999523,
+    "input_tokens": 2291,
+    "request_sha256": [
+      "5110e13839af98524cb96b95afeeaa872a1d4efa7c156bd9c1feef1fb144fd9e",
+      "bad6aaf11a0fb20c4fe931f4e916b36801a4b4266d188d24758ace6c8654553e"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0097",
+    "split": "development",
+    "action": "clarify",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "clarify",
+      "probabilities": {
+        "clarify": 1.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.30162209999980405,
+    "input_tokens": 1142,
+    "request_sha256": [
+      "86a8f66c76c8c3d6cf45c408c902d69f99a2c7c733801b07c2076a8cd3b5c47e"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0098",
+    "split": "development",
+    "action": "clarify",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "clarify",
+      "probabilities": {
+        "clarify": 1.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.29823239999677753,
+    "input_tokens": 1148,
+    "request_sha256": [
+      "df711f2c16240ab9359cad89fa82e4e192d89c83c248bbaa3b9e8923fd97046f"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0099",
+    "split": "development",
+    "action": "clarify",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "clarify",
+      "probabilities": {
+        "clarify": 0.88,
+        "retrieve": 0.0,
+        "tool": 0.01,
+        "answer": 0.06,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.05,
+        "close": 0.0
+      },
+      "provider_confidence": 0.86,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.2871497000014642,
+    "input_tokens": 1155,
+    "request_sha256": [
+      "ce6fd0959fc9e68797e4e5ab2cf27fe259c963c9e7e86d6851b18fc04b2c4226"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0100",
+    "split": "development",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "action_prediction": {
+      "choice": "tool",
+      "probabilities": {
+        "clarify": 0.03,
+        "retrieve": 0.0,
+        "tool": 0.71,
+        "answer": 0.26,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.67,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": {
+      "choice": "queryLoanProducts",
+      "probabilities": {
+        "queryLoanProducts": 1.0,
+        "queryMyApplications": 0.0,
+        "queryApplicationDetail": 0.0,
+        "queryMyCreditScore": 0.0,
+        "explainApplicationStatus": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.6029223000005004,
+    "input_tokens": 2339,
+    "request_sha256": [
+      "295da6b4ca5a7349a6c38818e8f4214e499a3890371891021c91b8703caf5b05",
+      "c40b346bfba3a3c71f6cfb8e5f8874eeb135e374eaa19695831d6ad851d8b366"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0101",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.06,
+        "retrieve": 0.0,
+        "tool": 0.25,
+        "answer": 0.6900000000000001,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.65,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.34055029999581166,
+    "input_tokens": 1148,
+    "request_sha256": [
+      "acf6cb791e2c61dfe1e66a1831de0da59ba3b2031aefa9153d526991697eda8e"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0102",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.15,
+        "retrieve": 0.0,
+        "tool": 0.14,
+        "answer": 0.7,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.01,
+        "close": 0.0
+      },
+      "provider_confidence": 0.66,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.2933982000031392,
+    "input_tokens": 1153,
+    "request_sha256": [
+      "efa7d203b27bceca73a6041460ed5ed2bb15d5bc62c9ebaf32801fafb545bfd6"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0103",
+    "split": "development",
+    "action": "clarify",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "clarify",
+      "probabilities": {
+        "clarify": 0.5,
+        "retrieve": 0.0,
+        "tool": 0.07,
+        "answer": 0.43,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.43,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3027226999984123,
+    "input_tokens": 1206,
+    "request_sha256": [
+      "a91c0ffeba2caa770674513a4fe1bdd3b3aa27461a3e8934b99ce1f0216b2980"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0104",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 1.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3076786999954493,
+    "input_tokens": 1157,
+    "request_sha256": [
+      "84ced205d214bd64ead9e89fded0b07e4473c45f9720f70b7ce8c7580780bafd"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0105",
+    "split": "development",
+    "action": "refuse",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "refuse",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 1.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.32603150000068126,
+    "input_tokens": 1151,
+    "request_sha256": [
+      "b6611129bd6e1be9b9011e8be1bcd048f871f907f806eb2ef231d57212d08902"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0106",
+    "split": "development",
+    "action": "refuse",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "refuse",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 1.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3138169000012567,
+    "input_tokens": 1145,
+    "request_sha256": [
+      "9356a69b538f1ddc8a88b4a08f0a2cf7c3f045ac9e2e66cc8c7bf3af087869e0"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0107",
+    "split": "development",
+    "action": "refuse",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "refuse",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 1.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3398264999996172,
+    "input_tokens": 1143,
+    "request_sha256": [
+      "bbc4b9c83aa186edaea82f4be0b2854d9a3bba862d3bffac3123a9a89ec24cfe"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0108",
+    "split": "development",
+    "action": "refuse",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "refuse",
+      "probabilities": {
+        "clarify": 0.01,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.99,
+        "close": 0.0
+      },
+      "provider_confidence": 0.99,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.29845720000594156,
+    "input_tokens": 1150,
+    "request_sha256": [
+      "6537acedf77b1b2778028d3d1f5c10d08fbbc15a7ee4b266a1c32ad8257fa8cf"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0109",
+    "split": "development",
+    "action": "human",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "human",
+      "probabilities": {
+        "clarify": 0.06,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.02,
+        "human": 0.91,
+        "redirect": 0.0,
+        "refuse": 0.01,
+        "close": 0.0
+      },
+      "provider_confidence": 0.9,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3111420999994152,
+    "input_tokens": 1149,
+    "request_sha256": [
+      "515bd1ebd6030877c6ea7758f0383820328a1f35860d82de36aba9d763ef4bf4"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0110",
+    "split": "development",
+    "action": "human",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "human",
+      "probabilities": {
+        "clarify": 0.12,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.01,
+        "human": 0.86,
+        "redirect": 0.0,
+        "refuse": 0.01,
+        "close": 0.0
+      },
+      "provider_confidence": 0.84,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3192669999989448,
+    "input_tokens": 1147,
+    "request_sha256": [
+      "1488adbb6ddf094978b3591e145a1f5db5fd441fff448ecc88c9752d100d5eac"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0111",
+    "split": "development",
+    "action": "human",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "human",
+      "probabilities": {
+        "clarify": 0.26,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.73,
+        "redirect": 0.0,
+        "refuse": 0.01,
+        "close": 0.0
+      },
+      "provider_confidence": 0.69,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.35311319999891566,
+    "input_tokens": 1149,
+    "request_sha256": [
+      "0df6ba1fd88d6595a25c8568e344fbd13f20189c66a17bee6d32acf88fbfbf67"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0112",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.03,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.93,
+        "human": 0.02,
+        "redirect": 0.0,
+        "refuse": 0.02,
+        "close": 0.0
+      },
+      "provider_confidence": 0.92,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.5630674999993062,
+    "input_tokens": 1151,
+    "request_sha256": [
+      "dcc3e3bf31f48a59ec0e14616dd904fb46953ef537e680d7cb8c10bf8a808a58"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0113",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.99,
+        "human": 0.01,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.99,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.30424289999791654,
+    "input_tokens": 1150,
+    "request_sha256": [
+      "3cd5412abfabb7ee017e3ad8332082c7fddb48449a4aa94b6e6fc8f75c3a54a6"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0114",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 1.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.2918766000002506,
+    "input_tokens": 1144,
+    "request_sha256": [
+      "1871573f6f2123b6b142d27a273513ce667230d5ff354ad601e802eb0640faae"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0115",
+    "split": "development",
+    "action": "human",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "human",
+      "probabilities": {
+        "clarify": 0.06,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.02,
+        "human": 0.9,
+        "redirect": 0.0,
+        "refuse": 0.02,
+        "close": 0.0
+      },
+      "provider_confidence": 0.89,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.2863601999997627,
+    "input_tokens": 1150,
+    "request_sha256": [
+      "89ac2a573edbdc4fda2f45c7523e1ca8ed65e478a1dfe3a6c65bc3547ef8d015"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0116",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.01,
+        "answer": 0.99,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.99,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3028690999999526,
+    "input_tokens": 1147,
+    "request_sha256": [
+      "af0aa6dbf0d6f62da879f2e43a6d0bbefb0b02ac10730275c1066bc3970e12aa"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0117",
+    "split": "development",
+    "action": "close",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "close",
+      "probabilities": {
+        "clarify": 0.05,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.2,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.75
+      },
+      "provider_confidence": 0.71,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 1.3668300999997882,
+    "input_tokens": 1145,
+    "request_sha256": [
+      "f99b5a7af8ff05d06e7d2140b503b844b497845910ef018ab7243e2ea37e4a29"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0118",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.12,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.83,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.05
+      },
+      "provider_confidence": 0.81,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.32596470000135014,
+    "input_tokens": 1135,
+    "request_sha256": [
+      "81af620c1b6113e1b2b9ddb005b822cc9085f2d5e8eab7d4075465b0efa97d2b"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0119",
+    "split": "development",
+    "action": "clarify",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "clarify",
+      "probabilities": {
+        "clarify": 0.99,
+        "retrieve": 0.0,
+        "tool": 0.01,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.99,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3873555999962264,
+    "input_tokens": 1141,
+    "request_sha256": [
+      "dfccc78651b51b99de86d1afa05314228219d0444a2769b92458158b659e8ded"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0120",
+    "split": "development",
+    "action": "close",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "close",
+      "probabilities": {
+        "clarify": 0.02,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.3,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.68
+      },
+      "provider_confidence": 0.63,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.2925922000067658,
+    "input_tokens": 1146,
+    "request_sha256": [
+      "73430581e48ddba5c0befb6eeea946fe81458ce95bc92ed7d07d3cc61cefe0af"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0121",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.65,
+        "human": 0.0,
+        "redirect": 0.34,
+        "refuse": 0.01,
+        "close": 0.0
+      },
+      "provider_confidence": 0.6,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.29648079999606125,
+    "input_tokens": 1148,
+    "request_sha256": [
+      "500af49cf3fa28b97afab9128af9bccc704a26211dcebb45956ef5ea92d37436"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0122",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.7,
+        "human": 0.04,
+        "redirect": 0.18,
+        "refuse": 0.08,
+        "close": 0.0
+      },
+      "provider_confidence": 0.66,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.8837821999986772,
+    "input_tokens": 1141,
+    "request_sha256": [
+      "f103c6ec21c9ee65f822946d4bf08f3b0944591590966f533ecc588c42ab6596"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0123",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 1.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.29476870000507915,
+    "input_tokens": 1146,
+    "request_sha256": [
+      "87d6843ace6ffed613e550ce9e70fd031563f21219b64d22365a265d758d6c72"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0124",
+    "split": "development",
+    "action": "close",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "close",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.11,
+        "human": 0.0,
+        "redirect": 0.02,
+        "refuse": 0.0,
+        "close": 0.87
+      },
+      "provider_confidence": 0.85,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.3020059000045876,
+    "input_tokens": 1142,
+    "request_sha256": [
+      "833f6eb8b54ec65598725a31650fe3ede7ce9e32b9a55d8133c5d07e24dec54b"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0125",
+    "split": "development",
+    "action": "tool",
+    "tool_name": "queryMyCreditScore",
+    "action_prediction": {
+      "choice": "tool",
+      "probabilities": {
+        "clarify": 0.18,
+        "retrieve": 0.0,
+        "tool": 0.81,
+        "answer": 0.01,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.0,
+        "close": 0.0
+      },
+      "provider_confidence": 0.78,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": {
+      "choice": "queryMyCreditScore",
+      "probabilities": {
+        "queryLoanProducts": 0.0,
+        "queryMyApplications": 0.0,
+        "queryApplicationDetail": 0.0,
+        "queryMyCreditScore": 1.0,
+        "explainApplicationStatus": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.6537434000056237,
+    "input_tokens": 2345,
+    "request_sha256": [
+      "04999cbe8ac49db87fa0038f4d279446da27c7c51002f98b82da8288d81e8f87",
+      "c3cba2b0aa55d14f8e109971fc486c3ae7e8f5b8abc7dc37f4ee6a19cc077795"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0126",
+    "split": "development",
+    "action": "clarify",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "clarify",
+      "probabilities": {
+        "clarify": 0.6,
+        "retrieve": 0.0,
+        "tool": 0.01,
+        "answer": 0.01,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.38,
+        "close": 0.0
+      },
+      "provider_confidence": 0.54,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.31063649999850895,
+    "input_tokens": 1155,
+    "request_sha256": [
+      "3242f865104781a734ed0e71055a909e741f66c4ebbbf8a729a48fe56dd94391"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0127",
+    "split": "development",
+    "action": "refuse",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "refuse",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.0,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 1.0,
+        "close": 0.0
+      },
+      "provider_confidence": 1.0,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 0.30372799999895506,
+    "input_tokens": 1150,
+    "request_sha256": [
+      "1233952f773a00832c3f90213b1cd127917fc5e445203261240a493811137be9"
+    ]
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0128",
+    "split": "development",
+    "action": "answer",
+    "tool_name": null,
+    "action_prediction": {
+      "choice": "answer",
+      "probabilities": {
+        "clarify": 0.0,
+        "retrieve": 0.0,
+        "tool": 0.0,
+        "answer": 0.9400000000000001,
+        "human": 0.0,
+        "redirect": 0.0,
+        "refuse": 0.06,
+        "close": 0.0
+      },
+      "provider_confidence": 0.93,
+      "choice_probability_consistent": true
+    },
+    "tool_prediction": null,
+    "argument_source": null,
+    "model": "jev-1.13.0",
+    "elapsed_s": 1.0716283000001567,
+    "input_tokens": 1163,
+    "request_sha256": [
+      "f64afc1e83541a9b933b3de491f9520d9a5366928c0ec18612e0fbd7c59957c0"
+    ]
+  }
+]

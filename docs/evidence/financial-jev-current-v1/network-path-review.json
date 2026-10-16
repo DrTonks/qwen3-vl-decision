@@ -1,0 +1,16 @@
+{
+  "scope": "read-only local network and historical source inspection",
+  "successful_reference_date": "2026-10-02",
+  "successful_reference_requests": 1152,
+  "successful_reference_source_sha256_matches": true,
+  "successful_reference_proxy_configuration": "urllib.request.ProxyHandler({}) disables explicit application HTTP/HTTPS proxies",
+  "current_reference_proxy_configuration": "same ProxyHandler({})",
+  "local_127_0_0_1_7890_tcp_reachable": true,
+  "proxy_protocol_or_exit_ip_verified": false,
+  "external_requests_made": 0,
+  "limitations": [
+    "Application-level proxy disabling does not establish absence of historical TUN/VPN/system routing.",
+    "No historical egress IP was recorded; cannot attribute changed access to route or provider policy.",
+    "HTTP 451 response explicitly states region unavailable. No proxy request attempted to bypass the restriction."
+  ]
+}

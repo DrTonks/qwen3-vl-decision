@@ -1,0 +1,26 @@
+{
+  "status": "awaiting_explicit_retry_authorization",
+  "proxy": "http://127.0.0.1:7890",
+  "requests_attempted": 2,
+  "successful_requests": 1,
+  "complete_samples": 0,
+  "automatic_retries": 0,
+  "model": "jev-1.13.0",
+  "known_success_input_tokens": 1158,
+  "failed_request_cost": "unknown",
+  "failure": {
+    "stage": "stopped_on_error",
+    "done": 0,
+    "id": "EVAL-FSV2-DEV-0001",
+    "task": "tool",
+    "error": "URLError",
+    "http_status": null,
+    "retries": 0,
+    "updated_at": "2026-10-16T09:17:34.987418+00:00"
+  },
+  "pending_question": "Authorize one retry of the uncertain tool request, then continue bounded development evaluation; successful cache reused",
+  "performance_metrics_available": false,
+  "calibration_or_final_read": false,
+  "snapshot_note": "Historical pre-authorization snapshot; superseded by session-v2 comparison-audit after user authorized multiple retries.",
+  "current_status": "completed_in_financial-jev-current-session-v2"
+}

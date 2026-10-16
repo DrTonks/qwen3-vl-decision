@@ -1,0 +1,1472 @@
+{
+  "scope": "128 synthetic development samples; not final or production test",
+  "models": [
+    {
+      "name": "Jev 1.13.0",
+      "metrics": {
+        "rows": 128,
+        "data_sha256": "b8a44bf5fd0f3c7448bc69203a7632e80a712dbc5ed903c19f652041a65bb7db",
+        "partition": "development",
+        "prompt_sha256": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91",
+        "protocol_sha256": "cb8fb3c3f5c5ad9eb5018f1fd5e89449a8e791e159cb72bef5ed156739d129b8",
+        "action_accuracy": 0.8515625,
+        "macro_f1": 0.7688339275103981,
+        "per_action": {
+          "clarify": {
+            "support": 14,
+            "precision": 1.0,
+            "recall": 0.5714285714285714,
+            "f1": 0.7272727272727273
+          },
+          "retrieve": {
+            "support": 12,
+            "precision": 0.9230769230769231,
+            "recall": 1.0,
+            "f1": 0.9600000000000001
+          },
+          "tool": {
+            "support": 18,
+            "precision": 0.7222222222222222,
+            "recall": 0.7222222222222222,
+            "f1": 0.7222222222222222
+          },
+          "answer": {
+            "support": 29,
+            "precision": 0.6829268292682927,
+            "recall": 0.9655172413793104,
+            "f1": 0.8000000000000002
+          },
+          "human": {
+            "support": 27,
+            "precision": 1.0,
+            "recall": 0.8888888888888888,
+            "f1": 0.9411764705882353
+          },
+          "redirect": {
+            "support": 4,
+            "precision": 0,
+            "recall": 0.0,
+            "f1": 0
+          },
+          "refuse": {
+            "support": 18,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "close": {
+            "support": 6,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "confusion": {
+          "clarify": {
+            "clarify": 8,
+            "retrieve": 0,
+            "tool": 3,
+            "answer": 3,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 0,
+            "invalid": 0
+          },
+          "retrieve": {
+            "clarify": 0,
+            "retrieve": 12,
+            "tool": 0,
+            "answer": 0,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 0,
+            "invalid": 0
+          },
+          "tool": {
+            "clarify": 0,
+            "retrieve": 0,
+            "tool": 13,
+            "answer": 5,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 0,
+            "invalid": 0
+          },
+          "answer": {
+            "clarify": 0,
+            "retrieve": 0,
+            "tool": 1,
+            "answer": 28,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 0,
+            "invalid": 0
+          },
+          "human": {
+            "clarify": 0,
+            "retrieve": 1,
+            "tool": 1,
+            "answer": 1,
+            "human": 24,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 0,
+            "invalid": 0
+          },
+          "redirect": {
+            "clarify": 0,
+            "retrieve": 0,
+            "tool": 0,
+            "answer": 4,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 0,
+            "invalid": 0
+          },
+          "refuse": {
+            "clarify": 0,
+            "retrieve": 0,
+            "tool": 0,
+            "answer": 0,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 18,
+            "close": 0,
+            "invalid": 0
+          },
+          "close": {
+            "clarify": 0,
+            "retrieve": 0,
+            "tool": 0,
+            "answer": 0,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 6,
+            "invalid": 0
+          }
+        },
+        "human_misses": [
+          "EVAL-FSV2-DEV-0030",
+          "EVAL-FSV2-DEV-0083",
+          "EVAL-FSV2-DEV-0094"
+        ],
+        "false_refusals": [],
+        "unavailable_knowledge_retrievals": [],
+        "tool_support": 18,
+        "action_tool_joint_accuracy": 0.7222222222222222,
+        "status_tool_support": 3,
+        "status_tool_accuracy": 0.0,
+        "parameter_results": {
+          "model": {
+            "rows": 0,
+            "correct": 0,
+            "accuracy": null
+          },
+          "trusted_state_parser": {
+            "rows": 0,
+            "correct": 0,
+            "accuracy": null
+          }
+        },
+        "latency": {
+          "measured_rows": 128,
+          "p50_s": 0.32358975000170176,
+          "p95_s": 1.3812271800026792
+        },
+        "input_tokens": {
+          "measured_rows": 0,
+          "p50": null,
+          "p95": null
+        },
+        "note": "Trusted-state parameter results are backend grounding, not learned argument generation. Correlated macro stories require cluster-aware uncertainty; sample counts are not independent user counts.",
+        "unauthenticated_tool_actions": [
+          "EVAL-FSV2-DEV-0100",
+          "EVAL-FSV2-DEV-0125"
+        ],
+        "unavailable_tool_choices": [],
+        "macro_f1_observed_actions": 0.7688339275103981,
+        "wilson_action_accuracy": [
+          0.7797727087736895,
+          0.9028653688464999
+        ],
+        "wilson_action_recall": {
+          "clarify": [
+            0.3259064457965074,
+            0.7861920109552588
+          ],
+          "retrieve": [
+            0.7575059933447592,
+            1
+          ],
+          "tool": [
+            0.4912734343970254,
+            0.8750024662044601
+          ],
+          "answer": [
+            0.8282447812067973,
+            0.9938867857072374
+          ],
+          "human": [
+            0.7194219918172017,
+            0.9614796517169016
+          ],
+          "redirect": [
+            0,
+            0.4898908364545973
+          ],
+          "refuse": [
+            0.8241207763533425,
+            1
+          ],
+          "close": [
+            0.6096657120978346,
+            1
+          ]
+        },
+        "story_bootstrap": {
+          "story_groups": 32,
+          "resamples": 1000,
+          "seed": 20261003,
+          "intervals": {
+            "action_accuracy": {
+              "low": 0.78125,
+              "high": 0.9140625,
+              "valid_resamples": 1000
+            },
+            "human_recall": {
+              "low": 0.7726398601398601,
+              "high": 1.0,
+              "valid_resamples": 1000
+            },
+            "joint_tool_accuracy": {
+              "low": 0.4,
+              "high": 1.0,
+              "valid_resamples": 1000
+            }
+          },
+          "note": "Percentile cluster bootstrap within this synthetic set, not evidence of production generalization; zero errors may give degenerate intervals."
+        },
+        "derived": {
+          "macro_precision": 0.7910282468209298,
+          "balanced_accuracy": 0.7685071154898742,
+          "weighted_f1": 0.8383873663101604,
+          "human_miss_rate": 0.1111111111111111,
+          "false_refusal_rate": 0.0,
+          "unauth_tool_rate": 0.0625,
+          "unavailable_retrieval_rate": 0.0,
+          "unavailable_tool_rate": 0.0,
+          "predicted_tool_rate": 0.140625,
+          "denominators": {
+            "non_refuse": 110,
+            "unauthenticated": 32,
+            "no_knowledge": 96,
+            "predicted_tool": 18
+          },
+          "latency_ms": {
+            "mean": 541.1718695313539,
+            "p50": 323.58975000170176,
+            "p90": 1105.1152099978933,
+            "p95": 1381.2271800026792,
+            "p99": 1873.1882369989767
+          }
+        },
+        "cohort_accuracy": {
+          "current-service": 0.828125,
+          "planned-retrieval": 0.9375,
+          "preauth-robustness": 0.8125
+        }
+      }
+    },
+    {
+      "name": "原始 Qwen3-VL-2B",
+      "metrics": {
+        "rows": 128,
+        "data_sha256": "b8a44bf5fd0f3c7448bc69203a7632e80a712dbc5ed903c19f652041a65bb7db",
+        "partition": "development",
+        "prompt_sha256": "e7fc7e20ab9ed1e61f3beee09510d4aef427368b16fcafb63fd38346ec0c15aa",
+        "protocol_sha256": "4adc0e3a08aee6171c54e028b57352909c7c69ff0c07e4b8d1022cbf6d6ba0ba",
+        "action_accuracy": 0.3046875,
+        "macro_f1": 0.30839101792402357,
+        "per_action": {
+          "clarify": {
+            "support": 14,
+            "precision": 0.12,
+            "recall": 0.6428571428571429,
+            "f1": 0.20224719101123598
+          },
+          "retrieve": {
+            "support": 12,
+            "precision": 0.75,
+            "recall": 0.25,
+            "f1": 0.375
+          },
+          "tool": {
+            "support": 18,
+            "precision": 0.5,
+            "recall": 0.3888888888888889,
+            "f1": 0.43750000000000006
+          },
+          "answer": {
+            "support": 29,
+            "precision": 0.21052631578947367,
+            "recall": 0.13793103448275862,
+            "f1": 0.16666666666666666
+          },
+          "human": {
+            "support": 27,
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1": 0.5
+          },
+          "redirect": {
+            "support": 4,
+            "precision": 0,
+            "recall": 0.0,
+            "f1": 0
+          },
+          "refuse": {
+            "support": 18,
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1": 0.5
+          },
+          "close": {
+            "support": 6,
+            "precision": 1.0,
+            "recall": 0.16666666666666666,
+            "f1": 0.2857142857142857
+          }
+        },
+        "confusion": {
+          "clarify": {
+            "clarify": 9,
+            "retrieve": 0,
+            "tool": 3,
+            "answer": 2,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 0,
+            "invalid": 0
+          },
+          "retrieve": {
+            "clarify": 6,
+            "retrieve": 3,
+            "tool": 0,
+            "answer": 3,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 0,
+            "invalid": 0
+          },
+          "tool": {
+            "clarify": 4,
+            "retrieve": 0,
+            "tool": 7,
+            "answer": 7,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 0,
+            "invalid": 0
+          },
+          "answer": {
+            "clarify": 21,
+            "retrieve": 1,
+            "tool": 3,
+            "answer": 4,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 0,
+            "invalid": 0
+          },
+          "human": {
+            "clarify": 18,
+            "retrieve": 0,
+            "tool": 0,
+            "answer": 0,
+            "human": 9,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 0,
+            "invalid": 0
+          },
+          "redirect": {
+            "clarify": 4,
+            "retrieve": 0,
+            "tool": 0,
+            "answer": 0,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 0,
+            "invalid": 0
+          },
+          "refuse": {
+            "clarify": 12,
+            "retrieve": 0,
+            "tool": 0,
+            "answer": 0,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 6,
+            "close": 0,
+            "invalid": 0
+          },
+          "close": {
+            "clarify": 1,
+            "retrieve": 0,
+            "tool": 1,
+            "answer": 3,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 1,
+            "invalid": 0
+          }
+        },
+        "human_misses": [
+          "EVAL-FSV2-DEV-0021",
+          "EVAL-FSV2-DEV-0022",
+          "EVAL-FSV2-DEV-0023",
+          "EVAL-FSV2-DEV-0025",
+          "EVAL-FSV2-DEV-0030",
+          "EVAL-FSV2-DEV-0031",
+          "EVAL-FSV2-DEV-0032",
+          "EVAL-FSV2-DEV-0046",
+          "EVAL-FSV2-DEV-0062",
+          "EVAL-FSV2-DEV-0072",
+          "EVAL-FSV2-DEV-0081",
+          "EVAL-FSV2-DEV-0083",
+          "EVAL-FSV2-DEV-0084",
+          "EVAL-FSV2-DEV-0094",
+          "EVAL-FSV2-DEV-0109",
+          "EVAL-FSV2-DEV-0110",
+          "EVAL-FSV2-DEV-0111",
+          "EVAL-FSV2-DEV-0115"
+        ],
+        "false_refusals": [],
+        "unavailable_knowledge_retrievals": [],
+        "tool_support": 18,
+        "action_tool_joint_accuracy": 0.2777777777777778,
+        "status_tool_support": 3,
+        "status_tool_accuracy": 0.0,
+        "parameter_results": {
+          "model": {
+            "rows": 0,
+            "correct": 0,
+            "accuracy": null
+          },
+          "trusted_state_parser": {
+            "rows": 0,
+            "correct": 0,
+            "accuracy": null
+          }
+        },
+        "latency": {
+          "measured_rows": 128,
+          "p50_s": 0.13708645000008346,
+          "p95_s": 0.2764467099999819
+        },
+        "input_tokens": {
+          "measured_rows": 0,
+          "p50": null,
+          "p95": null
+        },
+        "note": "Trusted-state parameter results are backend grounding, not learned argument generation. Correlated macro stories require cluster-aware uncertainty; sample counts are not independent user counts.",
+        "unauthenticated_tool_actions": [
+          "EVAL-FSV2-DEV-0100"
+        ],
+        "unavailable_tool_choices": [],
+        "macro_f1_observed_actions": 0.30839101792402357,
+        "wilson_action_accuracy": [
+          0.2316056151523922,
+          0.38915100839194705
+        ],
+        "wilson_action_recall": {
+          "clarify": [
+            0.38764423103907397,
+            0.8365526824644587
+          ],
+          "retrieve": [
+            0.08894166839405471,
+            0.5323053349335657
+          ],
+          "tool": [
+            0.2030524657216362,
+            0.613809583977621
+          ],
+          "answer": [
+            0.05497439964111964,
+            0.30558993720352023
+          ],
+          "human": [
+            0.18643261498715644,
+            0.5217523949267991
+          ],
+          "redirect": [
+            0,
+            0.4898908364545973
+          ],
+          "refuse": [
+            0.1627877475083369,
+            0.5625053270405489
+          ],
+          "close": [
+            0.030053369748306635,
+            0.5635028221864702
+          ]
+        },
+        "story_bootstrap": {
+          "story_groups": 32,
+          "resamples": 1000,
+          "seed": 20261003,
+          "intervals": {
+            "action_accuracy": {
+              "low": 0.2265625,
+              "high": 0.3830078124999998,
+              "valid_resamples": 1000
+            },
+            "human_recall": {
+              "low": 0.1537878787878788,
+              "high": 0.5625679347826086,
+              "valid_resamples": 1000
+            },
+            "joint_tool_accuracy": {
+              "low": 0.0,
+              "high": 0.562723214285714,
+              "valid_resamples": 1000
+            }
+          },
+          "note": "Percentile cluster bootstrap within this synthetic set, not evidence of production generalization; zero errors may give degenerate intervals."
+        },
+        "derived": {
+          "macro_precision": 0.5725657894736842,
+          "balanced_accuracy": 0.28162629994526545,
+          "weighted_f1": 0.34573499782637773,
+          "human_miss_rate": 0.6666666666666666,
+          "false_refusal_rate": 0.0,
+          "unauth_tool_rate": 0.03125,
+          "unavailable_retrieval_rate": 0.0,
+          "unavailable_tool_rate": 0.0,
+          "predicted_tool_rate": 0.109375,
+          "denominators": {
+            "non_refuse": 110,
+            "unauthenticated": 32,
+            "no_knowledge": 96,
+            "predicted_tool": 14
+          },
+          "latency_ms": {
+            "mean": 151.12164218750655,
+            "p50": 137.08645000008346,
+            "p90": 261.45358000001124,
+            "p95": 276.44670999998186,
+            "p99": 307.9917570000953
+          }
+        },
+        "cohort_accuracy": {
+          "current-service": 0.296875,
+          "planned-retrieval": 0.34375,
+          "preauth-robustness": 0.28125
+        }
+      }
+    },
+    {
+      "name": "原始 Qwen3.5-0.8B",
+      "metrics": {
+        "rows": 128,
+        "data_sha256": "b8a44bf5fd0f3c7448bc69203a7632e80a712dbc5ed903c19f652041a65bb7db",
+        "partition": "development",
+        "prompt_sha256": "25033aa2a7a3fadf60e51ece0eebe3fdfbbd0626cc9f04654b9641a91a4629ef",
+        "protocol_sha256": "f7b1b6e85c809bb7adb55823eef75adfd88b31cede78ba5c603f0457de5952d8",
+        "action_accuracy": 0.375,
+        "macro_f1": 0.22374328569980745,
+        "per_action": {
+          "clarify": {
+            "support": 14,
+            "precision": 0,
+            "recall": 0.0,
+            "f1": 0
+          },
+          "retrieve": {
+            "support": 12,
+            "precision": 1.0,
+            "recall": 0.08333333333333333,
+            "f1": 0.15384615384615385
+          },
+          "tool": {
+            "support": 18,
+            "precision": 0.2222222222222222,
+            "recall": 1.0,
+            "f1": 0.3636363636363636
+          },
+          "answer": {
+            "support": 29,
+            "precision": 0,
+            "recall": 0.0,
+            "f1": 0
+          },
+          "human": {
+            "support": 27,
+            "precision": 0.8947368421052632,
+            "recall": 0.6296296296296297,
+            "f1": 0.7391304347826088
+          },
+          "redirect": {
+            "support": 4,
+            "precision": 0,
+            "recall": 0.0,
+            "f1": 0
+          },
+          "refuse": {
+            "support": 18,
+            "precision": 0.4444444444444444,
+            "recall": 0.6666666666666666,
+            "f1": 0.5333333333333333
+          },
+          "close": {
+            "support": 6,
+            "precision": 0,
+            "recall": 0.0,
+            "f1": 0
+          }
+        },
+        "confusion": {
+          "clarify": {
+            "clarify": 0,
+            "retrieve": 0,
+            "tool": 14,
+            "answer": 0,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 0,
+            "invalid": 0
+          },
+          "retrieve": {
+            "clarify": 0,
+            "retrieve": 1,
+            "tool": 10,
+            "answer": 0,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 1,
+            "close": 0,
+            "invalid": 0
+          },
+          "tool": {
+            "clarify": 0,
+            "retrieve": 0,
+            "tool": 18,
+            "answer": 0,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 0,
+            "invalid": 0
+          },
+          "answer": {
+            "clarify": 0,
+            "retrieve": 0,
+            "tool": 19,
+            "answer": 0,
+            "human": 2,
+            "redirect": 0,
+            "refuse": 8,
+            "close": 0,
+            "invalid": 0
+          },
+          "human": {
+            "clarify": 0,
+            "retrieve": 0,
+            "tool": 6,
+            "answer": 0,
+            "human": 17,
+            "redirect": 0,
+            "refuse": 4,
+            "close": 0,
+            "invalid": 0
+          },
+          "redirect": {
+            "clarify": 0,
+            "retrieve": 0,
+            "tool": 4,
+            "answer": 0,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 0,
+            "invalid": 0
+          },
+          "refuse": {
+            "clarify": 0,
+            "retrieve": 0,
+            "tool": 6,
+            "answer": 0,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 12,
+            "close": 0,
+            "invalid": 0
+          },
+          "close": {
+            "clarify": 0,
+            "retrieve": 0,
+            "tool": 4,
+            "answer": 0,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 2,
+            "close": 0,
+            "invalid": 0
+          }
+        },
+        "human_misses": [
+          "EVAL-FSV2-DEV-0021",
+          "EVAL-FSV2-DEV-0023",
+          "EVAL-FSV2-DEV-0025",
+          "EVAL-FSV2-DEV-0031",
+          "EVAL-FSV2-DEV-0046",
+          "EVAL-FSV2-DEV-0072",
+          "EVAL-FSV2-DEV-0083",
+          "EVAL-FSV2-DEV-0094",
+          "EVAL-FSV2-DEV-0110",
+          "EVAL-FSV2-DEV-0111"
+        ],
+        "false_refusals": [
+          "EVAL-FSV2-DEV-0021",
+          "EVAL-FSV2-DEV-0023",
+          "EVAL-FSV2-DEV-0061",
+          "EVAL-FSV2-DEV-0064",
+          "EVAL-FSV2-DEV-0075",
+          "EVAL-FSV2-DEV-0076",
+          "EVAL-FSV2-DEV-0089",
+          "EVAL-FSV2-DEV-0090",
+          "EVAL-FSV2-DEV-0110",
+          "EVAL-FSV2-DEV-0111",
+          "EVAL-FSV2-DEV-0112",
+          "EVAL-FSV2-DEV-0116",
+          "EVAL-FSV2-DEV-0117",
+          "EVAL-FSV2-DEV-0124",
+          "EVAL-FSV2-DEV-0128"
+        ],
+        "unavailable_knowledge_retrievals": [],
+        "tool_support": 18,
+        "action_tool_joint_accuracy": 0.4444444444444444,
+        "status_tool_support": 3,
+        "status_tool_accuracy": 1.0,
+        "parameter_results": {
+          "model": {
+            "rows": 0,
+            "correct": 0,
+            "accuracy": null
+          },
+          "trusted_state_parser": {
+            "rows": 0,
+            "correct": 0,
+            "accuracy": null
+          }
+        },
+        "latency": {
+          "measured_rows": 128,
+          "p50_s": 0.17566635000002861,
+          "p95_s": 0.26508173499951226
+        },
+        "input_tokens": {
+          "measured_rows": 0,
+          "p50": null,
+          "p95": null
+        },
+        "note": "Trusted-state parameter results are backend grounding, not learned argument generation. Correlated macro stories require cluster-aware uncertainty; sample counts are not independent user counts.",
+        "unauthenticated_tool_actions": [
+          "EVAL-FSV2-DEV-0097",
+          "EVAL-FSV2-DEV-0098",
+          "EVAL-FSV2-DEV-0099",
+          "EVAL-FSV2-DEV-0100",
+          "EVAL-FSV2-DEV-0101",
+          "EVAL-FSV2-DEV-0102",
+          "EVAL-FSV2-DEV-0103",
+          "EVAL-FSV2-DEV-0104",
+          "EVAL-FSV2-DEV-0113",
+          "EVAL-FSV2-DEV-0118",
+          "EVAL-FSV2-DEV-0119",
+          "EVAL-FSV2-DEV-0120",
+          "EVAL-FSV2-DEV-0121",
+          "EVAL-FSV2-DEV-0122",
+          "EVAL-FSV2-DEV-0125",
+          "EVAL-FSV2-DEV-0126",
+          "EVAL-FSV2-DEV-0127"
+        ],
+        "unavailable_tool_choices": [
+          "EVAL-FSV2-DEV-0096"
+        ],
+        "macro_f1_observed_actions": 0.22374328569980745,
+        "wilson_action_accuracy": [
+          0.29592429097646555,
+          0.4613599480919116
+        ],
+        "wilson_action_recall": {
+          "clarify": [
+            1.3877787807814457e-17,
+            0.2153108027376358
+          ],
+          "retrieve": [
+            0.014865094404917095,
+            0.35387991114111694
+          ],
+          "tool": [
+            0.8241207763533425,
+            1
+          ],
+          "answer": [
+            0,
+            0.11696979849974075
+          ],
+          "human": [
+            0.4422923441210239,
+            0.784674870390344
+          ],
+          "redirect": [
+            0,
+            0.4898908364545973
+          ],
+          "refuse": [
+            0.43749467295945105,
+            0.837212252491663
+          ],
+          "close": [
+            2.7755575615628914e-17,
+            0.3903342879021653
+          ]
+        },
+        "story_bootstrap": {
+          "story_groups": 32,
+          "resamples": 1000,
+          "seed": 20261003,
+          "intervals": {
+            "action_accuracy": {
+              "low": 0.265625,
+              "high": 0.4921875,
+              "valid_resamples": 1000
+            },
+            "human_recall": {
+              "low": 0.45454545454545453,
+              "high": 0.7857142857142857,
+              "valid_resamples": 1000
+            },
+            "joint_tool_accuracy": {
+              "low": 0.07692307692307693,
+              "high": 0.8335526315789472,
+              "valid_resamples": 1000
+            }
+          },
+          "note": "Percentile cluster bootstrap within this synthetic set, not evidence of production generalization; zero errors may give degenerate intervals."
+        },
+        "derived": {
+          "macro_precision": 0.3201754385964912,
+          "balanced_accuracy": 0.2974537037037037,
+          "weighted_f1": 0.29646976664639707,
+          "human_miss_rate": 0.37037037037037035,
+          "false_refusal_rate": 0.13636363636363635,
+          "unauth_tool_rate": 0.53125,
+          "unavailable_retrieval_rate": 0.0,
+          "unavailable_tool_rate": 0.012345679012345678,
+          "predicted_tool_rate": 0.6328125,
+          "denominators": {
+            "non_refuse": 110,
+            "unauthenticated": 32,
+            "no_knowledge": 96,
+            "predicted_tool": 81
+          },
+          "latency_ms": {
+            "mean": 163.34613203133586,
+            "p50": 175.66635000002861,
+            "p90": 239.1933799979597,
+            "p95": 265.08173499951226,
+            "p99": 289.49754699908226
+          }
+        },
+        "cohort_accuracy": {
+          "current-service": 0.453125,
+          "planned-retrieval": 0.40625,
+          "preauth-robustness": 0.1875
+        }
+      }
+    },
+    {
+      "name": "训练后 Qwen3-VL-2B",
+      "metrics": {
+        "rows": 128,
+        "data_sha256": "b8a44bf5fd0f3c7448bc69203a7632e80a712dbc5ed903c19f652041a65bb7db",
+        "partition": "development",
+        "prompt_sha256": "e7fc7e20ab9ed1e61f3beee09510d4aef427368b16fcafb63fd38346ec0c15aa",
+        "protocol_sha256": "4adc0e3a08aee6171c54e028b57352909c7c69ff0c07e4b8d1022cbf6d6ba0ba",
+        "action_accuracy": 0.9140625,
+        "macro_f1": 0.9237689023515683,
+        "per_action": {
+          "clarify": {
+            "support": 14,
+            "precision": 0.7777777777777778,
+            "recall": 1.0,
+            "f1": 0.8750000000000001
+          },
+          "retrieve": {
+            "support": 12,
+            "precision": 1.0,
+            "recall": 0.9166666666666666,
+            "f1": 0.9565217391304348
+          },
+          "tool": {
+            "support": 18,
+            "precision": 0.8,
+            "recall": 0.8888888888888888,
+            "f1": 0.8421052631578948
+          },
+          "answer": {
+            "support": 29,
+            "precision": 1.0,
+            "recall": 0.8620689655172413,
+            "f1": 0.9259259259259259
+          },
+          "human": {
+            "support": 27,
+            "precision": 0.96,
+            "recall": 0.8888888888888888,
+            "f1": 0.923076923076923
+          },
+          "redirect": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "refuse": {
+            "support": 18,
+            "precision": 0.9444444444444444,
+            "recall": 0.9444444444444444,
+            "f1": 0.9444444444444444
+          },
+          "close": {
+            "support": 6,
+            "precision": 0.8571428571428571,
+            "recall": 1.0,
+            "f1": 0.923076923076923
+          }
+        },
+        "confusion": {
+          "clarify": {
+            "clarify": 14,
+            "retrieve": 0,
+            "tool": 0,
+            "answer": 0,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 0,
+            "invalid": 0
+          },
+          "retrieve": {
+            "clarify": 0,
+            "retrieve": 11,
+            "tool": 1,
+            "answer": 0,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 0,
+            "invalid": 0
+          },
+          "tool": {
+            "clarify": 2,
+            "retrieve": 0,
+            "tool": 16,
+            "answer": 0,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 0,
+            "invalid": 0
+          },
+          "answer": {
+            "clarify": 2,
+            "retrieve": 0,
+            "tool": 2,
+            "answer": 25,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 0,
+            "invalid": 0
+          },
+          "human": {
+            "clarify": 0,
+            "retrieve": 0,
+            "tool": 1,
+            "answer": 0,
+            "human": 24,
+            "redirect": 0,
+            "refuse": 1,
+            "close": 1,
+            "invalid": 0
+          },
+          "redirect": {
+            "clarify": 0,
+            "retrieve": 0,
+            "tool": 0,
+            "answer": 0,
+            "human": 0,
+            "redirect": 4,
+            "refuse": 0,
+            "close": 0,
+            "invalid": 0
+          },
+          "refuse": {
+            "clarify": 0,
+            "retrieve": 0,
+            "tool": 0,
+            "answer": 0,
+            "human": 1,
+            "redirect": 0,
+            "refuse": 17,
+            "close": 0,
+            "invalid": 0
+          },
+          "close": {
+            "clarify": 0,
+            "retrieve": 0,
+            "tool": 0,
+            "answer": 0,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 6,
+            "invalid": 0
+          }
+        },
+        "human_misses": [
+          "EVAL-FSV2-DEV-0023",
+          "EVAL-FSV2-DEV-0072",
+          "EVAL-FSV2-DEV-0094"
+        ],
+        "false_refusals": [
+          "EVAL-FSV2-DEV-0072"
+        ],
+        "unavailable_knowledge_retrievals": [],
+        "tool_support": 18,
+        "action_tool_joint_accuracy": 0.8888888888888888,
+        "status_tool_support": 3,
+        "status_tool_accuracy": 0.6666666666666666,
+        "parameter_results": {
+          "model": {
+            "rows": 0,
+            "correct": 0,
+            "accuracy": null
+          },
+          "trusted_state_parser": {
+            "rows": 0,
+            "correct": 0,
+            "accuracy": null
+          }
+        },
+        "latency": {
+          "measured_rows": 128,
+          "p50_s": 0.13166625000030763,
+          "p95_s": 0.2946057849995668
+        },
+        "input_tokens": {
+          "measured_rows": 0,
+          "p50": null,
+          "p95": null
+        },
+        "note": "Trusted-state parameter results are backend grounding, not learned argument generation. Correlated macro stories require cluster-aware uncertainty; sample counts are not independent user counts.",
+        "unauthenticated_tool_actions": [],
+        "unavailable_tool_choices": [
+          "EVAL-FSV2-DEV-0094"
+        ],
+        "macro_f1_observed_actions": 0.9237689023515683,
+        "wilson_action_accuracy": [
+          0.852659089457387,
+          0.9513368686286138
+        ],
+        "wilson_action_recall": {
+          "clarify": [
+            0.7846891972623643,
+            1
+          ],
+          "retrieve": [
+            0.646120088858883,
+            0.9851349055950829
+          ],
+          "tool": [
+            0.672002348698212,
+            0.9689804773543876
+          ],
+          "answer": [
+            0.6944100627964798,
+            0.9450256003588804
+          ],
+          "human": [
+            0.7194219918172017,
+            0.9614796517169016
+          ],
+          "redirect": [
+            0.5101091635454027,
+            1
+          ],
+          "refuse": [
+            0.7424269921812741,
+            0.990124809021697
+          ],
+          "close": [
+            0.6096657120978346,
+            1
+          ]
+        },
+        "story_bootstrap": {
+          "story_groups": 32,
+          "resamples": 1000,
+          "seed": 20261003,
+          "intervals": {
+            "action_accuracy": {
+              "low": 0.859375,
+              "high": 0.9609375,
+              "valid_resamples": 1000
+            },
+            "human_recall": {
+              "low": 0.7306818181818181,
+              "high": 1.0,
+              "valid_resamples": 1000
+            },
+            "joint_tool_accuracy": {
+              "low": 0.7646358543417366,
+              "high": 1.0,
+              "valid_resamples": 1000
+            }
+          },
+          "note": "Percentile cluster bootstrap within this synthetic set, not evidence of production generalization; zero errors may give degenerate intervals."
+        },
+        "derived": {
+          "macro_precision": 0.9174206349206349,
+          "balanced_accuracy": 0.9376197318007663,
+          "weighted_f1": 0.915621452498419,
+          "human_miss_rate": 0.1111111111111111,
+          "false_refusal_rate": 0.00909090909090909,
+          "unauth_tool_rate": 0.0,
+          "unavailable_retrieval_rate": 0.0,
+          "unavailable_tool_rate": 0.05,
+          "predicted_tool_rate": 0.15625,
+          "denominators": {
+            "non_refuse": 110,
+            "unauthenticated": 32,
+            "no_knowledge": 96,
+            "predicted_tool": 20
+          },
+          "latency_ms": {
+            "mean": 156.83635468755597,
+            "p50": 131.66625000030763,
+            "p90": 276.2445700003809,
+            "p95": 294.6057849995668,
+            "p99": 307.1664360002251
+          }
+        },
+        "cohort_accuracy": {
+          "current-service": 0.890625,
+          "planned-retrieval": 0.90625,
+          "preauth-robustness": 0.96875
+        }
+      }
+    },
+    {
+      "name": "训练后 Qwen3.5-0.8B",
+      "metrics": {
+        "rows": 128,
+        "data_sha256": "b8a44bf5fd0f3c7448bc69203a7632e80a712dbc5ed903c19f652041a65bb7db",
+        "partition": "development",
+        "prompt_sha256": "25033aa2a7a3fadf60e51ece0eebe3fdfbbd0626cc9f04654b9641a91a4629ef",
+        "protocol_sha256": "f7b1b6e85c809bb7adb55823eef75adfd88b31cede78ba5c603f0457de5952d8",
+        "action_accuracy": 0.9453125,
+        "macro_f1": 0.9558301271654,
+        "per_action": {
+          "clarify": {
+            "support": 14,
+            "precision": 0.8666666666666667,
+            "recall": 0.9285714285714286,
+            "f1": 0.896551724137931
+          },
+          "retrieve": {
+            "support": 12,
+            "precision": 0.9230769230769231,
+            "recall": 1.0,
+            "f1": 0.9600000000000001
+          },
+          "tool": {
+            "support": 18,
+            "precision": 0.9473684210526315,
+            "recall": 1.0,
+            "f1": 0.972972972972973
+          },
+          "answer": {
+            "support": 29,
+            "precision": 0.9629629629629629,
+            "recall": 0.896551724137931,
+            "f1": 0.9285714285714286
+          },
+          "human": {
+            "support": 27,
+            "precision": 1.0,
+            "recall": 0.8888888888888888,
+            "f1": 0.9411764705882353
+          },
+          "redirect": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "refuse": {
+            "support": 18,
+            "precision": 0.9,
+            "recall": 1.0,
+            "f1": 0.9473684210526316
+          },
+          "close": {
+            "support": 6,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "confusion": {
+          "clarify": {
+            "clarify": 13,
+            "retrieve": 0,
+            "tool": 0,
+            "answer": 1,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 0,
+            "invalid": 0
+          },
+          "retrieve": {
+            "clarify": 0,
+            "retrieve": 12,
+            "tool": 0,
+            "answer": 0,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 0,
+            "invalid": 0
+          },
+          "tool": {
+            "clarify": 0,
+            "retrieve": 0,
+            "tool": 18,
+            "answer": 0,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 0,
+            "invalid": 0
+          },
+          "answer": {
+            "clarify": 1,
+            "retrieve": 1,
+            "tool": 1,
+            "answer": 26,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 0,
+            "invalid": 0
+          },
+          "human": {
+            "clarify": 1,
+            "retrieve": 0,
+            "tool": 0,
+            "answer": 0,
+            "human": 24,
+            "redirect": 0,
+            "refuse": 2,
+            "close": 0,
+            "invalid": 0
+          },
+          "redirect": {
+            "clarify": 0,
+            "retrieve": 0,
+            "tool": 0,
+            "answer": 0,
+            "human": 0,
+            "redirect": 4,
+            "refuse": 0,
+            "close": 0,
+            "invalid": 0
+          },
+          "refuse": {
+            "clarify": 0,
+            "retrieve": 0,
+            "tool": 0,
+            "answer": 0,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 18,
+            "close": 0,
+            "invalid": 0
+          },
+          "close": {
+            "clarify": 0,
+            "retrieve": 0,
+            "tool": 0,
+            "answer": 0,
+            "human": 0,
+            "redirect": 0,
+            "refuse": 0,
+            "close": 6,
+            "invalid": 0
+          }
+        },
+        "human_misses": [
+          "EVAL-FSV2-DEV-0046",
+          "EVAL-FSV2-DEV-0083",
+          "EVAL-FSV2-DEV-0094"
+        ],
+        "false_refusals": [
+          "EVAL-FSV2-DEV-0046",
+          "EVAL-FSV2-DEV-0083"
+        ],
+        "unavailable_knowledge_retrievals": [],
+        "tool_support": 18,
+        "action_tool_joint_accuracy": 1.0,
+        "status_tool_support": 3,
+        "status_tool_accuracy": 1.0,
+        "parameter_results": {
+          "model": {
+            "rows": 0,
+            "correct": 0,
+            "accuracy": null
+          },
+          "trusted_state_parser": {
+            "rows": 0,
+            "correct": 0,
+            "accuracy": null
+          }
+        },
+        "latency": {
+          "measured_rows": 128,
+          "p50_s": 0.09247504999984812,
+          "p95_s": 0.20033660999888522
+        },
+        "input_tokens": {
+          "measured_rows": 0,
+          "p50": null,
+          "p95": null
+        },
+        "note": "Trusted-state parameter results are backend grounding, not learned argument generation. Correlated macro stories require cluster-aware uncertainty; sample counts are not independent user counts.",
+        "unauthenticated_tool_actions": [],
+        "unavailable_tool_choices": [],
+        "macro_f1_observed_actions": 0.9558301271654,
+        "wilson_action_accuracy": [
+          0.8914150997002529,
+          0.9732597986186536
+        ],
+        "wilson_action_recall": {
+          "clarify": [
+            0.6853129557584889,
+            0.9872777847521093
+          ],
+          "retrieve": [
+            0.7575059933447592,
+            1
+          ],
+          "tool": [
+            0.8241207763533425,
+            1
+          ],
+          "answer": [
+            0.736149189092262,
+            0.9641851086493229
+          ],
+          "human": [
+            0.7194219918172017,
+            0.9614796517169016
+          ],
+          "redirect": [
+            0.5101091635454027,
+            1
+          ],
+          "refuse": [
+            0.8241207763533425,
+            1
+          ],
+          "close": [
+            0.6096657120978346,
+            1
+          ]
+        },
+        "story_bootstrap": {
+          "story_groups": 32,
+          "resamples": 1000,
+          "seed": 20261003,
+          "intervals": {
+            "action_accuracy": {
+              "low": 0.890625,
+              "high": 0.984375,
+              "valid_resamples": 1000
+            },
+            "human_recall": {
+              "low": 0.7407407407407407,
+              "high": 1.0,
+              "valid_resamples": 1000
+            },
+            "joint_tool_accuracy": {
+              "low": 1.0,
+              "high": 1.0,
+              "valid_resamples": 1000
+            }
+          },
+          "note": "Percentile cluster bootstrap within this synthetic set, not evidence of production generalization; zero errors may give degenerate intervals."
+        },
+        "derived": {
+          "macro_precision": 0.9500093717198981,
+          "balanced_accuracy": 0.9642515051997811,
+          "weighted_f1": 0.9451422294128571,
+          "human_miss_rate": 0.1111111111111111,
+          "false_refusal_rate": 0.01818181818181818,
+          "unauth_tool_rate": 0.0,
+          "unavailable_retrieval_rate": 0.0,
+          "unavailable_tool_rate": 0.0,
+          "predicted_tool_rate": 0.1484375,
+          "denominators": {
+            "non_refuse": 110,
+            "unauthenticated": 32,
+            "no_knowledge": 96,
+            "predicted_tool": 19
+          },
+          "latency_ms": {
+            "mean": 107.14325156232007,
+            "p50": 92.47504999984812,
+            "p90": 189.9605500006146,
+            "p95": 200.33660999888522,
+            "p99": 204.8991419977392
+          }
+        },
+        "cohort_accuracy": {
+          "current-service": 0.953125,
+          "planned-retrieval": 0.90625,
+          "preauth-robustness": 0.96875
+        }
+      }
+    }
+  ],
+  "sources_sha256": "2e842062c116c91898c192f36b73b4ef448bc0ce5dc9f7cab05733ba1b7a61cf",
+  "code_sha256": "e2e4b4eae61da67f823d2322d074cfe7fbdea9a00e1816a07ce15e21314b69bd"
+}

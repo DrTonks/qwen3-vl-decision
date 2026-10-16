@@ -1,0 +1,29 @@
+{
+  "successful_requests_reused": [
+    {
+      "id": "EVAL-FSV2-DEV-0001",
+      "task": "action",
+      "source": "results/financial-jev-current-session-v1/requests/EVAL-FSV2-DEV-0001-action.json",
+      "source_sha256": "b8933a79915a64564128413ff721d935e1f95701ac4d22eabc554fcbd27d0f65",
+      "request_sha256": "fded0ed54ee843c62b1728c726f5c778ba4cc04afec6cdb87117310f88755de3"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0001",
+      "task": "tool",
+      "source": "results/financial-jev-current-session-v1/requests/EVAL-FSV2-DEV-0001-tool.json",
+      "source_sha256": "7843d93eb0f461c0e439cb2f8d20df6e5b0e68bbb38fb7bcc80109d186f0e31a",
+      "request_sha256": "94ca4c95bde31777f0cd7264df3511192c10eb4af3b6e0343fe62aea9555c0c3"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0002",
+      "task": "action",
+      "source": "results/financial-jev-current-session-v1/requests/EVAL-FSV2-DEV-0002-action.json",
+      "source_sha256": "977b8b8c17fd54a3450ce27659bea77320da1ef4f0feb6da7361ec7af4c37207",
+      "request_sha256": "59b3f2f98bfa8de77b53f310869400cfd852308479d603e7075a5512ef2f353c"
+    }
+  ],
+  "resends": 0,
+  "first_sample_transport": "urllib same proxy; others requests.Session",
+  "response_policy_change": "One non-argmax response retained and flagged, not retried; raw vendor-choice and strict contract-valid metrics reported separately",
+  "response_policy_selected_before_full_evaluation": true
+}

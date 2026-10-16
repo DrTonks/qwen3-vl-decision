@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "model": "jev-1.13.0",
+  "rows": 128,
+  "requests": 146,
+  "input_tokens": 169240,
+  "protocol_sha256": "cb8fb3c3f5c5ad9eb5018f1fd5e89449a8e791e159cb72bef5ed156739d129b8",
+  "retries": 0,
+  "calibration_or_final_read": false,
+  "training_allowed": false
+}

@@ -1,0 +1,25 @@
+{
+  "status": "blocked_http_451",
+  "attempted_requests": 1,
+  "successful_responses": 0,
+  "completed_samples": 0,
+  "http_status": 451,
+  "retries": 0,
+  "request": {
+    "id": "EVAL-FSV2-DEV-0001",
+    "task": "action",
+    "request_sha256": "fded0ed54ee843c62b1728c726f5c778ba4cc04afec6cdb87117310f88755de3",
+    "started_at": "2026-10-16T08:52:00.067749+00:00",
+    "attempts": 1,
+    "elapsed_s": 0.7094269000008353,
+    "error": "HTTPError",
+    "http_status": 451
+  },
+  "protocol_sha256": "766b021d9484a53d7ee97d4e034b2a2fdef378182f85fb6970ad78074c3cff35",
+  "reported_input_tokens": null,
+  "billing_status": "unknown; no valid usage response",
+  "calibration_or_final_read": false,
+  "training_allowed": false,
+  "diagnosis": "First API request was rejected. Status alone does not establish the specific service/account/network restriction. No error-body detail retained and no automatic retry.",
+  "next_step": "Confirm provider/account/network availability; explicitly authorize retry of the failed request. Preserve ledger; do not delete it to bypass the no-retry rule."
+}

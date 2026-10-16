@@ -1,0 +1,770 @@
+[
+  {
+    "id": "EVAL-FSV2-DEV-0001",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.20397830000001704
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0002",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.20016449999820907
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0003",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.29066769999917597
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0004",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.2863337999988289
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0005",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.26564309999957914
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0006",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.2771437000010337
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0007",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.1938865000010992
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0008",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.1855552999986685
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0009",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.17271140000229934
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0010",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.21382309999899007
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0011",
+    "action": "tool",
+    "tool_name": "explainApplicationStatus",
+    "elapsed_s": 0.23440729999856558
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0012",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.17963509999754024
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0013",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.22267730000021402
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0014",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.17730819999997038
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0015",
+    "action": "tool",
+    "tool_name": "queryMyCreditScore",
+    "elapsed_s": 0.23479260000021895
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0016",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.1956198999978369
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0017",
+    "action": "tool",
+    "tool_name": "explainApplicationStatus",
+    "elapsed_s": 0.17606729999897652
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0018",
+    "action": "tool",
+    "tool_name": "explainApplicationStatus",
+    "elapsed_s": 0.17964710000160267
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0019",
+    "action": "tool",
+    "tool_name": "explainApplicationStatus",
+    "elapsed_s": 0.18884600000092178
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0020",
+    "action": "tool",
+    "tool_name": "explainApplicationStatus",
+    "elapsed_s": 0.1844976000029419
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0021",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.11527879999994184
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0022",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.09103520000280696
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0023",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.11906190000081551
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0024",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.18802360000336193
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0025",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.16883550000056857
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0026",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.08197350000045844
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0027",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.0907974000001559
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0028",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.09321550000095158
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0029",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.12077510000017355
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0030",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.1409334999989369
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0031",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.2749484999985725
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0032",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.16064229999756208
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0033",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.3429916000022786
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0034",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.1313497000010102
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0035",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.15060129999983474
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0036",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.10211440000057337
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0037",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.17462570000134292
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0038",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.20974130000104196
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0039",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.2257257999990543
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0040",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.08962590000010096
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0041",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.1790069000016956
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0042",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.17727849999937462
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0043",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.17715250000037486
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0044",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.2193452999999863
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0045",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.2106543000008969
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0046",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.17667699999947217
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0047",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.18820599999889964
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0048",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.16815520000091055
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0049",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.19476070000018808
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0050",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.17601569999897038
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0051",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.1899158999985957
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0052",
+    "action": "tool",
+    "tool_name": "queryApplicationDetail",
+    "elapsed_s": 0.2402500999996846
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0053",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.18190039999899454
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0054",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.20574260000284994
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0055",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.09538070000053267
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0056",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.18028570000024047
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0057",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.1905378000010387
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0058",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.25416409999888856
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0059",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.23874049999722047
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0060",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.2640391999993881
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0061",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.08456419999856735
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0062",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.08324999999967986
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0063",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.21777230000225245
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0064",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.12203950000184705
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0065",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.17078160000164644
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0066",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.2552897999994457
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0067",
+    "action": "retrieve",
+    "tool_name": null,
+    "elapsed_s": 0.08842790000198875
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0068",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.08169160000034026
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0069",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.2192823999976099
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0070",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.1976732000002812
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0071",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.17886100000032457
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0072",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.18163060000006226
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0073",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.24049010000089766
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0074",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.17860429999927874
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0075",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.09098440000161645
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0076",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.10377430000153254
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0077",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.07833910000044852
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0078",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.08077190000039991
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0079",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.08259569999790983
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0080",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.08851420000064536
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0081",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.08130889999665669
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0082",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.08117940000011004
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0083",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.17254939999838825
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0084",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.0910598000009486
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0085",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.17267440000068746
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0086",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.16981119999763905
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0087",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.08543070000087027
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0088",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.20846989999699872
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0089",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.09447020000152406
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0090",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.10929059999762103
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0091",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.08154079999803798
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0092",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.17925240000113263
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0093",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.24176010000155657
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0094",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.2750725000005332
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0095",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.1786288000002969
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0096",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.18062579999968875
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0097",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.18933540000216453
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0098",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.17521389999819803
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0099",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.1782098000003316
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0100",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.1824921000006725
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0101",
+    "action": "tool",
+    "tool_name": "explainApplicationStatus",
+    "elapsed_s": 0.1705523999989964
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0102",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.22158730000228388
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0103",
+    "action": "tool",
+    "tool_name": "explainApplicationStatus",
+    "elapsed_s": 0.18409040000187815
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0104",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.17189280000093277
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0105",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.13406450000184122
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0106",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.08984490000148071
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0107",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.09207320000132313
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0108",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.08185450000019046
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0109",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.08285799999794108
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0110",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.13869360000171582
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0111",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.08734759999788366
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0112",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.08270249999986845
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0113",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.20597540000017034
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0114",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.07810559999779798
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0115",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.0902667999980622
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0116",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.0788444999998319
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0117",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.0780564000015147
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0118",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.17179240000041318
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0119",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.1676370000022871
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0120",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.17757519999940996
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0121",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.17531700000108685
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0122",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.16723189999902388
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0123",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.08730210000067018
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0124",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.08239789999788627
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0125",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.16863889999876847
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0126",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.17487480000272626
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0127",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.18349319999833824
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0128",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.08560850000139908
+  }
+]

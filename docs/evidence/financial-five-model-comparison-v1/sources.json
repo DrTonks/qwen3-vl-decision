@@ -1,0 +1,77 @@
+{
+  "dataset": "data/financial-service-v2/development.json",
+  "dataset_sha256": "56bd31ebfa75633143fefa5d6ae2dd77709a17d2bde642a583675ce638f558eb",
+  "comparison_audit_sha256": "91a6bb2b4f11a82264ba1152820576036fde01c520d1409eb2c4151a7bd5ac6a",
+  "models": [
+    {
+      "name": "Jev 1.13.0",
+      "metrics": "jev-metrics.json",
+      "observations": "jev-observations.json",
+      "files": {
+        "jev-metrics.json": "8237e8dd83f6275c49c48321517efb465e597136bc602b8cf1370fcb9e420c9a",
+        "jev-observations.json": "5171d70640b201c98b02945d57f31a010947ff0ac40bd696e7caa5c21bba202c"
+      },
+      "original_metrics": "docs/evidence/financial-jev-current-session-v2/metrics.json",
+      "original_metrics_sha256": "b715651851841773180e23eae53ce11c26fbc4f508e1b835ec10ecf8a8bbe904",
+      "original_predictions": "docs/evidence/financial-jev-current-session-v2/predictions.json",
+      "original_predictions_sha256": "6025fe3f6b0072dbcbf6dcc5693b20812a4a90e9f50bfe84a6ca36447f28a22b",
+      "policy_sha256": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91"
+    },
+    {
+      "name": "原始 Qwen3-VL-2B",
+      "metrics": "raw-2b-metrics.json",
+      "observations": "raw-2b-observations.json",
+      "files": {
+        "raw-2b-metrics.json": "03a386522e15d7dc4791a1221ada9d4a1e9df9fade8769a838038145ccdc3fcc",
+        "raw-2b-observations.json": "8d88ac944e90b7326271e4125c603ebb9bf4760734b9b7a8661b98a8bd9ad303"
+      },
+      "original_metrics": "results/financial-2b-full-coverage-v1/development/base/metrics.json",
+      "original_metrics_sha256": "be3207f312c55d8fcd9b915d71457275a91aa4e1f1210c668d94ccc1bdd73a38",
+      "original_predictions": "results/financial-2b-full-coverage-v1/development/base/predictions.jsonl",
+      "original_predictions_sha256": "84a00f41df685de37996f88f69bb834babaab16c05ff156d56211f724035cf5d",
+      "policy_sha256": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91"
+    },
+    {
+      "name": "原始 Qwen3.5-0.8B",
+      "metrics": "raw-08b-metrics.json",
+      "observations": "raw-08b-observations.json",
+      "files": {
+        "raw-08b-metrics.json": "1c68689c0dff4f98988a04da81af812f65f7321988b53359d7fe31165764f85d",
+        "raw-08b-observations.json": "a04f9f383d1ac2576698589a4ca53ae015f4e871534cb4638c3a3d3bc3dba2f4"
+      },
+      "original_metrics": "results/financial-full-coverage-v1/development/base/metrics.json",
+      "original_metrics_sha256": "72378f50af497ea21e8f0d7c66ad6dac67e5d71a02444f5e8cf04bea348c8b04",
+      "original_predictions": "results/financial-full-coverage-v1/development/base/predictions.jsonl",
+      "original_predictions_sha256": "ead93b69759d72da703f28ea1c3a6db3897ea832b96fb7d05a5d460f5a7ec2cd",
+      "policy_sha256": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91"
+    },
+    {
+      "name": "训练后 Qwen3-VL-2B",
+      "metrics": "trained-2b-metrics.json",
+      "observations": "trained-2b-observations.json",
+      "files": {
+        "trained-2b-metrics.json": "3ebd72c23f23c91d499906ea6b538dcad0f84fd20ba9a06b426e5eef3a733aca",
+        "trained-2b-observations.json": "fd7a52b196e9045a45392929be5c3685e473214821a9005487b21b52ee296979"
+      },
+      "original_metrics": "results/financial-2b-full-coverage-v1/development/full2b-step-1673/metrics.json",
+      "original_metrics_sha256": "223b4e06e53cc783ab3fa630aa3998af7e7bbce0295ec3e96992191b5b276e77",
+      "original_predictions": "results/financial-2b-full-coverage-v1/development/full2b-step-1673/predictions.jsonl",
+      "original_predictions_sha256": "b93674597a29d8284a723dd0bc7b992cc298f9c925769531b1f941cd96a2c7f6",
+      "policy_sha256": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91"
+    },
+    {
+      "name": "训练后 Qwen3.5-0.8B",
+      "metrics": "trained-08b-metrics.json",
+      "observations": "trained-08b-observations.json",
+      "files": {
+        "trained-08b-metrics.json": "646c2461b1a2fb6b0812937f8bf20594fae0bd6db207b20fc2ef1a7040f70f51",
+        "trained-08b-observations.json": "24b0e3eed3febde6dcf6d4f5368e71be7e8947de49ecc883d3a34495dc3cfe2b"
+      },
+      "original_metrics": "results/financial-full-coverage-v1/development/fullcover-step-1673/metrics.json",
+      "original_metrics_sha256": "3b5e343c4c5843d78f3866a68128f57476bd6685d7a8cc6b68fc216052de2e79",
+      "original_predictions": "results/financial-full-coverage-v1/development/fullcover-step-1673/predictions.jsonl",
+      "original_predictions_sha256": "af6d4a65c997ce3497cf931d50e95fc866a335ec2f9ae460d11dcc2046b5f17c",
+      "policy_sha256": "98f11b5acadf1f549d63677cd3010c76445c9c749c0f1d23e9ca05d67d1e5d91"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "tests": 5,
+  "independent_review": false,
+  "checks": [
+    "all 128 normalized inputs and both candidate sets match current Qwen contract",
+    "gold annotations excluded from payload",
+    "concrete model drift and invalid responses rejected",
+    "pending/failed/changed cached requests cannot retry",
+    "non-development partition rejected"
+  ],
+  "sources": {
+    "src/qwenlab/financial_jev_current.py": "906b7a33c9f44656f7211fd7aa6ac7fb9b1b784165d94cd04a464bda2bc45d98",
+    "tests/test_financial_jev_current.py": "e0479a403b160321b27de2bec33f6bc129c40957c45b9ae896902a2abdb31e2d"
+  },
+  "api_success": false
+}

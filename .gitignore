@@ -71,3 +71,13 @@ results/financial-full-coverage-probe-v1/
 # Independent2B full coverage local experiment
 results/financial-2b-full-coverage-v1/
 results/financial-2b-full-coverage-probe-v1/
+
+# Current-protocol Jev raw request ledger; portable evidence exported separately.
+results/financial-jev-current-v1/
+
+# Current Jev proxy benchmark: raw responses and request ledger stay local.
+results/financial-jev-current-proxy-v1/
+
+results/financial-jev-current-session-v1/
+
+results/financial-jev-current-session-v2/

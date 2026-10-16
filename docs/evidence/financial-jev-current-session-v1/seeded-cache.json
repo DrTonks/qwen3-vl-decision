@@ -1,0 +1,23 @@
+{
+  "successful_requests_reused": [
+    {
+      "id": "EVAL-FSV2-DEV-0001",
+      "task": "action",
+      "source": "results/financial-jev-current-proxy-v1/requests/EVAL-FSV2-DEV-0001-action.json",
+      "source_sha256": "b8933a79915a64564128413ff721d935e1f95701ac4d22eabc554fcbd27d0f65",
+      "request_sha256": "fded0ed54ee843c62b1728c726f5c778ba4cc04afec6cdb87117310f88755de3",
+      "transport": "urllib through same proxy"
+    },
+    {
+      "id": "EVAL-FSV2-DEV-0001",
+      "task": "tool",
+      "source": "results/financial-jev-current-proxy-v1/requests/EVAL-FSV2-DEV-0001-tool.json",
+      "source_sha256": "7843d93eb0f461c0e439cb2f8d20df6e5b0e68bbb38fb7bcc80109d186f0e31a",
+      "request_sha256": "94ca4c95bde31777f0cd7264df3511192c10eb4af3b6e0343fe62aea9555c0c3",
+      "transport": "urllib through same proxy"
+    }
+  ],
+  "resends": 0,
+  "new_transport": "requests.Session through same proxy",
+  "note": "The first sample uses cached urllib timings; remaining samples use Session."
+}

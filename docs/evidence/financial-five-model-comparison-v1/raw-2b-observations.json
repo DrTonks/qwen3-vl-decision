@@ -1,0 +1,770 @@
+[
+  {
+    "id": "EVAL-FSV2-DEV-0001",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.28021530000000894
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0002",
+    "action": "answer",
+    "tool_name": null,
+    "elapsed_s": 0.1195465000000695
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0003",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.26164440000002287
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0004",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.11987069999986488
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0005",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.13557289999994282
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0006",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.13905780000004597
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0007",
+    "action": "tool",
+    "tool_name": "queryApplicationDetail",
+    "elapsed_s": 0.26137180000000626
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0008",
+    "action": "tool",
+    "tool_name": "queryMyApplications",
+    "elapsed_s": 0.2814163999998982
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0009",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.14471739999999045
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0010",
+    "action": "tool",
+    "tool_name": "queryApplicationDetail",
+    "elapsed_s": 0.2945729999999003
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0011",
+    "action": "tool",
+    "tool_name": "queryApplicationDetail",
+    "elapsed_s": 0.302530200000092
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0012",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.13798780000001898
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0013",
+    "action": "answer",
+    "tool_name": null,
+    "elapsed_s": 0.134720199999947
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0014",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.26541259999999056
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0015",
+    "action": "answer",
+    "tool_name": null,
+    "elapsed_s": 0.11935480000011012
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0016",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.11787749999984953
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0017",
+    "action": "answer",
+    "tool_name": null,
+    "elapsed_s": 0.11928549999993265
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0018",
+    "action": "answer",
+    "tool_name": null,
+    "elapsed_s": 0.13984690000006594
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0019",
+    "action": "answer",
+    "tool_name": null,
+    "elapsed_s": 0.12004269999988537
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0020",
+    "action": "tool",
+    "tool_name": "explainApplicationStatus",
+    "elapsed_s": 0.2661281999999119
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0021",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.11989840000001095
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0022",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.1380033000000367
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0023",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.12040129999991223
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0024",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.12006680000013148
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0025",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.11967480000021169
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0026",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.12101000000006934
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0027",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.12187339999991309
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0028",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.11997109999992972
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0029",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.1186128000001645
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0030",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.11926799999992
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0031",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.12100450000002638
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0032",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.13618510000014794
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0033",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.12336240000013277
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0034",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.12938469999994595
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0035",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.1254541999999219
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0036",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.12687669999991158
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0037",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.14622080000003734
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0038",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.12191510000002381
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0039",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.12139060000004065
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0040",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.12107530000002953
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0041",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.12644219999992856
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0042",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.12973590000001423
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0043",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.12789380000003803
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0044",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.14801980000015647
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0045",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.14125730000000658
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0046",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.12663750000001528
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0047",
+    "action": "tool",
+    "tool_name": "queryMyApplications",
+    "elapsed_s": 0.26448610000011286
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0048",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.13459100000000035
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0049",
+    "action": "tool",
+    "tool_name": "queryApplicationDetail",
+    "elapsed_s": 0.2694478999999319
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0050",
+    "action": "tool",
+    "tool_name": "queryApplicationDetail",
+    "elapsed_s": 0.30633400000010624
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0051",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.13062560000003032
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0052",
+    "action": "tool",
+    "tool_name": "queryApplicationDetail",
+    "elapsed_s": 0.3167257000000063
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0053",
+    "action": "answer",
+    "tool_name": null,
+    "elapsed_s": 0.13011789999995926
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0054",
+    "action": "answer",
+    "tool_name": null,
+    "elapsed_s": 0.13143219999983557
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0055",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.13473339999995915
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0056",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.3086049000000912
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0057",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.14595620000000054
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0058",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.1489816000000701
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0059",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.179917899999964
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0060",
+    "action": "close",
+    "tool_name": null,
+    "elapsed_s": 0.15805380000006153
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0061",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.1810502999999244
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0062",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.1509440000002087
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0063",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.1522471000000678
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0064",
+    "action": "answer",
+    "tool_name": null,
+    "elapsed_s": 0.150598299999956
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0065",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.1591389000000163
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0066",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.1538969000000634
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0067",
+    "action": "retrieve",
+    "tool_name": null,
+    "elapsed_s": 0.16873469999995905
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0068",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.16389029999982085
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0069",
+    "action": "retrieve",
+    "tool_name": null,
+    "elapsed_s": 0.16253690000007737
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0070",
+    "action": "answer",
+    "tool_name": null,
+    "elapsed_s": 0.14344690000007176
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0071",
+    "action": "retrieve",
+    "tool_name": null,
+    "elapsed_s": 0.15013399999998
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0072",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.15036000000009153
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0073",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.1476233000000775
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0074",
+    "action": "answer",
+    "tool_name": null,
+    "elapsed_s": 0.12663879999990968
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0075",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.14503509999985909
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0076",
+    "action": "retrieve",
+    "tool_name": null,
+    "elapsed_s": 0.14155720000007932
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0077",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.14101290000007793
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0078",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.14327560000015183
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0079",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.14158640000005107
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0080",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.14876860000003944
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0081",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.14925510000011855
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0082",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.13411939999991773
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0083",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.14553399999999783
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0084",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.14704070000016145
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0085",
+    "action": "answer",
+    "tool_name": null,
+    "elapsed_s": 0.15140459999997802
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0086",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.14645459999997001
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0087",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.1423167000000376
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0088",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.1422486999999819
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0089",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.1426633999999467
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0090",
+    "action": "answer",
+    "tool_name": null,
+    "elapsed_s": 0.1408771000001252
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0091",
+    "action": "human",
+    "tool_name": null,
+    "elapsed_s": 0.1401958999999806
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0092",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.15062669999997524
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0093",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.15037129999996068
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0094",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.14686630000005607
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0095",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.1391452999998819
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0096",
+    "action": "answer",
+    "tool_name": null,
+    "elapsed_s": 0.12162530000000515
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0097",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.12147770000001401
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0098",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.12286939999989954
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0099",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.13828239999998004
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0100",
+    "action": "tool",
+    "tool_name": "queryLoanProducts",
+    "elapsed_s": 0.26851110000006884
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0101",
+    "action": "answer",
+    "tool_name": null,
+    "elapsed_s": 0.12241079999989779
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0102",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.14842780000003586
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0103",
+    "action": "answer",
+    "tool_name": null,
+    "elapsed_s": 0.1603546000001188
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0104",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.14008020000005672
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0105",
+    "action": "refuse",
+    "tool_name": null,
+    "elapsed_s": 0.13176350000003367
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0106",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.12609999999995125
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0107",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.12925620000009985
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0108",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.13019359999998414
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0109",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.125753899999836
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0110",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.12490359999992506
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0111",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.12565729999982977
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0112",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.12379260000011527
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0113",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.12058000000001812
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0114",
+    "action": "answer",
+    "tool_name": null,
+    "elapsed_s": 0.12105489999999008
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0115",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.1225165000000743
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0116",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.12006879999989906
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0117",
+    "action": "answer",
+    "tool_name": null,
+    "elapsed_s": 0.12039290000006986
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0118",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.11976030000005267
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0119",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.12140290000002096
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0120",
+    "action": "answer",
+    "tool_name": null,
+    "elapsed_s": 0.1216245999999046
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0121",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.11800600000015038
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0122",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.11887630000001081
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0123",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.11923209999986284
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0124",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.1227865999999267
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0125",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.12251579999997375
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0126",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.1344111000000794
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0127",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.13969569999994746
+  },
+  {
+    "id": "EVAL-FSV2-DEV-0128",
+    "action": "clarify",
+    "tool_name": null,
+    "elapsed_s": 0.13477310000007492
+  }
+]

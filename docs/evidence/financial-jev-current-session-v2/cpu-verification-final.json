@@ -1,0 +1,18 @@
+{
+  "command": "python -m unittest discover -s tests -p test_financial_jev*.py -q",
+  "tests": 42,
+  "status": "passed",
+  "api_calls": 0,
+  "note": "Windows sandbox tempfile ACL errors resolved by running outside sandbox with temporary directory on D drive; no code relaxation.",
+  "test_sha256": {
+    "tests/test_financial_jev_cache.py": "4e352372efb0ef0ddccba64c74fbdcab0bee93c7209a5ef101b8712409dbe692",
+    "tests/test_financial_jev_current.py": "e0479a403b160321b27de2bec33f6bc129c40957c45b9ae896902a2abdb31e2d",
+    "tests/test_financial_jev_current_proxy.py": "546fa4aaf2cf2d7df551556e318848219539d25ee66eab5f27a383ea37638197",
+    "tests/test_financial_jev_current_session.py": "c11d2d0d9083c4298e3fc12c6b023015e7154be13cf153885e2c7094332cc3dc",
+    "tests/test_financial_jev_current_session_v2.py": "929cfcf55d093cebc5e9af2be9eb75ff62fa7f6e5f1d2a7631f8302f697bfbbf",
+    "tests/test_financial_jev_proxy_recovery.py": "68e2a84bd48571b85203f8e981b118f9419f8d78fe848e36f1004537d107a85a",
+    "tests/test_financial_jev_reference.py": "7ec62dc91adea7e0bfbb78ac460786ee6f717b7d95d1bf4f8cf956ab75614094",
+    "tests/test_financial_jev_session_recovery.py": "b984a3d26a487352252e23473ff677f5335a984eeb2469d12ed6542a50d6ab3b",
+    "tests/test_financial_jev_session_recovery_v2.py": "52aac91f75d707b8fddecd6474a2ecab7250a51386fceb50d4a83a35a56b468e"
+  }
+}

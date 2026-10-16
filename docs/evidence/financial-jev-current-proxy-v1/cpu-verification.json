@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "independent_review": false,
+  "tests_passed": 6,
+  "files": {
+    "src/qwenlab/financial_jev_current_proxy.py": "d0e5a6ddc50917f628b199b7747cb082a20c85e2bb38c7c8c647bfc5eadcb5f2",
+    "tests/test_financial_jev_current_proxy.py": "546fa4aaf2cf2d7df551556e318848219539d25ee66eab5f27a383ea37638197"
+  },
+  "scope": "input/candidate equivalence, gold-label exclusion, response validation, no automatic retry, development-only, forced explicit proxy/no redirect"
+}

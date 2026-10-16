@@ -1,0 +1,23 @@
+{
+  "state": "failed_or_uncertain",
+  "id": "EVAL-FSV2-DEV-0001",
+  "task": "action",
+  "request_sha256": "fded0ed54ee843c62b1728c726f5c778ba4cc04afec6cdb87117310f88755de3",
+  "started_at": "2026-10-16T08:55:16.554447+00:00",
+  "attempts": 2,
+  "prior_attempt_sha256": "1a98254994bb9b9e8eacc5dc87b7c2fed4fde9b8118b8dbfa139b52df11090dc",
+  "explicit_user_retry": true,
+  "error": "HTTPError",
+  "http_status": 451,
+  "response_detail": "{\"title\":\"Typesafe is not available in your region.\",\"status\":451}",
+  "elapsed_s": 0.33290820000183885,
+  "status": "blocked_region_unavailable",
+  "total_attempted_requests": 2,
+  "successful_responses": 0,
+  "completed_samples": 0,
+  "automatic_retries": 0,
+  "user_authorized_retries": 1,
+  "reported_usage": null,
+  "training_allowed": false,
+  "next_step": "Provider reports region unavailable. Stop requests; use officially supported service availability or a different provider. Do not treat failures as model accuracy or inference latency."
+}

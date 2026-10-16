@@ -1,0 +1,36 @@
+{
+  "version": "financial-jev-proxy-recovery-v1",
+  "user_instruction": "允许多次重试和测试，最终目的是要拿出能够写在readme上的测评结果",
+  "scope": "same frozen 128-row development; no prompt changes; successful cache reused",
+  "max_extra_requests": 57,
+  "max_retries_per_request": 3,
+  "maximum_attempts_including_prior_transport": 320,
+  "prior_transport_uncertain_attempts": 7,
+  "cached_successes_from_prior_transport": 3,
+  "client_change_reason": "urllib repeated connection resets; Session unauthenticated GET probe 4/4 succeeded",
+  "backoff_seconds": [
+    2,
+    4,
+    8
+  ],
+  "retryable_http": [
+    408,
+    429,
+    500,
+    502,
+    503,
+    504
+  ],
+  "retryable_transport": [
+    "URLError",
+    "TimeoutError",
+    "ConnectionError",
+    "ConnectionResetError",
+    "SSLError",
+    "ReadTimeout",
+    "ConnectTimeout"
+  ],
+  "unknown_prior_cost": "Failed/uncertain requests may have been billed; usage cannot be assumed zero",
+  "original_protocol_sha256": "8a15ada2c0c9d037d1ead4f342e7692042680800ccfadc79c46bbcb51556ff97",
+  "recovery_source_sha256": "dd2074fa2fffe702b89d78282cf4a57049bcadcf41310df3b2a7132756accb72"
+}
